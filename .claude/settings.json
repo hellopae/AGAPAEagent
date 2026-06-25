@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-status.mjs\" start",
+            "timeout": 10,
+            "statusMessage": "อัปเดตสถานะทีมในแดชบอร์ด…"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-status.mjs\" done",
+            "timeout": 10,
+            "statusMessage": "บันทึกผลงานทีมลงแดชบอร์ด…"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "updatedAt": "2026-06-25T11:50:05.863Z",
+  "agents": [
+    {
+      "id": "claudy",
+      "name": "Claudy",
+      "role": "Orchestrator",
+      "pipeline": "orchestrator",
+      "img": "avatars/Claudy.png?v=2",
+      "persona": "สุขุม วิเคราะห์เก่ง รู้เสมอว่าสเต็ปต่อไปคืออะไร",
+      "caps": [
+        "จัดคิวงาน",
+        "ส่งต่อให้ทีม",
+        "คุม quality gate"
+      ],
+      "what": [
+        "รับโจทย์แล้วส่งให้คนที่ใช่ — ไม่ลงมือทำเอง",
+        "รัน quality gate อัตโนมัติ",
+        "คุมบันทึก session และ work tracker"
+      ],
+      "status": "done",
+      "task": "รัน pipeline: บทความสิ่งพิมพ์ TANAPAT",
+      "report": {
+        "when": "18:50",
+        "title": "Pipeline เสร็จ: บทความสิ่งพิมพ์ TANAPAT",
+        "body": "Minnie → Reese → Rae → Chris QA → Rae แก้ → ✅ พร้อม publish"
+      }
+    },
+    {
+      "id": "minnie",
+      "name": "Minnie",
+      "role": "Ideas & Concepts",
+      "pipeline": "content",
+      "img": "avatars/Minnie.png?v=2",
+      "persona": "สดใส ช่างสงสัย เหมือนเพิ่งเจอไอเดียใหม่ตลอดเวลา",
+      "caps": [
+        "Idea cards",
+        "ตั้งสมมติฐาน",
+        "คำถามวิจัย"
+      ],
+      "what": [
+        "คิดคอนเซ็ปต์การ์ดพิธีบุญ / ปฏิทินพุทธ / ใบประกาศ",
+        "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
+        "ส่งต่อให้ Reese ทำวิจัย"
+      ],
+      "status": "done",
+      "task": "คิด concept บทความสิ่งพิมพ์สำหรับ TANAPAT",
+      "report": {
+        "when": "18:41",
+        "title": "5 Idea Cards — บทความสิ่งพิมพ์ TANAPAT",
+        "body": "Card 1: สิ่งพิมพ์วัด | Card 2: Annual Report | Card 3: 5 ความผิดพลาดงานพิมพ์ | Card 4: จิตวิทยานามบัตร | Card 5: 40 ปี TANAPAT — แนะนำเริ่ม Card 3+4 ก่อน (share สูงสุด)"
+      }
+    },
+    {
+      "id": "reese",
+      "name": "Reese",
+      "role": "Research & Data",
+      "pipeline": "content",
+      "img": "avatars/Reese.png",
+      "persona": "โฟกัส เป็นมืออาชีพ เน้นข้อมูลจริงไม่ใช่ความเห็น",
+      "caps": [
+        "วิจัยตลาด",
+        "วิเคราะห์คู่แข่ง",
+        "color psychology"
+      ],
+      "what": [
+        "หาเทรนด์พิธีบุญ/งานวัดของไทย",
+        "วิเคราะห์เทมเพลตคู่แข่งบน Etsy/Gumroad",
+        "ศึกษาจิตวิทยาสีสำหรับลูกค้าไทย",
+        "ส่งเอกสารวิจัยให้ Rae"
+      ],
+      "status": "done",
+      "task": "วิจัย SEO + คู่แข่ง: '5 ความผิดพลาดงานพิมพ์'",
+      "report": {
+        "when": "18:47",
+        "title": "Research Brief: 5 ความผิดพลาดงานพิมพ์",
+        "body": "CMYK vs RGB, Bleed 3mm, 300dpi, Font Embed/Outline, Proof — ข้อมูลครบพร้อมให้ Rae ใช้เขียนบทความ"
+      }
+    },
+    {
+      "id": "rae",
+      "name": "Rae",
+      "role": "Writer & Copy",
+      "pipeline": "design",
+      "img": "avatars/Rae.png",
+      "persona": "เขียนในนามแบรนด์ ไม่ใช่เขียนถึงแบรนด์",
+      "caps": [
+        "ข้อความไทย/อังกฤษ",
+        "คำอวยพร",
+        "listing copy"
+      ],
+      "what": [
+        "เขียนข้อความ/คำแนะนำบนการ์ดบุญ",
+        "คำบรรยายปฏิทินวัด + คำในใบประกาศ",
+        "copy เว็บแอปภาษาไทย",
+        "ส่งต่อให้ Vera"
+      ],
+      "status": "done",
+      "task": "เขียนบทความ: 5 ความผิดพลาดที่ทำให้งานพิมพ์ออกมาไม่ตรงปก",
+      "report": {
+        "when": "18:50",
+        "title": "บทความ v2 — ผ่าน QA พร้อมเผยแพร่",
+        "body": "แก้ตาม Chris: CMYK Gamut, Font Outline+Embed, micro-example ข้อ 2 — ไฟล์: Output/Rae/2026-06-25-5-print-mistakes-article.md"
+      }
+    },
+    {
+      "id": "vera",
+      "name": "Vera",
+      "role": "UX / Experience",
+      "pipeline": "design",
+      "img": "avatars/Vera.png",
+      "persona": "เน้นข้อเท็จจริง วัดได้ ทุกสเปคต้องเป๊ะ",
+      "caps": [
+        "สเปค layout",
+        "UI เว็บแดชบอร์ด",
+        "responsive"
+      ],
+      "what": [
+        "ออกแบบ layout เทมเพลตพร้อมพิมพ์",
+        "ทำ mockup UI เว็บแดชบอร์ด",
+        "ดีไซน์รองรับมือถือ",
+        "วาง grid + bleed + margin"
+      ],
+      "status": "idle",
+      "task": null,
+      "report": null
+    },
+    {
+      "id": "mind",
+      "name": "Mind",
+      "role": "Visual Design",
+      "pipeline": "design",
+      "img": "avatars/Mind.png",
+      "persona": "สายตาเฉียบ คุมโทนภาพและแบรนด์ให้นิ่งกันทั้งชุด",
+      "caps": [
+        "องค์ประกอบกราฟิก",
+        "ภาพประกอบพิธีบุญ",
+        "คุมแบรนด์"
+      ],
+      "what": [
+        "ทำ decorative element สำหรับเทมเพลต",
+        "วาดภาพประกอบงานบุญ + ไอคอนพุทธ",
+        "คุมความสม่ำเสมอของแบรนด์",
+        "ส่งไฟล์ดีไซน์พร้อมผลิต"
+      ],
+      "status": "idle",
+      "task": null,
+      "report": null
+    },
+    {
+      "id": "chris",
+      "name": "Chris",
+      "role": "Quality Gate",
+      "pipeline": "quality",
+      "img": "avatars/Chris.png",
+      "persona": "ไม่มีอะไรผ่านโดยไม่ถูกตรวจ",
+      "caps": [
+        "ตรวจภาษาไทย",
+        "ความเหมาะสมวัฒนธรรม",
+        "print specs"
+      ],
+      "what": [
+        "เช็คสะกด/ไวยากรณ์ไทย",
+        "ตรวจความเหมาะสมเชิงพุทธ/พิธี",
+        "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
+        "เทสต์การทำงานเว็บแอป"
+      ],
+      "status": "done",
+      "task": "ตรวจบทความ: สะกดไทย, technical accuracy, tone ของ TANAPAT",
+      "report": {
+        "when": "18:50",
+        "title": "QA Pass (หลังแก้): บทความ 5 ความผิดพลาดงานพิมพ์",
+        "body": "แก้ครบ 2 จุดบังคับ: CMYK Gamut + Font Outline/Embed — พร้อม publish แล้ว"
+      }
+    },
+    {
+      "id": "libby",
+      "name": "Libby",
+      "role": "Librarian / Index",
+      "pipeline": "quality",
+      "img": "avatars/Libby.png",
+      "persona": "ไม่แก้เนื้อหา จัดแต่ระบบ index และ metadata ให้ค้นเจอ",
+      "caps": [
+        "จัด index เทมเพลต",
+        "metadata การขาย",
+        "ตั้งชื่อ/จัดไฟล์"
+      ],
+      "what": [
+        "ทำดัชนีคลังเทมเพลต",
+        "เก็บ metadata ราคา/หมวด/SKU",
+        "เก็บ metadata สี/ฟอนต์/ฟอร์แมต",
+        "ทำเอกสารโปรเจกต์"
+      ],
+      "status": "idle",
+      "task": null,
+      "report": null
+    },
+    {
+      "id": "nick",
+      "name": "Nick",
+      "role": "Analytics",
+      "pipeline": "standalone",
+      "img": "avatars/Nick.png",
+      "persona": "เชื่อมั่นในข้อมูล — ถ้าไม่ชัดก็ไม่ฟันธง",
+      "caps": [
+        "วิเคราะห์ยอดขาย",
+        "Etsy metrics",
+        "แนะนำสิ่งที่ควรทำต่อ"
+      ],
+      "what": [
+        "วิเคราะห์ performance เทมเพลต",
+        "ติดตาม metric Etsy/Gumroad",
+        "มอนิเตอร์ analytics เว็บแอป",
+        "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
+      ],
+      "status": "idle",
+      "task": null,
+      "report": {
+        "when": "3 วันก่อน",
+        "title": "สรุปยอดเดือน พ.ค.",
+        "body": "Top: ปฏิทินพุทธ A4 (42% ของรายได้)\nรองลงมา: การ์ดอวยพร\nแนะนำ: ทำปฏิทินเวอร์ชันปีหน้าเพิ่ม + เลิกทำ sticker ที่ยอดต่ำ"
+      }
+    },
+    {
+      "id": "dale",
+      "name": "Dale",
+      "role": "Tech / DevOps",
+      "pipeline": "standalone",
+      "img": "avatars/Dale.png",
+      "persona": "สายเทคนิค ดูแลให้ระบบรันและไฟล์พิมพ์เป๊ะ",
+      "caps": [
+        "Deploy เว็บแอป",
+        "ออปติไมซ์ไฟล์พิมพ์",
+        "API / ฐานข้อมูล"
+      ],
+      "what": [
+        "deploy + hosting เว็บแอป",
+        "ออปติไมซ์ไฟล์สำหรับพิมพ์",
+        "ทำ API integration (Etsy/Gumroad)",
+        "ดูแลฐานข้อมูลและระบบ"
+      ],
+      "status": "idle",
+      "task": null,
+      "report": null
+    }
+  ]
+}
