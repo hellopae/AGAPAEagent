@@ -6,7 +6,7 @@
       "name": "Claudy",
       "role": "Orchestrator",
       "pipeline": "orchestrator",
-      "img": "avatars/Claudy.png?v=2",
+      "img": "avatars/Claudy.png?v=3",
       "persona": "สุขุม วิเคราะห์เก่ง รู้เสมอว่าสเต็ปต่อไปคืออะไร",
       "caps": [
         "จัดคิวงาน",
@@ -31,7 +31,7 @@
       "name": "Minnie",
       "role": "Ideas & Concepts",
       "pipeline": "content",
-      "img": "avatars/Minnie.png?v=2",
+      "img": "avatars/Minnie.png?v=3",
       "persona": "สดใส ช่างสงสัย เหมือนเพิ่งเจอไอเดียใหม่ตลอดเวลา",
       "caps": [
         "Idea cards",
@@ -152,7 +152,7 @@
       "name": "Chris",
       "role": "Quality Gate",
       "pipeline": "quality",
-      "img": "avatars/Chris.png",
+      "img": "avatars/Chris.png?v=2",
       "persona": "ไม่มีอะไรผ่านโดยไม่ถูกตรวจ",
       "caps": [
         "ตรวจภาษาไทย",
