@@ -33,6 +33,7 @@
     --c-design:#4A6670;  /* muted teal-slate */
     --c-quality:#8A5A66; /* muted burgundy */
     --c-standalone:#8C8A86; /* warm grey */
+    --c-news:#3A6B50;      /* forest green — news feed */
 
     --card:#FFFFFF;
     --shadow:0 1px 2px rgba(27,28,32,.04),0 10px 30px rgba(27,28,32,.07);
@@ -205,7 +206,7 @@
 
 <div class="wrap">
   <section class="hero">
-    <div class="ey mono">Creator Team · 1 Human · 10 Agents</div>
+    <div class="ey mono">Creator Team · 1 Human · 16 Agents</div>
     <p>Dashboard ทีม Sub Agent ของ AGAPAE</p>
   </section>
 
@@ -235,6 +236,7 @@ const PIPELINES = {
   design:{label:"Design",color:"var(--c-design)"},
   quality:{label:"Quality Gate",color:"var(--c-quality)"},
   standalone:{label:"Standalone",color:"var(--c-standalone)"},
+  news:{label:"News Feed",color:"var(--c-news)"},
 };
 
 /* SEED_AGENTS = demo/fallback data. Source of truth at runtime is status.json
@@ -470,6 +472,72 @@ const SEED_AGENTS = [
     "status": "idle",
     "task": null,
     "report": null
+  },
+  {
+    "id": "news-politics",
+    "name": "Pol",
+    "role": "การเมืองไทย",
+    "pipeline": "news",
+    "img": null,
+    "persona": "นักวิเคราะห์การเมือง ตรง ไม่เข้าข้างใคร",
+    "caps": ["ข่าวรัฐสภา","นโยบายรัฐ","พรรคการเมือง"],
+    "what": ["รวบรวมข่าวการเมืองไทยรายวัน","สรุปสั้นกระชับ เข้าใจง่าย"],
+    "status": "idle", "task": null, "report": null
+  },
+  {
+    "id": "news-world",
+    "name": "Wren",
+    "role": "ข่าวโลก",
+    "pipeline": "news",
+    "img": null,
+    "persona": "นักข่าวต่างประเทศ รายงานตรง ไม่ตีความเกิน",
+    "caps": ["ข่าวต่างประเทศ","ความขัดแย้งโลก","นโยบายสากล"],
+    "what": ["คัด top 3-5 ข่าวโลกสำคัญประจำวัน","เน้นผลกระทบต่อไทยและธุรกิจ"],
+    "status": "idle", "task": null, "report": null
+  },
+  {
+    "id": "news-business",
+    "name": "Bex",
+    "role": "ข่าวธุรกิจ",
+    "pipeline": "news",
+    "img": null,
+    "persona": "นักวิเคราะห์ตลาด มองหาโอกาสในทุกข่าว",
+    "caps": ["ตลาดหุ้น","ข่าว SME","เทรนด์ธุรกิจ"],
+    "what": ["ติดตามข่าวธุรกิจไทยและโลก","ชี้โอกาสที่เกี่ยวกับงานพิมพ์และบรรจุภัณฑ์"],
+    "status": "idle", "task": null, "report": null
+  },
+  {
+    "id": "news-printing",
+    "name": "Ink",
+    "role": "ข่าวงานพิมพ์",
+    "pipeline": "news",
+    "img": null,
+    "persona": "ผู้เชี่ยวชาญอุตสาหกรรมพิมพ์ รู้ลึกรู้จริง",
+    "caps": ["Digital Printing","Packaging","เครื่องพิมพ์ใหม่"],
+    "what": ["ติดตามเทคโนโลยีการพิมพ์ใหม่","เทรนด์บรรจุภัณฑ์และสิ่งพิมพ์"],
+    "status": "idle", "task": null, "report": null
+  },
+  {
+    "id": "news-tech",
+    "name": "Hex",
+    "role": "เทคโนโลยี",
+    "pipeline": "news",
+    "img": null,
+    "persona": "เกาะติดเทคโนโลยี อัปเดตทุกความเคลื่อนไหวในวงการ AI",
+    "caps": ["AI & LLM","Startups","Gadgets"],
+    "what": ["รายงานข่าว AI วงการเทคทุกวัน","คัดเฉพาะที่กระทบธุรกิจจริง"],
+    "status": "idle", "task": null, "report": null
+  },
+  {
+    "id": "news-finance",
+    "name": "Goldie",
+    "role": "ราคาทองคำ & Bitcoin",
+    "pipeline": "news",
+    "img": null,
+    "persona": "จับตาราคาทอง-คริปโต ไม่ฟันธง แต่รายงานตรง",
+    "caps": ["ราคาทองคำ","Bitcoin & Crypto","อัตราแลกเปลี่ยน"],
+    "what": ["รายงานราคาทองคำ (บาท) ทุกเช้า","ติดตาม Bitcoin และ crypto ที่น่าสนใจ"],
+    "status": "idle", "task": null, "report": null
   }
 ];
 
