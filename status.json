@@ -198,19 +198,15 @@
     {
       "id": "nick",
       "name": "Nick",
-      "role": "Analytics",
+      "role": "Analytics & DevOps",
       "pipeline": "standalone",
       "img": "avatars/Nick.png",
-      "persona": "เชื่อมั่นในข้อมูล — ถ้าไม่ชัดก็ไม่ฟันธง",
-      "caps": [
-        "วิเคราะห์ยอดขาย",
-        "Etsy metrics",
-        "แนะนำสิ่งที่ควรทำต่อ"
-      ],
+      "persona": "เชื่อมั่นในข้อมูล ถ้าไม่ชัดก็ไม่ฟันธง ดูแลระบบให้รันสมูท",
+      "caps": ["วิเคราะห์ยอดขาย", "Etsy metrics", "Deploy เว็บแอป", "API integrations"],
       "what": [
-        "วิเคราะห์ performance เทมเพลต",
-        "ติดตาม metric Etsy/Gumroad",
-        "มอนิเตอร์ analytics เว็บแอป",
+        "วิเคราะห์ performance เทมเพลตและ Etsy/Gumroad",
+        "deploy + hosting เว็บแอป",
+        "ดูแล API integration และฐานข้อมูล",
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "idle",
@@ -222,92 +218,22 @@
       }
     },
     {
-      "id": "dale",
-      "name": "Dale",
-      "role": "Tech / DevOps",
-      "pipeline": "standalone",
-      "img": "avatars/Dale.png",
-      "persona": "สายเทคนิค ดูแลให้ระบบรันและไฟล์พิมพ์เป๊ะ",
-      "caps": [
-        "Deploy เว็บแอป",
-        "ออปติไมซ์ไฟล์พิมพ์",
-        "API / ฐานข้อมูล"
-      ],
+      "id": "news",
+      "name": "News",
+      "role": "Daily News Director",
+      "pipeline": "news",
+      "img": "avatars/News.png",
+      "persona": "รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
+      "caps": ["การเมืองไทย", "ข่าวโลก", "ธุรกิจ & งานพิมพ์", "เทคโนโลยี & ราคาทอง"],
       "what": [
-        "deploy + hosting เว็บแอป",
-        "ออปติไมซ์ไฟล์สำหรับพิมพ์",
-        "ทำ API integration (Etsy/Gumroad)",
-        "ดูแลฐานข้อมูลและระบบ"
+        "ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.",
+        "ส่งข้อมูลดิบให้ Chris ตรวจสอบ",
+        "Chris ผ่าน → Rae เขียนบทความสรุป",
+        "ส่งอีเมลสรุปให้ Kittanate"
       ],
       "status": "idle",
       "task": null,
       "report": null
-    },
-    {
-      "id": "news-politics",
-      "name": "Pol",
-      "role": "การเมืองไทย",
-      "pipeline": "news",
-      "img": null,
-      "persona": "นักวิเคราะห์การเมือง ตรง ไม่เข้าข้างใคร",
-      "caps": ["ข่าวรัฐสภา", "นโยบายรัฐ", "พรรคการเมือง"],
-      "what": ["รวบรวมข่าวการเมืองไทยรายวัน", "สรุปสั้นกระชับ เข้าใจง่าย"],
-      "status": "idle", "task": null, "report": null
-    },
-    {
-      "id": "news-world",
-      "name": "Wren",
-      "role": "ข่าวโลก",
-      "pipeline": "news",
-      "img": null,
-      "persona": "นักข่าวต่างประเทศ รายงานตรง ไม่ตีความเกิน",
-      "caps": ["ข่าวต่างประเทศ", "ความขัดแย้งโลก", "นโยบายสากล"],
-      "what": ["คัด top 3-5 ข่าวโลกสำคัญประจำวัน", "เน้นผลกระทบต่อไทยและธุรกิจ"],
-      "status": "idle", "task": null, "report": null
-    },
-    {
-      "id": "news-business",
-      "name": "Bex",
-      "role": "ข่าวธุรกิจ",
-      "pipeline": "news",
-      "img": null,
-      "persona": "นักวิเคราะห์ตลาด มองหาโอกาสในทุกข่าว",
-      "caps": ["ตลาดหุ้น", "ข่าว SME", "เทรนด์ธุรกิจ"],
-      "what": ["ติดตามข่าวธุรกิจไทยและโลก", "ชี้โอกาสที่เกี่ยวกับงานพิมพ์และบรรจุภัณฑ์"],
-      "status": "idle", "task": null, "report": null
-    },
-    {
-      "id": "news-printing",
-      "name": "Ink",
-      "role": "ข่าวงานพิมพ์",
-      "pipeline": "news",
-      "img": null,
-      "persona": "ผู้เชี่ยวชาญอุตสาหกรรมพิมพ์ รู้ลึกรู้จริง",
-      "caps": ["Digital Printing", "Packaging", "เครื่องพิมพ์ใหม่"],
-      "what": ["ติดตามเทคโนโลยีการพิมพ์ใหม่", "เทรนด์บรรจุภัณฑ์และสิ่งพิมพ์"],
-      "status": "idle", "task": null, "report": null
-    },
-    {
-      "id": "news-tech",
-      "name": "Hex",
-      "role": "เทคโนโลยี",
-      "pipeline": "news",
-      "img": null,
-      "persona": "เกาะติดเทคโนโลยี อัปเดตทุกความเคลื่อนไหวในวงการ AI",
-      "caps": ["AI & LLM", "Startups", "Gadgets"],
-      "what": ["รายงานข่าว AI วงการเทคทุกวัน", "คัดเฉพาะที่กระทบธุรกิจจริง"],
-      "status": "idle", "task": null, "report": null
-    },
-    {
-      "id": "news-finance",
-      "name": "Goldie",
-      "role": "ราคาทองคำ & Bitcoin",
-      "pipeline": "news",
-      "img": null,
-      "persona": "จับตาราคาทอง-คริปโต ไม่ฟันธง แต่รายงานตรง",
-      "caps": ["ราคาทองคำ", "Bitcoin & Crypto", "อัตราแลกเปลี่ยน"],
-      "what": ["รายงานราคาทองคำ (บาท) ทุกเช้า", "ติดตาม Bitcoin และ crypto ที่น่าสนใจ"],
-      "status": "idle", "task": null, "report": null
     }
   ]
 }
