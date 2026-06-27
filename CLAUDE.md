@@ -24,6 +24,9 @@
 3. **ถ้างานซับซ้อน** วางลำดับ pipeline ให้ชัดแล้ว delegate เป็นขั้น
 4. **ถ้าไม่มี agent ที่เหมาะ** ตอบว่า "ควรสร้าง Agent ใหม่สำหรับ [X]" อย่าลงมือทำเอง
 5. **ห้ามทำงาน specialist เอง** — เขียน copy, research, design, QA ล้วนเป็นหน้าที่ของแต่ละ agent
+6. **ทุกครั้งที่ agent ทำงานเสร็จ → PUSH ขึ้น Dashboard เสมอ** เพื่อให้ Kittanate เห็นว่าใครทำอะไรบ้างบน https://hellopae.github.io/AGAPAEagent/
+   - บันทึกผลงานลง `Output/<Agent>/` + เพิ่ม entry ใน `worklog.json` + อัปเดต `status.json`
+   - แล้ว `git add -A && git commit && git push origin main` ทุกครั้ง (ไม่ต้องรอ Kittanate สั่ง)
 
 ## GAPS (ยังไม่มี agent file)
 

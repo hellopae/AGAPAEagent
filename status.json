@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T11:50:05.863Z",
+  "updatedAt": "2026-06-27T10:30:00.000Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "รัน pipeline: บทความสิ่งพิมพ์ TANAPAT",
+      "task": "Orchestrate: คลิปวิทยาศาสตร์ด้วย AI — รวมผลงาน 5 agent เป็นวิธีทำฉบับสมบูรณ์",
       "report": {
-        "when": "18:50",
-        "title": "Pipeline เสร็จ: บทความสิ่งพิมพ์ TANAPAT",
-        "body": "Minnie → Reese → Rae → Chris QA → Rae แก้ → ✅ พร้อม publish"
+        "when": "17:30",
+        "title": "Pipeline เสร็จ: วิธีทำคลิปวิทยาศาสตร์ด้วย AI ✅",
+        "body": "มอบหมาย Minnie(5 คอนเซ็ปต์) → Reese(วิจัย+toolchain) → Rae(สคริปต์ CMYK) → Nick(pipeline) → Chris(QA ✅) | รวมเป็นคู่มือเดียวที่ Output/Claudy/ | แนะเริ่มจากคลิป CMYK ผูกแบรนด์ TANAPAT"
       }
     },
     {
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "คิด concept บทความสิ่งพิมพ์สำหรับ TANAPAT",
+      "task": "5 ไอเดียคลิปวิทยาศาสตร์ชุดใหม่ + ลำดับการผลิต",
       "report": {
-        "when": "18:41",
-        "title": "5 Idea Cards — บทความสิ่งพิมพ์ TANAPAT",
-        "body": "Card 1: สิ่งพิมพ์วัด | Card 2: Annual Report | Card 3: 5 ความผิดพลาดงานพิมพ์ | Card 4: จิตวิทยานามบัตร | Card 5: 40 ปี TANAPAT — แนะนำเริ่ม Card 3+4 ก่อน (share สูงสุด)"
+        "when": "17:50",
+        "title": "5 ไอเดียใหม่: พับกระดาษ/Sticky Note/น้ำแข็ง/ยุง/เสียงตัวเอง",
+        "body": "ชุด 2: พับกระดาษ 7 ครั้ง, ทำไม Sticky Note ลอกได้, น้ำแข็งลอยน้ำ, ยุงกัดบางคน, เสียงตัวเองในคลิป | 2 ไอเดียผูกแบรนด์กระดาษ | แนะเริ่ม Card 5 (เสียงตัวเอง) เปิดซีรีส์ | ส่งต่อ Reese fact-check"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ส่งเอกสารวิจัยให้ Rae"
       ],
       "status": "done",
-      "task": "วิจัย SEO + คู่แข่ง: '5 ความผิดพลาดงานพิมพ์'",
+      "task": "Fact-check 5 ไอเดียคลิปวิทยาศาสตร์ชุดที่ 2",
       "report": {
-        "when": "18:47",
-        "title": "Research Brief: 5 ความผิดพลาดงานพิมพ์",
-        "body": "CMYK vs RGB, Bleed 3mm, 300dpi, Font Embed/Outline, Proof — ข้อมูลครบพร้อมให้ Rae ใช้เขียนบทความ"
+        "when": "18:00",
+        "title": "Fact-check ผ่าน ✅ — 5 ไอเดียชุด 2",
+        "body": "ทั้ง 5 ไอเดียวิทยาศาสตร์ถูกต้อง | 2 จุดเตือนคำพูดกัน Chris ตีกลับ: พับกระดาษ '~6-7 ครั้ง' ไม่ฟันธง + กรุ๊ปเลือด O ยุงกัด ใช้ 'บางงานวิจัยพบว่า' | ส่งต่อ Claudy สรุปให้ Kittanate เลือก"
       }
     },
     {
@@ -96,11 +96,11 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "done",
-      "task": "เขียนบทความ: 5 ความผิดพลาดที่ทำให้งานพิมพ์ออกมาไม่ตรงปก",
+      "task": "เขียนสคริปต์คลิป: ทำไมหมึก 4 สีพิมพ์ได้ทุกสี (CMYK) 60 วินาที",
       "report": {
-        "when": "18:50",
-        "title": "บทความ v2 — ผ่าน QA พร้อมเผยแพร่",
-        "body": "แก้ตาม Chris: CMYK Gamut, Font Outline+Embed, micro-example ข้อ 2 — ไฟล์: Output/Rae/2026-06-25-5-print-mistakes-article.md"
+        "when": "16:45",
+        "title": "สคริปต์เสร็จ: CMYK 60 วิ shot-by-shot",
+        "body": "สคริปต์ 9:16 แบ่ง 7 ช็อต | Hook ใบปลิว → analogy halftone → เกร็ด K=Key | โน้ตการผลิต: เสียงพากย์ Botnoi + ซับไทย + แนะถ่ายของจริง | ส่งต่อ Chris QA"
       }
     },
     {
@@ -166,11 +166,11 @@
         "เทสต์การทำงานเว็บแอป"
       ],
       "status": "done",
-      "task": "ตรวจบทความ: สะกดไทย, technical accuracy, tone ของ TANAPAT",
+      "task": "QA: สคริปต์ CMYK + วิธีทำคลิปวิทยาศาสตร์ — fact-check วิทย์ + ภาษาไทย",
       "report": {
-        "when": "18:50",
-        "title": "QA Pass (หลังแก้): บทความ 5 ความผิดพลาดงานพิมพ์",
-        "body": "แก้ครบ 2 จุดบังคับ: CMYK Gamut + Font Outline/Embed — พร้อม publish แล้ว"
+        "when": "17:15",
+        "title": "QA: คลิปวิทยาศาสตร์ ✅ PASS",
+        "body": "Fact-check ผ่านหมด: halftone, ตารวมสี, K=Key, ดำโคลนต้องเติม K | ภาษาไทยผ่าน | แนะ 2 ข้อ: ถ่ายดำโคลน vs ดำสดจากเครื่องจริง + วงเล็บไทยกำกับ halftone | ไม่มี blocker"
       }
     },
     {
@@ -202,19 +202,24 @@
       "pipeline": "standalone",
       "img": "avatars/Nick.png",
       "persona": "เชื่อมั่นในข้อมูล ถ้าไม่ชัดก็ไม่ฟันธง ดูแลระบบให้รันสมูท",
-      "caps": ["วิเคราะห์ยอดขาย", "Etsy metrics", "Deploy เว็บแอป", "API integrations"],
+      "caps": [
+        "วิเคราะห์ยอดขาย",
+        "Etsy metrics",
+        "Deploy เว็บแอป",
+        "API integrations"
+      ],
       "what": [
         "วิเคราะห์ performance เทมเพลตและ Etsy/Gumroad",
         "deploy + hosting เว็บแอป",
         "ดูแล API integration และฐานข้อมูล",
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
-      "status": "idle",
-      "task": null,
+      "status": "done",
+      "task": "วาง Production Pipeline คลิปวิทยาศาสตร์: tool stack + ต้นทุน + เมตริกวัดผล",
       "report": {
-        "when": "3 วันก่อน",
-        "title": "สรุปยอดเดือน พ.ค.",
-        "body": "Top: ปฏิทินพุทธ A4 (42% ของรายได้)\nรองลงมา: การ์ดอวยพร\nแนะนำ: ทำปฏิทินเวอร์ชันปีหน้าเพิ่ม + เลิกทำ sticker ที่ยอดต่ำ"
+        "when": "17:00",
+        "title": "✅ Pipeline คลิปวิทยาศาสตร์ — เริ่มฟรี 0 บาท",
+        "body": "Stack: Claude+Botnoi+Ideogram+Canva+CapCut (ฟรีเริ่มได้) | 7 ขั้นตอน ~2 ชม./คลิปแรก | export 1080×1920 30fps | เมตริก: completion rate + hook retention | ต่อยอดเป็น Cloud Routine ได้ถ้า Kittanate ต้องการ"
       }
     },
     {
@@ -224,7 +229,12 @@
       "pipeline": "news",
       "img": "avatars/News.png",
       "persona": "รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
-      "caps": ["การเมืองไทย", "ข่าวโลก", "ธุรกิจ & งานพิมพ์", "เทคโนโลยี & ราคาทอง"],
+      "caps": [
+        "การเมืองไทย",
+        "ข่าวโลก",
+        "ธุรกิจ & งานพิมพ์",
+        "เทคโนโลยี & ราคาทอง"
+      ],
       "what": [
         "ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.",
         "ส่งข้อมูลดิบให้ Chris ตรวจสอบ",
