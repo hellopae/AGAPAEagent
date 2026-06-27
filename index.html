@@ -9,31 +9,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Refined, formal identity — slate navy with a muted bronze highlight.
-       Status & pipeline tones are desaturated for an understated, elegant feel. */
-    --paper:#F4F2EE;     /* soft warm ivory */
+    --paper:#F4F2EE;
     --paper-2:#FCFBF8;
-    --ink:#1B1C20;       /* near-black */
+    --ink:#1B1C20;
     --ink-soft:#56565E;
     --ink-faint:#97969C;
     --line:#E5E2DB;
     --line-strong:#D2CEC4;
 
-    --accent:#2A3344;    /* deep slate navy — primary / structural */
-    --gold:#9A7B4F;      /* muted bronze — restrained highlight */
+    --accent:#2A3344;
+    --gold:#9A7B4F;
 
-    /* status — quiet and professional */
-    --working:#3E5366;   /* slate blue */
-    --done:#5E7A66;      /* sage green */
-    --idle:#9A9AA2;      /* neutral grey */
+    --working:#3E5366;
+    --done:#5E7A66;
+    --idle:#9A9AA2;
+    --flagged:#7A4A3A;
+    --sent:#9A7B4F;
 
-    /* pipeline tones — harmonious, low-saturation */
-    --c-orch:#2A3344;    /* deep slate navy */
-    --c-content:#9A7B4F; /* bronze */
-    --c-design:#4A6670;  /* muted teal-slate */
-    --c-quality:#8A5A66; /* muted burgundy */
-    --c-standalone:#8C8A86; /* warm grey */
-    --c-news:#3A6B50;      /* forest green — news feed */
+    --c-orch:#2A3344;
+    --c-content:#9A7B4F;
+    --c-design:#4A6670;
+    --c-quality:#8A5A66;
+    --c-standalone:#8C8A86;
+    --c-news:#3A6B50;
 
     --card:#FFFFFF;
     --shadow:0 1px 2px rgba(27,28,32,.04),0 10px 30px rgba(27,28,32,.07);
@@ -73,6 +71,25 @@
   .stat .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:3px}
   .stat .n.work{color:var(--working)}
 
+  /* ---------- view nav tabs ---------- */
+  .view-nav{
+    border-bottom:1px solid var(--line);
+    background:var(--paper-2);
+  }
+  .view-nav-inner{display:flex;gap:0;align-items:stretch}
+  .view-tab{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);padding:13px 20px;border:none;background:none;cursor:pointer;
+    border-bottom:2px solid transparent;margin-bottom:-1px;transition:.14s;display:flex;align-items:center;gap:7px;
+  }
+  .view-tab:hover{color:var(--ink)}
+  .view-tab.active{color:var(--ink);border-bottom-color:var(--ink)}
+  .tab-count{
+    font-size:10px;background:var(--paper);border:1px solid var(--line-strong);
+    border-radius:999px;padding:1px 7px;color:var(--ink-faint);
+  }
+  .view-tab.active .tab-count{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
+
   /* ---------- hero strip ---------- */
   .hero{padding:40px 0 24px}
   .hero .ey{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
@@ -91,7 +108,7 @@
   .chip.active{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
   .dot{width:7px;height:7px;border-radius:50%;flex:none}
 
-  /* ---------- grid : portrait gallery cards ---------- */
+  /* ---------- grid cards ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:16px}
   .card{
     position:relative;aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;cursor:pointer;
@@ -124,7 +141,7 @@
     background:rgba(154,123,79,.82);border:1px solid rgba(255,255,255,.18);transition:.15s}
   .rpt-pill:hover{background:var(--gold)}
 
-  /* ---------- drawer-only support styles ---------- */
+  /* ---------- drawer support ---------- */
   .avatar{
     width:96px;height:96px;border-radius:16px;flex:none;object-fit:cover;
     background:var(--paper);display:flex;align-items:center;justify-content:center;
@@ -138,6 +155,9 @@
   .badge.working{background:rgba(62,83,102,.12);color:var(--working)}
   .badge.idle{background:#EFEDE7;color:var(--ink-faint)}
   .badge.done{background:rgba(94,122,102,.14);color:var(--done)}
+  .badge.flagged{background:rgba(122,74,58,.12);color:var(--flagged)}
+  .badge.sent{background:rgba(154,123,79,.14);color:var(--sent)}
+  .badge.scheduled{background:#EFEDE7;color:var(--ink-soft)}
   .pulse{width:7px;height:7px;border-radius:50%;background:var(--working)}
   .badge.working .pulse{animation:pulse 1.4s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,83,102,.5)}70%{box-shadow:0 0 0 6px rgba(62,83,102,0)}100%{box-shadow:0 0 0 0 rgba(62,83,102,0)}}
@@ -175,12 +195,76 @@
   .report .lines{font-size:13px;color:var(--ink-soft);white-space:pre-line;font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
   .empty{font-size:13px;color:var(--ink-faint);font-style:italic}
 
+  /* ---------- Work Log timeline ---------- */
+  .wl-stats{
+    display:flex;gap:28px;align-items:center;padding:22px 0 0;
+    border-top:0;margin-bottom:0;
+  }
+  .wl-stat-item .n{font-size:26px;font-weight:600;line-height:1;color:var(--ink)}
+  .wl-stat-item .n.s-done{color:var(--done)}
+  .wl-stat-item .n.s-sent{color:var(--sent)}
+  .wl-stat-item .n.s-flagged{color:var(--flagged)}
+  .wl-stat-item .l{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:3px}
+
+  .wl-date-group{margin-bottom:32px}
+  .wl-date-marker{
+    display:flex;align-items:center;gap:14px;margin-bottom:14px;
+  }
+  .wl-date-label{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-faint);white-space:nowrap;
+  }
+  .wl-date-marker::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .wl-entry{
+    display:flex;border-radius:12px;background:var(--card);border:1px solid var(--line);
+    overflow:hidden;margin-bottom:10px;
+    transition:box-shadow .18s, transform .18s;cursor:default;
+  }
+  .wl-entry:hover{box-shadow:var(--shadow);transform:translateX(3px)}
+  .wl-accent{width:4px;flex:none}
+  .wl-body{flex:1;padding:15px 18px;min-width:0}
+
+  .wl-top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .wl-av{
+    width:30px;height:30px;border-radius:8px;flex:none;object-fit:cover;
+    background:var(--paper);border:1px solid var(--line);
+  }
+  .wl-av-ph{
+    display:flex;align-items:center;justify-content:center;
+    font-weight:600;font-size:13px;color:#fff;border:none;
+  }
+  .wl-meta{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+  .wl-name{font-size:13px;font-weight:600;color:var(--ink);line-height:1.1}
+  .wl-pipe{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase}
+  .wl-time{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);
+    white-space:nowrap;margin-left:auto;padding-left:8px;
+  }
+
+  .wl-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;margin-bottom:5px;font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .wl-summary{font-size:12.5px;color:var(--ink-soft);line-height:1.5;font-family:"Noto Sans Thai","Space Grotesk",sans-serif;margin-bottom:10px}
+
+  .wl-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+  .wl-proj-tag{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;
+    padding:3px 9px;border-radius:999px;background:var(--paper);border:1px solid var(--line);
+    color:var(--ink-faint);
+  }
+  .wl-sent-tag{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;
+    padding:3px 9px;border-radius:999px;background:rgba(154,123,79,.1);border:1px solid rgba(154,123,79,.25);
+    color:var(--sent);
+  }
+
   footer{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-faint)}
   footer .mono{color:var(--ink-soft)}
 
   @media(max-width:560px){
     .head-inner{flex-direction:column;align-items:flex-start;gap:14px}
     .hero{padding:28px 0 16px}
+    .wl-stats{gap:16px}
+    .wl-stat-item .n{font-size:20px}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -204,21 +288,66 @@
   </div>
 </header>
 
-<div class="wrap">
-  <section class="hero">
-    <div class="ey mono">Creator Team · 1 Human · 10 Agents</div>
-    <p>Dashboard ทีม Sub Agent ของ AGAPAE</p>
-  </section>
-
-  <div class="filters" id="filters">
-    <span class="lab mono">Pipelines</span>
+<!-- view nav -->
+<div class="view-nav">
+  <div class="wrap">
+    <div class="view-nav-inner">
+      <button class="view-tab active" data-v="console" onclick="switchView('console')">Team Console</button>
+      <button class="view-tab" data-v="worklog" onclick="switchView('worklog')">
+        Work Log <span class="tab-count" id="wlCount">0</span>
+      </button>
+    </div>
   </div>
+</div>
 
-  <div class="grid" id="grid"></div>
+<!-- ===== CONSOLE VIEW ===== -->
+<div id="consoleView">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Creator Team · 1 Human · 10 Agents</div>
+      <p>Dashboard ทีม Sub Agent ของ AGAPAE</p>
+    </section>
 
-  <footer id="footer">
-    <span class="mono" id="modeTag">DEMO MODE</span> — <span id="modeMsg">ข้อมูลสถานะตอนนี้เป็นตัวอย่าง · ต่อกับ Claude Code hooks ผ่าน <span class="mono">status.json</span> เพื่อแสดงสถานะจริง</span>
-  </footer>
+    <div class="filters" id="filters">
+      <span class="lab mono">Pipelines</span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <footer id="footer">
+      <span class="mono" id="modeTag">DEMO MODE</span> — <span id="modeMsg">ข้อมูลสถานะตอนนี้เป็นตัวอย่าง · ต่อกับ Claude Code hooks ผ่าน <span class="mono">status.json</span> เพื่อแสดงสถานะจริง</span>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== WORK LOG VIEW ===== -->
+<div id="worklogView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Work Log · ผลงานของทีม</div>
+      <p>ทุกงานที่ Agent ทำ — สถานะ เวลา และผู้รับ</p>
+    </section>
+
+    <!-- stats bar -->
+    <div class="wl-stats" id="wlStats">
+      <div class="wl-stat-item"><div class="n" id="wlTotal">0</div><div class="l">งานทั้งหมด</div></div>
+      <div class="wl-stat-item"><div class="n s-done" id="wlDone">0</div><div class="l">✅ เสร็จแล้ว</div></div>
+      <div class="wl-stat-item"><div class="n s-flagged" id="wlFlagged">0</div><div class="l">⚠ รอแก้ไข</div></div>
+      <div class="wl-stat-item"><div class="n s-sent" id="wlSent">0</div><div class="l">📧 ส่งแล้ว</div></div>
+    </div>
+
+    <!-- filters -->
+    <div class="filters" id="wlFilters" style="margin-top:24px">
+      <span class="lab mono">Agent</span>
+    </div>
+
+    <!-- timeline -->
+    <div id="wlTimeline"></div>
+
+    <footer>
+      <span class="mono" id="wlModeTag">LOADING</span> — <span id="wlModeMsg">กำลังโหลด worklog.json</span>
+    </footer>
+  </div>
 </div>
 
 <div class="scrim" id="scrim"></div>
@@ -226,9 +355,7 @@
 
 <script>
 /* =====================================================================
-   DATA MODEL  — แก้/ต่อ data จริงที่ตรงนี้จุดเดียว
-   ตอนย้ายเข้า Claude Code: ให้ hook เขียน status + report ลง status.json
-   แล้ว fetch('status.json') มาแทน array ด้านล่าง
+   DATA — Console agents
    ===================================================================== */
 const PIPELINES = {
   orchestrator:{label:"Orchestrator",color:"var(--c-orch)"},
@@ -239,273 +366,175 @@ const PIPELINES = {
   news:{label:"News Feed",color:"var(--c-news)"},
 };
 
-/* SEED_AGENTS = demo/fallback data. Source of truth at runtime is status.json
-   (served over http). When opened via file:// the browser blocks fetch, so this
-   seed renders instead. Hooks should write the SAME shape into status.json. */
 const SEED_AGENTS = [
-  {
-    "id": "claudy",
-    "name": "Claudy",
-    "role": "Orchestrator",
-    "pipeline": "orchestrator",
-    "img": "avatars/Claudy.png?v=3",
-    "persona": "สุขุม วิเคราะห์เก่ง รู้เสมอว่าสเต็ปต่อไปคืออะไร",
-    "caps": [
-      "จัดคิวงาน",
-      "ส่งต่อให้ทีม",
-      "คุม quality gate"
-    ],
-    "what": [
-      "รับโจทย์แล้วส่งให้คนที่ใช่ — ไม่ลงมือทำเอง",
-      "รัน quality gate อัตโนมัติ",
-      "คุมบันทึก session และ work tracker"
-    ],
-    "status": "working",
-    "task": "กระจายงาน 'การ์ดทำบุญลอยกระทง' ให้ทีม",
-    "report": null
-  },
-  {
-    "id": "minnie",
-    "name": "Minnie",
-    "role": "Ideas & Concepts",
-    "pipeline": "content",
-    "img": "avatars/Minnie.png?v=3",
-    "persona": "สดใส ช่างสงสัย เหมือนเพิ่งเจอไอเดียใหม่ตลอดเวลา",
-    "caps": [
-      "Idea cards",
-      "ตั้งสมมติฐาน",
-      "คำถามวิจัย"
-    ],
-    "what": [
-      "คิดคอนเซ็ปต์การ์ดพิธีบุญ / ปฏิทินพุทธ / ใบประกาศ",
-      "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
-      "ส่งต่อให้ Reese ทำวิจัย"
-    ],
-    "status": "done",
-    "task": "คิด 5 คอนเซ็ปต์การ์ดทำบุญ",
-    "report": {
-      "when": "วันนี้ 16:42",
-      "title": "5 Idea Cards — การ์ดทำบุญ",
-      "body": "• การ์ดทำบุญลอยกระทง (เรืองแสง) — สมมติฐาน: ขายดีช่วง ต.ค.–พ.ย.\n• การ์ดถวายสังฆทาน A6 — กลุ่มวัด/มูลนิธิ\n• ชุดการ์ดทำบุญวันเกิด (เซ็ต 5 ใบ)\n• การ์ดอุทิศส่วนกุศล โทนมินิมอล\n• การ์ดทำบุญบ้านใหม่\n\nแนะนำเริ่มวิจัยตัวลอยกระทงก่อน (ดีมานด์ตามฤดูชัด)"
-    }
-  },
-  {
-    "id": "reese",
-    "name": "Reese",
-    "role": "Research & Data",
-    "pipeline": "content",
-    "img": "avatars/Reese.png",
-    "persona": "โฟกัส เป็นมืออาชีพ เน้นข้อมูลจริงไม่ใช่ความเห็น",
-    "caps": [
-      "วิจัยตลาด",
-      "วิเคราะห์คู่แข่ง",
-      "color psychology"
-    ],
-    "what": [
-      "หาเทรนด์พิธีบุญ/งานวัดของไทย",
-      "วิเคราะห์เทมเพลตคู่แข่งบน Etsy/Gumroad",
-      "ศึกษาจิตวิทยาสีสำหรับลูกค้าไทย",
-      "ส่งเอกสารวิจัยให้ Rae"
-    ],
-    "status": "working",
-    "task": "วิเคราะห์คู่แข่งการ์ดทำบุญบน Etsy",
-    "report": null
-  },
-  {
-    "id": "rae",
-    "name": "Rae",
-    "role": "Writer & Copy",
-    "pipeline": "design",
-    "img": "avatars/Rae.png",
-    "persona": "เขียนในนามแบรนด์ ไม่ใช่เขียนถึงแบรนด์",
-    "caps": [
-      "ข้อความไทย/อังกฤษ",
-      "คำอวยพร",
-      "listing copy"
-    ],
-    "what": [
-      "เขียนข้อความ/คำแนะนำบนการ์ดบุญ",
-      "คำบรรยายปฏิทินวัด + คำในใบประกาศ",
-      "copy เว็บแอปภาษาไทย",
-      "ส่งต่อให้ Vera"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": {
-      "when": "เมื่อวาน 11:20",
-      "title": "คำอวยพรชุดวันเกิด (ร่าง)",
-      "body": "ส่งคำอวยพร 8 แบบ โทนอบอุ่น + ฉบับแปลอังกฤษ\nรอ Chris ตรวจคำทางศาสนา 2 จุดก่อนใช้จริง"
-    }
-  },
-  {
-    "id": "vera",
-    "name": "Vera",
-    "role": "UX / Experience",
-    "pipeline": "design",
-    "img": "avatars/Vera.png",
-    "persona": "เน้นข้อเท็จจริง วัดได้ ทุกสเปคต้องเป๊ะ",
-    "caps": [
-      "สเปค layout",
-      "UI เว็บแดชบอร์ด",
-      "responsive"
-    ],
-    "what": [
-      "ออกแบบ layout เทมเพลตพร้อมพิมพ์",
-      "ทำ mockup UI เว็บแดชบอร์ด",
-      "ดีไซน์รองรับมือถือ",
-      "วาง grid + bleed + margin"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": null
-  },
-  {
-    "id": "mind",
-    "name": "Mind",
-    "role": "Visual Design",
-    "pipeline": "design",
-    "img": "avatars/Mind.png",
-    "persona": "สายตาเฉียบ คุมโทนภาพและแบรนด์ให้นิ่งกันทั้งชุด",
-    "caps": [
-      "องค์ประกอบกราฟิก",
-      "ภาพประกอบพิธีบุญ",
-      "คุมแบรนด์"
-    ],
-    "what": [
-      "ทำ decorative element สำหรับเทมเพลต",
-      "วาดภาพประกอบงานบุญ + ไอคอนพุทธ",
-      "คุมความสม่ำเสมอของแบรนด์",
-      "ส่งไฟล์ดีไซน์พร้อมผลิต"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": null
-  },
-  {
-    "id": "chris",
-    "name": "Chris",
-    "role": "Quality Gate",
-    "pipeline": "quality",
-    "img": "avatars/Chris.png?v=2",
-    "persona": "ไม่มีอะไรผ่านโดยไม่ถูกตรวจ",
-    "caps": [
-      "ตรวจภาษาไทย",
-      "ความเหมาะสมวัฒนธรรม",
-      "print specs"
-    ],
-    "what": [
-      "เช็คสะกด/ไวยากรณ์ไทย",
-      "ตรวจความเหมาะสมเชิงพุทธ/พิธี",
-      "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
-      "เทสต์การทำงานเว็บแอป"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": null
-  },
-  {
-    "id": "libby",
-    "name": "Libby",
-    "role": "Librarian / Index",
-    "pipeline": "quality",
-    "img": "avatars/Libby.png",
-    "persona": "ไม่แก้เนื้อหา จัดแต่ระบบ index และ metadata ให้ค้นเจอ",
-    "caps": [
-      "จัด index เทมเพลต",
-      "metadata การขาย",
-      "ตั้งชื่อ/จัดไฟล์"
-    ],
-    "what": [
-      "ทำดัชนีคลังเทมเพลต",
-      "เก็บ metadata ราคา/หมวด/SKU",
-      "เก็บ metadata สี/ฟอนต์/ฟอร์แมต",
-      "ทำเอกสารโปรเจกต์"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": null
-  },
-  {
-    "id": "nick",
-    "name": "Nick",
-    "role": "Analytics & DevOps",
-    "pipeline": "standalone",
-    "img": "avatars/Nick.png",
-    "persona": "เชื่อมั่นในข้อมูล ถ้าไม่ชัดก็ไม่ฟันธง ดูแลระบบให้รันสมูท",
-    "caps": [
-      "วิเคราะห์ยอดขาย",
-      "Etsy metrics",
-      "Deploy เว็บแอป",
-      "API integrations"
-    ],
-    "what": [
-      "วิเคราะห์ performance เทมเพลตและ Etsy/Gumroad",
-      "deploy + hosting เว็บแอป",
-      "ดูแล API integration และฐานข้อมูล",
-      "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": {
-      "when": "3 วันก่อน",
-      "title": "สรุปยอดเดือน พ.ค.",
-      "body": "Top: ปฏิทินพุทธ A4 (42% ของรายได้)\nรองลงมา: การ์ดอวยพร\nแนะนำ: ทำปฏิทินเวอร์ชันปีหน้าเพิ่ม + เลิกทำ sticker ที่ยอดต่ำ"
-    }
-  },
-  {
-    "id": "news",
-    "name": "News",
-    "role": "Daily News Director",
-    "pipeline": "news",
-    "img": "avatars/News.png",
-    "persona": "รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
-    "caps": [
-      "การเมืองไทย",
-      "ข่าวโลก",
-      "ธุรกิจ & งานพิมพ์",
-      "เทคโนโลยี & ราคาทอง"
-    ],
-    "what": [
-      "ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.",
-      "ส่งข้อมูลดิบให้ Chris ตรวจสอบ",
-      "Chris ผ่าน → Rae เขียนบทความสรุป",
-      "ส่งอีเมลสรุปให้ Kittanate"
-    ],
-    "status": "idle",
-    "task": null,
-    "report": null
-  }
+  {id:"claudy",name:"Claudy",role:"Orchestrator",pipeline:"orchestrator",img:"avatars/Claudy.png?v=3",
+   persona:"สุขุม วิเคราะห์เก่ง รู้เสมอว่าสเต็ปต่อไปคืออะไร",
+   caps:["จัดคิวงาน","ส่งต่อให้ทีม","คุม quality gate"],
+   what:["รับโจทย์แล้วส่งให้คนที่ใช่ — ไม่ลงมือทำเอง","รัน quality gate อัตโนมัติ","คุมบันทึก session และ work tracker"],
+   status:"working",task:"กระจายงาน 'การ์ดทำบุญลอยกระทง' ให้ทีม",report:null},
+  {id:"minnie",name:"Minnie",role:"Ideas & Concepts",pipeline:"content",img:"avatars/Minnie.png?v=3",
+   persona:"สดใส ช่างสงสัย เหมือนเพิ่งเจอไอเดียใหม่ตลอดเวลา",
+   caps:["Idea cards","ตั้งสมมติฐาน","คำถามวิจัย"],
+   what:["คิดคอนเซ็ปต์การ์ดพิธีบุญ / ปฏิทินพุทธ / ใบประกาศ","แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง","ส่งต่อให้ Reese ทำวิจัย"],
+   status:"done",task:"คิด 5 คอนเซ็ปต์การ์ดทำบุญ",
+   report:{when:"วันนี้ 16:42",title:"5 Idea Cards — การ์ดทำบุญ",body:"• การ์ดทำบุญลอยกระทง (เรืองแสง) — สมมติฐาน: ขายดีช่วง ต.ค.–พ.ย.\n• การ์ดถวายสังฆทาน A6 — กลุ่มวัด/มูลนิธิ\n• ชุดการ์ดทำบุญวันเกิด (เซ็ต 5 ใบ)\n• การ์ดอุทิศส่วนกุศล โทนมินิมอล\n• การ์ดทำบุญบ้านใหม่\n\nแนะนำเริ่มวิจัยตัวลอยกระทงก่อน (ดีมานด์ตามฤดูชัด)"}},
+  {id:"reese",name:"Reese",role:"Research & Data",pipeline:"content",img:"avatars/Reese.png",
+   persona:"โฟกัส เป็นมืออาชีพ เน้นข้อมูลจริงไม่ใช่ความเห็น",
+   caps:["วิจัยตลาด","วิเคราะห์คู่แข่ง","color psychology"],
+   what:["หาเทรนด์พิธีบุญ/งานวัดของไทย","วิเคราะห์เทมเพลตคู่แข่งบน Etsy/Gumroad","ศึกษาจิตวิทยาสีสำหรับลูกค้าไทย","ส่งเอกสารวิจัยให้ Rae"],
+   status:"working",task:"วิเคราะห์คู่แข่งการ์ดทำบุญบน Etsy",report:null},
+  {id:"rae",name:"Rae",role:"Writer & Copy",pipeline:"design",img:"avatars/Rae.png",
+   persona:"เขียนในนามแบรนด์ ไม่ใช่เขียนถึงแบรนด์",
+   caps:["ข้อความไทย/อังกฤษ","คำอวยพร","listing copy"],
+   what:["เขียนข้อความ/คำแนะนำบนการ์ดบุญ","คำบรรยายปฏิทินวัด + คำในใบประกาศ","copy เว็บแอปภาษาไทย","ส่งต่อให้ Vera"],
+   status:"idle",task:null,
+   report:{when:"เมื่อวาน 11:20",title:"คำอวยพรชุดวันเกิด (ร่าง)",body:"ส่งคำอวยพร 8 แบบ โทนอบอุ่น + ฉบับแปลอังกฤษ\nรอ Chris ตรวจคำทางศาสนา 2 จุดก่อนใช้จริง"}},
+  {id:"vera",name:"Vera",role:"UX / Experience",pipeline:"design",img:"avatars/Vera.png",
+   persona:"เน้นข้อเท็จจริง วัดได้ ทุกสเปคต้องเป๊ะ",
+   caps:["สเปค layout","UI เว็บแดชบอร์ด","responsive"],
+   what:["ออกแบบ layout เทมเพลตพร้อมพิมพ์","ทำ mockup UI เว็บแดชบอร์ด","ดีไซน์รองรับมือถือ","วาง grid + bleed + margin"],
+   status:"idle",task:null,report:null},
+  {id:"mind",name:"Mind",role:"Visual Design",pipeline:"design",img:"avatars/Mind.png",
+   persona:"สายตาเฉียบ คุมโทนภาพและแบรนด์ให้นิ่งกันทั้งชุด",
+   caps:["องค์ประกอบกราฟิก","ภาพประกอบพิธีบุญ","คุมแบรนด์"],
+   what:["ทำ decorative element สำหรับเทมเพลต","วาดภาพประกอบงานบุญ + ไอคอนพุทธ","คุมความสม่ำเสมอของแบรนด์","ส่งไฟล์ดีไซน์พร้อมผลิต"],
+   status:"idle",task:null,report:null},
+  {id:"chris",name:"Chris",role:"Quality Gate",pipeline:"quality",img:"avatars/Chris.png?v=2",
+   persona:"ไม่มีอะไรผ่านโดยไม่ถูกตรวจ",
+   caps:["ตรวจภาษาไทย","ความเหมาะสมวัฒนธรรม","print specs"],
+   what:["เช็คสะกด/ไวยากรณ์ไทย","ตรวจความเหมาะสมเชิงพุทธ/พิธี","ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)","เทสต์การทำงานเว็บแอป"],
+   status:"idle",task:null,report:null},
+  {id:"libby",name:"Libby",role:"Librarian / Index",pipeline:"quality",img:"avatars/Libby.png",
+   persona:"ไม่แก้เนื้อหา จัดแต่ระบบ index และ metadata ให้ค้นเจอ",
+   caps:["จัด index เทมเพลต","metadata การขาย","ตั้งชื่อ/จัดไฟล์"],
+   what:["ทำดัชนีคลังเทมเพลต","เก็บ metadata ราคา/หมวด/SKU","เก็บ metadata สี/ฟอนต์/ฟอร์แมต","ทำเอกสารโปรเจกต์"],
+   status:"idle",task:null,report:null},
+  {id:"nick",name:"Nick",role:"Analytics & DevOps",pipeline:"standalone",img:"avatars/Nick.png",
+   persona:"เชื่อมั่นในข้อมูล ถ้าไม่ชัดก็ไม่ฟันธง ดูแลระบบให้รันสมูท",
+   caps:["วิเคราะห์ยอดขาย","Etsy metrics","Deploy เว็บแอป","API integrations"],
+   what:["วิเคราะห์ performance เทมเพลตและ Etsy/Gumroad","deploy + hosting เว็บแอป","ดูแล API integration และฐานข้อมูล","บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"],
+   status:"idle",task:null,
+   report:{when:"3 วันก่อน",title:"สรุปยอดเดือน พ.ค.",body:"Top: ปฏิทินพุทธ A4 (42% ของรายได้)\nรองลงมา: การ์ดอวยพร\nแนะนำ: ทำปฏิทินเวอร์ชันปีหน้าเพิ่ม + เลิกทำ sticker ที่ยอดต่ำ"}},
+  {id:"news",name:"News",role:"Daily News Director",pipeline:"news",img:"avatars/News.png",
+   persona:"รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
+   caps:["การเมืองไทย","ข่าวโลก","ธุรกิจ & งานพิมพ์","เทคโนโลยี & ราคาทอง"],
+   what:["ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.","ส่งข้อมูลดิบให้ Chris ตรวจสอบ","Chris ผ่าน → Rae เขียนบทความสรุป","ส่งอีเมลสรุปให้ Kittanate"],
+   status:"idle",task:null,report:null}
 ];
-
-/* AGENTS = live data. Starts as the seed, gets replaced by status.json when available. */
 let AGENTS = SEED_AGENTS;
 
-/* ---------- render filters ---------- */
-const filterBox=document.getElementById('filters');
-let active="all";
-const allChip=mkChip("all","ทั้งหมด",null,true);
+/* =====================================================================
+   WORK LOG data
+   ===================================================================== */
+const WORKLOG_SEED = [
+  {id:"wl-27-claudy-email",datetime:"2026-06-27T02:30:00Z",displayDate:"27 มิ.ย. 2569",displayTime:"09:30",
+   agent:"claudy",agentName:"Claudy",agentImg:"avatars/Claudy.png?v=3",pipeline:"orchestrator",status:"sent",
+   title:"ส่ง Email Draft → hellopae@gmail.com",
+   summary:"Pipeline Monthly Article เสร็จสมบูรณ์ บทความ 2 ชิ้นผ่าน Chris QA — draft email สร้างใน Gmail พร้อม send",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",sentTo:"hellopae@gmail.com"},
+  {id:"wl-27-chris-qa-digital-pass",datetime:"2026-06-27T02:00:00Z",displayDate:"27 มิ.ย. 2569",displayTime:"09:00",
+   agent:"chris",agentName:"Chris",agentImg:"avatars/Chris.png?v=2",pipeline:"quality",status:"done",
+   title:"QA Re-Review: ปีแตกหักออก Digital Packaging ✅ PASS",
+   summary:"ePS/HP Nio แยกชัดแล้ว · hellopae@gmail.com ใน CTA · 30-40% disclaimer ครบ · ตัวเลข 20 รายการผ่านหมด",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Chris/2026-06-27-qa-digital-packaging-article-v1-updated.md"},
+  {id:"wl-27-chris-qa-print-pass",datetime:"2026-06-27T01:55:00Z",displayDate:"27 มิ.ย. 2569",displayTime:"08:55",
+   agent:"chris",agentName:"Chris",agentImg:"avatars/Chris.png?v=2",pipeline:"quality",status:"done",
+   title:"QA Re-Review: 5 Print Mistakes ✅ PASS",
+   summary:"Blocker 1: gamut อธิบายถูกแล้ว · Blocker 2: Outline+Embed ครบทั้งคู่ · header ข้อ 4 ชัดขึ้น",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Chris/2026-06-27-qa-print-mistakes-article-v2.md"},
+  {id:"wl-26-rae-digital-v2",datetime:"2026-06-26T05:00:00Z",displayDate:"26 มิ.ย. 2569",displayTime:"12:00",
+   agent:"rae",agentName:"Rae",agentImg:"avatars/Rae.png",pipeline:"design",status:"done",
+   title:"บทความ: ปีแตกหักออก Digital Packaging — v2 (แก้ตาม Chris)",
+   summary:"แก้ Blocker: แยก ePS Radius 13.0 / HP Nio ออกจากกันชัด · เพิ่ม hellopae@gmail.com ใน CTA · กระชับขึ้น",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Rae/2026-06-26-digital-packaging-article-v2.md"},
+  {id:"wl-26-chris-qa-digital-fail",datetime:"2026-06-26T04:28:00Z",displayDate:"26 มิ.ย. 2569",displayTime:"11:28",
+   agent:"chris",agentName:"Chris",agentImg:"avatars/Chris.png?v=2",pipeline:"quality",status:"flagged",
+   title:"QA: Digital Packaging ❌ FAIL — 1 Blocker, 2 Warnings",
+   summary:"Blocker: ePS Radius 13.0 + HP Nio รวมอยู่ใน clause เดียว ทำให้ดูเหมือนทั้งคู่เป็น HP agent · Warning: CTA ไม่มี contact",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Chris/2026-06-26-qa-digital-packaging-article.md"},
+  {id:"wl-26-rae-digital-v1",datetime:"2026-06-26T04:12:00Z",displayDate:"26 มิ.ย. 2569",displayTime:"11:12",
+   agent:"rae",agentName:"Rae",agentImg:"avatars/Rae.png",pipeline:"design",status:"done",
+   title:"บทความ: ปีแตกหักออกของ Digital Packaging — v1",
+   summary:"~1,470 คำ · 7 sections · Hook: ลูกค้าน้ำอ้อยออร์แกนิก 500 ใบ · Landa story + FIMI USD 80M · 3 practical steps",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Rae/2026-06-26-digital-packaging-article.md"},
+  {id:"wl-26-reese-digital-brief",datetime:"2026-06-26T03:43:00Z",displayDate:"26 มิ.ย. 2569",displayTime:"10:43",
+   agent:"reese",agentName:"Reese",agentImg:"avatars/Reese.png",pipeline:"content",status:"done",
+   title:"Research Brief: Digital Packaging Printing 2569 — ปีแตกหักออก",
+   summary:"7 anchor facts verified · แก้ misattribution GVR · Landa: ยื่นล้มละลาย + FIMI USD 80M · Thai voice: Kriengkrai FTI",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Reese/2026-06-26-digital-packaging-research-brief.md"},
+  {id:"wl-26-minnie-digital-ideas",datetime:"2026-06-26T03:00:00Z",displayDate:"26 มิ.ย. 2569",displayTime:"10:00",
+   agent:"minnie",agentName:"Minnie",agentImg:"avatars/Minnie.png?v=3",pipeline:"content",status:"done",
+   title:"Idea Card: Digital Packaging Printing Breakout Year 2569",
+   summary:"Hypothesis: ปี 2569 คือ maturation inflection point · 3 research questions · ส่งต่อ Reese แล้ว",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Minnie/2026-06-26-digital-packaging-breakout-ideas.md"},
+  {id:"wl-25-rae-print-v2",datetime:"2026-06-25T05:00:00Z",displayDate:"25 มิ.ย. 2569",displayTime:"12:00",
+   agent:"rae",agentName:"Rae",agentImg:"avatars/Rae.png",pipeline:"design",status:"done",
+   title:"บทความ: 5 ความผิดพลาดงานพิมพ์ — v2 (แก้ตาม Chris)",
+   summary:"แก้ gamut description · อธิบาย Outline + Embed Font ทั้งคู่ครบ · ปรับ header ข้อ 4 · เพิ่ม micro-examples",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Rae/2026-06-25-5-print-mistakes-article-v2.md"},
+  {id:"wl-25-chris-qa-print-fail",datetime:"2026-06-25T04:30:00Z",displayDate:"25 มิ.ย. 2569",displayTime:"11:30",
+   agent:"chris",agentName:"Chris",agentImg:"avatars/Chris.png?v=2",pipeline:"quality",status:"flagged",
+   title:"QA: 5 Print Mistakes ❌ FAIL — 2 Blockers",
+   summary:"Blocker 1: CMYK gamut อธิบายว่า 'ไม่สามารถแปลงได้ 1:1' — ผิดทางเทคนิค · Blocker 2: header พูดถึง Embed แต่ไม่อธิบายวิธี",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Chris/2026-06-25-qa-print-mistakes-article.md"},
+  {id:"wl-25-rae-print-v1",datetime:"2026-06-25T04:00:00Z",displayDate:"25 มิ.ย. 2569",displayTime:"11:00",
+   agent:"rae",agentName:"Rae",agentImg:"avatars/Rae.png",pipeline:"design",status:"done",
+   title:"บทความ: 5 ความผิดพลาดที่ทำให้งานพิมพ์ออกมาไม่ตรงปก — v1",
+   summary:"บทความ practical สำหรับลูกค้า TANAPAT · checklist 5 ข้อก่อนส่งไฟล์ · tone: เพื่อนคนในวงการแชร์จริง",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Rae/2026-06-25-5-print-mistakes-article.md"},
+  {id:"wl-25-reese-print-brief",datetime:"2026-06-25T03:30:00Z",displayDate:"25 มิ.ย. 2569",displayTime:"10:30",
+   agent:"reese",agentName:"Reese",agentImg:"avatars/Reese.png",pipeline:"content",status:"done",
+   title:"Research Brief: 5 ความผิดพลาดที่ทำให้งานพิมพ์ออกมาไม่ตรงปก",
+   summary:"CMYK gamut mechanics · Bleed 3mm standard · 300 dpi ที่ขนาดจริง · Outline vs Embed font workflow",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Reese/2026-06-25-print-mistakes-research-brief.md"},
+  {id:"wl-25-minnie-print-ideas",datetime:"2026-06-25T03:00:00Z",displayDate:"25 มิ.ย. 2569",displayTime:"10:00",
+   agent:"minnie",agentName:"Minnie",agentImg:"avatars/Minnie.png?v=3",pipeline:"content",status:"done",
+   title:"5 Idea Cards บทความงานพิมพ์ — Claudy เลือก Card 3",
+   summary:"5 concept cards · Card 3 (ข้อผิดพลาดในการเตรียมไฟล์งานพิมพ์) ถูกเลือก · ส่งต่อ Reese ทำวิจัย",
+   project:"monthly-article-jun2569",projectLabel:"Monthly Article มิ.ย. 2569",outputFile:"Output/Minnie/2026-06-25-print-article-concepts.md"}
+];
+let WORKLOG = WORKLOG_SEED;
+let activeWlAgent = 'all';
+
+/* =====================================================================
+   VIEW SWITCHING
+   ===================================================================== */
+let currentView = 'console';
+function switchView(v) {
+  currentView = v;
+  document.getElementById('consoleView').style.display = v === 'console' ? '' : 'none';
+  document.getElementById('worklogView').style.display = v === 'worklog' ? '' : 'none';
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
+  if (v === 'worklog') renderWorklog();
+}
+
+/* =====================================================================
+   CONSOLE — render agent grid
+   ===================================================================== */
+const filterBox = document.getElementById('filters');
+let active = 'all';
+const allChip = mkChip('all','ทั้งหมด',null,true);
 filterBox.appendChild(allChip);
-Object.entries(PIPELINES).forEach(([k,v])=>filterBox.appendChild(mkChip(k,v.label,v.color)));
+Object.entries(PIPELINES).forEach(([k,v]) => filterBox.appendChild(mkChip(k,v.label,v.color)));
 function mkChip(key,label,color,on){
-  const b=document.createElement('button');
-  b.className="chip"+(on?" active":"");
-  b.dataset.key=key;
-  b.innerHTML=(color?`<span class="dot" style="background:${color}"></span>`:"")+label;
-  b.onclick=()=>{active=key;[...filterBox.querySelectorAll('.chip')].forEach(c=>c.classList.toggle('active',c.dataset.key===key));render()};
+  const b = document.createElement('button');
+  b.className = 'chip'+(on?' active':'');
+  b.dataset.key = key;
+  b.innerHTML = (color?`<span class="dot" style="background:${color}"></span>`:'')+label;
+  b.onclick = () => {active=key;[...filterBox.querySelectorAll('.chip')].forEach(c=>c.classList.toggle('active',c.dataset.key===key));render()};
   return b;
 }
 
-/* ---------- render grid ---------- */
-const grid=document.getElementById('grid');
+const grid = document.getElementById('grid');
 function render(){
-  grid.innerHTML="";
-  const list=AGENTS.filter(a=>active==="all"||a.pipeline===active);
-  list.forEach((a,i)=>{
-    const p=PIPELINES[a.pipeline];
-    const card=document.createElement('div');
-    card.className="card";
-    card.onclick=()=>openDrawer(a);
-    card.innerHTML=`
+  grid.innerHTML = '';
+  const list = AGENTS.filter(a => active==='all'||a.pipeline===active);
+  list.forEach((a,i) => {
+    const p = PIPELINES[a.pipeline];
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.onclick = () => openDrawer(a);
+    card.innerHTML = `
       ${artHTML(a)}
       <div class="veil"></div>
       <div class="topbar">
@@ -517,51 +546,48 @@ function render(){
         <div class="role">${a.role}</div>
         <div class="statline">
           ${cardStatusHTML(a.status)}
-          ${a.report?`<button class="rpt-pill" onclick="event.stopPropagation();openReport('${a.id}')">รายงาน →</button>`:""}
+          ${a.report?`<button class="rpt-pill" onclick="event.stopPropagation();openReport('${a.id}')">รายงาน →</button>`:''}
         </div>
       </div>`;
     grid.appendChild(card);
   });
   updateStats();
 }
-// full-bleed art for the gallery card (placeholder = pipeline-tinted tile with initial)
 function artHTML(a){
-  const grad=`linear-gradient(150deg,${PIPELINES[a.pipeline].color},#1b2330)`;
+  const grad = `linear-gradient(150deg,${PIPELINES[a.pipeline].color},#1b2330)`;
   if(!a.img) return `<div class="ph-art" style="background:${grad}">${a.name[0]}</div>`;
-  return `<img class="art" src="${a.img}" alt="${a.name}"
-    onerror="this.outerHTML='<div class=\\'ph-art\\' style=\\'background:${grad}\\'>${a.name[0]}</div>'">`;
+  return `<img class="art" src="${a.img}" alt="${a.name}" onerror="this.outerHTML='<div class=\\'ph-art\\' style=\\'background:${grad}\\'>${a.name[0]}</div>'">`;
 }
-// status line shown over the dark foot of the card (lighter tones for contrast on art)
 function cardStatusHTML(s){
-  const m={working:["ทำงานอยู่","#8FB0C8",true],done:["เสร็จแล้ว","#9CBBA6",false],idle:["ว่าง","rgba(255,255,255,.55)",false]};
-  const [label,col,pulse]=m[s]||m.idle;
+  const m = {working:['ทำงานอยู่','#8FB0C8',true],done:['เสร็จแล้ว','#9CBBA6',false],idle:['ว่าง','rgba(255,255,255,.55)',false]};
+  const [label,col,pulse] = m[s]||m.idle;
   return `<span class="cstat"><span class="cdot${pulse?' pulsing':''}" style="background:${col}"></span>${label}</span>`;
 }
-// rounded-square avatar for the drawer header
 function avatarHTML(a){
-  const initial=a.name[0];
-  const grad=`linear-gradient(140deg,${PIPELINES[a.pipeline].color},#1b2330)`;
+  const initial = a.name[0];
+  const grad = `linear-gradient(140deg,${PIPELINES[a.pipeline].color},#1b2330)`;
   if(!a.img) return `<div class="avatar ph" style="background:${grad}">${initial}</div>`;
-  return `<img class="avatar" src="${a.img}" alt="${a.name}"
-    onerror="this.outerHTML='<div class=\\'avatar ph\\' style=\\'background:${grad}\\'>${initial}</div>'">`;
+  return `<img class="avatar" src="${a.img}" alt="${a.name}" onerror="this.outerHTML='<div class=\\'avatar ph\\' style=\\'background:${grad}\\'>${initial}</div>'">`;
 }
 function badgeHTML(s){
-  if(s==="working")return `<span class="badge working"><span class="pulse"></span>กำลังทำ</span>`;
-  if(s==="done")return `<span class="badge done">เสร็จ</span>`;
+  if(s==='working') return `<span class="badge working"><span class="pulse"></span>กำลังทำ</span>`;
+  if(s==='done') return `<span class="badge done">เสร็จ</span>`;
   return `<span class="badge idle">ว่าง</span>`;
 }
 function updateStats(){
-  document.getElementById('nWorking').textContent=AGENTS.filter(a=>a.status==="working").length;
-  document.getElementById('nIdle').textContent=AGENTS.filter(a=>a.status==="idle").length;
-  document.getElementById('nDone').textContent=AGENTS.filter(a=>a.status==="done").length;
+  document.getElementById('nWorking').textContent = AGENTS.filter(a=>a.status==='working').length;
+  document.getElementById('nIdle').textContent = AGENTS.filter(a=>a.status==='idle').length;
+  document.getElementById('nDone').textContent = AGENTS.filter(a=>a.status==='done').length;
 }
 
-/* ---------- drawer ---------- */
-const drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');
+/* =====================================================================
+   DRAWER
+   ===================================================================== */
+const drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim');
 function openReport(id){ openDrawer(AGENTS.find(x=>x.id===id), true); }
 function openDrawer(a, scrollToReport){
-  const p=PIPELINES[a.pipeline];
-  drawer.innerHTML=`
+  const p = PIPELINES[a.pipeline];
+  drawer.innerHTML = `
     <div class="drawer-head">
       ${avatarHTML(a)}
       <div><div class="name">${a.name}</div><div class="role">${p.label} · ${a.role}</div></div>
@@ -570,29 +596,177 @@ function openDrawer(a, scrollToReport){
     <div class="drawer-body">
       <div class="sec"><h4>สถานะ</h4>${badgeHTML(a.status)}${a.task?`<p style="margin-top:10px">${a.task}</p>`:`<p style="margin-top:10px" class="empty">ยังไม่มีงานที่กำลังทำ</p>`}</div>
       <div class="sec"><h4>บุคลิก</h4><p>${a.persona}</p></div>
-      <div class="sec what"><h4>หน้าที่</h4><ul>${a.what.map(w=>`<li>${w}</li>`).join("")}</ul></div>
-      <div class="sec"><h4>ความสามารถ</h4><div class="caps">${a.caps.map(c=>`<span class="cap">${c}</span>`).join("")}</div></div>
+      <div class="sec what"><h4>หน้าที่</h4><ul>${a.what.map(w=>`<li>${w}</li>`).join('')}</ul></div>
+      <div class="sec"><h4>ความสามารถ</h4><div class="caps">${a.caps.map(c=>`<span class="cap">${c}</span>`).join('')}</div></div>
       <div class="sec" id="reportSec"><h4>รายงานล่าสุด</h4>${reportHTML(a.report)}</div>
     </div>`;
-  drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false');
+  drawer.classList.add('open'); scrim.classList.add('open'); drawer.setAttribute('aria-hidden','false');
   if(scrollToReport && a.report){
-    const sec=drawer.querySelector('#reportSec');
+    const sec = drawer.querySelector('#reportSec');
     sec.scrollIntoView({behavior:'smooth',block:'center'});
-    const r=sec.querySelector('.report'); if(r){r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash');}
+    const r = sec.querySelector('.report'); if(r){r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash');}
   }
 }
 function reportHTML(r){
-  if(!r)return `<p class="empty">ยังไม่มีรายงาน — รอ agent ทำงานเสร็จ</p>`;
+  if(!r) return `<p class="empty">ยังไม่มีรายงาน — รอ agent ทำงานเสร็จ</p>`;
   return `<div class="report"><div class="meta"><h5>${r.title}</h5></div>
     <div class="when">${r.when}</div>
     <div class="lines" style="margin-top:10px">${r.body}</div></div>`;
 }
-function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true')}
-scrim.onclick=closeDrawer;
-document.addEventListener('keydown',e=>{if(e.key==="Escape")closeDrawer()});
+function closeDrawer(){ drawer.classList.remove('open'); scrim.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); }
+scrim.onclick = closeDrawer;
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
 
-/* ---------- firebase realtime listener ---------- */
-render(); // seed data while Firebase connects
+/* =====================================================================
+   WORK LOG — render
+   ===================================================================== */
+function buildWlFilters(){
+  const bar = document.getElementById('wlFilters');
+  // Collect unique agents from worklog
+  const seen = new Set();
+  const agents = [];
+  WORKLOG.forEach(e => {
+    if(!seen.has(e.agent)){ seen.add(e.agent); agents.push({id:e.agent,name:e.agentName,pipeline:e.pipeline}); }
+  });
+
+  bar.innerHTML = '<span class="lab mono">Agent</span>';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'chip active'; allBtn.dataset.key = 'all'; allBtn.textContent = 'ทั้งหมด';
+  allBtn.onclick = () => setWlFilter('all');
+  bar.appendChild(allBtn);
+
+  agents.forEach(a => {
+    const p = PIPELINES[a.pipeline];
+    const btn = document.createElement('button');
+    btn.className = 'chip'; btn.dataset.key = a.id;
+    btn.innerHTML = `<span class="dot" style="background:${p.color}"></span>${a.name}`;
+    btn.onclick = () => setWlFilter(a.id);
+    bar.appendChild(btn);
+  });
+}
+
+function setWlFilter(key){
+  activeWlAgent = key;
+  document.querySelectorAll('#wlFilters .chip').forEach(c => c.classList.toggle('active', c.dataset.key === key));
+  renderWorklogEntries();
+}
+
+function wlBadge(s){
+  const m = {
+    done:  ['เสร็จแล้ว','done'],
+    working:['กำลังทำ','working'],
+    flagged:['รอแก้ไข','flagged'],
+    sent:  ['ส่งแล้ว','sent'],
+    scheduled:['ตั้งเวลา','scheduled'],
+  };
+  const [label,cls] = m[s]||['—','idle'];
+  const pulse = s==='working' ? '<span class="pulse"></span>' : '';
+  return `<span class="badge ${cls}">${pulse}${label}</span>`;
+}
+
+function wlEntryHTML(e){
+  const p = PIPELINES[e.pipeline];
+  const grad = `linear-gradient(140deg,${p.color},#1b2330)`;
+  let avHtml;
+  if(e.agentImg){
+    avHtml = `<img class="wl-av" src="${e.agentImg}" alt="${e.agentName}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="wl-av wl-av-ph" style="background:${grad};display:none">${e.agentName[0]}</div>`;
+  } else {
+    avHtml = `<div class="wl-av wl-av-ph" style="background:${grad}">${e.agentName[0]}</div>`;
+  }
+  const projTag = e.projectLabel ? `<span class="wl-proj-tag">${e.projectLabel}</span>` : '';
+  const sentTag = e.sentTo ? `<span class="wl-sent-tag">📧 ${e.sentTo}</span>` : '';
+  return `
+    <div class="wl-accent" style="background:${p.color}"></div>
+    <div class="wl-body">
+      <div class="wl-top">
+        ${avHtml}
+        <div class="wl-meta">
+          <span class="wl-name">${e.agentName}</span>
+          <span class="wl-pipe" style="color:${p.color}">${p.label}</span>
+        </div>
+        ${wlBadge(e.status)}
+        <span class="wl-time mono">${e.displayTime}</span>
+      </div>
+      <div class="wl-title">${e.title}</div>
+      <div class="wl-summary">${e.summary}</div>
+      <div class="wl-tags">${projTag}${sentTag}</div>
+    </div>`;
+}
+
+function renderWorklogEntries(){
+  const container = document.getElementById('wlTimeline');
+  const filtered = WORKLOG.filter(e => activeWlAgent==='all'||e.agent===activeWlAgent);
+
+  // Group by displayDate (order preserved — newest first in source)
+  const byDate = new Map();
+  filtered.forEach(e => {
+    if(!byDate.has(e.displayDate)) byDate.set(e.displayDate,[]);
+    byDate.get(e.displayDate).push(e);
+  });
+
+  container.innerHTML = '';
+  byDate.forEach((entries,date) => {
+    const group = document.createElement('div');
+    group.className = 'wl-date-group';
+    group.innerHTML = `<div class="wl-date-marker"><span class="wl-date-label mono">${date}</span></div>`;
+    entries.forEach(e => {
+      const el = document.createElement('div');
+      el.className = 'wl-entry';
+      el.innerHTML = wlEntryHTML(e);
+      group.appendChild(el);
+    });
+    container.appendChild(group);
+  });
+}
+
+function updateWlStats(){
+  const entries = WORKLOG;
+  document.getElementById('wlTotal').textContent   = entries.length;
+  document.getElementById('wlDone').textContent    = entries.filter(e=>e.status==='done').length;
+  document.getElementById('wlFlagged').textContent = entries.filter(e=>e.status==='flagged').length;
+  document.getElementById('wlSent').textContent    = entries.filter(e=>e.status==='sent').length;
+  document.getElementById('wlCount').textContent   = entries.length;
+}
+
+function renderWorklog(){
+  updateWlStats();
+  buildWlFilters();
+  renderWorklogEntries();
+}
+
+/* =====================================================================
+   LOAD worklog.json (GitHub Pages — same origin fetch)
+   ===================================================================== */
+async function loadWorklog(){
+  try{
+    const res = await fetch('worklog.json');
+    if(!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    if(data.entries && data.entries.length){
+      WORKLOG = data.entries;
+      updateWlStats();
+      buildWlFilters();
+      if(currentView==='worklog') renderWorklogEntries();
+    }
+    const tag = document.getElementById('wlModeTag');
+    const msg = document.getElementById('wlModeMsg');
+    if(tag){ tag.textContent='LIVE'; tag.style.color='var(--done)'; }
+    if(msg) msg.innerHTML = 'ข้อมูลจาก <span class="mono">worklog.json</span> · อัปเดตโดย Agent hooks';
+  }catch(e){
+    const tag = document.getElementById('wlModeTag');
+    const msg = document.getElementById('wlModeMsg');
+    if(tag){ tag.textContent='SEED DATA'; }
+    if(msg) msg.textContent = 'ใช้ข้อมูลตัวอย่าง (worklog.json ไม่พบหรือเปิดผ่าน file://)';
+    if(currentView==='worklog') renderWorklogEntries();
+  }
+}
+
+/* =====================================================================
+   BOOT
+   ===================================================================== */
+render();          // console grid with seed agents
+updateWlStats();   // set Work Log tab count immediately
+loadWorklog();     // async load real worklog data
 </script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -607,11 +781,11 @@ firebase.initializeApp({
   appId:"1:647606526363:web:6d0bcd10ef5451aca6c13e"
 });
 firebase.firestore().collection("agents").orderBy("sortOrder").onSnapshot(snap=>{
-  const list=[];snap.forEach(d=>list.push(d.data()));
-  if(!list.length)return;
-  AGENTS=list;render();
+  const list=[]; snap.forEach(d=>list.push(d.data()));
+  if(!list.length) return;
+  AGENTS=list; render();
   const tag=document.getElementById('modeTag'),msg=document.getElementById('modeMsg');
-  tag.textContent="LIVE";tag.style.color="var(--done)";
+  tag.textContent="LIVE"; tag.style.color="var(--done)";
   msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> · อัปเดตอัตโนมัติ';
 },err=>console.warn("Firestore:",err));
 </script>
