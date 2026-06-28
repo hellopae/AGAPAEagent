@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T11:40:00.000Z",
+  "updatedAt": "2026-06-28T07:00:00.000Z",
   "agents": [
     {
       "id": "claudy",
@@ -54,20 +54,20 @@
     {
       "id": "reese",
       "name": "Reese",
-      "role": "Research & Data",
+      "role": "Research & Fact-Check",
       "pipeline": "content",
       "img": "avatars/Reese.png",
-      "persona": "โฟกัส เป็นมืออาชีพ เน้นข้อมูลจริงไม่ใช่ความเห็น",
+      "persona": "โฟกัส เป็นมืออาชีพ เน้นข้อมูลจริงไม่ใช่ความเห็น — ความจริงต้องมีหลักฐาน",
       "caps": [
         "วิจัยตลาด",
         "วิเคราะห์คู่แข่ง",
-        "color psychology"
+        "Fact-check ทุก output"
       ],
       "what": [
         "หาเทรนด์พิธีบุญ/งานวัดของไทย",
         "วิเคราะห์เทมเพลตคู่แข่งบน Etsy/Gumroad",
-        "ศึกษาจิตวิทยาสีสำหรับลูกค้าไทย",
-        "ส่งเอกสารวิจัยให้ Rae"
+        "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
+        "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
       "task": "Fact-check โพสต์ไวรัล 'Ring of Fire 12 ครั้งใน 2 วัน'",

@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-06-27T11:45:00Z",
+  "updatedAt": "2026-06-28T07:00:00Z",
   "entries": [
+    {
+      "id": "wl-28-claudy-reese-factcheck-update",
+      "datetime": "2026-06-28T07:00:00Z",
+      "displayDate": "28 มิ.ย. 2569",
+      "displayTime": "14:00",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "System Update: Reese รับหน้าที่ Fact-Check ทุก output จากทุก Agent",
+      "summary": "อัปเดต reese-research.md + CLAUDE.md | Reese ตรวจข้อเท็จจริงทุก output (Minnie/Rae/Nick/Dale) ก่อน Chris QA บังคับ | เพิ่ม FACT-CHECK RULE ใน Orchestration Rules ข้อ 6 | workflow ทั้ง 3 อัปเดตแล้ว",
+      "project": "system",
+      "projectLabel": "System Configuration",
+      "outputFile": ".claude/agents/reese-research.md"
+    },
     {
       "id": "wl-27-claudy-earthquake-complete",
       "datetime": "2026-06-27T11:40:00Z",
