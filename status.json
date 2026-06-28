@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:00:00.000Z",
+  "updatedAt": "2026-06-28T08:00:00.000Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "Orchestrate: คลิป 'ทำไมแผ่นดินไหวบ่อย' — fact-check โพสต์ไวรัล + ทำสคริปต์",
+      "task": "Web App Brainstorm — Orchestrate Minnie+Reese+Nick parallel → สรุป Top 3",
       "report": {
-        "when": "18:40",
-        "title": "Pipeline เสร็จ: คลิปแผ่นดินไหว ✅ พร้อมผลิต",
-        "body": "Minnie(idea) → Reese(fact-check) → Rae(สคริปต์ 75 วิ) → Chris(QA ✅) | แก่น: 12 ครั้ง/2 วัน = ต่ำกว่าค่าเฉลี่ยโลก (M4+ ~50/วัน) · Ring of Fire ~90% ของไหวทั้งโลก · USGS ยืนยันไม่ได้เพิ่มขึ้น | angle 'ตัวเลขเดียว เล่าคนละมุม' ตามกระแสได้ดี"
+        "when": "15:00",
+        "title": "Web App Ideas สรุปแล้ว ✅ — Top 3 พร้อม Decision Framework",
+        "body": "#1 Print Shop Client Portal (B2B, low competition, ใช้ลูกค้า TANAPAT เดิม) | #2 QR Menu Builder (ตลาดใหญ่, ⭐⭐, 199-499฿/mo) | #3 บุญการ์ด Studio (ต่อยอด Etsy/Gumroad) | Wild card: บุญ.EXE viral+anime"
       }
     },
     {
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "Idea Card: ทำไมแผ่นดินไหวบ่อย — แปลงโพสต์ไวรัลเป็นโจทย์คลิป",
+      "task": "Web App Brainstorm — ระดมไอเดีย 12 ไอเดีย 4 หมวด",
       "report": {
-        "when": "18:05",
-        "title": "Idea Card: angle 'นักสืบข้อมูล' เอาโพสต์ไวรัลมากาง",
-        "body": "สมมติฐาน: 12 ครั้ง/2 วัน คือปกติ/น้อยกว่าค่าเฉลี่ย โพสต์ใช้ cherry-pick + framing สมคบคิด | ตั้ง 5 research questions ให้ Reese | Hook: 'ภาพนี้ทำคนตกใจ แต่ตัวเลขจริงบอกตรงข้าม' | ส่งต่อ Reese"
+        "when": "14:45",
+        "title": "12 Web App Ideas ✅ — Top picks: QR Menu, บุญ.EXE, บุญการ์ด Studio",
+        "body": "หมวด Printing: PrintCalc/Mockup/Portal | หมวดไทย: บุญการ์ด/วันพระ/ใบประกาศ | Universal: InviteFlow/SnapResume/QR Menu | Creative: บุญ.EXE/Shrine Card/TypeFace Thai | Minnie top: QR Menu (revenue) + บุญ.EXE (viral)"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Fact-check โพสต์ไวรัล 'Ring of Fire 12 ครั้งใน 2 วัน'",
+      "task": "Web App Brainstorm — วิจัยตลาด + fact-check market claims",
       "report": {
-        "when": "18:15",
-        "title": "Fact-check ❌ โพสต์ misleading — ตัวเลขดิบไม่ผิดแต่ตีความผิด",
-        "body": "M4+ ~50/วัน · M5+ ~5/วัน → 12 ครั้ง/2 วัน ต่ำกว่าค่าเฉลี่ยด้วยซ้ำ | Ring of Fire = ~90% ของไหวทั้งโลก หลายปท.ไหวพร้อมกัน = ปกติ | เวเนซุเอลา/กรีซ มีรอยเลื่อนของตัวเอง | M7.2+7.5 = aftershock | USGS: ไม่ได้เพิ่มขึ้น แค่เซ็นเซอร์+ข่าวเยอะขึ้น | ส่งต่อ Rae"
+        "when": "14:50",
+        "title": "Market Research ✅ — Print Shop Portal = โอกาสที่ดีที่สุด",
+        "body": "AI SaaS CAGR 42% | ธุรกิจไทยใช้ AI แค่ 18% | Print Shop Portal: competition ต่ำมาก + B2B WTP สูง | Red flags: Generic AI wrapper, To-Do apps, Marketplace from 0 | Sources: Gartner, DEPA, World Bank, Baremetrics"
       }
     },
     {
@@ -215,11 +215,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "วาง Production Pipeline คลิปวิทยาศาสตร์: tool stack + ต้นทุน + เมตริกวัดผล",
+      "task": "Web App Brainstorm — วิเคราะห์ revenue models + phased plan",
       "report": {
-        "when": "17:00",
-        "title": "✅ Pipeline คลิปวิทยาศาสตร์ — เริ่มฟรี 0 บาท",
-        "body": "Stack: Claude+Botnoi+Ideogram+Canva+CapCut (ฟรีเริ่มได้) | 7 ขั้นตอน ~2 ชม./คลิปแรก | export 1080×1920 30fps | เมตริก: completion rate + hook retention | ต่อยอดเป็น Cloud Routine ได้ถ้า Kittanate ต้องการ"
+        "when": "14:55",
+        "title": "Revenue Analysis ✅ — ฿15-25K/mo ใน 12 เดือน โดยไม่หา audience ใหม่",
+        "body": "Phase 1: Print Order App → ฿6K/mo (20 shops × ฿300) | Phase 2: Template Customizer → +$100/mo upsell | SaaS subscription = best model | KPI: >฿5K MRR Month 1-3, <10% churn | Freemium ❌ ไม่แนะนำสำหรับ solo dev"
       }
     },
     {
