@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T08:00:00.000Z",
+  "updatedAt": "2026-07-03T10:45:57.000Z",
   "agents": [
     {
       "id": "claudy",
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "Web App Brainstorm — ระดมไอเดีย 12 ไอเดีย 4 หมวด",
+      "task": "AI Print Order Assistant — คิดคอนเซ็ปต์ผู้ช่วยรับออเดอร์",
       "report": {
-        "when": "14:45",
-        "title": "12 Web App Ideas ✅ — Top picks: QR Menu, บุญ.EXE, บุญการ์ด Studio",
-        "body": "หมวด Printing: PrintCalc/Mockup/Portal | หมวดไทย: บุญการ์ด/วันพระ/ใบประกาศ | Universal: InviteFlow/SnapResume/QR Menu | Creative: บุญ.EXE/Shrine Card/TypeFace Thai | Minnie top: QR Menu (revenue) + บุญ.EXE (viral)"
+        "when": "13:18",
+        "title": "Concept ✅ — แชตรับออเดอร์ + ราคาสด + ค้นใบเสนอราคาเก่า",
+        "body": "ลูกค้าพิมพ์สเปคในแชต → AI แกะ ประเภทงาน/จำนวน/กระดาษ/เคลือบ → เสนอราคาทันที | ฟีเจอร์: chips ตัวเลือกด่วน, cost breakdown, ค้นใบเสนอราคาเก่า 1,666 ใบ | ส่งต่อ Reese ทำสูตรราคา"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Web App Brainstorm — วิจัยตลาด + fact-check market claims",
+      "task": "AI Print Order Assistant — วิจัยสูตรราคา + แนวทาง AI",
       "report": {
-        "when": "14:50",
-        "title": "Market Research ✅ — Print Shop Portal = โอกาสที่ดีที่สุด",
-        "body": "AI SaaS CAGR 42% | ธุรกิจไทยใช้ AI แค่ 18% | Print Shop Portal: competition ต่ำมาก + B2B WTP สูง | Red flags: Generic AI wrapper, To-Do apps, Marketplace from 0 | Sources: Gartner, DEPA, World Bank, Baremetrics"
+        "when": "13:19",
+        "title": "Pricing Formula ✅ — สูตรต้นทุนโรงพิมพ์ครบทุกขั้น",
+        "body": "กระดาษ/รีม (อาร์ตมัน/ด้าน 130-150g = 540-650฿) + เพลท 8 ใบ×120฿ + setup 400฿ + ค่าพิมพ์ 280฿/1,000 แผ่น + เคลือบ gloss 1.0฿ / matt 1.2฿ ต่อแผ่น | waste 5% + เผื่อตั้งเครื่อง 50 แผ่น | markup 30% + VAT 7% | AI: Thai rule-based parser แกะสเปคจากข้อความลูกค้า"
       }
     },
     {
@@ -121,9 +121,13 @@
         "ดีไซน์รองรับมือถือ",
         "วาง grid + bleed + margin"
       ],
-      "status": "idle",
-      "task": null,
-      "report": null
+      "status": "done",
+      "task": "AI Print Order Assistant — ออกแบบ UX แชตสั่งงานพิมพ์",
+      "report": {
+        "when": "13:19",
+        "title": "UX Flow ✅ — Chat 3 ส่วน + Pricing + Quotations",
+        "body": "Layout: Sidebar + Chat + Order Summary panel | chips ตัวเลือกด่วนลดการพิมพ์ | หน้า Pricing แตกต้นทุนทุกรายการ | หน้า Quotations ค้น 1,666 ใบเก่า + ป้ายเตือนอายุราคา (ปีนี้/เก่า) | รองรับมือถือ"
+      }
     },
     {
       "id": "mind",
@@ -215,11 +219,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "Web App Brainstorm — วิเคราะห์ revenue models + phased plan",
+      "task": "AI Print Order Assistant — build v1 (React + TypeScript + Vite)",
       "report": {
-        "when": "14:55",
-        "title": "Revenue Analysis ✅ — ฿15-25K/mo ใน 12 เดือน โดยไม่หา audience ใหม่",
-        "body": "Phase 1: Print Order App → ฿6K/mo (20 shops × ฿300) | Phase 2: Template Customizer → +$100/mo upsell | SaaS subscription = best model | KPI: >฿5K MRR Month 1-3, <10% churn | Freemium ❌ ไม่แนะนำสำหรับ solo dev"
+        "when": "17:45",
+        "title": "App v1 ✅ — tsc + build ผ่าน, commit แรกเรียบร้อย",
+        "body": "React+TS+Vite ที่ \"AI Print Order Assistant/app\" | ChatPage (parser ไทย + ราคาสด) + PricingPage (cost breakdown) + QuotationsPage (ค้น 1,666 ใบ) | typecheck ✅ build ✅ | ยังไม่มี GitHub remote — รอตั้ง repo"
       }
     },
     {
