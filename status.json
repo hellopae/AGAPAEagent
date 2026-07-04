@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T10:45:57.000Z",
+  "updatedAt": "2026-07-04T17:32:28.443Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "Web App Brainstorm — Orchestrate Minnie+Reese+Nick parallel → สรุป Top 3",
+      "task": "อัปเกรดระบบ Agent v2 — Fable 5 + real-time dashboard + ข่าวสดทุกวัน",
       "report": {
-        "when": "15:00",
-        "title": "Web App Ideas สรุปแล้ว ✅ — Top 3 พร้อม Decision Framework",
-        "body": "#1 Print Shop Client Portal (B2B, low competition, ใช้ลูกค้า TANAPAT เดิม) | #2 QR Menu Builder (ตลาดใหญ่, ⭐⭐, 199-499฿/mo) | #3 บุญการ์ด Studio (ต่อยอด Etsy/Gumroad) | Wild card: บุญ.EXE viral+anime"
+        "when": "00:32",
+        "title": "อัปเกรดระบบ Agent v2 — Fable 5 + real-time dashboard + ข่าวสดทุกวัน",
+        "body": "ปรับปรุงระบบครบ 5 จุด: (1) Daily News บังคับเช็ควันที่จริง กรองข่าวเก่ากว่า 48 ชม. (2) Routine ทั้ง 3 อัปเกรดเป็น Sonnet 5 (3) Agent ทีมทั้ง 8 ใช้ Fable 5 (4) Work Log real-time ผ่าน Firestore (5) Hook บันทึกผลงาน + push ขึ้น GitHub อัตโนมัติทุกครั้งที่ agent ทำงานเสร็จ"
       }
     },
     {
