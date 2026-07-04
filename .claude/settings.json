@@ -20,7 +20,7 @@
           {
             "type": "command",
             "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-status.mjs\" done",
-            "timeout": 10,
+            "timeout": 30,
             "statusMessage": "บันทึกผลงานทีมลงแดชบอร์ด…"
           }
         ]

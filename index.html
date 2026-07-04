@@ -496,6 +496,18 @@ const WORKLOG_SEED = [
 let WORKLOG = WORKLOG_SEED;
 let activeWlAgent = 'all';
 
+/* merge worklog.json entries + Firestore real-time entries (dedupe by id, newest first) */
+let WL_JSON = [], WL_FS = [];
+function mergeWorklog(){
+  const map = new Map();
+  [...WL_JSON, ...WL_FS].forEach(e => { if(e && e.id) map.set(e.id, e); });
+  if(!map.size) return;
+  WORKLOG = [...map.values()].sort((a,b) => String(b.datetime||'').localeCompare(String(a.datetime||'')));
+  updateWlStats();
+  buildWlFilters();
+  if(currentView==='worklog') renderWorklogEntries();
+}
+
 /* =====================================================================
    VIEW SWITCHING
    ===================================================================== */
@@ -743,10 +755,8 @@ async function loadWorklog(){
     if(!res.ok) throw new Error(res.status);
     const data = await res.json();
     if(data.entries && data.entries.length){
-      WORKLOG = data.entries;
-      updateWlStats();
-      buildWlFilters();
-      if(currentView==='worklog') renderWorklogEntries();
+      WL_JSON = data.entries;
+      mergeWorklog();
     }
     const tag = document.getElementById('wlModeTag');
     const msg = document.getElementById('wlModeMsg');
@@ -788,6 +798,15 @@ firebase.firestore().collection("agents").orderBy("sortOrder").onSnapshot(snap=>
   tag.textContent="LIVE"; tag.style.color="var(--done)";
   msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> · อัปเดตอัตโนมัติ';
 },err=>console.warn("Firestore:",err));
+firebase.firestore().collection("agents").doc("worklog").onSnapshot(d=>{
+  const data=d.data();
+  if(!data || !Array.isArray(data.entries) || !data.entries.length) return;
+  WL_FS = data.entries;
+  mergeWorklog();
+  const tag=document.getElementById('wlModeTag'),msg=document.getElementById('wlModeMsg');
+  if(tag){ tag.textContent="LIVE"; tag.style.color="var(--done)"; }
+  if(msg) msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> + <span class="mono">worklog.json</span>';
+},err=>console.warn("Firestore worklog:",err));
 </script>
 </body>
 </html>

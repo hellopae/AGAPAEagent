@@ -31,9 +31,9 @@
    - Nick's analytics reports → Reese fact-check
    - Dale's technical docs → Reese fact-check
    - เฉพาะ output ที่ไม่มี factual claims (เช่น pure design/layout) จึงข้ามขั้นนี้ได้
-7. **ทุกครั้งที่ agent ทำงานเสร็จ → PUSH ขึ้น Dashboard เสมอ** เพื่อให้ Kittanate เห็นว่าใครทำอะไรบ้างบน https://hellopae.github.io/AGAPAEagent/
-   - บันทึกผลงานลง `Output/<Agent>/` + เพิ่ม entry ใน `worklog.json` + อัปเดต `status.json`
-   - แล้ว `git add -A && git commit && git push origin main` ทุกครั้ง (ไม่ต้องรอ Kittanate สั่ง)
+7. **ทุกครั้งที่ agent ทำงานเสร็จ → ผลงานขึ้น Dashboard อัตโนมัติ** ที่ https://hellopae.github.io/AGAPAEagent/
+   - Hook (`scripts/hook-status.mjs`) จัดการให้เองเมื่อ Task เสร็จ: อัปเดต `status.json` + เพิ่ม entry ใน `worklog.json` + เขียน Firestore (`agents/worklog`) + `git commit && git push` อัตโนมัติ
+   - หน้าที่ของ Claudy: บันทึกผลงานเต็มลง `Output/<Agent>/` ก่อนจบ Task และตรวจว่า push สำเร็จ (`git status` สะอาด) — ถ้า hook พลาด ให้ commit+push เองทันที ไม่ต้องรอ Kittanate สั่ง
 
 ## GAPS (ยังไม่มี agent file)
 
