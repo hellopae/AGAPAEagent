@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T17:32:28.443Z",
+  "updatedAt": "2026-07-05T05:05:47.417Z",
   "agents": [
     {
       "id": "claudy",
@@ -219,11 +219,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "AI Print Order Assistant — build v1 (React + TypeScript + Vite)",
+      "task": "InvestAI v2 — Binance 2 ปี + สัญญาณ Bollinger/Volume + Backtest จริง",
       "report": {
-        "when": "17:45",
-        "title": "App v1 ✅ — tsc + build ผ่าน, commit แรกเรียบร้อย",
-        "body": "React+TS+Vite ที่ \"AI Print Order Assistant/app\" | ChatPage (parser ไทย + ราคาสด) + PricingPage (cost breakdown) + QuotationsPage (ค้น 1,666 ใบ) | typecheck ✅ build ✅ | ยังไม่มี GitHub remote — รอตั้ง repo"
+        "when": "12:05",
+        "title": "InvestAI v2 — Binance 2 ปี + สัญญาณ Bollinger/Volume + Backtest จริง",
+        "body": "อัปเกรด Bitcoin Trend Predictor (hellopae.github.io/investai): (1) เปลี่ยนแหล่งข้อมูลหลักเป็น Binance ได้ข้อมูลจริงย้อนหลัง 2 ปี พร้อม fallback CoinGecko → cache ในเครื่อง → demo (เดิมพึ่ง CoinGecko เดียว โดน rate limit แล้วตกไปข้อมูลปลอมบ่อย) (2) เพิ่มสัญญาณ Bollinger %B + Volume ยืนยันเทรนด์ รวมเป็น 8 สัญญาณ + layer Bollinger บนกราฟ (3) การ์ด Backtest รันสูตรจริงกับอดีต 2 ปี วัดความแม่นทิศทาง 30 วัน (~421 สัญญาณ) (4) ปุ่มรีเฟรช + SEO meta + หน้าเรียนรู้เพิ่ม 3 หัวข้อ — verify ทุกแท็บด้วย headless Chrome ผ่าน ไม่มี JS error, push ขึ้น GitHub Pages แล้ว (commit 7d8bf7a)"
       }
     },
     {

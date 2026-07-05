@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-04T17:32:28.443Z",
+  "updatedAt": "2026-07-05T05:05:47.417Z",
   "entries": [
+    {
+      "id": "wl-260705-nick-vmai",
+      "datetime": "2026-07-05T05:05:47Z",
+      "displayDate": "5 ก.ค. 2569",
+      "displayTime": "12:05",
+      "agent": "nick",
+      "agentName": "Nick",
+      "agentImg": "avatars/Nick.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "InvestAI v2 — Binance 2 ปี + สัญญาณ Bollinger/Volume + Backtest จริง",
+      "summary": "อัปเกรด Bitcoin Trend Predictor (hellopae.github.io/investai): (1) เปลี่ยนแหล่งข้อมูลหลักเป็น Binance ได้ข้อมูลจริงย้อนหลัง 2 ปี พร้อม fallback CoinGecko → cache ในเครื่อง → demo (เดิมพึ่ง CoinGecko เดียว โดน rate limit แล้วตกไปข้อมูลปลอมบ่อย) (2) เพิ่มสัญญาณ Bollinger %B + Volume ยืนยันเทรนด์ รวมเป"
+    },
     {
       "id": "wl-260704-claudy-40bg",
       "datetime": "2026-07-04T17:32:28Z",
