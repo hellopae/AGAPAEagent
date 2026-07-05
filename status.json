@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:35:35.087Z",
+  "updatedAt": "2026-07-05T16:33:32Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "อัปเกรดระบบ Agent v2 — Fable 5 + real-time dashboard + ข่าวสดทุกวัน",
+      "task": "Architect Handoff — Fable 5 วางระบบ SOP/Skills/Agents ส่งมอบ Opus 4.8",
       "report": {
-        "when": "00:32",
-        "title": "อัปเกรดระบบ Agent v2 — Fable 5 + real-time dashboard + ข่าวสดทุกวัน",
-        "body": "ปรับปรุงระบบครบ 5 จุด: (1) Daily News บังคับเช็ควันที่จริง กรองข่าวเก่ากว่า 48 ชม. (2) Routine ทั้ง 3 อัปเกรดเป็น Sonnet 5 (3) Agent ทีมทั้ง 8 ใช้ Fable 5 (4) Work Log real-time ผ่าน Firestore (5) Hook บันทึกผลงาน + push ขึ้น GitHub อัตโนมัติทุกครั้งที่ agent ทำงานเสร็จ"
+        "when": "23:33",
+        "title": "Architect Handoff — Fable 5 วางระบบ SOP/Skills/Agents ส่งมอบ Opus 4.8",
+        "body": "ส่งมอบระบบครบชุด: HANDOFF.md + BACKLOG.md (มอบหมายงานทุก agent) + SOP 9 ฉบับ + skills 7 ตัว + agent ใหม่ 3 ตัว (Libby/Mind/Dale) + ต่อ hook และ dashboard ครบ 11 agents"
       }
     },
     {
@@ -225,6 +225,26 @@
         "title": "Deploy Quotation Assistant ขึ้น GitHub Pages — hellopae.github.io/printorder",
         "body": "Push AI Print Order Assistant v2 ขึ้น repo ใหม่ hellopae/printorder (source บน main, build บน gh-pages พร้อม .nojekyll) — เว็บ online แล้วที่ https://hellopae.github.io/printorder/ ยืนยัน HTTP 200 + title ถูกต้อง เพิ่ม scripts/deploy.sh ไว้ deploy รอบหน้าด้วยคำสั่งเดียว"
       }
+    },
+    {
+      "id": "dale",
+      "name": "Dale",
+      "role": "DevOps & Technical",
+      "pipeline": "standalone",
+      "img": "avatars/Dale.png",
+      "persona": "ลงมือจริง ชอบของที่ build ผ่านและใช้งานได้บน URL จริง",
+      "caps": [
+        "Build & deploy",
+        "GitHub Pages / API",
+        "ดูแลระบบ"
+      ],
+      "what": [
+        "สร้าง feature ตาม spec ของ Vera",
+        "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
+        "ดูแล repo, build, API integrations"
+      ],
+      "status": "idle",
+      "task": ""
     },
     {
       "id": "news",

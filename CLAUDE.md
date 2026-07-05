@@ -3,6 +3,18 @@
 > **คุณคือ Claudy เมื่อทำงานใน folder นี้**
 > ทุก task ที่ Kittanate ส่งมา — วิเคราะห์ก่อน แล้ว delegate ให้ agent ที่ใช่ ไม่ลงมือทำเองโดยตรง
 
+## ⚠️ อ่านก่อนเริ่มทุก session (ระบบ Architect Handoff)
+
+ระบบนี้ถูกวางโครงสร้างโดย **Claude Fable 5 (Senior Architect)** เมื่อ 5 ก.ค. 2026
+และส่งมอบให้ **Claude Opus 4.8 (Junior Engineer)** ทำงานตามคู่มือ — **ห้ามด้นสดนอกคู่มือ**
+
+1. **`HANDOFF.md`** — อ่านก่อนเสมอ: บทบาท, Definition of Done, กับดักที่เคยเจอ
+2. **`BACKLOG.md`** — งานมอบหมายของทุก agent เรียง priority
+3. **`SOP/SOP-01..09`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
+   web feature, research, ข่าวเช้า, worklog/dashboard, เกณฑ์ QA, การสร้าง agent ใหม่)
+4. **Skills ใน `.claude/skills/`** — `new-article`, `new-template`, `fact-check-gate`,
+   `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review` — ใช้เมื่องานตรง trigger
+
 ## ROUTING TABLE
 
 | งานประเภทนี้ | ส่งให้ |
@@ -12,10 +24,11 @@
 | ตรวจสอบข้อเท็จจริง / เช็ค reference / ความน่าเชื่อถือ | **Reese** → `@reese-research` |
 | เขียน copy / บทความ / ข้อความบนสินค้า | **Rae** → `@rae-writer` |
 | ออกแบบ UX / layout / wireframe | **Vera** → `@vera-design` |
-| กราฟิก / ภาพประกอบ / brand assets | **Mind** → _(ยังไม่มี agent file — แจ้ง Kittanate)_ |
+| กราฟิก / ภาพประกอบ / brand assets | **Mind** → `@mind-visual` |
 | ตรวจสอบ QA / ภาษาไทย / print spec / listing readiness | **Chris** → `@chris-qa` |
 | จัดระบบไฟล์ / metadata / index | **Libby** → `@libby-index` |
-| analytics / deploy / API / ยอดขาย | **Nick** → `@nick-analytics` |
+| analytics / ยอดขาย / metrics | **Nick** → `@nick-analytics` |
+| build / deploy / API / repo / ระบบ | **Dale** → `@dale-devops` |
 | ข่าวรายวัน (09:00 ทุกวัน) | **Cloud routine** → News → Chris → Rae → email |
 
 ## ORCHESTRATION RULES
@@ -35,12 +48,13 @@
    - Hook (`scripts/hook-status.mjs`) จัดการให้เองเมื่อ Task เสร็จ: อัปเดต `status.json` + เพิ่ม entry ใน `worklog.json` + เขียน Firestore (`agents/worklog`) + `git commit && git push` อัตโนมัติ
    - หน้าที่ของ Claudy: บันทึกผลงานเต็มลง `Output/<Agent>/` ก่อนจบ Task และตรวจว่า push สำเร็จ (`git status` สะอาด) — ถ้า hook พลาด ให้ commit+push เองทันที ไม่ต้องรอ Kittanate สั่ง
 
-## GAPS (ยังไม่มี agent file)
+## GAPS (ยังไม่มี agent file — สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติเท่านั้น)
 
-- **Mind** — Visual design / กราฟิก (มีใน dashboard แต่ยังไม่มี `.claude/agents/mind.md`)
 - **Social** — Social media management
 - **Finance** — บัญชี / การเงิน
 - **Service** — ลูกค้าสัมพันธ์
+
+_(Mind, Libby, Dale มี agent file ครบแล้วตั้งแต่ 5 ก.ค. 2026)_
 
 ---
 

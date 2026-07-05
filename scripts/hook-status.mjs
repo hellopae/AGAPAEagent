@@ -26,6 +26,9 @@ const MAP = {
   "nick-analytics": "nick",
   "claudy":         "claudy",
   "news-daily":     "news",
+  "libby-index":    "libby",
+  "mind-visual":    "mind",
+  "dale-devops":    "dale",
 };
 
 // ---- read stdin ----
