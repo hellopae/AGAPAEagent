@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T05:05:47.417Z",
+  "updatedAt": "2026-07-05T05:45:06.298Z",
   "agents": [
     {
       "id": "claudy",
@@ -219,11 +219,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "InvestAI v2 — Binance 2 ปี + สัญญาณ Bollinger/Volume + Backtest จริง",
+      "task": "AI Print Order Assistant v2 — ตัด chatbot, ใบเสนอราคาเก่า → ขั้นตอน+ราคาแก้ได้ → พิมพ์ใบใหม่",
       "report": {
-        "when": "12:05",
-        "title": "InvestAI v2 — Binance 2 ปี + สัญญาณ Bollinger/Volume + Backtest จริง",
-        "body": "อัปเกรด Bitcoin Trend Predictor (hellopae.github.io/investai): (1) เปลี่ยนแหล่งข้อมูลหลักเป็น Binance ได้ข้อมูลจริงย้อนหลัง 2 ปี พร้อม fallback CoinGecko → cache ในเครื่อง → demo (เดิมพึ่ง CoinGecko เดียว โดน rate limit แล้วตกไปข้อมูลปลอมบ่อย) (2) เพิ่มสัญญาณ Bollinger %B + Volume ยืนยันเทรนด์ รวมเป็น 8 สัญญาณ + layer Bollinger บนกราฟ (3) การ์ด Backtest รันสูตรจริงกับอดีต 2 ปี วัดความแม่นทิศทาง 30 วัน (~421 สัญญาณ) (4) ปุ่มรีเฟรช + SEO meta + หน้าเรียนรู้เพิ่ม 3 หัวข้อ — verify ทุกแท็บด้วย headless Chrome ผ่าน ไม่มี JS error, push ขึ้น GitHub Pages แล้ว (commit 7d8bf7a)"
+        "when": "12:45",
+        "title": "AI Print Order Assistant v2 — ตัด chatbot, ใบเสนอราคาเก่า → ขั้นตอน+ราคาแก้ได้ → พิมพ์ใบใหม่",
+        "body": "ยกเครื่อง AI Print Order Assistant ตามที่ Paint สั่ง: (1) ตัดหน้า chatbot ที่ตอบ hardcode ทิ้งทั้งหมด — หน้า Quotations เป็นหน้าหลักแทน (2) ปุ่ม ใช้ใบนี้เป็นแบบ บนใบเก่าทุกใบ (1,666 ใบ): cost engine แตกราคาจริงของใบเก่าเป็นขั้นตอน เพลท/กระดาษ/พิมพ์/เคลือบ/ปั๊ม/เข้าเล่ม พร้อมราคาแต่ละขั้น แก้ได้หมด (3) ขั้นตอนแบบ ตามจำนวน จะ scale อัตโนมัติเมื่อแก้จำนวน (ทดสอบจริง: งานปกเมนู 50→100 เล่ม ราคา 23,000 → 42,461 ค่าเพลทคงที่ถูกต้อง) (4) ราคากลางอ้างอิงจาก PrintCal + ลิงก์เปิด PrintCal/PrintCost (5) ใบเสนอราคา layout ตรงฟอร์มจริง TANAPAT พิมพ์/บันทึก PDF ได้ 1 หน้า A4 พร้อมจำนวนเงินตัวอักษรไทย + VAT + ช่องเซ็น (6) บันทึกใบที่สร้างอัตโนมัติ เลขที่รันต่อจากใบเก่า (7) ค้นหาเข้าใจการสะกดต่าง โบรชัวร์↔โบว์ชัวร์ — verify ทุก flow ด้วย headless Chrome ไม่มี JS error, build ผ่าน (commit 51203df, repo loc …"
       }
     },
     {
