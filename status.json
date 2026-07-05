@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T05:45:06.298Z",
+  "updatedAt": "2026-07-05T08:35:35.087Z",
   "agents": [
     {
       "id": "claudy",
@@ -219,11 +219,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "AI Print Order Assistant v2 — ตัด chatbot, ใบเสนอราคาเก่า → ขั้นตอน+ราคาแก้ได้ → พิมพ์ใบใหม่",
+      "task": "Deploy Quotation Assistant ขึ้น GitHub Pages — hellopae.github.io/printorder",
       "report": {
-        "when": "12:45",
-        "title": "AI Print Order Assistant v2 — ตัด chatbot, ใบเสนอราคาเก่า → ขั้นตอน+ราคาแก้ได้ → พิมพ์ใบใหม่",
-        "body": "ยกเครื่อง AI Print Order Assistant ตามที่ Paint สั่ง: (1) ตัดหน้า chatbot ที่ตอบ hardcode ทิ้งทั้งหมด — หน้า Quotations เป็นหน้าหลักแทน (2) ปุ่ม ใช้ใบนี้เป็นแบบ บนใบเก่าทุกใบ (1,666 ใบ): cost engine แตกราคาจริงของใบเก่าเป็นขั้นตอน เพลท/กระดาษ/พิมพ์/เคลือบ/ปั๊ม/เข้าเล่ม พร้อมราคาแต่ละขั้น แก้ได้หมด (3) ขั้นตอนแบบ ตามจำนวน จะ scale อัตโนมัติเมื่อแก้จำนวน (ทดสอบจริง: งานปกเมนู 50→100 เล่ม ราคา 23,000 → 42,461 ค่าเพลทคงที่ถูกต้อง) (4) ราคากลางอ้างอิงจาก PrintCal + ลิงก์เปิด PrintCal/PrintCost (5) ใบเสนอราคา layout ตรงฟอร์มจริง TANAPAT พิมพ์/บันทึก PDF ได้ 1 หน้า A4 พร้อมจำนวนเงินตัวอักษรไทย + VAT + ช่องเซ็น (6) บันทึกใบที่สร้างอัตโนมัติ เลขที่รันต่อจากใบเก่า (7) ค้นหาเข้าใจการสะกดต่าง โบรชัวร์↔โบว์ชัวร์ — verify ทุก flow ด้วย headless Chrome ไม่มี JS error, build ผ่าน (commit 51203df, repo loc …"
+        "when": "15:35",
+        "title": "Deploy Quotation Assistant ขึ้น GitHub Pages — hellopae.github.io/printorder",
+        "body": "Push AI Print Order Assistant v2 ขึ้น repo ใหม่ hellopae/printorder (source บน main, build บน gh-pages พร้อม .nojekyll) — เว็บ online แล้วที่ https://hellopae.github.io/printorder/ ยืนยัน HTTP 200 + title ถูกต้อง เพิ่ม scripts/deploy.sh ไว้ deploy รอบหน้าด้วยคำสั่งเดียว"
       }
     },
     {
