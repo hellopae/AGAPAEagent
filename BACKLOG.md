@@ -13,10 +13,15 @@
   Chris ✅ PASS · ผลงาน: `Output/Rae/2026-07-06-5-print-mistakes-article-v3.md` ·
   factcheck: `Output/Reese/2026-07-06-print-mistakes-v3-factcheck.md` ·
   QA: `Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md`
-  ⏳ รอ Kittanate: (1) ยืนยันนโยบาย "ตรวจไฟล์ฟรี" ในบทความ (2) เลือกช่องทางเผยแพร่
+  ✅ (1) นโยบาย "ตรวจไฟล์ฟรี" — Kittanate สั่งตัดออก → Rae แก้แล้ว → Chris delta re-QA ✅ PASS 6 ก.ค. 2569
+  (`Output/Chris/2026-07-06-qa-print-mistakes-v3-edit-recheck.md`) — บทความพร้อม ship
+  ⏳ รอ Kittanate: (2) เลือกช่องทางเผยแพร่
 
 - [ ] **ทดสอบ agent ใหม่ 3 ตัว (Libby / Mind / Dale)** — delegate งานเล็ก 1 ชิ้นต่อตัวผ่าน Task tool
   แล้วเช็คว่า hook อัปเดต dashboard ครบ (ตามขั้นทดสอบใน SOP-09) — งานเล็กที่ใช้ทดสอบ = งาน P1 ของแต่ละตัวด้านล่าง
+  ⚠️ สถานะ 6 ก.ค. 2569: งาน P1 ของทั้ง 3 ตัวเสร็จแล้ว **แต่ hook ไม่ได้บันทึก dashboard อัตโนมัติ**
+  (Claudy ต้อง sync ด้วย skill `worklog-sync` เอง) — ยังปิดไม่ได้จนกว่าจะยืนยันว่า hook ทำงานเมื่อ
+  delegate ผ่าน Task tool จริง · เหลืออีกอย่าง: brand starter ของ Mind ยังรอ Chris QA
 
 ---
 
@@ -66,7 +71,9 @@
 
 - [ ] P1 (งานทดสอบ agent): **Brand asset starter pack** — palette กลางของ TANAPAT
   (CMYK+hex พร้อม usage roles), แนวทาง illustration style, กติกาใช้ iconography พุทธ
-  → `Output/Mind/YYYY-MM-DD-brand-starter.md`
+  → `Output/Mind/2026-07-06-brand-starter.md`
+  ⏳ สถานะ 6 ก.ค. 2569: r2 เสร็จ + ผ่าน Reese fact-check ✅ PASS
+  (`Output/Reese/2026-07-06-brand-starter-factcheck.md`) — **เหลือ Chris QA** จึงจะติ๊กปิดได้
 - [ ] P2: Asset spec สำหรับการ์ดทำบุญตัวแรก (ตาม spec ของ Vera เมื่อเสร็จ)
 - [ ] P3: Preview image guideline สำหรับ Etsy listing (mockup style ให้สม่ำเสมอทุกสินค้า)
 
@@ -79,9 +86,9 @@
 
 ## 📚 Libby (Index) — agent ใหม่ เพิ่งเปิดใช้
 
-- [ ] P1 (งานทดสอบ agent): **สร้าง `Output/Libby/output-index.md`** — index ไฟล์ทั้งหมดใน
-  `Output/` ที่มีอยู่ (30+ ไฟล์) พร้อมโยง chain: research → draft → factcheck → QA
-- [ ] P1: สร้างโครง `Output/Libby/template-library.csv` (header ตาม scaffold) — ยังว่างได้ รอ template แรก
+- [x] P1 (งานทดสอบ agent): **สร้าง `Output/Libby/output-index.md`** ✅ 6 ก.ค. 2569 — index ครบ
+  34 ไฟล์จาก 6 agent folders พร้อมโยง chain: research → draft → factcheck → QA
+- [x] P1: สร้างโครง `Output/Libby/template-library.csv` ✅ 6 ก.ค. 2569 — header ตาม scaffold รอ template แรก
 - [ ] P2: ตรวจไฟล์ที่ชื่อไม่ตรง convention `YYYY-MM-DD-slug.md` แล้วรายงาน (อย่า rename เอง)
 
 ## 📊 Nick (Analytics)
@@ -94,9 +101,9 @@
 
 ## 🔧 Dale (DevOps) — agent ใหม่ เพิ่งเปิดใช้
 
-- [ ] P1 (งานทดสอบ agent): **Repo health check** ของ AGAPAE Agent repo นี้ —
-  `.nojekyll` อยู่ครบ, hook รันได้ (`node scripts/hook-status.mjs` ไม่ crash), dashboard โหลดบน
-  Pages, avatars ครบทุก agent ใน status.json → `Output/Dale/YYYY-MM-DD-repo-health.md`
+- [x] P1 (งานทดสอบ agent): **Repo health check** ✅ 6 ก.ค. 2569 — ผ่าน 5/5 (.nojekyll, hook
+  ไม่ crash, Pages โหลด 200, avatars ครบ 11, remote/hooks ถูกต้อง) + เพิ่ม card Dale ที่ขาดใน
+  `index.html` → `Output/Dale/2026-07-06-repo-health.md`
 - [ ] P2: แก้ประเด็นที่ Vera เจอจาก mobile audit ของ dashboard
 - [ ] P3: วางโครง TANAPAT web app ตัวใหม่ (Target stack: React+TS / Express / PostgreSQL) —
   **เริ่มเมื่อ Kittanate สั่งเท่านั้น** ตอนนี้แค่เตรียม checklist การตั้งโปรเจกต์ไว้
