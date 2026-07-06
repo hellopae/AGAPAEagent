@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T04:23:12Z",
+  "updatedAt": "2026-07-06T14:20:09Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Fact-check บทความ print-mistakes v2→v3 (กฎบังคับก่อน Chris QA)",
+      "task": "Fact-check Brand Asset Starter Pack ของ Mind (กฎบังคับก่อน Chris QA)",
       "report": {
-        "when": "11:18",
-        "title": "Fact-check บทความ print-mistakes v2→v3 (กฎบังคับก่อน Chris QA)",
-        "body": "รอบแรก (v2): ❌ FAIL — 14 claims: ✅10 ⚠️1 ❌1 💬2 blocker คือวิธีเช็ค color mode ใน Illustrator/InDesign อ้าง Document Setup ผิด รอบสอง (v3): ✅ PASS — ✅12 ⚠️0 ❌0 💬2 (+1 policy pending 'ตรวจไฟล์ฟรี' รอ Kittanate) ทุก claim มี source: Adobe docs, PDF Association (ISO 15930), prepressure.com ฯลฯ → Output/Reese/2026-07-06-print-mistakes-v2-factcheck.md + -v3-factcheck.md"
+        "when": "20:53",
+        "title": "Fact-check Brand Asset Starter Pack ของ Mind (กฎบังคับก่อน Chris QA)",
+        "body": "ตรวจ 16 claims + 1 advisory — ✅ PASS หลัง Mind แก้เป็น r2 (reword seal สไตล์ครุฑ, ขอบเขตสีม่วง, proof น้ำตาลไม้สัก, วันบังคับใช้นโยบาย Etsy) → Output/Reese/2026-07-06-brand-starter-factcheck.md"
       }
     },
     {
@@ -96,11 +96,11 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "done",
-      "task": "แก้บทความ 5 ความผิดพลาดงานพิมพ์ เป็น v3 ตาม fact-check ของ Reese",
+      "task": "ตัดข้อเสนอ 'ตรวจไฟล์ฟรี' ออกจากบทความ print-mistakes v3 ตามคำสั่ง Kittanate",
       "report": {
-        "when": "11:13",
-        "title": "แก้บทความ 5 ความผิดพลาดงานพิมพ์ เป็น v3 ตาม fact-check ของ Reese",
-        "body": "แก้ 3 จุดตาม verdict ของ Reese: (1) blocker — วิธีเช็ค color mode เขียนใหม่เป็น Illustrator File > Document Color Mode / InDesign ใช้ Swatches CMYK + แปลงตอน Export PDF (2) เลิกอ้าง dpi ของจอ เปลี่ยนเป็นไฟล์ภาพเว็บบันทึกความละเอียดต่ำ (3) ตัดวลี Embed All Fonts — PDF/X-1a/X-4 ฝังฟอนต์อัตโนมัติ คงประโยค 'ตรวจไฟล์ฟรี' ไว้รอ Kittanate ตัดสิน → Output/Rae/2026-07-06-5-print-mistakes-article-v3.md"
+        "when": "20:10",
+        "title": "ตัดข้อเสนอ 'ตรวจไฟล์ฟรี' ออกจากบทความ print-mistakes v3 ตามคำสั่ง Kittanate",
+        "body": "ตัดประโยคข้อเสนอ 'ตรวจไฟล์ให้ก่อนโดยไม่มีค่าใช้จ่าย' ออกทั้งประโยค (นโยบายยังไม่เปิดใช้) + เกลาย่อหน้าปิดท้ายใหม่ให้อ่านลื่น → Output/Rae/2026-07-06-5-print-mistakes-article-v3.md"
       }
     },
     {
@@ -147,9 +147,13 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "idle",
-      "task": null,
-      "report": null
+      "status": "done",
+      "task": "Brand Asset Starter Pack — palette + illustration style + iconography พุทธ (งานทดสอบ agent ใหม่)",
+      "report": {
+        "when": "20:56",
+        "title": "Brand Asset Starter Pack — palette + illustration style + iconography พุทธ (งานทดสอบ agent ใหม่)",
+        "body": "Palette กลาง 7 สี (CMYK+hex+usage roles), แนวทาง illustration, กติกา Buddhist iconography — r2 แก้ตาม fact-check ของ Reese ✅ PASS แล้ว สถานะ: รอ Chris QA → Output/Mind/2026-07-06-brand-starter.md"
+      }
     },
     {
       "id": "chris",
@@ -170,11 +174,11 @@
         "เทสต์การทำงานเว็บแอป"
       ],
       "status": "done",
-      "task": "Re-QA บทความ 5 ความผิดพลาดงานพิมพ์ v3 — gate สุดท้าย",
+      "task": "Delta re-QA บทความ print-mistakes v3 หลังตัดข้อเสนอตรวจไฟล์ฟรี",
       "report": {
-        "when": "11:22",
-        "title": "Re-QA บทความ 5 ความผิดพลาดงานพิมพ์ v3 — gate สุดท้าย",
-        "body": "✅ PASS — 2 blockers เดิมจาก v1 ปิดครบ (CMYK gamut, font outline+embed), 3 จุดแก้ใหม่ของ Rae ผ่านหมดและตรง fact-check ของ Reese, ภาษาไทยสะกดถูก tone สม่ำเสมอ ไม่มีสำนวนแปล Warning 1 ข้อ: ตัด HTML comment header ออกตอน publish Notes: ประโยค 'ตรวจไฟล์ฟรี' เป็น policy pending — ห้ามเผยแพร่จนกว่า Kittanate อนุมัติ → Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md"
+        "when": "20:16",
+        "title": "Delta re-QA บทความ print-mistakes v3 หลังตัดข้อเสนอตรวจไฟล์ฟรี",
+        "body": "✅ PASS — เงื่อนไข N1 (นโยบายตรวจไฟล์ฟรี) ปิดแล้ว ย่อหน้าปิดใหม่ภาษาไทยธรรมชาติ การแก้ไม่เพิ่ม factual claim จึงไม่ต้องวนกลับ fact-check — บทความพร้อม ship → Output/Chris/2026-07-06-qa-print-mistakes-v3-edit-recheck.md"
       }
     },
     {
@@ -195,9 +199,13 @@
         "เก็บ metadata สี/ฟอนต์/ฟอร์แมต",
         "ทำเอกสารโปรเจกต์"
       ],
-      "status": "idle",
-      "task": null,
-      "report": null
+      "status": "done",
+      "task": "สร้าง output-index.md + โครง template-library.csv (งานทดสอบ agent ใหม่)",
+      "report": {
+        "when": "20:17",
+        "title": "สร้าง output-index.md + โครง template-library.csv (งานทดสอบ agent ใหม่)",
+        "body": "Index ไฟล์ใน Output/ ครบ 34 ไฟล์จาก 6 agent folders พร้อมโยง chain: idea → research → draft → factcheck → QA ทุกงาน + วางโครง template-library.csv รอ template แรก → Output/Libby/output-index.md"
+      }
     },
     {
       "id": "nick",
@@ -243,8 +251,13 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "idle",
-      "task": ""
+      "status": "done",
+      "task": "Repo health check — AGAPAE Agent repo (งานทดสอบ agent ใหม่)",
+      "report": {
+        "when": "20:42",
+        "title": "Repo health check — AGAPAE Agent repo (งานทดสอบ agent ใหม่)",
+        "body": "ตรวจครบ 5 ข้อ ✅ ทั้งหมด: .nojekyll อยู่ครบ, hook รันไม่ crash, Pages โหลด HTTP 200, avatars ครบ 11 agent, remote+hooks ถูกต้อง — พบ index.html ขาด card ของ Dale จึงเพิ่มให้แล้ว → Output/Dale/2026-07-06-repo-health.md"
+      }
     },
     {
       "id": "news",
