@@ -8,11 +8,12 @@
 
 ## 🔥 P0 — งานค้างที่ต้องปิดก่อนทุกอย่าง
 
-- [ ] **ปิด pipeline บทความ "5 ความผิดพลาดงานพิมพ์" v2** — ค้างที่ gate มาตั้งแต่ 25 มิ.ย.
-  1. Reese [Fact-check] ตรวจ `Output/Rae/2026-06-25-5-print-mistakes-article-v2.md`
-  2. Chris re-QA (v1 โดน FAIL 2 blockers — เช็คว่า v2 แก้ครบ)
-  3. PASS แล้วรายงาน Kittanate ว่าพร้อมเผยแพร่ที่ไหน
-  ใช้ skill: `fact-check-gate` → `qa-gate`
+- [x] **ปิด pipeline บทความ "5 ความผิดพลาดงานพิมพ์"** ✅ 6 ก.ค. 2569 — v2 โดน fact-check FAIL
+  (blocker: วิธีเช็ค color mode ใน Illustrator/InDesign ผิด) → Rae แก้เป็น v3 → Reese ✅ PASS →
+  Chris ✅ PASS · ผลงาน: `Output/Rae/2026-07-06-5-print-mistakes-article-v3.md` ·
+  factcheck: `Output/Reese/2026-07-06-print-mistakes-v3-factcheck.md` ·
+  QA: `Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md`
+  ⏳ รอ Kittanate: (1) ยืนยันนโยบาย "ตรวจไฟล์ฟรี" ในบทความ (2) เลือกช่องทางเผยแพร่
 
 - [ ] **ทดสอบ agent ใหม่ 3 ตัว (Libby / Mind / Dale)** — delegate งานเล็ก 1 ชิ้นต่อตัวผ่าน Task tool
   แล้วเช็คว่า hook อัปเดต dashboard ครบ (ตามขั้นทดสอบใน SOP-09) — งานเล็กที่ใช้ทดสอบ = งาน P1 ของแต่ละตัวด้านล่าง
@@ -38,7 +39,7 @@
 
 ## 🔍 Reese (Research & Fact-check)
 
-- [ ] P0: Fact-check บทความ print-mistakes v2 (งานค้างอันดับหนึ่ง)
+- [x] P0: Fact-check บทความ print-mistakes ✅ 6 ก.ค. 2569 — v2 FAIL → v3 PASS (12✅/2💬)
 - [ ] P1: **Research sprint: "printable ไทย/พุทธหมวดไหนขายได้จริงบน Etsy"** — ตาม SOP-05
   ผลลัพธ์ต้องชี้ได้ว่า template แรกที่ควรผลิตจริงคือหมวดไหน ราคาเท่าไหร่
 - [ ] P1: Verify วันสำคัญทางพุทธครึ่งปีหลัง 2026 (พ.ศ. 2569) จากปฏิทินหลวง/แหล่งทางการ
@@ -47,7 +48,7 @@
 
 ## ✍️ Rae (Writer)
 
-- [ ] P0: standby แก้บทความ print-mistakes ถ้า fact-check/QA รอบใหม่เจอประเด็น
+- [x] P0: แก้บทความ print-mistakes เป็น v3 ตาม fact-check ✅ 6 ก.ค. 2569
 - [ ] P1: **Listing copy template** — โครงมาตรฐาน title/description/tags สำหรับ Etsy + Gumroad
   (ไทย+อังกฤษ) ให้งาน template ต่อ ๆ ไปหยิบใช้ได้เลย → `Output/Rae/listing-copy-template.md`
 - [ ] P2: เขียนข้อความอวยพร/ทำบุญมาตรฐาน 3 ระดับภาษา (พิธีทางการ / ทั่วไป / อบอุ่น)
@@ -71,7 +72,7 @@
 
 ## ✅ Chris (QA)
 
-- [ ] P0: Re-QA บทความ print-mistakes v2 (หลัง Reese fact-check ผ่าน) — เทียบกับ 2 blockers เดิม
+- [x] P0: Re-QA บทความ print-mistakes v3 ✅ PASS 6 ก.ค. 2569 — 2 blockers เดิมปิดครบ
 - [ ] P1: อ่าน `SOP/SOP-08-qa-standards.md` แล้วใช้เป็น checklist หลักทุก verdict ตั้งแต่นี้ไป
   (ถ้าเจอเกณฑ์ที่ควรเพิ่ม — เสนอผ่าน Claudy อย่าแก้ SOP เอง)
 - [ ] เสมอ: gate สุดท้ายของทุก pipeline
