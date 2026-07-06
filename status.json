@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T16:33:32Z",
+  "updatedAt": "2026-07-06T04:23:12Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "AI Print Order Assistant — วิจัยสูตรราคา + แนวทาง AI",
+      "task": "Fact-check บทความ print-mistakes v2→v3 (กฎบังคับก่อน Chris QA)",
       "report": {
-        "when": "13:19",
-        "title": "Pricing Formula ✅ — สูตรต้นทุนโรงพิมพ์ครบทุกขั้น",
-        "body": "กระดาษ/รีม (อาร์ตมัน/ด้าน 130-150g = 540-650฿) + เพลท 8 ใบ×120฿ + setup 400฿ + ค่าพิมพ์ 280฿/1,000 แผ่น + เคลือบ gloss 1.0฿ / matt 1.2฿ ต่อแผ่น | waste 5% + เผื่อตั้งเครื่อง 50 แผ่น | markup 30% + VAT 7% | AI: Thai rule-based parser แกะสเปคจากข้อความลูกค้า"
+        "when": "11:18",
+        "title": "Fact-check บทความ print-mistakes v2→v3 (กฎบังคับก่อน Chris QA)",
+        "body": "รอบแรก (v2): ❌ FAIL — 14 claims: ✅10 ⚠️1 ❌1 💬2 blocker คือวิธีเช็ค color mode ใน Illustrator/InDesign อ้าง Document Setup ผิด รอบสอง (v3): ✅ PASS — ✅12 ⚠️0 ❌0 💬2 (+1 policy pending 'ตรวจไฟล์ฟรี' รอ Kittanate) ทุก claim มี source: Adobe docs, PDF Association (ISO 15930), prepressure.com ฯลฯ → Output/Reese/2026-07-06-print-mistakes-v2-factcheck.md + -v3-factcheck.md"
       }
     },
     {
@@ -96,11 +96,11 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "done",
-      "task": "เขียนสคริปต์คลิป: ทำไมช่วงนี้แผ่นดินไหวบ่อย 75 วินาที",
+      "task": "แก้บทความ 5 ความผิดพลาดงานพิมพ์ เป็น v3 ตาม fact-check ของ Reese",
       "report": {
-        "when": "18:25",
-        "title": "สคริปต์เสร็จ: แผ่นดินไหว 75 วิ shot-by-shot",
-        "body": "9:16 แบ่ง 7 ช็อต | Hook โพสต์ไวรัล → เฉลยตัวเลข ~50/วัน → Ring of Fire ~90% → USGS ไม่เพิ่มขึ้น → CTA 'เช็กก่อนแชร์' | โน้ต: Botnoi + ซับไทย + เครดิต USGS | tone เป็นมิตร ไม่ดราม่า | ส่งต่อ Chris QA"
+        "when": "11:13",
+        "title": "แก้บทความ 5 ความผิดพลาดงานพิมพ์ เป็น v3 ตาม fact-check ของ Reese",
+        "body": "แก้ 3 จุดตาม verdict ของ Reese: (1) blocker — วิธีเช็ค color mode เขียนใหม่เป็น Illustrator File > Document Color Mode / InDesign ใช้ Swatches CMYK + แปลงตอน Export PDF (2) เลิกอ้าง dpi ของจอ เปลี่ยนเป็นไฟล์ภาพเว็บบันทึกความละเอียดต่ำ (3) ตัดวลี Embed All Fonts — PDF/X-1a/X-4 ฝังฟอนต์อัตโนมัติ คงประโยค 'ตรวจไฟล์ฟรี' ไว้รอ Kittanate ตัดสิน → Output/Rae/2026-07-06-5-print-mistakes-article-v3.md"
       }
     },
     {
@@ -170,11 +170,11 @@
         "เทสต์การทำงานเว็บแอป"
       ],
       "status": "done",
-      "task": "QA: สคริปต์แผ่นดินไหว — fact-check วิทย์ + ภาษาไทย + ความรับผิดชอบ",
+      "task": "Re-QA บทความ 5 ความผิดพลาดงานพิมพ์ v3 — gate สุดท้าย",
       "report": {
-        "when": "18:35",
-        "title": "QA: คลิปแผ่นดินไหว ✅ PASS — ไม่มี blocker",
-        "body": "Fact-check ผ่านหมด (50/วัน, 90%, USGS ไม่เพิ่มขึ้น, aftershock) | ภาษาไทยผ่าน | ชมที่ไม่โจมตีเพจต้นทาง = ลดดราม่า | แนะ 3 ข้อ: ใส่ 'ตัวเลขดิบไม่ผิดแต่ขาดบริบท' + เครดิต USGS ค้างจอ + ประโยค 'เตรียมพร้อมแต่ไม่ตื่นตระหนก'"
+        "when": "11:22",
+        "title": "Re-QA บทความ 5 ความผิดพลาดงานพิมพ์ v3 — gate สุดท้าย",
+        "body": "✅ PASS — 2 blockers เดิมจาก v1 ปิดครบ (CMYK gamut, font outline+embed), 3 จุดแก้ใหม่ของ Rae ผ่านหมดและตรง fact-check ของ Reese, ภาษาไทยสะกดถูก tone สม่ำเสมอ ไม่มีสำนวนแปล Warning 1 ข้อ: ตัด HTML comment header ออกตอน publish Notes: ประโยค 'ตรวจไฟล์ฟรี' เป็น policy pending — ห้ามเผยแพร่จนกว่า Kittanate อนุมัติ → Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md"
       }
     },
     {

@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-07-05T16:33:32Z",
+  "updatedAt": "2026-07-06T04:23:12Z",
   "entries": [
+    {
+      "id": "wl-260706-chris-rf8o",
+      "datetime": "2026-07-06T04:22:12Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "11:22",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "Re-QA บทความ 5 ความผิดพลาดงานพิมพ์ v3 — gate สุดท้าย",
+      "summary": "Re-QA v3 ✅ PASS — 2 blockers เดิมปิดครบ, จุดแก้ใหม่ผ่านหมด, ภาษาไทยผ่าน เหลือ policy 'ตรวจไฟล์ฟรี' รอ Kittanate → Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md"
+    },
+    {
+      "id": "wl-260706-reese-ma1z",
+      "datetime": "2026-07-06T04:18:12Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "11:18",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Fact-check บทความ print-mistakes v2→v3 (กฎบังคับก่อน Chris QA)",
+      "summary": "Fact-check v2 ❌ FAIL (blocker: Document Setup ผิด) → Rae แก้ → v3 ✅ PASS 12/14 VERIFIED มี source ครบ → Output/Reese/2026-07-06-print-mistakes-v3-factcheck.md"
+    },
+    {
+      "id": "wl-260706-rae-fuio",
+      "datetime": "2026-07-06T04:13:12Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "11:13",
+      "agent": "rae",
+      "agentName": "Rae",
+      "agentImg": "avatars/Rae.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "แก้บทความ 5 ความผิดพลาดงานพิมพ์ เป็น v3 ตาม fact-check ของ Reese",
+      "summary": "แก้บทความเป็น v3 ครบ 3 จุดตาม fact-check: Document Color Mode, ความละเอียดไฟล์ภาพเว็บ, PDF/X ฝังฟอนต์อัตโนมัติ → Output/Rae/2026-07-06-5-print-mistakes-article-v3.md"
+    },
     {
       "id": "wl-260705-claudy-c09f",
       "datetime": "2026-07-05T16:33:32Z",
