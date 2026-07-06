@@ -15,13 +15,17 @@
   QA: `Output/Chris/2026-07-06-qa-print-mistakes-article-v3.md`
   ✅ (1) นโยบาย "ตรวจไฟล์ฟรี" — Kittanate สั่งตัดออก → Rae แก้แล้ว → Chris delta re-QA ✅ PASS 6 ก.ค. 2569
   (`Output/Chris/2026-07-06-qa-print-mistakes-v3-edit-recheck.md`) — บทความพร้อม ship
-  ⏳ รอ Kittanate: (2) เลือกช่องทางเผยแพร่
+  ✅ (2) เผยแพร่แล้ว — Kittanate ลงบทความบนเว็บ Tanapat.co.th (แจ้ง 6 ก.ค. 2569) — **ปิดงานสมบูรณ์**
 
 - [ ] **ทดสอบ agent ใหม่ 3 ตัว (Libby / Mind / Dale)** — delegate งานเล็ก 1 ชิ้นต่อตัวผ่าน Task tool
   แล้วเช็คว่า hook อัปเดต dashboard ครบ (ตามขั้นทดสอบใน SOP-09) — งานเล็กที่ใช้ทดสอบ = งาน P1 ของแต่ละตัวด้านล่าง
-  ⚠️ สถานะ 6 ก.ค. 2569: งาน P1 ของทั้ง 3 ตัวเสร็จแล้ว **แต่ hook ไม่ได้บันทึก dashboard อัตโนมัติ**
-  (Claudy ต้อง sync ด้วย skill `worklog-sync` เอง) — ยังปิดไม่ได้จนกว่าจะยืนยันว่า hook ทำงานเมื่อ
-  delegate ผ่าน Task tool จริง · เหลืออีกอย่าง: brand starter ของ Mind ยังรอ Chris QA
+  ⚠️ สถานะ 6 ก.ค. 2569 (ค่ำ): งาน P1 ของทั้ง 3 ตัวเสร็จครบ (Mind ผ่าน QA แล้ว) แต่ hook ยังไม่เคย
+  ยิงอัตโนมัติ — วินิจฉัยเจอ 2 สาเหตุ: (1) matcher ใน `.claude/settings.json` เป็น `"Task"` แต่ tool
+  delegate ปัจจุบันชื่อ `Agent` → **แก้เป็น `"Task|Agent"` แล้ว** (2) session ที่เปิดจากนอก project
+  folder จะไม่โหลด agent files ใน `.claude/agents/` ทำให้ต้อง delegate ผ่าน general-purpose ซึ่งไม่อยู่
+  ใน MAP ของ hook → **วิธีปิด: session หน้าเปิด Claude Code จาก folder นี้ตรง ๆ แล้ว delegate 1 งานเล็ก
+  ด้วย subagent_type จริง (เช่น chris-qa) เพื่อยืนยัน hook ยิง** จึงติ๊กปิดได้
+  · งานตาม: Libby อัปเดต output-index.md ให้รวมไฟล์ใหม่รอบ QA loop นี้ (ทำ session หน้า ประหยัด token)
 
 ---
 
@@ -69,11 +73,11 @@
 
 ## 🎨 Mind (Visual) — agent ใหม่ เพิ่งเปิดใช้
 
-- [ ] P1 (งานทดสอบ agent): **Brand asset starter pack** — palette กลางของ TANAPAT
-  (CMYK+hex พร้อม usage roles), แนวทาง illustration style, กติกาใช้ iconography พุทธ
-  → `Output/Mind/2026-07-06-brand-starter.md`
-  ⏳ สถานะ 6 ก.ค. 2569: r2 เสร็จ + ผ่าน Reese fact-check ✅ PASS
-  (`Output/Reese/2026-07-06-brand-starter-factcheck.md`) — **เหลือ Chris QA** จึงจะติ๊กปิดได้
+- [x] P1 (งานทดสอบ agent): **Brand asset starter pack** ✅ 6 ก.ค. 2569 — palette กลาง +
+  illustration style + กติกา iconography พุทธ → `Output/Mind/2026-07-06-brand-starter.md` (r3)
+  ผ่าน pipeline เต็ม: Reese fact-check ✅ → Chris QA r2 ❌ FAIL (B1 ขอบเขตสีม่วง) → แก้ r3 →
+  Reese delta ✅ → Chris re-QA ✅ PASS — ใช้เป็น brand guideline จริง
+  · action item ค้าง: งานพิมพ์จริงชิ้นแรกที่ใช้น้ำตาลไม้สัก #4A3728 ต้องมี physical proof ก่อนอนุมัติ
 - [ ] P2: Asset spec สำหรับการ์ดทำบุญตัวแรก (ตาม spec ของ Vera เมื่อเสร็จ)
 - [ ] P3: Preview image guideline สำหรับ Etsy listing (mockup style ให้สม่ำเสมอทุกสินค้า)
 

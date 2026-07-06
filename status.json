@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T14:20:09Z",
+  "updatedAt": "2026-07-06T14:50:27Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Fact-check Brand Asset Starter Pack ของ Mind (กฎบังคับก่อน Chris QA)",
+      "task": "Delta fact-check Brand Starter r3 (กลับเข้า gate หลังแก้ blocker)",
       "report": {
-        "when": "20:53",
-        "title": "Fact-check Brand Asset Starter Pack ของ Mind (กฎบังคับก่อน Chris QA)",
-        "body": "ตรวจ 16 claims + 1 advisory — ✅ PASS หลัง Mind แก้เป็น r2 (reword seal สไตล์ครุฑ, ขอบเขตสีม่วง, proof น้ำตาลไม้สัก, วันบังคับใช้นโยบาย Etsy) → Output/Reese/2026-07-06-brand-starter-factcheck.md"
+        "when": "21:35",
+        "title": "Delta fact-check Brand Starter r3 (กลับเข้า gate หลังแก้ blocker)",
+        "body": "✅ PASS — ถ้อยคำสีม่วงใหม่ตรง C4 คำต่อคำ, claim ใหม่ PNG alpha=RGB ตรวจแล้ว VERIFIED (PNG spec ไม่มี CMYK+alpha), แปลงปี +543 ถูกทุกจุด, claim เดิมไม่ถูกแตะ → Output/Reese/2026-07-06-brand-starter-factcheck-r3-delta.md"
       }
     },
     {
@@ -148,11 +148,11 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "Brand Asset Starter Pack — palette + illustration style + iconography พุทธ (งานทดสอบ agent ใหม่)",
+      "task": "แก้ Brand Asset Starter Pack เป็น r3 ตาม QA ของ Chris",
       "report": {
-        "when": "20:56",
-        "title": "Brand Asset Starter Pack — palette + illustration style + iconography พุทธ (งานทดสอบ agent ใหม่)",
-        "body": "Palette กลาง 7 สี (CMYK+hex+usage roles), แนวทาง illustration, กติกา Buddhist iconography — r2 แก้ตาม fact-check ของ Reese ✅ PASS แล้ว สถานะ: รอ Chris QA → Output/Mind/2026-07-06-brand-starter.md"
+        "when": "21:25",
+        "title": "แก้ Brand Asset Starter Pack เป็น r3 ตาม QA ของ Chris",
+        "body": "แก้ครบ B1 (ถ้อยคำขอบเขตสีม่วงให้ตรง fact-check C4) + W1-W4 (ขอบเขตกติกาสีสัญลักษณ์, หมายเหตุ PNG→CMYK, นิยามใน prompt block, ปี พ.ศ. ทั้งฉบับ) → Output/Mind/2026-07-06-brand-starter.md (r3)"
       }
     },
     {
@@ -174,11 +174,11 @@
         "เทสต์การทำงานเว็บแอป"
       ],
       "status": "done",
-      "task": "Delta re-QA บทความ print-mistakes v3 หลังตัดข้อเสนอตรวจไฟล์ฟรี",
+      "task": "Delta re-QA Brand Asset Starter Pack r3 — gate สุดท้าย",
       "report": {
-        "when": "20:16",
-        "title": "Delta re-QA บทความ print-mistakes v3 หลังตัดข้อเสนอตรวจไฟล์ฟรี",
-        "body": "✅ PASS — เงื่อนไข N1 (นโยบายตรวจไฟล์ฟรี) ปิดแล้ว ย่อหน้าปิดใหม่ภาษาไทยธรรมชาติ การแก้ไม่เพิ่ม factual claim จึงไม่ต้องวนกลับ fact-check — บทความพร้อม ship → Output/Chris/2026-07-06-qa-print-mistakes-v3-edit-recheck.md"
+        "when": "21:47",
+        "title": "Delta re-QA Brand Asset Starter Pack r3 — gate สุดท้าย",
+        "body": "✅ PASS — B1 ปิดสนิท, W1-W4 แก้ครบใช้ได้จริง, ส่วนที่ผ่านแล้วไม่ถูกแตะ — อนุมัติ ship เป็น brand guideline ใช้งานจริง (action item: งานพิมพ์แรกที่ใช้ #4A3728 ต้องมี physical proof) → Output/Chris/2026-07-06-qa-brand-starter-r3-delta.md"
       }
     },
     {

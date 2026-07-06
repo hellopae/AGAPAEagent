@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-07-06T14:20:09Z",
+  "updatedAt": "2026-07-06T14:50:27Z",
   "entries": [
+    {
+      "id": "wl-260706-chris-rbuo",
+      "datetime": "2026-07-06T14:10:00Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "21:10",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "QA Brand Asset Starter Pack r2 ของ Mind — gate ก่อน ship",
+      "summary": "❌ FAIL — blocker B1: r2 อธิบายขอบเขตสีม่วงกลับความหมายผล fact-check C4 (เรื่องสีไว้ทุกข์) + 4 warnings (สีดอกบัวขัดกันเอง, PNG/CMYK, prompt คลุมเครือ, ปี พ.ศ./ค.ศ. ปน) → Output/Chris/2026-07-06-qa-brand-starter.md"
+    },
+    {
+      "id": "wl-260706-mind-amap",
+      "datetime": "2026-07-06T14:25:00Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "21:25",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "แก้ Brand Asset Starter Pack เป็น r3 ตาม QA ของ Chris",
+      "summary": "แก้ครบ B1 (ถ้อยคำขอบเขตสีม่วงให้ตรง fact-check C4) + W1-W4 (ขอบเขตกติกาสีสัญลักษณ์, หมายเหตุ PNG→CMYK, นิยามใน prompt block, ปี พ.ศ. ทั้งฉบับ) → Output/Mind/2026-07-06-brand-starter.md (r3)"
+    },
+    {
+      "id": "wl-260706-reese-nh9e",
+      "datetime": "2026-07-06T14:35:00Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "21:35",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Delta fact-check Brand Starter r3 (กลับเข้า gate หลังแก้ blocker)",
+      "summary": "✅ PASS — ถ้อยคำสีม่วงใหม่ตรง C4 คำต่อคำ, claim ใหม่ PNG alpha=RGB ตรวจแล้ว VERIFIED (PNG spec ไม่มี CMYK+alpha), แปลงปี +543 ถูกทุกจุด, claim เดิมไม่ถูกแตะ → Output/Reese/2026-07-06-brand-starter-factcheck-r3-delta.md"
+    },
+    {
+      "id": "wl-260706-chris-2wtf",
+      "datetime": "2026-07-06T14:47:00Z",
+      "displayDate": "6 ก.ค. 2569",
+      "displayTime": "21:47",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "Delta re-QA Brand Asset Starter Pack r3 — gate สุดท้าย",
+      "summary": "✅ PASS — B1 ปิดสนิท, W1-W4 แก้ครบใช้ได้จริง, ส่วนที่ผ่านแล้วไม่ถูกแตะ — อนุมัติ ship เป็น brand guideline ใช้งานจริง (action item: งานพิมพ์แรกที่ใช้ #4A3728 ต้องมี physical proof) → Output/Chris/2026-07-06-qa-brand-starter-r3-delta.md"
+    },
     {
       "id": "wl-260706-rae-m62o",
       "datetime": "2026-07-06T13:10:00Z",
