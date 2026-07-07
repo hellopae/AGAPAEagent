@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-07-06T14:50:27Z",
+  "updatedAt": "2026-07-07T12:10:00Z",
   "entries": [
+    {
+      "id": "wl-260707-rae-flxx",
+      "datetime": "2026-07-07T12:00:00Z",
+      "displayDate": "7 ก.ค. 2569",
+      "displayTime": "19:00",
+      "agent": "rae",
+      "agentName": "Rae",
+      "agentImg": "avatars/Rae.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "VeeGee กล่อง Mixed Flavor — จัด copy ลงครบ 5 panel",
+      "summary": "วาง copy จาก master (EN/TH) ลง Top/Front/Back/Left/Right ครบ ไม่แก้ถ้อยคำ · จัดลำดับการอ่าน · ส่งต่อ Reese → Output/Rae/2026-07-07-veegee-box-copy-placement.md"
+    },
+    {
+      "id": "wl-260707-reese-y1p0",
+      "datetime": "2026-07-07T12:04:00Z",
+      "displayDate": "7 ก.ค. 2569",
+      "displayTime": "19:04",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Fact-check copy กล่อง VeeGee",
+      "summary": "✅ pack math 15 ซอง, allergen (นม), ผู้จัดจำหน่าย+ที่อยู่ · ⚠️ 'ผักสด ~50g' ต้องมีสูตรรับรอง · ⚠️ อย./ชื่ออาหาร/โภชนาการ/น้ำหนักยังไม่มี → Output/Reese/2026-07-07-veegee-factcheck.md"
+    },
+    {
+      "id": "wl-260707-mind-gcui",
+      "datetime": "2026-07-07T12:08:00Z",
+      "displayDate": "7 ก.ค. 2569",
+      "displayTime": "19:08",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "VeeGee Box Artwork Proof — dieline 5 panel (Hybrid concept)",
+      "summary": "ออกแบบ artwork ครบ 5 panel ตาม die-cut 200×200×100 + แก้วสมูทตี้ vector + groovy swirl + 4-color bar, โลโก้จริงฝัง, self-contained เปิดออฟไลน์ได้ · Artifact live → Output/Mind/2026-07-07-veegee-box-artwork.md"
+    },
+    {
+      "id": "wl-260707-chris-xr6h",
+      "datetime": "2026-07-07T12:10:00Z",
+      "displayDate": "7 ก.ค. 2569",
+      "displayTime": "19:10",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "blocked",
+      "title": "QA กล่อง VeeGee — ผ่าน design/ภาษา ติด regulatory",
+      "summary": "❌ ยังพิมพ์จริงไม่ได้: ขาด น้ำหนักสุทธิ / อย. / ชื่ออาหาร / โภชนาการ / บาร์โค้ด-lot-วันหมดอายุ (ตาม working note) · ภาษาไทย+layout ผ่าน → รอข้อมูลลูกค้า → Output/Chris/2026-07-07-veegee-qa.md"
+    },
     {
       "id": "wl-260706-chris-rbuo",
       "datetime": "2026-07-06T14:10:00Z",

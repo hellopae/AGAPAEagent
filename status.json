@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T14:50:27Z",
+  "updatedAt": "2026-07-07T12:10:00Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "Architect Handoff — Fable 5 วางระบบ SOP/Skills/Agents ส่งมอบ Opus 4.8",
+      "task": "VeeGee Mixed Flavor Box — orchestrate Rae→Reese→Mind→Chris",
       "report": {
-        "when": "23:33",
-        "title": "Architect Handoff — Fable 5 วางระบบ SOP/Skills/Agents ส่งมอบ Opus 4.8",
-        "body": "ส่งมอบระบบครบชุด: HANDOFF.md + BACKLOG.md (มอบหมายงานทุก agent) + SOP 9 ฉบับ + skills 7 ตัว + agent ใหม่ 3 ตัว (Libby/Mind/Dale) + ต่อ hook และ dashboard ครบ 11 agents"
+        "when": "19:10",
+        "title": "ส่งมอบ artwork proof",
+        "body": "routing ครบ pipeline, artwork proof ส่งแล้ว, ติด QA regulatory รอข้อมูลลูกค้า"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Delta fact-check Brand Starter r3 (กลับเข้า gate หลังแก้ blocker)",
+      "task": "Fact-check copy กล่อง VeeGee",
       "report": {
-        "when": "21:35",
-        "title": "Delta fact-check Brand Starter r3 (กลับเข้า gate หลังแก้ blocker)",
-        "body": "✅ PASS — ถ้อยคำสีม่วงใหม่ตรง C4 คำต่อคำ, claim ใหม่ PNG alpha=RGB ตรวจแล้ว VERIFIED (PNG spec ไม่มี CMYK+alpha), แปลงปี +543 ถูกทุกจุด, claim เดิมไม่ถูกแตะ → Output/Reese/2026-07-06-brand-starter-factcheck-r3-delta.md"
+        "when": "19:04",
+        "title": "Fact-check ✅/⚠️",
+        "body": "pack math+allergen+ผู้จัดจำหน่ายผ่าน · '50g' + regulatory ยังต้องเติม"
       }
     },
     {
@@ -96,11 +96,11 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "done",
-      "task": "ตัดข้อเสนอ 'ตรวจไฟล์ฟรี' ออกจากบทความ print-mistakes v3 ตามคำสั่ง Kittanate",
+      "task": "VeeGee กล่อง Mixed Flavor — จัด copy 5 panel",
       "report": {
-        "when": "20:10",
-        "title": "ตัดข้อเสนอ 'ตรวจไฟล์ฟรี' ออกจากบทความ print-mistakes v3 ตามคำสั่ง Kittanate",
-        "body": "ตัดประโยคข้อเสนอ 'ตรวจไฟล์ให้ก่อนโดยไม่มีค่าใช้จ่าย' ออกทั้งประโยค (นโยบายยังไม่เปิดใช้) + เกลาย่อหน้าปิดท้ายใหม่ให้อ่านลื่น → Output/Rae/2026-07-06-5-print-mistakes-article-v3.md"
+        "when": "19:00",
+        "title": "Copy placement ครบ 5 panel",
+        "body": "วาง copy master EN/TH ลงทุก panel ครบ ส่งต่อ Reese fact-check"
       }
     },
     {
@@ -148,11 +148,11 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "แก้ Brand Asset Starter Pack เป็น r3 ตาม QA ของ Chris",
+      "task": "VeeGee Box Artwork Proof — dieline 5 panel",
       "report": {
-        "when": "21:25",
-        "title": "แก้ Brand Asset Starter Pack เป็น r3 ตาม QA ของ Chris",
-        "body": "แก้ครบ B1 (ถ้อยคำขอบเขตสีม่วงให้ตรง fact-check C4) + W1-W4 (ขอบเขตกติกาสีสัญลักษณ์, หมายเหตุ PNG→CMYK, นิยามใน prompt block, ปี พ.ศ. ทั้งฉบับ) → Output/Mind/2026-07-06-brand-starter.md (r3)"
+        "when": "19:08",
+        "title": "Artwork proof ✅",
+        "body": "dieline 5 panel + แก้ว vector + swirl, self-contained, Artifact live"
       }
     },
     {
@@ -173,12 +173,12 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "done",
-      "task": "Delta re-QA Brand Asset Starter Pack r3 — gate สุดท้าย",
+      "status": "blocked",
+      "task": "QA กล่อง VeeGee",
       "report": {
-        "when": "21:47",
-        "title": "Delta re-QA Brand Asset Starter Pack r3 — gate สุดท้าย",
-        "body": "✅ PASS — B1 ปิดสนิท, W1-W4 แก้ครบใช้ได้จริง, ส่วนที่ผ่านแล้วไม่ถูกแตะ — อนุมัติ ship เป็น brand guideline ใช้งานจริง (action item: งานพิมพ์แรกที่ใช้ #4A3728 ต้องมี physical proof) → Output/Chris/2026-07-06-qa-brand-starter-r3-delta.md"
+        "when": "19:10",
+        "title": "QA ❌ ติด regulatory",
+        "body": "design/ภาษาผ่าน · ขาด อย./น้ำหนัก/โภชนาการ/บาร์โค้ด → รอลูกค้า"
       }
     },
     {
