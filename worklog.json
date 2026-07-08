@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-08T05:10:00Z",
+  "updatedAt": "2026-07-08T11:55:46Z",
   "entries": [
+    {
+      "id": "wl-260708-dale-btc-fix",
+      "datetime": "2026-07-08T11:55:46Z",
+      "displayDate": "8 ก.ค. 2569",
+      "displayTime": "18:55",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ตัด Bitcoin Technical Analysis ออกจาก Daily News routine",
+      "summary": "Paint แจ้งว่าอีเมลข่าวเช้าโชว์กล่องเตือนแทน Bitcoin TA ทุกวัน — เช็คแล้วพบสาเหตุจริง: cloud sandbox บล็อก network (403) ไป api.coingecko.com/api.binance.com ทั้ง Bash ตรงและ WebFetch proxy คำนวณ MA/RSI/MACD/Fibonacci ไม่ได้ Paint สั่งตัดออก → แก้ cloud routine (trig_011BiqveCPxhesQw45aMxGCJ) ตัด Role 3 TA ทิ้งทั้งหมด เหลือแค่ราคา BTC USD + % 24 ชม. จาก WebSearch รวมกับ slot ทอง/เศรษฐกิจ sync .claude/agents/news-daily.md + SOP-06 ให้ตรงกัน"
+    },
     {
       "id": "wl-260708-mind-b3",
       "datetime": "2026-07-08T05:05:00Z",

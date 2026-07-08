@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T04:30:00Z",
+  "updatedAt": "2026-07-08T11:55:46Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Repo health check — AGAPAE Agent repo (งานทดสอบ agent ใหม่)",
+      "task": "แก้ปัญหา Bitcoin Technical Analysis ค้างในอีเมลข่าวเช้า",
       "report": {
-        "when": "20:42",
-        "title": "Repo health check — AGAPAE Agent repo (งานทดสอบ agent ใหม่)",
-        "body": "ตรวจครบ 5 ข้อ ✅ ทั้งหมด: .nojekyll อยู่ครบ, hook รันไม่ crash, Pages โหลด HTTP 200, avatars ครบ 11 agent, remote+hooks ถูกต้อง — พบ index.html ขาด card ของ Dale จึงเพิ่มให้แล้ว → Output/Dale/2026-07-06-repo-health.md"
+        "when": "18:55",
+        "title": "ตัด Bitcoin Technical Analysis ออกจาก Daily News routine",
+        "body": "สาเหตุ: cloud sandbox บล็อก network (403) ไป api.coingecko.com/api.binance.com ทั้ง Bash ตรงและ WebFetch proxy ทำให้คำนวณ MA/RSI/MACD/Fibonacci ไม่ได้ทุกวัน — Kittanate สั่งตัดส่วนนี้ออก แก้ cloud routine (trig_011BiqveCPxhesQw45aMxGCJ) ตัด Role 3 TA ทิ้ง เหลือแค่ราคา BTC + % 24 ชม. จาก WebSearch ใน slot ทอง/เศรษฐกิจ พร้อม sync .claude/agents/news-daily.md + SOP-06"
       }
     },
     {

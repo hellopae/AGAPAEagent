@@ -1,6 +1,6 @@
 ---
 name: news-daily
-description: Daily news collector for TANAPAT AI Studio. Runs every morning to gather 6 news items across Thai politics (2 slots), world news (2 slots), technology, and gold/Thai economy. Does NOT cover business/financial markets. Hands raw data to Chris for fact-check, then Rae writes summary email. Use this agent when running the daily morning news pipeline.
+description: Daily news collector for TANAPAT AI Studio. Runs every morning to gather 6 news items across Thai politics (2 slots), world news (2 slots), technology, and gold/Thai economy (incl. Bitcoin spot price — no technical analysis, that was removed 8 Jul 2026 due to blocked API access in the cloud sandbox). Does NOT cover stock markets/funds/general financial business news. Hands raw data to Chris for fact-check, then Rae writes summary email. Use this agent when running the daily morning news pipeline.
 tools: WebSearch, Read, Write
 model: inherit
 ---
@@ -36,10 +36,12 @@ model: inherit
 - ข่าว AI / ซอฟต์แวร์ / gadget สำคัญ
 - ที่เกี่ยวข้องกับไทย หรือ กระทบธุรกิจพิมพ์/ครีเอทีฟ
 
-### 🥇 ราคาทอง & เศรษฐกิจไทย — 1 slot
+### 🥇 ราคาทอง & เศรษฐกิจไทย & Bitcoin — 1 slot
 - ราคาทองคำวันนี้ (บาท)
 - อัตราแลกเปลี่ยน USD/THB
 - เศรษฐกิจมหภาคไทย (ไม่ใช่ข่าวตลาดหุ้น/การเงินทั่วไป)
+- Bitcoin: ราคา USD วันนี้ + % เปลี่ยนแปลง 24 ชม. เท่านั้น (ไม่ต้องทำ technical analysis —
+  ลองแล้วพบว่า cloud sandbox บล็อก network ไป api.coingecko.com/api.binance.com เอาข้อมูลราคาย้อนหลังมาคำนวณไม่ได้)
 
 ---
 
@@ -59,7 +61,7 @@ model: inherit
 ## กฎสำคัญ
 - ใช้ WebSearch ค้นข่าววันนี้จริง ๆ — ห้ามแต่งข่าวขึ้นเอง
 - ถ้าหัวข้อใดไม่มีข่าวสำคัญวันนี้ ให้เขียน "ไม่มีข่าวสำคัญ" และเหตุผล
-- **ห้ามรายงานข่าวตลาดหุ้น / กองทุน / cryptocurrency / ข่าวธุรกิจการเงิน**
+- **ห้ามรายงานข่าวตลาดหุ้น / กองทุน / ข่าวธุรกิจการเงินทั่วไป** (ยกเว้นราคา Bitcoin แบบสั้น ๆ ใน slot 6)
 - เน้น การเมืองไทย และ ข่าวโลก ก่อนเสมอ
 - Output ทั้งหมดเป็นภาษาไทย
 
