@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T12:10:00Z",
+  "updatedAt": "2026-07-08T04:30:00Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "VeeGee Mixed Flavor Box — orchestrate Rae→Reese→Mind→Chris",
+      "task": "อัปสกิลทีมออกแบบ — Mind/Vera เรียน Claude Design (artifact-design)",
       "report": {
-        "when": "19:10",
-        "title": "ส่งมอบ artwork proof",
-        "body": "routing ครบ pipeline, artwork proof ส่งแล้ว, ติด QA regulatory รอข้อมูลลูกค้า"
+        "when": "11:30",
+        "title": "อัปสกิลทีมออกแบบเสร็จ",
+        "body": "จากบทเรียน VeeGee (ผิดขนาด+ไม่ใช้ภาพจริง) → SOP-10 + เดิน artifact-design เข้า Mind/Vera + อุด QA gate · VeeGee redo รอ regulatory ลูกค้า"
       }
     },
     {

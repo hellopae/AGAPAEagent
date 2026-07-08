@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-07T12:10:00Z",
+  "updatedAt": "2026-07-08T04:30:00Z",
   "entries": [
+    {
+      "id": "wl-260708-claudy-dsgn",
+      "datetime": "2026-07-08T04:30:00Z",
+      "displayDate": "8 ก.ค. 2569",
+      "displayTime": "11:30",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "อัปสกิลทีมออกแบบ — Mind/Vera เรียน \"Claude Design\" (artifact-design)",
+      "summary": "บทเรียน VeeGee (ผิดขนาด 200mm vs กล่องจริง 11×24×10cm + ไม่ใช้ภาพจริงที่มี) → สร้าง SOP-10, เพิ่ม tool Skill ให้ Mind/Vera, เดิน artifact-design เข้า workflow, อุด QA gate (เช็กขนาด/asset ต้นทางจริง) · VeeGee redo รอ regulatory ลูกค้า → Output/Claudy/2026-07-08-design-upskill.md"
+    },
     {
       "id": "wl-260707-rae-flxx",
       "datetime": "2026-07-07T12:00:00Z",

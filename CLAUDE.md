@@ -10,10 +10,11 @@
 
 1. **`HANDOFF.md`** — อ่านก่อนเสมอ: บทบาท, Definition of Done, กับดักที่เคยเจอ
 2. **`BACKLOG.md`** — งานมอบหมายของทุก agent เรียง priority
-3. **`SOP/SOP-01..09`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
-   web feature, research, ข่าวเช้า, worklog/dashboard, เกณฑ์ QA, การสร้าง agent ใหม่)
+3. **`SOP/SOP-01..10`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
+   web feature, research, ข่าวเช้า, worklog/dashboard, เกณฑ์ QA, การสร้าง agent ใหม่, **มาตรฐานงานออกแบบ**)
 4. **Skills ใน `.claude/skills/`** — `new-article`, `new-template`, `fact-check-gate`,
    `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review` — ใช้เมื่องานตรง trigger
+   - **งาน visual/design**: Mind/Vera ใช้ skill เนทีฟ `artifact-design` ("Claude Design") ตาม `SOP/SOP-10-visual-design.md` — สำรวจ asset ต้นทางก่อน, ล็อกขนาดจริง, ใช้ asset จริง
 
 ## ROUTING TABLE
 
