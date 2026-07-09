@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-07-08T11:55:46Z",
+  "updatedAt": "2026-07-09T06:22:41.998Z",
   "entries": [
+    {
+      "id": "wl-260709-minnie-dxja",
+      "datetime": "2026-07-09T06:22:41Z",
+      "displayDate": "9 ก.ค. 2569",
+      "displayTime": "13:22",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Web App หารายได้ — คิด 6 Idea Cards (Fable 5)",
+      "summary": "6 ไอเดียเว็บแอปหารายได้: PrintQuote AI SaaS, เกียรติบัตร Express, บุญDee Studio, FreelanceBill TH, Preflight Buddy, Sati Planner Builder — Top pick: PrintQuote SaaS ต่อยอด printorder + ข้อมูล 1,666 ใบเสนอราคา ส่งต่อ Reese วิจัยตลาด"
+    },
+    {
+      "id": "wl-260709-reese-dxjb",
+      "datetime": "2026-07-09T06:22:41Z",
+      "displayDate": "9 ก.ค. 2569",
+      "displayTime": "13:22",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "วิจัยตลาด PrintQuote AI SaaS + สแกนเกียรติบัตร Express",
+      "summary": "PrintQuote SaaS = GO มีเงื่อนไข (ไม่มีคู่แข่งไทยตรงตัว, ราคา ฿590/ด. plausible, ต้องสัมภาษณ์ 10 ร้าน + pre-sell ก่อน build) · เกียรติบัตร Express = NO-GO paid (ของฟรีครองตลาด) → pivot เป็น lead-gen งานพิมพ์จริง"
+    },
     {
       "id": "wl-260708-dale-btc-fix",
       "datetime": "2026-07-08T11:55:46Z",

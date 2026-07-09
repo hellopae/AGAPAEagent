@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T11:55:46Z",
+  "updatedAt": "2026-07-09T06:22:41.998Z",
   "agents": [
     {
       "id": "claudy",
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "AI Print Order Assistant — คิดคอนเซ็ปต์ผู้ช่วยรับออเดอร์",
+      "task": "Web App หารายได้ — คิด 6 Idea Cards (Fable 5)",
       "report": {
-        "when": "13:18",
-        "title": "Concept ✅ — แชตรับออเดอร์ + ราคาสด + ค้นใบเสนอราคาเก่า",
-        "body": "ลูกค้าพิมพ์สเปคในแชต → AI แกะ ประเภทงาน/จำนวน/กระดาษ/เคลือบ → เสนอราคาทันที | ฟีเจอร์: chips ตัวเลือกด่วน, cost breakdown, ค้นใบเสนอราคาเก่า 1,666 ใบ | ส่งต่อ Reese ทำสูตรราคา"
+        "when": "13:22",
+        "title": "Idea Cards ✅ — 6 เว็บแอปหารายได้",
+        "body": "6 คอนเซปต์: PrintQuote AI SaaS (white-label ระบบตอบราคาโรงพิมพ์ SME ฿590-990/ด.) · เกียรติบัตร Express (฿99/batch) · บุญDee Studio (การ์ดงานบุญ+LINE ฿149-299) · FreelanceBill TH (ใบเสนอราคา+PromptPay QR) · Preflight Buddy (AI ตรวจไฟล์ก่อนพิมพ์ global $5/20 checks) · Sati Planner Builder ($15-19) | Top pick: PrintQuote SaaS — moat จากใบเสนอราคา 1,666 ใบ | ส่งต่อ Reese วิจัย → Output/Minnie/2026-07-09-webapp-revenue-ideas.md"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Fact-check copy กล่อง VeeGee",
+      "task": "วิจัยตลาด PrintQuote AI SaaS + สแกนเกียรติบัตร Express",
       "report": {
-        "when": "19:04",
-        "title": "Fact-check ✅/⚠️",
-        "body": "pack math+allergen+ผู้จัดจำหน่ายผ่าน · '50g' + regulatory ยังต้องเติม"
+        "when": "13:22",
+        "title": "Research ✅ — PrintQuote GO (มีเงื่อนไข) / เกียรติบัตร NO-GO",
+        "body": "PrintQuote SaaS: GO แบบมีเงื่อนไข — ไม่พบคู่แข่งไทยตรงตัว, global Print MIS แพง (~$1,000/ด.) ไม่มี LINE, SME ไทยจ่าย SaaS แล้ว (FlowAccount ฿249-458/ด. เป็น anchor ✅), ฿590 plausible แนะนำรายปี ฿5,900 | เงื่อนไข: สัมภาษณ์ 10 ร้าน + pre-sell 3 ร้านก่อน build | ความเสี่ยง: conflict of interest (TANAPAT เป็นโรงพิมพ์คู่แข่ง — ต้องแยกแบรนด์), AI เสนอราคาผิด = เชื่อถือพัง (เฟสแรก human-approve) | เกียรติบัตร Express: NO-GO เป็น paid — Canva Bulk Create + เว็บไทยฟรีครองตลาด → PIVOT เป็น free lead-gen ดึงงานพิมพ์จริง → Output/Reese/2026-07-09-printquote-saas-research.md"
       }
     },
     {
