@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T06:22:41.998Z",
+  "updatedAt": "2026-07-09T06:46:07.885Z",
   "agents": [
     {
       "id": "claudy",
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "Web App หารายได้ — คิด 6 Idea Cards (Fable 5)",
+      "task": "เกมหารายได้ — คิด 6 Idea Cards (Fable 5)",
       "report": {
-        "when": "13:22",
-        "title": "Idea Cards ✅ — 6 เว็บแอปหารายได้",
-        "body": "6 คอนเซปต์: PrintQuote AI SaaS (white-label ระบบตอบราคาโรงพิมพ์ SME ฿590-990/ด.) · เกียรติบัตร Express (฿99/batch) · บุญDee Studio (การ์ดงานบุญ+LINE ฿149-299) · FreelanceBill TH (ใบเสนอราคา+PromptPay QR) · Preflight Buddy (AI ตรวจไฟล์ก่อนพิมพ์ global $5/20 checks) · Sati Planner Builder ($15-19) | Top pick: PrintQuote SaaS — moat จากใบเสนอราคา 1,666 ใบ | ส่งต่อ Reese วิจัย → Output/Minnie/2026-07-09-webapp-revenue-ideas.md"
+        "when": "13:46",
+        "title": "Idea Cards ✅ — 6 เกมหารายได้",
+        "body": "6 คอนเซปต์: บุญ Quest (deckbuilder พุทธ-โฟล์คลอร์ไทย digital+การ์ดจริงพิมพ์เอง) · Phi Hunter (roguelite ผีไทย $4.99 itch.io→Steam) · ทายสุภาษิต (daily puzzle แชร์ LINE + ads) · หมอดูแม่นจริง (visual novel Claude API, แพ็คเหรียญ PromptPay) · อ่านไทยได้! (puzzle สอนอ่านไทยให้ expat $9.99 + workbook) · วัดของฉัน (cozy idle สร้างวัด+แมววัด donation) | Top pick: บุญ Quest — ทดสอบ moat โรงพิมพ์+cultural niche ตรงที่สุด | ส่งต่อ Reese → Output/Minnie/2026-07-09-game-revenue-ideas.md"
       }
     },
     {
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "วิจัยตลาด PrintQuote AI SaaS + สแกนเกียรติบัตร Express",
+      "task": "วิจัยตลาด บุญ Quest + สแกนหมอดูแม่นจริง AI",
       "report": {
-        "when": "13:22",
-        "title": "Research ✅ — PrintQuote GO (มีเงื่อนไข) / เกียรติบัตร NO-GO",
-        "body": "PrintQuote SaaS: GO แบบมีเงื่อนไข — ไม่พบคู่แข่งไทยตรงตัว, global Print MIS แพง (~$1,000/ด.) ไม่มี LINE, SME ไทยจ่าย SaaS แล้ว (FlowAccount ฿249-458/ด. เป็น anchor ✅), ฿590 plausible แนะนำรายปี ฿5,900 | เงื่อนไข: สัมภาษณ์ 10 ร้าน + pre-sell 3 ร้านก่อน build | ความเสี่ยง: conflict of interest (TANAPAT เป็นโรงพิมพ์คู่แข่ง — ต้องแยกแบรนด์), AI เสนอราคาผิด = เชื่อถือพัง (เฟสแรก human-approve) | เกียรติบัตร Express: NO-GO เป็น paid — Canva Bulk Create + เว็บไทยฟรีครองตลาด → PIVOT เป็น free lead-gen ดึงงานพิมพ์จริง → Output/Reese/2026-07-09-printquote-saas-research.md"
+        "when": "13:46",
+        "title": "Research ✅ — บุญ Quest GO (มีเงื่อนไข) / หมอดู AI GO ระวัง",
+        "body": "บุญ Quest: GO มีเงื่อนไข — ตลาดบอร์ดเกมไทยโตจริง ~2,329 ลบ. (2024)→~3,028 ลบ. (2027) ✅, การ์ดเกมไทยเล็กขาย 549-890฿ (ราคา 390-590฿ แข่งได้ margin ดีเพราะพิมพ์เอง), digital บน itch.io ส่วนใหญ่ <$100 ตลอดชีพ = ใช้เป็น demo เท่านั้น | Hard NO: ห้ามพระพุทธรูปบนการ์ด (precedent: Fight of Gods โดนแบน 2017) ห้ามกลไกจ่ายเงิน=ได้บุญ — ธีมกิเลสมาร/โฟล์คลอร์ปลอดภัย (Home Sweet Home >1M ชุดพิสูจน์แล้ว) | เงื่อนไข: PDF→pre-order→พิมพ์ small batch | หมอดู AI: GO ระวัง — มูเตลูโต +70-113%, API 1-6฿/เซสชัน margin ≥70% ทำได้, ต้องวางเป็นเกมบันเทิง ห้ามขายพิธีแก้กรรม, คู่แข่งจริงคือ ChatGPT ฟรี → Output/Reese/2026-07-09-boonquest-game-research.md"
       }
     },
     {

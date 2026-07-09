@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-07-09T06:22:41.998Z",
+  "updatedAt": "2026-07-09T06:46:07.885Z",
   "entries": [
+    {
+      "id": "wl-260709-minnie-82bd",
+      "datetime": "2026-07-09T06:46:07Z",
+      "displayDate": "9 ก.ค. 2569",
+      "displayTime": "13:46",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "เกมหารายได้ — คิด 6 Idea Cards (Fable 5)",
+      "summary": "6 ไอเดียเกม: บุญ Quest (print-hybrid deckbuilder), Phi Hunter, ทายสุภาษิต, หมอดูแม่นจริง AI, อ่านไทยได้!, วัดของฉัน — Top pick: บุญ Quest ใช้ moat โรงพิมพ์ funnel digital→physical ส่งต่อ Reese วิจัย"
+    },
+    {
+      "id": "wl-260709-reese-82be",
+      "datetime": "2026-07-09T06:46:07Z",
+      "displayDate": "9 ก.ค. 2569",
+      "displayTime": "13:46",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "วิจัยตลาด บุญ Quest + สแกนหมอดูแม่นจริง AI",
+      "summary": "บุญ Quest = GO มีเงื่อนไข (ตลาดบอร์ดเกมไทย ~2,329 ลบ. โตจริง, ห้ามพระพุทธรูปบนการ์ด, fail cheap: PDF→pre-order→พิมพ์) · หมอดู AI = GO ระวัง (มูเตลูโต, margin ≥70% ได้, ต้องเป็นเกมบันเทิงไม่อวดอ้าง)"
+    },
     {
       "id": "wl-260709-minnie-dxja",
       "datetime": "2026-07-09T06:22:41Z",
