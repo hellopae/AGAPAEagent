@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-09T06:46:07.885Z",
+  "updatedAt": "2026-07-11T15:44:46Z",
   "entries": [
+    {
+      "id": "wl-260711-mind-7eee",
+      "datetime": "2026-07-11T15:44:46Z",
+      "displayDate": "11 ก.ค. 2569",
+      "displayTime": "22:44",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "VeeGee กล่องคลีนมินิมอล — 3 คอนเซปต์ (Fable 5)",
+      "summary": "รีดีไซน์กล่อง VeeGee แนว AG1 คลีน/มินิมอลตามมู้ดบอร์ดลูกค้า บน dieline จริง 11×24×10cm ใช้โลโก้จริง: (1)Beet Minimal แนะนำ (2)Orchard Green (3)Cream&Beet ตัดข้อความเหลือโลโก้+1บรรทัด+จำนวนซอง รอ Chris QA ก่อน print-ready"
+    },
     {
       "id": "wl-260709-minnie-82bd",
       "datetime": "2026-07-09T06:46:07Z",
