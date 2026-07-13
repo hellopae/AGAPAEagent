@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T07:09:21Z",
+  "updatedAt": "2026-07-13T07:17:40Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — research sprint (GO)",
+      "task": "เกียรติบัตร Express — fact-check UI copy (PASS มีเงื่อนไข)",
       "report": {
-        "when": "13:33",
-        "title": "Research ✅ GO — pdfmake + Sarabun",
-        "body": "ตรวจ 13 คำถาม: GO — pdfmake+fontkit ตัวเดียวที่ shaping ไทยถูก (jsPDF/pdf-lib มีบั๊กวรรณยุกต์ยืนยัน), ฟอนต์ Sarabun+Srisakdi (SIL OFL ฝังได้ฟรี), mammoth/SheetJS CE/pdf.js + clipboard fallback, A4 แนวนอน bleed 3mm, ห้ามใช้ตราครุฑใน template (พ.ร.บ. 2534)"
+        "when": "14:17",
+        "title": "Fact-check ✅ PASS — แก้ 3 จุด",
+        "body": "ตรวจ claim ทั้ง 163 strings: ✅ PASS ไม่พบ INCORRECT — สั่งแก้ 3 จุด (offline note, เลข batch สมมติ, ชื่อวัดชนวัดจริง) + ส่ง privacy invariants 5 ข้อให้ Dale, เงื่อนไขตรวจสำนวนพร/ครุฑให้ Chris, รอ Kittanate ยืนยันเลขปี TANAPAT"
       }
     },
     {
