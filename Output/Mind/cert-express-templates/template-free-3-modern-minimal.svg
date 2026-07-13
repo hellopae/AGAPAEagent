@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 216" width="303mm" height="216mm">
+<!--
+  เกียรติบัตร Express — template artwork (Mind, 2026-07-13)
+  id: corporate (ฟรี 3 ตาม copy key ของ Rae: template.free3.name = แบบโมเดิร์นองค์กร) — โมเดิร์นมินิมอล ขอบสีเดียว
+  canvas: 303×216mm เต็ม bleed 3mm (trim 297×210 เริ่มที่ offset 3,3) — geometry ตาม Vera §6.2/§10
+  สีเดียวทั้งใบ: เขียวเข้ม teal #115E59 บนขาว — แถบสันซ้ายเต็ม bleed เป็นลายเซ็นของแบบนี้
+  ชื่อผู้รับใช้ Sarabun 700 (ไม่ใช่ Srisakdi) ตาม Vera §6.2
+  Dale: ใช้เฉพาะ <g id="artwork"> — ลบ <g id="GUIDES__DELETE_BEFORE_EXPORT"> ทั้งก้อนก่อน export จริง
+  inkColors (manifest): orgName #134E4A · certifyLine #334155 · recipientName #115E59 · body #334155 · signer #334155
+-->
+  <g id="artwork">
+    <!-- พื้นขาวเต็ม bleed -->
+    <rect x="0" y="0" width="303" height="216" fill="#FFFFFF"/>
+    <!-- แถบสันซ้ายเต็ม bleed + เส้น echo (อยู่ในโซนกรอบ ≤17mm) -->
+    <rect x="0" y="0" width="4.5" height="216" fill="#115E59"/>
+    <line x1="6.5" y1="0" x2="6.5" y2="216" stroke="#115E59" stroke-width="0.35"/>
+    <!-- เส้นกรอบเดี่ยว -->
+    <rect x="10" y="10" width="283" height="196" fill="none" stroke="#115E59" stroke-width="0.6"/>
+    <!-- วงเล็บมุม (มุมละชิ้น) — เน้นมุมโดยไม่รกกลางขอบ -->
+    <g fill="none" stroke="#115E59" stroke-width="1.8">
+      <path d="M10 28 L10 10 L28 10"/>
+      <path d="M275 10 L293 10 L293 28"/>
+      <path d="M10 188 L10 206 L28 206"/>
+      <path d="M275 206 L293 206 L293 188"/>
+    </g>
+    <!-- จุดกำกับกลางขอบล่าง (สเกลเล็ก สุภาพ) -->
+    <g fill="#115E59">
+      <rect x="147.5" y="205.2" width="8" height="1.6"/>
+    </g>
+    <!-- เส้นแบ่งใต้ชื่อผู้รับ: เส้นเดี่ยว 60mm ศูนย์กลาง (151.5,103) -->
+    <line x1="121.5" y1="103" x2="181.5" y2="103" stroke="#115E59" stroke-width="0.5"/>
+    <!-- ไม่มีลายน้ำ/texture ในโซนข้อความ — พื้นขาวล้วน -->
+  </g>
+
+  <!-- ═══ GUIDES — Dale ลบ group นี้ทั้งก้อนก่อนใช้จริง ═══ -->
+  <g id="GUIDES__DELETE_BEFORE_EXPORT">
+    <rect x="3" y="3" width="297" height="210" fill="none" stroke="#FF2D96" stroke-width="0.25" stroke-dasharray="3 2"/><!-- trim -->
+    <rect x="23" y="23" width="257" height="170" fill="none" stroke="#00A0FF" stroke-width="0.25" stroke-dasharray="2 2"/><!-- text zone -->
+    <g fill="none" stroke="#9AA0A6" stroke-width="0.2" stroke-dasharray="1.5 1.5">
+      <rect x="131.5" y="25" width="40" height="24"/><rect x="36.5" y="55" width="230" height="12"/>
+      <rect x="41.5" y="69" width="220" height="9"/><rect x="36.5" y="81" width="230" height="20"/>
+      <rect x="41.5" y="107" width="220" height="16"/><rect x="41.5" y="125" width="220" height="14"/>
+      <rect x="41.5" y="143" width="220" height="8"/><rect x="106.5" y="161" width="90" height="30"/>
+      <rect x="48" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><rect x="165" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/>
+    </g>
+    <!-- ตัวอย่างข้อความ = cert.default.corporate.* (Rae) — corporate ไม่มี blessing default (slot ว่างได้ ไม่ shift) -->
+    <g text-anchor="middle" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+      <text x="151.5" y="63.5" font-size="7.76" font-weight="600" fill="#134E4A">บริษัท ธนวัฒน์กรุ๊ป จำกัด</text>
+      <text x="151.5" y="76" font-size="5.64" fill="#334155">ขอมอบวุฒิบัตรฉบับนี้ไว้เพื่อแสดงว่า</text>
+      <!-- ชื่อผู้รับ: Sarabun 700 (ตาม Vera §6.2 — corporate ไม่ใช้ Srisakdi), จำลอง auto-fit -->
+      <text x="151.5" y="95" font-size="10.6" font-weight="700" fill="#115E59">ว่าที่ร้อยตรีหญิงกัลยรัตน์ ศรีสุริยวงศ์สกุล</text>
+      <text x="151.5" y="113.5" font-size="5.64" fill="#334155">ได้ผ่านการอบรมหลักสูตร "การบริการลูกค้าอย่างมืออาชีพ" จำนวน ๑๒ ชั่วโมง</text>
+      <text x="151.5" y="149" font-size="4.94" fill="#334155">ให้ไว้ ณ วันที่ ๑๓ กรกฎาคม พ.ศ. ๒๕๖๙</text>
+      <text x="151.5" y="178.5" font-size="4.94" fill="#334155">(นายประพันธ์ ศรีวัฒนา)</text>
+      <text x="151.5" y="186.5" font-size="4.94" fill="#334155">ผู้อำนวยการโรงเรียนวัฒนาศึกษา</text>
+    </g>
+  </g>
+</svg>

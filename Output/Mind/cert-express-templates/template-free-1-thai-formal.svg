@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 216" width="303mm" height="216mm">
+<!--
+  เกียรติบัตร Express — template artwork (Mind, 2026-07-13)
+  id: formal (ฟรี 1) | ชื่อ: แบบทางการ (template.free1.name) — ทางการสถาบันไทย ครีม-ทอง กรอบกนกประยุกต์
+  canvas: 303×216mm เต็ม bleed 3mm (trim 297×210 เริ่มที่ offset 3,3) — geometry ตาม Vera §6.2/§10
+  กติกา: ลายกรอบทั้งหมดอยู่ในโซน 0–17mm จากขอบ bleed (= ไม่ล้ำเกิน 14mm จาก trim)
+         โซนข้อความ (23,23 ขนาด 257×170) พื้นเรียบ ลายน้ำทึบ ≤6% | ไม่มีตราครุฑ/ตราหน่วยงานจริง | slot โลโก้เว้นว่าง
+  Dale: ใช้เฉพาะ <g id="artwork"> — ลบ <g id="GUIDES__DELETE_BEFORE_EXPORT"> ทั้งก้อนก่อน export จริง
+  inkColors (manifest): orgName #4A2E10 · certifyLine #3D3327 · recipientName #6E1D1D · body #3D3327 · signer #3D3327
+-->
+  <g id="artwork">
+    <!-- พื้นเต็ม bleed: แถบ mat ทองอ่อน แล้วซ้อนการ์ดครีม -->
+    <rect x="0" y="0" width="303" height="216" fill="#F3E7C6"/>
+    <rect x="10" y="10" width="283" height="196" fill="#FDF8EC"/>
+    <!-- กรอบสองชั้น: เส้นทองหนา + เส้นบาง + hairline ทองอ่อน -->
+    <rect x="7" y="7" width="289" height="202" fill="none" stroke="#8C6A1F" stroke-width="1.4"/>
+    <rect x="10" y="10" width="283" height="196" fill="none" stroke="#8C6A1F" stroke-width="0.35"/>
+    <rect x="12.5" y="12.5" width="278" height="191" fill="none" stroke="#C9A85C" stroke-width="0.25"/>
+
+    <!-- มุมกนกประยุกต์ (เรขาคณิต) — ทำซ้ำ 4 มุมด้วย use+transform, อยู่ในแถบกรอบทั้งหมด -->
+    <defs>
+      <g id="f1-corner">
+        <path d="M7 7 L22 7 L7 22 Z" fill="#8C6A1F"/>
+        <path d="M9 9 L18 9 L9 18 Z" fill="#FDF8EC" opacity="0.35"/>
+        <path d="M15.5 12.5 L18.5 15.5 L15.5 18.5 L12.5 15.5 Z" fill="#8C6A1F"/>
+        <path d="M23.5 7 L26.5 9.5 L29.5 7 L26.5 12 Z" fill="#A9832F"/>
+        <path d="M7 23.5 L9.5 26.5 L7 29.5 L12 26.5 Z" fill="#A9832F"/>
+        <circle cx="21.5" cy="12.5" r="0.9" fill="#8C6A1F"/>
+        <circle cx="12.5" cy="21.5" r="0.9" fill="#8C6A1F"/>
+      </g>
+    </defs>
+    <use href="#f1-corner"/>
+    <use href="#f1-corner" transform="translate(303,0) scale(-1,1)"/>
+    <use href="#f1-corner" transform="translate(0,216) scale(1,-1)"/>
+    <use href="#f1-corner" transform="translate(303,216) scale(-1,-1)"/>
+
+    <!-- ดอกประจำยามกลางขอบบน-ล่าง -->
+    <g fill="#8C6A1F">
+      <path d="M151.5 5.2 L154.3 8.5 L151.5 11.8 L148.7 8.5 Z"/>
+      <circle cx="145.2" cy="8.5" r="0.7"/><circle cx="157.8" cy="8.5" r="0.7"/>
+      <path d="M151.5 204.2 L154.3 207.5 L151.5 210.8 L148.7 207.5 Z"/>
+      <circle cx="145.2" cy="207.5" r="0.7"/><circle cx="157.8" cy="207.5" r="0.7"/>
+    </g>
+
+    <!-- ลายน้ำดอกประจำยามกลางโซนข้อความ — ทึบ 4% (เกณฑ์ ≤6%) -->
+    <g opacity="0.04" stroke="#8C6A1F" fill="none" stroke-width="0.6">
+      <circle cx="151.5" cy="106" r="42"/>
+      <circle cx="151.5" cy="106" r="35"/>
+      <path d="M151.5 64 L162 95.5 L193.5 106 L162 116.5 L151.5 148 L141 116.5 L109.5 106 L141 95.5 Z"/>
+    </g>
+
+    <!-- เส้นแบ่งใต้ชื่อผู้รับ: กว้าง 90mm สูง 4mm ศูนย์กลาง (151.5,103) — ตาม Vera §10 ข้อ 4 -->
+    <g>
+      <line x1="106.5" y1="103" x2="147" y2="103" stroke="#8C6A1F" stroke-width="0.5"/>
+      <line x1="156" y1="103" x2="196.5" y2="103" stroke="#8C6A1F" stroke-width="0.5"/>
+      <path d="M151.5 101 L154 103 L151.5 105 L149 103 Z" fill="#8C6A1F"/>
+      <circle cx="106.5" cy="103" r="0.7" fill="#8C6A1F"/>
+      <circle cx="196.5" cy="103" r="0.7" fill="#8C6A1F"/>
+    </g>
+  </g>
+
+  <!-- ═══ GUIDES — Dale ลบ group นี้ทั้งก้อนก่อนใช้จริง (trim/text zone/slot + ตัวอย่างข้อความ default ของ Rae) ═══ -->
+  <g id="GUIDES__DELETE_BEFORE_EXPORT">
+    <rect x="3" y="3" width="297" height="210" fill="none" stroke="#FF2D96" stroke-width="0.25" stroke-dasharray="3 2"/><!-- trim 297×210 -->
+    <rect x="23" y="23" width="257" height="170" fill="none" stroke="#00A0FF" stroke-width="0.25" stroke-dasharray="2 2"/><!-- text zone inset 20mm -->
+    <g fill="none" stroke="#9AA0A6" stroke-width="0.2" stroke-dasharray="1.5 1.5">
+      <rect x="131.5" y="25" width="40" height="24"/><!-- logo (เว้นว่าง — ผู้ใช้อัปโหลดเอง) -->
+      <rect x="36.5" y="55" width="230" height="12"/><!-- orgName -->
+      <rect x="41.5" y="69" width="220" height="9"/><!-- certifyLine -->
+      <rect x="36.5" y="81" width="230" height="20"/><!-- recipientName -->
+      <rect x="41.5" y="107" width="220" height="16"/><!-- achievement -->
+      <rect x="41.5" y="125" width="220" height="14"/><!-- blessing -->
+      <rect x="41.5" y="143" width="220" height="8"/><!-- dateLine -->
+      <rect x="106.5" y="161" width="90" height="30"/><!-- signer เดี่ยว (กึ่งกลาง) -->
+      <rect x="48" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><!-- signer ซ้าย (กรณี 2 คน) -->
+      <rect x="165" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><!-- signer ขวา (กรณี 2 คน) -->
+    </g>
+    <!-- ตัวอย่างข้อความ = cert.default.formal.* ของ Rae + cert.sampleName (ระบบจริง render ผ่าน CertPreview/pdfmake) -->
+    <g text-anchor="middle" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+      <text x="151.5" y="63.5" font-size="7.76" font-weight="600" fill="#4A2E10">โรงเรียนวัฒนาศึกษา</text>
+      <text x="151.5" y="76" font-size="5.64" fill="#3D3327">ขอมอบเกียรติบัตรฉบับนี้ไว้เพื่อแสดงว่า</text>
+      <!-- ชื่อผู้รับ: Srisakdi Bold, จำลอง auto-fit จาก 40pt เหลือ ~32pt (11.3mm) สำหรับชื่อยาว -->
+      <text x="151.5" y="95.5" font-family="Srisakdi, Sarabun, sans-serif" font-size="11.3" font-weight="700" fill="#6E1D1D">ว่าที่ร้อยตรีหญิงกัลยรัตน์ ศรีสุริยวงศ์สกุล</text>
+      <text x="151.5" y="113.5" font-size="5.64" fill="#3D3327">ได้เข้าร่วมการแข่งขันทักษะวิชาการ ประจำปีการศึกษา ๒๕๖๙</text>
+      <text x="151.5" y="131" font-size="4.94" fill="#3D3327">ขอให้รักษาความดีนี้ไว้ และเจริญก้าวหน้ายิ่งขึ้นไป</text>
+      <text x="151.5" y="149" font-size="4.94" fill="#3D3327">ให้ไว้ ณ วันที่ ๑๓ กรกฎาคม พุทธศักราช ๒๕๖๙</text>
+      <text x="151.5" y="178.5" font-size="4.94" fill="#3D3327">(นายประพันธ์ ศรีวัฒนา)</text>
+      <text x="151.5" y="186.5" font-size="4.94" fill="#3D3327">ผู้อำนวยการโรงเรียนวัฒนาศึกษา</text>
+    </g>
+  </g>
+</svg>

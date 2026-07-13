@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T07:32:33Z",
+  "updatedAt": "2026-07-13T14:52:53Z",
   "agents": [
     {
       "id": "claudy",
@@ -148,11 +148,11 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "VeeGee กล่องคลีนมินิมอล — 3 คอนเซปต์",
+      "task": "เกียรติบัตร Express — template artwork 5 แบบ (SVG)",
       "report": {
-        "when": "22:44",
-        "title": "VeeGee Clean Minimal — 3 คอนเซปต์",
-        "body": "รีดีไซน์กล่อง VeeGee แนว AG1 คลีน/เรียบ ตามมู้ดบอร์ด 8 รูปของลูกค้า บน dieline จริง 11×24×10cm ใช้โลโก้ VeeGee จริง. 3 ทาง: Beet Minimal (พื้นบีทเข้ม โลโก้ขาว — แนะนำ, คงแบรนด์), Orchard Green (เขียวสนใกล้ตัวอย่างสุด), Cream & Beet (ครีมโปร่งพรีเมียม). ตัดข้อความเหลือโลโก้+1บรรทัด+จำนวนซอง, รสเป็น 4 จุดสีข้างกล่อง. ไฟล์ Veegee/VeeGee_Box_CleanMinimal_Concepts.html + artifact. รอ Chris QA ก่อนทำ print-ready CMYK/300dpi."
+        "when": "21:52",
+        "title": "เกียรติบัตร Express — 5 template เสร็จ",
+        "body": "ตรวจ+แก้ 4 ไฟล์เดิม (มุม formal/TP-P01 ล้ำเกิน 14mm จาก trim — แก้แล้ว) และสร้าง TP-P02 'ราชนาวีทอง' (Royal Blue & Gold) น้ำเงินกรมท่า-ทอง สไตล์สถาบันสากล ครบ 5 แบบ: แบบทางการ, แบบพุทธ-ไทย, แบบโมเดิร์นองค์กร, ลายไทยวิจิตรทอง (TP-P01), ราชนาวีทอง (TP-P02). ทุกใบ 303×216mm เต็ม bleed, slot geometry ตรง Vera §6.2, guide group ลบได้, contrast ผ่าน 14/14 คู่ (ต่ำสุด 7.58:1), ไม่มีตราครุฑ, slot โลโก้เว้นว่าง. สรุปที่ Output/Mind/2026-07-13-cert-express-templates.md — รอ Rae เพิ่ม key template.premium1/2.name"
       }
     },
     {

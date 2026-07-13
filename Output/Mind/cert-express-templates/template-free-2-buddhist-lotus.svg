@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 216" width="303mm" height="216mm">
+<!--
+  เกียรติบัตร Express — template artwork (Mind, 2026-07-13)
+  id: buddhist (ฟรี 2 ตาม copy key ของ Rae: template.free2.name = แบบพุทธ-ไทย) — ใบอนุโมทนา โทนอบอุ่น ดอกบัว
+  canvas: 303×216mm เต็ม bleed 3mm (trim 297×210 เริ่มที่ offset 3,3) — geometry ตาม Vera §6.2/§10
+  หมายเหตุวัฒนธรรม: ใช้ดอกบัวเชิงประดับที่กรอบ/มุมเท่านั้น ไม่มีพุทธรูป-สัญลักษณ์ศักดิ์สิทธิ์ ไม่มีตราครุฑ
+  Dale: ใช้เฉพาะ <g id="artwork"> — ลบ <g id="GUIDES__DELETE_BEFORE_EXPORT"> ทั้งก้อนก่อน export จริง
+  inkColors (manifest): orgName #5B3A1E · certifyLine #4A3B2A · recipientName #7B3306 · body #4A3B2A · signer #4A3B2A
+-->
+  <g id="artwork">
+    <!-- พื้นครีมอุ่นเต็ม bleed -->
+    <rect x="0" y="0" width="303" height="216" fill="#FBF1E2"/>
+    <rect x="0" y="0" width="303" height="216" fill="none" stroke="#E4C99A" stroke-width="8" opacity="0.55"/>
+    <!-- กรอบมุมมนสองชั้น โทนน้ำตาลทองอบอุ่น -->
+    <rect x="8" y="8" width="287" height="200" rx="5" fill="none" stroke="#8A5A2B" stroke-width="1"/>
+    <rect x="11" y="11" width="281" height="194" rx="3.5" fill="none" stroke="#C08A3E" stroke-width="0.3"/>
+
+    <!-- ดอกบัวมุม (สไตล์เรียบ กลีบโค้ง) — 4 มุม อยู่ในแถบกรอบ -->
+    <defs>
+      <g id="f2-lotus">
+        <!-- กลีบกลาง + กลีบข้าง ชี้เข้าหามุมตามแนวทแยง -->
+        <g transform="translate(11.5,11.5) rotate(-45)">
+          <path d="M0 -6.2 C1.9 -3.4 1.9 -0.6 0 1.8 C-1.9 -0.6 -1.9 -3.4 0 -6.2 Z" fill="#B06A2A"/>
+          <path d="M-3.4 -4.6 C-1.6 -3 -1 -1 -1.4 1.2 C-3.4 0 -4.4 -2 -3.4 -4.6 Z" fill="#C98A45"/>
+          <path d="M3.4 -4.6 C1.6 -3 1 -1 1.4 1.2 C3.4 0 4.4 -2 3.4 -4.6 Z" fill="#C98A45"/>
+          <path d="M-4.6 -1.4 C-2.8 -0.6 -1.6 0.6 -1.2 2.2 C-3.6 2.2 -4.8 0.8 -4.6 -1.4 Z" fill="#DCAF6E"/>
+          <path d="M4.6 -1.4 C2.8 -0.6 1.6 0.6 1.2 2.2 C3.6 2.2 4.8 0.8 4.6 -1.4 Z" fill="#DCAF6E"/>
+        </g>
+        <!-- ก้านโค้งเล็กลากไปตามขอบ -->
+        <path d="M18 8.6 C24 7.2 30 7.2 36 8.6" fill="none" stroke="#B06A2A" stroke-width="0.45"/>
+        <path d="M8.6 18 C7.2 24 7.2 30 8.6 36" fill="none" stroke="#B06A2A" stroke-width="0.45"/>
+        <circle cx="36" cy="8.6" r="0.75" fill="#B06A2A"/>
+        <circle cx="8.6" cy="36" r="0.75" fill="#B06A2A"/>
+      </g>
+    </defs>
+    <use href="#f2-lotus"/>
+    <use href="#f2-lotus" transform="translate(303,0) scale(-1,1)"/>
+    <use href="#f2-lotus" transform="translate(0,216) scale(1,-1)"/>
+    <use href="#f2-lotus" transform="translate(303,216) scale(-1,-1)"/>
+
+    <!-- ดอกบัวตูมเล็กกลางขอบบน-ล่าง -->
+    <g fill="#B06A2A">
+      <path d="M151.5 5.6 C153 7.4 153 9.6 151.5 11.4 C150 9.6 150 7.4 151.5 5.6 Z"/>
+      <path d="M147.9 7.4 C149.2 8.4 149.7 9.6 149.6 11 C148 10.4 147.4 9 147.9 7.4 Z" opacity="0.7"/>
+      <path d="M155.1 7.4 C153.8 8.4 153.3 9.6 153.4 11 C155 10.4 155.6 9 155.1 7.4 Z" opacity="0.7"/>
+      <path d="M151.5 204.6 C153 206.4 153 208.6 151.5 210.4 C150 208.6 150 206.4 151.5 204.6 Z"/>
+      <path d="M147.9 206.4 C149.2 207.4 149.7 208.6 149.6 210 C148 209.4 147.4 208 147.9 206.4 Z" opacity="0.7"/>
+      <path d="M155.1 206.4 C153.8 207.4 153.3 208.6 153.4 210 C155 209.4 155.6 208 155.1 206.4 Z" opacity="0.7"/>
+    </g>
+
+    <!-- ลายน้ำดอกบัวกลางโซนข้อความ — ทึบ 5% (เกณฑ์ ≤6%) -->
+    <g opacity="0.05" stroke="#8A5A2B" fill="none" stroke-width="0.7" transform="translate(151.5,112)">
+      <path d="M0 -34 C10 -18 10 -2 0 10 C-10 -2 -10 -18 0 -34 Z"/>
+      <path d="M-20 -26 C-9 -17 -5 -6 -7 6 C-19 0 -25 -12 -20 -26 Z"/>
+      <path d="M20 -26 C9 -17 5 -6 7 6 C19 0 25 -12 20 -26 Z"/>
+      <path d="M-30 -8 C-18 -4 -10 3 -8 12 C-22 12 -30 4 -30 -8 Z"/>
+      <path d="M30 -8 C18 -4 10 3 8 12 C22 12 30 4 30 -8 Z"/>
+    </g>
+
+    <!-- เส้นแบ่งใต้ชื่อผู้รับ: ดอกบัวตูมกลาง + ก้านโค้งสองข้าง (กว้าง 90mm สูง 4mm ศูนย์กลาง 151.5,103) -->
+    <g>
+      <path d="M106.5 103 C121 101.4 136 101.4 146.5 103" fill="none" stroke="#8A5A2B" stroke-width="0.45"/>
+      <path d="M196.5 103 C182 101.4 167 101.4 156.5 103" fill="none" stroke="#8A5A2B" stroke-width="0.45"/>
+      <path d="M151.5 101 C152.8 102 152.8 103.9 151.5 105 C150.2 103.9 150.2 102 151.5 101 Z" fill="#B06A2A"/>
+      <circle cx="106.5" cy="103" r="0.7" fill="#B06A2A"/>
+      <circle cx="196.5" cy="103" r="0.7" fill="#B06A2A"/>
+    </g>
+  </g>
+
+  <!-- ═══ GUIDES — Dale ลบ group นี้ทั้งก้อนก่อนใช้จริง ═══ -->
+  <g id="GUIDES__DELETE_BEFORE_EXPORT">
+    <rect x="3" y="3" width="297" height="210" fill="none" stroke="#FF2D96" stroke-width="0.25" stroke-dasharray="3 2"/><!-- trim -->
+    <rect x="23" y="23" width="257" height="170" fill="none" stroke="#00A0FF" stroke-width="0.25" stroke-dasharray="2 2"/><!-- text zone -->
+    <g fill="none" stroke="#9AA0A6" stroke-width="0.2" stroke-dasharray="1.5 1.5">
+      <rect x="131.5" y="25" width="40" height="24"/><rect x="36.5" y="55" width="230" height="12"/>
+      <rect x="41.5" y="69" width="220" height="9"/><rect x="36.5" y="81" width="230" height="20"/>
+      <rect x="41.5" y="107" width="220" height="16"/><rect x="41.5" y="125" width="220" height="14"/>
+      <rect x="41.5" y="143" width="220" height="8"/><rect x="106.5" y="161" width="90" height="30"/>
+      <rect x="48" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><rect x="165" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/>
+    </g>
+    <!-- ตัวอย่างข้อความ = cert.default.buddhist.* (Rae) — signer ใช้ key ของ formal เพราะ Rae มีชุดเดียว -->
+    <g text-anchor="middle" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+      <text x="151.5" y="63.5" font-size="7.76" font-weight="600" fill="#5B3A1E">วัดตัวอย่างธรรมาราม</text>
+      <text x="151.5" y="76" font-size="5.64" fill="#4A3B2A">ขอมอบใบอนุโมทนาบัตรฉบับนี้ไว้เพื่อแสดงว่า</text>
+      <text x="151.5" y="95.5" font-family="Srisakdi, Sarabun, sans-serif" font-size="11.3" font-weight="700" fill="#7B3306">ว่าที่ร้อยตรีหญิงกัลยรัตน์ ศรีสุริยวงศ์สกุล</text>
+      <text x="151.5" y="113.5" font-size="5.64" fill="#4A3B2A">ได้ร่วมทำบุญทอดกฐินสามัคคี ประจำปีพุทธศักราช ๒๕๖๙</text>
+      <!-- blessing ยาว — 2 บรรทัดตามเพดาน slot (สูงสุด 2 บรรทัด, Vera §6.2) -->
+      <text x="151.5" y="129.5" font-size="4.94" fill="#4A3B2A">ขออำนาจคุณพระศรีรัตนตรัย โปรดอภิบาลให้เจริญด้วยอายุ วรรณะ สุขะ พละ</text>
+      <text x="151.5" y="137.5" font-size="4.94" fill="#4A3B2A">ปฏิภาณ ธนสารสมบัติ ทุกประการเทอญ</text>
+      <text x="151.5" y="149" font-size="4.94" fill="#4A3B2A">ให้ไว้ ณ วันที่ ๑๓ กรกฎาคม พุทธศักราช ๒๕๖๙</text>
+      <text x="151.5" y="178.5" font-size="4.94" fill="#4A3B2A">(นายประพันธ์ ศรีวัฒนา)</text>
+      <text x="151.5" y="186.5" font-size="4.94" fill="#4A3B2A">ผู้อำนวยการโรงเรียนวัฒนาศึกษา</text>
+    </g>
+  </g>
+</svg>

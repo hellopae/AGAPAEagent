@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 216" width="303mm" height="216mm">
+<!--
+  เกียรติบัตร Express — template artwork (Mind, 2026-07-13)
+  id: p-wichit | รหัส TP-P01 | ชื่อเสนอ: ลายไทยวิจิตรทอง (Thai Ornate Gold) — พรีเมียม 1
+  canvas: 303×216mm เต็ม bleed 3mm (trim 297×210 เริ่มที่ offset 3,3) — geometry ตาม Vera §6.2/§10
+  เอฟเฟกต์ "ฟอยล์ทอง" = gradient จำลองบนจอ — งานพิมพ์ฟอยล์จริงต้องแยก spot layer ที่ prepress (ดู note ถึง Dale ใน .md)
+  ไม่มีตราครุฑ/ตราหน่วยงานจริง | slot โลโก้เว้นว่าง | ลายกรอบไม่ล้ำเกิน 14mm จาก trim
+  Dale: ใช้เฉพาะ <g id="artwork"> — ลบ <g id="GUIDES__DELETE_BEFORE_EXPORT"> ทั้งก้อนก่อน export จริง
+  inkColors (manifest): orgName #6B1F23 · certifyLine #43301C · recipientName #6B1F23 · body #43301C · signer #43301C
+-->
+  <defs>
+    <linearGradient id="p1-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBD08A"/>
+      <stop offset="0.35" stop-color="#C9A227"/>
+      <stop offset="0.6" stop-color="#8C6512"/>
+      <stop offset="0.85" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#EBD08A"/>
+    </linearGradient>
+    <!-- หน่วยลายเฟื่อง (frieze) ประจำยาม-กนก ทอง ทำซ้ำด้วย pattern ช่องละ 7×7mm -->
+    <pattern id="p1-frieze" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#7B1E26"/>
+      <path d="M3.5 0.9 L6.1 3.5 L3.5 6.1 L0.9 3.5 Z" fill="#C9A227"/>
+      <path d="M3.5 2 L5 3.5 L3.5 5 L2 3.5 Z" fill="#7B1E26"/>
+      <circle cx="3.5" cy="3.5" r="0.55" fill="#EBD08A"/>
+      <circle cx="0" cy="0" r="0.6" fill="#EBD08A"/>
+      <circle cx="7" cy="0" r="0.6" fill="#EBD08A"/>
+      <circle cx="0" cy="7" r="0.6" fill="#EBD08A"/>
+      <circle cx="7" cy="7" r="0.6" fill="#EBD08A"/>
+    </pattern>
+    <!-- มุมวิจิตร: ชั้นข้าวหลามตัดซ้อน + เปลวกนก -->
+    <g id="p1-corner">
+      <path d="M4 4 L26 4 L4 26 Z" fill="#7B1E26"/>
+      <path d="M5.5 5.5 L23 5.5 L5.5 23 Z" fill="url(#p1-gold)"/>
+      <path d="M7.5 7.5 L18.5 7.5 L7.5 18.5 Z" fill="#7B1E26"/>
+      <path d="M15 11 L19 15 L15 19 L11 15 Z" fill="url(#p1-gold)"/>
+      <path d="M15 12.8 L17.2 15 L15 17.2 L12.8 15 Z" fill="#7B1E26"/>
+      <circle cx="15" cy="15" r="0.7" fill="#EBD08A"/>
+      <!-- เปลวกนกวิ่งตามขอบบนและขอบซ้าย -->
+      <path d="M27 4.5 L31 8 L27 11.5 L33.5 8 Z" fill="#C9A227"/>
+      <path d="M34.5 5.5 L37.5 8 L34.5 10.5 L39.5 8 Z" fill="#C9A227" opacity="0.85"/>
+      <path d="M4.5 27 L8 31 L11.5 27 L8 33.5 Z" fill="#C9A227"/>
+      <path d="M5.5 34.5 L8 37.5 L10.5 34.5 L8 39.5 Z" fill="#C9A227" opacity="0.85"/>
+      <circle cx="24" cy="12" r="1" fill="#C9A227"/>
+      <circle cx="12" cy="24" r="1" fill="#C9A227"/>
+    </g>
+  </defs>
+
+  <g id="artwork">
+    <!-- ชั้นกรอบจากนอกเข้าใน: ชาด → ฟอยล์ทอง → ชาด → การ์ดครีม -->
+    <rect x="0" y="0" width="303" height="216" fill="#7B1E26"/>
+    <rect x="4" y="4" width="295" height="208" fill="url(#p1-gold)"/>
+    <rect x="6" y="6" width="291" height="204" fill="#7B1E26"/>
+    <rect x="8" y="8" width="287" height="200" fill="#FAF3E0"/>
+    <!-- แถบเฟื่องลายไทยรอบสี่ด้าน (อยู่ระหว่าง 9–16mm จากขอบ bleed) -->
+    <rect x="9" y="9" width="285" height="7" fill="url(#p1-frieze)"/>
+    <rect x="9" y="200" width="285" height="7" fill="url(#p1-frieze)"/>
+    <rect x="9" y="9" width="7" height="198" fill="url(#p1-frieze)"/>
+    <rect x="287" y="9" width="7" height="198" fill="url(#p1-frieze)"/>
+    <!-- hairline ทองปิดขอบเฟื่อง -->
+    <rect x="9" y="9" width="285" height="198" fill="none" stroke="#8C6512" stroke-width="0.35"/>
+    <rect x="16.4" y="16.4" width="270.2" height="183.2" fill="none" stroke="#C9A227" stroke-width="0.3"/>
+
+    <!-- มุมวิจิตร 4 มุม (ทับแถบเฟื่อง) -->
+    <use href="#p1-corner"/>
+    <use href="#p1-corner" transform="translate(303,0) scale(-1,1)"/>
+    <use href="#p1-corner" transform="translate(0,216) scale(1,-1)"/>
+    <use href="#p1-corner" transform="translate(303,216) scale(-1,-1)"/>
+
+    <!-- ยอดประจำยามกลางขอบบน-ล่าง -->
+    <g>
+      <path d="M151.5 4.6 L155.4 9.5 L151.5 14.4 L147.6 9.5 Z" fill="url(#p1-gold)"/>
+      <path d="M151.5 6.4 L153.9 9.5 L151.5 12.6 L149.1 9.5 Z" fill="#7B1E26"/>
+      <circle cx="151.5" cy="9.5" r="0.7" fill="#EBD08A"/>
+      <path d="M143 7.5 L145.6 9.5 L143 11.5 L140 9.5 Z" fill="#C9A227"/>
+      <path d="M160 7.5 L163 9.5 L160 11.5 L157.4 9.5 Z" fill="#C9A227"/>
+      <path d="M151.5 201.6 L155.4 206.5 L151.5 211.4 L147.6 206.5 Z" fill="url(#p1-gold)"/>
+      <path d="M151.5 203.4 L153.9 206.5 L151.5 209.6 L149.1 206.5 Z" fill="#7B1E26"/>
+      <circle cx="151.5" cy="206.5" r="0.7" fill="#EBD08A"/>
+      <path d="M143 204.5 L145.6 206.5 L143 208.5 L140 206.5 Z" fill="#C9A227"/>
+      <path d="M160 204.5 L163 206.5 L160 208.5 L157.4 206.5 Z" fill="#C9A227"/>
+    </g>
+
+    <!-- ลายน้ำดาวประจำยาม 8 แฉกกลางโซนข้อความ — ทึบ 5% (เกณฑ์ ≤6%) -->
+    <g opacity="0.05" stroke="#8C6512" fill="none" stroke-width="0.6" transform="translate(151.5,108)">
+      <path d="M0 -44 L11 -11 L44 0 L11 11 L0 44 L-11 11 L-44 0 L-11 -11 Z"/>
+      <path d="M0 -31 L7.7 -7.7 L31 0 L7.7 7.7 L0 31 L-7.7 7.7 L-31 0 L-7.7 -7.7 Z" transform="rotate(22.5)"/>
+      <circle r="17"/>
+    </g>
+
+    <!-- เส้นแบ่งใต้ชื่อผู้รับ: วิจิตร กว้าง 110mm สูง 4mm ศูนย์กลาง (151.5,103) -->
+    <g>
+      <line x1="96.5" y1="103" x2="143" y2="103" stroke="#8C6512" stroke-width="0.7"/>
+      <line x1="160" y1="103" x2="206.5" y2="103" stroke="#8C6512" stroke-width="0.7"/>
+      <line x1="99" y1="104.3" x2="139" y2="104.3" stroke="#C9A227" stroke-width="0.3"/>
+      <line x1="164" y1="104.3" x2="204" y2="104.3" stroke="#C9A227" stroke-width="0.3"/>
+      <path d="M151.5 101 L154 103 L151.5 105 L149 103 Z" fill="#7B1E26"/>
+      <path d="M151.5 101.6 L153.2 103 L151.5 104.4 L149.8 103 Z" fill="#C9A227"/>
+      <path d="M145.2 101.9 L146.7 103 L145.2 104.1 L143.7 103 Z" fill="#C9A227"/>
+      <path d="M157.8 101.9 L159.3 103 L157.8 104.1 L156.3 103 Z" fill="#C9A227"/>
+      <circle cx="96.5" cy="103" r="0.8" fill="#7B1E26"/>
+      <circle cx="206.5" cy="103" r="0.8" fill="#7B1E26"/>
+    </g>
+  </g>
+
+  <!-- ═══ GUIDES — Dale ลบ group นี้ทั้งก้อนก่อนใช้จริง ═══ -->
+  <g id="GUIDES__DELETE_BEFORE_EXPORT">
+    <rect x="3" y="3" width="297" height="210" fill="none" stroke="#FF2D96" stroke-width="0.25" stroke-dasharray="3 2"/><!-- trim -->
+    <rect x="23" y="23" width="257" height="170" fill="none" stroke="#00A0FF" stroke-width="0.25" stroke-dasharray="2 2"/><!-- text zone -->
+    <g fill="none" stroke="#9AA0A6" stroke-width="0.2" stroke-dasharray="1.5 1.5">
+      <rect x="131.5" y="25" width="40" height="24"/><rect x="36.5" y="55" width="230" height="12"/>
+      <rect x="41.5" y="69" width="220" height="9"/><rect x="36.5" y="81" width="230" height="20"/>
+      <rect x="41.5" y="107" width="220" height="16"/><rect x="41.5" y="125" width="220" height="14"/>
+      <rect x="41.5" y="143" width="220" height="8"/><rect x="106.5" y="161" width="90" height="30"/>
+      <rect x="48" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><rect x="165" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/>
+    </g>
+    <!-- ตัวอย่างข้อความ: ใช้ cert.default.formal.* ชั่วคราว — รอ Rae เพิ่ม key ของพรีเมียม (Vera §12 ข้อ 2) -->
+    <g text-anchor="middle" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+      <text x="151.5" y="63.5" font-size="7.76" font-weight="600" fill="#6B1F23">โรงเรียนวัฒนาศึกษา</text>
+      <text x="151.5" y="76" font-size="5.64" fill="#43301C">ขอมอบเกียรติบัตรฉบับนี้ไว้เพื่อแสดงว่า</text>
+      <text x="151.5" y="95.5" font-family="Srisakdi, Sarabun, sans-serif" font-size="11.3" font-weight="700" fill="#6B1F23">ว่าที่ร้อยตรีหญิงกัลยรัตน์ ศรีสุริยวงศ์สกุล</text>
+      <text x="151.5" y="113.5" font-size="5.64" fill="#43301C">ได้เข้าร่วมการแข่งขันทักษะวิชาการ ประจำปีการศึกษา ๒๕๖๙</text>
+      <text x="151.5" y="131" font-size="4.94" fill="#43301C">ขอให้รักษาความดีนี้ไว้ และเจริญก้าวหน้ายิ่งขึ้นไป</text>
+      <text x="151.5" y="149" font-size="4.94" fill="#43301C">ให้ไว้ ณ วันที่ ๑๓ กรกฎาคม พุทธศักราช ๒๕๖๙</text>
+      <text x="151.5" y="178.5" font-size="4.94" fill="#43301C">(นายประพันธ์ ศรีวัฒนา)</text>
+      <text x="151.5" y="186.5" font-size="4.94" fill="#43301C">ผู้อำนวยการโรงเรียนวัฒนาศึกษา</text>
+    </g>
+  </g>
+</svg>

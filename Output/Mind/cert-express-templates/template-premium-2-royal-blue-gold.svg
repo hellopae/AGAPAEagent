@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 216" width="303mm" height="216mm">
+<!--
+  เกียรติบัตร Express — template artwork (Mind, 2026-07-13)
+  id: p-royal | รหัส TP-P02 | ชื่อเสนอ: ราชนาวีทอง (Royal Blue & Gold) — พรีเมียม 2
+  canvas: 303×216mm เต็ม bleed 3mm (trim 297×210 เริ่มที่ offset 3,3) — geometry ตาม Vera §6.2/§10
+  สไตล์: สถาบัน/ราชการหรูแบบสากล — สนามน้ำเงินกรมท่า กรอบทองคู่ ดาวประกาย 8 แฉกที่มุม
+         จงใจต่างจาก TP-P01 (ลายไทยวิจิตรแดง-ทอง pattern แน่น) — ใบนี้สงบ นิ่ง เส้นสะอาด
+  เอฟเฟกต์ "ฟอยล์ทอง" = gradient จำลองบนจอ — งานพิมพ์ฟอยล์จริงต้องแยก spot layer ที่ prepress
+  ไม่มีตราครุฑ/ตราหน่วยงานจริง | slot โลโก้เว้นว่าง | ลายกรอบไม่ล้ำเกิน 14mm จาก trim
+  Dale: ใช้เฉพาะ <g id="artwork"> — ลบ <g id="GUIDES__DELETE_BEFORE_EXPORT"> ทั้งก้อนก่อน export จริง
+  inkColors (manifest): orgName #14204A · certifyLine #2E3440 · recipientName #1A2F6B · body #2E3440 · signer #2E3440
+-->
+  <defs>
+    <linearGradient id="p2-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBD08A"/>
+      <stop offset="0.35" stop-color="#C9A227"/>
+      <stop offset="0.6" stop-color="#8C6512"/>
+      <stop offset="0.85" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#EBD08A"/>
+    </linearGradient>
+    <!-- ดาวประกาย 8 แฉก (compass rosette) ประจำมุม — วางที่จุดตัดเส้นกรอบใน -->
+    <g id="p2-rosette">
+      <circle cx="12.75" cy="12.75" r="3.9" fill="#FBF9F2" stroke="#14204A" stroke-width="0.35"/>
+      <path d="M12.75 9.15 L13.55 11.95 L16.35 12.75 L13.55 13.55 L12.75 16.35 L11.95 13.55 L9.15 12.75 L11.95 11.95 Z" fill="url(#p2-gold)"/>
+      <path d="M12.75 10.55 L13.3 12.2 L14.95 12.75 L13.3 13.3 L12.75 14.95 L12.2 13.3 L10.55 12.75 L12.2 12.2 Z" fill="#14204A" transform="rotate(22.5 12.75 12.75)"/>
+      <circle cx="12.75" cy="12.75" r="0.55" fill="#EBD08A"/>
+    </g>
+    <!-- ยอดกลางขอบ: เพชรทองซ้อนน้ำเงิน -->
+    <g id="p2-finial">
+      <path d="M0 -3.9 L3.1 0 L0 3.9 L-3.1 0 Z" fill="url(#p2-gold)"/>
+      <path d="M0 -2.2 L1.8 0 L0 2.2 L-1.8 0 Z" fill="#14204A"/>
+      <circle r="0.5" fill="#EBD08A"/>
+      <path d="M-8.2 -1.4 L-5.2 0 L-8.2 1.4 L-10.6 0 Z" fill="#C9A227"/>
+      <path d="M8.2 -1.4 L10.6 0 L8.2 1.4 L5.2 0 Z" fill="#C9A227"/>
+    </g>
+  </defs>
+
+  <g id="artwork">
+    <!-- สนามน้ำเงินกรมท่าเต็ม bleed -->
+    <rect x="0" y="0" width="303" height="216" fill="#14204A"/>
+    <!-- กรอบทองคู่บนสนามน้ำเงิน -->
+    <rect x="5" y="5" width="293" height="206" fill="none" stroke="url(#p2-gold)" stroke-width="1.2"/>
+    <rect x="7.2" y="7.2" width="288.6" height="201.6" fill="none" stroke="#C9A227" stroke-width="0.3"/>
+    <!-- การ์ดงาช้าง -->
+    <rect x="9" y="9" width="285" height="198" fill="#FBF9F2"/>
+    <!-- เส้นคู่พิธีการด้านใน: น้ำเงินหนา + ทอง hairline -->
+    <rect x="12" y="12" width="279" height="192" fill="none" stroke="#14204A" stroke-width="0.7"/>
+    <rect x="13.5" y="13.5" width="276" height="189" fill="none" stroke="#B08D2E" stroke-width="0.25"/>
+
+    <!-- ดาวประกาย 8 แฉก 4 มุม (นั่งบนจุดตัดเส้นคู่) -->
+    <use href="#p2-rosette"/>
+    <use href="#p2-rosette" transform="translate(303,0) scale(-1,1)"/>
+    <use href="#p2-rosette" transform="translate(0,216) scale(1,-1)"/>
+    <use href="#p2-rosette" transform="translate(303,216) scale(-1,-1)"/>
+
+    <!-- ยอดเพชรกลางขอบบน-ล่าง (คร่อมรอยต่อสนามน้ำเงิน/การ์ด) -->
+    <use href="#p2-finial" transform="translate(151.5,8)"/>
+    <use href="#p2-finial" transform="translate(151.5,208) scale(1,-1)"/>
+
+    <!-- ลายน้ำรัศมีดาว 8 แฉกกลางโซนข้อความ — ทึบ 4% (เกณฑ์ ≤6%) -->
+    <g opacity="0.04" stroke="#14204A" fill="none" stroke-width="0.6" transform="translate(151.5,106)">
+      <circle r="40"/>
+      <circle r="33"/>
+      <path d="M0 -40 L4.6 -4.6 L40 0 L4.6 4.6 L0 40 L-4.6 4.6 L-40 0 L-4.6 -4.6 Z"/>
+      <path d="M0 -28 L3.2 -3.2 L28 0 L3.2 3.2 L0 28 L-3.2 3.2 L-28 0 L-3.2 -3.2 Z" transform="rotate(45)"/>
+    </g>
+
+    <!-- เส้นแบ่งใต้ชื่อผู้รับ: เส้นคู่ + เพชรทองกลาง (กว้าง 100mm สูง 4mm ศูนย์กลาง 151.5,103) -->
+    <g>
+      <line x1="101.5" y1="103" x2="146" y2="103" stroke="#14204A" stroke-width="0.55"/>
+      <line x1="157" y1="103" x2="201.5" y2="103" stroke="#14204A" stroke-width="0.55"/>
+      <line x1="104" y1="104.4" x2="142" y2="104.4" stroke="#B08D2E" stroke-width="0.3"/>
+      <line x1="161" y1="104.4" x2="199" y2="104.4" stroke="#B08D2E" stroke-width="0.3"/>
+      <path d="M151.5 101 L154.1 103 L151.5 105 L148.9 103 Z" fill="#14204A"/>
+      <path d="M151.5 101.7 L153.1 103 L151.5 104.3 L149.9 103 Z" fill="#C9A227"/>
+      <circle cx="101.5" cy="103" r="0.7" fill="#14204A"/>
+      <circle cx="201.5" cy="103" r="0.7" fill="#14204A"/>
+    </g>
+  </g>
+
+  <!-- ═══ GUIDES — Dale ลบ group นี้ทั้งก้อนก่อนใช้จริง ═══ -->
+  <g id="GUIDES__DELETE_BEFORE_EXPORT">
+    <rect x="3" y="3" width="297" height="210" fill="none" stroke="#FF2D96" stroke-width="0.25" stroke-dasharray="3 2"/><!-- trim -->
+    <rect x="23" y="23" width="257" height="170" fill="none" stroke="#00A0FF" stroke-width="0.25" stroke-dasharray="2 2"/><!-- text zone -->
+    <g fill="none" stroke="#9AA0A6" stroke-width="0.2" stroke-dasharray="1.5 1.5">
+      <rect x="131.5" y="25" width="40" height="24"/><rect x="36.5" y="55" width="230" height="12"/>
+      <rect x="41.5" y="69" width="220" height="9"/><rect x="36.5" y="81" width="230" height="20"/>
+      <rect x="41.5" y="107" width="220" height="16"/><rect x="41.5" y="125" width="220" height="14"/>
+      <rect x="41.5" y="143" width="220" height="8"/><rect x="106.5" y="161" width="90" height="30"/>
+      <rect x="48" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/><rect x="165" y="161" width="90" height="30" stroke-dasharray="0.7 1.8"/>
+    </g>
+    <!-- ตัวอย่างข้อความ: ใช้ cert.default.formal.* ชั่วคราว — รอ Rae เพิ่ม key template.premium2 (Vera §12 ข้อ 2) -->
+    <g text-anchor="middle" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+      <text x="151.5" y="63.5" font-size="7.76" font-weight="600" fill="#14204A">โรงเรียนวัฒนาศึกษา</text>
+      <text x="151.5" y="76" font-size="5.64" fill="#2E3440">ขอมอบเกียรติบัตรฉบับนี้ไว้เพื่อแสดงว่า</text>
+      <text x="151.5" y="95.5" font-family="Srisakdi, Sarabun, sans-serif" font-size="11.3" font-weight="700" fill="#1A2F6B">ว่าที่ร้อยตรีหญิงกัลยรัตน์ ศรีสุริยวงศ์สกุล</text>
+      <text x="151.5" y="113.5" font-size="5.64" fill="#2E3440">ได้เข้าร่วมการแข่งขันทักษะวิชาการ ประจำปีการศึกษา ๒๕๖๙</text>
+      <text x="151.5" y="131" font-size="4.94" fill="#2E3440">ขอให้รักษาความดีนี้ไว้ และเจริญก้าวหน้ายิ่งขึ้นไป</text>
+      <text x="151.5" y="149" font-size="4.94" fill="#2E3440">ให้ไว้ ณ วันที่ ๑๓ กรกฎาคม พุทธศักราช ๒๕๖๙</text>
+      <text x="151.5" y="178.5" font-size="4.94" fill="#2E3440">(นายประพันธ์ ศรีวัฒนา)</text>
+      <text x="151.5" y="186.5" font-size="4.94" fill="#2E3440">ผู้อำนวยการโรงเรียนวัฒนาศึกษา</text>
+    </g>
+  </g>
+</svg>

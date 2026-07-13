@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T07:32:33Z",
+  "updatedAt": "2026-07-13T14:52:53Z",
   "entries": [
     {
       "id": "wl-260713-vera-3rm9",
@@ -1014,6 +1014,19 @@
       "project": "monthly-article-jun2569",
       "projectLabel": "Monthly Article มิ.ย. 2569",
       "outputFile": "Output/Minnie/2026-06-25-print-article-concepts.md"
+    },
+    {
+      "id": "wl-260713-mind-cert5",
+      "datetime": "2026-07-13T14:52:53Z",
+      "displayDate": "13 ก.ค. 2569",
+      "displayTime": "21:52",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เกียรติบัตร Express — template artwork 5 แบบ (SVG)",
+      "summary": "ตรวจ+แก้ 4 ไฟล์เดิม (มุม formal/TP-P01 ล้ำเกิน 14mm จาก trim — แก้แล้ว) และสร้าง TP-P02 'ราชนาวีทอง' (Royal Blue & Gold) น้ำเงินกรมท่า-ทอง สไตล์สถาบันสากล ครบ 5 แบบ: แบบทางการ, แบบพุทธ-ไทย, แบบโมเดิร์นองค์กร, ลายไทยวิจิตรทอง (TP-P01), ราชนาวีทอง (TP-P02). ทุกใบ 303×216mm เต็ม bleed, slot geometry ตรง Vera §6.2, guide group ลบได้, contrast ผ่าน 14/14 คู่ (ต่ำสุด 7.58:1), ไม่มีตราครุฑ, slot โลโก้เว้นว่าง. สรุปที่ Output/Mind/2026-07-13-cert-express-templates.md — รอ Rae เพิ่ม key template.premium1/2.name"
     }
   ]
 }
