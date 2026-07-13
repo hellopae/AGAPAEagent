@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-13T07:17:40Z",
+  "updatedAt": "2026-07-13T07:32:33Z",
   "entries": [
+    {
+      "id": "wl-260713-vera-3rm9",
+      "datetime": "2026-07-13T07:32:33Z",
+      "displayDate": "13 ก.ค. 2569",
+      "displayTime": "14:32",
+      "agent": "vera",
+      "agentName": "Vera",
+      "agentImg": "avatars/Vera.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เกียรติบัตร Express — UX spec ฉบับ build ได้",
+      "summary": "Single-page stepper 6 ขั้น state ไม่หายตอนย้อน, preview+PDF ใช้ layoutConstants ชุดเดียวปิด risk เหลื่อม, PasteBox เด่นเท่า dropzone, auto-fit ชื่อยาว binary shrink 40→24pt, address ข้อระวังของ Rae ครบ 10 ข้อ, ระบุ spec artwork ให้ Mind (bleed 303×216mm, contrast ≥4.5:1, ห้ามครุฑ)"
+    },
     {
       "id": "wl-260713-reese-3qxg",
       "datetime": "2026-07-13T07:17:40Z",

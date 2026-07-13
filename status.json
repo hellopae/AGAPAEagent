@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T07:17:40Z",
+  "updatedAt": "2026-07-13T07:32:33Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,11 +122,11 @@
         "วาง grid + bleed + margin"
       ],
       "status": "done",
-      "task": "AI Print Order Assistant — ออกแบบ UX แชตสั่งงานพิมพ์",
+      "task": "เกียรติบัตร Express — UX spec ฉบับ build ได้",
       "report": {
-        "when": "13:19",
-        "title": "UX Flow ✅ — Chat 3 ส่วน + Pricing + Quotations",
-        "body": "Layout: Sidebar + Chat + Order Summary panel | chips ตัวเลือกด่วนลดการพิมพ์ | หน้า Pricing แตกต้นทุนทุกรายการ | หน้า Quotations ค้น 1,666 ใบเก่า + ป้ายเตือนอายุราคา (ปีนี้/เก่า) | รองรับมือถือ"
+        "when": "14:32",
+        "title": "UX Spec ✅ — stepper 6 ขั้น พร้อม build",
+        "body": "Single-page stepper 6 ขั้น state ไม่หายตอนย้อน, preview+PDF ใช้ layoutConstants ชุดเดียวปิด risk เหลื่อม, PasteBox เด่นเท่า dropzone, auto-fit ชื่อยาว binary shrink 40→24pt, address ข้อระวังของ Rae ครบ 10 ข้อ, ระบุ spec artwork ให้ Mind (bleed 303×216mm, contrast ≥4.5:1, ห้ามครุฑ)"
       }
     },
     {
