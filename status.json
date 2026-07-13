@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T06:15:18Z",
+  "updatedAt": "2026-07-13T06:33:29Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,11 +70,11 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "วิจัยตลาด บุญ Quest + สแกนหมอดูแม่นจริง AI",
+      "task": "เกียรติบัตร Express — research sprint (GO)",
       "report": {
-        "when": "13:46",
-        "title": "Research ✅ — บุญ Quest GO (มีเงื่อนไข) / หมอดู AI GO ระวัง",
-        "body": "บุญ Quest: GO มีเงื่อนไข — ตลาดบอร์ดเกมไทยโตจริง ~2,329 ลบ. (2024)→~3,028 ลบ. (2027) ✅, การ์ดเกมไทยเล็กขาย 549-890฿ (ราคา 390-590฿ แข่งได้ margin ดีเพราะพิมพ์เอง), digital บน itch.io ส่วนใหญ่ <$100 ตลอดชีพ = ใช้เป็น demo เท่านั้น | Hard NO: ห้ามพระพุทธรูปบนการ์ด (precedent: Fight of Gods โดนแบน 2017) ห้ามกลไกจ่ายเงิน=ได้บุญ — ธีมกิเลสมาร/โฟล์คลอร์ปลอดภัย (Home Sweet Home >1M ชุดพิสูจน์แล้ว) | เงื่อนไข: PDF→pre-order→พิมพ์ small batch | หมอดู AI: GO ระวัง — มูเตลูโต +70-113%, API 1-6฿/เซสชัน margin ≥70% ทำได้, ต้องวางเป็นเกมบันเทิง ห้ามขายพิธีแก้กรรม, คู่แข่งจริงคือ ChatGPT ฟรี → Output/Reese/2026-07-09-boonquest-game-research.md"
+        "when": "13:33",
+        "title": "Research ✅ GO — pdfmake + Sarabun",
+        "body": "ตรวจ 13 คำถาม: GO — pdfmake+fontkit ตัวเดียวที่ shaping ไทยถูก (jsPDF/pdf-lib มีบั๊กวรรณยุกต์ยืนยัน), ฟอนต์ Sarabun+Srisakdi (SIL OFL ฝังได้ฟรี), mammoth/SheetJS CE/pdf.js + clipboard fallback, A4 แนวนอน bleed 3mm, ห้ามใช้ตราครุฑใน template (พ.ร.บ. 2534)"
       }
     },
     {

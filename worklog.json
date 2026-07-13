@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-13T06:15:18Z",
+  "updatedAt": "2026-07-13T06:33:29Z",
   "entries": [
+    {
+      "id": "wl-260713-reese-3ovt",
+      "datetime": "2026-07-13T06:33:29Z",
+      "displayDate": "13 ก.ค. 2569",
+      "displayTime": "13:33",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "เกียรติบัตร Express — research sprint (GO)",
+      "summary": "ตรวจ 13 คำถาม: GO — pdfmake+fontkit ตัวเดียวที่ shaping ไทยถูก (jsPDF/pdf-lib มีบั๊กวรรณยุกต์ยืนยัน), ฟอนต์ Sarabun+Srisakdi (SIL OFL ฝังได้ฟรี), mammoth/SheetJS CE/pdf.js + clipboard fallback, A4 แนวนอน bleed 3mm, ห้ามใช้ตราครุฑใน template (พ.ร.บ. 2534)"
+    },
     {
       "id": "wl-260713-minnie-3o1i",
       "datetime": "2026-07-13T06:15:18Z",
