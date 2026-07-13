@@ -110,12 +110,16 @@
 | `template.instruction` | ทุกแบบออกแบบตามธรรมเนียมเกียรติบัตรสถาบันไทย — เลือกแบบที่เข้ากับงานของคุณ แตะเพื่อดูตัวอย่างขนาดใหญ่ได้ทุกแบบ | คำแนะนำใต้หัวข้อ |
 | `template.badge.free` | ฟรี | Badge บนการ์ด template ฟรี |
 | `template.badge.premium` | พรีเมียม | Badge บนการ์ด template พรีเมียม |
-| `template.free1.name` | แบบทางการ | ชื่อ template ฟรีที่ 1 (สไตล์ราชการ/สถาบัน) |
+| `template.free1.name` | แบบทางการ | ชื่อ template ฟรีที่ 1 — ตรงกับ id `formal` ของ Mind (Thai Formal) ✓ |
 | `template.free1.desc` | ลายกรอบสถาบันคลาสสิก โทนครีม-ทอง — เหมาะกับงานโรงเรียนและหน่วยงานราชการ | คำอธิบายสั้นใต้ชื่อ template |
-| `template.free2.name` | แบบพุทธ-ไทย | ชื่อ template ฟรีที่ 2 |
+| `template.free2.name` | แบบพุทธ-ไทย | ชื่อ template ฟรีที่ 2 — ตรงกับ id `buddhist` ของ Mind (Buddhist Lotus) ✓ |
 | `template.free2.desc` | ลายไทยโทนน้ำตาล-ทองอร่าม — เหมาะกับใบอนุโมทนาและงานบุญของวัดหรือมูลนิธิ | คำอธิบายสั้น |
-| `template.free3.name` | แบบโมเดิร์นองค์กร | ชื่อ template ฟรีที่ 3 |
+| `template.free3.name` | แบบโมเดิร์นองค์กร | ชื่อ template ฟรีที่ 3 — ตรงกับ id `corporate` ของ Mind (Modern Minimal) ✓ |
 | `template.free3.desc` | เรียบ สะอาด ดูเป็นสากล — เหมาะกับวุฒิบัตรอบรมของบริษัทและงานสัมมนา | คำอธิบายสั้น |
+| `template.premium1.name` | ลายไทยวิจิตรทอง | ชื่อ template พรีเมียมที่ 1 — id `p-wichit` / รหัส **TP-P01** ของ Mind (Thai Ornate Gold) |
+| `template.premium1.desc` | ลายไทยเฟื่องประจำยามแน่นเต็มกรอบ โทนชาด-ทองอร่าม — สมเกียรติงานพิธีใหญ่และการแข่งขันระดับจังหวัด ใบที่ผู้รับอยากใส่กรอบตั้งโชว์ | คำอธิบายชวนซื้อบนการ์ดพรีเมียม (ขัดเกลาจาก desc ที่ Mind เสนอ §1) |
+| `template.premium2.name` | ราชนาวีทอง | ชื่อ template พรีเมียมที่ 2 — id `p-royal` / รหัส **TP-P02** ของ Mind (Royal Blue & Gold) ⚠️ **ฝาก Chris ตรวจชื่อ:** "ราชนาวี" โดยทั่วไปหมายถึงกองทัพเรือ อาจสื่อว่าเกี่ยวข้องกับหน่วยงานทหาร/ราชการ — ถ้าเสี่ยง Rae เสนอชื่อสำรอง "กรมท่าทองคำ" หรือ "น้ำเงินสถาบัน" |
+| `template.premium2.desc` | สนามน้ำเงินกรมท่าเข้มขรึม กรอบทองคู่ ดาวประกายแปดแฉก — สง่างามแบบสถาบันสากล คู่ควรมหาวิทยาลัย องค์กรใหญ่ และงานพิธีการระดับชาติ | คำอธิบายชวนซื้อบนการ์ดพรีเมียม (ขัดเกลาจาก desc ที่ Mind เสนอ §1) |
 | `template.selected` | ✓ กำลังใช้แบบนี้ | สถานะบนการ์ด template ที่ถูกเลือก |
 | `template.useButton` | ใช้แบบนี้ | ปุ่มเลือก template (ในการ์ด/ใน modal ดูตัวอย่าง) |
 | `template.previewButton` | ดูตัวอย่างใหญ่ | ปุ่มเปิด modal ดู template เต็มจอ |
@@ -242,13 +246,14 @@
 | ขั้น 0 หน้าแรก | 9 |
 | ขั้น 1 อัปโหลด | 22 |
 | ขั้น 2 ตรวจรายชื่อ | 16 |
-| ขั้น 3 เลือก template | 24 |
+| ขั้น 3 เลือก template | 28 |
 | ขั้น 4 ข้อความ+โลโก้ (form 27 + default cert text 17) | 44 |
 | ขั้น 5 Preview | 13 |
 | ขั้น 6 Export+Upsell | 18 |
-| **รวม** | **162** |
+| **รวม** | **166** |
 
 *(v2: `error.offlineNote` ถูกย้ายออกจากตาราง Global ไปเป็น note รอเฟสหน้า — ไม่นับเป็น string ของ MVP)*
+*(v3: เพิ่ม key พรีเมียม 4 ตัวตาม template ของ Mind — ขั้น 3 จาก 24 เป็น 28)*
 
 ---
 
@@ -282,6 +287,11 @@
 
 ## Revision history
 
+- **v3 — เพิ่ม copy สำหรับ template พรีเมียมของ Mind (13 ก.ค. 2026):**
+  1. เพิ่ม `template.premium1.name/desc` (TP-P01 "ลายไทยวิจิตรทอง") และ `template.premium2.name/desc` (TP-P02 "ราชนาวีทอง") — desc ขัดเกลาจากข้อเสนอของ Mind (`Output/Mind/2026-07-13-cert-express-templates.md` §1)
+  2. ตรวจชื่อ template ฟรี 3 แบบเทียบ id ของ Mind: ตรงทุกตัว (`formal`/`buddhist`/`corporate`) — เพิ่ม id ผูกไว้ในคอลัมน์บริบทให้ Dale ทำ manifest
+  3. ⚠️ flag ใหม่ถึง Chris: ชื่อ "ราชนาวีทอง" (ราชนาวี = กองทัพเรือ) อาจสื่อความเกี่ยวข้องหน่วยงานทหาร — มีชื่อสำรองเสนอไว้ในตาราง
+  4. ตารางนับ string: 162 → 166
 - **v2 — แก้ตาม fact-check ของ Reese (13 ก.ค. 2026):**
   1. ตัด `error.offlineNote` ออกจาก MVP (ขัดกับ lazy-load bundle strategy) — ย้ายไปเป็น note "รอเฟสหน้า (service worker)" ใต้ตาราง Global
   2. `export.error.failed` — เปลี่ยนเลขสมมติ "100 คน" เป็น placeholder `{batchSize}` รอค่าจริงจากการทดสอบของ Dale
