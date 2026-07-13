@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T15:44:46Z",
+  "updatedAt": "2026-07-13T06:15:18Z",
   "agents": [
     {
       "id": "claudy",
@@ -44,11 +44,11 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "เกมหารายได้ — คิด 6 Idea Cards (Fable 5)",
+      "task": "เกียรติบัตร Express — feature concept + user stories",
       "report": {
-        "when": "13:46",
-        "title": "Idea Cards ✅ — 6 เกมหารายได้",
-        "body": "6 คอนเซปต์: บุญ Quest (deckbuilder พุทธ-โฟล์คลอร์ไทย digital+การ์ดจริงพิมพ์เอง) · Phi Hunter (roguelite ผีไทย $4.99 itch.io→Steam) · ทายสุภาษิต (daily puzzle แชร์ LINE + ads) · หมอดูแม่นจริง (visual novel Claude API, แพ็คเหรียญ PromptPay) · อ่านไทยได้! (puzzle สอนอ่านไทยให้ expat $9.99 + workbook) · วัดของฉัน (cozy idle สร้างวัด+แมววัด donation) | Top pick: บุญ Quest — ทดสอบ moat โรงพิมพ์+cultural niche ตรงที่สุด | ส่งต่อ Reese → Output/Minnie/2026-07-09-game-revenue-ideas.md"
+        "when": "13:15",
+        "title": "Concept ✅ — เกียรติบัตร Express MVP",
+        "body": "ขยาย Idea Card 2 เป็น MVP spec: flow 6 ขั้น (upload Word/PDF/Excel → map รายชื่อ → เลือก template ฟรี 3/พรีเมียมล็อก → ปรับข้อความ → preview auto-fit → export PDF ชุด) จุดขาย client-side ไม่อัปโหลดรายชื่อขึ้น server + ส่ง 13 research questions ให้ Reese"
       }
     },
     {

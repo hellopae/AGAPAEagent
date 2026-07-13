@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-11T15:44:46Z",
+  "updatedAt": "2026-07-13T06:15:18Z",
   "entries": [
+    {
+      "id": "wl-260713-minnie-3o1i",
+      "datetime": "2026-07-13T06:15:18Z",
+      "displayDate": "13 ก.ค. 2569",
+      "displayTime": "13:15",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "เกียรติบัตร Express — feature concept + user stories",
+      "summary": "ขยาย Idea Card 2 เป็น MVP spec: flow 6 ขั้น (upload Word/PDF/Excel → map รายชื่อ → เลือก template ฟรี 3/พรีเมียมล็อก → ปรับข้อความ → preview auto-fit → export PDF ชุด) จุดขาย client-side ไม่อัปโหลดรายชื่อขึ้น server + ส่ง 13 research questions ให้ Reese"
+    },
     {
       "id": "wl-260711-mind-7eee",
       "datetime": "2026-07-11T15:44:46Z",
