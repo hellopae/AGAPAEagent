@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-13T14:52:53Z",
+  "updatedAt": "2026-07-13T14:54:16Z",
   "entries": [
+    {
+      "id": "wl-260713-mind-4c2g",
+      "datetime": "2026-07-13T14:54:16Z",
+      "displayDate": "13 ก.ค. 2569",
+      "displayTime": "21:54",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เกียรติบัตร Express — template เกียรติบัตร 5 แบบ",
+      "summary": "SVG เต็ม bleed 303×216mm slot geometry ตรง Vera ทุกช่อง: ฟรี 3 (ทางการไทย/พุทธดอกบัว/โมเดิร์นองค์กร) + พรีเมียม 2 (ลายไทยวิจิตรทอง TP-P01, ราชนาวีทอง TP-P02) — contrast ผ่าน 14/14 คู่ (ต่ำสุด 7.58:1), ไม่มีตราครุฑ, มี guide group ให้ Dale ลบก่อน export"
+    },
     {
       "id": "wl-260713-vera-3rm9",
       "datetime": "2026-07-13T07:32:33Z",
