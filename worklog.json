@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-14T07:53:51Z",
+  "updatedAt": "2026-07-14T15:08:12Z",
   "entries": [
+    {
+      "id": "wl-260714-chris-67do",
+      "datetime": "2026-07-14T15:08:12Z",
+      "displayDate": "14 ก.ค. 2569",
+      "displayTime": "22:08",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "เกียรติบัตร Express — QA รอบแรก: FAIL 3 blockers",
+      "summary": "ตรวจ URL จริงครบ 9 จุด: ผ่าน Thai rendering/a11y/mobile/privacy 5 ข้อ/สำนวนพร แต่ FAIL — (1) อัปโหลด PDF พัง 100% (TypeError doc.destroy) (2) ชื่อ 'ราชนาวีทอง' สื่อโยงกองทัพเรือ ให้เปลี่ยนเป็น 'กรมท่าทองคำ' (3) ปุ่ม LINE href=# ตายทุกจุด รอ URL จาก Kittanate"
+    },
     {
       "id": "wl-260714-dale-0w03",
       "datetime": "2026-07-14T07:53:51Z",

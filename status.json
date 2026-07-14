@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T07:53:51Z",
+  "updatedAt": "2026-07-14T15:08:12Z",
   "agents": [
     {
       "id": "claudy",
@@ -173,12 +173,12 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "blocked",
-      "task": "QA กล่อง VeeGee",
+      "status": "done",
+      "task": "เกียรติบัตร Express — QA รอบแรก: FAIL 3 blockers",
       "report": {
-        "when": "19:10",
-        "title": "QA ❌ ติด regulatory",
-        "body": "design/ภาษาผ่าน · ขาด อย./น้ำหนัก/โภชนาการ/บาร์โค้ด → รอลูกค้า"
+        "when": "22:08",
+        "title": "QA ❌ FAIL — 3 blockers (PDF/ชื่อ template/LINE)",
+        "body": "ตรวจ URL จริงครบ 9 จุด: ผ่าน Thai rendering/a11y/mobile/privacy 5 ข้อ/สำนวนพร แต่ FAIL — (1) อัปโหลด PDF พัง 100% (TypeError doc.destroy) (2) ชื่อ 'ราชนาวีทอง' สื่อโยงกองทัพเรือ ให้เปลี่ยนเป็น 'กรมท่าทองคำ' (3) ปุ่ม LINE href=# ตายทุกจุด รอ URL จาก Kittanate"
       }
     },
     {
