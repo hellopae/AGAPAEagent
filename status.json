@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T07:31:52Z",
+  "updatedAt": "2026-07-14T07:53:51Z",
   "agents": [
     {
       "id": "claudy",
@@ -254,9 +254,9 @@
       "status": "done",
       "task": "Build เว็บแอป เกียรติบัตร Express MVP + deploy GitHub Pages",
       "report": {
-        "when": "14:31",
-        "title": "เกียรติบัตร Express MVP live ที่ hellopae.github.io/CertExpress",
-        "body": "POC-1 ผ่าน — pdfmake ฝัง Sarabun/Srisakdi วรรณยุกต์-เลขไทยถูกครบ ไม่ต้องใช้ Plan B | build ครบ 6 ขั้นตาม Vera spec ทุก state, copy 166 keys ของ Rae, template 5 แบบของ Mind (ลบ guides แล้ว), privacy invariants 5 ข้อยืนยันรายข้อ | วัดจริง: maxSize 10MB, batchSize 300 (E2E เบราว์เซอร์จริง 250 ใบ = 2.4s/0.5MB) | ค้าง: LINE OA URL placeholder, ช่อง event ไม่มี slot บนใบ (ถาม Vera), ConfirmDialog แทนที่รายชื่อรอ key จาก Rae — รายละเอียด Output/Dale/2026-07-13-cert-express-build.md"
+        "when": "14:53",
+        "title": "เกียรติบัตร Express v2 patch live แล้ว (6a03708)",
+        "body": "ปิดคำถามค้าง 2 ข้อ: ตัดช่อง event ตาม Vera v1.1 + ConfirmDialog ใช้ copy v4 ของ Rae — build ผ่าน, E2E 250 ชื่อผ่านซ้ำ, ยืนยัน bundle ใหม่บน hellopae.github.io/CertExpress แล้ว"
       }
     },
     {

@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-14T07:31:52Z",
+  "updatedAt": "2026-07-14T07:53:51Z",
   "entries": [
+    {
+      "id": "wl-260714-dale-0w03",
+      "datetime": "2026-07-14T07:53:51Z",
+      "displayDate": "14 ก.ค. 2569",
+      "displayTime": "14:53",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เกียรติบัตร Express v2 — ตัดช่อง event + copy v4 confirmReplace",
+      "summary": "Patch ตามคำตอบทีม: ลบ field customize.event (Vera v1.1, achievement แทน) + ConfirmDialog แทนที่รายชื่อใช้ upload.confirmReplace.* จาก Rae v4 (ปุ่มเก็บรายชื่อเดิม = safe action focus แรก) — ทุก string map กลับ copy key 100% แล้ว, E2E ผ่านซ้ำ, bundle ใหม่ขึ้น URL จริงแล้ว (commit 6a03708)"
+    },
     {
       "id": "wl-260714-dale-xoxi",
       "datetime": "2026-07-14T07:31:52Z",

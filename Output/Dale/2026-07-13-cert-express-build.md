@@ -96,3 +96,14 @@
 `poc1.jpg` (POC-1) · `5-preview.png` (ขั้น 5 บนจอ) · `pdf-page1.jpg` (PDF จริงหน้าแรก — เทียบ parity) · `3-templates.png` (การ์ด 5 แบบ+ลายน้ำพรีเมียม) · `7-mobile-landing.png` (360px) · `live-landing.png` (URL จริง)
 
 — Dale, TANAPAT AI Studio
+
+---
+
+## v2 — patch ตามคำตอบทีม (14 ก.ค. 2026, commit `6a03708`)
+
+1. **ตัดช่อง `customize.event` ออก** ตาม Vera spec v1.1 (ทางเลือก B) — ลบจากฟอร์มขั้น 4, `defaultFields()`, และ merge list ใน store; achievement ทำหน้าที่แทน — คำถามค้างข้อ 1 (§6) **ปิดแล้ว**; state เดิมที่มี `event` ไม่ crash (key ส่วนเกินใน store ไม่มีใครอ่าน)
+2. **ConfirmDialog แทนที่รายชื่อใช้ copy จริงจาก Rae v4** (170 keys) — `upload.confirmReplace.title/body/confirm/cancel` (body มี `{count}` = จำนวนรายชื่อเดิม), ปุ่ม "เก็บรายชื่อเดิมไว้" เป็น safe action: variant primary + อยู่ก่อนใน DOM = ได้ focus แรกใน modal — คำถามค้างข้อ 2 (§6) **ปิดแล้ว** ตอนนี้ **ทุก string ในแอป map กลับ copy key ของ Rae 100%**
+3. คีย์ `customize.event.*` คงไว้ใน `src/copy.js` พร้อม comment RETIRED (ห้ามใช้ใน UI) เพื่อ traceability กับไฟล์ v4 ของ Rae
+4. ตรวจซ้ำ: `npm run build` ผ่าน, E2E 250 ชื่อครบ flow ผ่าน (export 2.6s), push แล้ว Pages rebuild — **ยืนยัน bundle ใหม่ (`index-B_kkZOng.js`) เสิร์ฟบน URL จริงแล้ว**
+
+— Dale (v2), TANAPAT AI Studio
