@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-13T14:54:16Z",
+  "updatedAt": "2026-07-14T07:31:52Z",
   "entries": [
+    {
+      "id": "wl-260714-dale-xoxi",
+      "datetime": "2026-07-14T07:31:52Z",
+      "displayDate": "14 ก.ค. 2569",
+      "displayTime": "14:31",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เกียรติบัตร Express MVP — build + deploy ขึ้น Pages",
+      "summary": "POC-1 ผ่าน (pdfmake+Sarabun/Srisakdi ไทยถูกทุกชุด) → build เต็มตาม Vera spec: stepper 6 ขั้น, layoutConstants แชร์ preview↔PDF, auto-fit ชื่อยาว, premium ล็อก, privacy invariants ครบ 5 ข้อ — E2E 250 ชื่อ export 2.4s, maxSize 10MB / batchSize 300 จากการวัดจริง — live ที่ hellopae.github.io/CertExpress"
+    },
     {
       "id": "wl-260713-mind-4c2g",
       "datetime": "2026-07-13T14:54:16Z",
