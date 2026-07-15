@@ -1,0 +1,9 @@
+[e2e-pdf] URL: http://localhost:4173/CertExpress/
+[e2e-pdf] bundle: index-BnO8hyzo.js
+[e2e-pdf] อัปโหลด poc1.pdf แล้ว — รอผล parse...
+[pdf-text] ไปขั้น 2: true
+📸 pdf-local-step2.png
+[pdf-text] แถบเตือน pdfAccuracy: true | "ไฟล์​ ​PDF​ ​บาง​ไฟล์​เก็บ​ตัว​อักษร​ไทย​ไว้​สลับ​ตำแหน่ง​ ​ทำให้​สระ​หรือ​วรรณย..."
+[pdf-text] แถวรายชื่อในตาราง: 13
+[b2] พบ "กรมท่าทองคำ": true | พบชื่อเก่า "ราชนาวีทอง": false
+📸 pdf-local-step3-templates.png

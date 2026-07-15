@@ -1,0 +1,13 @@
+[bundle] index-BnO8hyzo.js
+[T1 thai-pdf] step2: true | yellow pdfAccuracy: false | rows: 10
+[T1 thai-pdf] sample names: ["on","รายชื่อผู้เข้าอบรม","on","นายสมชาย ใจดี"]
+[T1 thai-pdf] console errors: 0 
+[T2 scanned] stays step1: true | pdfScanned err shown: true | alert: ✕ไฟล์​ ​PDF​ ​นี้​เป็น​ภาพ​สแกน​ ​ระบบ​จึง​อ่าน​ตัว​หนังสือ​ข้าง​ใน​ไม่​ได้​ค่ะ​ ​—​ ​วิธี
+[T2 scanned] console errors: 0
+[T3 docx] step2: true | rows: 8 | console errors: 0
+[T4 paste] step2: true
+[T4 paste] step3 templates: true | step4 customize: false
+FAIL Error: No element found for selector: input
+    at assert (file:///Users/agapae/Documents/Work%20PAE/Claude/CertExpress/node_modules/puppeteer-core/lib/puppeteer/util/assert.js:15:15)
+    at CdpFrame.type (file:///Users/agapae/Documents/Work%20PAE/Claude/CertExpress/node_modules/puppeteer-core/lib/puppeteer/api/Frame.js:882:17)
+    at async /Users/agapae/Documents/Work PAE/Claude/CertExpress/scripts/chris-delta-e2e.cjs:104:5

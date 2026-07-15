@@ -3,6 +3,7 @@
 > ผู้ทำ: **Mind** (visual) | วันที่: 13 ก.ค. 2026
 > อ้างอิง: Vera UX spec §6.2/§10 (`Output/Vera/2026-07-13-cert-express-ux-spec.md`), copy ของ Rae (`Output/Rae/2026-07-13-cert-express-ui-copy.md`), SOP-10
 > ไฟล์: `Output/Mind/cert-express-templates/*.svg` (5 ไฟล์)
+> **Changelog 15 ก.ค. 2026:** เปลี่ยนชื่อไทย TP-P02 "ราชนาวีทอง" → "กรมท่าทองคำ" ตาม Chris QA B2 — "ราชนาวี" สื่อโยงกองทัพเรือ (ชื่ออังกฤษ Royal Blue & Gold, id `p-royal`, รหัส TP-P02 คงเดิม)
 
 ## 0. Asset Inventory (SOP-10 Step 0)
 
@@ -19,7 +20,7 @@
 | ฟรี 2 | `template-free-2-buddhist-lotus.svg` | `buddhist` | แบบพุทธ-ไทย | Buddhist Lotus | `template.free2.name` (มีแล้ว) |
 | ฟรี 3 | `template-free-3-modern-minimal.svg` | `corporate` | แบบโมเดิร์นองค์กร | Modern Minimal | `template.free3.name` (มีแล้ว) |
 | พรีเมียม 1 | `template-premium-1-thai-wichit-gold.svg` | `p-wichit` / **TP-P01** | ลายไทยวิจิตรทอง | Thai Ornate Gold | `template.premium1.name` — **รอ Rae เพิ่ม** |
-| พรีเมียม 2 | `template-premium-2-royal-blue-gold.svg` | `p-royal` / **TP-P02** | ราชนาวีทอง | Royal Blue & Gold | `template.premium2.name` — **รอ Rae เพิ่ม** |
+| พรีเมียม 2 | `template-premium-2-royal-blue-gold.svg` | `p-royal` / **TP-P02** | กรมท่าทองคำ | Royal Blue & Gold | `template.premium2.name` — **รอ Rae เพิ่ม** |
 
 desc เสนอให้ Rae ขัดเกลา:
 - **TP-P01:** "กรอบลายไทยเฟื่องประจำยาม โทนชาด-ทองอร่าม สมเกียรติงานระดับจังหวัดและพิธีใหญ่"
@@ -31,7 +32,7 @@ desc เสนอให้ Rae ขัดเกลา:
 2. **แบบพุทธ-ไทย (buddhist)** — ครีมอุ่น กรอบมุมมนน้ำตาลทอง ดอกบัวเชิงประดับ 4 มุม + บัวตูมกลางขอบ ลายน้ำดอกบัว 5% — **วัฒนธรรม:** ใช้บัวประดับที่กรอบเท่านั้น ไม่มีพุทธรูป/สัญลักษณ์ศักดิ์สิทธิ์ ไม่วางองค์ประกอบศาสนาใต้ข้อความ
 3. **แบบโมเดิร์นองค์กร (corporate)** — ขาวล้วน สี teal เดียวทั้งใบ แถบสันซ้ายเต็ม bleed + วงเล็บมุม ไม่มีลายน้ำ — สากล สะอาด เหมาะวุฒิบัตรอบรม
 4. **ลายไทยวิจิตรทอง (TP-P01)** — ชั้นกรอบชาด→ฟอยล์ทอง(gradient)→ชาด→ครีม, แถบเฟื่องประจำยาม pattern รอบสี่ด้าน, มุมวิจิตรซ้อนชั้น, ลายน้ำดาว 8 แฉก 5% — ความแน่นของลายคือจุดขายพรีเมียม
-5. **ราชนาวีทอง (TP-P02)** — ต่างจาก TP-P01 ชัดเจน: นิ่ง สงบ เส้นสะอาดแบบสถาบันสากล — สนามน้ำเงินกรมท่า #14204A เต็ม bleed, กรอบทองคู่ (หนา 1.2 + hairline), การ์ดงาช้าง, เส้นคู่พิธีการน้ำเงิน+ทองด้านใน, ดาวประกาย 8 แฉก (compass rosette) 4 มุม, ยอดเพชรทองกลางขอบบน-ล่าง, ลายน้ำรัศมีดาว 4%
+5. **กรมท่าทองคำ (TP-P02)** — ต่างจาก TP-P01 ชัดเจน: นิ่ง สงบ เส้นสะอาดแบบสถาบันสากล — สนามน้ำเงินกรมท่า #14204A เต็ม bleed, กรอบทองคู่ (หนา 1.2 + hairline), การ์ดงาช้าง, เส้นคู่พิธีการน้ำเงิน+ทองด้านใน, ดาวประกาย 8 แฉก (compass rosette) 4 มุม, ยอดเพชรทองกลางขอบบน-ล่าง, ลายน้ำรัศมีดาว 4%
 
 ## 3. ชุดสีต่อ slot ต่อ template (`inkColors` สำหรับ manifest ของ Dale)
 

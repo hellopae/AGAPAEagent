@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-07-14T15:08:12Z",
+  "updatedAt": "2026-07-15T13:30:00Z",
   "entries": [
+    {
+      "id": "wl-260715-dale-b1b2",
+      "datetime": "2026-07-15T12:40:00Z",
+      "displayDate": "15 ก.ค. 2569",
+      "displayTime": "19:40",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "เกียรติบัตร Express — แก้ B1+B2 + deploy",
+      "summary": "B1: ย้าย destroy() ไป loadingTask ตาม API pdfjs 6.x + ครอบ try/catch → อัปโหลด PDF ใช้ได้แล้ว · B2: เปลี่ยนชื่อ TP-P02 เป็น 'กรมท่าทองคำ' (copy v5) · เพิ่ม e2e-pdf.cjs อุดช่องโหว่ที่ทำ B1 หลุด · deploy bundle index-BnO8hyzo.js"
+    },
+    {
+      "id": "wl-260715-mind-p02",
+      "datetime": "2026-07-15T12:45:00Z",
+      "displayDate": "15 ก.ค. 2569",
+      "displayTime": "19:45",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "อัปเดตชื่อ template TP-P02 → กรมท่าทองคำ",
+      "summary": "แก้ชื่อไทยในเอกสาร template + comment ใน SVG ให้ตรง copy v5/Chris B2 (ชื่ออังกฤษ Royal Blue & Gold, id p-royal, TP-P02 คงเดิม) + ใส่ changelog"
+    },
+    {
+      "id": "wl-260715-chris-delta",
+      "datetime": "2026-07-15T13:20:00Z",
+      "displayDate": "15 ก.ค. 2569",
+      "displayTime": "20:20",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "เกียรติบัตร Express — delta re-QA: ✅ PASS",
+      "summary": "ยืนยันเองบน production (bundle index-BnO8hyzo.js): B1 อัปโหลด PDF ผ่าน 3 ไฟล์ (poc1/ไทย/สแกน→pdfScanned) ไม่มี error · B2 'ราชนาวี' หายจาก bundle เหลือ 'กรมท่าทองคำ' · regression docx+paste flow ปกติ · B3 (LINE href=#) ยังค้าง = blocker เปิดตัวสาธารณะ รอ URL"
+    },
     {
       "id": "wl-260714-chris-67do",
       "datetime": "2026-07-14T15:08:12Z",

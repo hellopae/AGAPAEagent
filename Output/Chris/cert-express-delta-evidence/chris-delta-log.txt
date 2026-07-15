@@ -1,0 +1,8 @@
+
+--- recheck ---
+[recheck T1 thai-pdf] yellow pdfAccuracy bar present: true | console errors: 0
+[T4] step2: true
+[T4] step3: true
+[T4] clicked use-button: true
+[T4] step4 customize: false
+[T4] console errors total: 0 

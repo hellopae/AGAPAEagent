@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T15:08:12Z",
+  "updatedAt": "2026-07-15T13:30:00Z",
   "agents": [
     {
       "id": "claudy",
@@ -148,11 +148,11 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — template เกียรติบัตร 5 แบบ",
+      "task": "อัปเดตชื่อ template TP-P02 → กรมท่าทองคำ",
       "report": {
-        "when": "21:54",
-        "title": "Artwork ✅ — 5 templates ผ่าน contrast ครบ",
-        "body": "SVG เต็ม bleed 303×216mm slot geometry ตรง Vera ทุกช่อง: ฟรี 3 (ทางการไทย/พุทธดอกบัว/โมเดิร์นองค์กร) + พรีเมียม 2 (ลายไทยวิจิตรทอง TP-P01, ราชนาวีทอง TP-P02) — contrast ผ่าน 14/14 คู่ (ต่ำสุด 7.58:1), ไม่มีตราครุฑ, มี guide group ให้ Dale ลบก่อน export"
+        "when": "19:45",
+        "title": "อัปเดตชื่อ template แล้ว",
+        "body": "แก้ชื่อไทยในเอกสาร+SVG comment ตาม Chris B2, id/รหัส/สเปกคงเดิม"
       }
     },
     {
@@ -174,11 +174,11 @@
         "เทสต์การทำงานเว็บแอป"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — QA รอบแรก: FAIL 3 blockers",
+      "task": "เกียรติบัตร Express — delta re-QA B1+B2",
       "report": {
-        "when": "22:08",
-        "title": "QA ❌ FAIL — 3 blockers (PDF/ชื่อ template/LINE)",
-        "body": "ตรวจ URL จริงครบ 9 จุด: ผ่าน Thai rendering/a11y/mobile/privacy 5 ข้อ/สำนวนพร แต่ FAIL — (1) อัปโหลด PDF พัง 100% (TypeError doc.destroy) (2) ชื่อ 'ราชนาวีทอง' สื่อโยงกองทัพเรือ ให้เปลี่ยนเป็น 'กรมท่าทองคำ' (3) ปุ่ม LINE href=# ตายทุกจุด รอ URL จาก Kittanate"
+        "when": "20:20",
+        "title": "delta re-QA: ✅ PASS",
+        "body": "B1+B2 หายจริงบน production · เหลือ B3 (LINE URL) = blocker เปิดตัวสาธารณะ รอ Kittanate"
       }
     },
     {
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Build เว็บแอป เกียรติบัตร Express MVP + deploy GitHub Pages",
+      "task": "เกียรติบัตร Express — แก้ B1 (PDF upload) + B2 (ชื่อ template) + deploy",
       "report": {
-        "when": "14:53",
-        "title": "เกียรติบัตร Express v2 patch live แล้ว (6a03708)",
-        "body": "ปิดคำถามค้าง 2 ข้อ: ตัดช่อง event ตาม Vera v1.1 + ConfirmDialog ใช้ copy v4 ของ Rae — build ผ่าน, E2E 250 ชื่อผ่านซ้ำ, ยืนยัน bundle ใหม่บน hellopae.github.io/CertExpress แล้ว"
+        "when": "19:40",
+        "title": "แก้ B1+B2 เสร็จ + deploy",
+        "body": "PDF upload ใช้ได้ (loadingTask.destroy) · TP-P02 = กรมท่าทองคำ · เพิ่ม e2e-pdf · bundle index-BnO8hyzo.js"
       }
     },
     {
