@@ -1,17 +1,33 @@
-# ไฟล์ต้นทางจาก Kittanate — เกียรติบัตร Express
+# ผลวิเคราะห์ artwork ต้นทางของ Kittanate — เกียรติบัตร Express
 
-> เก็บโดย Claudy 16 ก.ค. 2569 · **เหตุผลที่ต้องเก็บ:** ไฟล์ต้นฉบับอยู่บน `~/Desktop` แล้ว
-> **หายไปเองระหว่าง session** (Desktop ถูกล้างเกลี้ยง) — ถ้าไม่สำรองไว้ ไปป์ไลน์รันไม่ได้
-> ⚠️ โฟลเดอร์นี้ไม่มีใน system map ของ `HANDOFF.md §3` — Claudy สร้างเป็นการชั่วคราวเพื่อกันไฟล์หาย
-> เสนอให้ Libby จัดที่อยู่ถาวรตาม SOP แล้วอัปเดต HANDOFF (Kittanate อนุมัติก่อน)
+> วิเคราะห์โดย Claudy 16 ก.ค. 2569
+> **ไฟล์ต้นฉบับไม่ได้อยู่ที่นี่** — อยู่ที่ `Documents/Work PAE/Claude/CertExpress/Files/`
+> โฟลเดอร์นี้เก็บเฉพาะ **ผลวัด** ที่ Vera/Dale ต้องใช้ เพื่อไม่ให้มีไฟล์ซ้ำ 2 ที่
+> ⚠️ โฟลเดอร์นี้ไม่มีใน system map ของ `HANDOFF.md §3` — เสนอให้ Libby จัดที่อยู่ถาวรตาม SOP
+> (Kittanate อนุมัติก่อน)
 
-| ไฟล์ | คืออะไร | ใช้ทำอะไร |
+## ไฟล์ต้นทาง — อยู่ที่ `CertExpress/Files/`
+
+| ไฟล์ | คืออะไร | ใช้ได้ไหม |
 |---|---|---|
-| `2026-07-16-certificate-a4-303x216-blank.ai` | **artwork ตัวจริงที่จะใช้** — ลบข้อความออกหมดแล้ว | ต้นทางของปุ่มอัปโหลด artwork |
-| `2026-07-16-artwork-preview.png` | ภาพ render ของ artwork ข้างบน (1818×1295) | ดูเร็ว ๆ ไม่ต้องเปิด Illustrator |
-| `2026-07-16-artwork-slot-overlay.png` | artwork + กรอบ SLOTS ทับ | Vera ใช้ดูว่า slot ไหนชนกราฟิก |
-| `2026-07-16-cert-express-output-sample.png` | หน้า 1 ของ `เกียรติบัตร-9ใบ.pdf` ที่ Kittanate ลองทำจากเว็บ | ตัวอย่าง output จริง (ไฟล์ PDF ต้นฉบับหายแล้ว) |
-| `2026-07-16-certificate-a4-303x216-WITH-TEXT-เลิกใช้.ai` | เวอร์ชันก่อนลบข้อความ | **อย่าใช้** — เก็บไว้อ้างอิงเฉย ๆ |
+| `Certificate A4 303x216mm.ai` | **artwork ตัวจริงที่จะใช้** ลบข้อความออกหมดแล้ว | ✅ **ตัวนี้** |
+| `Certificate A4 edit3c.ai` | ตัวเก่า 297×210 ข้อความ bake ติดอยู่ | ❌ อ้างอิงเฉย ๆ |
+| `Lists Certificate 2 edit.pdf` | ผล data-merge จาก InDesign มีชื่อผู้รับแล้ว | ❌ อ้างอิงเฉย ๆ |
+| `Lists Certificate 2.indd` | ต้นฉบับ InDesign 41MB | ❌ **เบราว์เซอร์อ่านไม่ได้ ตัดจาก scope** |
+| `เกียรติบัตร-9ใบ.pdf` | output ที่ Kittanate ลองทำจากเว็บ (ถูกต้องดี) | ตัวอย่างผลลัพธ์ |
+
+`Certificate A4 303x216mm.ai` · SHA256 `4312eca9f9d9356b35d96d60a2a75689b2b8945b516cf55d20cc52854f1c1581`
+· 1,221,141 bytes · แก้ล่าสุด 16 ก.ค. 2569 13:59
+
+⚠️ **`CertExpress/Files/` ยัง untracked ใน git** (ณ 16 ก.ค. 2569) — ยังไม่มีสำรองที่ไหน
+รอ Kittanate ตัดสินว่าจะ commit เข้า repo ไหม (`.indd` 41MB ควรพิจารณาแยก — หนักและใช้ไม่ได้อยู่ดี)
+
+## ไฟล์ในโฟลเดอร์นี้
+
+| ไฟล์ | คืออะไร |
+|---|---|
+| `2026-07-16-artwork-slot-overlay.png` | artwork + กรอบ SLOTS ทับ — Vera ใช้ดูว่า slot ไหนชนกราฟิก |
+| `2026-07-16-cert-express-output-sample.png` | หน้า 1 ของ `เกียรติบัตร-9ใบ.pdf` |
 
 ## สเปกของ artwork ตัวที่ใช้ได้
 
@@ -48,3 +64,7 @@
 - **signerRight** ริบบิ้นล่างขวาล้ำเข้ามาถึง `x=232.5mm, y=179.7mm` (slot กิน x 162–252mm)
   · ถ้าจะขยับให้โล่ง ต้อง `xc ≤ 187mm` (เดิม 207)
   · **Kittanate ตัดสิน 16 ก.ค. 2569: เอาผู้ลงนามคนเดียวไปก่อน** → ปัญหานี้ไม่บล็อก MVP
+
+_สคริปต์ที่ใช้วัดเป็นของชั่วคราวใน scratchpad ไม่ได้เก็บ — ถ้า Vera ต้องวัด artwork ตัวใหม่
+วิธีคือ: render `.ai` เป็น PNG (`sips -s format png --resampleWidth 1818`) แล้วนับ pixel saturation
+ในกรอบ SLOTS ที่แปลงจาก mm ด้วย `ppm = width/303` และ offset bleed 3mm_
