@@ -27,6 +27,34 @@
   ด้วย subagent_type จริง (เช่น chris-qa) เพื่อยืนยัน hook ยิง** จึงติ๊กปิดได้
   · งานตาม: Libby อัปเดต output-index.md ให้รวมไฟล์ใหม่รอบ QA loop นี้ (ทำ session หน้า ประหยัด token)
 
+- [ ] **เกียรติบัตร Express — 2 ปุ่มอัปโหลดใหม่ (Kittanate สั่ง 16 ก.ค. 2569)** — repo:
+  `Documents/Work PAE/Claude/CertExpress` (คนละ folder กับที่นี่ — agent อ่าน/เขียนข้ามได้)
+  **(A) ปุ่มอัปโหลด Artwork เอง** ใช้เป็นพื้นหลัง template (Kittanate จะส่งไฟล์ artwork ที่เคยทำให้)
+  **(B) ปุ่มอัปโหลดรูปลายเซ็นผู้อำนวยการโรงเรียน**
+  · ไปป์ไลน์ตาม Workflow 2: Vera (spec) → Rae (copy) → Mind (กติกาสี/ไฟล์) → Dale (build) → Chris (QA)
+  · **ใช้งานนี้เป็นตัวปิด P0 ข้างบนด้วย** — delegate ด้วย `subagent_type` จริง แล้วเช็คว่า hook ยิง
+
+  _ผลสำรวจโค้ดโดย Claudy 16 ก.ค. 2569 (ไม่ต้องไล่อ่านซ้ำ):_
+  - **(B) ง่ายกว่า** — `src/cert/layoutConstants.js:23` จองที่ไว้แล้ว: `ช่องว่างเซ็นจริง y 158–172`
+    (สูง 14mm) เหนือ `SIGNER.nameY=174` พอดี · ต่อของเดิมได้ตรง ๆ: store มี `SET_LOGO` +
+    `logoRect()` ใน `certLayout.js:44` เป็นแม่แบบกล่องภาพแบบ contain อยู่แล้ว — ทำ `signatureRect()`
+    ทรงเดียวกัน · ต้องรองรับ signer2 ด้วย (2 คน = ซ้าย-ขวา, slot คนละ xc)
+  - **(A) ยากกว่าที่คิด — 3 ประเด็นที่ Vera/Mind ต้องตัดสิน:**
+    1. **สีตัวอักษร** — ทุก template มี `inkColors` 5 slot ที่ Mind คำนวณ contrast ≥4.5:1 มาแล้ว
+       (`templates.js:22`) artwork ที่ user อัปโหลดไม่มีชุดสีนี้ → พื้นหลังเข้ม = ตัวหนังสืออ่านไม่ออก
+       ต้องเลือก: ให้ user เลือกสีเอง / auto-detect ความสว่าง / ล็อกชุดสี default + คำเตือน
+    2. **ขนาดไฟล์** — artwork ต้องเป็น **bleed 303×216mm** (`layoutConstants.js:10`) ถ้า user ส่ง
+       ขนาด trim 297×210 มา ภาพจะถูก crop ขอบหาย 3mm รอบด้าน — ต้องมี validation + copy อธิบาย
+    3. **ชนิดไฟล์** — ของเดิมเป็น SVG ทั้งหมด และ `rasterizeArtwork()` (`pdfExport.js:78`) วาดผ่าน
+       canvas → PNG 300dpi · PNG/JPG ที่ user อัปโหลดต้องเช็คว่าความละเอียดพอ (≥3508×2480px)
+       ไม่งั้นงานพิมพ์แตก — ตามกฎ 300dpi ใน HANDOFF §5
+  - โครงรองรับดีอยู่แล้ว: `templates.js` เป็น manifest (คอมเมนต์เอง: "เพิ่ม template ใหม่ =
+    เพิ่ม entry + ไฟล์ artwork — ไม่แตะโค้ด layout") · `computeCertLayout()` ใช้ร่วม preview+PDF
+    สูตรเดียว → แก้ที่เดียวได้ทั้งจอและ PDF
+  - copy ใหม่ทุกคำต้องเข้า `src/copy.js` (Vera DoD ข้อ 1: ห้ามแต่งข้อความในคอมโพเนนต์)
+  - ⚠️ Kittanate อ้างไฟล์ `~/Desktop/เกียรติบัตร-9ใบ.pdf` แต่ **หาไม่เจอ** (ชื่อตรงกับ output ของแอป
+    `pdfExport.js:237`) — ถ้าต้องดูของจริงประกอบ ต้องขอไฟล์ใหม่
+
 ---
 
 ## 🎭 Claudy (Orchestrator)
