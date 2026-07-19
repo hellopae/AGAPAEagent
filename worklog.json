@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-07-18T16:37:51.304Z",
+  "updatedAt": "2026-07-19T08:54:53Z",
   "entries": [
+    {
+      "id": "wl-260719-dale-widgets",
+      "datetime": "2026-07-19T08:54:53Z",
+      "displayDate": "19 ก.ค. 2569",
+      "displayTime": "15:54",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Dashboard: แถบ Widget ใหม่ — Claude Limit % + งาน Agent + Daily Routines",
+      "summary": "ปุ่มเปิด/ปิดที่ menu bar (จำค่าใน localStorage) · widget Claude Limit จาก push-limit.mjs → Firestore · widget Daily Routines แสดงสรุปข่าว (routine เขียน agents/daily ทุก 09:00) + ราคา Bitcoin สดจาก CoinGecko refresh ทุก 3 นาที · deploy ขึ้น Pages แล้ว",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard"
+    },
     {
       "id": "ce-t6-1784392671304",
       "datetime": "2026-07-18T16:37:51.304Z",
