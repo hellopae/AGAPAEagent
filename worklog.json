@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-07-19T08:54:53Z",
+  "updatedAt": "2026-07-19T10:08:26Z",
   "entries": [
+    {
+      "id": "wl-260719-widget-app-v2",
+      "datetime": "2026-07-19T10:08:26Z",
+      "displayDate": "19 ก.ค. 2569",
+      "displayTime": "17:08",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AGAPAE Widget (macOS): build .app + เพิ่ม Bitcoin & ข่าวเช้า",
+      "summary": "build Tauri release + ไอคอนโลโก้ AGAPAE ติดตั้ง /Applications · เพิ่ม section Bitcoin (CoinGecko 3 นาที) + ข่าวเช้าจาก Firestore agents/daily พร้อมวันที่ · seed ข่าว 19 ก.ค. ด้วยมือผ่าน scripts/push-daily.mjs (routine เขียนต่อพรุ่งนี้ 09:00)",
+      "project": "agapae-widget",
+      "projectLabel": "AGAPAE Widget"
+    },
     {
       "id": "wl-260719-dale-widgets",
       "datetime": "2026-07-19T08:54:53Z",
