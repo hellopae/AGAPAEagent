@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-07-19T10:08:26Z",
+  "updatedAt": "2026-07-19T10:25:19Z",
   "entries": [
+    {
+      "id": "wl-260719-routines-page",
+      "datetime": "2026-07-19T10:25:19Z",
+      "displayDate": "19 ก.ค. 2569",
+      "displayTime": "17:25",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "หน้า Routines ใหม่ + เลิกส่งอีเมลทั้ง 3 routines → ขึ้น Widget/เว็บแทน",
+      "summary": "เพิ่ม routines.html (แท็บ Daily/Weekly/Monthly อ่าน Firestore สด) + ลิงก์ใน nav · แก้ prompt ทั้ง 3 cloud routines ให้เขียน agents/daily·weekly·monthly แทน Gmail draft · Widget macOS เปลี่ยนไอคอนเป็น avatar",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard"
+    },
     {
       "id": "wl-260719-widget-app-v2",
       "datetime": "2026-07-19T10:08:26Z",

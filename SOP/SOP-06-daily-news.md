@@ -3,10 +3,15 @@
 > Routine นี้รันเป็น **cloud scheduled agent** อยู่แล้ว (3 routines บน Sonnet 5 พร้อม date-check)
 > SOP นี้มีไว้ 2 กรณี: (1) ตรวจสอบว่า routine ทำงานถูก (2) รันซ่อมด้วยมือเมื่อ routine พลาด
 
+> **เปลี่ยนวิธีส่งมอบ 19 ก.ค. 2569 (Kittanate สั่ง):** เลิกส่งอีเมล/Gmail draft ทั้ง 3 routines —
+> ผลลัพธ์เขียนลง Firestore แทน: `agents/daily` (ข่าวเช้า) / `agents/weekly` (การเงิน) / `agents/monthly` (ไอเดียบทความ)
+> แสดงบน **AGAPAE Widget (แอป macOS)** และ **หน้า Routines** https://hellopae.github.io/AGAPAEagent/routines.html
+> สคริปต์เขียนด้วยมือ: `scripts/push-daily.mjs` — การเช็คว่า routine รันสำเร็จ = ดู `updatedAt` ของ doc แทนการเช็คอีเมล
+
 ## Pipeline
 
 ```
-News (รวบรวม 6 ข่าว) → Chris (fact-check + คัดกรอง) → Rae (เขียนอีเมลสรุป) → ส่ง hellopae@gmail.com
+News (รวบรวม 6 ข่าว) → Chris (fact-check + คัดกรอง) → Rae (เรียบเรียงบรรทัดสรุป) → Firestore agents/daily → Widget + หน้า Routines
 ```
 
 ## โครงข่าว 6 slots (ตาม `.claude/agents/news-daily.md`)

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGAPAE — Routines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F2EE; --paper-2:#FCFBF8; --ink:#1B1C20; --ink-soft:#56565E; --ink-faint:#97969C;
+    --line:#E5E2DB; --line-strong:#D2CEC4; --accent:#2A3344; --gold:#9A7B4F;
+    --done:#5E7A66; --card:#FFFFFF;
+    --shadow:0 1px 2px rgba(27,28,32,.04),0 10px 30px rgba(27,28,32,.07);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Space Grotesk","Noto Sans Thai",sans-serif;
+    background:var(--paper); color:var(--ink); line-height:1.6;
+    -webkit-font-smoothing:antialiased; padding:0 0 64px;
+  }
+  .mono{font-family:"IBM Plex Mono",monospace}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);background:var(--paper-2)}
+  .head-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+  .brand{display:flex;gap:14px;align-items:center}
+  .press-mark{width:44px;height:44px;border-radius:10px;object-fit:cover}
+  h1{font-size:19px;font-weight:700}
+  .sub{font-size:11px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase}
+  .back{font-size:13px;color:var(--gold);text-decoration:none}
+  .back:hover{text-decoration:underline}
+  .tabs{display:flex;gap:0;border-bottom:1px solid var(--line);background:var(--paper-2)}
+  .tabs .wrap{display:flex}
+  .tab{
+    appearance:none;border:none;background:none;cursor:pointer;
+    font-family:inherit;font-size:14px;font-weight:600;color:var(--ink-faint);
+    padding:13px 22px;border-bottom:2px solid transparent;
+  }
+  .tab.active{color:var(--ink);border-bottom-color:var(--gold)}
+  .panel{display:none;padding-top:28px}
+  .panel.active{display:block}
+  .r-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:24px 28px;
+  }
+  .r-date{font-size:12px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+  .r-title{font-size:18px;font-weight:700;margin-bottom:14px}
+  .r-items{list-style:none}
+  .r-items li{
+    padding:10px 0 10px 22px;position:relative;font-size:14.5px;color:var(--ink-soft);
+    border-bottom:1px solid var(--line);
+  }
+  .r-items li:last-child{border-bottom:none}
+  .r-items li::before{content:"▸";position:absolute;left:2px;color:var(--gold);font-size:12px}
+  .r-stamp{margin-top:14px;font-size:11px;color:var(--ink-faint)}
+  .empty{color:var(--ink-faint);font-size:14px;padding:8px 0}
+  details.r-full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+  details.r-full summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--gold)}
+  details.r-full pre{
+    white-space:pre-wrap;font-family:inherit;font-size:13.5px;color:var(--ink-soft);
+    margin-top:10px;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-inner">
+    <div class="brand">
+      <img class="press-mark" src="avatars/Logo-Agapae.jpg" alt="AGAPAE">
+      <div>
+        <h1>Routines</h1>
+        <div class="sub mono">Daily · Weekly · Monthly</div>
+      </div>
+    </div>
+    <a class="back" href="index.html">← Team Console</a>
+  </div>
+</header>
+
+<div class="tabs">
+  <div class="wrap">
+    <button class="tab active" data-t="daily" onclick="switchTab('daily')">Daily</button>
+    <button class="tab" data-t="weekly" onclick="switchTab('weekly')">Weekly</button>
+    <button class="tab" data-t="monthly" onclick="switchTab('monthly')">Monthly</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="panel active" id="p-daily"><div class="r-card" id="c-daily"><div class="empty">กำลังโหลด…</div></div></div>
+  <div class="panel" id="p-weekly"><div class="r-card" id="c-weekly"><div class="empty">กำลังโหลด…</div></div></div>
+  <div class="panel" id="p-monthly"><div class="r-card" id="c-monthly"><div class="empty">กำลังโหลด…</div></div></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({
+  apiKey:"AIzaSyCtIZVYmibm4Rwb878iEdnxHjvpVcLfs2E",
+  authDomain:"agapae-studio.firebaseapp.com",
+  projectId:"agapae-studio",
+  storageBucket:"agapae-studio.firebasestorage.app",
+  messagingSenderId:"647606526363",
+  appId:"1:647606526363:web:6d0bcd10ef5451aca6c13e"
+});
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.t===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p-'+t));
+}
+
+const EMPTY_TEXT = {
+  daily:  "ยังไม่มีสรุปข่าววันนี้ — Daily routine เขียนทุก 09:00",
+  weekly: "ยังไม่มีสรุปประจำสัปดาห์ — Weekly routine จะเริ่มเขียนเร็ว ๆ นี้",
+  monthly:"ยังไม่มีสรุปประจำเดือน — Monthly routine จะเริ่มเขียนเร็ว ๆ นี้",
+};
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+function render(kind, d){
+  const box = document.getElementById('c-'+kind);
+  if(!d || !Array.isArray(d.items) || !d.items.length){
+    box.innerHTML = `<div class="empty">${EMPTY_TEXT[kind]}</div>`;
+    return;
+  }
+  box.innerHTML = `
+    ${d.date ? `<div class="r-date mono">${esc(d.date)}</div>` : ""}
+    <div class="r-title">${esc(d.title || "สรุป")}</div>
+    <ul class="r-items">${d.items.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
+    ${d.full ? `<details class="r-full"><summary>อ่านฉบับเต็ม</summary><pre>${esc(d.full)}</pre></details>` : ""}
+    ${d.updatedAt ? `<div class="r-stamp mono">อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}</div>` : ""}`;
+}
+
+for(const kind of ["daily","weekly","monthly"]){
+  firebase.firestore().collection("agents").doc(kind).onSnapshot(
+    d=>render(kind, d.exists ? d.data() : null),
+    err=>{console.warn("Firestore",kind,err); render(kind,null);}
+  );
+}
+</script>
+</body>
+</html>
