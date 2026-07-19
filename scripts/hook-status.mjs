@@ -131,4 +131,7 @@ if (wlEntry) {
   jobs.push(fetch(commitUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: commitBody }));
 }
 
+// อัปเดต widget "Claude Limit" บน dashboard (best-effort, ไม่ block hook)
+spawn("node", [join(ROOT, "scripts", "push-limit.mjs")], { detached: true, stdio: "ignore" }).unref();
+
 Promise.allSettled(jobs).finally(() => process.exit(0));

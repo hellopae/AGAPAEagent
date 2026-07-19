@@ -90,6 +90,64 @@
   }
   .view-tab.active .tab-count{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
 
+  /* ---------- widget toggle (menu bar) ---------- */
+  .wtoggle{
+    margin-left:auto;align-self:center;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;
+    padding:6px 13px;border-radius:999px;border:1px solid var(--line-strong);
+    background:transparent;color:var(--ink-soft);cursor:pointer;transition:.16s;
+  }
+  .wtoggle:hover{border-color:var(--ink);color:var(--ink)}
+  .wtoggle.on{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
+  .wtoggle .car{font-size:9px;transition:transform .2s;display:inline-block}
+  .wtoggle.on .car{transform:rotate(180deg)}
+
+  /* ---------- widget bar ---------- */
+  .widget-bar{
+    border-bottom:1px solid var(--line);
+    background:var(--paper-2);
+    overflow:hidden;max-height:0;transition:max-height .3s cubic-bezier(.4,0,.2,1);
+  }
+  .widget-bar.open{max-height:520px}
+  .widget-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;padding:18px 0;
+  }
+  .widget{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;min-width:0;display:flex;flex-direction:column;gap:10px;
+  }
+  .widget .wh{display:flex;align-items:center;gap:8px}
+  .widget .wh h4{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-faint);font-weight:500;
+  }
+  .widget .wh .wdot{width:7px;height:7px;border-radius:50%;flex:none}
+  .widget .wh .wup{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint)}
+  .w-big{font-size:30px;font-weight:600;line-height:1;letter-spacing:-.01em}
+  .w-big .u{font-size:14px;color:var(--ink-faint);font-weight:500}
+  .w-sub{font-size:12px;color:var(--ink-soft)}
+  .w-bar{height:6px;border-radius:999px;background:var(--paper);border:1px solid var(--line);overflow:hidden}
+  .w-bar i{display:block;height:100%;border-radius:999px;background:var(--done);transition:width .4s}
+  .w-bar i.warn{background:var(--gold)}
+  .w-bar i.hot{background:var(--flagged)}
+  .w-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:12.5px}
+  .w-row .k{color:var(--ink-faint);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+  .w-row .v{color:var(--ink);font-weight:600}
+  .w-news{display:flex;flex-direction:column;gap:6px;min-height:0}
+  .w-news .nt{font-size:13px;font-weight:600;line-height:1.35;font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .w-news ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+  .w-news li{
+    font-size:12px;color:var(--ink-soft);line-height:1.45;padding-left:14px;position:relative;
+    font-family:"Noto Sans Thai","Space Grotesk",sans-serif;
+  }
+  .w-news li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+  .w-empty{font-size:12px;color:var(--ink-faint);font-style:italic}
+  .w-chg{font-size:12px;font-weight:600}
+  .w-chg.up{color:var(--done)}
+  .w-chg.dn{color:var(--flagged)}
+
   /* ---------- hero strip ---------- */
   .hero{padding:40px 0 24px}
   .hero .ey{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
@@ -296,6 +354,46 @@
       <button class="view-tab" data-v="worklog" onclick="switchView('worklog')">
         Work Log <span class="tab-count" id="wlCount">0</span>
       </button>
+      <button class="wtoggle" id="wtoggle" onclick="toggleWidgets()">Widgets <span class="car">▾</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WIDGET BAR ===== -->
+<div class="widget-bar" id="widgetBar">
+  <div class="wrap">
+    <div class="widget-grid">
+
+      <!-- Claude limit -->
+      <div class="widget" id="wLimit">
+        <div class="wh"><span class="wdot" style="background:var(--accent)"></span><h4>Claude Limit · 5 ชม.</h4><span class="wup" id="wLimitUp">—</span></div>
+        <div class="w-big" id="wLimitPct">—<span class="u">%</span></div>
+        <div class="w-bar"><i id="wLimitBar" style="width:0%"></i></div>
+        <div class="w-sub" id="wLimitSub">รอข้อมูลจากเครื่อง (scripts/push-limit.mjs)</div>
+      </div>
+
+      <!-- Agent work today -->
+      <div class="widget" id="wWork">
+        <div class="wh"><span class="wdot" style="background:var(--working)"></span><h4>งานของ Agent</h4></div>
+        <div class="w-row"><span class="k">กำลังทำ</span><span class="v" id="wWorking">0</span></div>
+        <div class="w-row"><span class="k">เสร็จวันนี้</span><span class="v" id="wDoneToday">0</span></div>
+        <div class="w-row"><span class="k">ทั้งหมดใน log</span><span class="v" id="wTotal">0</span></div>
+        <div class="w-sub" id="wLatest">—</div>
+      </div>
+
+      <!-- Daily routines: news + bitcoin -->
+      <div class="widget" id="wDaily">
+        <div class="wh"><span class="wdot" style="background:var(--c-news)"></span><h4>Daily Routines</h4><span class="wup" id="wDailyUp">—</span></div>
+        <div class="w-row" style="align-items:center">
+          <span class="k">Bitcoin</span>
+          <span style="display:flex;align-items:baseline;gap:8px">
+            <span class="v mono" id="wBtc">—</span>
+            <span class="w-chg" id="wBtcChg"></span>
+          </span>
+        </div>
+        <div class="w-news" id="wNews"><span class="w-empty">รอสรุปข่าวประจำวัน (routine 09:00)</span></div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -510,8 +608,94 @@ function mergeWorklog(){
   WORKLOG = [...map.values()].sort((a,b) => String(b.datetime||'').localeCompare(String(a.datetime||'')));
   updateWlStats();
   buildWlFilters();
+  updateWorkWidget();
+  renderDaily(DAILY_DOC);
   if(currentView==='worklog') renderWorklogEntries();
 }
+
+/* =====================================================================
+   WIDGET BAR — toggle + data
+   ===================================================================== */
+const widgetBar = document.getElementById('widgetBar');
+const wtoggleBtn = document.getElementById('wtoggle');
+let widgetsOpen = localStorage.getItem('agapae.widgets') !== '0'; // default: เปิด
+function applyWidgets(){
+  widgetBar.classList.toggle('open', widgetsOpen);
+  wtoggleBtn.classList.toggle('on', widgetsOpen);
+}
+function toggleWidgets(){
+  widgetsOpen = !widgetsOpen;
+  localStorage.setItem('agapae.widgets', widgetsOpen ? '1' : '0');
+  applyWidgets();
+}
+applyWidgets();
+
+function relTime(iso){
+  if(!iso) return '—';
+  const m = Math.round((Date.now() - new Date(iso).getTime())/60000);
+  if(m < 1) return 'ตอนนี้';
+  if(m < 60) return m+' นาทีก่อน';
+  const h = Math.round(m/60);
+  if(h < 24) return h+' ชม.ก่อน';
+  return Math.round(h/24)+' วันก่อน';
+}
+
+/* --- widget: Claude limit (Firestore doc agents/claude_limit) --- */
+function renderLimit(d){
+  if(!d) return;
+  const pct = Math.min(100, Math.round(d.pct ?? 0));
+  document.getElementById('wLimitPct').innerHTML = pct+'<span class="u">%</span>';
+  const bar = document.getElementById('wLimitBar');
+  bar.style.width = pct+'%';
+  bar.className = pct >= 85 ? 'hot' : pct >= 60 ? 'warn' : '';
+  const reset = d.resetAt ? new Date(d.resetAt).toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'}) : '—';
+  const used = d.usedTokens ? (d.usedTokens/1000).toFixed(0)+'k' : '—';
+  const lim  = d.limitTokens ? (d.limitTokens/1000000).toFixed(1)+'M' : '—';
+  document.getElementById('wLimitSub').textContent = `${used} / ${lim} tokens · รีเซ็ต ${reset} น.`;
+  document.getElementById('wLimitUp').textContent = relTime(d.updatedAt);
+}
+
+/* --- widget: agent work (จาก AGENTS + WORKLOG ที่มีอยู่แล้ว) --- */
+function updateWorkWidget(){
+  const today = new Date().toISOString().slice(0,10);
+  document.getElementById('wWorking').textContent = AGENTS.filter(a=>a.status==='working').length;
+  document.getElementById('wDoneToday').textContent = WORKLOG.filter(e=>String(e.datetime||'').slice(0,10)===today).length;
+  document.getElementById('wTotal').textContent = WORKLOG.length;
+  const latest = WORKLOG[0];
+  document.getElementById('wLatest').textContent = latest ? `ล่าสุด: ${latest.agentName} — ${latest.title}` : '—';
+}
+
+/* --- widget: daily routines — news digest (Firestore agents/daily) --- */
+function renderDaily(d){
+  const box = document.getElementById('wNews');
+  // fallback: entry ล่าสุดของ News agent จาก worklog
+  const wlNews = WORKLOG.find(e=>e.agent==='news');
+  if(d && Array.isArray(d.items) && d.items.length){
+    box.innerHTML = `<div class="nt">${d.title || 'สรุปข่าวประจำวัน'}</div>
+      <ul>${d.items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
+    document.getElementById('wDailyUp').textContent = relTime(d.updatedAt);
+  } else if(wlNews){
+    box.innerHTML = `<div class="nt">${wlNews.title}</div><ul><li>${wlNews.summary}</li></ul>`;
+    document.getElementById('wDailyUp').textContent = wlNews.displayDate || '—';
+  }
+}
+let DAILY_DOC = null;
+
+/* --- widget: bitcoin (CoinGecko — refresh ทุก 3 นาที) --- */
+async function loadBtc(){
+  try{
+    const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,thb&include_24hr_change=true');
+    const j = await r.json();
+    const b = j.bitcoin;
+    document.getElementById('wBtc').textContent = '$'+Math.round(b.usd).toLocaleString('en-US');
+    const chg = b.usd_24h_change;
+    const el = document.getElementById('wBtcChg');
+    el.textContent = (chg>=0?'▲ ':'▼ ')+Math.abs(chg).toFixed(1)+'%';
+    el.className = 'w-chg '+(chg>=0?'up':'dn');
+  }catch(e){ document.getElementById('wBtc').textContent = 'offline'; }
+}
+loadBtc();
+setInterval(loadBtc, 180000);
 
 /* =====================================================================
    VIEW SWITCHING
@@ -595,6 +779,7 @@ function updateStats(){
   document.getElementById('nWorking').textContent = AGENTS.filter(a=>a.status==='working').length;
   document.getElementById('nIdle').textContent = AGENTS.filter(a=>a.status==='idle').length;
   document.getElementById('nDone').textContent = AGENTS.filter(a=>a.status==='done').length;
+  updateWorkWidget();
 }
 
 /* =====================================================================
@@ -812,6 +997,14 @@ firebase.firestore().collection("agents").doc("worklog").onSnapshot(d=>{
   if(tag){ tag.textContent="LIVE"; tag.style.color="var(--done)"; }
   if(msg) msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> + <span class="mono">worklog.json</span>';
 },err=>console.warn("Firestore worklog:",err));
+/* widget: Claude limit — เขียนโดย scripts/push-limit.mjs บนเครื่อง */
+firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
+  if(d.exists) renderLimit(d.data());
+},err=>console.warn("Firestore claude_limit:",err));
+/* widget: Daily digest — เขียนโดย Daily News routine */
+firebase.firestore().collection("agents").doc("daily").onSnapshot(d=>{
+  if(d.exists){ DAILY_DOC = d.data(); renderDaily(DAILY_DOC); }
+},err=>console.warn("Firestore daily:",err));
 </script>
 </body>
 </html>
