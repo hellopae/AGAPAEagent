@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T04:39:39.313Z",
+  "updatedAt": "2026-07-22T04:48:59.779Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Widget panel การเงิน + auto วันที่เหลือ (budget2569)",
+      "task": "ปิด Weekly Finance routine + วันที่เหลือสดบน Widget",
       "report": {
-        "when": "11:39",
-        "title": "Widget panel การเงิน + auto วันที่เหลือ (budget2569)",
-        "body": "แก้ 2 จุดตามที่ Kittanate สั่ง: (1) วันที่เหลือในแอป budget คิด auto ตามวันนี้เอง ล้าง override เก่าเมื่อข้ามวัน (2) โชว์งบ 3 ตัว+ปฏิทินบน Widget โดยแอป budget push agents/finance เอง (routine cloud อ่านข้อมูลส่วนตัวไม่ได้) · push ขึ้น budget2569 repo แล้ว"
+        "when": "11:48",
+        "title": "ปิด Weekly Finance routine + วันที่เหลือสดบน Widget",
+        "body": "Weekly Finance routine disabled=true · การเงินยกไปไว้บน Widget (agents/finance) อัปเดตสดทุกวัน"
       }
     },
     {

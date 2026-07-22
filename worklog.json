@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-22T04:39:39.313Z",
+  "updatedAt": "2026-07-22T04:48:59.779Z",
   "entries": [
+    {
+      "id": "wl-260722-dale-ri4j",
+      "datetime": "2026-07-22T04:48:59.779Z",
+      "displayDate": "22 ก.ค. 2569",
+      "displayTime": "11:48",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ปิด Weekly Finance routine + วันที่เหลือสดบน Widget",
+      "summary": "ปิด cloud routine Weekly Finance (อ่าน budgets ส่วนตัวไม่ได้อยู่แล้ว) — การเงินมาจากแอป budget push agents/finance สดทุกครั้งที่ใช้งาน · Widget คิดวันที่เหลือสิ้นเดือนสดจากวันนี้เอง อัปเดตทุกวันคู่กับ Daily news",
+      "project": "agapae-dashboard"
+    },
     {
       "id": "wl-260722-dale-fho1",
       "datetime": "2026-07-22T04:39:39.313Z",
