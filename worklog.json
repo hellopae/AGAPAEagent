@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-22T04:48:59.779Z",
+  "updatedAt": "2026-07-22T05:14:43.918Z",
   "entries": [
+    {
+      "id": "wl-260722-dale-olla",
+      "datetime": "2026-07-22T05:14:43.918Z",
+      "displayDate": "22 ก.ค. 2569",
+      "displayTime": "12:14",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Widget: แถบ accordion + ปฏิทินกดดูรายวัน + สรุปวันนี้",
+      "summary": "แก้ scroll ค้าง = ทำ body เลื่อนได้ + ทุกส่วนเป็นแถบกดเปิด-ปิด (CLAUDE LIMITS/Bitcoin/การเงิน/ข่าว/Monthly/ทีม) · ปฏิทินกดวันดูรายรับ-รายจ่ายของวันนั้นได้ + โชว์ \"วันนี้มีอะไร\" · แอป budget push daysJson รายละเอียดรายวัน · rebuild .app แล้ว",
+      "project": "agapae-dashboard"
+    },
     {
       "id": "wl-260722-dale-ri4j",
       "datetime": "2026-07-22T04:48:59.779Z",
