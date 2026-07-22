@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-19T10:25:19Z",
+  "updatedAt": "2026-07-22T04:39:39.313Z",
   "entries": [
+    {
+      "id": "wl-260722-dale-fho1",
+      "datetime": "2026-07-22T04:39:39.313Z",
+      "displayDate": "22 ก.ค. 2569",
+      "displayTime": "11:39",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Widget panel การเงิน + auto วันที่เหลือ (budget2569)",
+      "summary": "budget2569: เปิดแอปแล้วดันสรุปการเงินเดือนนี้ (รายรับรวม/รายจ่ายรวม/ยอดคงเหลือ/กำไร-ขาดทุน/วันที่เหลือ) + วันไหนมีรายรับ-รายจ่าย ขึ้น agents/finance สด · Widget เพิ่ม panel การเงิน + ปฏิทินจุดเตือน · แก้ override วันที่เหลือให้รีเซ็ตเป็น auto เมื่อข้ามวัน · Chris QA ผ่าน",
+      "project": "budget2569"
+    },
     {
       "id": "wl-260719-routines-page",
       "datetime": "2026-07-19T10:25:19Z",

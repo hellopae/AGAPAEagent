@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T16:37:51.304Z",
+  "updatedAt": "2026-07-22T04:39:39.313Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — แก้ B1 (PDF upload) + B2 (ชื่อ template) + deploy",
+      "task": "Widget panel การเงิน + auto วันที่เหลือ (budget2569)",
       "report": {
-        "when": "19:40",
-        "title": "แก้ B1+B2 เสร็จ + deploy",
-        "body": "PDF upload ใช้ได้ (loadingTask.destroy) · TP-P02 = กรมท่าทองคำ · เพิ่ม e2e-pdf · bundle index-BnO8hyzo.js"
+        "when": "11:39",
+        "title": "Widget panel การเงิน + auto วันที่เหลือ (budget2569)",
+        "body": "แก้ 2 จุดตามที่ Kittanate สั่ง: (1) วันที่เหลือในแอป budget คิด auto ตามวันนี้เอง ล้าง override เก่าเมื่อข้ามวัน (2) โชว์งบ 3 ตัว+ปฏิทินบน Widget โดยแอป budget push agents/finance เอง (routine cloud อ่านข้อมูลส่วนตัวไม่ได้) · push ขึ้น budget2569 repo แล้ว"
       }
     },
     {
