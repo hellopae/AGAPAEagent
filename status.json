@@ -239,7 +239,7 @@
       "name": "Dale",
       "role": "DevOps & Technical",
       "pipeline": "standalone",
-      "img": "avatars/Dale.png",
+      "img": "avatars/Dale.png?v=2",
       "persona": "ลงมือจริง ชอบของที่ build ผ่านและใช้งานได้บน URL จริง",
       "caps": [
         "Build & deploy",
