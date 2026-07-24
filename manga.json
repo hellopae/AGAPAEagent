@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-24T06:40:00.000Z",
-  "note": "อัปเดตมือหรือให้ routine เขียนทับได้ · nextAt = วันที่คาดว่าตอนถัดไปจะออก (ปล่อย null ถ้าไม่ชัวร์)",
+  "updatedAt": "2026-07-24T08:10:00.000Z",
+  "note": "One Piece + Dandadan อ่านไทยทางการที่ MANGA Plus (ตั้งภาษาเป็นไทยในแอป) · Versus อ่านไทยที่ niceoppai · แก้เลขตอน/ลิงก์ได้ตรงนี้ ไม่ต้อง rebuild widget",
   "series": [
     {
       "title": "One Piece",
@@ -10,7 +10,7 @@
       "nextAt": "2026-07-26",
       "cadence": "รายสัปดาห์",
       "note": "พัก 1 สัปดาห์ (ข้าม Jump #34)",
-      "source": "MANGA Plus",
+      "source": "MANGA Plus (ไทย)",
       "url": "https://mangaplus.shueisha.co.jp/titles/100020"
     },
     {
@@ -21,8 +21,8 @@
       "nextAt": null,
       "cadence": "รายสัปดาห์",
       "note": "",
-      "source": "Shonen Jump / Viz",
-      "url": "https://www.viz.com/shonenjump/chapters/dandadan"
+      "source": "MANGA Plus (ไทย)",
+      "url": "https://mangaplus.shueisha.co.jp/titles/100171"
     },
     {
       "title": "Versus",
@@ -31,9 +31,9 @@
       "next": 35,
       "nextAt": null,
       "cadence": "รายเดือน",
-      "note": "Monthly Shōnen Sirius · โดย ONE × Azuma",
-      "source": "K Manga",
-      "url": "https://kmanga.kodansha.com/title/10569"
+      "note": "ONE × Azuma · แปลไทยที่ niceoppai",
+      "source": "Niceoppai (ไทย)",
+      "url": "https://www.niceoppai.net/Versus/"
     }
   ]
 }
