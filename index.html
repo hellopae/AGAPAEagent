@@ -134,6 +134,9 @@
   .w-bar i.warn{background:var(--gold)}
   .w-bar i.hot{background:var(--flagged)}
   .w-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:12.5px}
+  .w-lim-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:10.5px;margin-bottom:5px;color:var(--ink-faint)}
+  .w-lim-row .k{letter-spacing:.08em;text-transform:uppercase}
+  .w-lim-row b{color:var(--ink);font-weight:600}
   .w-row .k{color:var(--ink-faint);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
   .w-row .v{color:var(--ink);font-weight:600}
   .w-news{display:flex;flex-direction:column;gap:6px;min-height:0}
@@ -228,7 +231,11 @@
   .td-card .td-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
   .td-card .td-v{font-size:22px;font-weight:600;font-family:"IBM Plex Mono",monospace}
   .td-v.soon{color:var(--flagged)} .td-v.rep{color:var(--gold)}
-  .td-group{margin-top:34px}
+  /* 3 กลุ่มวางข้างกันเป็นคอลัมน์ (จอแคบยุบเป็น 2 แล้วเหลือ 1) */
+  .td-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;align-items:start;margin-top:10px}
+  @media(max-width:900px){.td-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:620px){.td-groups{grid-template-columns:minmax(0,1fr)}}
+  .td-group{margin-top:24px;min-width:0}
   .td-group-head{
     display:flex;align-items:baseline;justify-content:space-between;gap:12px;
     padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:4px;
@@ -255,12 +262,11 @@
   .td-when.soon{color:var(--flagged);border-color:rgba(122,74,58,.35)}
   .td-when.over{color:var(--paper-2);background:var(--flagged);border-color:var(--flagged)}
   .td-rep{font-size:11px;color:var(--gold);flex:none}
-  .td-left{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-faint);flex:none;min-width:52px;text-align:right}
-  @media(max-width:560px){
-    .td-item{flex-wrap:wrap;row-gap:6px}
-    .td-title{flex:1 1 100%;order:2}
-    .td-left{display:none}
-  }
+  .td-left{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-soft);flex:none;min-width:64px;text-align:right}
+  .td-left.soon{color:var(--flagged);font-weight:500}
+  .td-left.over{color:var(--flagged);font-weight:600}
+  .td-item{font-size:14px}
+  .td-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
   /* ---------- Work Log collapsible ---------- */
   .wl-collapse{margin-top:44px;border-top:1px solid var(--line);padding-top:22px}
@@ -521,10 +527,13 @@
 
       <!-- Claude limit -->
       <div class="widget" id="wLimit">
-        <div class="wh"><span class="wdot" style="background:var(--accent)"></span><h4>Claude Limit · 5 ชม.</h4><span class="wup" id="wLimitUp">—</span></div>
+        <div class="wh"><span class="wdot" style="background:var(--accent)"></span><h4>Claude Limit</h4><span class="wup" id="wLimitUp">—</span></div>
         <div class="w-big" id="wLimitPct">—<span class="u">%</span></div>
+        <div class="w-lim-row"><span class="k mono">Session · 5 ชม.</span><span class="v mono" id="wLimitReset">—</span></div>
         <div class="w-bar"><i id="wLimitBar" style="width:0%"></i></div>
-        <div class="w-sub" id="wLimitSub">รอข้อมูลจากเครื่อง (scripts/push-limit.mjs)</div>
+        <div class="w-lim-row" style="margin-top:12px"><span class="k mono">Weekly · 7 วัน <b id="wLimitWkPct">—</b></span><span class="v mono" id="wLimitWkReset">—</span></div>
+        <div class="w-bar"><i id="wLimitWkBar" style="width:0%"></i></div>
+        <div class="w-sub" id="wLimitSub">รอข้อมูลจากแอป AGAPAE Widget (เปิดแอปค้างไว้)</div>
       </div>
 
       <!-- Agent work today -->
@@ -819,15 +828,28 @@ function relTime(iso){
 /* --- widget: Claude limit (Firestore doc agents/claude_limit) --- */
 function renderLimit(d){
   if(!d) return;
-  const pct = Math.min(100, Math.round(d.pct ?? 0));
+  const fromWidget = d.fiveHourPct != null;          // แอป Widget เขียน = ตัวเลขจริงจาก usage endpoint
+  const pct   = Math.min(100, Math.round(fromWidget ? d.fiveHourPct : (d.pct ?? 0)));
+  const wkPct = fromWidget ? Math.min(100, Math.round(d.sevenDayPct ?? 0)) : null;
+  const barCls = p => p >= 85 ? 'hot' : p >= 60 ? 'warn' : '';
+  const hhmm  = iso => iso ? new Date(iso).toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'}) : '—';
+  const dayHm = iso => iso ? new Date(iso).toLocaleString('th-TH',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '—';
+
   document.getElementById('wLimitPct').innerHTML = pct+'<span class="u">%</span>';
   const bar = document.getElementById('wLimitBar');
   bar.style.width = pct+'%';
-  bar.className = pct >= 85 ? 'hot' : pct >= 60 ? 'warn' : '';
-  const reset = d.resetAt ? new Date(d.resetAt).toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'}) : '—';
-  const used = d.usedTokens ? (d.usedTokens/1000).toFixed(0)+'k' : '—';
-  const lim  = d.limitTokens ? (d.limitTokens/1000000).toFixed(1)+'M' : '—';
-  document.getElementById('wLimitSub').textContent = `${used} / ${lim} tokens · รีเซ็ต ${reset} น.`;
+  bar.className = barCls(pct);
+  document.getElementById('wLimitReset').textContent = 'รีเซ็ต ' + hhmm(fromWidget ? d.fiveHourResetAt : d.resetAt) + ' น.';
+
+  const wkBar = document.getElementById('wLimitWkBar');
+  document.getElementById('wLimitWkPct').textContent = wkPct === null ? '—' : wkPct + '%';
+  document.getElementById('wLimitWkReset').textContent = wkPct === null ? '' : 'รีเซ็ต ' + dayHm(d.sevenDayResetAt);
+  wkBar.style.width = (wkPct ?? 0) + '%';
+  wkBar.className = barCls(wkPct ?? 0);
+
+  document.getElementById('wLimitSub').textContent = fromWidget
+    ? 'ตัวเลขจริงจากบัญชี Claude · ส่งมาจากแอป AGAPAE Widget'
+    : (d.usedTokens ? `${(d.usedTokens/1000).toFixed(0)}k / ${(d.limitTokens/1e6).toFixed(1)}M tokens (ccusage ประมาณการ)` : 'รอข้อมูลจากแอป Widget');
   document.getElementById('wLimitUp').textContent = relTime(d.updatedAt);
 }
 
@@ -1351,6 +1373,15 @@ function tdDaysLeft(due){
   const now = new Date(); now.setHours(0,0,0,0);
   return Math.round((d - now) / 86400000);
 }
+const TD_MONTHS = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+/* "2026-08-12" → "12 ส.ค. 69" (พ.ศ. 2 หลัก) */
+function tdDueText(due){
+  if(!due) return '';
+  const d = new Date(due + 'T00:00:00');
+  if(isNaN(d)) return '';
+  const be = String(d.getFullYear() + 543).slice(-2);
+  return `${d.getDate()} ${TD_MONTHS[d.getMonth()]} ${be}`;
+}
 function tdLeftText(n){
   if(n === null) return '';
   if(n < 0)  return `เลย ${Math.abs(n)} วัน`;
@@ -1367,12 +1398,15 @@ function tdItemHtml(it){
     if(left < 0) wcls = ' over';
     else if(left <= 7) wcls = ' soon';
   }
+  /* งานทำซ้ำ/ไม่มีกำหนด → โชว์ป้ายรอบ ("ทุกวันที่ 12") คู่กับวันที่จริง
+     ส่วนงานวันเดียว ป้ายจะซ้ำกับคอลัมน์วันที่ เลยตัดออก */
+  const showWhen = !!it.when && it.when !== '—' && (!it.due || it.when.startsWith('ทุก'));
   return `<li class="td-item${it.done?' done':''}">
     <span class="td-box">${it.done?'✓':''}</span>
     <span class="td-title">${TD_ESC(it.title)}</span>
     ${it.repeat?'<span class="td-rep" title="ทำซ้ำ">↻</span>':''}
-    ${it.when && it.when !== '—' ? `<span class="td-when${wcls}">${TD_ESC(it.when)}</span>` : ''}
-    <span class="td-left">${TD_ESC(tdLeftText(left))}</span>
+    ${showWhen ? `<span class="td-when${wcls}">${TD_ESC(it.when)}</span>` : ''}
+    <span class="td-left${wcls}">${TD_ESC(tdDueText(it.due) || (showWhen ? '' : it.when))}</span>
   </li>`;
 }
 
@@ -1398,6 +1432,7 @@ function renderTodo(){
     <div class="td-card"><span class="td-k">กลุ่ม</span><span class="td-v">${sections.length}</span></div>
   </div>`;
 
+  html += '<div class="td-groups">';
   for(const s of sections){
     const list = open.filter(i => (s.id === null ? true : i.section === s.id));
     if(!list.length) continue;
@@ -1407,6 +1442,7 @@ function renderTodo(){
       <ul class="td-list">${list.map(tdItemHtml).join('')}</ul>
     </div>`;
   }
+  html += '</div>';
   if(done.length){
     html += `<div class="td-group">
       <div class="td-group-head"><h3>เสร็จแล้ว</h3><span class="td-n">${done.length}</span></div>
@@ -1434,7 +1470,7 @@ function renderTodoWidget(){
   if(!rows.length){ box.innerHTML = '<span class="w-empty">ไม่มีงานที่มีกำหนดวัน</span>'; return; }
   box.innerHTML = rows.map(i => `<div class="w-row">
     <span class="k">${TD_ESC(i.title)}</span>
-    <span class="v mono" style="${i.n <= 7 ? 'color:var(--flagged)' : ''}">${TD_ESC(tdLeftText(i.n))}</span>
+    <span class="v mono" style="${i.n <= 7 ? 'color:var(--flagged)' : ''}">${TD_ESC(tdDueText(i.due))}</span>
   </div>`).join('');
   const up = document.getElementById('wTodoUp');
   if(up) up.textContent = TODO.updatedAt || '';

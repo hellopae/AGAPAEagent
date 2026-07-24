@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-24T11:32:46.112870Z",
+  "updatedAt": "2026-07-24T12:04:14.773586Z",
   "entries": [
+    {
+      "id": "wl-260724-dale-limit",
+      "datetime": "2026-07-24T12:04:14.773586Z",
+      "displayDate": "24 ก.ค. 2569",
+      "displayTime": "19:04",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "To Do จัดกลุ่มเป็นคอลัมน์ + โชว์วันที่ + Claude Limit ใช้ตัวเลขจริงจาก Widget",
+      "summary": "To Do: 3 กลุ่มวางข้างกันเป็นคอลัมน์ (กำหนดวันที่ขึ้นก่อน) ช่องขวาเปลี่ยนจาก 'อีกกี่วัน' เป็นวันที่จริง · Claude Limit: แอป Widget PATCH usage จริง (5 ชม. + 7 วัน) ขึ้น Firestore agents/claude_limit เว็บโชว์ 2 แถบเหมือนแอป แทน ccusage ที่อัปเดตเฉพาะตอน hook ทำงาน",
+      "project": "agapae-dashboard"
+    },
     {
       "id": "wl-260724-dale-todoist",
       "datetime": "2026-07-24T11:32:46.112870Z",

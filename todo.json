@@ -3,8 +3,8 @@
   "projectId": "6h7wcgqCVqFF5gJM",
   "updatedAt": "2026-07-24",
   "sections": [
-    { "id": "routine", "name": "ประจำเดือน / ประจำปี" },
     { "id": "dated", "name": "กำหนดวันที่" },
+    { "id": "routine", "name": "ประจำเดือน / ประจำปี" },
     { "id": "note", "name": "โน้ต / Someday" }
   ],
   "items": [

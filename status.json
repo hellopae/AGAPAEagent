@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T11:32:46.112870Z",
+  "updatedAt": "2026-07-24T12:04:14.773586Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "To Do sync กับ Todoist + จัด layout Widget เป็น 3 แถว",
+      "task": "To Do จัดกลุ่มเป็นคอลัมน์ + โชว์วันที่ + Claude Limit ใช้ตัวเลขจริงจาก Widget",
       "report": {
-        "when": "18:32",
-        "title": "To Do sync กับ Todoist + จัด layout Widget เป็น 3 แถว",
-        "body": "todo.json ดึงโครงจาก Todoist project PAE To Do (25 งาน / 3 section) เว็บและ Widget แบ่งกลุ่มตาม section เดียวกัน · จัดแถบในแอป Widget ใหม่เป็น 3 แถว: แถว1 Claude limits·ข่าวเช้า·Bitcoin·มังงะ / แถว2 การเงิน·To Do / แถว3 ทีม AGAPAE·บทความ"
+        "when": "19:04",
+        "title": "To Do จัดกลุ่มเป็นคอลัมน์ + โชว์วันที่ + Claude Limit ใช้ตัวเลขจริงจาก Widget",
+        "body": "To Do: 3 กลุ่มวางข้างกันเป็นคอลัมน์ (กำหนดวันที่ขึ้นก่อน) ช่องขวาเปลี่ยนจาก 'อีกกี่วัน' เป็นวันที่จริง · Claude Limit: แอป Widget PATCH usage จริง (5 ชม. + 7 วัน) ขึ้น Firestore agents/claude_limit เว็บโชว์ 2 แถบเหมือนแอป แทน ccusage ที่อัปเดตเฉพาะตอน hook ทำงาน"
       }
     },
     {
