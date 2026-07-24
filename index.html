@@ -163,6 +163,44 @@
   .w-manga .mg-chip.out{color:var(--done);border-color:rgba(58,107,80,.4)}
   .w-manga .mg-chip.soon{color:var(--gold);border-color:rgba(184,150,96,.4)}
   .w-manga .mg-src{font-size:9.5px;color:var(--ink-faint);white-space:nowrap;flex:none}
+
+  /* ---------- Finance view ---------- */
+  .muted{color:var(--ink-faint);font-size:13px;font-style:italic}
+  .fin-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
+  .fin-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .fin-card .fin-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .fin-card .fin-v{font-size:22px;font-weight:600;font-family:"IBM Plex Mono",monospace;letter-spacing:-.01em}
+  .fin-v.inc{color:var(--done)} .fin-v.exp{color:var(--flagged)}
+  .fin-sub{margin-top:14px;font-size:12px;color:var(--ink-soft)}
+  .fin-cal{margin-top:26px;max-width:520px}
+  .fin-cal-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+  .fin-cal-dow span{text-align:center;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint);letter-spacing:.05em}
+  .fin-cal-dow span.we{color:var(--flagged)}
+  .fin-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .fin-cell{
+    aspect-ratio:1;border:1px solid var(--line);border-radius:9px;background:var(--card);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+    cursor:pointer;position:relative;font:inherit;color:var(--ink);transition:border-color .15s,background .15s;
+  }
+  .fin-cell:hover{border-color:var(--gold)}
+  .fin-cell.empty{border:none;background:none;cursor:default}
+  .fin-cell.today{border-color:var(--accent);background:var(--paper-2)}
+  .fin-cell.sel{border-color:var(--ink);background:var(--paper-2);box-shadow:0 0 0 1px var(--ink)}
+  .fin-cell .fin-day{font-size:13px;font-weight:500;font-family:"IBM Plex Mono",monospace}
+  .fin-dots{display:flex;gap:3px;height:6px}
+  .fin-dots .dot{width:5px;height:5px;border-radius:50%}
+  .fin-dots .dot.inc{background:var(--done)} .fin-dots .dot.exp{background:var(--flagged)}
+  .fin-day-detail{margin-top:16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+  .fin-day-detail-head{font-size:12px;color:var(--ink-soft);margin-bottom:10px;letter-spacing:.03em}
+  .fin-day-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .fin-day-list li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:13.5px}
+  .fin-di-name{font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .fin-di-name.inc{color:var(--done)} .fin-di-name.exp{color:var(--ink)}
+  .fin-di-amt{font-family:"IBM Plex Mono",monospace;font-weight:600}
+  .fin-di-amt.inc{color:var(--done)} .fin-di-amt.exp{color:var(--flagged)}
   .w-chg{font-size:12px;font-weight:600}
   .w-chg.up{color:var(--done)}
   .w-chg.dn{color:var(--flagged)}
@@ -369,19 +407,22 @@
 <div class="view-nav">
   <div class="wrap">
     <div class="view-nav-inner">
-      <button class="view-tab active" data-v="console" onclick="switchView('console')">Team Console</button>
-      <button class="view-tab" data-v="worklog" onclick="switchView('worklog')">
-        Work Log <span class="tab-count" id="wlCount">0</span>
+      <button class="view-tab active" data-v="console" onclick="switchView('console')">
+        Team Console <span class="tab-count" id="wlCount">0</span>
       </button>
-      <a class="view-tab" href="routines.html" style="text-decoration:none">Routines</a>
-      <button class="wtoggle" id="wtoggle" onclick="toggleWidgets()">Widgets <span class="car">▾</span></button>
+      <button class="view-tab" data-v="widgets" onclick="switchView('widgets')">Widgets</button>
+      <button class="view-tab" data-v="finance" onclick="switchView('finance')">การเงิน</button>
     </div>
   </div>
 </div>
 
-<!-- ===== WIDGET BAR ===== -->
-<div class="widget-bar" id="widgetBar">
+<!-- ===== WIDGETS VIEW ===== -->
+<div id="widgetsView" style="display:none">
   <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Widgets · สรุปสด</div>
+      <p>Claude Limit · งานของ Agent · Bitcoin &amp; ข่าว · อัปเดตมังงะ</p>
+    </section>
     <div class="widget-grid">
 
       <!-- Claude limit -->
@@ -438,21 +479,12 @@
 
     <div class="grid" id="grid"></div>
 
-    <footer id="footer">
-      <span class="mono" id="modeTag">DEMO MODE</span> — <span id="modeMsg">ข้อมูลสถานะตอนนี้เป็นตัวอย่าง · ต่อกับ Claude Code hooks ผ่าน <span class="mono">status.json</span> เพื่อแสดงสถานะจริง</span>
-    </footer>
-  </div>
-</div>
-
-<!-- ===== WORK LOG VIEW ===== -->
-<div id="worklogView" style="display:none">
-  <div class="wrap">
-    <section class="hero">
+    <!-- ===== WORK LOG (รวมเข้ากับ Console) ===== -->
+    <section class="hero" style="margin-top:44px;border-top:1px solid var(--line);padding-top:30px">
       <div class="ey mono">Work Log · ผลงานของทีม</div>
       <p>ทุกงานที่ Agent ทำ — สถานะ เวลา และผู้รับ</p>
     </section>
 
-    <!-- stats bar -->
     <div class="wl-stats" id="wlStats">
       <div class="wl-stat-item"><div class="n" id="wlTotal">0</div><div class="l">งานทั้งหมด</div></div>
       <div class="wl-stat-item"><div class="n s-done" id="wlDone">0</div><div class="l">✅ เสร็จแล้ว</div></div>
@@ -460,16 +492,29 @@
       <div class="wl-stat-item"><div class="n s-sent" id="wlSent">0</div><div class="l">📧 ส่งแล้ว</div></div>
     </div>
 
-    <!-- filters -->
     <div class="filters" id="wlFilters" style="margin-top:24px">
       <span class="lab mono">Agent</span>
     </div>
 
-    <!-- timeline -->
     <div id="wlTimeline"></div>
 
+    <footer id="footer">
+      <span class="mono" id="modeTag">DEMO MODE</span> — <span id="modeMsg">ข้อมูลสถานะตอนนี้เป็นตัวอย่าง · ต่อกับ Claude Code hooks ผ่าน <span class="mono">status.json</span></span>
+      <span class="mono" id="wlModeTag" style="display:none"></span><span id="wlModeMsg" style="display:none"></span>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== FINANCE VIEW ===== -->
+<div id="financeView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">การเงิน · <span id="finMonthLabel">เดือนนี้</span></div>
+      <p>สรุปรายรับ-รายจ่าย และปฏิทินรายวัน</p>
+    </section>
+    <div id="finBody"><div class="muted" style="padding:20px 0">กำลังโหลดข้อมูลการเงิน…</div></div>
     <footer>
-      <span class="mono" id="wlModeTag">LOADING</span> — <span id="wlModeMsg">กำลังโหลด worklog.json</span>
+      <span class="mono" id="finModeTag">—</span> <span id="finModeMsg">ข้อมูลจากแอป budget2569 (Firestore) · เปิดแอปสักครั้งเพื่อ push ข้อมูลล่าสุด</span>
     </footer>
   </div>
 </div>
@@ -636,26 +681,12 @@ function mergeWorklog(){
   buildWlFilters();
   updateWorkWidget();
   renderDaily(DAILY_DOC);
-  if(currentView==='worklog') renderWorklogEntries();
+  renderWorklogEntries();
 }
 
 /* =====================================================================
-   WIDGET BAR — toggle + data
+   WIDGET DATA (Widgets เป็นแท็บแล้ว ไม่ต้อง toggle)
    ===================================================================== */
-const widgetBar = document.getElementById('widgetBar');
-const wtoggleBtn = document.getElementById('wtoggle');
-let widgetsOpen = localStorage.getItem('agapae.widgets') !== '0'; // default: เปิด
-function applyWidgets(){
-  widgetBar.classList.toggle('open', widgetsOpen);
-  wtoggleBtn.classList.toggle('on', widgetsOpen);
-}
-function toggleWidgets(){
-  widgetsOpen = !widgetsOpen;
-  localStorage.setItem('agapae.widgets', widgetsOpen ? '1' : '0');
-  applyWidgets();
-}
-applyWidgets();
-
 function relTime(iso){
   if(!iso) return '—';
   const m = Math.round((Date.now() - new Date(iso).getTime())/60000);
@@ -767,15 +798,92 @@ loadManga();
 setInterval(loadManga, 300000);
 
 /* =====================================================================
+   FINANCE — อ่าน Firestore agents/finance (เขียนโดยแอป budget2569)
+   สรุปรายรับ-รายจ่าย + ปฏิทินรายวัน (port จาก Widget บนคอม)
+   ===================================================================== */
+let FIN = null, finSel = null;
+const TH_DOW = ["อา","จ","อ","พ","พฤ","ศ","ส"];
+function fmtBaht(n){
+  if(n == null || isNaN(n)) return "—";
+  return Number(n).toLocaleString("th-TH",{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function finLiveDaysLeft(f){
+  const now = new Date();
+  if(now.getFullYear()===f.ceYear && now.getMonth()===f.monthIdx && f.daysInMonth){
+    return f.daysInMonth - now.getDate() + 1;
+  }
+  return f.daysLeft;
+}
+function finSelectDay(d){ finSel = (finSel===d ? null : d); renderFinance(); }
+window.finSelectDay = finSelectDay;
+
+function renderFinance(){
+  const box = document.getElementById('finBody');
+  if(!box) return;
+  const f = FIN;
+  if(!f){ box.innerHTML = '<div class="muted" style="padding:20px 0">ยังไม่มีข้อมูลการเงิน — เปิดแอป budget2569 สักครั้งเพื่อ push ข้อมูล</div>'; return; }
+  document.getElementById('finMonthLabel').textContent = f.monthLabel || 'เดือนนี้';
+  // ค่าเริ่มต้น: เลือก "วันนี้" ให้เลย ถ้าอยู่ในเดือนนี้ (โชว์รายการวันนี้ทันที)
+  if(finSel === null && f.daysInMonth){
+    const nowD = new Date();
+    if(nowD.getFullYear()===f.ceYear && nowD.getMonth()===f.monthIdx) finSel = nowD.getDate();
+  }
+  const daysLeft = finLiveDaysLeft(f);
+  const net = f.net != null ? f.net : ((f.income||0) - (f.expense||0));
+
+  // ---- summary cards ----
+  const summary = `
+    <div class="fin-summary">
+      <div class="fin-card"><span class="fin-k">รายรับรวม</span><span class="fin-v inc">+${fmtBaht(f.income)}</span></div>
+      <div class="fin-card"><span class="fin-k">รายจ่ายรวม</span><span class="fin-v exp">-${fmtBaht(f.expense)}</span></div>
+      <div class="fin-card"><span class="fin-k">คงเหลือ</span><span class="fin-v">${fmtBaht(f.balance)}</span></div>
+      <div class="fin-card"><span class="fin-k">${net>=0?'กำไรสุทธิ':'ขาดทุนสุทธิ'}</span><span class="fin-v ${net>=0?'inc':'exp'}">${net>=0?'+':'-'}${fmtBaht(Math.abs(net))}</span></div>
+    </div>
+    ${daysLeft!=null?`<div class="fin-sub mono">${f.monthLabel||''} · เหลืออีก ${daysLeft} วันสิ้นเดือน</div>`:''}`;
+
+  // ---- calendar ----
+  let cal = '';
+  const dim = f.daysInMonth, first = f.firstDow;
+  if(dim && first != null){
+    const inc = new Set(f.incDays||[]), exp = new Set(f.expDays||[]);
+    const now = new Date();
+    const todayD = (now.getFullYear()===f.ceYear && now.getMonth()===f.monthIdx) ? now.getDate() : -1;
+    let cells = '';
+    for(let i=0;i<first;i++) cells += '<div class="fin-cell empty"></div>';
+    for(let d=1;d<=dim;d++){
+      const dot = (inc.has(d)||exp.has(d)) ? `<span class="fin-dots">${inc.has(d)?'<i class="dot inc"></i>':''}${exp.has(d)?'<i class="dot exp"></i>':''}</span>` : '';
+      cells += `<button type="button" class="fin-cell${d===todayD?' today':''}${d===finSel?' sel':''}" onclick="finSelectDay(${d})"><span class="fin-day">${d}</span>${dot}</button>`;
+    }
+    cal = `<div class="fin-cal">
+      <div class="fin-cal-dow">${TH_DOW.map((w,i)=>`<span class="${i===0?'we':''}">${w}</span>`).join('')}</div>
+      <div class="fin-cal-grid">${cells}</div>`;
+    // day detail
+    const dayMap = f.dayMap || {};
+    const items = finSel ? (dayMap[finSel] || dayMap[String(finSel)] || []) : [];
+    if(finSel){
+      const head = (finSel===todayD ? 'วันนี้' : 'วันที่ '+finSel) + (f.monthLabel?(' · '+f.monthLabel):'');
+      const list = items.length
+        ? '<ul class="fin-day-list">'+items.map(it=>`<li><span class="fin-di-name ${it.t==='i'?'inc':'exp'}">${it.n}</span><span class="fin-di-amt ${it.t==='i'?'inc':'exp'}">${it.t==='i'?'+':'-'}${fmtBaht(it.a)}</span></li>`).join('')+'</ul>'
+        : `<div class="muted">${finSel===todayD?'วันนี้ยังไม่มีรายรับ-รายจ่าย':'ไม่มีรายการวันนี้'}</div>`;
+      cal += `<div class="fin-day-detail"><div class="fin-day-detail-head mono">${head}</div>${list}</div>`;
+    }
+    cal += '</div>';
+  }
+  box.innerHTML = summary + cal;
+}
+
+/* =====================================================================
    VIEW SWITCHING
    ===================================================================== */
 let currentView = 'console';
 function switchView(v) {
   currentView = v;
   document.getElementById('consoleView').style.display = v === 'console' ? '' : 'none';
-  document.getElementById('worklogView').style.display = v === 'worklog' ? '' : 'none';
+  document.getElementById('widgetsView').style.display = v === 'widgets' ? '' : 'none';
+  document.getElementById('financeView').style.display = v === 'finance' ? '' : 'none';
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
-  if (v === 'worklog') renderWorklog();
+  if (v === 'finance') renderFinance();
+  window.scrollTo(0, 0);
 }
 
 /* =====================================================================
@@ -936,7 +1044,7 @@ function wlBadge(s){
 }
 
 function wlEntryHTML(e){
-  const p = PIPELINES[e.pipeline];
+  const p = PIPELINES[e.pipeline] || {color:'var(--ink-faint)'};
   const grad = `linear-gradient(140deg,${p.color},#1b2330)`;
   let avHtml;
   if(e.agentImg){
@@ -1026,7 +1134,7 @@ async function loadWorklog(){
     const msg = document.getElementById('wlModeMsg');
     if(tag){ tag.textContent='SEED DATA'; }
     if(msg) msg.textContent = 'ใช้ข้อมูลตัวอย่าง (worklog.json ไม่พบหรือเปิดผ่าน file://)';
-    if(currentView==='worklog') renderWorklogEntries();
+    renderWorklogEntries();
   }
 }
 
@@ -1034,7 +1142,7 @@ async function loadWorklog(){
    BOOT
    ===================================================================== */
 render();          // console grid with seed agents
-updateWlStats();   // set Work Log tab count immediately
+renderWorklog();   // worklog timeline (รวมอยู่ใน Console แล้ว) + tab count
 loadWorklog();     // async load real worklog data
 </script>
 
@@ -1074,6 +1182,31 @@ firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
 firebase.firestore().collection("agents").doc("daily").onSnapshot(d=>{
   if(d.exists){ DAILY_DOC = d.data(); renderDaily(DAILY_DOC); }
 },err=>console.warn("Firestore daily:",err));
+/* แท็บการเงิน — เขียนโดยแอป budget2569 (agents/finance) */
+firebase.firestore().collection("agents").doc("finance").onSnapshot(d=>{
+  if(!d.exists) return;
+  const f = d.data() || {};
+  // daysJson (string) → dayMap; ถ้ามี ให้ derive incDays/expDays จากมัน
+  let dayMap = {};
+  if(typeof f.daysJson === 'string'){ try{ dayMap = JSON.parse(f.daysJson); }catch(e){ dayMap = {}; } }
+  else if(f.dayMap && typeof f.dayMap === 'object'){ dayMap = f.dayMap; }
+  let incDays = Array.isArray(f.incDays) ? f.incDays.map(Number) : [];
+  let expDays = Array.isArray(f.expDays) ? f.expDays.map(Number) : [];
+  if(Object.keys(dayMap).length){
+    incDays = []; expDays = [];
+    for(const [dd, items] of Object.entries(dayMap)){
+      if(Array.isArray(items)){
+        if(items.some(x=>x.t==='i')) incDays.push(Number(dd));
+        if(items.some(x=>x.t==='e')) expDays.push(Number(dd));
+      }
+    }
+  }
+  FIN = { ...f, dayMap, incDays, expDays };
+  const tag=document.getElementById('finModeTag'), msg=document.getElementById('finModeMsg');
+  if(tag){ tag.textContent='LIVE'; tag.style.color='var(--done)'; }
+  if(msg) msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> · อัปเดตโดยแอป budget2569';
+  if(currentView==='finance') renderFinance();
+},err=>console.warn("Firestore finance:",err));
 </script>
 </body>
 </html>
