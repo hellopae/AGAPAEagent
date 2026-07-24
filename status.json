@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T05:14:43.918Z",
+  "updatedAt": "2026-07-24T10:44:00.485149Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Widget: แถบ accordion + ปฏิทินกดดูรายวัน + สรุปวันนี้",
+      "task": "To Do Lists: แท็บใหม่บนเว็บ + panel ในแอป Widget",
       "report": {
-        "when": "12:14",
-        "title": "Widget: แถบ accordion + ปฏิทินกดดูรายวัน + สรุปวันนี้",
-        "body": "Widget รอบ 2 ตามฟีดแบ็ก Kittanate: accordion + ปฏิทินกดได้ + สรุปวันนี้ · build+เปิดแอปใหม่ให้แล้ว"
+        "when": "17:44",
+        "title": "To Do Lists: แท็บใหม่บนเว็บ + panel ในแอป Widget",
+        "body": "เพิ่มแท็บ To Do บน dashboard (todo.json 27 รายการจาก Any.do) แยกกลุ่ม กำหนดวันที่/ประจำเดือน/โน้ต พร้อมนับวันที่เหลือและไฮไลต์ที่ใกล้ครบกำหนด · การ์ด To Do ในแท็บ Widgets · panel TO DO ในแอป Widget (Tauri) ดึง todo.json จาก Pages"
       }
     },
     {

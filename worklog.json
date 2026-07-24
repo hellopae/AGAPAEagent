@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-22T05:14:43.918Z",
+  "updatedAt": "2026-07-24T10:44:00.485149Z",
   "entries": [
+    {
+      "id": "wl-260724-dale-todo",
+      "datetime": "2026-07-24T10:44:00.485149Z",
+      "displayDate": "24 ก.ค. 2569",
+      "displayTime": "17:44",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "To Do Lists: แท็บใหม่บนเว็บ + panel ในแอป Widget",
+      "summary": "เพิ่มแท็บ To Do บน dashboard (todo.json 27 รายการจาก Any.do) แยกกลุ่ม กำหนดวันที่/ประจำเดือน/โน้ต พร้อมนับวันที่เหลือและไฮไลต์ที่ใกล้ครบกำหนด · การ์ด To Do ในแท็บ Widgets · panel TO DO ในแอป Widget (Tauri) ดึง todo.json จาก Pages",
+      "project": "agapae-dashboard"
+    },
     {
       "id": "wl-260722-dale-olla",
       "datetime": "2026-07-22T05:14:43.918Z",

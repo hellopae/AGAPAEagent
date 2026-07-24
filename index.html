@@ -219,6 +219,49 @@
   .fin-di-amt{font-family:"IBM Plex Mono",monospace;font-weight:600}
   .fin-di-amt.inc{color:var(--done)} .fin-di-amt.exp{color:var(--flagged)}
 
+  /* ---------- To Do ---------- */
+  .td-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:8px}
+  .td-stats .td-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .td-card .td-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .td-card .td-v{font-size:22px;font-weight:600;font-family:"IBM Plex Mono",monospace}
+  .td-v.soon{color:var(--flagged)} .td-v.rep{color:var(--gold)}
+  .td-group{margin-top:34px}
+  .td-group-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+    padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:4px;
+  }
+  .td-group-head h3{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--ink-soft)}
+  .td-group-head .td-n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint)}
+  .td-list{list-style:none;display:flex;flex-direction:column}
+  .td-item{
+    display:flex;align-items:center;gap:12px;padding:13px 4px;
+    border-bottom:1px solid var(--line);font-size:14.5px;
+  }
+  .td-item:last-child{border-bottom:none}
+  .td-box{
+    width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line-strong);flex:none;
+    display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--paper-2);
+  }
+  .td-item.done .td-box{background:var(--idle);border-color:var(--idle)}
+  .td-title{font-family:"Noto Sans Thai","Space Grotesk",sans-serif;flex:1;min-width:0}
+  .td-item.done .td-title{color:var(--ink-faint);text-decoration:line-through}
+  .td-when{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);
+    border:1px solid var(--line);border-radius:999px;padding:2px 10px;flex:none;white-space:nowrap;
+  }
+  .td-when.soon{color:var(--flagged);border-color:rgba(122,74,58,.35)}
+  .td-when.over{color:var(--paper-2);background:var(--flagged);border-color:var(--flagged)}
+  .td-rep{font-size:11px;color:var(--gold);flex:none}
+  .td-left{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-faint);flex:none;min-width:52px;text-align:right}
+  @media(max-width:560px){
+    .td-item{flex-wrap:wrap;row-gap:6px}
+    .td-title{flex:1 1 100%;order:2}
+    .td-left{display:none}
+  }
+
   /* ---------- Work Log collapsible ---------- */
   .wl-collapse{margin-top:44px;border-top:1px solid var(--line);padding-top:22px}
   .wl-toggle{
@@ -460,6 +503,9 @@
       </button>
       <button class="view-tab" data-v="widgets" onclick="switchView('widgets')">Widgets</button>
       <button class="view-tab" data-v="finance" onclick="switchView('finance')">การเงิน</button>
+      <button class="view-tab" data-v="todo" onclick="switchView('todo')">
+        To Do <span class="tab-count" id="todoCount">0</span>
+      </button>
     </div>
   </div>
 </div>
@@ -510,6 +556,12 @@
       <div class="widget" id="wManga">
         <div class="wh"><span class="wdot" style="background:var(--gold)"></span><h4>อัปเดตมังงะ</h4><span class="wup" id="wMangaUp">—</span></div>
         <div class="w-manga" id="wMangaList"><span class="w-empty">กำลังโหลด…</span></div>
+      </div>
+
+      <!-- To Do — ใกล้ครบกำหนด -->
+      <div class="widget" id="wTodo">
+        <div class="wh"><span class="wdot" style="background:var(--flagged)"></span><h4>To Do · ใกล้ถึงกำหนด</h4><span class="wup" id="wTodoUp">—</span></div>
+        <div id="wTodoList"><span class="w-empty">กำลังโหลด…</span></div>
       </div>
 
     </div>
@@ -568,6 +620,20 @@
     <div id="finBody"><div class="muted" style="padding:20px 0">กำลังโหลดข้อมูลการเงิน…</div></div>
     <footer>
       <span class="mono" id="finModeTag">—</span> <span id="finModeMsg">ข้อมูลจากแอป budget2569 (Firestore) · เปิดแอปสักครั้งเพื่อ push ข้อมูลล่าสุด</span>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== TO DO VIEW ===== -->
+<div id="todoView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">To Do Lists · จาก Any.do</div>
+      <p>งานประจำเดือน · กำหนดวันที่ · โน้ตความจำ</p>
+    </section>
+    <div id="todoBody"><div class="muted" style="padding:20px 0">กำลังโหลดรายการ…</div></div>
+    <footer>
+      <span class="mono" id="todoModeTag">—</span> <span id="todoModeMsg">ข้อมูลจากไฟล์ <span class="mono">todo.json</span></span>
     </footer>
   </div>
 </div>
@@ -1003,8 +1069,10 @@ function switchView(v) {
   document.getElementById('consoleView').style.display = v === 'console' ? '' : 'none';
   document.getElementById('widgetsView').style.display = v === 'widgets' ? '' : 'none';
   document.getElementById('financeView').style.display = v === 'finance' ? '' : 'none';
+  document.getElementById('todoView').style.display = v === 'todo' ? '' : 'none';
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
   if (v === 'finance') renderFinance();
+  if (v === 'todo') renderTodo();
   window.scrollTo(0, 0);
 }
 
@@ -1270,11 +1338,146 @@ async function loadWorklog(){
 }
 
 /* =====================================================================
+   TO DO — รายการจาก Any.do (todo.json / Firestore agents/todo)
+   ===================================================================== */
+let TODO = null;
+const TD_ESC = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TD_GROUPS = [
+  {key:'dated',   label:'กำหนดวันที่'},
+  {key:'routine', label:'ประจำเดือน / ประจำปี'},
+  {key:'note',    label:'โน้ตความจำ'},
+];
+
+function tdDaysLeft(due){
+  if(!due) return null;
+  const d = new Date(due + 'T00:00:00');
+  if(isNaN(d)) return null;
+  const now = new Date(); now.setHours(0,0,0,0);
+  return Math.round((d - now) / 86400000);
+}
+function tdLeftText(n){
+  if(n === null) return '';
+  if(n < 0)  return `เลย ${Math.abs(n)} วัน`;
+  if(n === 0) return 'วันนี้';
+  if(n === 1) return 'พรุ่งนี้';
+  if(n < 60) return `อีก ${n} วัน`;
+  if(n < 365) return `อีก ${Math.round(n/30)} เดือน`;
+  return `อีก ${(n/365).toFixed(1)} ปี`;
+}
+/* วันครบกำหนดรอบถัดไปของงานประจำเดือน (ใช้ field day) */
+function tdNextMonthly(day){
+  if(!day) return null;
+  const now = new Date(); now.setHours(0,0,0,0);
+  let d = new Date(now.getFullYear(), now.getMonth(), day);
+  if(d < now) d = new Date(now.getFullYear(), now.getMonth()+1, day);
+  return Math.round((d - now) / 86400000);
+}
+
+function tdItemHtml(it){
+  const isMonthly = it.group === 'routine' && it.day;
+  const left  = it.done ? null : (it.due ? tdDaysLeft(it.due) : (isMonthly ? tdNextMonthly(it.day) : null));
+  let wcls = '';
+  if(!it.done && left !== null){
+    if(left < 0) wcls = ' over';
+    else if(left <= 7) wcls = ' soon';
+  }
+  return `<li class="td-item${it.done?' done':''}">
+    <span class="td-box">${it.done?'✓':''}</span>
+    <span class="td-title">${TD_ESC(it.title)}</span>
+    ${it.repeat?'<span class="td-rep" title="ทำซ้ำ">↻</span>':''}
+    ${it.when && it.when !== '—' ? `<span class="td-when${wcls}">${TD_ESC(it.when)}</span>` : ''}
+    <span class="td-left">${TD_ESC(tdLeftText(left))}</span>
+  </li>`;
+}
+
+function renderTodo(){
+  const box = document.getElementById('todoBody');
+  if(!box) return;
+  if(!TODO || !Array.isArray(TODO.items)){
+    box.innerHTML = '<div class="muted" style="padding:20px 0">ยังไม่มีข้อมูล — เช็คไฟล์ todo.json</div>';
+    return;
+  }
+  const items   = TODO.items;
+  const open    = items.filter(i => !i.done);
+  const soon    = open.filter(i => { const n = i.due ? tdDaysLeft(i.due) : (i.day ? tdNextMonthly(i.day) : null); return n !== null && n <= 30; });
+  const repeats = open.filter(i => i.repeat);
+  const done    = items.filter(i => i.done);
+
+  let html = `<div class="td-stats">
+    <div class="td-card"><span class="td-k">ค้างอยู่</span><span class="td-v">${open.length}</span></div>
+    <div class="td-card"><span class="td-k">ภายใน 30 วัน</span><span class="td-v soon">${soon.length}</span></div>
+    <div class="td-card"><span class="td-k">งานทำซ้ำ</span><span class="td-v rep">${repeats.length}</span></div>
+    <div class="td-card"><span class="td-k">เสร็จแล้ว</span><span class="td-v">${done.length}</span></div>
+  </div>`;
+
+  for(const g of TD_GROUPS){
+    const list = open.filter(i => i.group === g.key);
+    if(!list.length) continue;
+    if(g.key === 'dated') list.sort((a,b) => (a.due||'9999').localeCompare(b.due||'9999'));
+    if(g.key === 'routine') list.sort((a,b) => (a.day||99) - (b.day||99));
+    html += `<div class="td-group">
+      <div class="td-group-head"><h3>${g.label}</h3><span class="td-n">${list.length}</span></div>
+      <ul class="td-list">${list.map(tdItemHtml).join('')}</ul>
+    </div>`;
+  }
+  if(done.length){
+    html += `<div class="td-group">
+      <div class="td-group-head"><h3>เสร็จแล้ว</h3><span class="td-n">${done.length}</span></div>
+      <ul class="td-list">${done.map(tdItemHtml).join('')}</ul>
+    </div>`;
+  }
+  box.innerHTML = html;
+}
+
+function updateTodoCount(){
+  const el = document.getElementById('todoCount');
+  if(el && TODO && Array.isArray(TODO.items)) el.textContent = TODO.items.filter(i => !i.done).length;
+}
+
+/* การ์ดเล็กในแท็บ Widgets — 5 อันที่ใกล้ครบกำหนดสุด */
+function renderTodoWidget(){
+  const box = document.getElementById('wTodoList');
+  if(!box || !TODO || !Array.isArray(TODO.items)) return;
+  const rows = TODO.items
+    .filter(i => !i.done)
+    .map(i => ({...i, n: i.due ? tdDaysLeft(i.due) : (i.day ? tdNextMonthly(i.day) : null)}))
+    .filter(i => i.n !== null)
+    .sort((a,b) => a.n - b.n)
+    .slice(0,5);
+  if(!rows.length){ box.innerHTML = '<span class="w-empty">ไม่มีงานที่มีกำหนดวัน</span>'; return; }
+  box.innerHTML = rows.map(i => `<div class="w-row">
+    <span class="k">${TD_ESC(i.title)}</span>
+    <span class="v mono" style="${i.n <= 7 ? 'color:var(--flagged)' : ''}">${TD_ESC(tdLeftText(i.n))}</span>
+  </div>`).join('');
+  const up = document.getElementById('wTodoUp');
+  if(up) up.textContent = TODO.updatedAt || '';
+}
+
+async function loadTodo(){
+  try{
+    const res = await fetch('todo.json?t=' + Date.now());
+    if(!res.ok) throw new Error(res.status);
+    TODO = await res.json();
+    updateTodoCount();
+    renderTodoWidget();
+    if(currentView === 'todo') renderTodo();
+    const tag = document.getElementById('todoModeTag'), msg = document.getElementById('todoModeMsg');
+    if(tag){ tag.textContent = 'LIVE'; tag.style.color = 'var(--done)'; }
+    if(msg) msg.innerHTML = `${TD_ESC(TODO.source || 'todo.json')} · อัปเดต ${TD_ESC(TODO.updatedAt || '—')}`;
+  }catch(e){
+    const tag = document.getElementById('todoModeTag'), msg = document.getElementById('todoModeMsg');
+    if(tag) tag.textContent = 'NO DATA';
+    if(msg) msg.textContent = 'อ่าน todo.json ไม่ได้ (ไฟล์หายหรือเปิดผ่าน file://)';
+  }
+}
+
+/* =====================================================================
    BOOT
    ===================================================================== */
 render();          // console grid with seed agents
 renderWorklog();   // worklog timeline (รวมอยู่ใน Console แล้ว) + tab count
 loadWorklog();     // async load real worklog data
+loadTodo();        // To Do list (todo.json)
 </script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>

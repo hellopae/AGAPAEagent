@@ -1,0 +1,36 @@
+{
+  "source": "Any.do — ALL TASKS (คัดลอกจากสกรีนช็อต 24 ก.ค. 2026)",
+  "updatedAt": "2026-07-24",
+  "items": [
+    { "id": "t01", "title": "Login lazada ทุกเดือน", "group": "routine", "when": "ทุกเดือน", "due": null, "repeat": true, "done": false },
+    { "id": "t02", "title": "ต้นปี กพ-มีนา ยื่น ภงด 90", "group": "routine", "when": "ก.พ.–มี.ค. ทุกปี", "due": null, "repeat": true, "done": false },
+    { "id": "t03", "title": "กลางปี กค ยื่น ภงด 94", "group": "routine", "when": "ก.ค. ทุกปี", "due": null, "repeat": true, "done": false },
+    { "id": "t04", "title": "ปริ๊นบิล ais fibre ให้ป๊า", "group": "routine", "when": "วันที่ 12 ทุกเดือน", "day": 12, "due": null, "repeat": true, "done": false },
+    { "id": "t05", "title": "ถึงใบแจ้งชำระเงิน กรุงศรี", "group": "routine", "when": "วันที่ 13–14 ทุกเดือน", "day": 13, "due": null, "repeat": true, "done": false },
+    { "id": "t06", "title": "ภงด 3 / 53 scan ผ่านบริษัทได้", "group": "routine", "when": "วันที่ 17 ทุกเดือน", "day": 17, "due": null, "repeat": true, "done": false },
+    { "id": "t07", "title": "จ่าย ภพ 53", "group": "routine", "when": "วันที่ 24 ทุกเดือน", "day": 24, "due": null, "repeat": true, "done": false },
+    { "id": "t08", "title": "จ่ายค่าดอกเบี้ย OD", "group": "routine", "when": "วันที่ 27–28 ทุกเดือน", "day": 27, "due": null, "repeat": true, "done": false },
+    { "id": "t09", "title": "จ่ายบิลมือถือ Ais", "group": "routine", "when": "วันที่ 30 ทุกเดือน", "day": 30, "due": null, "repeat": true, "done": false },
+
+    { "id": "t10", "title": "หนังสือรับรอง โอนผ่าน Kplus เท่านั้น (Kcyber ไม่ได้)", "group": "note", "when": "โน้ตความจำ", "due": null, "repeat": false, "done": false },
+
+    { "id": "t11", "title": "Netflix หมดอายุ", "group": "dated", "when": "2 ส.ค. 69", "due": "2026-08-02", "repeat": false, "done": false },
+    { "id": "t12", "title": "ไปแก้งาน สสวท", "group": "dated", "when": "จ. 3 ส.ค. 69", "due": "2026-08-03", "repeat": false, "done": false },
+    { "id": "t13", "title": "Claude หมดอายุ", "group": "dated", "when": "10 ส.ค. 69", "due": "2026-08-10", "repeat": false, "done": false },
+    { "id": "t14", "title": "นัดตรวจเลือด", "group": "dated", "when": "พฤ. 3 ก.ย. 69", "due": "2026-09-03", "repeat": false, "done": false },
+    { "id": "t15", "title": "ต่ออายุ Domain Name (t…)", "group": "dated", "when": "2 ธ.ค. 69", "due": "2026-12-02", "repeat": true, "done": false },
+    { "id": "t16", "title": "โปร AIS รายปี ม๊าหมดอายุ", "group": "dated", "when": "พ. 9 ธ.ค. 69", "due": "2026-12-09", "repeat": false, "done": false },
+    { "id": "t17", "title": "ต่ออายุ Flow Account", "group": "dated", "when": "23 ม.ค. 70", "due": "2027-01-23", "repeat": false, "done": false },
+    { "id": "t18", "title": "บัตรประชาชนหมดอายุ", "group": "dated", "when": "28 ม.ค. 70", "due": "2027-01-28", "repeat": false, "done": false },
+    { "id": "t19", "title": "ม๊าฝากเงิน ธนาคารไทยเครดิต", "group": "dated", "when": "22 ก.พ. 70", "due": "2027-02-22", "repeat": false, "done": false },
+    { "id": "t20", "title": "ต่ออายุ Domain Name", "group": "dated", "when": "13 มี.ค. 70", "due": "2027-03-13", "repeat": false, "done": false },
+    { "id": "t21", "title": "ต่ออายุ Domain Name", "group": "dated", "when": "10 เม.ย. 70", "due": "2027-04-09", "repeat": false, "done": false },
+    { "id": "t22", "title": "Auto Renew Google Storage", "group": "dated", "when": "6 มิ.ย. 70", "due": "2027-06-06", "repeat": true, "done": false },
+    { "id": "t23", "title": "ต่ออายุ web Hosting", "group": "dated", "when": "11 ก.ค. 70", "due": "2027-07-11", "repeat": true, "done": false },
+    { "id": "t24", "title": "ต่ออายุ Domain Name (a…)", "group": "dated", "when": "18 ก.ค. 70", "due": "2027-07-18", "repeat": true, "done": false },
+    { "id": "t25", "title": "ใบขับขี่หมดอายุ", "group": "dated", "when": "29 ม.ค. 2031", "due": "2031-01-28", "repeat": false, "done": false },
+
+    { "id": "t26", "title": "เปิดปิด Google Ads เป็นช่วงๆ", "group": "note", "when": "—", "due": null, "repeat": false, "done": true },
+    { "id": "t27", "title": "ขายทรัพย์สินที่ไม่ก่อให้เกิดรายได้", "group": "note", "when": "—", "due": null, "repeat": false, "done": true }
+  ]
+}
