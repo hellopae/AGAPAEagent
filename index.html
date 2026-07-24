@@ -109,7 +109,7 @@
     background:var(--paper-2);
     overflow:hidden;max-height:0;transition:max-height .3s cubic-bezier(.4,0,.2,1);
   }
-  .widget-bar.open{max-height:520px}
+  .widget-bar.open{max-height:1200px}
   .widget-grid{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:14px;padding:18px 0;
@@ -144,6 +144,25 @@
   }
   .w-news li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
   .w-empty{font-size:12px;color:var(--ink-faint);font-style:italic}
+  /* Manga widget */
+  .w-manga{display:flex;flex-direction:column;gap:8px;min-height:0}
+  .w-manga a.mg{
+    display:block;text-decoration:none;color:inherit;
+    background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 10px;
+    transition:border-color .15s,background .15s;
+  }
+  .w-manga a.mg:hover{border-color:var(--gold);background:var(--paper-2)}
+  .w-manga .mg-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+  .w-manga .mg-title{font-size:13px;font-weight:600;font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .w-manga .mg-latest{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--gold);flex:none}
+  .w-manga .mg-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px}
+  .w-manga .mg-chip{
+    font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.02em;
+    padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--ink-faint);white-space:nowrap;
+  }
+  .w-manga .mg-chip.out{color:var(--done);border-color:rgba(58,107,80,.4)}
+  .w-manga .mg-chip.soon{color:var(--gold);border-color:rgba(184,150,96,.4)}
+  .w-manga .mg-src{font-size:9.5px;color:var(--ink-faint);white-space:nowrap;flex:none}
   .w-chg{font-size:12px;font-weight:600}
   .w-chg.up{color:var(--done)}
   .w-chg.dn{color:var(--flagged)}
@@ -393,6 +412,12 @@
           </span>
         </div>
         <div class="w-news" id="wNews"><span class="w-empty">รอสรุปข่าวประจำวัน (routine 09:00)</span></div>
+      </div>
+
+      <!-- Manga updates -->
+      <div class="widget" id="wManga">
+        <div class="wh"><span class="wdot" style="background:var(--gold)"></span><h4>อัปเดตมังงะ</h4><span class="wup" id="wMangaUp">—</span></div>
+        <div class="w-manga" id="wMangaList"><span class="w-empty">กำลังโหลด…</span></div>
       </div>
 
     </div>
@@ -697,6 +722,49 @@ async function loadBtc(){
 }
 loadBtc();
 setInterval(loadBtc, 180000);
+
+/* =====================================================================
+   MANGA — อ่าน manga.json (ตัวเดียวกับ Widget บนคอม) เพื่อดูบนมือถือได้
+   ===================================================================== */
+function mgShortDate(iso){
+  if(!iso) return null;
+  const d = new Date(iso);
+  if(isNaN(d)) return null;
+  return d.toLocaleDateString('th-TH',{day:'numeric',month:'short'});
+}
+function mgStatus(s){
+  const rel = mgShortDate(s.releasedAt);
+  if(s.nextAt){
+    const nx = new Date(s.nextAt);
+    if(!isNaN(nx) && Date.now() >= nx.getTime()) return {cls:'out', text:'ตอน '+s.next+' น่าจะออกแล้ว'};
+    return {cls:'soon', text:'ตอนถัดไป '+s.next+' · '+(mgShortDate(s.nextAt)||'เร็ว ๆ นี้')};
+  }
+  return {cls:'', text:(s.cadence||'อัปเดตเรื่อย ๆ')+(rel?' · ล่าสุด '+rel:'')};
+}
+async function loadManga(){
+  const box = document.getElementById('wMangaList');
+  try{
+    const r = await fetch('manga.json?t='+Date.now());
+    if(!r.ok) throw new Error('http');
+    const j = await r.json();
+    const series = j.series || [];
+    if(!series.length){ box.innerHTML = '<span class="w-empty">ยังไม่มีข้อมูลมังงะ</span>'; return; }
+    box.innerHTML = series.map(s=>{
+      const st = mgStatus(s);
+      const url = s.url ? encodeURI(s.url) : '#';
+      return `<a class="mg" href="${url}" target="_blank" rel="noopener noreferrer">
+        <div class="mg-top"><span class="mg-title">${s.title}</span><span class="mg-latest">ตอนล่าสุด #${s.latest}</span></div>
+        <div class="mg-meta"><span class="mg-chip ${st.cls}">${st.text}</span>${s.source?`<span class="mg-src">${s.source} ↗</span>`:''}</div>
+      </a>`;
+    }).join('');
+    const up = document.getElementById('wMangaUp');
+    if(up && j.updatedAt){ const d=new Date(j.updatedAt); if(!isNaN(d)) up.textContent = mgShortDate(j.updatedAt); }
+  }catch(e){
+    box.innerHTML = '<span class="w-empty">โหลดข้อมูลมังงะไม่ได้</span>';
+  }
+}
+loadManga();
+setInterval(loadManga, 300000);
 
 /* =====================================================================
    VIEW SWITCHING
