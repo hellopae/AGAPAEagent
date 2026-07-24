@@ -1,0 +1,39 @@
+{
+  "updatedAt": "2026-07-24T06:40:00.000Z",
+  "note": "อัปเดตมือหรือให้ routine เขียนทับได้ · nextAt = วันที่คาดว่าตอนถัดไปจะออก (ปล่อย null ถ้าไม่ชัวร์)",
+  "series": [
+    {
+      "title": "One Piece",
+      "latest": 1188,
+      "releasedAt": "2026-07-12",
+      "next": 1189,
+      "nextAt": "2026-07-26",
+      "cadence": "รายสัปดาห์",
+      "note": "พัก 1 สัปดาห์ (ข้าม Jump #34)",
+      "source": "MANGA Plus",
+      "url": "https://mangaplus.shueisha.co.jp/titles/100020"
+    },
+    {
+      "title": "Dandadan",
+      "latest": 241,
+      "releasedAt": "2026-07-20",
+      "next": 242,
+      "nextAt": null,
+      "cadence": "รายสัปดาห์",
+      "note": "",
+      "source": "Shonen Jump / Viz",
+      "url": "https://www.viz.com/shonenjump/chapters/dandadan"
+    },
+    {
+      "title": "Versus",
+      "latest": 34,
+      "releasedAt": null,
+      "next": 35,
+      "nextAt": null,
+      "cadence": "รายเดือน",
+      "note": "Monthly Shōnen Sirius · โดย ONE × Azuma",
+      "source": "K Manga",
+      "url": "https://kmanga.kodansha.com/title/10569"
+    }
+  ]
+}
