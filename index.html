@@ -628,8 +628,8 @@
 <div id="todoView" style="display:none">
   <div class="wrap">
     <section class="hero">
-      <div class="ey mono">To Do Lists · จาก Any.do</div>
-      <p>งานประจำเดือน · กำหนดวันที่ · โน้ตความจำ</p>
+      <div class="ey mono">To Do Lists · Todoist / PAE To Do</div>
+      <p>ประจำเดือน-ประจำปี · กำหนดวันที่ · โน้ต</p>
     </section>
     <div id="todoBody"><div class="muted" style="padding:20px 0">กำลังโหลดรายการ…</div></div>
     <footer>
@@ -1338,15 +1338,11 @@ async function loadWorklog(){
 }
 
 /* =====================================================================
-   TO DO — รายการจาก Any.do (todo.json / Firestore agents/todo)
+   TO DO — รายการจาก Todoist (project PAE To Do) ผ่านไฟล์ todo.json
+   กลุ่ม/ลำดับ = section ใน Todoist (มาจากไฟล์ ไม่ hardcode)
    ===================================================================== */
 let TODO = null;
 const TD_ESC = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const TD_GROUPS = [
-  {key:'dated',   label:'กำหนดวันที่'},
-  {key:'routine', label:'ประจำเดือน / ประจำปี'},
-  {key:'note',    label:'โน้ตความจำ'},
-];
 
 function tdDaysLeft(due){
   if(!due) return null;
@@ -1364,18 +1360,8 @@ function tdLeftText(n){
   if(n < 365) return `อีก ${Math.round(n/30)} เดือน`;
   return `อีก ${(n/365).toFixed(1)} ปี`;
 }
-/* วันครบกำหนดรอบถัดไปของงานประจำเดือน (ใช้ field day) */
-function tdNextMonthly(day){
-  if(!day) return null;
-  const now = new Date(); now.setHours(0,0,0,0);
-  let d = new Date(now.getFullYear(), now.getMonth(), day);
-  if(d < now) d = new Date(now.getFullYear(), now.getMonth()+1, day);
-  return Math.round((d - now) / 86400000);
-}
-
 function tdItemHtml(it){
-  const isMonthly = it.group === 'routine' && it.day;
-  const left  = it.done ? null : (it.due ? tdDaysLeft(it.due) : (isMonthly ? tdNextMonthly(it.day) : null));
+  const left = it.done ? null : tdDaysLeft(it.due);
   let wcls = '';
   if(!it.done && left !== null){
     if(left < 0) wcls = ' over';
@@ -1397,9 +1383,11 @@ function renderTodo(){
     box.innerHTML = '<div class="muted" style="padding:20px 0">ยังไม่มีข้อมูล — เช็คไฟล์ todo.json</div>';
     return;
   }
-  const items   = TODO.items;
+  const items    = TODO.items;
+  const sections = Array.isArray(TODO.sections) && TODO.sections.length
+    ? TODO.sections : [{id:null, name:'ทั้งหมด'}];
   const open    = items.filter(i => !i.done);
-  const soon    = open.filter(i => { const n = i.due ? tdDaysLeft(i.due) : (i.day ? tdNextMonthly(i.day) : null); return n !== null && n <= 30; });
+  const soon    = open.filter(i => { const n = tdDaysLeft(i.due); return n !== null && n <= 30; });
   const repeats = open.filter(i => i.repeat);
   const done    = items.filter(i => i.done);
 
@@ -1407,16 +1395,15 @@ function renderTodo(){
     <div class="td-card"><span class="td-k">ค้างอยู่</span><span class="td-v">${open.length}</span></div>
     <div class="td-card"><span class="td-k">ภายใน 30 วัน</span><span class="td-v soon">${soon.length}</span></div>
     <div class="td-card"><span class="td-k">งานทำซ้ำ</span><span class="td-v rep">${repeats.length}</span></div>
-    <div class="td-card"><span class="td-k">เสร็จแล้ว</span><span class="td-v">${done.length}</span></div>
+    <div class="td-card"><span class="td-k">กลุ่ม</span><span class="td-v">${sections.length}</span></div>
   </div>`;
 
-  for(const g of TD_GROUPS){
-    const list = open.filter(i => i.group === g.key);
+  for(const s of sections){
+    const list = open.filter(i => (s.id === null ? true : i.section === s.id));
     if(!list.length) continue;
-    if(g.key === 'dated') list.sort((a,b) => (a.due||'9999').localeCompare(b.due||'9999'));
-    if(g.key === 'routine') list.sort((a,b) => (a.day||99) - (b.day||99));
+    list.sort((a,b) => (a.due || '9999-99-99').localeCompare(b.due || '9999-99-99'));
     html += `<div class="td-group">
-      <div class="td-group-head"><h3>${g.label}</h3><span class="td-n">${list.length}</span></div>
+      <div class="td-group-head"><h3>${TD_ESC(s.name)}</h3><span class="td-n">${list.length}</span></div>
       <ul class="td-list">${list.map(tdItemHtml).join('')}</ul>
     </div>`;
   }
@@ -1440,7 +1427,7 @@ function renderTodoWidget(){
   if(!box || !TODO || !Array.isArray(TODO.items)) return;
   const rows = TODO.items
     .filter(i => !i.done)
-    .map(i => ({...i, n: i.due ? tdDaysLeft(i.due) : (i.day ? tdNextMonthly(i.day) : null)}))
+    .map(i => ({...i, n: tdDaysLeft(i.due)}))
     .filter(i => i.n !== null)
     .sort((a,b) => a.n - b.n)
     .slice(0,5);

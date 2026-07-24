@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T10:44:00.485149Z",
+  "updatedAt": "2026-07-24T11:32:46.112870Z",
   "agents": [
     {
       "id": "claudy",
@@ -252,11 +252,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "To Do Lists: แท็บใหม่บนเว็บ + panel ในแอป Widget",
+      "task": "To Do sync กับ Todoist + จัด layout Widget เป็น 3 แถว",
       "report": {
-        "when": "17:44",
-        "title": "To Do Lists: แท็บใหม่บนเว็บ + panel ในแอป Widget",
-        "body": "เพิ่มแท็บ To Do บน dashboard (todo.json 27 รายการจาก Any.do) แยกกลุ่ม กำหนดวันที่/ประจำเดือน/โน้ต พร้อมนับวันที่เหลือและไฮไลต์ที่ใกล้ครบกำหนด · การ์ด To Do ในแท็บ Widgets · panel TO DO ในแอป Widget (Tauri) ดึง todo.json จาก Pages"
+        "when": "18:32",
+        "title": "To Do sync กับ Todoist + จัด layout Widget เป็น 3 แถว",
+        "body": "todo.json ดึงโครงจาก Todoist project PAE To Do (25 งาน / 3 section) เว็บและ Widget แบ่งกลุ่มตาม section เดียวกัน · จัดแถบในแอป Widget ใหม่เป็น 3 แถว: แถว1 Claude limits·ข่าวเช้า·Bitcoin·มังงะ / แถว2 การเงิน·To Do / แถว3 ทีม AGAPAE·บทความ"
       }
     },
     {

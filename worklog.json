@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-07-24T10:44:00.485149Z",
+  "updatedAt": "2026-07-24T11:32:46.112870Z",
   "entries": [
+    {
+      "id": "wl-260724-dale-todoist",
+      "datetime": "2026-07-24T11:32:46.112870Z",
+      "displayDate": "24 ก.ค. 2569",
+      "displayTime": "18:32",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "To Do sync กับ Todoist + จัด layout Widget เป็น 3 แถว",
+      "summary": "todo.json ดึงโครงจาก Todoist project PAE To Do (25 งาน / 3 section) เว็บและ Widget แบ่งกลุ่มตาม section เดียวกัน · จัดแถบในแอป Widget ใหม่เป็น 3 แถว: แถว1 Claude limits·ข่าวเช้า·Bitcoin·มังงะ / แถว2 การเงิน·To Do / แถว3 ทีม AGAPAE·บทความ",
+      "project": "agapae-dashboard"
+    },
     {
       "id": "wl-260724-dale-todo",
       "datetime": "2026-07-24T10:44:00.485149Z",
