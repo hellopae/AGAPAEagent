@@ -1289,9 +1289,14 @@ firebase.initializeApp({
   appId:"1:647606526363:web:6d0bcd10ef5451aca6c13e"
 });
 firebase.firestore().collection("agents").orderBy("sortOrder").onSnapshot(snap=>{
-  const list=[]; snap.forEach(d=>list.push(d.data()));
-  if(!list.length) return;
-  AGENTS=list; render();
+  const fs={}; snap.forEach(d=>{const x=d.data(); if(x&&x.id) fs[x.id]=x;});
+  if(!Object.keys(fs).length) return;
+  // รวม: SEED เป็นรายชื่อหลัก (ครบทุกคน รวม Dale) + ทับด้วยข้อมูลสดจาก Firestore
+  // กัน Firestore ที่ยังไม่มีบาง agent (เช่น dale) ทำให้คนหายจากเว็บ
+  AGENTS = SEED_AGENTS.map(a => fs[a.id] ? {...a, ...fs[a.id]} : a);
+  // เผื่อ Firestore มี agent ที่ไม่มีใน seed ก็เพิ่มต่อท้าย
+  Object.values(fs).forEach(x => { if(!SEED_AGENTS.some(a=>a.id===x.id)) AGENTS.push(x); });
+  render();
   const tag=document.getElementById('modeTag'),msg=document.getElementById('modeMsg');
   tag.textContent="LIVE"; tag.style.color="var(--done)";
   msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> · อัปเดตอัตโนมัติ';
