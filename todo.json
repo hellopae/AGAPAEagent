@@ -1,7 +1,7 @@
 {
   "source": "Todoist · project PAE To Do",
   "projectId": "6h7wcgqCVqFF5gJM",
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-07-27",
   "sections": [
     { "id": "idea", "name": "Idea" },
     { "id": "note", "name": "Note" },
@@ -12,7 +12,6 @@
   "items": [
     { "id": "6h87Hw4Rx594XW8M", "section": "idea", "title": "ไอเดียทำสติ๊กเกอร์แปะ คำคมฮาๆ ตลกๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
     { "id": "6h87HqW77xrXv2fM", "section": "idea", "title": "Youtube Animation วิทยาศาสตร์ง่ายๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h87Hx8R63f9q55v", "section": "idea", "title": "ให้ agent ทำรายรับรายจ่ายแทน", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
     { "id": "6h87J264J6gqMppv", "section": "idea", "title": "ทำเวป agapae shop", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
 
     { "id": "6h7wcprWv6R26GRM", "section": "note", "title": "Login lazada", "when": "ทุกเดือน", "due": null, "repeat": true },
@@ -21,6 +20,7 @@
     { "id": "6h7wcwJQ53gW765v", "section": "someday", "title": "Netflix หมดอายุ", "when": "2 ส.ค. 69", "due": "2026-08-02", "repeat": false },
     { "id": "6h7wcwV9vfvRXQ9M", "section": "someday", "title": "ไปแก้งาน สสวท", "when": "3 ส.ค. 69", "due": "2026-08-03", "repeat": false },
     { "id": "6h7wcwWCXFpWJFpv", "section": "someday", "title": "Claude หมดอายุ", "when": "10 ส.ค. 69", "due": "2026-08-10", "repeat": false },
+    { "id": "6h8QxggwhMwr6Xpv", "section": "someday", "title": "HBO Max หมดอายุ", "when": "26 ส.ค. 69", "due": "2026-08-26", "repeat": false },
     { "id": "6h7wcwWG4rR5G2XM", "section": "someday", "title": "นัดตรวจเลือด", "when": "3 ก.ย. 69", "due": "2026-09-03", "repeat": false },
 
     { "id": "6h7wcq7P742m72Wv", "section": "monthly", "title": "ปริ๊นบิล ais fibre ให้ป๊า", "when": "ทุกวันที่ 12", "due": null, "repeat": true },
