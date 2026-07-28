@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T12:04:14.773586Z",
+  "updatedAt": "2026-07-28T12:20:00.000000Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,12 +19,8 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "อัปสกิลทีมออกแบบ — Mind/Vera เรียน Claude Design (artifact-design)",
-      "report": {
-        "when": "11:30",
-        "title": "อัปสกิลทีมออกแบบเสร็จ",
-        "body": "จากบทเรียน VeeGee (ผิดขนาด+ไม่ใช้ภาพจริง) → SOP-10 + เดิน artifact-design เข้า Mind/Vera + อุด QA gate · VeeGee redo รอ regulatory ลูกค้า"
-      }
+      "task": "AGAPAE SEO — รวมผล 3 สายเป็นแผนลงมือ 3 เฟส",
+      "report": "Output/Claudy/2026-07-28-agapae-seo-plan.md"
     },
     {
       "id": "minnie",
@@ -44,12 +40,8 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — feature concept + user stories",
-      "report": {
-        "when": "13:15",
-        "title": "Concept ✅ — เกียรติบัตร Express MVP",
-        "body": "ขยาย Idea Card 2 เป็น MVP spec: flow 6 ขั้น (upload Word/PDF/Excel → map รายชื่อ → เลือก template ฟรี 3/พรีเมียมล็อก → ปรับข้อความ → preview auto-fit → export PDF ชุด) จุดขาย client-side ไม่อัปโหลดรายชื่อขึ้น server + ส่ง 13 research questions ให้ Reese"
-      }
+      "task": "AGAPAE SEO — Idea Card คอนเทนต์ 8 ใบ (ใช้ความได้เปรียบโรงพิมพ์จริง)",
+      "report": "Output/Minnie/2026-07-28-agapae-seo-content-ideas.md"
     },
     {
       "id": "reese",
@@ -70,12 +62,8 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — fact-check UI copy (PASS มีเงื่อนไข)",
-      "report": {
-        "when": "14:17",
-        "title": "Fact-check ✅ PASS — แก้ 3 จุด",
-        "body": "ตรวจ claim ทั้ง 163 strings: ✅ PASS ไม่พบ INCORRECT — สั่งแก้ 3 จุด (offline note, เลข batch สมมติ, ชื่อวัดชนวัดจริง) + ส่ง privacy invariants 5 ข้อให้ Dale, เงื่อนไขตรวจสำนวนพร/ครุฑให้ Chris, รอ Kittanate ยืนยันเลขปี TANAPAT"
-      }
+      "task": "AGAPAE SEO — วิจัย SEO + AI discoverability พร้อมแหล่งอ้างอิง",
+      "report": "Output/Reese/2026-07-28-agapae-seo-ai-research.md"
     },
     {
       "id": "rae",
@@ -252,12 +240,8 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "To Do จัดกลุ่มเป็นคอลัมน์ + โชว์วันที่ + Claude Limit ใช้ตัวเลขจริงจาก Widget",
-      "report": {
-        "when": "19:04",
-        "title": "To Do จัดกลุ่มเป็นคอลัมน์ + โชว์วันที่ + Claude Limit ใช้ตัวเลขจริงจาก Widget",
-        "body": "To Do: 3 กลุ่มวางข้างกันเป็นคอลัมน์ (กำหนดวันที่ขึ้นก่อน) ช่องขวาเปลี่ยนจาก 'อีกกี่วัน' เป็นวันที่จริง · Claude Limit: แอป Widget PATCH usage จริง (5 ชม. + 7 วัน) ขึ้น Firestore agents/claude_limit เว็บโชว์ 2 แถบเหมือนแอป แทน ccusage ที่อัปเดตเฉพาะตอน hook ทำงาน"
-      }
+      "task": "AGAPAE SEO — technical audit เว็บ agapaedesign.com",
+      "report": "Output/Dale/2026-07-28-agapae-seo-technical-audit.md"
     },
     {
       "id": "news",

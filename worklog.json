@@ -1,6 +1,62 @@
 {
-  "updatedAt": "2026-07-24T12:04:14.773586Z",
+  "updatedAt": "2026-07-28T12:20:00.000000Z",
   "entries": [
+    {
+      "id": "wl-260728-minnie-seo",
+      "datetime": "2026-07-28T12:20:00.000000Z",
+      "displayDate": "28 ก.ค. 2569",
+      "displayTime": "19:20",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "AGAPAE SEO — Idea Card คอนเทนต์ 8 ใบ",
+      "summary": "ไอเดียคอนเทนต์ที่ใช้ความได้เปรียบที่ลอกไม่ได้ (โรงพิมพ์จริง 40 ปี + ทำ animation เอง + เขียนโปรแกรมเอง): พจนานุกรมศัพท์งานพิมพ์ · ตารางเทียบกระดาษจากของจริง · คลังไดคัทฟรี · เครื่องมือฟรี · case study เปิดหลังบ้าน แนะนำเริ่มจากโครงสร้างเว็บก่อน แล้วทดสอบด้วยตารางกระดาษ",
+      "project": "web-agapae"
+    },
+    {
+      "id": "wl-260728-reese-seo",
+      "datetime": "2026-07-28T12:20:00.000000Z",
+      "displayDate": "28 ก.ค. 2569",
+      "displayTime": "19:20",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "AGAPAE SEO — วิจัย SEO + AI discoverability พร้อมแหล่งอ้างอิง",
+      "summary": "ยืนยันด้วยข้อมูล Vercel ว่า GPTBot/ClaudeBot ดึง JS แต่ไม่ execute = AI ไม่เห็นผลงานเลย · llms.txt ยังไม่มีหลักฐานว่าเจ้าไหนใช้ (Google บอกเองว่าไม่จำเป็น) · ควรเปิด AI crawler ทุกตัวโดยเฉพาะ OAI-SearchBot · ชื่อแบรนด์ชนกับ Agape Design อื่น ต้องใช้ JSON-LD sameAs แยกตัวตน · คำค้นตรงถูก marketplace ยึด ช่องจริงคือคำผสม ออกแบบ+พิมพ์ · คู่แข่งไทย 4 รายมี SEO ครบ AGAPAE ได้ 0/5",
+      "project": "web-agapae"
+    },
+    {
+      "id": "wl-260728-dale-seo",
+      "datetime": "2026-07-28T12:20:00.000000Z",
+      "displayDate": "28 ก.ค. 2569",
+      "displayTime": "19:20",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AGAPAE SEO — technical audit เว็บ agapaedesign.com",
+      "summary": "เนื้อหา 95% ซ่อนใน JS crawler ที่ไม่รัน JS เห็นแค่ ~1,700 ตัวอักษร · HTML บอกว่า '0 Years Design / 0 Projects Done' (index.html:551-552) · head ไม่มี description/canonical/OG/JSON-LD/favicon · inc/sendEmail.php ยัง live เสิร์ฟ source ดิบเปิดเผยอีเมล · Chart.js 70KB render-blocking · ร่าง JSON-LD + robots.txt + sitemap.xml ให้พร้อมวาง · แนะนำไม่ทำ hreflang และ FAQPage schema แบบไม่มีเนื้อหาจริง",
+      "project": "web-agapae"
+    },
+    {
+      "id": "wl-260728-claudy-seo",
+      "datetime": "2026-07-28T12:20:00.000000Z",
+      "displayDate": "28 ก.ค. 2569",
+      "displayTime": "19:20",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "AGAPAE SEO — รวมผล 3 สายเป็นแผนลงมือ 3 เฟส",
+      "summary": "กระจายงานให้ Reese (วิจัย) · Dale (audit) · Minnie (ไอเดีย) แล้วรวมเป็นแผนเดียว ตรวจซ้ำข้อค้นพบสำคัญกับเว็บจริงเอง (ยืนยัน 0 Years/0 Projects, sendEmail.php รั่วอีเมล, favicon 404, styles.html index ได้) · เฟส 0 เก็บ baseline · เฟส 1 quick win 3 ชม. · เฟส 2 เอาเนื้อหาออกจาก JS = 80% ของผลลัพธ์ · เฟส 3 คอนเทนต์จากของจริง",
+      "project": "web-agapae"
+    },
     {
       "id": "wl-260724-dale-limit",
       "datetime": "2026-07-24T12:04:14.773586Z",
