@@ -1,7 +1,7 @@
 {
   "source": "Todoist · project PAE To Do",
   "projectId": "6h7wcgqCVqFF5gJM",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-28",
   "sections": [
     { "id": "idea", "name": "Idea" },
     { "id": "note", "name": "Note" },
@@ -13,6 +13,8 @@
     { "id": "6h87Hw4Rx594XW8M", "section": "idea", "title": "ไอเดียทำสติ๊กเกอร์แปะ คำคมฮาๆ ตลกๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
     { "id": "6h87HqW77xrXv2fM", "section": "idea", "title": "Youtube Animation วิทยาศาสตร์ง่ายๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
     { "id": "6h87J264J6gqMppv", "section": "idea", "title": "ทำเวป agapae shop", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
+    { "id": "6h8Xv64PGVQ56cRM", "section": "idea", "title": "SEO web AGAPAE", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
+    { "id": "6h8c8QFF6rM8g8jv", "section": "idea", "title": "Animate กวนอู, เทพไฉชิงเอีย", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
 
     { "id": "6h7wcprWv6R26GRM", "section": "note", "title": "Login lazada", "when": "ทุกเดือน", "due": null, "repeat": true },
     { "id": "6h7wf2fwj7F6MjjM", "section": "note", "title": "หนังสือรับรอง — โอนผ่าน Kplus เท่านั้น", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
