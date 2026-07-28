@@ -1,8 +1,10 @@
 {
-  "source": "Todoist · project PAE To Do",
+  "source": "Todoist · project PAE To Do + Inbox",
   "projectId": "6h7wcgqCVqFF5gJM",
   "updatedAt": "2026-07-28",
   "sections": [
+    { "id": "inbox", "name": "Inbox · ยังไม่จัดเข้า project" },
+    { "id": "shopping", "name": "Shopping" },
     { "id": "idea", "name": "Idea" },
     { "id": "note", "name": "Note" },
     { "id": "someday", "name": "SomeDay" },

@@ -1424,12 +1424,14 @@ function renderTodo(){
   const soon    = open.filter(i => { const n = tdDaysLeft(i.due); return n !== null && n <= 30; });
   const repeats = open.filter(i => i.repeat);
   const done    = items.filter(i => i.done);
+  // นับเฉพาะกลุ่มที่มีงานค้าง — เซคชันว่าง (เช่น Inbox ตอนไม่มีงานตกค้าง) ถูกข้ามตอน render อยู่แล้ว
+  const nGroups = sections.filter(s => open.some(i => s.id === null || i.section === s.id)).length;
 
   let html = `<div class="td-stats">
     <div class="td-card"><span class="td-k">ค้างอยู่</span><span class="td-v">${open.length}</span></div>
     <div class="td-card"><span class="td-k">ภายใน 30 วัน</span><span class="td-v soon">${soon.length}</span></div>
     <div class="td-card"><span class="td-k">งานทำซ้ำ</span><span class="td-v rep">${repeats.length}</span></div>
-    <div class="td-card"><span class="td-k">กลุ่ม</span><span class="td-v">${sections.length}</span></div>
+    <div class="td-card"><span class="td-k">กลุ่ม</span><span class="td-v">${nGroups}</span></div>
   </div>`;
 
   html += '<div class="td-groups">';
