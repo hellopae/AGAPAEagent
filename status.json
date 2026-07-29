@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T11:46:51.000000Z",
+  "updatedAt": "2026-07-29T12:10:56.512Z",
   "agents": [
     {
       "id": "claudy",
@@ -160,12 +160,12 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "working",
-      "task": "ตรวจน้ำเสียง/ความเหมาะสมบทความ v3",
+      "status": "done",
+      "task": "Brand tone and claims check v3",
       "report": {
-        "when": "20:20",
-        "title": "delta re-QA: ✅ PASS",
-        "body": "B1+B2 หายจริงบน production · เหลือ B3 (LINE URL) = blocker เปิดตัวสาธารณะ รอ Kittanate"
+        "when": "19:10",
+        "title": "Brand tone and claims check v3",
+        "body": "I have my own scope analyzed and found a systemic gap the previous two QA rounds missed. Waiting on the three sub-checkers now — I'll compile once they report.\n\nInterim status:\n- Launched `chris-thai`, `chris-print`, `chris-culture` in parallel, all with the article plus the v2 article, both Reese fact-checks, and both prior QA reports.\n- My own scope (structure / web readiness / fact-check trace) is done and already turned up material problems, including two mandatory SOP-02 requirements that neither prior QA round applied."
       }
     },
     {
