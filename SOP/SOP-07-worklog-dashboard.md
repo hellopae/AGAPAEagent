@@ -5,15 +5,27 @@
 
 ## กลไกอัตโนมัติ (hook)
 
-`.claude/settings.json` ผูก hook ไว้กับ **Task tool เท่านั้น**:
+`.claude/settings.json` ผูก hook ไว้ 3 จุด:
 
 | Event | คำสั่ง | ทำอะไร |
 |---|---|---|
-| PreToolUse(Task) | `node scripts/hook-status.mjs start` | ตั้ง agent เป็น `working` + task ลง status.json + Firestore |
-| PostToolUse(Task) | `node scripts/hook-status.mjs done` | ตั้ง `done`, เพิ่ม worklog entry (local + Firestore `agents/worklog`), `git add status.json worklog.json Output && git commit && git push` แบบ detached |
+| PreToolUse(Agent) | `hook-status.mjs start` | ตั้ง agent เป็น `working` + task ลง status.json + Firestore |
+| PreToolUse(Agent) | `hook-gate.mjs pre` | **deny** การเรียก Chris ถ้ายังมีงานค้าง fact-check |
+| SubagentStop | `hook-status.mjs done` | ตั้ง `done`, เพิ่ม worklog entry (local + Firestore `agents/worklog`), `git add status.json worklog.json Output && git commit && git push` แบบ detached |
+| SubagentStop | `hook-gate.mjs agent-done` | บันทึกสถานะ gate (ใครเสร็จ / ผ่าน fact-check / QA verdict) |
+| Stop | `hook-gate.mjs stop` | ตรวจ Definition of Done — ไม่ครบ = **block** ไม่ให้จบเทิร์น |
 
-**เงื่อนไข hook ทำงาน:** `subagent_type` ต้องอยู่ใน `MAP` ของ `scripts/hook-status.mjs`
+> ⚠️ **ห้ามย้าย `done` กลับไป `PostToolUse(Task)`** — ตั้งแต่ Claude Code v2.1.198 subagent
+> รัน background เป็นค่าเริ่มต้น ทำให้ `tool_response` กลับมาตั้งแต่ agent ยังไม่ทำงานเสร็จ
+> → รายงานบน dashboard ว่างหรือผิด `SubagentStop` ให้ `last_assistant_message` ที่ถูกต้อง
+> และยิงครบแม้เป็น nested subagent (แก้เมื่อ 29 ก.ค. 2026)
+
+**เงื่อนไข hook ทำงาน:** ชื่อ agent ต้องอยู่ใน `MAP` ของ `scripts/hook-status.mjs`
+(start ใช้ `tool_input.subagent_type`, done ใช้ `agent_type`)
 **และ** agent id นั้นต้องมี entry ใน `status.json` — ขาดอย่างใดอย่างหนึ่ง hook จะเงียบ ๆ ข้ามไป
+
+**state ของ gate:** `scripts/.gate-state.json` (gitignored, แยกตาม session, เก็บ 10 session ล่าสุด)
+ถ้า gate ค้างผิดปกติ ลบไฟล์นี้ได้เลย ระบบจะเริ่มนับใหม่
 
 MAP ปัจจุบัน: minnie-ideas, reese-research, rae-writer, vera-design, chris-qa,
 nick-analytics, claudy, news-daily, libby-index, mind-visual, dale-devops

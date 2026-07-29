@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 /* =====================================================================
    hook-status.mjs — Claude Code hook bridge → status.json + worklog.json + Firestore + git push
-   PreToolUse  (Task) → node hook-status.mjs start
-   PostToolUse (Task) → node hook-status.mjs done
+   PreToolUse (Agent) → node hook-status.mjs start   (payload มี tool_input.description/prompt)
+   SubagentStop       → node hook-status.mjs done    (payload มี agent_type + last_assistant_message)
      done: อัปเดต status + เพิ่ม worklog entry (local + Firestore) + git push อัตโนมัติ
+
+   หมายเหตุ: เดิม done ผูกกับ PostToolUse(Task) ซึ่งพังตั้งแต่ Claude Code v2.1.198
+   เพราะ subagent รัน background เป็นค่าเริ่มต้น → tool_response กลับมาทันทีโดยยังไม่มีผลงานจริง
+   SubagentStop ยิงตอน agent ทำงานจบจริง และรองรับ nested subagent ด้วย
    ===================================================================== */
 import { readFileSync, writeFileSync } from "node:fs";
 import { spawn } from "node:child_process";
@@ -37,8 +41,9 @@ try { raw = readFileSync(0, "utf8"); } catch { process.exit(0); }
 let ev = {};
 try { ev = JSON.parse(raw || "{}"); } catch { process.exit(0); }
 
+// start มาจาก PreToolUse (tool_input.subagent_type) — done มาจาก SubagentStop (agent_type)
 const input = ev.tool_input || {};
-const id = MAP[input.subagent_type];
+const id = MAP[ev.agent_type || input.subagent_type];
 if (!id) process.exit(0);
 
 // ---- update status.json ----
@@ -52,7 +57,10 @@ if (mode === "start") {
   agent.task = (input.description || input.prompt || "กำลังทำงาน").split("\n")[0].slice(0, 120);
 } else {
   agent.status = "done";
-  const out = String(ev.tool_response?.content ?? ev.tool_response ?? "").trim();
+  // SubagentStop ให้ last_assistant_message มาตรงๆ — เผื่อ payload เก่าไว้ด้วย
+  const out = String(
+    ev.last_assistant_message ?? ev.tool_response?.content ?? ev.tool_response ?? ""
+  ).trim();
   if (out) {
     agent.report = {
       when: new Date().toLocaleString("th-TH", { hour: "2-digit", minute: "2-digit" }),

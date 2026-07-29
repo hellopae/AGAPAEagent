@@ -39,15 +39,22 @@
 3. **ถ้างานซับซ้อน** วางลำดับ pipeline ให้ชัดแล้ว delegate เป็นขั้น
 4. **ถ้าไม่มี agent ที่เหมาะ** ตอบว่า "ควรสร้าง Agent ใหม่สำหรับ [X]" อย่าลงมือทำเอง
 5. **ห้ามทำงาน specialist เอง** — เขียน copy, research, design, QA ล้วนเป็นหน้าที่ของแต่ละ agent
-6. **FACT-CHECK RULE (บังคับ)** — ทุก output จากทุก Agent ที่มี factual claims ต้องผ่าน **Reese [Fact-check]** ก่อน Chris QA เสมอ ไม่มีข้อยกเว้น
+6. **FACT-CHECK RULE (บังคับด้วยโค้ด ไม่ใช่ความจำ)** — ทุก output จากทุก Agent ที่มี factual claims ต้องผ่าน **Reese [Fact-check]** ก่อน Chris QA เสมอ
    - Minnie's idea cards → Reese fact-check
    - Rae's scripts/articles → Reese fact-check
    - Nick's analytics reports → Reese fact-check
    - Dale's technical docs → Reese fact-check
-   - เฉพาะ output ที่ไม่มี factual claims (เช่น pure design/layout) จึงข้ามขั้นนี้ได้
+   - เฉพาะ output ที่ไม่มี factual claims (เช่น pure design/layout จาก Vera/Mind/Libby) จึงข้ามขั้นนี้ได้
+   - ⚙️ **hook `scripts/hook-gate.mjs` บังคับข้อนี้จริง** — ถ้าเรียก `chris-qa` ทั้งที่ยังมีงานค้าง fact-check
+     hook จะ **deny การเรียกทันที** ข้ามไม่ได้
+   - ถ้างานนั้นเป็น pure design/layout จริงๆ ให้ใส่ `[skip-factcheck]` ใน prompt ของ Chris พร้อมเหตุผล
+     — นี่คือทางออกเดียวที่ระบบยอมรับ อย่าพยายามเลี่ยงด้วยวิธีอื่น
 7. **ทุกครั้งที่ agent ทำงานเสร็จ → ผลงานขึ้น Dashboard อัตโนมัติ** ที่ https://hellopae.github.io/AGAPAEagent/
-   - Hook (`scripts/hook-status.mjs`) จัดการให้เองเมื่อ Task เสร็จ: อัปเดต `status.json` + เพิ่ม entry ใน `worklog.json` + เขียน Firestore (`agents/worklog`) + `git commit && git push` อัตโนมัติ
+   - Hook (`scripts/hook-status.mjs`) จัดการให้เองเมื่อ agent ทำงานจบ: อัปเดต `status.json` + เพิ่ม entry ใน `worklog.json` + เขียน Firestore (`agents/worklog`) + `git commit && git push` อัตโนมัติ
    - หน้าที่ของ Claudy: บันทึกผลงานเต็มลง `Output/<Agent>/` ก่อนจบ Task และตรวจว่า push สำเร็จ (`git status` สะอาด) — ถ้า hook พลาด ให้ commit+push เองทันที ไม่ต้องรอ Kittanate สั่ง
+8. **DoD GATE (บังคับด้วยโค้ด)** — ตอนจบเทิร์น hook `Stop` จะตรวจ Definition of Done ให้อัตโนมัติ
+   ถ้ายังมี fact-check ค้าง / Chris ตี ❌ FAIL แล้วยังไม่แก้ / `git status` ไม่สะอาด → **จบเทิร์นไม่ได้**
+   hook จะสั่งให้ทำต่อจนครบ (บล็อกได้มากสุด 3 ครั้ง แล้วบังคับให้รายงาน Kittanate ตามจริง — ห้ามบอกว่า "เสร็จแล้ว")
 
 ## GAPS (ยังไม่มี agent file — สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติเท่านั้น)
 

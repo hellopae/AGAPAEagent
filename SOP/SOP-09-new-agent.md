@@ -21,8 +21,14 @@ You are <ชื่อ>, <บทบาท> for TANAPAT Printing's AI studio.
 - Output format บังคับ ให้ตรวจได้ว่างานครบ
 - ให้ tools น้อยที่สุดที่พอทำงาน
 
-### 2. Hook MAP — `scripts/hook-status.mjs`
-เพิ่มบรรทัดใน `MAP`: `"<agent-file-name>": "<statusId>",`
+### 2. Hook MAP — ต้องแก้ **2 ไฟล์** ไม่ใช่ไฟล์เดียว
+- `scripts/hook-status.mjs` → เพิ่มใน `MAP`: `"<agent-file-name>": "<statusId>",`
+- `scripts/hook-gate.mjs` → เพิ่มใน `MAP` + `NAME` แล้วจัดกลุ่มให้ครบ:
+  - `FACTUAL` — ถ้า output ของ agent นี้มี factual claims ได้ (จะถูกบังคับให้ผ่าน Reese ก่อน Chris)
+  - `VISUAL` — ถ้าเป็น pure design/layout/metadata (ข้าม fact-check ได้)
+  - `WRITES_OUTPUT` — ถ้าต้องมีไฟล์ผลงานใน `Output/<Name>/`
+
+ลืมไฟล์ที่สองแปลว่า agent ใหม่หลุด quality gate ทั้งหมด
 
 ### 3. `status.json` — เพิ่ม entry ใน `agents[]`
 ```json

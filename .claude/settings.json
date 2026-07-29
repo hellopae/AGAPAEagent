@@ -9,19 +9,42 @@
             "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-status.mjs\" start",
             "timeout": 10,
             "statusMessage": "อัปเดตสถานะทีมในแดชบอร์ด…"
+          },
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-gate.mjs\" pre",
+            "timeout": 10,
+            "statusMessage": "ตรวจลำดับ quality gate…"
           }
         ]
       }
     ],
-    "PostToolUse": [
+    "SubagentStop": [
       {
-        "matcher": "Task|Agent",
         "hooks": [
           {
             "type": "command",
             "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-status.mjs\" done",
             "timeout": 30,
             "statusMessage": "บันทึกผลงานทีมลงแดชบอร์ด…"
+          },
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-gate.mjs\" agent-done",
+            "timeout": 15,
+            "statusMessage": "บันทึกสถานะ quality gate…"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-gate.mjs\" stop",
+            "timeout": 30,
+            "statusMessage": "ตรวจ Definition of Done…"
           }
         ]
       }

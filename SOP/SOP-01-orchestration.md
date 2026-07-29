@@ -50,6 +50,23 @@ Libby index (ถ้าเป็น asset/template) → ส่งมอบ Kittan
 - เวอร์ชันใหม่ตั้งชื่อ `-v2`, `-v3` ต่อท้าย slug เดิม
 - เกิน 3 รอบยังไม่ผ่าน → หยุด รายงาน Kittanate พร้อมสรุปข้อติดขัด
 
+### ⚙️ Gate นี้บังคับด้วยโค้ด (ตั้งแต่ 29 ก.ค. 2026)
+
+`scripts/hook-gate.mjs` ทำให้ข้ามขั้นไม่ได้จริง ไม่ใช่แค่เขียนไว้ใน SOP:
+
+| เมื่อ | hook | ผล |
+|---|---|---|
+| เรียก `chris-qa` ทั้งที่ยังมีงานค้าง fact-check | `PreToolUse` | **deny** การเรียก พร้อมบอกว่าต้องทำอะไรก่อน |
+| agent ทำงานจบ | `SubagentStop` | บันทึกว่าใครเสร็จ / ใครผ่าน fact-check / Chris ตัดสินอะไร |
+| จบเทิร์นทั้งที่ DoD ไม่ครบ | `Stop` | **block** ให้ทำต่อ (สูงสุด 3 ครั้ง แล้วบังคับรายงานตามจริง) |
+
+- agent ที่ output มี factual claims ได้ → Minnie, Rae, Nick, Dale, News (ตั้งธงรอ fact-check อัตโนมัติ)
+- agent ที่ข้าม fact-check ได้ → Vera, Mind, Libby (pure design/layout/metadata)
+- Reese จะเคลียร์ธงให้ต่อเมื่อผลงานมีมาร์กเกอร์ fact-check จริง (`✅ VERIFIED` / `⚠️ UNVERIFIED` / `❌ INCORRECT`)
+  — เรียก Reese โหมด research เฉยๆ ไม่นับว่าผ่าน gate
+- **ทางออกเดียวเมื่อโดน deny แต่งานไม่มี factual claim จริงๆ:** ใส่ `[skip-factcheck]` ใน prompt ของ Chris
+  พร้อมเหตุผลว่าทำไมถึงข้ามได้ — อย่าเลี่ยงด้วยวิธีอื่น
+
 ## STEP 5 — ปิดงาน (Definition of Done ครบ 6 ข้อใน HANDOFF.md §4)
 
 1. เช็คว่าไฟล์ผลงานอยู่ใน `Output/<Agent>/` ครบทุกขั้น

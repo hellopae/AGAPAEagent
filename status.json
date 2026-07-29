@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T12:20:00.000000Z",
+  "updatedAt": "2026-07-29T06:53:57.000000Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,8 +19,12 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "AGAPAE SEO — รวมผล 3 สายเป็นแผนลงมือ 3 เฟส",
-      "report": "Output/Claudy/2026-07-28-agapae-seo-plan.md"
+      "task": "Quality Gate Automation — บังคับ fact-check/QA/DoD ด้วย hook",
+      "report": {
+        "when": "13:53",
+        "title": "Quality Gate Automation — บังคับ fact-check/QA/DoD ด้วย hook",
+        "body": "ย้าย quality gate จากข้อความใน SOP มาเป็นโค้ดที่บังคับได้จริง: hook-gate.mjs deny การเรียก Chris ถ้ายังไม่ผ่าน Reese, Stop hook บล็อกไม่ให้จบเทิร์นถ้า DoD ไม่ครบ (fact-check ค้าง/QA FAIL/git ไม่สะอาด) พร้อมแก้บั๊ก hook-status ที่รายงานว่างเพราะ subagent รัน background ตั้งแต่ v2.1.198 ทดสอบ 12 เคสผ่านหมด"
+      }
     },
     {
       "id": "minnie",

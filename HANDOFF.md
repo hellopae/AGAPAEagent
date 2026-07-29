@@ -36,10 +36,11 @@ AGAPAE Agent/
 ├── SOP/                  ← คู่มือปฏิบัติงานละเอียด 9 ฉบับ
 ├── .claude/
 │   ├── agents/           ← agent scaffolds ครบ 11 ตัว (claudy + 10 specialists)
-│   ├── skills/           ← reusable skills 6 ตัว (เรียกด้วย Skill tool)
-│   └── settings.json     ← hooks: PreToolUse/PostToolUse(Task) → hook-status.mjs
+│   ├── skills/           ← reusable skills 7 ตัว (เรียกด้วย Skill tool)
+│   └── settings.json     ← hooks: PreToolUse(Agent) + SubagentStop + Stop
 ├── scripts/
-│   ├── hook-status.mjs   ← สะพาน Task tool → status.json + worklog.json + Firestore + git push
+│   ├── hook-status.mjs   ← สะพาน agent → status.json + worklog.json + Firestore + git push
+│   ├── hook-gate.mjs     ← บังคับ quality gate + DoD ด้วยโค้ด (deny/block ได้จริง)
 │   ├── set-status.mjs    ← ตั้งสถานะ agent ด้วยมือ
 │   └── seed-firestore.mjs
 ├── Output/<Agent>/       ← ผลงานเต็มของทุก agent (YYYY-MM-DD-slug.md)
@@ -54,16 +55,30 @@ AGAPAE Agent/
 1. ✅ ผลงานเต็มถูกเซฟลง `Output/<Agent>/YYYY-MM-DD-slug.md`
 2. ✅ ผ่าน **Reese [Fact-check]** ถ้ามี factual claims (กฎบังคับ — ไม่มีข้อยกเว้น)
 3. ✅ ผ่าน **Chris QA** ได้ verdict ✅ PASS (ถ้า ❌ FAIL → วน loop แก้จนผ่าน)
-4. ✅ `status.json` + `worklog.json` อัปเดตแล้ว (hook ทำให้อัตโนมัติเมื่อใช้ Task tool —
-   ถ้าทำงานนอก Task tool ให้ใช้ skill `worklog-sync`)
+4. ✅ `status.json` + `worklog.json` อัปเดตแล้ว (hook ทำให้อัตโนมัติเมื่อ delegate ผ่าน Agent tool —
+   ถ้าทำงานนอก Agent tool ให้ใช้ skill `worklog-sync`)
 5. ✅ `git status` สะอาด และ push ขึ้น `origin/main` สำเร็จ (อัตโนมัติ ไม่ต้องรอ Kittanate สั่ง)
 6. ✅ รายงานสรุปให้ Kittanate: ใครทำอะไร ผลอยู่ไฟล์ไหน verdict อะไร
+
+> ⚙️ **ข้อ 2, 3, 5 ไม่ใช่ honor system อีกต่อไป** — `scripts/hook-gate.mjs` บังคับด้วยโค้ด:
+> ข้อ 2 → `PreToolUse` deny การเรียก Chris ถ้ายังไม่ผ่าน Reese
+> ข้อ 3+5 → `Stop` hook บล็อกไม่ให้จบเทิร์น (สูงสุด 3 ครั้ง แล้วบังคับให้รายงานตามจริง)
+> ข้อ 1 → เตือน (ไม่บล็อก) เพราะเช็คจาก mtime ของไฟล์ใน `Output/<Agent>/` เป็นการเดา
 
 ## 5. กับดักที่ Senior Architect เจอมาแล้ว (อย่าตกซ้ำ)
 
 - **GitHub Pages ขึ้นหน้าขาว/ค้าง** → ต้องมี `.nojekyll` ที่ root (มีแล้ว อย่าลบ) — ดู SOP-07
-- **Hook จะทำงานเฉพาะเมื่อ delegate ผ่าน Task tool** ด้วย `subagent_type` ที่อยู่ใน MAP ของ
-  `scripts/hook-status.mjs` — ถ้าสร้าง agent ใหม่ต้องเพิ่ม MAP + status.json ตาม SOP-09
+- **Hook จะทำงานเฉพาะเมื่อ delegate ผ่าน Agent tool** ด้วย `subagent_type` ที่อยู่ใน MAP ของ
+  `scripts/hook-status.mjs` **และ** `scripts/hook-gate.mjs` — ถ้าสร้าง agent ใหม่ต้องเพิ่ม MAP
+  ทั้งสองไฟล์ + status.json ตาม SOP-09 (ใน hook-gate ต้องระบุด้วยว่า agent ใหม่อยู่กลุ่ม
+  `FACTUAL` / `VISUAL` / `WRITES_OUTPUT`)
+- **ตั้งแต่ Claude Code v2.1.198 subagent รัน background เป็นค่าเริ่มต้น** — เดิม hook `done`
+  ผูกกับ `PostToolUse(Task)` ซึ่งได้ `tool_response` กลับมาก่อน agent ทำงานจริงเสร็จ
+  แก้แล้วเมื่อ 29 ก.ค. 2026 โดยย้ายไปใช้ `SubagentStop` (ให้ `last_assistant_message` มาตรงๆ)
+  อย่าย้ายกลับไป `PostToolUse` เด็ดขาด
+- **อย่าพยายามเลี่ยง gate** — ถ้าโดน deny ตอนเรียก Chris แปลว่ายังไม่ผ่าน Reese จริงๆ
+  ทางออกเดียวที่ยอมรับคือรัน fact-check ก่อน หรือใส่ `[skip-factcheck]` พร้อมเหตุผล
+  ถ้างานนั้นเป็น pure design/layout
 - **Hook push แบบ detached (best-effort)** — จบ task แล้วต้องเช็ค `git status` เสมอ
   ถ้า hook พลาด ให้ commit+push เองทันที (รูปแบบ commit message อยู่ใน SOP-07)
 - **อย่าข้าม Reese [Fact-check]** — ประวัติที่ผ่านมา บทความที่ข้ามขั้นนี้โดน Chris ตี FAIL
