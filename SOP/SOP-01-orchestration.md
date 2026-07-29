@@ -38,6 +38,11 @@
 | ขั้นที่ผลต้องส่งต่อให้ขั้นถัดไปทันที | รัน **foreground** (`run_in_background: false`) — ไม่งั้นได้แค่ "เริ่มทำงานแล้ว" |
 | งานอิสระหลายชิ้นที่ไม่พึ่งกัน | ปล่อย background ขนานกัน เร็วกว่ามาก |
 | agent ที่ต้องใช้ tool นอกชุดพื้นฐาน | รัน foreground — background subagent ได้ tool ชุดเล็กกว่า |
+| **cloud routine / headless (`claude -p`)** | รัน foreground **เสมอ** — headless ฆ่า background task ที่ 600 วินาที |
+
+> เจอจริง 29 ก.ค. 2569: ทดสอบ Chris แตก sub-checker 3 ตัวใน headless — ทั้ง 3 ตัวถูกตัด
+> กลางคัน `API Error: Connection closed mid-response` เพราะชนเพดาน 600 วินาทีของ print mode
+> ถ้าจำเป็นต้องใช้ background ใน routine จริง ๆ ให้ตั้ง `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0`
 
 ### ห้ามเรียก `@claudy` ซ้ำ
 

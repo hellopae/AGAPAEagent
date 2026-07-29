@@ -85,6 +85,10 @@ AGAPAE Agent/
   v2.1.198 ถ้าไม่ระบุจะได้แค่ "เริ่มทำงานแล้ว" แล้วส่งของว่างต่อให้ขั้นถัดไปโดยไม่รู้ตัว
 - **sub-checker ของ Chris เรียกตรงไม่ได้** — `chris-thai` / `chris-culture` / `chris-print`
   เป็น worker ภายในของ Chris เท่านั้น Claudy เรียก `chris-qa` แล้ว Chris กระจายเอง
+- **headless (`claude -p`) ฆ่า background task ทิ้งที่ 600 วินาที** — เจอจริง 29 ก.ค. 2569
+  ตอนทดสอบ Chris แตก sub-checker: ทั้ง 3 ตัวโดนตัดกลางคัน "Connection closed mid-response"
+  ทางแก้: subagent ใน cloud routine ต้องรัน **foreground** เสมอ
+  ถ้าจำเป็นต้องใช้ background จริง ๆ ให้ตั้ง `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0`
 - **Hook push แบบ detached (best-effort)** — จบ task แล้วต้องเช็ค `git status` เสมอ
   ถ้า hook พลาด ให้ commit+push เองทันที (รูปแบบ commit message อยู่ใน SOP-07)
 - **อย่าข้าม Reese [Fact-check]** — ประวัติที่ผ่านมา บทความที่ข้ามขั้นนี้โดน Chris ตี FAIL

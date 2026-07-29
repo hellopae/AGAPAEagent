@@ -55,18 +55,42 @@ Claude Code v2.1.219+ ให้ subagent แตกลูกได้ลึก 3 
 **ทดสอบแบบ static แล้ว:** frontmatter ทั้ง 14 ไฟล์ parse ได้, ไม่มีชื่อซ้ำ,
 tools ของทุกตัวถูกต้อง, `chris-qa` ได้ `Agent` เพิ่มแล้ว
 
-**ยังไม่ได้ทดสอบ end-to-end:** ตั้งใจจะรัน headless ให้ Chris ตรวจบทความจริง
-เพื่อดูว่าแตก sub-checker 3 ตัวไหม แต่ **ชนลิมิตการใช้งาน** (`session limit · resets 5:50pm`)
-→ ต้องรันซ้ำหลังลิมิตรีเซ็ต
+**ทดสอบ end-to-end แล้ว (รอบสอง, 18:52 น.):** รัน headless ให้ Chris ตรวจบทความจริง
 
-คำสั่งที่ต้องรันเพื่อทดสอบ (จากในโฟลเดอร์โปรเจกต์):
+✅ **nesting ทำงาน** — transcript ยืนยันว่า Chris (`agent-ac84d8b6`) เรียกครบทั้ง 3 ตัว:
+```
+subagents/agent-a2192fb4  → chris-culture
+subagents/agent-a869b594  → chris-thai
+subagents/agent-ae6fe332  → chris-print
+```
+✅ **dashboard ไม่รก** — `status.json` ขึ้นแค่ `Chris → working` ตัวเดียว
+sub-checker ไม่โผล่เลย ตรงตามที่ออกแบบ
+
+❌ **แต่ sub-checker ทั้ง 3 ตัวถูกฆ่ากลางคัน** — `API Error: Connection closed mid-response`
+สาเหตุ: headless print mode (`claude -p`) **ฆ่า background task ทิ้งที่ 600 วินาที**
+Chris ส่ง sub-checker ไปแบบ background (ค่าเริ่มต้นตั้งแต่ v2.1.198) จึงโดนตัดก่อนทำเสร็จ
+
+### แก้แล้ว
+
+บังคับใน `chris-qa.md` ว่า sub-checker **ต้องรัน foreground เสมอ** (`run_in_background: false`)
+— ส่งพร้อมกันใน message เดียวก็ยังขนานกันอยู่ ไม่ช้าลง
+บันทึกกับดักนี้ลง `HANDOFF.md` §5 และ `SOP-01` แล้ว พร้อมทางเลือก
+`CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0` ถ้าจำเป็นต้องใช้ background ใน routine
+
+**นี่คือกับดักที่กระทบ cloud routine ทั้งหมด** ไม่ใช่แค่ Chris — routine ข่าวเช้า/มังงะ/ดูดวง
+ที่รันด้วย headless ก็ต้องรัน subagent แบบ foreground เหมือนกัน
+
+### ที่ยังไม่ได้พิสูจน์
+
+verdict สุดท้ายที่ Chris สรุปจากผล sub-checker ทั้ง 3 — เพราะรอบทดสอบถูกตัดก่อน
+และรอบถัดไปชนลิมิตการใช้งาน (`resets 11:40pm`) ต้องรันซ้ำหลังลิมิตรีเซ็ต:
 ```
 claude -p "delegate ให้ chris-qa ตรวจ QA เต็มรูปแบบของไฟล์ \
 Output/Rae/2026-07-06-5-print-mistakes-article-v3.md — งานนี้เดิมพันสูง ตรวจให้ครบทุกมิติ \
 รายงานว่า Chris แตกงานให้ใครบ้างและ verdict คืออะไร"
 ```
-สิ่งที่ต้องเห็น: Chris เรียก `chris-thai` + `chris-culture` + `chris-print` ขนานกัน
-แล้วสรุป verdict เดียวกลับมา โดย worklog มีแค่ entry ของ Chris ไม่มีของ sub-checker
+สิ่งที่ต้องเห็น: sub-checker ทั้ง 3 ทำงานจนจบ (ไม่มี Connection closed)
+แล้ว Chris สรุป verdict เดียวกลับมา
 
 ## ของทดสอบชั้นที่ 1 ที่ลบทิ้ง
 
