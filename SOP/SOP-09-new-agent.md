@@ -30,6 +30,11 @@ You are <ชื่อ>, <บทบาท> for TANAPAT Printing's AI studio.
 
 ลืมไฟล์ที่สองแปลว่า agent ใหม่หลุด quality gate ทั้งหมด
 
+> **ข้อยกเว้น — sub-checker ของ Chris** (`chris-thai`, `chris-culture`, `chris-print`)
+> ไม่ต้องใส่ MAP, ไม่ต้องมี entry ใน `status.json`, ไม่ต้องมี avatar
+> เพราะเป็น worker ภายในของ Chris ไม่ใช่สมาชิกสตูดิโอ — hook จะข้ามไปเงียบ ๆ เอง
+> และไม่ควรขึ้น dashboard เพราะ Kittanate ดูที่ verdict ของ Chris ไม่ใช่ผลย่อย
+
 ### 3. `status.json` — เพิ่ม entry ใน `agents[]`
 ```json
 { "id": "<statusId>", "name": "<ชื่อ>", "role": "<บทบาท>",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T07:07:12.673Z",
+  "updatedAt": "2026-07-29T11:46:51.000000Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "Quality Gate Automation — บังคับ fact-check/QA/DoD ด้วย hook",
+      "task": "ชั้นที่ 2 — ปรับโครงการ delegate ของ Claudy",
       "report": {
-        "when": "13:53",
-        "title": "Quality Gate Automation — บังคับ fact-check/QA/DoD ด้วย hook",
-        "body": "ย้าย quality gate จากข้อความใน SOP มาเป็นโค้ดที่บังคับได้จริง: hook-gate.mjs deny การเรียก Chris ถ้ายังไม่ผ่าน Reese, Stop hook บล็อกไม่ให้จบเทิร์นถ้า DoD ไม่ครบ (fact-check ค้าง/QA FAIL/git ไม่สะอาด) พร้อมแก้บั๊ก hook-status ที่รายงานว่างเพราะ subagent รัน background ตั้งแต่ v2.1.198 ทดสอบ 12 เคสผ่านหมด"
+        "when": "18:46",
+        "title": "ชั้นที่ 2 — ปรับโครงการ delegate ของ Claudy",
+        "body": "เลิกซ้อนชั้น Claudy (claudy.md ใช้เฉพาะ headless/cron), เปลี่ยน tools เป็น Agent(...) allowlist, ให้ Chris แตก sub-checker ขนาน 3 ตัว (chris-thai/chris-culture/chris-print) ด้วย nested subagent, และเขียนกฎ foreground vs background กันบั๊กส่งของว่างต่อให้ขั้นถัดไป — ยังไม่ได้ทดสอบ end-to-end เพราะชนลิมิตการใช้งาน"
       }
     },
     {
@@ -87,13 +87,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "เขียนบทความงานพิมพ์ 3 บทความ",
-      "report": {
-        "when": "14:07",
-        "title": "เขียนบทความงานพิมพ์ 3 บทความ",
-        "body": "เขียนครบ 3 บทความแล้ว ทั้งหมดเป็นภาษาไทย น้ำเสียงมืออาชีพแต่อบอุ่นตามแบรนด์วอยซ์ ต่อยอดโครงเดิมจากบทความ print-mistakes v3 ที่ผ่าน QA มาแล้ว (หัวเรื่อง → ย่อหน้าแบ่งหัวข้อ → เช็กลิสต์/สรุป → ปิดท้ายด้วยลายเซ็นแบรนด์)\n\nไฟล์ผลงาน (absolute paths)\n\n1. `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-07-29-offset-vs-digital-printing.md`\n   \"ออฟเซ็ตหรือดิจิทัล — เลือกระบบพิมพ์อย่างไรให้เหมาะกับงาน\" (~430 คำ)\n2. `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-07-29-print-ready-artwork-checklist.md`\n   \"เตรียมไฟล์อาร์ตเวิร์กให้พร้อมพิมพ์ — CMYK, 300 dpi, ระยะตัดตก และฟอนต์\" (~440 คำ)\n3. `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-07-29-paper-and-coating-guide.md`\n   \"เลือกกระดาษและการเคลือบผิวให้งานพิมพ์ออกมาดูดีและใช้งานได้จริง …"
-      }
+      "status": "idle",
+      "task": ""
     },
     {
       "id": "vera",
@@ -165,8 +160,8 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "done",
-      "task": "เกียรติบัตร Express — delta re-QA B1+B2",
+      "status": "working",
+      "task": "ตรวจน้ำเสียง/ความเหมาะสมบทความ v3",
       "report": {
         "when": "20:20",
         "title": "delta re-QA: ✅ PASS",

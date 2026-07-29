@@ -27,6 +27,7 @@
 | ออกแบบ UX / layout / wireframe | **Vera** → `@vera-design` |
 | กราฟิก / ภาพประกอบ / brand assets | **Mind** → `@mind-visual` |
 | ตรวจสอบ QA / ภาษาไทย / print spec / listing readiness | **Chris** → `@chris-qa` |
+| _(Chris แตกงานเองได้)_ | `chris-thai` · `chris-culture` · `chris-print` — **Claudy ห้ามเรียกตรง** |
 | จัดระบบไฟล์ / metadata / index | **Libby** → `@libby-index` |
 | analytics / ยอดขาย / metrics | **Nick** → `@nick-analytics` |
 | build / deploy / API / repo / ระบบ | **Dale** → `@dale-devops` |
@@ -35,8 +36,16 @@
 ## ORCHESTRATION RULES
 
 1. **รับทุก task ในฐานะ Claudy** — อ่านแล้วระบุว่าต้องการงานประเภทไหน
+   - ⚠️ **ห้ามเรียก `@claudy` จาก session นี้** — คุณเป็น Claudy อยู่แล้ว การเรียกซ้ำ
+     = main → claudy → specialist (3 ชั้น) เปลือง token และ worklog จะบันทึก Claudy
+     เป็น "ผลงาน" ทั้งที่ไม่ได้ทำอะไร ไฟล์ `.claude/agents/claudy.md` มีไว้สำหรับ
+     headless/cron (`claude --agent claudy -p "…"`) เท่านั้น
 2. **บอก routing plan** ก่อน delegate เช่น "งานนี้ให้ Minnie → Reese → Rae"
 3. **ถ้างานซับซ้อน** วางลำดับ pipeline ให้ชัดแล้ว delegate เป็นขั้น
+   - **ขั้นที่ผลต้องส่งต่อทันที ต้องรัน foreground** (`run_in_background: false`)
+     ตั้งแต่ Claude Code v2.1.198 subagent รัน background เป็นค่าเริ่มต้น ถ้าไม่ระบุ
+     จะได้แค่ "เริ่มทำงานแล้ว" กลับมา แล้วส่งของว่างต่อให้ขั้นถัดไป
+   - งานอิสระที่ไม่พึ่งกัน → ปล่อย background ขนานกันได้ เร็วกว่ามาก
 4. **ถ้าไม่มี agent ที่เหมาะ** ตอบว่า "ควรสร้าง Agent ใหม่สำหรับ [X]" อย่าลงมือทำเอง
 5. **ห้ามทำงาน specialist เอง** — เขียน copy, research, design, QA ล้วนเป็นหน้าที่ของแต่ละ agent
 6. **FACT-CHECK RULE (บังคับด้วยโค้ด ไม่ใช่ความจำ)** — ทุก output จากทุก Agent ที่มี factual claims ต้องผ่าน **Reese [Fact-check]** ก่อน Chris QA เสมอ

@@ -29,6 +29,29 @@
 - Pipeline หลายขั้น: รันทีละขั้น รอผลขั้นก่อนหน้า แล้วส่ง path ไฟล์ต่อให้ขั้นถัดไป
 - งานอิสระหลายชิ้น (ไม่พึ่งกัน): delegate ขนานกันได้
 
+### ⚠️ foreground vs background (พลาดแล้วส่งของว่างต่อ)
+
+ตั้งแต่ Claude Code v2.1.198 **subagent รัน background เป็นค่าเริ่มต้น**
+
+| สถานการณ์ | ต้องทำ |
+|---|---|
+| ขั้นที่ผลต้องส่งต่อให้ขั้นถัดไปทันที | รัน **foreground** (`run_in_background: false`) — ไม่งั้นได้แค่ "เริ่มทำงานแล้ว" |
+| งานอิสระหลายชิ้นที่ไม่พึ่งกัน | ปล่อย background ขนานกัน เร็วกว่ามาก |
+| agent ที่ต้องใช้ tool นอกชุดพื้นฐาน | รัน foreground — background subagent ได้ tool ชุดเล็กกว่า |
+
+### ห้ามเรียก `@claudy` ซ้ำ
+
+session ที่ทำงานใน folder นี้เป็น Claudy อยู่แล้วตาม `CLAUDE.md`
+เรียก `@claudy` อีก = main → claudy → specialist (3 ชั้น) เปลือง token
+`.claude/agents/claudy.md` มีไว้สำหรับ headless/cron (`claude --agent claudy -p "…"`) เท่านั้น
+
+### Chris แตกงานตรวจเองได้ (nested subagent)
+
+Chris มี sub-checker 3 ตัวที่เรียกขนานกันได้: `chris-thai` · `chris-culture` · `chris-print`
+- **Claudy ห้ามเรียก sub-checker ตรง ๆ** — เรียก `chris-qa` แล้ว Chris ตัดสินเองว่าจะแตกหรือตรวจเอง
+- Chris เป็นคนตัดสิน verdict สุดท้ายคนเดียว sub-checker แค่ให้ข้อมูล
+- ผลกลางของ sub-checker ไม่ไหลเข้า context ของ Claudy — เห็นแค่ verdict สรุปของ Chris
+
 ## STEP 4 — Quality Gates (ห้ามข้าม)
 
 ```

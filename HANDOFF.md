@@ -35,7 +35,7 @@ AGAPAE Agent/
 ├── BACKLOG.md            ← งานมอบหมายของทุก agent + สถานะ
 ├── SOP/                  ← คู่มือปฏิบัติงานละเอียด 9 ฉบับ
 ├── .claude/
-│   ├── agents/           ← agent scaffolds ครบ 11 ตัว (claudy + 10 specialists)
+│   ├── agents/           ← 11 ตัวหลัก (claudy + 10 specialists) + 3 sub-checker ของ Chris
 │   ├── skills/           ← reusable skills 7 ตัว (เรียกด้วย Skill tool)
 │   └── settings.json     ← hooks: PreToolUse(Agent) + SubagentStop + Stop
 ├── scripts/
@@ -79,6 +79,12 @@ AGAPAE Agent/
 - **อย่าพยายามเลี่ยง gate** — ถ้าโดน deny ตอนเรียก Chris แปลว่ายังไม่ผ่าน Reese จริงๆ
   ทางออกเดียวที่ยอมรับคือรัน fact-check ก่อน หรือใส่ `[skip-factcheck]` พร้อมเหตุผล
   ถ้างานนั้นเป็น pure design/layout
+- **ห้ามเรียก `@claudy` จาก session ที่เป็น Claudy อยู่แล้ว** — จะได้ 3 ชั้นซ้อน
+  `claudy.md` มีไว้สำหรับ headless/cron (`claude --agent claudy -p "…"`) เท่านั้น
+- **ขั้น pipeline ที่ผลต้องส่งต่อ ต้องรัน foreground** — background เป็นค่าเริ่มต้นตั้งแต่
+  v2.1.198 ถ้าไม่ระบุจะได้แค่ "เริ่มทำงานแล้ว" แล้วส่งของว่างต่อให้ขั้นถัดไปโดยไม่รู้ตัว
+- **sub-checker ของ Chris เรียกตรงไม่ได้** — `chris-thai` / `chris-culture` / `chris-print`
+  เป็น worker ภายในของ Chris เท่านั้น Claudy เรียก `chris-qa` แล้ว Chris กระจายเอง
 - **Hook push แบบ detached (best-effort)** — จบ task แล้วต้องเช็ค `git status` เสมอ
   ถ้า hook พลาด ให้ commit+push เองทันที (รูปแบบ commit message อยู่ใน SOP-07)
 - **อย่าข้าม Reese [Fact-check]** — ประวัติที่ผ่านมา บทความที่ข้ามขั้นนี้โดน Chris ตี FAIL
