@@ -84,6 +84,7 @@
     <button class="tab active" data-t="daily" onclick="switchTab('daily')">Daily</button>
     <button class="tab" data-t="weekly" onclick="switchTab('weekly')">Weekly</button>
     <button class="tab" data-t="monthly" onclick="switchTab('monthly')">Monthly</button>
+    <button class="tab" data-t="horoscope" onclick="switchTab('horoscope')">ดูดวง</button>
   </div>
 </div>
 
@@ -91,6 +92,7 @@
   <div class="panel active" id="p-daily"><div class="r-card" id="c-daily"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-weekly"><div class="r-card" id="c-weekly"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-monthly"><div class="r-card" id="c-monthly"><div class="empty">กำลังโหลด…</div></div></div>
+  <div class="panel" id="p-horoscope"><div class="r-card" id="c-horoscope"><div class="empty">กำลังโหลด…</div></div></div>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -114,6 +116,7 @@ const EMPTY_TEXT = {
   daily:  "ยังไม่มีสรุปข่าววันนี้ — Daily routine เขียนทุก 09:00",
   weekly: "ยังไม่มีสรุปประจำสัปดาห์ — Weekly routine จะเริ่มเขียนเร็ว ๆ นี้",
   monthly:"ยังไม่มีสรุปประจำเดือน — Monthly routine จะเริ่มเขียนเร็ว ๆ นี้",
+  horoscope:"ยังไม่มีดวงวันนี้ — Horoscope routine เขียนทุก 07:15",
 };
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
@@ -132,7 +135,7 @@ function render(kind, d){
     ${d.updatedAt ? `<div class="r-stamp mono">อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}</div>` : ""}`;
 }
 
-for(const kind of ["daily","weekly","monthly"]){
+for(const kind of ["daily","weekly","monthly","horoscope"]){
   firebase.firestore().collection("agents").doc(kind).onSnapshot(
     d=>render(kind, d.exists ? d.data() : null),
     err=>{console.warn("Firestore",kind,err); render(kind,null);}

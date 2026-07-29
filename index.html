@@ -567,6 +567,12 @@
         <div class="w-manga" id="wMangaList"><span class="w-empty">กำลังโหลด…</span></div>
       </div>
 
+      <!-- Horoscope — ดูดวงรายวัน (Firestore agents/horoscope) -->
+      <div class="widget" id="wHoro">
+        <div class="wh"><span class="wdot" style="background:var(--c-content, var(--gold))"></span><h4>ดูดวงวันนี้</h4><span class="wup" id="wHoroUp">—</span></div>
+        <div class="w-news" id="wHoroBox"><span class="w-empty">รอดวงประจำวัน (routine 07:15)</span></div>
+      </div>
+
       <!-- To Do — ใกล้ครบกำหนด -->
       <div class="widget" id="wTodo">
         <div class="wh"><span class="wdot" style="background:var(--flagged)"></span><h4>To Do · ใกล้ถึงกำหนด</h4><span class="wup" id="wTodoUp">—</span></div>
@@ -878,6 +884,17 @@ function renderDaily(d){
   }
 }
 let DAILY_DOC = null;
+
+/* --- widget: ดูดวงรายวัน (Firestore agents/horoscope) --- */
+function renderHoro(d){
+  const box = document.getElementById('wHoroBox');
+  if(!box) return;
+  if(!d || !Array.isArray(d.items) || !d.items.length) return;
+  box.innerHTML = `<div class="nt">${d.date || d.title || 'ดวงวันนี้'}</div>
+    <ul>${d.items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
+  const up = document.getElementById('wHoroUp');
+  if(up) up.textContent = relTime(d.updatedAt);
+}
 
 /* --- widget: bitcoin (CoinGecko — refresh ทุก 3 นาที) --- */
 async function loadBtc(){
@@ -1546,6 +1563,10 @@ firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
 firebase.firestore().collection("agents").doc("daily").onSnapshot(d=>{
   if(d.exists){ DAILY_DOC = d.data(); renderDaily(DAILY_DOC); }
 },err=>console.warn("Firestore daily:",err));
+/* widget: ดูดวงรายวัน — เขียนโดย Daily Horoscope routine */
+firebase.firestore().collection("agents").doc("horoscope").onSnapshot(d=>{
+  if(d.exists) renderHoro(d.data());
+},err=>console.warn("Firestore horoscope:",err));
 /* แท็บการเงิน — เขียนโดยแอป budget2569 (agents/finance) */
 firebase.firestore().collection("agents").doc("finance").onSnapshot(d=>{
   if(!d.exists) return;
