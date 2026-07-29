@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-07-29T06:53:57.000000Z",
+  "updatedAt": "2026-07-29T07:07:12.673Z",
   "entries": [
+    {
+      "id": "wl-260729-rae-s7mq",
+      "datetime": "2026-07-29T07:07:12Z",
+      "displayDate": "29 ก.ค. 2569",
+      "displayTime": "14:07",
+      "agent": "rae",
+      "agentName": "Rae",
+      "agentImg": "avatars/Rae.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เขียนบทความงานพิมพ์ 3 บทความ",
+      "summary": "เขียนครบ 3 บทความแล้ว ทั้งหมดเป็นภาษาไทย น้ำเสียงมืออาชีพแต่อบอุ่นตามแบรนด์วอยซ์ ต่อยอดโครงเดิมจากบทความ print-mistakes v3 ที่ผ่าน QA มาแล้ว (หัวเรื่อง → ย่อหน้าแบ่งหัวข้อ → เช็กลิสต์/สรุป → ปิดท้ายด้วยลายเซ็นแบรนด์)\n\nไฟล์ผลงาน (absolute paths)\n\n1. `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Age"
+    },
     {
       "id": "wl-260729-claudy-gate",
       "datetime": "2026-07-29T06:53:57.000000Z",
