@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-07-24T08:10:00.000Z",
+  "updatedAt": "2026-07-29T04:30:00.000Z",
   "note": "One Piece + Dandadan อ่านไทยทางการที่ MANGA Plus (ตั้งภาษาเป็นไทยในแอป) · Versus อ่านไทยที่ niceoppai · แก้เลขตอน/ลิงก์ได้ตรงนี้ ไม่ต้อง rebuild widget",
   "series": [
     {
       "title": "One Piece",
-      "latest": 1188,
-      "releasedAt": "2026-07-12",
-      "next": 1189,
-      "nextAt": "2026-07-26",
+      "latest": 1189,
+      "releasedAt": "2026-07-26",
+      "next": 1190,
+      "nextAt": "2026-08-09",
       "cadence": "รายสัปดาห์",
-      "note": "พัก 1 สัปดาห์ (ข้าม Jump #34)",
+      "note": "พัก 1 สัปดาห์ — ตอน 1190 ออก 9 ส.ค.",
       "source": "MANGA Plus (ไทย)",
       "url": "https://mangaplus.shueisha.co.jp/titles/100020"
     },
     {
       "title": "Dandadan",
-      "latest": 241,
-      "releasedAt": "2026-07-20",
-      "next": 242,
-      "nextAt": null,
+      "latest": 242,
+      "releasedAt": "2026-07-27",
+      "next": 243,
+      "nextAt": "2026-08-10",
       "cadence": "รายสัปดาห์",
-      "note": "",
+      "note": "พัก 1 สัปดาห์ตาม Jump — ตอน 243 ออก 10 ส.ค.",
       "source": "MANGA Plus (ไทย)",
       "url": "https://mangaplus.shueisha.co.jp/titles/100171"
     },
