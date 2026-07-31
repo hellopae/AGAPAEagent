@@ -59,7 +59,12 @@ function loadAgents() {
 
 /* ---------- ค่าที่ "แนะนำ" (ไม่ใช่บังคับ) — ไม่ตรงจะเตือน ไม่ error ----------
    เพราะ UI ใช้ค่าพวกนี้เลือกสี badge ถ้าเจอค่าแปลกให้ UI fallback เป็นสีกลาง */
-const KNOWN_STATUS = ["กำลังประชุม", "รอ Kittanate ตัดสินใจ", "ตัดสินใจแล้ว", "เก็บเข้าคลัง"];
+/* ค่าสถานะ "รอเจ้าของกิจการตัดสิน" ถูกเทียบตรง ๆ ทั้งในสคริปต์นี้และใน index.html
+   (MT_WAIT) — เปลี่ยนคำเมื่อไหร่ต้องเปลี่ยนพร้อมกันทั้ง 3 ที่: ที่นี่ · index.html · meetings.json
+   31 ก.ค. 2026: เปลี่ยนคำเรียกเจ้าของกิจการในสถานะเป็น "PAE" (ประวัติการเปลี่ยนอยู่ใน scripts/README.md) */
+const STATUS_WAIT = "รอ PAE ตัดสินใจ";
+const OWNER_HUMAN = "pae"; // เจ้าของกิจการ — ใช้เป็นค่า decisions[].owner ได้โดยไม่ต้องอยู่ใน status.json
+const KNOWN_STATUS = ["กำลังประชุม", STATUS_WAIT, "ตัดสินใจแล้ว", "เก็บเข้าคลัง"];
 const KNOWN_ROLES = ["เสนอไอเดีย", "ตรวจสอบข้อเท็จจริง", "ประเมินต้นทุน", "ประเมินเทคนิค", "ออกแบบ", "QA", "จัดระบบ/สรุป"];
 
 /* ---------- enum ปิด (ต่างจาก status/role ที่เป็นข้อความอิสระ) ----------
@@ -260,15 +265,16 @@ function normalizeMeeting(raw, agents, { where = "meeting" } = {}) {
       if (!q) { err(`${where}.decisions[${j}]: object ต้องมี "question"`); return null; }
       const options = (arr(d.options) || []).map((o) => String(o).trim()).filter(Boolean);
       const owner = str(d.owner);
-      if (owner && !agents.has(owner) && owner !== "kittanate") warn(`${where}.decisions[${j}]: "owner" = "${owner}" ไม่ใช่ agent ใน status.json (ใส่ "kittanate" ได้ถ้าเป็นเจ้าของกิจการ)`);
+      // "pae" = เจ้าของกิจการ (ไม่ใช่ agent ใน status.json) — ค่าเดียวที่ไม่ต้องมีในทะเบียน
+      if (owner && !agents.has(owner) && owner !== OWNER_HUMAN) warn(`${where}.decisions[${j}]: "owner" = "${owner}" ไม่ใช่ agent ใน status.json (ใส่ "${OWNER_HUMAN}" ได้ถ้าเป็นเจ้าของกิจการ)`);
       return { question: q, options, owner: owner || null };
     }
     err(`${where}.decisions[${j}]: ต้องเป็นข้อความ หรือ object { question, options?, owner? }`);
     return null;
   }).filter((d) => d && (typeof d !== "string" || d.length));
   if (arr(m.decisions) === null && m.decisions !== undefined) err(`${where}: "decisions" ต้องเป็น array`);
-  if (status === "รอ Kittanate ตัดสินใจ" && !decisions.length) {
-    warn(`${where}: status บอกว่ารอ Kittanate ตัดสินใจ แต่ "decisions" ว่าง — รอตัดสินใจเรื่องอะไร`);
+  if (status === STATUS_WAIT && !decisions.length) {
+    warn(`${where}: status บอกว่ารอ PAE ตัดสินใจ แต่ "decisions" ว่าง — รอตัดสินใจเรื่องอะไร`);
   }
 
   return {
@@ -443,7 +449,7 @@ if (cmd === "template") {
     topic: flag("topic") || "",
     date: id.slice(0, 10),
     sop: flag("sop") || null,
-    status: "รอ Kittanate ตัดสินใจ",
+    status: STATUS_WAIT,
     participants: entries.map((e) => e.agent),
     entries,
     conclusion: "",

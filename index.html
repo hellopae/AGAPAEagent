@@ -183,6 +183,25 @@
   .w-manga .mg-chip.out{color:var(--done);border-color:rgba(58,107,80,.4)}
   .w-manga .mg-chip.soon{color:var(--gold);border-color:rgba(184,150,96,.4)}
   .w-manga .mg-src{font-size:9.5px;color:var(--ink-faint);white-space:nowrap;flex:none}
+  /* Meeting widget — ประชุมล่าสุดใบเดียว กดแล้วเด้งไปแท็บ Meeting
+     (เป็น <button> จริงเพื่อให้ Tab เข้าถึงได้ → ข้างในใช้ <span> ทั้งหมด เพราะ button
+      รับได้แค่ phrasing content · ใช้ตัวแปรสีเดิมทั้งหมด ไม่เพิ่มของใหม่ใน :root) */
+  .w-meet{
+    display:flex;flex-direction:column;gap:9px;width:100%;text-align:left;
+    font:inherit;color:inherit;cursor:pointer;
+    background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:10px 12px;
+    transition:border-color .15s,background .15s;
+  }
+  .w-meet:hover{border-color:var(--line-strong);background:var(--paper-2)}
+  .w-meet:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .w-meet .w-meet-topic{
+    font-family:"Noto Sans Thai","Space Grotesk",sans-serif;
+    font-size:13px;font-weight:600;line-height:1.6;color:var(--ink);
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .w-meet .mt-status{align-self:flex-start}   /* ป้ายสถานะเป็น flex item — ไม่ให้ยืดเต็มบรรทัด */
+  .w-meet .w-row .v.clash{color:var(--flagged)}
+  .w-meet .w-row .v.wait{color:var(--gold)}
 
   /* ---------- Finance view ---------- */
   .muted{color:var(--ink-faint);font-size:13px;font-style:italic}
@@ -748,6 +767,12 @@
         <div class="w-sub" id="wLatest">—</div>
       </div>
 
+      <!-- Meeting — ประชุมล่าสุด (meetings.json) · เนื้อในเติมโดย renderMeetingWidget() -->
+      <div class="widget" id="wMeet">
+        <div class="wh"><span class="wdot" style="background:var(--flagged)"></span><h4>Meeting · ล่าสุด</h4><span class="wup" id="wMeetUp">—</span></div>
+        <div id="wMeetBox"><span class="w-empty">กำลังโหลด…</span></div>
+      </div>
+
       <!-- Daily routines: news + bitcoin -->
       <div class="widget" id="wDaily">
         <div class="wh"><span class="wdot" style="background:var(--c-news)"></span><h4>Daily Routines</h4><span class="wup" id="wDailyUp">—</span></div>
@@ -943,7 +968,7 @@ const SEED_AGENTS = [
   {id:"news",name:"News",role:"Daily News Director",pipeline:"news",img:"avatars/News.png",
    persona:"รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
    caps:["การเมืองไทย","ข่าวโลก","ธุรกิจ & งานพิมพ์","เทคโนโลยี & ราคาทอง"],
-   what:["ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.","ส่งข้อมูลดิบให้ Chris ตรวจสอบ","Chris ผ่าน → Rae เขียนบทความสรุป","ส่งอีเมลสรุปให้ Kittanate"],
+   what:["ค้นข่าว 6 หัวข้อทุกเช้า 09:00 น.","ส่งข้อมูลดิบให้ Chris ตรวจสอบ","Chris ผ่าน → Rae เขียนบทความสรุป","ส่งอีเมลสรุปให้ PAE"],
    status:"idle",task:null,report:null}
 ];
 let AGENTS = SEED_AGENTS;
@@ -1755,7 +1780,11 @@ let MEET_SEL = null;
 
 const MT_SEV       = { blocker:0, challenge:1, note:2 };
 const MT_SEV_LABEL = { blocker:'Blocker', challenge:'Challenge', note:'Note' };
-const MT_STATUS_CLS= { 'รอ Kittanate ตัดสินใจ':'wait', 'ตัดสินใจแล้ว':'done', 'กำลังประชุม':'live', 'เก็บเข้าคลัง':'' };
+/* ค่าสถานะนี้ถูก "เทียบตรง ๆ" กับข้อความใน meetings.json (ไม่ใช่แค่ข้อความที่แสดง)
+   เก็บเป็นตัวแปรตัวเดียวเพื่อไม่ให้มีวันที่แก้คำในที่หนึ่งแล้วลืมอีกที่ แล้วสถิติเงียบเป็น 0
+   ต้องตรงกับ STATUS_WAIT ใน scripts/build-meeting.mjs เสมอ */
+const MT_WAIT      = 'รอ PAE ตัดสินใจ';
+const MT_STATUS_CLS= { [MT_WAIT]:'wait', 'ตัดสินใจแล้ว':'done', 'กำลังประชุม':'live', 'เก็บเข้าคลัง':'' };
 const MT_STANCE    = { propose:['เสนอ',''], support:['หนุน','support'], oppose:['ค้าน','oppose'], neutral:['ตั้งข้อสังเกต','neutral'] };
 const MT_FC        = { pending:['⚠ รอ fact-check','pending'], passed:['✓ ตรวจแล้ว','passed'], failed:['✗ ตรวจไม่ผ่าน','failed'] };
 const MT_REPO      = 'https://github.com/hellopae/AGAPAEagent/blob/main/';
@@ -1804,6 +1833,10 @@ function mtBuildClashes(m){
   return out.sort((a,b) => MT_SEV[a.sev] - MT_SEV[b.sev]);
 }
 const mtClashCount = m => (m.entries||[]).reduce((n,e) => n + ((e.disagreements||[]).length), 0);
+/* จำนวน "ข้อ" ที่รอ PAE ตัดสินในประชุมใบนี้ — นับเฉพาะประชุมที่ยังรอตัดสินอยู่จริง
+   (ประชุมที่ตัดสินใจแล้วยังมี decisions ค้างในไฟล์ ถ้านับด้วยจะกลายเป็นตัวเลขหลอก)
+   ใช้ร่วมกันระหว่างสถิติหัวแท็บกับการ์ดในแท็บ Widgets — นิยามเดียว ไม่มีวันเพี้ยนคนละทาง */
+const mtWaitCount  = m => (m.status === MT_WAIT ? (m.decisions||[]).length : 0);
 const mtCounteredBy = (clashes,id) => [...new Set(clashes.filter(c => c.to === id).map(c => c.from))];
 /* stance ไม่บังคับใน schema — ไม่มีก็เดาจากว่ามีข้อค้านไหม */
 function mtStance(e){
@@ -1829,12 +1862,11 @@ function renderMeetingList(box){
     return;
   }
   const nClash = MEETINGS.reduce((n,m) => n + mtClashCount(m), 0);
-  const nWait  = MEETINGS.filter(m => m.status === 'รอ Kittanate ตัดสินใจ')
-                         .reduce((n,m) => n + ((m.decisions||[]).length), 0);
+  const nWait  = MEETINGS.reduce((n,m) => n + mtWaitCount(m), 0);
   let html = `<div class="mt-stats">
     <div class="mt-stat"><span class="k mono">ประชุมทั้งหมด</span><span class="v mono">${MEETINGS.length}</span></div>
     <div class="mt-stat"><span class="k mono">ประเด็นเห็นต่าง</span><span class="v mono clash">${nClash}</span></div>
-    <div class="mt-stat"><span class="k mono">รอ Kittanate ตัดสิน</span><span class="v mono wait">${nWait}</span></div>
+    <div class="mt-stat"><span class="k mono">รอ PAE ตัดสิน</span><span class="v mono wait">${nWait}</span></div>
   </div><div class="mt-list">`;
 
   MEETINGS.forEach((m,i) => {
@@ -1944,7 +1976,7 @@ function renderMeetingDetail(m, box){
   }
   const dec = m.decisions || [];
   if(dec.length){
-    h += `<div class="mt-decisions"><h4 class="mono">⧗ รอ Kittanate ตัดสิน (${dec.length})</h4><ul>` + dec.map(d => {
+    h += `<div class="mt-decisions"><h4 class="mono">⧗ รอ PAE ตัดสิน (${dec.length})</h4><ul>` + dec.map(d => {
       if(typeof d === 'string') return `<li>${TD_ESC(d)}</li>`;
       const opts = (d.options||[]).length
         ? `<span class="mt-dec-opts">${d.options.map(o => `<span>${TD_ESC(o)}</span>`).join('')}</span>` : '';
@@ -1977,6 +2009,42 @@ function updateMeetCount(){
   const el = document.getElementById('meetCount');
   if(el) el.textContent = MEETINGS.length;
 }
+
+/* ---------- การ์ดในแท็บ Widgets — ประชุมล่าสุดใบเดียว ----------
+   ในพื้นที่การ์ดเล็ก เลือกแสดง 2 ตัวเลขที่เป็นเหตุผลที่ฟีเจอร์นี้เกิดขึ้น:
+   "เห็นต่างกี่จุด" (ทีมไม่ได้เห็นตรงกันตรงไหน) และ "รอ PAE ตัดสินกี่ข้อ" (ของที่ค้างอยู่ที่เขา)
+   หัวข้อ + สถานะเป็นบริบทให้ 2 ตัวเลขนั้นอ่านรู้เรื่อง — ไม่ใส่รายชื่อคน/ข้อสรุป
+   เพราะซ้ำกับแท็บ Meeting และการ์ดจะยาวจนบังการ์ดอื่นในกริด */
+function renderMeetingWidget(){
+  const box = document.getElementById('wMeetBox');
+  if(!box) return;
+  const up = document.getElementById('wMeetUp');
+  if(!MEETINGS.length){
+    box.innerHTML = '<span class="w-empty">ยังไม่มีบันทึกการประชุม</span>';
+    if(up) up.textContent = '';
+    return;
+  }
+  const m = MEETINGS[0];                 // record ใหม่สุดอยู่บนสุดเสมอ (build-meeting.mjs unshift)
+  const nClash = mtClashCount(m);
+  const nWait  = mtWaitCount(m);
+  if(up) up.textContent = mtDate(m.date);
+  box.innerHTML = `<button type="button" class="w-meet" onclick="openMeetingFromWidget(0)"
+      title="เปิดบันทึกการประชุมนี้ในแท็บ Meeting">
+    <span class="w-meet-topic">${TD_ESC(m.topic)}</span>
+    <span class="mt-status mono ${MT_STATUS_CLS[m.status] || ''}">${TD_ESC(m.status)}</span>
+    <span class="w-row"><span class="k">เห็นต่าง</span><span class="v mono clash">${nClash} จุด</span></span>
+    <span class="w-row"><span class="k">รอ PAE ตัดสิน</span><span class="v mono wait">${nWait} ข้อ</span></span>
+  </button>`
+  + (MEETINGS.length > 1 ? `<div class="w-sub" style="margin-top:9px">อีก ${MEETINGS.length - 1} ประชุมก่อนหน้า — ดูทั้งหมดในแท็บ Meeting</div>` : '');
+}
+/* กดการ์ด → สลับไปแท็บ Meeting แล้วเปิดใบนั้นเลย (switchView เรียก renderMeeting + scroll ให้เอง) */
+function openMeetingFromWidget(i){
+  const m = MEETINGS[i];
+  if(!m) return;
+  MEET_SEL = m.id;
+  switchView('meeting');
+}
+window.openMeetingFromWidget = openMeetingFromWidget;
 /* Work Log → Meeting: หา record ที่มี entry ชี้ไฟล์เดียวกับงานใน worklog */
 function mtMeetingForFile(path){
   if(!path || !MEETINGS.length) return null;
@@ -1991,6 +2059,7 @@ async function loadMeetings(){
     const data = await res.json();
     MEETINGS = Array.isArray(data.meetings) ? data.meetings : [];
     updateMeetCount();
+    renderMeetingWidget();    // การ์ดในแท็บ Widgets (แท็บซ่อนอยู่ก็เขียนได้ ไม่ต้องรอเปิด)
     if(currentView === 'meeting') renderMeeting();
     renderWorklogEntries();   // เติมชิป "⚖ ประชุม" ใน Work Log ที่ render ไปแล้ว
     if(tag){ tag.textContent = 'LIVE'; tag.style.color = 'var(--done)'; }
@@ -1998,6 +2067,7 @@ async function loadMeetings(){
   }catch(err){
     if(tag) tag.textContent = 'NO DATA';
     if(msg) msg.textContent = 'อ่าน meetings.json ไม่ได้ (ไฟล์หายหรือเปิดผ่าน file://)';
+    renderMeetingWidget();    // ไม่งั้นการ์ดค้างที่ "กำลังโหลด…" ตลอดกาล
     if(currentView === 'meeting') renderMeeting();
   }
 }

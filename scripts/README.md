@@ -87,7 +87,9 @@ participant ที่ไม่มี entry, ไฟล์ SOP ที่อ้า�
 
 **ข้อความอิสระ (ค่าใหม่ใช้ได้ แต่ badge จะเป็นสีกลาง):**
 
-- `status`: `กำลังประชุม` · `รอ Kittanate ตัดสินใจ` · `ตัดสินใจแล้ว` · `เก็บเข้าคลัง`
+- `status`: `กำลังประชุม` · `รอ PAE ตัดสินใจ` · `ตัดสินใจแล้ว` · `เก็บเข้าคลัง`
+  (31 ก.ค. 2026 เปลี่ยนจาก "รอ Kittanate ตัดสินใจ" — ค่านี้ถูกเทียบตรง ๆ ใน `index.html` (`MT_WAIT`)
+  และใน `build-meeting.mjs` (`STATUS_WAIT`) แก้คำเมื่อไหร่ต้องแก้พร้อมกันทั้ง 3 ที่ ไม่งั้นสถิติจะนับไม่ขึ้นเงียบ ๆ)
 - `role`: `เสนอไอเดีย` · `ตรวจสอบข้อเท็จจริง` · `ประเมินต้นทุน` · `ประเมินเทคนิค` · `ออกแบบ` · `QA` · `จัดระบบ/สรุป`
 
 **enum ปิด (ค่านอกชุด = error):**
@@ -120,7 +122,7 @@ participant ที่ไม่มี entry, ไฟล์ SOP ที่อ้า�
 
 - **Firestore เขียนแบบ PATCH ทั้ง array** (`agents/meetings` field `meetings`)
   ไม่ใช่ `arrayUnion` แบบ worklog — เพราะ record ประชุมถูกแก้ทีหลังได้ (เช่นเติม `verified`
-  หรืออัปเดต `conclusion` ตอน Kittanate ตัดสินใจ) ถ้าใช้ arrayUnion จะได้ของซ้ำสองก้อน
+  หรืออัปเดต `conclusion` ตอน PAE ตัดสินใจ) ถ้าใช้ arrayUnion จะได้ของซ้ำสองก้อน
   วิธีนี้เขียนซ้ำกี่รอบผลก็เท่าเดิม (idempotent) และเป็นทางเดียวที่ `--replace` ทำงานถูก
 - doc `agents/meetings` ไม่มี field `sortOrder`/`id` → ไม่โผล่ใน listener รายชื่อ agent
   ของ dashboard (`orderBy("sortOrder")`) เหมือน `agents/worklog` — ปลอดภัย

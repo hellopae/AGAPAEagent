@@ -1,56 +1,293 @@
 {
   "source": "Todoist · project PAE To Do + Inbox",
   "projectId": "6h7wcgqCVqFF5gJM",
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-31",
   "sections": [
-    { "id": "inbox", "name": "Inbox · ยังไม่จัดเข้า project" },
-    { "id": "shopping", "name": "Shopping" },
-    { "id": "idea", "name": "Idea" },
-    { "id": "note", "name": "Note" },
-    { "id": "someday", "name": "SomeDay" },
-    { "id": "monthly", "name": "Monthly" },
-    { "id": "yearly", "name": "Yearly" }
+    {
+      "id": "idea",
+      "name": "Idea"
+    },
+    {
+      "id": "note",
+      "name": "Note"
+    },
+    {
+      "id": "someday",
+      "name": "SomeDay"
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly"
+    },
+    {
+      "id": "yearly",
+      "name": "Yearly"
+    }
   ],
   "items": [
-    { "id": "6h8x2rvfJVGM8GJX", "section": "shopping", "title": "ซื้อกล้วย", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-
-    { "id": "6h87Hw4Rx594XW8M", "section": "idea", "title": "ไอเดียทำสติ๊กเกอร์แปะ คำคมฮาๆ ตลกๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h87HqW77xrXv2fM", "section": "idea", "title": "Youtube Animation วิทยาศาสตร์ง่ายๆ", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h87J264J6gqMppv", "section": "idea", "title": "ทำเวป agapae shop", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h8x33J8RPv2cjC5", "section": "idea", "title": "ไอเดีย โปรเจ็ค Agent ช่วยนักวาดหรือเจ้าของโรงงาน SME", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h8x4XVCCqQ3xXgX", "section": "idea", "title": "เพิ่ม Agent ดูดวง", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-    { "id": "6h93vpWcmcF65pmM", "section": "idea", "title": "ให้ Agent ลองทำ Automation", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-
-    { "id": "6h7wcprWv6R26GRM", "section": "note", "title": "Login lazada", "when": "ทุกเดือน", "due": null, "repeat": true },
-    { "id": "6h7wf2fwj7F6MjjM", "section": "note", "title": "หนังสือรับรอง — โอนผ่าน Kplus เท่านั้น", "when": "ไม่มีกำหนด", "due": null, "repeat": false },
-
-    { "id": "6h8rJrWHWmVrcQF5", "section": "someday", "title": "บริจาคเลือด + Spiderman", "when": "30 ก.ค. 69", "due": "2026-07-30", "repeat": false },
-    { "id": "6h7wcwJQ53gW765v", "section": "someday", "title": "Netflix หมดอายุ", "when": "2 ส.ค. 69", "due": "2026-08-02", "repeat": false },
-    { "id": "6h7wcwV9vfvRXQ9M", "section": "someday", "title": "ไปแก้งาน สสวท", "when": "3 ส.ค. 69", "due": "2026-08-03", "repeat": false },
-    { "id": "6h93vHrMF62v3Rc5", "section": "someday", "title": "ส่งงาน ลาดกระบัง", "when": "5 ส.ค. 69", "due": "2026-08-05", "repeat": false },
-    { "id": "6h7wcwWCXFpWJFpv", "section": "someday", "title": "Claude หมดอายุ", "when": "10 ส.ค. 69", "due": "2026-08-10", "repeat": false },
-    { "id": "6h8QxggwhMwr6Xpv", "section": "someday", "title": "HBO Max หมดอายุ", "when": "26 ส.ค. 69", "due": "2026-08-26", "repeat": false },
-    { "id": "6h7wcwWG4rR5G2XM", "section": "someday", "title": "นัดตรวจเลือด", "when": "3 ก.ย. 69", "due": "2026-09-03", "repeat": false },
-
-    { "id": "6h7wcq7P742m72Wv", "section": "monthly", "title": "ปริ๊นบิล ais fibre ให้ป๊า", "when": "ทุกวันที่ 12", "due": null, "repeat": true },
-    { "id": "6h7wcqFVVHQXqCxM", "section": "monthly", "title": "ถึงใบแจ้งชำระเงิน กรุงศรี", "when": "ทุกวันที่ 13", "due": "2026-08-13", "repeat": true },
-    { "id": "6h7wcqM7QgGWC92M", "section": "monthly", "title": "จ่าย ภงด 3 / 53", "when": "ทุกวันที่ 17", "due": "2026-08-17", "repeat": true },
-    { "id": "6h7wcqRHjxhVXJRM", "section": "monthly", "title": "จ่าย ภพ 53", "when": "ทุกวันที่ 24", "due": "2026-08-24", "repeat": true },
-    { "id": "6h7wcqXrhchGJ3vM", "section": "monthly", "title": "จ่ายค่าดอกเบี้ย OD", "when": "ทุกวันที่ 27", "due": null, "repeat": true },
-    { "id": "6h7wcqg7jfFWWcPv", "section": "monthly", "title": "จ่ายบิลมือถือ Ais", "when": "ทุกวันที่ 30", "due": null, "repeat": true },
-
-    { "id": "6h7wcwrrH9cHqHcv", "section": "yearly", "title": "ต่ออายุ Flow Account", "when": "23 ม.ค. 70", "due": "2027-01-23", "repeat": false },
-    { "id": "6h7wcwq5627vQHVv", "section": "yearly", "title": "บัตรประชาชนหมดอายุ", "when": "28 ม.ค. 70", "due": "2027-01-28", "repeat": false },
-    { "id": "6h7wcpxWPq5pMpvM", "section": "yearly", "title": "ยื่น ภงด 90 (ต้นปี ก.พ.–มี.ค.)", "when": "ต้นปี ก.พ.–มี.ค.", "due": null, "repeat": true },
-    { "id": "6h7wcwwmxQf89F9M", "section": "yearly", "title": "ม๊าฝากเงิน ธนาคารไทยเครดิต", "when": "22 ก.พ. 70", "due": "2027-02-22", "repeat": false },
-    { "id": "6h7wcx4fWRCJ9C6v", "section": "yearly", "title": "ต่ออายุ Domain lexaith.com (588.5.-)", "when": "13 มี.ค. 70", "due": "2027-03-13", "repeat": false },
-    { "id": "6h7wcx5gVFjCr9wM", "section": "yearly", "title": "ต่ออายุ Domain 2richmap.com", "when": "9 เม.ย. 70", "due": "2027-04-09", "repeat": false },
-    { "id": "6h7wcx9C966JwJwv", "section": "yearly", "title": "Auto Renew Google Storage", "when": "ทุกปี 6 มิ.ย.", "due": "2027-06-06", "repeat": true },
-    { "id": "6h7wcq2HW4rFW8FM", "section": "yearly", "title": "ยื่น ภงด 94 (กลางปี ก.ค.)", "when": "กลางปี ก.ค.", "due": null, "repeat": true },
-    { "id": "6h7wcxFXXCmH2cMM", "section": "yearly", "title": "ต่ออายุ web Hosting (Hostatom, 1594.3.-)", "when": "ทุกปี 11 ก.ค.", "due": "2027-07-11", "repeat": true },
-    { "id": "6h7wcxGF8M8R865v", "section": "yearly", "title": "ต่ออายุ Domain (agapaedesign, 481.5.-)", "when": "ทุกปี 18 ก.ค.", "due": "2027-07-18", "repeat": true },
-    { "id": "6h7wcwgPm82Fvr3M", "section": "yearly", "title": "ต่ออายุ Domain (tanapat.co.th)", "when": "ทุกปี 2 ธ.ค.", "due": "2026-12-02", "repeat": true },
-    { "id": "6h7wcwhjpM5FcJFv", "section": "yearly", "title": "โปร AIS รายปี ม๊าหมดอายุ", "when": "9 ธ.ค. 69", "due": "2026-12-09", "repeat": false },
-    { "id": "6h7wcxMC7X8R6qmM", "section": "yearly", "title": "ใบขับขี่หมดอายุ", "when": "28 ม.ค. 74", "due": "2031-01-28", "repeat": false }
+    {
+      "id": "6h9WMqV3VQpcQmwM",
+      "section": "idea",
+      "title": "widget เพิ่มเช็ค อีเมล",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h9QpGQ7FVMmm9CM",
+      "section": "idea",
+      "title": "ให้ agent ศึกษา S&P",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h8x33J8RPv2cjC5",
+      "section": "idea",
+      "title": "ไอเดีย โปรเจ็ค Agent ช่วยนักวาดหรือเจ้าของโรงงาน SME",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h87HqW77xrXv2fM",
+      "section": "idea",
+      "title": "Youtube Animation วิทยาศาสตร์ง่ายๆ",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h87Hw4Rx594XW8M",
+      "section": "idea",
+      "title": "ไอเดียทำสติ๊กเกอร์แปะ คำคมฮาๆ ตลกๆ",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h94cGXw7M8P8GfM",
+      "section": "idea",
+      "title": "ปรับปรุงเวป คิดราคา tanapat",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h7wf2fwj7F6MjjM",
+      "section": "note",
+      "title": "หนังสือรับรอง — โอนผ่าน Kplus เท่านั้น",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h7wcprWv6R26GRM",
+      "section": "note",
+      "title": "Login lazada",
+      "when": "ทุกเดือน",
+      "due": null,
+      "repeat": true
+    },
+    {
+      "id": "6h7wcwJQ53gW765v",
+      "section": "someday",
+      "title": "Netflix หมดอายุ",
+      "when": "2 ส.ค. 69",
+      "due": "2026-08-02",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwV9vfvRXQ9M",
+      "section": "someday",
+      "title": "ไปแก้งาน สสวท",
+      "when": "3 ส.ค. 69",
+      "due": "2026-08-03",
+      "repeat": false
+    },
+    {
+      "id": "6h93vHrMF62v3Rc5",
+      "section": "someday",
+      "title": "ส่งงาน ลาดกระบัง",
+      "when": "5 ส.ค. 69",
+      "due": "2026-08-05",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwWCXFpWJFpv",
+      "section": "someday",
+      "title": "Claude หมดอายุ",
+      "when": "10 ส.ค. 69",
+      "due": "2026-08-10",
+      "repeat": false
+    },
+    {
+      "id": "6h8QxggwhMwr6Xpv",
+      "section": "someday",
+      "title": "HBO Max หมดอายุ",
+      "when": "26 ส.ค. 69",
+      "due": "2026-08-26",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwWG4rR5G2XM",
+      "section": "someday",
+      "title": "นัดตรวจเลือด",
+      "when": "3 ก.ย. 69",
+      "due": "2026-09-03",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcq7P742m72Wv",
+      "section": "monthly",
+      "title": "ปริ๊นบิล ais fibre ให้ป๊า",
+      "when": "ทุกวันที่ 12",
+      "due": null,
+      "repeat": true
+    },
+    {
+      "id": "6h7wcqFVVHQXqCxM",
+      "section": "monthly",
+      "title": "ถึงใบแจ้งชำระเงิน กรุงศรี",
+      "when": "13 ส.ค. 69",
+      "due": "2026-08-13",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcqM7QgGWC92M",
+      "section": "monthly",
+      "title": "จ่าย ภงด 3 / 53",
+      "when": "17 ส.ค. 69",
+      "due": "2026-08-17",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcqRHjxhVXJRM",
+      "section": "monthly",
+      "title": "จ่าย ภพ 53",
+      "when": "24 ส.ค. 69",
+      "due": "2026-08-24",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcqXrhchGJ3vM",
+      "section": "monthly",
+      "title": "จ่ายค่าดอกเบี้ย OD",
+      "when": "ทุกวันที่ 27-28",
+      "due": null,
+      "repeat": true
+    },
+    {
+      "id": "6h7wcqg7jfFWWcPv",
+      "section": "monthly",
+      "title": "จ่ายบิลมือถือ Ais",
+      "when": "ทุกวันที่ 30",
+      "due": null,
+      "repeat": true
+    },
+    {
+      "id": "6h7wcpxWPq5pMpvM",
+      "section": "yearly",
+      "title": "ยื่น ภงด 90 (ต้นปี ก.พ.–มี.ค.)",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h7wcq2HW4rFW8FM",
+      "section": "yearly",
+      "title": "ยื่น ภงด 94 (กลางปี ก.ค.)",
+      "when": "ไม่มีกำหนด",
+      "due": null,
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwgPm82Fvr3M",
+      "section": "yearly",
+      "title": "ต่ออายุ Domain Name (tanapat.co.th)",
+      "when": "2 ธ.ค. 69",
+      "due": "2026-12-02",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcwhjpM5FcJFv",
+      "section": "yearly",
+      "title": "โปร AIS รายปี ม๊าหมดอายุ",
+      "when": "9 ธ.ค. 69",
+      "due": "2026-12-09",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwrrH9cHqHcv",
+      "section": "yearly",
+      "title": "ต่ออายุ Flow Account",
+      "when": "23 ม.ค. 70",
+      "due": "2027-01-23",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwq5627vQHVv",
+      "section": "yearly",
+      "title": "บัตรประชาชนหมดอายุ",
+      "when": "28 ม.ค. 70",
+      "due": "2027-01-28",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcwwmxQf89F9M",
+      "section": "yearly",
+      "title": "ม๊าฝากเงิน ธนาคารไทยเครดิต",
+      "when": "22 ก.พ. 70",
+      "due": "2027-02-22",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcx4fWRCJ9C6v",
+      "section": "yearly",
+      "title": "ต่ออายุ Domain Name lexaith.com 588.5 บาท",
+      "when": "13 มี.ค. 70",
+      "due": "2027-03-13",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcx5gVFjCr9wM",
+      "section": "yearly",
+      "title": "ต่ออายุ Domain Name 2richmap.com",
+      "when": "9 เม.ย. 70",
+      "due": "2027-04-09",
+      "repeat": false
+    },
+    {
+      "id": "6h7wcx9C966JwJwv",
+      "section": "yearly",
+      "title": "Auto Renew Google Storage",
+      "when": "6 มิ.ย. 70",
+      "due": "2027-06-06",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcxFXXCmH2cMM",
+      "section": "yearly",
+      "title": "ต่ออายุ web Hosting : Hostatom Tanapat 1594.3 บาท",
+      "when": "11 ก.ค. 70",
+      "due": "2027-07-11",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcxGF8M8R865v",
+      "section": "yearly",
+      "title": "ต่ออายุ Domain Name (agapaedesign) 481.5 บาท",
+      "when": "18 ก.ค. 70",
+      "due": "2027-07-18",
+      "repeat": true
+    },
+    {
+      "id": "6h7wcxMC7X8R6qmM",
+      "section": "yearly",
+      "title": "ใบขับขี่หมดอายุ",
+      "when": "28 ม.ค. 74",
+      "due": "2031-01-28",
+      "repeat": false
+    }
   ]
 }
