@@ -8,6 +8,25 @@
 
 ## 🔥 P0 — งานค้างที่ต้องปิดก่อนทุกอย่าง
 
+- [ ] **🔴 hook ไม่ยิงเมื่อเปิด session จากนอกโฟลเดอร์โปรเจกต์ — ยืนยันแล้ว 2 ครั้ง** (31 ก.ค. 2569)
+  อาการ: `.claude/agents/` ไม่ถูกโหลด → เรียก `subagent_type` จริง (เช่น `vera-design`) ไม่ได้เลย
+  → ต้อง delegate ผ่าน `general-purpose` ซึ่งไม่อยู่ใน MAP ของ hook → **worklog/status/Firestore/push ไม่ทำงานทั้งสปรินต์**
+  หลักฐาน: งาน MiroFish 30 ก.ค. หายจาก `worklog.json` ทั้งชุด (entry ล่าสุดค้างที่ 29 ก.ค.) —
+  Vera เจอตอนสำรวจ dashboard · Dale และ Chris ยืนยันซ้ำ · ซ่อมย้อนหลังด้วยมือแล้ว 13 entry (31 ก.ค.)
+  **นี่คือสาเหตุเดียวกับที่ P0 "ทดสอบ agent ใหม่ 3 ตัว" ข้างล่างยังปิดไม่ได้** — ไม่ใช่ปัญหาคนละเรื่อง
+  → ทางแก้ที่ต้องทำ: เปิด Claude Code จากโฟลเดอร์นี้ตรง ๆ แล้ว delegate 1 งานด้วย `subagent_type` จริง
+  เพื่อยืนยันว่า hook ยิง · ถ้าต้องรันจากที่อื่นเป็นประจำ ให้ Dale หาทางให้ hook ทำงานได้โดยไม่พึ่ง cwd
+
+- [x] **แท็บ Meeting — บันทึกการประชุมบน dashboard** ✅ 31 ก.ค. 2569 (Kittanate สั่ง 31 ก.ค.)
+  แก้ปัญหาที่ Work Log เดิมโชว์แค่ "ใครทำไฟล์ไหนเสร็จ" แต่ไม่โชว์ว่าใครเสนออะไร **เห็นต่างกับใครตรงไหน**
+  ขอบเขตที่ Kittanate ตัดเอง: **ไม่ใช่ live chat / ไม่ใช่ multi-round debate** (เปลือง token) —
+  เป็นการสกัดจุดยืนจากไฟล์ที่ agent เขียนไว้แล้ว รัน 1 ครั้งตอนปิดโจทย์
+  ไปป์ไลน์: Vera (UX) → Dale (schema + `scripts/build-meeting.mjs` + `index.html`) → Libby (บันทึกใบแรก) → Chris QA
+  ผลงาน: `Output/Vera/2026-07-31-meeting-tab-ux.md` · `Output/Dale/2026-07-31-meetings-schema.md` ·
+  `Output/Dale/2026-07-31-meeting-tab-build.md` · `Output/Libby/2026-07-31-meeting-record-mirofish.md` ·
+  QA: `Output/Chris/2026-07-31-qa-meeting-tab-and-mirofish.md`
+  ⚠️ Work Log เดิม **อยู่คู่กัน ไม่ถูกแทน** (Vera ตัดสิน: Work Log คือ audit trail ที่ DoD gate พึ่งอยู่)
+
 - [x] **ปิด pipeline บทความ "5 ความผิดพลาดงานพิมพ์"** ✅ 6 ก.ค. 2569 — v2 โดน fact-check FAIL
   (blocker: วิธีเช็ค color mode ใน Illustrator/InDesign ผิด) → Rae แก้เป็น v3 → Reese ✅ PASS →
   Chris ✅ PASS · ผลงาน: `Output/Rae/2026-07-06-5-print-mistakes-article-v3.md` ·

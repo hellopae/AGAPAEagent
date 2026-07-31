@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T16:51:41.000000Z",
+  "updatedAt": "2026-07-31T15:02:26Z",
   "agents": [
     {
       "id": "claudy",
@@ -44,8 +44,12 @@
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
       "status": "done",
-      "task": "AGAPAE SEO — Idea Card คอนเทนต์ 8 ใบ (ใช้ความได้เปรียบโรงพิมพ์จริง)",
-      "report": "Output/Minnie/2026-07-28-agapae-seo-content-ideas.md"
+      "task": "แก้ idea cards + เปลี่ยน TOP PICK",
+      "report": {
+        "when": "13:45",
+        "title": "แก้ idea cards + เปลี่ยน TOP PICK",
+        "body": "ยอมรับว่าสมมติฐาน 'มีข้อมูลเฉลยดีลแพ้/ชนะ' ไม่จริงและไม่เคยมีแหล่งรองรับ → ปลด #01 ออกจาก TOP PICK เอง ยกให้ #06 Persistent Memory (recall.mjs) แทน · ไล่แก้ข้อเท็จจริงทุกจุดที่โผล่ตามผล fact-check"
+      }
     },
     {
       "id": "reese",
@@ -66,8 +70,12 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "AGAPAE SEO — วิจัย SEO + AI discoverability พร้อมแหล่งอ้างอิง",
-      "report": "Output/Reese/2026-07-28-agapae-seo-ai-research.md"
+      "task": "MiroFish fact-check รอบ 2 (delta)",
+      "report": {
+        "when": "15:00",
+        "title": "MiroFish fact-check รอบ 2 (delta)",
+        "body": "ตรวจเฉพาะส่วนที่แก้ และยอมรับว่าตัวเองผิด 3 ข้อ — Nick ถูกเรื่องราคา qwen-plus, Dale ถูกเรื่องระบุไฟล์ผิด, และ VERIFIED ที่ออกให้ Minnie เรื่อง agent memory กว้างเกินจริง · verdict: Nick ผ่านเต็ม Minnie/Dale ผ่านแบบมีเงื่อนไข"
+      }
     },
     {
       "id": "rae",
@@ -109,11 +117,11 @@
         "วาง grid + bleed + margin"
       ],
       "status": "done",
-      "task": "เกียรติบัตร Express — UX spec ฉบับ build ได้",
+      "task": "UX แท็บ Meeting บน dashboard",
       "report": {
-        "when": "14:32",
-        "title": "UX Spec ✅ — stepper 6 ขั้น พร้อม build",
-        "body": "Single-page stepper 6 ขั้น state ไม่หายตอนย้อน, preview+PDF ใช้ layoutConstants ชุดเดียวปิด risk เหลื่อม, PasteBox เด่นเท่า dropzone, auto-fit ชื่อยาว binary shrink 40→24pt, address ข้อระวังของ Rae ครบ 10 ข้อ, ระบุ spec artwork ให้ Mind (bleed 303×216mm, contrast ≥4.5:1, ห้ามครุฑ)"
+        "when": "10:40",
+        "title": "UX แท็บ Meeting บน dashboard",
+        "body": "ออกแบบแท็บหลักตัวที่ 5 — 2 ระดับในแท็บเดียว ผูกขาดสีหนึ่งสีให้ความเห็นต่างที่เดียวทั้งแท็บ วางส่วนเห็นต่างไว้ก่อนข้อเสนอ สรุปว่า Work Log เดิมควรอยู่คู่กันไม่ใช่ถูกแทน และพบว่างาน 30 ก.ค. หายจาก worklog ทั้งสปรินต์"
       }
     },
     {
@@ -160,8 +168,13 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "idle",
-      "task": ""
+      "status": "done",
+      "task": "QA แท็บ Meeting + สปรินต์ MiroFish",
+      "report": {
+        "when": "18:30",
+        "title": "QA แท็บ Meeting + สปรินต์ MiroFish",
+        "body": "รัน regression เองด้วย jsdom ไม่เชื่อรายงานผู้สร้าง — โค้ดผ่านหมด แต่ตี FAIL ที่เนื้อหา 3 blocker (บันทึกยังเขียนว่า 'กำลังแก้อยู่' ทั้งที่แก้เสร็จ, ประโยคไทยเรียงคำพัง, เอกสาร Minnie ขัดกันเอง 1 จุดที่ไม่มีใครจับได้) · ตรวจ quote ครบ 11/11"
+      }
     },
     {
       "id": "libby",
@@ -182,11 +195,11 @@
         "ทำเอกสารโปรเจกต์"
       ],
       "status": "done",
-      "task": "สร้าง output-index.md + โครง template-library.csv (งานทดสอบ agent ใหม่)",
+      "task": "แก้บันทึกการประชุมรอบ 2",
       "report": {
-        "when": "20:17",
-        "title": "สร้าง output-index.md + โครง template-library.csv (งานทดสอบ agent ใหม่)",
-        "body": "Index ไฟล์ใน Output/ ครบ 34 ไฟล์จาก 6 agent folders พร้อมโยง chain: idea → research → draft → factcheck → QA ทุกงาน + วางโครง template-library.csv รอ template แรก → Output/Libby/output-index.md"
+        "when": "17:35",
+        "title": "แก้บันทึกการประชุมรอบ 2",
+        "body": "อัปเดต record ให้ตรงสถานะจริง — TOP PICK ใหม่, factcheck ผ่านแล้ว, เพิ่ม Reese เป็นผู้เข้าร่วมคนที่ 4 เพราะทีมค้าน fact-checker กลับได้จริง · ความเห็นต่าง 8 → 11 จุด (blocker 2 · challenge 6 · note 3) เติม quote จริงครบทุกจุด"
       }
     },
     {
@@ -209,11 +222,11 @@
         "บอกว่าควรทำอะไรเพิ่ม/เลิกทำอะไร"
       ],
       "status": "done",
-      "task": "Deploy Quotation Assistant ขึ้น GitHub Pages — hellopae.github.io/printorder",
+      "task": "แก้รายงานต้นทุน MiroFish หลัง fact-check",
       "report": {
-        "when": "15:35",
-        "title": "Deploy Quotation Assistant ขึ้น GitHub Pages — hellopae.github.io/printorder",
-        "body": "Push AI Print Order Assistant v2 ขึ้น repo ใหม่ hellopae/printorder (source บน main, build บน gh-pages พร้อม .nojekyll) — เว็บ online แล้วที่ https://hellopae.github.io/printorder/ ยืนยัน HTTP 200 + title ถูกต้อง เพิ่ม scripts/deploy.sh ไว้ deploy รอบหน้าด้วยคำสั่งเดียว"
+        "when": "13:10",
+        "title": "แก้รายงานต้นทุน MiroFish หลัง fact-check",
+        "body": "ค้าน Reese ด้วยหลักฐาน — เข้าหน้าราคาทางการ Alibaba ได้แล้วพบว่า qwen-plus กับ qwen3.5-plus เป็นคนละแถวคนละราคา ต้นทุน ฿277/sim จึงยืนได้ไม่ต้องเป็นช่วง · แก้เลขคณิต 1 จุด + เพิ่มคำสั่งพิสูจน์ quotations.json ให้ Kittanate รันเอง"
       }
     },
     {
@@ -234,8 +247,12 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "AGAPAE SEO — technical audit เว็บ agapaedesign.com",
-      "report": "Output/Dale/2026-07-28-agapae-seo-technical-audit.md"
+      "task": "แท็บ Meeting บน dashboard",
+      "report": {
+        "when": "14:20",
+        "title": "แท็บ Meeting บน dashboard",
+        "body": "implement UX ของ Vera ลง index.html 8 จุด (+493 บรรทัด) CSS 48 class · ปรับ schema เป็นรุ่น 2 (verified → factcheck, เพิ่ม severity แบบ optional เพราะถ้าบังคับจะได้ blocker ปลอม) · ทดสอบด้วย node:vm บน DOM จำลอง แท็บเดิม 4 แท็บไม่ regression"
+      }
     },
     {
       "id": "news",
