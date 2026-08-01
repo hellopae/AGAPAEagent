@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T11:30:00.000Z",
+  "updatedAt": "2026-08-01T01:25:03.000Z",
   "note": "One Piece + Dandadan อ่านไทยทางการที่ MANGA Plus (ตั้งภาษาเป็นไทยในแอป) · Versus อ่านไทยที่ niceoppai · แก้เลขตอน/ลิงก์ได้ตรงนี้ ไม่ต้อง rebuild widget",
   "series": [
     {
@@ -26,9 +26,9 @@
     },
     {
       "title": "Versus",
-      "latest": 34,
-      "releasedAt": null,
-      "next": 35,
+      "latest": 35,
+      "releasedAt": "2026-07-29",
+      "next": 36,
       "nextAt": null,
       "cadence": "รายเดือน",
       "note": "ONE × Azuma · แปลไทยที่ niceoppai",
