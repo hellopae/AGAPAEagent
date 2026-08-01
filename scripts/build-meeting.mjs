@@ -200,8 +200,12 @@ function normalizeMeeting(raw, agents, { where = "meeting" } = {}) {
         err(`${dat}: "severity" = "${d.severity}" ต้องเป็น ${SEVERITIES.join(" / ")} — UI ใช้ค่านี้เรียงลำดับความแรง`);
         severity = SEVERITY_DEFAULT;
       }
+      // summary = optional; บรรทัดเดียวสั้น ๆ สำหรับที่แคบ (การ์ดประชุมบน AGAPAE Widget)
+      // — ถ้าไม่ใส่ UI จะตัดจาก point เอง ซึ่งมักขาดกลางประโยค จึงควรใส่
+      const summary = str(d.summary);
+      if (summary.length > 90) warn(`${dat}: "summary" ยาว ${summary.length} ตัว — การ์ดบน Widget กว้างพอราว 90 ตัว ที่เกินจะโดนตัด`);
       // quote/impact = optional; quote คือประโยคจริงจากไฟล์ ห้ามเรียบเรียงใหม่
-      return { with: w, severity, point, quote: str(d.quote), impact: str(d.impact) };
+      return { with: w, severity, point, summary, quote: str(d.quote), impact: str(d.impact) };
     }).filter(Boolean);
     if (arr(e.disagreements) === null && e.disagreements !== undefined) err(`${at}: "disagreements" ต้องเป็น array`);
 
@@ -436,8 +440,9 @@ if (cmd === "template") {
       "role: บทบาทในประชุมนี้ เช่น เสนอไอเดีย / ประเมินต้นทุน / ประเมินเทคนิค",
       `stance: ${STANCES.join(" / ")} — ไม่ใส่ก็ได้ UI จะเดาจาก disagreements ให้`,
       "proposal: สรุปว่าคนนี้เสนออะไร 2-4 บรรทัด (~300 ตัวอักษร)",
-      `disagreements: [{ with: '<agent id>', severity: '${SEVERITIES.join("|")}', point: '…', quote: '(optional) ประโยคจริงจากไฟล์', impact: '(optional) ค้านแล้วเกิดอะไร' }]`,
+      `disagreements: [{ with: '<agent id>', severity: '${SEVERITIES.join("|")}', point: '…', summary: '(optional) สรุปบรรทัดเดียว ≤90 ตัว', quote: '(optional) ประโยคจริงจากไฟล์', impact: '(optional) ค้านแล้วเกิดอะไร' }]`,
       "  severity: blocker = ทำให้ข้อเสนอเดินต่อไม่ได้ · challenge = ค้านสาระสำคัญแต่ยังเดินต่อได้ · note = ข้อสังเกต · ไม่ใส่ = challenge",
+      "  summary: การ์ด \"ประชุมทีม\" บน AGAPAE Widget โชว์บรรทัดนี้ (ที่แคบ) — ไม่ใส่ = โดนตัดจาก point กลางประโยค",
       "  quote ต้องเป็นประโยคจริงที่ยกมาจากไฟล์ ห้ามเรียบเรียงใหม่ — ถ้าไม่มีประโยคตรง ๆ ให้เว้นว่าง",
       `factcheck: ${FACTCHECKS.join(" / ")} — "passed"/"failed" ใส่ได้เฉพาะเมื่อมีผล Reese fact-check จริง และควรอ้าง factcheckFile ด้วย`,
       "participants: ไม่ใส่ก็ได้ (สคริปต์ derive จาก entries) — ใส่เมื่อมีคนร่วมประชุมที่ไม่ได้เขียนเอกสาร",
