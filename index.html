@@ -1185,12 +1185,43 @@ function mgStatus(s){
   }
   return {cls:'', text:(s.cadence||'อัปเดตเรื่อย ๆ')+(rel?' · ล่าสุด '+rel:'')};
 }
+/* --- อ่าน payload จาก Firestore ผ่าน REST (ไม่ใช้ listener — ประหยัด read quota เหมือนแท็บ Meeting)
+   routine บน cloud push ขึ้น git ไม่ได้ (ยืนยัน 6 ส.ค. 2569: ไม่เคยมี commit จาก cloud เลย
+   ส่วน routine ที่เขียน Firestore ตรงๆ อัปเดตครบทุกวัน) — ไฟล์ .json ในรีโปจึงเหลือสถานะ
+   fallback ตอน Firestore ล่ม/ยังไม่มี doc เท่านั้น
+   doc เก็บทั้งก้อนเป็นสตริงในฟิลด์ dataJson (แบบเดียวกับ daysJson ของ agents/finance)
+   + checkedAt = เวลาที่ routine ตรวจล่าสุด เขียนทุกวันแม้ข้อมูลไม่เปลี่ยน --- */
+const FS_KEY = "AIzaSyCtIZVYmibm4Rwb878iEdnxHjvpVcLfs2E";
+async function fsPayload(kind){
+  try{
+    const r = await fetch(`https://firestore.googleapis.com/v1/projects/agapae-studio/databases/(default)/documents/agents/${kind}?key=${FS_KEY}&t=`+Date.now());
+    if(!r.ok) return null;
+    const f = (await r.json()).fields || {};
+    const raw = f.dataJson && f.dataJson.stringValue;
+    if(!raw) return null;
+    const data = JSON.parse(raw);
+    data.checkedAt = (f.checkedAt || {}).stringValue || null;
+    return data;
+  }catch(e){ return null; }
+}
+/* "ตรวจล่าสุด" — บอกว่า routine มาดูเมื่อไหร่ ต่างจาก updatedAt ที่เป็นวันที่ข้อมูลเปลี่ยนจริง
+   แยกกันเพราะมังงะไม่มีตอนใหม่ได้เป็นสัปดาห์ แล้วการ์ดจะดูเหมือนค้างทั้งที่ routine ทำงานปกติ */
+function fsCheckedText(checkedAt){
+  if(!checkedAt) return '';
+  const d = new Date(checkedAt);
+  if(isNaN(d)) return '';
+  return 'ตรวจ ' + d.toLocaleString('th-TH',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+}
+
 async function loadManga(){
   const box = document.getElementById('wMangaList');
   try{
-    const r = await fetch('manga.json?t='+Date.now());
-    if(!r.ok) throw new Error('http');
-    const j = await r.json();
+    let j = await fsPayload('manga');
+    if(!j){
+      const r = await fetch('manga.json?t='+Date.now());
+      if(!r.ok) throw new Error('http');
+      j = await r.json();
+    }
     const series = j.series || [];
     if(!series.length){ box.innerHTML = '<span class="w-empty">ยังไม่มีข้อมูลมังงะ</span>'; return; }
     box.innerHTML = series.map(s=>{
@@ -1202,7 +1233,16 @@ async function loadManga(){
       </a>`;
     }).join('');
     const up = document.getElementById('wMangaUp');
-    if(up && j.updatedAt){ const d=new Date(j.updatedAt); if(!isNaN(d)) up.textContent = mgShortDate(j.updatedAt); }
+    if(up){
+      // โชว์ "ตรวจ …" เป็นหลัก (ขยับทุกวัน) ถ้าไม่มี checkedAt ค่อยถอยไปใช้วันที่ข้อมูลเปลี่ยน
+      const chk = fsCheckedText(j.checkedAt);
+      if(chk){
+        up.textContent = chk;
+        up.title = j.updatedAt ? 'ข้อมูลเปลี่ยนล่าสุด ' + (mgShortDate(j.updatedAt)||j.updatedAt) : '';
+      }else if(j.updatedAt){
+        const d=new Date(j.updatedAt); if(!isNaN(d)) up.textContent = mgShortDate(j.updatedAt);
+      }
+    }
   }catch(e){
     box.innerHTML = '<span class="w-empty">โหลดข้อมูลมังงะไม่ได้</span>';
   }
@@ -1762,15 +1802,19 @@ function renderTodoWidget(){
 
 async function loadTodo(){
   try{
-    const res = await fetch('todo.json?t=' + Date.now());
-    if(!res.ok) throw new Error(res.status);
-    TODO = await res.json();
+    TODO = await fsPayload('todo');            // routine เขียน Firestore ทุกวัน — เอาอันนี้ก่อน
+    if(!TODO || !Array.isArray(TODO.items)){   // ไฟล์ในรีโปเป็น fallback (อาจเก่า)
+      const res = await fetch('todo.json?t=' + Date.now());
+      if(!res.ok) throw new Error(res.status);
+      TODO = await res.json();
+    }
     updateTodoCount();
     renderTodoWidget();
     if(currentView === 'todo') renderTodo();
     const tag = document.getElementById('todoModeTag'), msg = document.getElementById('todoModeMsg');
     if(tag){ tag.textContent = 'LIVE'; tag.style.color = 'var(--done)'; }
-    if(msg) msg.innerHTML = `${TD_ESC(TODO.source || 'todo.json')} · อัปเดต ${TD_ESC(TODO.updatedAt || '—')}`;
+    const chk = fsCheckedText(TODO.checkedAt);
+    if(msg) msg.innerHTML = `${TD_ESC(TODO.source || 'todo.json')} · อัปเดต ${TD_ESC(TODO.updatedAt || '—')}${chk ? ' · ' + TD_ESC(chk) : ''}`;
   }catch(e){
     const tag = document.getElementById('todoModeTag'), msg = document.getElementById('todoModeMsg');
     if(tag) tag.textContent = 'NO DATA';

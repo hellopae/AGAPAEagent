@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-08-06T11:33:44Z",
+  "updatedAt": "2026-08-06T12:07:54Z",
   "entries": [
+    {
+      "id": "wl-260806-dale-fsc",
+      "datetime": "2026-08-06T12:07:54Z",
+      "displayDate": "6 ส.ค. 2569",
+      "displayTime": "19:07",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "แก้มังงะ/To Do ไม่อัปเดต — ย้าย routine จาก git push มาเขียน Firestore",
+      "summary": "เป้แจ้งว่าการ์ดมังงะค้าง 1 ส.ค. และ To Do ค้าง 2 ส.ค. · ไล่หาแล้วพบว่า routine ทั้งคู่ยังรันตรงเวลาทุกวันแต่ push ไม่ขึ้น — หลักฐาน: commit ทุกอันในรีโปเกิดในเวลาทำงานของคนไม่ใช่เวลา routine ยิง (07:35/08:05) ส่วน routine ที่เขียน Firestore (ดูดวง/อีเมล/ข่าว) อัปเดตครบทุกวัน สรุปว่า cloud routine push ขึ้น git ไม่ได้เลย · แก้โดยย้ายทั้งสองไปเขียน Firestore agents/manga + agents/todo (เก็บทั้งก้อนในฟิลด์ dataJson แบบเดียวกับ daysJson ของ agents/finance) แล้วให้ index.html + แอป Widget อ่าน Firestore ก่อน ไฟล์ .json เหลือเป็น fallback · เพิ่มฟิลด์ checkedAt เขียนทุกวันแม้ข้อมูลไม่เปลี่ยน การ์ดจะได้แยกออกว่า 'ตรวจแล้วไม่มีของใหม่' กับ 'routine พัง' · หมายเหตุ: มังงะไม่ได้พังจริง — One Piece 1190 ออก 9 ส.ค. Dandadan 243 ออก 10 ส.ค. Versus ยัง 35 ตรวจ niceoppai แล้ว"
+    },
     {
       "id": "wl-260806-dale-lagna",
       "datetime": "2026-08-06T11:33:44Z",
