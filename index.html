@@ -148,6 +148,14 @@
   }
   .w-news li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
   .w-empty{font-size:12px;color:var(--ink-faint);font-style:italic}
+  /* แถบดวงกำเนิด — ค่าคงที่ ไม่ได้มาจาก Firestore (ดู renderHoro) */
+  .w-natal{
+    display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-bottom:6px;
+    font-size:10.5px;letter-spacing:.04em;color:var(--ink-faint);
+    font-family:"IBM Plex Mono",monospace;
+  }
+  .w-natal b{color:var(--gold);font-weight:600}
+  .w-natal .sep{opacity:.4}
   /* Bitcoin trend summary (จาก investai) */
   .w-btc-sig{
     display:block;text-decoration:none;color:inherit;
@@ -798,6 +806,11 @@
       <!-- Horoscope — ดูดวงรายวัน (Firestore agents/horoscope) -->
       <div class="widget" id="wHoro">
         <div class="wh"><span class="wdot" style="background:var(--c-content, var(--gold))"></span><h4>ดูดวงวันนี้</h4><span class="wup" id="wHoroUp">—</span></div>
+        <div class="w-natal" title="เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ — ลัคนาคำนวณแบบนิรายนะ (ลาหิรี); ฝั่งสากล/สายนะ = กันย์ 6°58′">
+          <span>ลัคนา <b>สิงห์ 13°21′</b></span><span class="sep">·</span>
+          <span>ราศี <b>มกร</b></span><span class="sep">·</span>
+          <span>ปี <b>กุน</b></span>
+        </div>
         <div class="w-news" id="wHoroBox"><span class="w-empty">รอดวงประจำวัน (routine ทุกเช้า 07:13)</span></div>
       </div>
 

@@ -55,6 +55,13 @@
   .r-items li:last-child{border-bottom:none}
   .r-items li::before{content:"▸";position:absolute;left:2px;color:var(--gold);font-size:12px}
   .r-stamp{margin-top:14px;font-size:11px;color:var(--ink-faint)}
+  /* แถบดวงกำเนิด — ค่าคงที่ แสดงเฉพาะแท็บดูดวง */
+  .r-natal{
+    display:flex;flex-wrap:wrap;gap:4px 10px;margin:-6px 0 14px;
+    font-size:11.5px;letter-spacing:.04em;color:var(--ink-faint);
+  }
+  .r-natal b{color:var(--gold);font-weight:600}
+  .r-natal .sep{opacity:.4}
   .empty{color:var(--ink-faint);font-size:14px;padding:8px 0}
   details.r-full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
   details.r-full summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--gold)}
@@ -121,15 +128,26 @@ const EMPTY_TEXT = {
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 
+/* ดวงกำเนิดของเป้ — ค่าคงที่ ไม่ได้อ่านจาก Firestore
+   เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ · ลัคนาคำนวณแบบนิรายนะ (ลาหิรี)
+   ฝั่งสากล/สายนะ ตกที่กันย์ 6°58′ — เว็บที่บอกไม่ตรงกันมักใช้คนละระบบหรือเวลาคลาด */
+const NATAL_HTML = `<div class="r-natal" title="เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ · ระบบนิรายนะ (ลาหิรี) · ฝั่งสากล = กันย์ 6°58′">
+  <span>ลัคนา <b>สิงห์ 13°21′</b> (เจ้าเรือน = อาทิตย์)</span><span class="sep">·</span>
+  <span>ราศี <b>มกร</b></span><span class="sep">·</span>
+  <span>ปีนักษัตร <b>กุน</b></span>
+</div>`;
+
 function render(kind, d){
   const box = document.getElementById('c-'+kind);
+  const natal = kind === "horoscope" ? NATAL_HTML : "";
   if(!d || !Array.isArray(d.items) || !d.items.length){
-    box.innerHTML = `<div class="empty">${EMPTY_TEXT[kind]}</div>`;
+    box.innerHTML = `${natal}<div class="empty">${EMPTY_TEXT[kind]}</div>`;
     return;
   }
   box.innerHTML = `
     ${d.date ? `<div class="r-date mono">${esc(d.date)}</div>` : ""}
     <div class="r-title">${esc(d.title || "สรุป")}</div>
+    ${natal}
     <ul class="r-items">${d.items.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
     ${d.full ? `<details class="r-full"><summary>อ่านฉบับเต็ม</summary><pre>${esc(d.full)}</pre></details>` : ""}
     ${d.updatedAt ? `<div class="r-stamp mono">อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}</div>` : ""}`;
