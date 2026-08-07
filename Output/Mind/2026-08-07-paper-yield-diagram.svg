@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 541" width="590" height="541" font-family="Sarabun, 'Noto Sans Thai', sans-serif">
+<defs>
+<pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+  <line x1="0" y1="0" x2="0" y2="7" stroke="#dc2626" stroke-width="2.5" stroke-opacity=".28"/>
+</pattern>
+<style>
+  .sheet{fill:#fff;stroke:#94a3b8;stroke-width:1.4}
+  .waste{fill:url(#hatch)}
+  .t{font-size:19px;font-weight:700;fill:#0f172a}
+  .s{font-size:14px;fill:#475569}
+  .cap{font-size:13px;fill:#64748b}
+  .hd{font-size:15px;font-weight:600;fill:#334155}
+  @media (prefers-color-scheme: dark){
+    .sheet{fill:#1e293b;stroke:#64748b}
+    .t{fill:#f1f5f9} .s{fill:#cbd5e1} .cap{fill:#94a3b8} .hd{fill:#cbd5e1}
+  }
+</style>
+</defs>
+<text x="28" y="44" class="hd">กระดาษแผ่นเดียวกัน 31 × 43 นิ้ว — ต่างกันแค่ด้านละ 5 มิลลิเมตร</text>
+<text x="28" y="68" class="cap">พื้นที่ลายทแยงสีแดงคือกระดาษที่จ่ายเงินซื้อมาแล้วตัดทิ้ง</text>
+<text x="28" y="102" class="t">10 × 20.5 ซม.</text>
+<text x="28" y="124" class="s">วางได้ 35 ใบ · ค่ากระดาษ 0.18 บาท/ใบ</text>
+<rect x="28" y="146" width="240.0" height="339.20000000000005" class="sheet"/>
+<rect x="265.44000000000005" y="146" width="2.559999999999974" height="339.20000000000005" class="waste"/>
+<rect x="28" y="483.6" width="237.44000000000003" height="1.6000000000000227" class="waste"/>
+<rect x="29.0" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="29.0" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="29.0" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="29.0" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="29.0" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="62.9" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="62.9" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="62.9" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="62.9" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="62.9" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="96.8" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="96.8" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="96.8" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="96.8" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="96.8" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="130.7" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="130.7" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="130.7" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="130.7" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="130.7" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="164.6" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="164.6" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="164.6" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="164.6" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="164.6" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="198.6" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="198.6" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="198.6" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="198.6" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="198.6" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="232.5" y="147.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="232.5" y="214.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="232.5" y="282.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="232.5" y="349.5" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<rect x="232.5" y="417.0" width="32.0" height="65.6" rx="1.5" fill="#0f766e" fill-opacity=".18" stroke="#0f766e" stroke-width=".9"/>
+<text x="322.0" y="102" class="t">10.5 × 21 ซม.</text>
+<text x="322.0" y="124" class="s">วางได้ 27 ใบ · ค่ากระดาษ 0.24 บาท/ใบ</text>
+<rect x="322.0" y="146" width="240.0" height="339.20000000000005" class="sheet"/>
+<rect x="529.36" y="146" width="32.63999999999996" height="339.20000000000005" class="waste"/>
+<rect x="322.0" y="465.68" width="207.36000000000004" height="19.52000000000004" class="waste"/>
+<rect x="323.0" y="147.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="182.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="218.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="253.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="289.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="324.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="360.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="395.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="323.0" y="431.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="147.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="182.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="218.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="253.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="289.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="324.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="360.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="395.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="392.1" y="431.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="147.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="182.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="218.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="253.5" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="289.0" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="324.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="360.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="395.6" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<rect x="461.2" y="431.1" width="67.2" height="33.6" rx="1.5" fill="#b45309" fill-opacity=".18" stroke="#b45309" stroke-width=".9"/>
+<text x="28" y="519" class="cap">คิดที่พื้นที่พิมพ์ 75 × 106 ซม. · เผื่อตัดตกด้านละ 3 มม. · พื้นที่พิมพ์จริงต่างกันได้ตามรุ่นแท่นพิมพ์</text>
+</svg>
