@@ -1,0 +1,4412 @@
+{
+ "updated": "2026-08-10",
+ "source": "Google Docs — รวมศัพท์ (โน้ตส่วนตัวของ PAE)",
+ "words": [
+  {
+   "w": "hesitate",
+   "t": "ลังเล",
+   "c": "emo",
+   "e": "He hesitated for a second before knocking on the door.",
+   "x": "เขาลังเลอยู่แวบหนึ่งก่อนจะเคาะประตู"
+  },
+  {
+   "w": "yawn",
+   "t": "หาว",
+   "c": "act",
+   "e": "She yawned through the whole meeting.",
+   "x": "เธอหาวตลอดทั้งการประชุม"
+  },
+  {
+   "w": "ish",
+   "t": "ก็ประมาณนั้น, ก็นิดนึง",
+   "c": "sla",
+   "e": "\"Are you hungry?\" \"Ish.\"",
+   "x": "\"หิวไหม\" \"ก็นิดนึง\"",
+   "n": "ต่อท้ายคำก็ได้ เช่น six-ish = ราวๆ หกโมง"
+  },
+  {
+   "w": "memento",
+   "t": "ของที่ระลึก",
+   "c": "day",
+   "e": "She kept his letter as a memento.",
+   "x": "เธอเก็บจดหมายของเขาไว้เป็นของที่ระลึก",
+   "n": "ในโน้ตสะกดผิดเป็น mememto"
+  },
+  {
+   "w": "narrative",
+   "t": "การเล่าเรื่อง, เรื่องเล่า",
+   "c": "lng",
+   "e": "The film has a very strange narrative.",
+   "x": "หนังเรื่องนี้มีวิธีเล่าเรื่องที่แปลกมาก"
+  },
+  {
+   "w": "vowel",
+   "t": "สระ",
+   "c": "lng",
+   "e": "A, E, I, O and U are the five vowels.",
+   "x": "A E I O U คือสระทั้งห้าตัว"
+  },
+  {
+   "w": "consonant",
+   "t": "พยัญชนะ",
+   "c": "lng",
+   "e": "Thai has far more consonants than English.",
+   "x": "ภาษาไทยมีพยัญชนะมากกว่าภาษาอังกฤษเยอะ"
+  },
+  {
+   "w": "omniscient",
+   "t": "รู้แจ้งทุกสิ่ง, สัพพัญญู",
+   "c": "rel",
+   "e": "The story is told by an omniscient narrator.",
+   "x": "เรื่องนี้เล่าโดยผู้เล่าที่รู้ทุกอย่าง"
+  },
+  {
+   "w": "tremendous",
+   "t": "มหาศาล, ใหญ่โต",
+   "c": "des",
+   "e": "They put a tremendous amount of work into this.",
+   "x": "พวกเขาทุ่มแรงลงไปกับงานนี้มหาศาล"
+  },
+  {
+   "w": "reinvent",
+   "t": "สร้างขึ้นใหม่, ปรับโฉมใหม่",
+   "c": "act",
+   "e": "The brand reinvented itself after ten years.",
+   "x": "แบรนด์นี้ปรับโฉมตัวเองใหม่หลังผ่านไปสิบปี"
+  },
+  {
+   "w": "Give me a break",
+   "t": "พอเถอะ, หยุดเซ้าซี้ได้แล้ว",
+   "c": "sen",
+   "e": "Give me a break — I only just got here.",
+   "x": "พอเถอะน่า ฉันเพิ่งมาถึงเองนะ"
+  },
+  {
+   "w": "asylum",
+   "t": "ที่ลี้ภัย, การขอลี้ภัย",
+   "c": "soc",
+   "e": "The family sought asylum in another country.",
+   "x": "ครอบครัวนั้นขอลี้ภัยไปอีกประเทศ"
+  },
+  {
+   "w": "expanse",
+   "t": "ผืนกว้าง, อาณาบริเวณกว้างใหญ่",
+   "c": "des",
+   "e": "Below them lay a vast expanse of desert.",
+   "x": "เบื้องล่างคือผืนทะเลทรายอันกว้างใหญ่",
+   "n": "ในโน้ตแปลว่า 'ขยาย' — คำนั้นคือ expand (v.) ส่วน expanse เป็นคำนาม"
+  },
+  {
+   "w": "comrade",
+   "t": "สหาย, เพื่อนร่วมรบ",
+   "c": "ppl",
+   "e": "He died protecting his comrades.",
+   "x": "เขาตายเพื่อปกป้องสหายร่วมรบ"
+  },
+  {
+   "w": "burn (someone)",
+   "t": "แซะจนเงิบ, ทำให้หน้าแตก",
+   "c": "sla",
+   "e": "Ouch, that was a brutal burn.",
+   "x": "โอ๊ย แซะแรงมาก เงิบเลย"
+  },
+  {
+   "w": "just now",
+   "t": "เมื่อกี้",
+   "c": "sen",
+   "e": "I saw her just now in the lobby.",
+   "x": "ฉันเพิ่งเห็นเธอเมื่อกี้ที่ล็อบบี้"
+  },
+  {
+   "w": "burden",
+   "t": "ภาระ",
+   "c": "emo",
+   "e": "I don't want to be a burden to my family.",
+   "x": "ฉันไม่อยากเป็นภาระของครอบครัว"
+  },
+  {
+   "w": "slaughterer",
+   "t": "เพชฌฆาต, ผู้เข่นฆ่า",
+   "c": "ppl",
+   "e": "History remembers him as a slaughterer, not a king.",
+   "x": "ประวัติศาสตร์จำเขาในฐานะผู้เข่นฆ่า ไม่ใช่กษัตริย์"
+  },
+  {
+   "w": "irrelevant",
+   "t": "ไม่เกี่ยวข้อง, นอกประเด็น",
+   "c": "des",
+   "e": "His age is irrelevant to the discussion.",
+   "x": "อายุของเขาไม่เกี่ยวกับเรื่องที่คุยกันอยู่"
+  },
+  {
+   "w": "smuggling",
+   "t": "การลักลอบขนของผิดกฎหมาย",
+   "c": "soc",
+   "e": "They were arrested for smuggling gold across the border.",
+   "x": "พวกเขาถูกจับข้อหาลักลอบขนทองข้ามชายแดน"
+  },
+  {
+   "w": "roast",
+   "t": "ย่าง, อบ / แซะแบบขำๆ",
+   "c": "day",
+   "e": "We roasted the chicken for two hours.",
+   "x": "เราอบไก่ไปสองชั่วโมง",
+   "n": "สแลง: roast someone = แซะ ล้อเลียนแบบเจ็บๆ แต่ขำ"
+  },
+  {
+   "w": "prostitute",
+   "t": "โสเภณี",
+   "c": "ppl",
+   "e": "The novel follows a prostitute in 19th-century Paris.",
+   "x": "นิยายเล่าเรื่องโสเภณีในปารีสศตวรรษที่ 19"
+  },
+  {
+   "w": "clarify",
+   "t": "อธิบายให้ชัด, ทำให้กระจ่าง",
+   "c": "act",
+   "e": "Could you clarify what you meant by that?",
+   "x": "ช่วยอธิบายให้ชัดหน่อยได้ไหมว่าหมายถึงอะไร"
+  },
+  {
+   "w": "fridge",
+   "t": "ตู้เย็น",
+   "c": "day",
+   "e": "There's nothing left in the fridge.",
+   "x": "ในตู้เย็นไม่เหลืออะไรแล้ว"
+  },
+  {
+   "w": "successor",
+   "t": "ผู้สืบทอด, ตัวตายตัวแทน",
+   "c": "ppl",
+   "e": "The king named his youngest son as successor.",
+   "x": "กษัตริย์แต่งตั้งลูกชายคนเล็กเป็นผู้สืบทอด"
+  },
+  {
+   "w": "trample",
+   "t": "เหยียบย่ำ, ย่ำยี",
+   "c": "act",
+   "e": "The crowd trampled the flowers in the garden.",
+   "x": "ฝูงชนเหยียบย่ำดอกไม้ในสวนจนเละ",
+   "n": "ในโน้ตแปลว่า 'เหยียดหยาม' — ที่ถูกคือ 'เหยียบย่ำ' (เชิงกายภาพ) หรือ 'ย่ำยีสิทธิ'"
+  },
+  {
+   "w": "oratory",
+   "t": "วาทศิลป์, ศิลปะการพูด",
+   "c": "lng",
+   "e": "His oratory could move an entire nation.",
+   "x": "วาทศิลป์ของเขาสะกดคนทั้งชาติได้"
+  },
+  {
+   "w": "ominous",
+   "t": "เป็นลางร้าย",
+   "c": "des",
+   "e": "There was an ominous silence before the storm.",
+   "x": "มีความเงียบที่เป็นลางร้ายก่อนพายุจะมา",
+   "n": "ในโน้ตเขียน 'Oratory ลางไม่ดี' — คำที่แปลว่าลางร้ายคือ ominous"
+  },
+  {
+   "w": "provoke",
+   "t": "ยั่วยุ, ทำให้โกรธ",
+   "c": "act",
+   "e": "Don't provoke him — he's already angry.",
+   "x": "อย่าไปยั่วเขา เขาโมโหอยู่แล้ว"
+  },
+  {
+   "w": "salvation",
+   "t": "ความรอด, การช่วยให้พ้นภัย",
+   "c": "rel",
+   "e": "For him, music was a form of salvation.",
+   "x": "สำหรับเขา ดนตรีคือทางรอดอย่างหนึ่ง"
+  },
+  {
+   "w": "liege",
+   "t": "เจ้าเหนือหัว, นาย",
+   "c": "fan",
+   "e": "\"As you wish, my liege.\"",
+   "x": "\"ตามพระประสงค์ พะย่ะค่ะ\""
+  },
+  {
+   "w": "reckless",
+   "t": "บุ่มบ่าม, บ้าบิ่น, ประมาท",
+   "c": "des",
+   "e": "He was charged with reckless driving.",
+   "x": "เขาโดนข้อหาขับรถโดยประมาท"
+  },
+  {
+   "w": "composed",
+   "t": "ใจเย็น, สงบนิ่ง",
+   "c": "des",
+   "e": "She stayed composed even when everyone panicked.",
+   "x": "เธอยังใจเย็นแม้ทุกคนจะตื่นตระหนก"
+  },
+  {
+   "w": "graceful",
+   "t": "สง่างาม, อ่อนช้อย",
+   "c": "des",
+   "e": "Her movements were slow and graceful.",
+   "x": "ท่วงท่าของเธอช้าและสง่างาม"
+  },
+  {
+   "w": "rumbling",
+   "t": "เสียงครืนๆ, เสียงดังก้อง",
+   "c": "des",
+   "e": "We heard a rumbling deep underground.",
+   "x": "เราได้ยินเสียงครืนๆ ดังลึกลงไปใต้ดิน"
+  },
+  {
+   "w": "immigrant",
+   "t": "ผู้อพยพเข้าเมือง",
+   "c": "ppl",
+   "e": "His parents were immigrants from Vietnam.",
+   "x": "พ่อแม่ของเขาเป็นผู้อพยพจากเวียดนาม",
+   "n": "ในโน้ตสะกดผิดเป็น immigramt"
+  },
+  {
+   "w": "genocide",
+   "t": "การฆ่าล้างเผ่าพันธุ์",
+   "c": "soc",
+   "e": "The tribunal called it an act of genocide.",
+   "x": "ศาลตัดสินว่านั่นคือการฆ่าล้างเผ่าพันธุ์"
+  },
+  {
+   "w": "hypnotize",
+   "t": "สะกดจิต",
+   "c": "act",
+   "e": "The whole audience seemed hypnotized by her voice.",
+   "x": "คนดูทั้งห้องเหมือนโดนเสียงเธอสะกดจิต"
+  },
+  {
+   "w": "dogmatic",
+   "t": "ดันทุรัง, ยึดติดกับความเชื่อตัวเอง",
+   "c": "des",
+   "e": "He's too dogmatic to consider other views.",
+   "x": "เขาดันทุรังเกินกว่าจะฟังความเห็นคนอื่น"
+  },
+  {
+   "w": "interrogate",
+   "t": "สอบปากคำ",
+   "c": "act",
+   "e": "The police interrogated him for six hours.",
+   "x": "ตำรวจสอบปากคำเขาหกชั่วโมง"
+  },
+  {
+   "w": "impulsive",
+   "t": "หุนหันพลันแล่น",
+   "c": "des",
+   "e": "Buying that car was an impulsive decision.",
+   "x": "การซื้อรถคันนั้นเป็นการตัดสินใจแบบหุนหันพลันแล่น"
+  },
+  {
+   "w": "tarnish",
+   "t": "ทำให้มัวหมอง, แปดเปื้อน",
+   "c": "act",
+   "e": "The scandal tarnished his reputation.",
+   "x": "เรื่องอื้อฉาวทำให้ชื่อเสียงเขามัวหมอง"
+  },
+  {
+   "w": "sustainable",
+   "t": "ยั่งยืน",
+   "c": "des",
+   "e": "We need a sustainable way to grow the business.",
+   "x": "เราต้องการวิธีที่ยั่งยืนในการขยายธุรกิจ"
+  },
+  {
+   "w": "savage",
+   "t": "ป่าเถื่อน, อำมหิต / แซะแรง (สแลง)",
+   "c": "des",
+   "e": "That was a savage attack.",
+   "x": "นั่นคือการโจมตีที่โหดเหี้ยม",
+   "n": "สแลงปัจจุบัน: \"That's savage\" = แรงมาก แซะเจ็บมาก"
+  },
+  {
+   "w": "capitalism",
+   "t": "ทุนนิยม",
+   "c": "soc",
+   "e": "The book is a critique of late capitalism.",
+   "x": "หนังสือเล่มนี้วิจารณ์ทุนนิยมยุคปลาย"
+  },
+  {
+   "w": "sightseeing",
+   "t": "การเที่ยวชมทิวทัศน์",
+   "c": "day",
+   "e": "We spent the day sightseeing in the old town.",
+   "x": "เราใช้เวลาทั้งวันเที่ยวชมเมืองเก่า"
+  },
+  {
+   "w": "bathtub",
+   "t": "อ่างอาบน้ำ",
+   "c": "day",
+   "e": "He fell asleep in the bathtub.",
+   "x": "เขาหลับคาอ่างอาบน้ำ"
+  },
+  {
+   "w": "ought to",
+   "t": "ควรจะ",
+   "c": "gra",
+   "e": "You ought to tell her the truth.",
+   "x": "เธอควรจะบอกความจริงกับเธอนะ",
+   "n": "ought to ≈ should แต่เป็นทางการกว่านิดหน่อย"
+  },
+  {
+   "w": "bleachers",
+   "t": "อัฒจันทร์ (ที่นั่งชมกีฬาแบบไม่มีหลังคา)",
+   "c": "day",
+   "e": "We watched the game from the bleachers.",
+   "x": "เราดูเกมจากอัฒจันทร์"
+  },
+  {
+   "w": "high heels",
+   "t": "รองเท้าส้นสูง",
+   "c": "day",
+   "e": "She can run in high heels somehow.",
+   "x": "ไม่รู้ทำได้ยังไง เธอวิ่งด้วยส้นสูงได้"
+  },
+  {
+   "w": "cruising",
+   "t": "ล่องเรือ, ขับรถเรื่อยเปื่อย",
+   "c": "act",
+   "e": "We were just cruising around the neighborhood.",
+   "x": "เราแค่ขับรถเล่นวนแถวบ้าน"
+  },
+  {
+   "w": "hallucination",
+   "t": "ภาพหลอน",
+   "c": "emo",
+   "e": "The fever gave him vivid hallucinations.",
+   "x": "ไข้ทำให้เขาเห็นภาพหลอนชัดเจน"
+  },
+  {
+   "w": "germ",
+   "t": "เชื้อโรค",
+   "c": "day",
+   "e": "Wash your hands — they're covered in germs.",
+   "x": "ไปล้างมือ เต็มไปด้วยเชื้อโรคเลย"
+  },
+  {
+   "w": "banister",
+   "t": "ราวบันได",
+   "c": "day",
+   "e": "Hold the banister when you come down.",
+   "x": "จับราวบันไดตอนลงมาด้วย"
+  },
+  {
+   "w": "shady",
+   "t": "ร่มรื่น / น่าสงสัย ไม่น่าไว้ใจ",
+   "c": "des",
+   "e": "That deal sounds pretty shady to me.",
+   "x": "ดีลนั้นฟังดูน่าสงสัยสำหรับฉันนะ"
+  },
+  {
+   "w": "labyrinth",
+   "t": "เขาวงกต",
+   "c": "fan",
+   "e": "The dungeon was a labyrinth of stone corridors.",
+   "x": "ดันเจียนเป็นเขาวงกตของทางเดินหิน"
+  },
+  {
+   "w": "laundry",
+   "t": "ผ้าที่ต้องซัก, การซักรีด",
+   "c": "day",
+   "e": "I still have to do the laundry.",
+   "x": "ฉันยังต้องซักผ้าอยู่เลย"
+  },
+  {
+   "w": "glimpse",
+   "t": "เหลือบเห็น, การมองแวบเดียว",
+   "c": "act",
+   "e": "I caught a glimpse of him in the crowd.",
+   "x": "ฉันเหลือบเห็นเขาแวบหนึ่งในฝูงชน"
+  },
+  {
+   "w": "third wheel",
+   "t": "ส่วนเกิน, ก้างขวางคอ",
+   "c": "sla",
+   "e": "They're a couple now, so I feel like a third wheel.",
+   "x": "สองคนนั้นคบกันแล้ว ฉันเลยรู้สึกเป็นส่วนเกิน"
+  },
+  {
+   "w": "dedicated",
+   "t": "ทุ่มเท",
+   "c": "des",
+   "e": "She's the most dedicated person on the team.",
+   "x": "เธอเป็นคนที่ทุ่มเทที่สุดในทีม"
+  },
+  {
+   "w": "ask (someone) out",
+   "t": "ชวนไปเดต",
+   "c": "phr",
+   "e": "He finally asked her out.",
+   "x": "ในที่สุดเขาก็ชวนเธอไปเดต"
+  },
+  {
+   "w": "ask around",
+   "t": "ถามคนนั้นคนนี้ดู",
+   "c": "phr",
+   "e": "I'll ask around and see if anyone knows.",
+   "x": "เดี๋ยวฉันถามคนนู้นคนนี้ดูว่ามีใครรู้ไหม"
+  },
+  {
+   "w": "call off",
+   "t": "ยกเลิก",
+   "c": "phr",
+   "e": "They called off the wedding.",
+   "x": "พวกเขายกเลิกงานแต่ง"
+  },
+  {
+   "w": "give up",
+   "t": "ล้มเลิก, ยอมแพ้",
+   "c": "phr",
+   "e": "Don't give up now, you're almost there.",
+   "x": "อย่าเพิ่งยอมแพ้ตอนนี้ ใกล้แล้ว"
+  },
+  {
+   "w": "look into",
+   "t": "สืบ, ตรวจสอบ",
+   "c": "phr",
+   "e": "We'll look into the problem tomorrow.",
+   "x": "พรุ่งนี้เราจะตรวจสอบปัญหานี้"
+  },
+  {
+   "w": "make out",
+   "t": "นัวเนีย กอดจูบ / มองออก อ่านออก",
+   "c": "phr",
+   "e": "They were making out in the back seat.",
+   "x": "สองคนนั้นนัวเนียกันอยู่เบาะหลัง"
+  },
+  {
+   "w": "pass out",
+   "t": "เป็นลม, สลบ",
+   "c": "phr",
+   "e": "He passed out from the heat.",
+   "x": "เขาเป็นลมเพราะอากาศร้อน"
+  },
+  {
+   "w": "put down",
+   "t": "ดูถูก, พูดกดคนอื่น",
+   "c": "phr",
+   "e": "Stop putting yourself down.",
+   "x": "เลิกดูถูกตัวเองได้แล้ว"
+  },
+  {
+   "w": "turn down",
+   "t": "ปฏิเสธ / หรี่เสียงลง",
+   "c": "phr",
+   "e": "She turned down the job offer.",
+   "x": "เธอปฏิเสธข้อเสนองานนั้น"
+  },
+  {
+   "w": "boss around",
+   "t": "สั่งโน่นสั่งนี่, ทำตัวเป็นเจ้านาย",
+   "c": "phr",
+   "e": "Stop bossing me around.",
+   "x": "เลิกสั่งฉันโน่นนี่ได้แล้ว"
+  },
+  {
+   "w": "fool around",
+   "t": "ฆ่าเวลาเล่นๆ / นัวเนียกับใคร",
+   "c": "phr",
+   "e": "We were just fooling around after school.",
+   "x": "เราแค่เล่นฆ่าเวลากันหลังเลิกเรียน"
+  },
+  {
+   "w": "goof around",
+   "t": "ทำตัวไร้สาระ, เล่นเฮฮา",
+   "c": "phr",
+   "e": "They goofed around instead of studying.",
+   "x": "พวกเขามัวเล่นไร้สาระแทนที่จะอ่านหนังสือ"
+  },
+  {
+   "w": "mess around",
+   "t": "เล่นแพลงๆ, ทำเล่นๆ ไม่จริงจัง",
+   "c": "phr",
+   "e": "Quit messing around and finish it.",
+   "x": "เลิกเล่นแพลงๆ แล้วทำให้เสร็จเถอะ"
+  },
+  {
+   "w": "esteem",
+   "t": "ความนับถือ, เทิดทูน",
+   "c": "emo",
+   "e": "He is held in high esteem by his students.",
+   "x": "เขาเป็นที่นับถืออย่างสูงในหมู่ลูกศิษย์",
+   "n": "self-esteem = ความภูมิใจในตัวเอง"
+  },
+  {
+   "w": "worship",
+   "t": "บูชา, สักการะ",
+   "c": "rel",
+   "e": "People come here to worship every morning.",
+   "x": "ผู้คนมาที่นี่เพื่อสักการะทุกเช้า"
+  },
+  {
+   "w": "liberty",
+   "t": "เสรีภาพ",
+   "c": "soc",
+   "e": "They fought for liberty and equality.",
+   "x": "พวกเขาต่อสู้เพื่อเสรีภาพและความเสมอภาค"
+  },
+  {
+   "w": "equality",
+   "t": "ความเสมอภาค",
+   "c": "soc",
+   "e": "The law is meant to guarantee equality.",
+   "x": "กฎหมายมีไว้เพื่อรับรองความเสมอภาค"
+  },
+  {
+   "w": "fraternity",
+   "t": "ภราดรภาพ, ความเป็นพี่น้อง",
+   "c": "soc",
+   "e": "Liberty, equality, fraternity.",
+   "x": "เสรีภาพ เสมอภาค ภราดรภาพ"
+  },
+  {
+   "w": "liberalism",
+   "t": "เสรีนิยม",
+   "c": "soc",
+   "e": "Classical liberalism values individual freedom.",
+   "x": "เสรีนิยมคลาสสิกให้ค่ากับเสรีภาพของปัจเจก"
+  },
+  {
+   "w": "enlighten",
+   "t": "ทำให้กระจ่าง, ให้ความรู้แจ้ง",
+   "c": "rel",
+   "e": "Care to enlighten me on what happened?",
+   "x": "ช่วยอธิบายให้กระจ่างหน่อยได้ไหมว่าเกิดอะไรขึ้น",
+   "n": "enlightenment = การรู้แจ้ง / การตรัสรู้"
+  },
+  {
+   "w": "dignity",
+   "t": "ศักดิ์ศรี, เกียรติ",
+   "c": "soc",
+   "e": "He lost everything but kept his dignity.",
+   "x": "เขาเสียทุกอย่างแต่ยังรักษาศักดิ์ศรีไว้ได้"
+  },
+  {
+   "w": "integrity",
+   "t": "ความซื่อสัตย์, ความมีหลักการ",
+   "c": "ppl",
+   "e": "She's known for her integrity.",
+   "x": "เธอเป็นที่รู้จักในเรื่องความซื่อสัตย์"
+  },
+  {
+   "w": "attorney",
+   "t": "ทนายความ (US)",
+   "c": "ppl",
+   "e": "You should speak to an attorney first.",
+   "x": "คุณควรคุยกับทนายก่อน",
+   "n": "ในโน้ตแปลว่า 'อัยการ' — อัยการคือ prosecutor / district attorney"
+  },
+  {
+   "w": "punctual",
+   "t": "ตรงต่อเวลา",
+   "c": "des",
+   "e": "He's always punctual, never a minute late.",
+   "x": "เขาตรงเวลาเสมอ ไม่เคยสายแม้แต่นาทีเดียว"
+  },
+  {
+   "w": "brunette",
+   "t": "ผู้หญิงผมสีน้ำตาลเข้ม",
+   "c": "ppl",
+   "e": "The brunette in the red coat is my sister.",
+   "x": "ผู้หญิงผมน้ำตาลเสื้อโค้ทแดงคนนั้นคือน้องสาวฉัน"
+  },
+  {
+   "w": "dedicate",
+   "t": "อุทิศ, ถวาย",
+   "c": "act",
+   "e": "He dedicated the book to his mother.",
+   "x": "เขาอุทิศหนังสือเล่มนี้ให้แม่"
+  },
+  {
+   "w": "literally",
+   "t": "จริงๆ นะ, ตามตัวอักษร",
+   "c": "sla",
+   "e": "I literally just walked in the door.",
+   "x": "ฉันเพิ่งเดินเข้าประตูมาจริงๆ นะ"
+  },
+  {
+   "w": "I'm listening to the same song over and over again.",
+   "t": "ฉันฟังเพลงเดิมวนไปวนมา",
+   "c": "sen",
+   "e": "I'm listening to the same song over and over again.",
+   "x": "ฉันกำลังฟังเพลงเดิมๆ วนไปวนมา"
+  },
+  {
+   "w": "pimple",
+   "t": "สิว",
+   "c": "day",
+   "e": "I got a huge pimple right before the interview.",
+   "x": "สิวขึ้นเม็ดเบ้อเริ่มก่อนสัมภาษณ์พอดี"
+  },
+  {
+   "w": "declutter",
+   "t": "จัดของ, เก็บกวาดของรกทิ้ง",
+   "c": "act",
+   "e": "I spent the weekend decluttering my room.",
+   "x": "ฉันใช้เวลาสุดสัปดาห์เก็บกวาดของรกในห้อง",
+   "n": "ในโน้ตแปลว่า 'รกร้าง' — คำนั้นคือ desolate ส่วน declutter คือการ 'เก็บของรกออก'"
+  },
+  {
+   "w": "by the way",
+   "t": "ว่าแต่ว่า, อ้อ อีกอย่าง",
+   "c": "sen",
+   "e": "By the way, did you call your mother?",
+   "x": "ว่าแต่ โทรหาแม่รึยัง"
+  },
+  {
+   "w": "potato",
+   "t": "เหมือนๆ กันแหละ (สแลง)",
+   "c": "sla",
+   "e": "Cake, pie — potato, potato.",
+   "x": "เค้กก็ได้ พายก็ได้ เหมือนๆ กันแหละ",
+   "n": "มาจากสำนวน \"potato, potahto\" = ต่างกันแค่ชื่อ"
+  },
+  {
+   "w": "strait",
+   "t": "ช่องแคบ",
+   "c": "day",
+   "e": "Ships pass through the Strait of Malacca every day.",
+   "x": "เรือแล่นผ่านช่องแคบมะละกาทุกวัน"
+  },
+  {
+   "w": "medley",
+   "t": "เพลงรวมฮิต, ของผสมหลายอย่าง",
+   "c": "lng",
+   "e": "The band closed with a medley of their old hits.",
+   "x": "วงปิดท้ายด้วยเมดเลย์เพลงฮิตเก่าๆ",
+   "n": "ในโน้ตสะกดผิดเป็น medlay"
+  },
+  {
+   "w": "seductive",
+   "t": "เย้ายวน, ชวนหลงใหล",
+   "c": "des",
+   "e": "She gave him a seductive smile.",
+   "x": "เธอยิ้มเย้ายวนให้เขา"
+  },
+  {
+   "w": "hustle",
+   "t": "เร่งรีบ, ดิ้นรนหาเงิน",
+   "c": "act",
+   "e": "He hustles two jobs to pay rent.",
+   "x": "เขาดิ้นรนทำสองงานเพื่อจ่ายค่าเช่า"
+  },
+  {
+   "w": "bustle",
+   "t": "คึกคัก, ขวักไขว่",
+   "c": "act",
+   "e": "The market bustles with people at dawn.",
+   "x": "ตลาดคึกคักไปด้วยผู้คนตั้งแต่ฟ้าสาง"
+  },
+  {
+   "w": "hustle and bustle",
+   "t": "ความวุ่นวายจอแจ",
+   "c": "sla",
+   "e": "I escaped the hustle and bustle of the city.",
+   "x": "ฉันหนีความวุ่นวายจอแจของเมืองมา"
+  },
+  {
+   "w": "rattle",
+   "t": "สั่นจนมีเสียงกรุ๊งกริ๊ง / ทำให้เสียขวัญ",
+   "c": "act",
+   "e": "The wind rattled the windows all night.",
+   "x": "ลมพัดจนหน้าต่างสั่นดังทั้งคืน"
+  },
+  {
+   "w": "laden",
+   "t": "บรรทุกเต็ม, เต็มไปด้วย",
+   "c": "des",
+   "e": "The table was laden with food.",
+   "x": "โต๊ะเต็มไปด้วยอาหาร"
+  },
+  {
+   "w": "trolley",
+   "t": "รถเข็น",
+   "c": "day",
+   "e": "Grab a trolley at the entrance.",
+   "x": "หยิบรถเข็นตรงทางเข้าเลย"
+  },
+  {
+   "w": "grin",
+   "t": "ยิ้มกว้าง, ยิงฟัน",
+   "c": "act",
+   "e": "He grinned when he saw the score.",
+   "x": "เขายิ้มกว้างเมื่อเห็นคะแนน"
+  },
+  {
+   "w": "progeny",
+   "t": "ลูกหลาน, ผู้สืบสายเลือด",
+   "c": "ppl",
+   "e": "The throne would pass to his progeny.",
+   "x": "บัลลังก์จะตกทอดถึงลูกหลานของเขา"
+  },
+  {
+   "w": "lame",
+   "t": "ไม่ได้เรื่อง, กาก, ไม่เข้าท่า",
+   "c": "sla",
+   "e": "That's such a lame excuse.",
+   "x": "ข้ออ้างอะไรกากขนาดนั้น"
+  },
+  {
+   "w": "glorious",
+   "t": "รุ่งโรจน์, งดงามน่ายกย่อง",
+   "c": "des",
+   "e": "It was a glorious victory.",
+   "x": "มันคือชัยชนะอันรุ่งโรจน์"
+  },
+  {
+   "w": "munch",
+   "t": "เคี้ยวหนับๆ, ขบเคี้ยว",
+   "c": "act",
+   "e": "He sat there munching on chips.",
+   "x": "เขานั่งเคี้ยวมันฝรั่งทอดอยู่ตรงนั้น"
+  },
+  {
+   "w": "preserve",
+   "t": "อนุรักษ์, เก็บรักษาไว้",
+   "c": "act",
+   "e": "The temple has been preserved for 400 years.",
+   "x": "วัดแห่งนี้ถูกอนุรักษ์ไว้มา 400 ปี"
+  },
+  {
+   "w": "cult",
+   "t": "ลัทธิ",
+   "c": "rel",
+   "e": "He escaped from the cult after five years.",
+   "x": "เขาหนีออกจากลัทธินั้นได้หลังผ่านไปห้าปี"
+  },
+  {
+   "w": "preach",
+   "t": "เทศนา, สั่งสอน",
+   "c": "rel",
+   "e": "Don't preach to me about hard work.",
+   "x": "อย่ามาเทศน์ฉันเรื่องความขยัน"
+  },
+  {
+   "w": "dissenter",
+   "t": "ผู้คัดค้าน, ผู้เห็นต่าง",
+   "c": "ppl",
+   "e": "Dissenters were arrested within days.",
+   "x": "ผู้เห็นต่างถูกจับกุมภายในไม่กี่วัน"
+  },
+  {
+   "w": "devotion",
+   "t": "ความจงรักภักดี, การอุทิศตน",
+   "c": "emo",
+   "e": "Her devotion to her students never faded.",
+   "x": "ความทุ่มเทที่เธอมีต่อลูกศิษย์ไม่เคยจางหาย"
+  },
+  {
+   "w": "despair",
+   "t": "ความสิ้นหวัง",
+   "c": "emo",
+   "e": "He sank into despair after the loss.",
+   "x": "เขาจมดิ่งสู่ความสิ้นหวังหลังการสูญเสีย"
+  },
+  {
+   "w": "ritual",
+   "t": "พิธีกรรม",
+   "c": "rel",
+   "e": "Morning coffee is a daily ritual for him.",
+   "x": "กาแฟตอนเช้าคือพิธีกรรมประจำวันของเขา"
+  },
+  {
+   "w": "ascend",
+   "t": "ขึ้นสู่ที่สูง, เสด็จขึ้นครองราชย์",
+   "c": "act",
+   "e": "She ascended the throne at nineteen.",
+   "x": "เธอขึ้นครองราชย์ตอนอายุสิบเก้า"
+  },
+  {
+   "w": "ingot",
+   "t": "แท่งโลหะ",
+   "c": "fan",
+   "e": "The chest was full of gold ingots.",
+   "x": "หีบนั้นเต็มไปด้วยทองคำแท่ง"
+  },
+  {
+   "w": "literary",
+   "t": "เกี่ยวกับวรรณกรรม",
+   "c": "lng",
+   "e": "The novel won every major literary prize.",
+   "x": "นิยายเรื่องนี้กวาดรางวัลวรรณกรรมสำคัญทุกรางวัล"
+  },
+  {
+   "w": "infant",
+   "t": "ทารก",
+   "c": "ppl",
+   "e": "The infant slept through the entire flight.",
+   "x": "ทารกหลับตลอดทั้งเที่ยวบิน",
+   "n": "ไล่ตามวัย: infant → toddler → child → teenager → adult → senior"
+  },
+  {
+   "w": "toddler",
+   "t": "เด็กวัยหัดเดิน (1–3 ขวบ)",
+   "c": "ppl",
+   "e": "She has a toddler and a newborn.",
+   "x": "เธอมีลูกวัยหัดเดินกับเด็กแรกเกิด"
+  },
+  {
+   "w": "adolescent",
+   "t": "วัยรุ่น (ทางการ)",
+   "c": "ppl",
+   "e": "Adolescents need more sleep than adults.",
+   "x": "วัยรุ่นต้องการการนอนมากกว่าผู้ใหญ่"
+  },
+  {
+   "w": "grown-up",
+   "t": "ผู้ใหญ่ (ภาษาพูด)",
+   "c": "ppl",
+   "e": "Act like a grown-up for once.",
+   "x": "ทำตัวเป็นผู้ใหญ่สักครั้งเถอะ"
+  },
+  {
+   "w": "elder / senior",
+   "t": "ผู้สูงอายุ, ผู้อาวุโส",
+   "c": "ppl",
+   "e": "The village elders made the decision.",
+   "x": "ผู้อาวุโสของหมู่บ้านเป็นคนตัดสินใจ"
+  },
+  {
+   "w": "mystery",
+   "t": "เรื่องลึกลับ (แนวหนัง/หนังสือ)",
+   "c": "lng",
+   "e": "I only read mysteries before bed.",
+   "x": "ฉันอ่านแต่แนวลึกลับก่อนนอน"
+  },
+  {
+   "w": "suspense",
+   "t": "ความตึงเครียดลุ้นระทึก",
+   "c": "lng",
+   "e": "The suspense in the last act is unbearable.",
+   "x": "ความลุ้นระทึกในองก์สุดท้ายทรมานมาก"
+  },
+  {
+   "w": "thriller",
+   "t": "แนวระทึกขวัญ",
+   "c": "lng",
+   "e": "It's a political thriller set in Bangkok.",
+   "x": "เป็นหนังระทึกขวัญการเมืองที่ถ่ายในกรุงเทพ"
+  },
+  {
+   "w": "horror",
+   "t": "แนวสยองขวัญ",
+   "c": "lng",
+   "e": "I can't watch horror films alone.",
+   "x": "ฉันดูหนังสยองขวัญคนเดียวไม่ได้"
+  },
+  {
+   "w": "detective",
+   "t": "นักสืบ",
+   "c": "ppl",
+   "e": "A detective was assigned to the case.",
+   "x": "มีนักสืบถูกมอบหมายให้ดูคดีนี้"
+  },
+  {
+   "w": "sermon",
+   "t": "การเทศน์, บทเทศนา",
+   "c": "rel",
+   "e": "The monk gave a short sermon after the ceremony.",
+   "x": "พระเทศน์สั้นๆ หลังจบพิธี"
+  },
+  {
+   "w": "sorrow",
+   "t": "ความโศกเศร้า",
+   "c": "emo",
+   "e": "Her eyes were full of sorrow.",
+   "x": "ดวงตาเธอเต็มไปด้วยความโศกเศร้า"
+  },
+  {
+   "w": "gloomy",
+   "t": "มืดครึ้ม, หม่นหมอง",
+   "c": "des",
+   "e": "It's been gloomy and wet all week.",
+   "x": "อากาศมืดครึ้มและชื้นมาทั้งสัปดาห์"
+  },
+  {
+   "w": "accommodation",
+   "t": "ที่พัก",
+   "c": "day",
+   "e": "Accommodation is included in the price.",
+   "x": "ราคานี้รวมที่พักแล้ว"
+  },
+  {
+   "w": "peculiar",
+   "t": "แปลกประหลาด",
+   "c": "des",
+   "e": "There's a peculiar smell in this room.",
+   "x": "ห้องนี้มีกลิ่นแปลกๆ"
+  },
+  {
+   "w": "reckon",
+   "t": "คิดว่า, คาดคะเน",
+   "c": "act",
+   "e": "I reckon we'll be there by six.",
+   "x": "ฉันว่าเราน่าจะถึงราวหกโมง"
+  },
+  {
+   "w": "dabble",
+   "t": "ทำเล่นๆ, ลองจับดูนิดหน่อย",
+   "c": "act",
+   "e": "He dabbles in photography on weekends.",
+   "x": "เขาลองเล่นถ่ายภาพเล่นๆ ตอนสุดสัปดาห์"
+  },
+  {
+   "w": "disciplined",
+   "t": "มีระเบียบวินัย",
+   "c": "des",
+   "e": "You have to be disciplined to train every day.",
+   "x": "ต้องมีวินัยมากถึงจะซ้อมได้ทุกวัน"
+  },
+  {
+   "w": "indomitable",
+   "t": "ไม่ย่อท้อ, ไม่ยอมแพ้",
+   "c": "des",
+   "e": "She has an indomitable spirit.",
+   "x": "เธอมีจิตใจที่ไม่ยอมแพ้"
+  },
+  {
+   "w": "congestion",
+   "t": "ความแออัด, การจราจรติดขัด",
+   "c": "soc",
+   "e": "Traffic congestion gets worse every year.",
+   "x": "รถติดแย่ลงทุกปี"
+  },
+  {
+   "w": "seize",
+   "t": "ยึด, คว้าไว้",
+   "c": "act",
+   "e": "Police seized the documents as evidence.",
+   "x": "ตำรวจยึดเอกสารไว้เป็นหลักฐาน",
+   "n": "seize the day = ใช้ชีวิตให้คุ้มวันนี้"
+  },
+  {
+   "w": "seduction",
+   "t": "การยั่วยวน, การล่อลวงใจ",
+   "c": "emo",
+   "e": "The film is about power and seduction.",
+   "x": "หนังเรื่องนี้พูดถึงอำนาจและการยั่วยวน"
+  },
+  {
+   "w": "chivalry",
+   "t": "วิถีอัศวิน, ความสุภาพแบบสุภาพบุรุษ",
+   "c": "fan",
+   "e": "Chivalry is not dead, apparently.",
+   "x": "ดูเหมือนวิถีสุภาพบุรุษยังไม่ตายนะ",
+   "n": "ในโน้ตสะกดผิดเป็น chilvalry; อัศวิน (คน) = knight"
+  },
+  {
+   "w": "intriguing",
+   "t": "น่าสนใจ, ชวนติดตาม",
+   "c": "des",
+   "e": "That's an intriguing idea.",
+   "x": "นั่นเป็นความคิดที่น่าสนใจนะ"
+  },
+  {
+   "w": "porridge",
+   "t": "โจ๊ก, ข้าวต้มข้น",
+   "c": "day",
+   "e": "He eats porridge every morning.",
+   "x": "เขากินโจ๊กทุกเช้า"
+  },
+  {
+   "w": "leap",
+   "t": "กระโดด, พุ่งเข้าใส่",
+   "c": "act",
+   "e": "The cat leapt onto the table.",
+   "x": "แมวกระโดดขึ้นบนโต๊ะ"
+  },
+  {
+   "w": "contrary",
+   "t": "ตรงกันข้าม",
+   "c": "des",
+   "e": "On the contrary, I enjoyed it very much.",
+   "x": "ตรงกันข้ามเลย ฉันชอบมันมาก"
+  },
+  {
+   "w": "compartment",
+   "t": "ช่อง, ห้องโดยสาร",
+   "c": "day",
+   "e": "Our compartment on the train had four beds.",
+   "x": "ห้องโดยสารบนรถไฟของเรามีสี่เตียง"
+  },
+  {
+   "w": "rubbish",
+   "t": "ขยะ / เรื่องไร้สาระ (UK)",
+   "c": "day",
+   "e": "That's absolute rubbish and you know it.",
+   "x": "นั่นมันไร้สาระสิ้นดี เธอก็รู้"
+  },
+  {
+   "w": "Just take a look around you.",
+   "t": "ลองมองรอบตัวคุณสิ",
+   "c": "sen",
+   "e": "Just take a look around you.",
+   "x": "ลองมองรอบๆ ตัวคุณดูสิ"
+  },
+  {
+   "w": "cliche",
+   "t": "ความซ้ำซากจำเจ, คำพูดเชยๆ",
+   "c": "lng",
+   "e": "\"Follow your heart\" is such a cliche.",
+   "x": "\"ทำตามหัวใจ\" นี่มันเชยสุดๆ"
+  },
+  {
+   "w": "choreography",
+   "t": "การออกแบบท่าเต้น",
+   "c": "lng",
+   "e": "The choreography in that music video is insane.",
+   "x": "ท่าเต้นในเอ็มวีนั้นโหดมาก"
+  },
+  {
+   "w": "scent",
+   "t": "กลิ่น, ร่องรอยกลิ่น",
+   "c": "day",
+   "e": "The dog picked up his scent immediately.",
+   "x": "หมาจับกลิ่นของเขาได้ทันที"
+  },
+  {
+   "w": "oppressor",
+   "t": "ผู้กดขี่",
+   "c": "ppl",
+   "e": "The people finally turned on their oppressors.",
+   "x": "ในที่สุดประชาชนก็ลุกขึ้นสู้ผู้กดขี่"
+  },
+  {
+   "w": "beneath",
+   "t": "ข้างใต้, ต่ำกว่า",
+   "c": "des",
+   "e": "The city lay beneath a blanket of smog.",
+   "x": "เมืองทั้งเมืองอยู่ใต้ผ้าห่มหมอกควัน"
+  },
+  {
+   "w": "The sentiment of the era has changed.",
+   "t": "อารมณ์แห่งยุคสมัยได้เปลี่ยนไปแล้ว",
+   "c": "sen",
+   "e": "The sentiment of the era has changed.",
+   "x": "อารมณ์ความรู้สึกของยุคสมัยเปลี่ยนไปแล้ว"
+  },
+  {
+   "w": "sentiment",
+   "t": "ความรู้สึก, ความคิดเห็นร่วม",
+   "c": "emo",
+   "e": "Public sentiment turned against the plan.",
+   "x": "ความรู้สึกของสาธารณชนพลิกไปต้านแผนนี้"
+  },
+  {
+   "w": "retrieve",
+   "t": "เอากลับคืนมา, ดึงข้อมูลกลับ",
+   "c": "act",
+   "e": "I couldn't retrieve the deleted file.",
+   "x": "ฉันกู้ไฟล์ที่ลบไปคืนไม่ได้"
+  },
+  {
+   "w": "ladybug",
+   "t": "เต่าทอง",
+   "c": "day",
+   "e": "A ladybug landed on her hand.",
+   "x": "เต่าทองบินมาเกาะมือเธอ"
+  },
+  {
+   "w": "parliament",
+   "t": "รัฐสภา",
+   "c": "soc",
+   "e": "Parliament votes on the bill tomorrow.",
+   "x": "รัฐสภาจะโหวตร่างกฎหมายพรุ่งนี้"
+  },
+  {
+   "w": "delinquent",
+   "t": "เกเร, หลีกเลี่ยงหน้าที่",
+   "c": "ppl",
+   "e": "He was labelled a juvenile delinquent at fifteen.",
+   "x": "เขาถูกตราหน้าว่าเป็นเด็กเกเรตอนอายุสิบห้า"
+  },
+  {
+   "w": "dissent",
+   "t": "ความเห็นต่าง, การคัดค้าน",
+   "c": "act",
+   "e": "There was no room for dissent.",
+   "x": "ไม่มีที่ว่างให้ความเห็นต่างเลย"
+  },
+  {
+   "w": "patriotism",
+   "t": "ความรักชาติ",
+   "c": "soc",
+   "e": "He wrapped his politics in patriotism.",
+   "x": "เขาห่อหุ้มการเมืองของตัวเองด้วยความรักชาติ"
+  },
+  {
+   "w": "slumber",
+   "t": "การหลับใหล (เชิงวรรณกรรม)",
+   "c": "act",
+   "e": "The dragon woke from a thousand-year slumber.",
+   "x": "มังกรตื่นจากการหลับใหลพันปี"
+  },
+  {
+   "w": "yell",
+   "t": "ตะโกน, ตวาด",
+   "c": "act",
+   "e": "Don't yell at me.",
+   "x": "อย่าตะโกนใส่ฉัน"
+  },
+  {
+   "w": "nourishment",
+   "t": "การบำรุงเลี้ยง, อาหารบำรุง",
+   "c": "day",
+   "e": "The soup gave him some nourishment at last.",
+   "x": "ซุปนั้นให้ความบำรุงกับเขาได้บ้างในที่สุด"
+  },
+  {
+   "w": "seduce",
+   "t": "เกลี้ยกล่อม, ยั่วยวน, อ่อยเหยื่อ",
+   "c": "act",
+   "e": "He was seduced by the promise of easy money.",
+   "x": "เขาถูกล่อด้วยคำสัญญาว่าจะได้เงินง่ายๆ"
+  },
+  {
+   "w": "pursue",
+   "t": "ไล่ตาม, มุ่งไขว่คว้า",
+   "c": "act",
+   "e": "She left her job to pursue music.",
+   "x": "เธอลาออกจากงานเพื่อไล่ตามเส้นทางดนตรี"
+  },
+  {
+   "w": "bangs",
+   "t": "ผมหน้าม้า",
+   "c": "day",
+   "e": "She cut her own bangs again.",
+   "x": "เธอตัดผมหน้าม้าเองอีกแล้ว",
+   "n": "UK ใช้ fringe"
+  },
+  {
+   "w": "nitwit",
+   "t": "คนโง่, คนทึ่ม",
+   "c": "ppl",
+   "e": "Don't listen to that nitwit.",
+   "x": "อย่าไปฟังไอ้ทึ่มนั่น"
+  },
+  {
+   "w": "manifest",
+   "t": "แสดงออกให้เห็น, ปรากฏชัด",
+   "c": "act",
+   "e": "The stress manifested as headaches.",
+   "x": "ความเครียดแสดงออกมาเป็นอาการปวดหัว"
+  },
+  {
+   "w": "mutilate",
+   "t": "ทำให้พิการ, ทำลายจนเสียรูป",
+   "c": "act",
+   "e": "The statue had been mutilated by looters.",
+   "x": "รูปปั้นถูกพวกปล้นทำลายจนเสียรูป"
+  },
+  {
+   "w": "compassion",
+   "t": "ความเห็นอกเห็นใจ, ความกรุณา",
+   "c": "emo",
+   "e": "He treats everyone with compassion.",
+   "x": "เขาปฏิบัติกับทุกคนด้วยความเมตตา"
+  },
+  {
+   "w": "encumber",
+   "t": "ถ่วง, เป็นภาระผูกพัน",
+   "c": "act",
+   "e": "The company is encumbered by old debt.",
+   "x": "บริษัทถูกหนี้เก่าถ่วงเอาไว้"
+  },
+  {
+   "w": "enthusiasm",
+   "t": "ความกระตือรือร้น",
+   "c": "emo",
+   "e": "Her enthusiasm is contagious.",
+   "x": "ความกระตือรือร้นของเธอติดต่อกันได้"
+  },
+  {
+   "w": "auspicious",
+   "t": "เป็นมงคล",
+   "c": "rel",
+   "e": "They chose an auspicious day for the opening.",
+   "x": "พวกเขาเลือกวันมงคลสำหรับพิธีเปิด",
+   "n": "auspicious color shirt = เสื้อสีมงคล"
+  },
+  {
+   "w": "pent-up",
+   "t": "อัดอั้น, เก็บกด",
+   "c": "emo",
+   "e": "All that pent-up anger finally came out.",
+   "x": "ความโกรธที่อัดอั้นทั้งหมดระเบิดออกมาในที่สุด"
+  },
+  {
+   "w": "persuasion",
+   "t": "การโน้มน้าวใจ",
+   "c": "act",
+   "e": "It took a lot of persuasion to get him here.",
+   "x": "ต้องโน้มน้าวกันหนักมากกว่าเขาจะมา"
+  },
+  {
+   "w": "persuade",
+   "t": "โน้มน้าว, เกลี้ยกล่อม",
+   "c": "act",
+   "e": "She persuaded me to try again.",
+   "x": "เธอโน้มน้าวให้ฉันลองอีกครั้ง"
+  },
+  {
+   "w": "astray",
+   "t": "หลงทาง, ออกนอกลู่นอกทาง",
+   "c": "des",
+   "e": "The letter must have gone astray.",
+   "x": "จดหมายคงหายไประหว่างทาง"
+  },
+  {
+   "w": "lyre",
+   "t": "พิณ (โบราณ)",
+   "c": "fan",
+   "e": "The bard played a lyre by the fire.",
+   "x": "กวีพเนจรดีดพิณอยู่ข้างกองไฟ"
+  },
+  {
+   "w": "cog",
+   "t": "ฟันเฟือง",
+   "c": "day",
+   "e": "He felt like just a cog in the machine.",
+   "x": "เขารู้สึกเป็นแค่ฟันเฟืองตัวหนึ่งในเครื่องจักร"
+  },
+  {
+   "w": "stall",
+   "t": "ถ่วงเวลา / เครื่องดับ",
+   "c": "act",
+   "e": "Stop stalling and answer the question.",
+   "x": "เลิกถ่วงเวลาแล้วตอบคำถามซะ"
+  },
+  {
+   "w": "elaborate",
+   "t": "ขยายความ / ประณีตซับซ้อน",
+   "c": "act",
+   "e": "Could you elaborate on that point?",
+   "x": "ช่วยขยายความประเด็นนั้นหน่อยได้ไหม"
+  },
+  {
+   "w": "sever",
+   "t": "ตัดขาด",
+   "c": "act",
+   "e": "They severed all ties with the supplier.",
+   "x": "พวกเขาตัดขาดความสัมพันธ์กับซัพพลายเออร์ทั้งหมด"
+  },
+  {
+   "w": "concierge",
+   "t": "พนักงานอำนวยความสะดวก (โรงแรม)",
+   "c": "ppl",
+   "e": "Ask the concierge to book a taxi.",
+   "x": "บอกพนักงานคอนเซียร์จให้เรียกแท็กซี่ให้"
+  },
+  {
+   "w": "formidable",
+   "t": "น่าเกรงขาม",
+   "c": "des",
+   "e": "She's a formidable opponent.",
+   "x": "เธอเป็นคู่แข่งที่น่าเกรงขาม"
+  },
+  {
+   "w": "entail",
+   "t": "เกี่ยวพันถึง, ทำให้ต้องมี",
+   "c": "act",
+   "e": "What exactly does the job entail?",
+   "x": "งานนี้ต้องทำอะไรบ้างกันแน่"
+  },
+  {
+   "w": "maturity",
+   "t": "วุฒิภาวะ, ความเป็นผู้ใหญ่",
+   "c": "ppl",
+   "e": "He handled it with surprising maturity.",
+   "x": "เขารับมือมันด้วยวุฒิภาวะที่น่าประหลาดใจ"
+  },
+  {
+   "w": "squatter",
+   "t": "ผู้บุกรุกเข้าอยู่อาศัย",
+   "c": "ppl",
+   "e": "Squatters had been living in the building for years.",
+   "x": "มีผู้บุกรุกอาศัยในตึกนั้นมาหลายปี"
+  },
+  {
+   "w": "discreet",
+   "t": "รอบคอบ, ไม่โฉ่งฉ่าง",
+   "c": "des",
+   "e": "Please be discreet about this.",
+   "x": "เรื่องนี้ช่วยเก็บให้มิดหน่อยนะ"
+  },
+  {
+   "w": "sham",
+   "t": "เสแสร้ง, ของปลอม",
+   "c": "des",
+   "e": "The whole trial was a sham.",
+   "x": "การพิจารณาคดีทั้งหมดเป็นแค่ละครตบตา"
+  },
+  {
+   "w": "plummet",
+   "t": "ดิ่งลง, ร่วงฮวบ",
+   "c": "act",
+   "e": "Sales plummeted after the scandal.",
+   "x": "ยอดขายดิ่งลงหลังเรื่องอื้อฉาว"
+  },
+  {
+   "w": "smite",
+   "t": "ฟาด, ลงทัณฑ์",
+   "c": "act",
+   "e": "The gods will smite anyone who enters.",
+   "x": "ทวยเทพจะลงทัณฑ์ใครก็ตามที่ก้าวเข้าไป"
+  },
+  {
+   "w": "peel",
+   "t": "ปอกเปลือก",
+   "c": "act",
+   "e": "Peel the mango before you slice it.",
+   "x": "ปอกมะม่วงก่อนแล้วค่อยหั่น"
+  },
+  {
+   "w": "scupper",
+   "t": "ทำให้แผนล่ม, จมเรือทิ้ง",
+   "c": "act",
+   "e": "The strike scuppered our delivery plan.",
+   "x": "การประท้วงทำให้แผนส่งของของเราล่ม",
+   "n": "ในโน้ตแปลว่า 'แอบฆ่า' — ที่ถูกคือ 'ทำให้ล้มเหลว/ล่ม'"
+  },
+  {
+   "w": "grieving",
+   "t": "กำลังโศกเศร้าจากการสูญเสีย",
+   "c": "emo",
+   "e": "She's still grieving her father.",
+   "x": "เธอยังโศกเศร้าจากการเสียพ่ออยู่"
+  },
+  {
+   "w": "mattress",
+   "t": "ที่นอน, ฟูก",
+   "c": "day",
+   "e": "This mattress is way too soft.",
+   "x": "ที่นอนนี่นุ่มเกินไปมาก"
+  },
+  {
+   "w": "erode",
+   "t": "กัดเซาะ, กร่อนไปทีละน้อย",
+   "c": "act",
+   "e": "Trust erodes fast once it's broken.",
+   "x": "ความไว้ใจกร่อนเร็วมากเมื่อมันพังไปแล้ว"
+  },
+  {
+   "w": "shortchange",
+   "t": "ทอนเงินขาด, เอาเปรียบ",
+   "c": "act",
+   "e": "The cashier shortchanged me by fifty baht.",
+   "x": "แคชเชียร์ทอนเงินฉันขาดไปห้าสิบบาท"
+  },
+  {
+   "w": "collar",
+   "t": "ปลอกคอ, ปกเสื้อ",
+   "c": "day",
+   "e": "The dog slipped out of its collar.",
+   "x": "หมาหลุดออกจากปลอกคอ"
+  },
+  {
+   "w": "mineral",
+   "t": "แร่ธาตุ",
+   "c": "day",
+   "e": "Leafy greens are rich in minerals.",
+   "x": "ผักใบเขียวอุดมด้วยแร่ธาตุ"
+  },
+  {
+   "w": "nutrient",
+   "t": "สารอาหาร",
+   "c": "day",
+   "e": "The soil has lost most of its nutrients.",
+   "x": "ดินสูญเสียสารอาหารไปเกือบหมด"
+  },
+  {
+   "w": "Provides water and natural nutrients in mist form.",
+   "t": "ให้น้ำและสารอาหารธรรมชาติแบบละออง",
+   "c": "sen",
+   "e": "Provides water and natural nutrients in mist form.",
+   "x": "ให้น้ำและสารอาหารธรรมชาติในรูปแบบละอองฝอย"
+  },
+  {
+   "w": "component",
+   "t": "ส่วนประกอบ, ชิ้นส่วน",
+   "c": "day",
+   "e": "Every component is made in-house.",
+   "x": "ทุกชิ้นส่วนผลิตเองภายในโรงงาน"
+  },
+  {
+   "w": "frustrated",
+   "t": "หงุดหงิด, คับข้องใจ",
+   "c": "emo",
+   "e": "I'm frustrated with how slow this is.",
+   "x": "ฉันหงุดหงิดที่มันช้าขนาดนี้"
+  },
+  {
+   "w": "impulse",
+   "t": "แรงกระตุ้นชั่ววูบ",
+   "c": "emo",
+   "e": "I bought it on impulse.",
+   "x": "ฉันซื้อมันเพราะแรงกระตุ้นชั่ววูบ"
+  },
+  {
+   "w": "fall out",
+   "t": "หลุดร่วงออกมา / ผิดใจกัน",
+   "c": "phr",
+   "e": "They fell out over money.",
+   "x": "พวกเขาผิดใจกันเพราะเรื่องเงิน"
+  },
+  {
+   "w": "dominant",
+   "t": "มีอำนาจเหนือ, เด่นกว่า",
+   "c": "des",
+   "e": "They're the dominant player in the market.",
+   "x": "พวกเขาเป็นเจ้าตลาดที่มีอำนาจเหนือกว่า"
+  },
+  {
+   "w": "get dressed",
+   "t": "ใส่เสื้อผ้า (แต่งตัวธรรมดา)",
+   "c": "phr",
+   "e": "Get dressed, we're leaving in ten minutes.",
+   "x": "ไปใส่เสื้อผ้า อีกสิบนาทีเราจะออกแล้ว",
+   "n": "ต่างจาก dress up = แต่งตัวจัดเต็ม"
+  },
+  {
+   "w": "dress up",
+   "t": "แต่งตัวจัดเต็ม, แต่งแฟนซี",
+   "c": "phr",
+   "e": "Do we have to dress up for the dinner?",
+   "x": "มื้อค่ำนี้ต้องแต่งตัวจัดเต็มไหม"
+  },
+  {
+   "w": "Member of Parliament",
+   "t": "สมาชิกสภาผู้แทนราษฎร (ส.ส.)",
+   "c": "soc",
+   "e": "She's been an MP for three terms.",
+   "x": "เธอเป็น ส.ส. มาสามสมัยแล้ว"
+  },
+  {
+   "w": "hideous",
+   "t": "น่าเกลียด, น่าขยะแขยง",
+   "c": "des",
+   "e": "That wallpaper is hideous.",
+   "x": "วอลเปเปอร์นั่นน่าเกลียดมาก"
+  },
+  {
+   "w": "wild",
+   "t": "ป่า, คึกคะนอง, สุดเหวี่ยง",
+   "c": "des",
+   "e": "The party got pretty wild.",
+   "x": "ปาร์ตี้มันส์สุดเหวี่ยงเลย"
+  },
+  {
+   "w": "Take a wild guess",
+   "t": "ลองเดามั่วๆ ดูสิ",
+   "c": "sen",
+   "e": "Take a wild guess who called me last night.",
+   "x": "ลองเดามั่วๆ ดูสิว่าใครโทรหาฉันเมื่อคืน"
+  },
+  {
+   "w": "peril",
+   "t": "ภยันตราย",
+   "c": "soc",
+   "e": "The whole crew was in mortal peril.",
+   "x": "ลูกเรือทั้งหมดตกอยู่ในอันตรายถึงชีวิต"
+  },
+  {
+   "w": "dissolve (parliament)",
+   "t": "ยุบสภา / ละลาย",
+   "c": "soc",
+   "e": "The prime minister moved to dissolve parliament.",
+   "x": "นายกฯ เดินหน้ายุบสภา",
+   "n": "ยุบพรรค = dissolve a party"
+  },
+  {
+   "w": "merit",
+   "t": "บุญ, คุณงามความดี, ข้อดี",
+   "c": "rel",
+   "e": "They make merit at the temple every New Year.",
+   "x": "พวกเขาไปทำบุญที่วัดทุกปีใหม่",
+   "n": "make merit = ทำบุญ (สำนวนที่ใช้กับบริบทไทย)"
+  },
+  {
+   "w": "desolate",
+   "t": "รกร้าง, เวิ้งว้าง, โดดเดี่ยว",
+   "c": "des",
+   "e": "The town felt desolate after the factory closed.",
+   "x": "เมืองนี้เวิ้งว้างไปเลยหลังโรงงานปิด"
+  },
+  {
+   "w": "kasaya",
+   "t": "ผ้าจีวร",
+   "c": "rel",
+   "e": "The monk folded his kasaya carefully.",
+   "x": "พระพับจีวรอย่างระมัดระวัง",
+   "n": "ภาษาพูดทั่วไปใช้ monk's robe"
+  },
+  {
+   "w": "reputation",
+   "t": "ชื่อเสียง",
+   "c": "soc",
+   "e": "It took years to build that reputation.",
+   "x": "กว่าจะสร้างชื่อเสียงนั้นได้ใช้เวลาหลายปี"
+  },
+  {
+   "w": "fragment",
+   "t": "เศษ, ชิ้นส่วนที่แตกออก",
+   "c": "day",
+   "e": "They found fragments of an old bowl.",
+   "x": "พวกเขาพบเศษชิ้นส่วนของชามเก่า"
+  },
+  {
+   "w": "constant",
+   "t": "คงที่, สม่ำเสมอ",
+   "c": "des",
+   "e": "He lives with constant back pain.",
+   "x": "เขาอยู่กับอาการปวดหลังตลอดเวลา"
+  },
+  {
+   "w": "progression",
+   "t": "ความก้าวหน้า, ลำดับการพัฒนา",
+   "c": "des",
+   "e": "The progression from student to teacher took a decade.",
+   "x": "เส้นทางจากนักเรียนสู่ครูใช้เวลาสิบปี"
+  },
+  {
+   "w": "sort",
+   "t": "ชนิด, ประเภท / เรียงลำดับ",
+   "c": "gra",
+   "e": "What sort of person does that?",
+   "x": "คนแบบไหนกันทำแบบนั้น"
+  },
+  {
+   "w": "blow over",
+   "t": "ผ่านพ้นไป (เรื่องแย่ๆ)",
+   "c": "phr",
+   "e": "Don't worry, the gossip will blow over.",
+   "x": "ไม่ต้องห่วง เรื่องซุบซิบเดี๋ยวก็ผ่านไป"
+  },
+  {
+   "w": "accuse",
+   "t": "กล่าวหา",
+   "c": "act",
+   "e": "He accused me of lying.",
+   "x": "เขากล่าวหาว่าฉันโกหก"
+  },
+  {
+   "w": "steer",
+   "t": "คุมหางเสือ, บังคับทิศทาง",
+   "c": "act",
+   "e": "She steered the conversation away from work.",
+   "x": "เธอเบนบทสนทนาออกจากเรื่องงาน"
+  },
+  {
+   "w": "hunch",
+   "t": "ลางสังหรณ์ / หลังค่อม",
+   "c": "emo",
+   "e": "I had a hunch you'd be here.",
+   "x": "ฉันมีลางสังหรณ์ว่าเธอต้องอยู่ที่นี่",
+   "n": "hunch over = ก้มหลังค่อม"
+  },
+  {
+   "w": "obsessed",
+   "t": "หมกมุ่น, หลงใหลจนถอนตัวไม่ขึ้น",
+   "c": "emo",
+   "e": "He's obsessed with that game.",
+   "x": "เขาหมกมุ่นกับเกมนั้นมาก"
+  },
+  {
+   "w": "scammer",
+   "t": "มิจฉาชีพ, พวกหลอกลวง",
+   "c": "ppl",
+   "e": "Scammers are calling pretending to be the bank.",
+   "x": "มิจฉาชีพโทรมาแอบอ้างเป็นธนาคาร"
+  },
+  {
+   "w": "constitution",
+   "t": "รัฐธรรมนูญ / สุขภาพร่างกาย",
+   "c": "soc",
+   "e": "The court ruled the law unconstitutional.",
+   "x": "ศาลตัดสินว่ากฎหมายนั้นขัดรัฐธรรมนูญ"
+  },
+  {
+   "w": "worn out",
+   "t": "โทรม, เหนื่อยล้าหมดสภาพ",
+   "c": "des",
+   "e": "These shoes are completely worn out.",
+   "x": "รองเท้าคู่นี้โทรมหมดสภาพแล้ว"
+  },
+  {
+   "w": "clingy",
+   "t": "ติดหนึบ, เกาะแจ",
+   "c": "des",
+   "e": "My cat gets clingy when it rains.",
+   "x": "แมวฉันติดหนึบเวลาฝนตก"
+  },
+  {
+   "w": "harden",
+   "t": "แข็งตัว, ทำให้ใจแข็ง",
+   "c": "act",
+   "e": "The glue hardens in five minutes.",
+   "x": "กาวจะแข็งตัวในห้านาที"
+  },
+  {
+   "w": "startle",
+   "t": "ทำให้ตกใจ",
+   "c": "act",
+   "e": "Sorry, I didn't mean to startle you.",
+   "x": "ขอโทษ ไม่ได้ตั้งใจทำให้ตกใจ"
+  },
+  {
+   "w": "Let him cook",
+   "t": "ปล่อยให้เขาแสดงฝีมือหน่อย",
+   "c": "sla",
+   "e": "Relax, let him cook.",
+   "x": "ใจเย็น ปล่อยให้เขาโชว์ฝีมือก่อน"
+  },
+  {
+   "w": "I cooked him",
+   "t": "ฉันจัดการเขาเรียบร้อย, เอ็งโดนข้าแล้ว",
+   "c": "sla",
+   "e": "Did you see that reply? I cooked him.",
+   "x": "เห็นที่ฉันตอบกลับไหม จัดการเรียบร้อย"
+  },
+  {
+   "w": "have never / has never",
+   "t": "ไม่เคย (มาก่อนจนถึงตอนนี้)",
+   "c": "gra",
+   "e": "I have never been to Japan.",
+   "x": "ฉันไม่เคยไปญี่ปุ่นเลย",
+   "n": "never เดี่ยวๆ = ไม่...เลย เช่น He never calls."
+  },
+  {
+   "w": "archive",
+   "t": "คลังเก็บเอกสารสำคัญ / เก็บเข้าคลัง",
+   "c": "lng",
+   "e": "The photos are kept in the national archive.",
+   "x": "ภาพถ่ายเก็บอยู่ในหอจดหมายเหตุแห่งชาติ",
+   "n": "อ่านว่า อาร์-ไคฟ์"
+  },
+  {
+   "w": "chaos",
+   "t": "ความโกลาหลวุ่นวาย",
+   "c": "des",
+   "e": "The airport was pure chaos.",
+   "x": "สนามบินโกลาหลสุดๆ",
+   "n": "อ่านว่า เค-ออส"
+  },
+  {
+   "w": "cringey",
+   "t": "น่าขนลุก, น่าอาย (ดูแล้วเกร็ง)",
+   "c": "sla",
+   "e": "That video is so cringey.",
+   "x": "คลิปนั้นน่าขนลุกมาก"
+  },
+  {
+   "w": "FTW (for the win)",
+   "t": "เจ๋ง, เฉียบ, ยอดไปเลย",
+   "c": "sla",
+   "e": "Iced coffee in this weather — FTW.",
+   "x": "อากาศแบบนี้ต้องกาแฟเย็น เจ๋งสุด"
+  },
+  {
+   "w": "hibernate",
+   "t": "จำศีล",
+   "c": "act",
+   "e": "Bears hibernate through the winter.",
+   "x": "หมีจำศีลตลอดฤดูหนาว"
+  },
+  {
+   "w": "flat",
+   "t": "แบน, ราบ / จืดชืด",
+   "c": "des",
+   "e": "The tire went flat on the highway.",
+   "x": "ยางแบนกลางทางหลวง"
+  },
+  {
+   "w": "temporary / provisional",
+   "t": "ชั่วคราว",
+   "c": "gra",
+   "e": "This is only a temporary fix.",
+   "x": "นี่เป็นแค่การแก้ชั่วคราว",
+   "n": "ตรงข้ามกับ permanent = ถาวร"
+  },
+  {
+   "w": "permanent",
+   "t": "ถาวร",
+   "c": "gra",
+   "e": "He finally got a permanent contract.",
+   "x": "ในที่สุดเขาก็ได้สัญญาจ้างถาวร"
+  },
+  {
+   "w": "cuss (someone) out",
+   "t": "ด่าใครแบบสาดคำหยาบ",
+   "c": "phr",
+   "e": "She cussed him out in front of everyone.",
+   "x": "เธอด่าเขาเสียงดังต่อหน้าทุกคน"
+  },
+  {
+   "w": "Do you like…? vs Would you like…?",
+   "t": "ชอบไหม (นิสัย) vs เอาไหม (เสนอให้)",
+   "c": "gra",
+   "e": "Do you like coffee? / Would you like coffee?",
+   "x": "คุณชอบกาแฟไหม (รสนิยม) / คุณรับกาแฟไหม (เสนอตอนนี้)",
+   "n": "Do you like me? = ชอบฉันไหม · Would you like me? = จะเอาฉันไหม"
+  },
+  {
+   "w": "Do you like me? vs Are you like me?",
+   "t": "ชอบฉันไหม vs เหมือนฉันไหม",
+   "c": "gra",
+   "e": "Do you like me? / Are you like me?",
+   "x": "คุณชอบฉันไหม / คุณเป็นเหมือนฉันไหม",
+   "n": "ต่างกันแค่ do กับ are แต่ความหมายคนละเรื่อง"
+  },
+  {
+   "w": "That's it.",
+   "t": "แค่นั้นแหละ, จบแค่นี้",
+   "c": "sen",
+   "e": "That's it — nothing more to say.",
+   "x": "แค่นั้นแหละ ไม่มีอะไรจะพูดอีก"
+  },
+  {
+   "w": "That's life / Such is life / C'est la vie",
+   "t": "ชีวิตก็แบบนี้แหละ",
+   "c": "sen",
+   "e": "You lost the deal? That's life.",
+   "x": "เสียดีลไปเหรอ ชีวิตก็แบบนี้แหละ"
+  },
+  {
+   "w": "That's the way the cookie crumbles.",
+   "t": "มันก็เป็นแบบนี้แหละ ทำใจเถอะ",
+   "c": "sen",
+   "e": "He picked someone else. That's the way the cookie crumbles.",
+   "x": "เขาเลือกคนอื่น มันก็เป็นแบบนี้แหละ"
+  },
+  {
+   "w": "Life's a bitch (and then you die).",
+   "t": "ชีวิตมันโหด แล้วก็ตายไป",
+   "c": "sen",
+   "e": "Life's a bitch and then you die — cheer up.",
+   "x": "ชีวิตมันโหดแล้วก็จบ ทำใจเถอะ",
+   "n": "หยาบ ใช้กับเพื่อนสนิทเท่านั้น"
+  },
+  {
+   "w": "pragmatic",
+   "t": "เน้นผลจริง, ปฏิบัตินิยม",
+   "c": "des",
+   "e": "Let's be pragmatic about the budget.",
+   "x": "เรื่องงบมาคุยกันแบบเน้นผลจริงดีกว่า",
+   "n": "ในโน้ตเขียน Pracmatic ปฏิรูป — ปฏิรูปคือ reform"
+  },
+  {
+   "w": "progressive",
+   "t": "ก้าวหน้า, หัวก้าวหน้า",
+   "c": "soc",
+   "e": "She holds fairly progressive views.",
+   "x": "เธอมีมุมมองค่อนข้างก้าวหน้า",
+   "n": "ในโน้ตแปลว่า 'ปฏิวัติ' — ปฏิวัติคือ revolution"
+  },
+  {
+   "w": "astonish",
+   "t": "ทำให้ประหลาดใจมาก",
+   "c": "emo",
+   "e": "The result astonished everyone.",
+   "x": "ผลลัพธ์ทำให้ทุกคนประหลาดใจ"
+  },
+  {
+   "w": "trippin'",
+   "t": "เสียอาการ, ลนลาน, คิดมากไปเอง",
+   "c": "sla",
+   "e": "You're trippin' — nobody said that.",
+   "x": "เธอคิดไปเองแล้ว ไม่มีใครพูดแบบนั้น"
+  },
+  {
+   "w": "flaunt",
+   "t": "อวด, โชว์ออกหน้า",
+   "c": "act",
+   "e": "He flaunts his new watch everywhere.",
+   "x": "เขาอวดนาฬิกาใหม่ไปทั่ว"
+  },
+  {
+   "w": "stunna",
+   "t": "คนสวย/หล่อจนอึ้ง (สแลง)",
+   "c": "sla",
+   "e": "She showed up looking like a stunna.",
+   "x": "เธอมาถึงแบบสวยจนอึ้ง"
+  },
+  {
+   "w": "pajamas",
+   "t": "ชุดนอน",
+   "c": "day",
+   "e": "He answered the door in his pajamas.",
+   "x": "เขามาเปิดประตูทั้งชุดนอน"
+  },
+  {
+   "w": "trauma",
+   "t": "บาดแผลทางจิตใจ",
+   "c": "emo",
+   "e": "She's still working through childhood trauma.",
+   "x": "เธอยังคงเยียวยาบาดแผลใจตั้งแต่เด็กอยู่",
+   "n": "ในโน้ตสะกดผิดเป็น trouma"
+  },
+  {
+   "w": "requiem",
+   "t": "บทเพลง/พิธีสวดส่งวิญญาณผู้ตาย",
+   "c": "rel",
+   "e": "They performed Mozart's Requiem.",
+   "x": "พวกเขาบรรเลงบทเรควีเอมของโมสาร์ท"
+  },
+  {
+   "w": "testicle",
+   "t": "อัณฑะ",
+   "c": "day",
+   "e": "The doctor examined his testicles for lumps.",
+   "x": "หมอตรวจอัณฑะเขาว่ามีก้อนไหม"
+  },
+  {
+   "w": "kink",
+   "t": "รอยหักงอ / รสนิยมทางเพศแปลก",
+   "c": "des",
+   "e": "There's a kink in the hose.",
+   "x": "สายยางมีรอยหักงออยู่"
+  },
+  {
+   "w": "time out",
+   "t": "หมดเวลา / ให้เด็กไปนั่งสงบสติ",
+   "c": "day",
+   "e": "He got a five-minute time out.",
+   "x": "เขาโดนให้ไปนั่งสงบสติห้านาที"
+  },
+  {
+   "w": "shed",
+   "t": "โรงเก็บของ / ผลัดขน สลัดทิ้ง",
+   "c": "day",
+   "e": "The tools are in the shed out back.",
+   "x": "เครื่องมืออยู่ในโรงเก็บของหลังบ้าน"
+  },
+  {
+   "w": "bland",
+   "t": "จืดชืด, ไม่มีรสชาติ",
+   "c": "des",
+   "e": "The soup is a bit bland.",
+   "x": "ซุปจืดไปนิดนึง"
+  },
+  {
+   "w": "Apologizing is an obligation but forgiveness is not.",
+   "t": "การขอโทษเป็นหน้าที่ แต่การให้อภัยไม่ใช่",
+   "c": "sen",
+   "e": "Apologizing is an obligation but forgiveness is not.",
+   "x": "การขอโทษเป็นหน้าที่ แต่การให้อภัยไม่ใช่"
+  },
+  {
+   "w": "sucker",
+   "t": "คนที่ถูกหลอกง่าย / ตัวดูด",
+   "c": "ppl",
+   "e": "Don't be a sucker — read the contract.",
+   "x": "อย่าโดนหลอกง่ายๆ อ่านสัญญาก่อน"
+  },
+  {
+   "w": "convoy",
+   "t": "ขบวนรถ, ขบวนคุ้มกัน",
+   "c": "soc",
+   "e": "A convoy of trucks blocked the road.",
+   "x": "ขบวนรถบรรทุกปิดถนน"
+  },
+  {
+   "w": "I've got you under my skin.",
+   "t": "ฉันรักเธอเข้ากระดูกดำ",
+   "c": "sen",
+   "e": "I've got you under my skin.",
+   "x": "เธอฝังอยู่ในตัวฉันจนสลัดไม่ออก",
+   "n": "มาจากเพลงคลาสสิกของ Cole Porter"
+  },
+  {
+   "w": "jinx",
+   "t": "ตัวซวย, ทำให้โชคร้าย",
+   "c": "sla",
+   "e": "Don't say it — you'll jinx it.",
+   "x": "อย่าพูดสิ เดี๋ยวซวย"
+  },
+  {
+   "w": "distinguished",
+   "t": "โดดเด่น, มีเกียรติ",
+   "c": "des",
+   "e": "He had a long and distinguished career.",
+   "x": "เขามีอาชีพที่ยาวนานและน่ายกย่อง"
+  },
+  {
+   "w": "pretentious",
+   "t": "อวดดี, ทำเป็นหรู",
+   "c": "des",
+   "e": "The menu is a bit pretentious.",
+   "x": "เมนูดูทำเป็นหรูไปหน่อย"
+  },
+  {
+   "w": "edge toward",
+   "t": "ค่อยๆ ขยับเข้าใกล้",
+   "c": "phr",
+   "e": "He edged toward the door quietly.",
+   "x": "เขาค่อยๆ ขยับเข้าใกล้ประตูเงียบๆ"
+  },
+  {
+   "w": "POV (point of view)",
+   "t": "มุมมอง",
+   "c": "sla",
+   "e": "POV: you just woke up late for work.",
+   "x": "มุมมองแบบ: คุณเพิ่งตื่นสายวันไปทำงาน"
+  },
+  {
+   "w": "Don't be a burden to other people.",
+   "t": "อย่าเป็นภาระคนอื่น",
+   "c": "sen",
+   "e": "Don't be a burden to other people.",
+   "x": "อย่าไปเป็นภาระคนอื่น"
+  },
+  {
+   "w": "Don't drag others down.",
+   "t": "อย่าฉุดคนอื่นลงไปด้วย",
+   "c": "sen",
+   "e": "Don't drag others down with you.",
+   "x": "อย่าฉุดคนอื่นลงไปกับเธอด้วย"
+  },
+  {
+   "w": "mistletoe",
+   "t": "ต้นกาฝาก (มิสเซิลโท)",
+   "c": "day",
+   "e": "They kissed under the mistletoe.",
+   "x": "พวกเขาจูบกันใต้ต้นมิสเซิลโท"
+  },
+  {
+   "w": "ignite",
+   "t": "จุดติดไฟ, จุดชนวน",
+   "c": "act",
+   "e": "One remark ignited the whole argument.",
+   "x": "คำพูดคำเดียวจุดชนวนการทะเลาะทั้งหมด"
+  },
+  {
+   "w": "egg (someone) on",
+   "t": "คะยั้นคะยอ, ยุให้ทำ",
+   "c": "phr",
+   "e": "His friends egged him on until he jumped.",
+   "x": "เพื่อนยุเขาจนเขากระโดดลงไป"
+  },
+  {
+   "w": "consistency",
+   "t": "ความสม่ำเสมอ",
+   "c": "des",
+   "e": "Consistency beats intensity.",
+   "x": "ความสม่ำเสมอชนะความหักโหม"
+  },
+  {
+   "w": "tangerine",
+   "t": "ส้มเขียวหวาน",
+   "c": "day",
+   "e": "She peeled a tangerine for me.",
+   "x": "เธอปอกส้มให้ฉันลูกหนึ่ง"
+  },
+  {
+   "w": "egg yolk",
+   "t": "ไข่แดง",
+   "c": "day",
+   "e": "Separate the egg yolk from the white.",
+   "x": "แยกไข่แดงออกจากไข่ขาว"
+  },
+  {
+   "w": "savory",
+   "t": "อาหารคาว, รสเค็มมัน",
+   "c": "day",
+   "e": "I prefer savory breakfasts.",
+   "x": "ฉันชอบอาหารเช้าแบบคาวมากกว่า"
+  },
+  {
+   "w": "urgent",
+   "t": "ด่วน, เร่งด่วน",
+   "c": "des",
+   "e": "It's urgent — call me back.",
+   "x": "เรื่องด่วน โทรกลับด้วย"
+  },
+  {
+   "w": "doomscrolling",
+   "t": "การไถฟีดข่าวร้ายจนจมดิ่ง",
+   "c": "sla",
+   "e": "I lost two hours doomscrolling last night.",
+   "x": "เมื่อคืนเสียเวลาสองชั่วโมงไปกับการไถข่าวร้าย"
+  },
+  {
+   "w": "scandal",
+   "t": "เรื่องอื้อฉาว",
+   "c": "soc",
+   "e": "The scandal cost him his job.",
+   "x": "เรื่องอื้อฉาวทำให้เขาตกงาน"
+  },
+  {
+   "w": "delirium",
+   "t": "อาการเพ้อ, ความคลุ้มคลั่ง",
+   "c": "emo",
+   "e": "The fever left him in a state of delirium.",
+   "x": "ไข้ทำให้เขาอยู่ในอาการเพ้อ"
+  },
+  {
+   "w": "irritate",
+   "t": "ทำให้รำคาญ, ระคายเคือง",
+   "c": "emo",
+   "e": "That noise really irritates me.",
+   "x": "เสียงนั้นทำให้ฉันรำคาญมาก"
+  },
+  {
+   "w": "hypocrite",
+   "t": "คนปากว่าตาขยิบ, มือถือสากปากถือศีล",
+   "c": "ppl",
+   "e": "He's a hypocrite — he does the same thing.",
+   "x": "เขาน่ะปากว่าตาขยิบ ตัวเองก็ทำเหมือนกัน"
+  },
+  {
+   "w": "devote",
+   "t": "อุทิศ, ทุ่มเทให้",
+   "c": "act",
+   "e": "She devoted her life to teaching.",
+   "x": "เธออุทิศทั้งชีวิตให้การสอน"
+  },
+  {
+   "w": "despise",
+   "t": "ดูถูก, เกลียดชัง",
+   "c": "act",
+   "e": "He despises small talk.",
+   "x": "เขาเกลียดการคุยเรื่องไร้สาระ"
+  },
+  {
+   "w": "pilgrim",
+   "t": "ผู้แสวงบุญ",
+   "c": "rel",
+   "e": "Pilgrims walk the route every spring.",
+   "x": "ผู้แสวงบุญเดินเส้นทางนี้ทุกฤดูใบไม้ผลิ"
+  },
+  {
+   "w": "truce",
+   "t": "การสงบศึก, ข้อตกลงหยุดยิง",
+   "c": "fan",
+   "e": "They agreed to a temporary truce.",
+   "x": "พวกเขาตกลงสงบศึกชั่วคราว"
+  },
+  {
+   "w": "moldy",
+   "t": "ขึ้นรา",
+   "c": "des",
+   "e": "Throw out that moldy bread.",
+   "x": "ทิ้งขนมปังขึ้นราชิ้นนั้นไปเถอะ"
+  },
+  {
+   "w": "petrified",
+   "t": "ตัวแข็งเพราะกลัว / กลายเป็นหิน",
+   "c": "des",
+   "e": "I was petrified during the whole flight.",
+   "x": "ฉันตัวแข็งด้วยความกลัวตลอดทั้งเที่ยวบิน"
+  },
+  {
+   "w": "incantation",
+   "t": "คาถา, การร่ายมนตร์",
+   "c": "fan",
+   "e": "She whispered an incantation over the water.",
+   "x": "เธอกระซิบคาถาเหนือผิวน้ำ"
+  },
+  {
+   "w": "conjure",
+   "t": "ร่ายมนตร์เรียกออกมา, เสกขึ้น",
+   "c": "fan",
+   "e": "He conjured a flame in his palm.",
+   "x": "เขาเสกเปลวไฟขึ้นในฝ่ามือ"
+  },
+  {
+   "w": "behaved",
+   "t": "ประพฤติดี, เรียบร้อย",
+   "c": "des",
+   "e": "The kids were surprisingly well-behaved.",
+   "x": "เด็กๆ เรียบร้อยเกินคาด"
+  },
+  {
+   "w": "withering",
+   "t": "เหี่ยวเฉา / (สายตา) เย็นชาเสียดแทง",
+   "c": "des",
+   "e": "She gave him a withering look.",
+   "x": "เธอมองเขาด้วยสายตาเสียดแทง"
+  },
+  {
+   "w": "misperceive",
+   "t": "เข้าใจผิด, รับรู้คลาดเคลื่อน",
+   "c": "act",
+   "e": "People often misperceive silence as agreement.",
+   "x": "คนมักเข้าใจผิดว่าความเงียบคือการเห็นด้วย",
+   "n": "ในโน้ตเขียน 'misper' — คำเต็มคือ misperceive/misunderstand"
+  },
+  {
+   "w": "desperate",
+   "t": "สิ้นหวัง, ร้อนรนจนยอมทำทุกทาง",
+   "c": "emo",
+   "e": "He was desperate for any kind of work.",
+   "x": "เขาร้อนรนอยากได้งานอะไรก็ได้",
+   "n": "ในโน้ตสะกดผิดเป็น desparate"
+  },
+  {
+   "w": "peasant",
+   "t": "ชาวนา, ชาวบ้านชั้นล่าง (ยุคเก่า)",
+   "c": "ppl",
+   "e": "The peasants revolted against the lord.",
+   "x": "ชาวนาลุกฮือต่อต้านเจ้าที่ดิน"
+  },
+  {
+   "w": "flattered",
+   "t": "ปลื้ม, รู้สึกเป็นเกียรติ",
+   "c": "emo",
+   "e": "I'm flattered you asked me.",
+   "x": "ปลื้มมากที่ชวนฉัน"
+  },
+  {
+   "w": "mayhem",
+   "t": "ความชุลมุนวุ่นวาย",
+   "c": "soc",
+   "e": "It was absolute mayhem after the goal.",
+   "x": "หลังยิงประตูได้คือชุลมุนสุดๆ"
+  },
+  {
+   "w": "candidly",
+   "t": "อย่างตรงไปตรงมา",
+   "c": "des",
+   "e": "Candidly, I don't think it will work.",
+   "x": "พูดตรงๆ นะ ฉันว่ามันไม่เวิร์ก"
+  },
+  {
+   "w": "discombobulated",
+   "t": "สับสนงุนงง",
+   "c": "emo",
+   "e": "I woke up discombobulated and late.",
+   "x": "ฉันตื่นมาแบบงงๆ แถมสายอีก"
+  },
+  {
+   "w": "frown",
+   "t": "ขมวดคิ้ว, ทำหน้าบึ้ง",
+   "c": "act",
+   "e": "She frowned at the screen.",
+   "x": "เธอขมวดคิ้วมองจอ"
+  },
+  {
+   "w": "feign",
+   "t": "แสร้งทำ",
+   "c": "act",
+   "e": "He feigned surprise rather well.",
+   "x": "เขาแสร้งทำประหลาดใจได้เนียนทีเดียว"
+  },
+  {
+   "w": "titter",
+   "t": "หัวเราะคิกคัก",
+   "c": "act",
+   "e": "A few students tittered at the back.",
+   "x": "นักเรียนสองสามคนหัวเราะคิกคักอยู่หลังห้อง"
+  },
+  {
+   "w": "charade",
+   "t": "การเสแสร้ง, ละครตบตา",
+   "c": "sla",
+   "e": "This meeting is a charade.",
+   "x": "ประชุมนี่มันละครตบตาชัดๆ",
+   "n": "charades (พหูพจน์) = เกมใบ้คำ"
+  },
+  {
+   "w": "antagonize",
+   "t": "ยั่วให้เป็นศัตรู, ทำให้ขัดใจ",
+   "c": "act",
+   "e": "Don't antagonize the neighbors.",
+   "x": "อย่าไปมีเรื่องกับเพื่อนบ้าน"
+  },
+  {
+   "w": "mourn",
+   "t": "ไว้อาลัย, โศกเศร้าถึงผู้จากไป",
+   "c": "emo",
+   "e": "The country mourned for a week.",
+   "x": "ทั้งประเทศไว้อาลัยหนึ่งสัปดาห์"
+  },
+  {
+   "w": "nod",
+   "t": "พยักหน้า",
+   "c": "act",
+   "e": "He nodded without looking up.",
+   "x": "เขาพยักหน้าโดยไม่เงยขึ้นมอง"
+  },
+  {
+   "w": "scramble",
+   "t": "รีบตะกาย, แย่งกันชุลมุน / ไข่คน",
+   "c": "act",
+   "e": "Everyone scrambled for the exit.",
+   "x": "ทุกคนแย่งกันวิ่งไปทางออก"
+  },
+  {
+   "w": "negligence",
+   "t": "ความประมาทเลินเล่อ",
+   "c": "soc",
+   "e": "The accident was caused by negligence.",
+   "x": "อุบัติเหตุเกิดจากความประมาท"
+  },
+  {
+   "w": "polyjuice potion",
+   "t": "ยาแปลงร่าง (Harry Potter)",
+   "c": "fan",
+   "e": "They used polyjuice potion to sneak in.",
+   "x": "พวกเขาใช้ยาแปลงร่างแอบเข้าไป"
+  },
+  {
+   "w": "introspective",
+   "t": "ชอบพิจารณาตนเอง, ครุ่นคิดข้างใน",
+   "c": "des",
+   "e": "His later albums are more introspective.",
+   "x": "อัลบั้มหลังๆ ของเขาครุ่นคิดข้างในมากขึ้น"
+  },
+  {
+   "w": "valid",
+   "t": "ถูกต้อง, ใช้ได้, มีเหตุผลรองรับ",
+   "c": "des",
+   "e": "That's a valid point.",
+   "x": "นั่นเป็นประเด็นที่ฟังขึ้นนะ"
+  },
+  {
+   "w": "zap",
+   "t": "ยิงแปะ, ช็อตด้วยไฟฟ้า",
+   "c": "act",
+   "e": "Just zap it in the microwave.",
+   "x": "เอาเข้าไมโครเวฟอุ่นแป๊บเดียวก็พอ"
+  },
+  {
+   "w": "Word / Word up",
+   "t": "จริงของมึง, เออ...จริง",
+   "c": "sla",
+   "e": "\"Rent is way too high.\" \"Word.\"",
+   "x": "\"ค่าเช่าแพงเกิน\" \"จริงของมึง\""
+  },
+  {
+   "w": "aristocracy",
+   "t": "อภิชนาธิปไตย, ชนชั้นสูง",
+   "c": "soc",
+   "e": "Power stayed within the aristocracy.",
+   "x": "อำนาจอยู่ในมือชนชั้นสูงเท่านั้น",
+   "n": "ในโน้ตจับคู่กับ anarchy — คนละคำ: anarchy = อนาธิปไตย (ไร้ผู้ปกครอง)"
+  },
+  {
+   "w": "anarchy",
+   "t": "อนาธิปไตย, ภาวะไร้ขื่อแป",
+   "c": "soc",
+   "e": "Without police, the town descended into anarchy.",
+   "x": "พอไม่มีตำรวจ เมืองก็ตกอยู่ในภาวะไร้ขื่อแป"
+  },
+  {
+   "w": "detention",
+   "t": "การกักตัว, การถูกทำโทษให้อยู่ต่อ",
+   "c": "soc",
+   "e": "He got detention for skipping class.",
+   "x": "เขาโดนกักบริเวณเพราะโดดเรียน"
+  },
+  {
+   "w": "warfare",
+   "t": "การสู้รบ, สงคราม",
+   "c": "fan",
+   "e": "Siege warfare lasted for months.",
+   "x": "การรบแบบล้อมเมืองยืดเยื้อหลายเดือน"
+  },
+  {
+   "w": "blanket",
+   "t": "ผ้าห่ม",
+   "c": "day",
+   "e": "Grab an extra blanket, it's cold.",
+   "x": "เอาผ้าห่มมาอีกผืน หนาว"
+  },
+  {
+   "w": "banquet",
+   "t": "งานเลี้ยงใหญ่",
+   "c": "day",
+   "e": "The banquet lasted until midnight.",
+   "x": "งานเลี้ยงยืดยาวถึงเที่ยงคืน",
+   "n": "อย่าสับสนกับ blanket = ผ้าห่ม"
+  },
+  {
+   "w": "compensation",
+   "t": "ค่าตอบแทน, ค่าชดเชย",
+   "c": "soc",
+   "e": "They received compensation for the delay.",
+   "x": "พวกเขาได้ค่าชดเชยจากความล่าช้า"
+  },
+  {
+   "w": "absurd",
+   "t": "ไร้สาระ, บ้าบอคอแตก",
+   "c": "des",
+   "e": "The price is absolutely absurd.",
+   "x": "ราคานี่มันไร้สาระสิ้นดี"
+  },
+  {
+   "w": "schemer",
+   "t": "เจ้าเล่ห์, คนวางแผนลึก",
+   "c": "ppl",
+   "e": "She's a schemer — watch your back.",
+   "x": "เธอเป็นพวกวางแผนลึก ระวังตัวไว้"
+  },
+  {
+   "w": "providence",
+   "t": "พรหมลิขิต, การดลบันดาลของฟ้า",
+   "c": "rel",
+   "e": "He called their meeting divine providence.",
+   "x": "เขาเรียกการพบกันนั้นว่าพรหมลิขิต",
+   "n": "ในโน้ตแปลว่า 'ความรอบคอบ' — คำนั้นคือ prudence"
+  },
+  {
+   "w": "dock",
+   "t": "ท่าเรือ / หักเงิน",
+   "c": "day",
+   "e": "The ship pulled into the dock at dawn.",
+   "x": "เรือเทียบท่าตอนรุ่งสาง"
+  },
+  {
+   "w": "eminence",
+   "t": "ความมีชื่อเสียงโดดเด่น",
+   "c": "soc",
+   "e": "He rose to eminence in his forties.",
+   "x": "เขาก้าวสู่ความมีชื่อเสียงตอนวัยสี่สิบ"
+  },
+  {
+   "w": "descendant",
+   "t": "ลูกหลาน, ทายาทสายเลือด",
+   "c": "ppl",
+   "e": "She's a descendant of the last king.",
+   "x": "เธอเป็นทายาทของกษัตริย์องค์สุดท้าย"
+  },
+  {
+   "w": "refugee",
+   "t": "ผู้ลี้ภัย",
+   "c": "ppl",
+   "e": "The camp holds thousands of refugees.",
+   "x": "ค่ายนี้รองรับผู้ลี้ภัยหลายพันคน"
+  },
+  {
+   "w": "nasty",
+   "t": "น่ารังเกียจ, ร้ายกาจ",
+   "c": "des",
+   "e": "He said something really nasty.",
+   "x": "เขาพูดอะไรที่แย่มากออกมา"
+  },
+  {
+   "w": "splendid",
+   "t": "วิเศษ, ยอดเยี่ยม",
+   "c": "des",
+   "e": "What a splendid idea.",
+   "x": "เป็นความคิดที่ยอดเยี่ยมมาก"
+  },
+  {
+   "w": "furry",
+   "t": "มีขนปุย",
+   "c": "des",
+   "e": "A small furry animal ran past.",
+   "x": "สัตว์ตัวเล็กขนปุยวิ่งผ่านไป"
+  },
+  {
+   "w": "pervert",
+   "t": "คนวิปริตทางเพศ, พวกทะลึ่ง",
+   "c": "ppl",
+   "e": "Stop staring, you pervert.",
+   "x": "เลิกจ้องได้แล้ว ไอ้ทะลึ่ง",
+   "n": "ในโน้ตสะกดผิดเป็น prevert"
+  },
+  {
+   "w": "stare",
+   "t": "จ้องเขม็ง",
+   "c": "act",
+   "e": "He stared at the ceiling for an hour.",
+   "x": "เขาจ้องเพดานอยู่ชั่วโมงหนึ่ง"
+  },
+  {
+   "w": "shore",
+   "t": "ชายฝั่ง",
+   "c": "day",
+   "e": "We walked along the shore at sunset.",
+   "x": "เราเดินเลียบชายฝั่งตอนพระอาทิตย์ตก"
+  },
+  {
+   "w": "deploy",
+   "t": "ส่งกำลังเข้าประจำการ, นำไปใช้งานจริง",
+   "c": "act",
+   "e": "We deploy the new version on Friday.",
+   "x": "เราจะปล่อยเวอร์ชันใหม่ขึ้นระบบวันศุกร์"
+  },
+  {
+   "w": "singularity",
+   "t": "จุดเอกฐาน, ภาวะเฉพาะตัวไม่เหมือนใคร",
+   "c": "des",
+   "e": "They argue the singularity is decades away.",
+   "x": "พวกเขาเถียงกันว่าจุดเอกฐานยังอีกหลายสิบปี"
+  },
+  {
+   "w": "nimble",
+   "t": "ว่องไว, คล่องแคล่ว",
+   "c": "des",
+   "e": "She's nimble on her feet.",
+   "x": "เธอเคลื่อนไหวว่องไวมาก"
+  },
+  {
+   "w": "aptitude",
+   "t": "ความถนัด, พรสวรรค์เฉพาะด้าน",
+   "c": "ppl",
+   "e": "He has a real aptitude for numbers.",
+   "x": "เขามีความถนัดด้านตัวเลขจริงๆ"
+  },
+  {
+   "w": "virtue",
+   "t": "คุณธรรม",
+   "c": "rel",
+   "e": "Patience is a virtue.",
+   "x": "ความอดทนคือคุณธรรมอย่างหนึ่ง"
+  },
+  {
+   "w": "creep",
+   "t": "คืบคลาน, เล็ดลอดเข้ามา / คนน่าขนลุก",
+   "c": "act",
+   "e": "Doubt began to creep in.",
+   "x": "ความสงสัยเริ่มคืบคลานเข้ามา"
+  },
+  {
+   "w": "accomplish",
+   "t": "ทำสำเร็จ, บรรลุผล",
+   "c": "act",
+   "e": "We accomplished more than expected.",
+   "x": "เราทำสำเร็จได้มากกว่าที่คาด"
+  },
+  {
+   "w": "awe",
+   "t": "ความเกรงขามผสมทึ่ง",
+   "c": "emo",
+   "e": "We stood in awe of the temple.",
+   "x": "เรายืนทึ่งในความยิ่งใหญ่ของวัด",
+   "n": "ในโน้ตแปลว่า 'ความกลัว' — จริงๆ คือกลัวปนทึ่ง ยำเกรง"
+  },
+  {
+   "w": "rather",
+   "t": "ค่อนข้าง / ค่อนข้างจะอยากมากกว่า",
+   "c": "gra",
+   "e": "It's rather cold today.",
+   "x": "วันนี้ค่อนข้างหนาว",
+   "n": "I'd rather stay home. = ฉันอยากอยู่บ้านมากกว่า"
+  },
+  {
+   "w": "salute",
+   "t": "ทำความเคารพ, คารวะ",
+   "c": "act",
+   "e": "The soldiers saluted as he passed.",
+   "x": "เหล่าทหารทำความเคารพขณะเขาเดินผ่าน"
+  },
+  {
+   "w": "fleet",
+   "t": "กองเรือ, ฝูงยานพาหนะ",
+   "c": "fan",
+   "e": "The enemy fleet appeared on the horizon.",
+   "x": "กองเรือข้าศึกปรากฏที่เส้นขอบฟ้า"
+  },
+  {
+   "w": "lace",
+   "t": "ลูกไม้ / ร้อยเชือก",
+   "c": "day",
+   "e": "Her dress had lace along the sleeves.",
+   "x": "ชุดของเธอมีลูกไม้ตามแขนเสื้อ"
+  },
+  {
+   "w": "stingy",
+   "t": "ตระหนี่, ขี้เหนียว",
+   "c": "des",
+   "e": "He's too stingy to tip.",
+   "x": "เขาขี้เหนียวเกินกว่าจะให้ทิป"
+  },
+  {
+   "w": "giggle",
+   "t": "หัวเราะคิกคัก",
+   "c": "act",
+   "e": "The girls giggled at his joke.",
+   "x": "เด็กผู้หญิงหัวเราะคิกคักกับมุกของเขา"
+  },
+  {
+   "w": "attract",
+   "t": "ดึงดูด",
+   "c": "act",
+   "e": "The event attracted over a thousand people.",
+   "x": "งานนี้ดึงดูดคนได้กว่าพันคน"
+  },
+  {
+   "w": "hospitality",
+   "t": "การต้อนรับขับสู้, น้ำใจไมตรี",
+   "c": "soc",
+   "e": "Thank you for your hospitality.",
+   "x": "ขอบคุณสำหรับการต้อนรับอย่างดี"
+  },
+  {
+   "w": "curse",
+   "t": "คำสาป / สบถ",
+   "c": "fan",
+   "e": "The village believed the house was cursed.",
+   "x": "ชาวบ้านเชื่อว่าบ้านหลังนั้นต้องคำสาป"
+  },
+  {
+   "w": "precision",
+   "t": "ความแม่นยำ",
+   "c": "des",
+   "e": "The parts are cut with laser precision.",
+   "x": "ชิ้นส่วนถูกตัดด้วยความแม่นยำระดับเลเซอร์",
+   "n": "ในโน้ตสะกดผิดเป็น pecision"
+  },
+  {
+   "w": "engage",
+   "t": "ว่าจ้าง, เข้าปะทะ, ดึงให้มีส่วนร่วม",
+   "c": "act",
+   "e": "We engaged a lawyer to review it.",
+   "x": "เราจ้างทนายมาตรวจสอบมัน"
+  },
+  {
+   "w": "fountain",
+   "t": "น้ำพุ",
+   "c": "day",
+   "e": "Meet me by the fountain.",
+   "x": "เจอกันตรงน้ำพุนะ"
+  },
+  {
+   "w": "shaft",
+   "t": "เพลา, ด้าม, ปล่องลึก",
+   "c": "day",
+   "e": "The elevator shaft was pitch black.",
+   "x": "ปล่องลิฟต์มืดสนิท"
+  },
+  {
+   "w": "rod",
+   "t": "ท่อนไม้, แท่งเหล็ก, คันเบ็ด",
+   "c": "day",
+   "e": "He packed a fishing rod and nothing else.",
+   "x": "เขาเอาแค่คันเบ็ดไปอย่างเดียว"
+  },
+  {
+   "w": "aggressive",
+   "t": "ก้าวร้าว, รุกหนัก",
+   "c": "des",
+   "e": "That's a very aggressive pricing strategy.",
+   "x": "นั่นเป็นกลยุทธ์ราคาที่รุกหนักมาก"
+  },
+  {
+   "w": "cradle",
+   "t": "เปลเด็ก / โอบประคอง",
+   "c": "day",
+   "e": "She cradled the baby in her arms.",
+   "x": "เธอโอบประคองทารกไว้ในอ้อมแขน"
+  },
+  {
+   "w": "curious",
+   "t": "อยากรู้อยากเห็น / ชวนสงสัย",
+   "c": "des",
+   "e": "I'm curious about how it works.",
+   "x": "ฉันอยากรู้ว่ามันทำงานยังไง"
+  },
+  {
+   "w": "curiosity",
+   "t": "ความอยากรู้อยากเห็น",
+   "c": "emo",
+   "e": "Curiosity got the better of me.",
+   "x": "ความอยากรู้เอาชนะฉันได้"
+  },
+  {
+   "w": "determined",
+   "t": "มุ่งมั่น, แน่วแน่",
+   "c": "des",
+   "e": "She's determined to finish it this year.",
+   "x": "เธอมุ่งมั่นจะทำให้เสร็จภายในปีนี้",
+   "n": "ในโน้ตแปลว่า 'ความแน่นอน' — determined = มุ่งมั่น ส่วน determine = กำหนด/ตัดสินใจแน่วแน่"
+  },
+  {
+   "w": "snooze",
+   "t": "งีบ, กดเลื่อนนาฬิกาปลุก",
+   "c": "act",
+   "e": "I hit snooze three times.",
+   "x": "ฉันกดเลื่อนปลุกไปสามรอบ"
+  },
+  {
+   "w": "enthusiastic",
+   "t": "กระตือรือร้น",
+   "c": "des",
+   "e": "He was enthusiastic about the plan.",
+   "x": "เขากระตือรือร้นกับแผนนี้มาก"
+  },
+  {
+   "w": "apathetic",
+   "t": "เฉยชา, ไม่แยแส",
+   "c": "des",
+   "e": "Voters have become apathetic.",
+   "x": "ผู้มีสิทธิเลือกตั้งเริ่มเฉยชา"
+  },
+  {
+   "w": "influence",
+   "t": "อิทธิพล, มีอิทธิพลต่อ",
+   "c": "act",
+   "e": "His teacher influenced him deeply.",
+   "x": "ครูของเขามีอิทธิพลต่อเขาอย่างลึกซึ้ง"
+  },
+  {
+   "w": "flee",
+   "t": "หนี, หลบหนี",
+   "c": "act",
+   "e": "Thousands fled the city overnight.",
+   "x": "คนนับพันหนีออกจากเมืองในคืนเดียว"
+  },
+  {
+   "w": "vortex",
+   "t": "กระแสน้ำวน, ลมหมุน",
+   "c": "fan",
+   "e": "A vortex opened in the middle of the sea.",
+   "x": "กระแสน้ำวนเปิดขึ้นกลางทะเล"
+  },
+  {
+   "w": "purge",
+   "t": "กวาดล้าง, ชำระล้าง",
+   "c": "act",
+   "e": "The party purged its critics.",
+   "x": "พรรคกวาดล้างคนที่วิจารณ์ออกไป"
+  },
+  {
+   "w": "redemption",
+   "t": "การไถ่บาป, การกู้ชื่อกลับคืน",
+   "c": "rel",
+   "e": "The film is a story of redemption.",
+   "x": "หนังเรื่องนี้คือเรื่องราวของการไถ่บาป",
+   "n": "ในโน้ตสะกดผิดเป็น redemtion"
+  },
+  {
+   "w": "executor",
+   "t": "ผู้จัดการมรดก, ผู้ปฏิบัติการตามคำสั่ง",
+   "c": "ppl",
+   "e": "He was named executor of the will.",
+   "x": "เขาถูกตั้งเป็นผู้จัดการมรดกตามพินัยกรรม"
+  },
+  {
+   "w": "bold",
+   "t": "กล้าหาญ, เด่นชัด (ตัวหนา)",
+   "c": "des",
+   "e": "That was a bold move.",
+   "x": "นั่นเป็นการตัดสินใจที่กล้ามาก"
+  },
+  {
+   "w": "neglected",
+   "t": "ถูกทอดทิ้ง, ไม่ได้รับการดูแล",
+   "c": "des",
+   "e": "The garden looks neglected.",
+   "x": "สวนดูถูกปล่อยทิ้งไว้"
+  },
+  {
+   "w": "baton",
+   "t": "ไม้บาตองของวาทยกร, กระบอง",
+   "c": "day",
+   "e": "The conductor raised his baton.",
+   "x": "วาทยกรยกไม้บาตองขึ้น"
+  },
+  {
+   "w": "bagpipe",
+   "t": "ปี่สก็อต",
+   "c": "day",
+   "e": "Someone was playing the bagpipes at dawn.",
+   "x": "มีคนเป่าปี่สก็อตตอนรุ่งสาง"
+  },
+  {
+   "w": "ski poles",
+   "t": "ไม้ค้ำสกี",
+   "c": "day",
+   "e": "He lost one of his ski poles on the slope.",
+   "x": "เขาทำไม้ค้ำสกีหายไปข้างหนึ่งบนลานสกี"
+  },
+  {
+   "w": "conductor",
+   "t": "วาทยกร / กระเป๋ารถ / ตัวนำไฟฟ้า",
+   "c": "ppl",
+   "e": "The conductor bowed to the orchestra.",
+   "x": "วาทยกรโค้งคำนับให้วงออร์เคสตรา"
+  },
+  {
+   "w": "serene",
+   "t": "สงบนิ่ง, เยือกเย็น",
+   "c": "des",
+   "e": "The lake was completely serene.",
+   "x": "ทะเลสาบสงบนิ่งสนิท"
+  },
+  {
+   "w": "prodigal",
+   "t": "สุรุ่ยสุร่าย, ฟุ่มเฟือย",
+   "c": "des",
+   "e": "The prodigal son finally came home.",
+   "x": "ลูกล้างผลาญกลับบ้านเสียที"
+  },
+  {
+   "w": "for the sake of",
+   "t": "เพื่อเห็นแก่...",
+   "c": "gra",
+   "e": "Do it for the sake of your family.",
+   "x": "ทำเพื่อเห็นแก่ครอบครัวเถอะ"
+  },
+  {
+   "w": "scion",
+   "t": "เชื้อสายตระกูลใหญ่, ทายาท",
+   "c": "ppl",
+   "e": "He's a scion of a banking family.",
+   "x": "เขาเป็นทายาทของตระกูลนายธนาคาร"
+  },
+  {
+   "w": "eternity",
+   "t": "ชั่วนิรันดร์",
+   "c": "rel",
+   "e": "The wait felt like an eternity.",
+   "x": "การรอคอยรู้สึกยาวนานชั่วนิรันดร์"
+  },
+  {
+   "w": "alongside",
+   "t": "เคียงข้าง, ควบคู่ไปกับ",
+   "c": "gra",
+   "e": "She works alongside two designers.",
+   "x": "เธอทำงานเคียงข้างนักออกแบบสองคน"
+  },
+  {
+   "w": "irony",
+   "t": "การประชด, ความย้อนแย้ง",
+   "c": "lng",
+   "e": "The irony is that he warned us first.",
+   "x": "ที่ย้อนแย้งคือเขานั่นแหละที่เตือนเราก่อน"
+  },
+  {
+   "w": "induce",
+   "t": "ชักนำ, กระตุ้นให้เกิด",
+   "c": "act",
+   "e": "The drug induces sleep within minutes.",
+   "x": "ยานี้ทำให้หลับภายในไม่กี่นาที"
+  },
+  {
+   "w": "rusty",
+   "t": "เป็นสนิม / ฝีมือตกเพราะไม่ได้ใช้",
+   "c": "des",
+   "e": "My Japanese is a bit rusty.",
+   "x": "ภาษาญี่ปุ่นฉันเริ่มฝืดแล้ว",
+   "n": "ในโน้ตแปลว่า 'โกรธ' — น่าจะสับสน rusty ที่แปลว่าเป็นสนิม/ฝีมือตก"
+  },
+  {
+   "w": "envious",
+   "t": "อิจฉา",
+   "c": "emo",
+   "e": "I'm envious of your holiday.",
+   "x": "อิจฉาวันหยุดของเธอจัง"
+  },
+  {
+   "w": "convenor",
+   "t": "ผู้เรียกประชุม, ผู้ประสานงาน",
+   "c": "ppl",
+   "e": "She's the convenor of the working group.",
+   "x": "เธอเป็นผู้เรียกประชุมของคณะทำงาน"
+  },
+  {
+   "w": "bummer",
+   "t": "แย่จัง, เซ็งเลย",
+   "c": "sla",
+   "e": "Rain on your day off? Bummer.",
+   "x": "ฝนตกวันหยุดเหรอ แย่จัง"
+  },
+  {
+   "w": "oblivious",
+   "t": "ไม่รู้ตัว, ไม่ทันสังเกต",
+   "c": "des",
+   "e": "He was oblivious to the whole argument.",
+   "x": "เขาไม่รู้เรื่องการเถียงกันนั่นเลย",
+   "n": "อย่าสับสนกับ obvious = ชัดเจน"
+  },
+  {
+   "w": "have an affair",
+   "t": "มีชู้, นอกใจ",
+   "c": "sla",
+   "e": "He'd been having an affair for a year.",
+   "x": "เขามีชู้มาปีหนึ่งแล้ว"
+  },
+  {
+   "w": "have a fling",
+   "t": "มีกิ๊ก, คบกันสั้นๆ",
+   "c": "sla",
+   "e": "They had a summer fling, nothing serious.",
+   "x": "พวกเขาคบกันสั้นๆ ช่วงหน้าร้อน ไม่จริงจัง"
+  },
+  {
+   "w": "justify",
+   "t": "อธิบายเหตุผลรองรับ, ทำให้ชอบธรรม",
+   "c": "act",
+   "e": "Nothing can justify that behavior.",
+   "x": "ไม่มีอะไรทำให้พฤติกรรมนั้นชอบธรรมได้"
+  },
+  {
+   "w": "sentimental",
+   "t": "ซาบซึ้ง, อ่อนไหวเชิงความทรงจำ",
+   "c": "emo",
+   "e": "It has sentimental value, not money value.",
+   "x": "มันมีคุณค่าทางใจ ไม่ใช่ทางเงิน"
+  },
+  {
+   "w": "Don't be so extra.",
+   "t": "อย่าเวอร์, อย่าเยอะ",
+   "c": "sla",
+   "e": "It's just dinner — don't be so extra.",
+   "x": "แค่มื้อเย็นเอง อย่าเวอร์"
+  },
+  {
+   "w": "sibling",
+   "t": "พี่น้อง (ไม่ระบุเพศ)",
+   "c": "ppl",
+   "e": "Do you have any siblings?",
+   "x": "มีพี่น้องไหม"
+  },
+  {
+   "w": "station",
+   "t": "สถานี / ฐานะตำแหน่งในสังคม",
+   "c": "day",
+   "e": "He never forgot his station.",
+   "x": "เขาไม่เคยลืมสถานะของตัวเอง"
+  },
+  {
+   "w": "obvious",
+   "t": "ชัดเจน, เห็นได้ชัด",
+   "c": "des",
+   "e": "The answer was obvious.",
+   "x": "คำตอบมันชัดเจนอยู่แล้ว"
+  },
+  {
+   "w": "kinda / kind of",
+   "t": "ค่อนข้าง, ก็ประมาณนั้น",
+   "c": "gra",
+   "e": "I'm kinda tired.",
+   "x": "ฉันก็ค่อนข้างเหนื่อยนะ"
+  },
+  {
+   "w": "bearer",
+   "t": "ผู้ถือ, ผู้ถือสาร",
+   "c": "ppl",
+   "e": "Sorry to be the bearer of bad news.",
+   "x": "ขอโทษที่ต้องเป็นคนบอกข่าวร้าย"
+  },
+  {
+   "w": "invulnerable",
+   "t": "คงกระพัน, ทำร้ายไม่ได้",
+   "c": "fan",
+   "e": "The armor made him nearly invulnerable.",
+   "x": "เกราะทำให้เขาแทบจะคงกระพัน"
+  },
+  {
+   "w": "awkward",
+   "t": "เก้งก้าง, กระอักกระอ่วน",
+   "c": "des",
+   "e": "There was an awkward silence.",
+   "x": "เกิดความเงียบที่กระอักกระอ่วน",
+   "n": "คำใกล้เคียง: inept (ไร้ฝีมือ) · inert (เฉื่อยชา) · inapt (ไม่เหมาะสม)"
+  },
+  {
+   "w": "cavern",
+   "t": "ถ้ำใหญ่",
+   "c": "fan",
+   "e": "The path led into a vast cavern.",
+   "x": "ทางเดินนำไปสู่ถ้ำขนาดมหึมา"
+  },
+  {
+   "w": "full of yourself",
+   "t": "หลงตัวเอง",
+   "c": "sla",
+   "e": "He's so full of himself.",
+   "x": "เขาหลงตัวเองสุดๆ"
+  },
+  {
+   "w": "saucer",
+   "t": "จานรองถ้วย",
+   "c": "day",
+   "e": "The cup and saucer came as a set.",
+   "x": "ถ้วยกับจานรองมาเป็นเซ็ต"
+  },
+  {
+   "w": "platter",
+   "t": "จานใหญ่, ถาดจัดอาหาร",
+   "c": "day",
+   "e": "She brought out a platter of fruit.",
+   "x": "เธอยกถาดผลไม้ใหญ่ออกมา"
+  },
+  {
+   "w": "coaster",
+   "t": "แผ่นรองแก้ว",
+   "c": "day",
+   "e": "Use a coaster, please.",
+   "x": "ใช้แผ่นรองแก้วด้วยนะ"
+  },
+  {
+   "w": "no vs not",
+   "t": "ไม่มี vs ไม่ใช่",
+   "c": "gra",
+   "e": "There is no time. / It is not time yet.",
+   "x": "ไม่มีเวลาแล้ว / ยังไม่ถึงเวลา",
+   "n": "no วางหน้าคำนาม · not ปฏิเสธกริยา/คำคุณศัพท์"
+  },
+  {
+   "w": "instant",
+   "t": "ทันที, สำเร็จรูป",
+   "c": "des",
+   "e": "He made an instant decision.",
+   "x": "เขาตัดสินใจในทันที"
+  },
+  {
+   "w": "tender",
+   "t": "อ่อนโยน, นุ่มละมุน",
+   "c": "des",
+   "e": "The beef was incredibly tender.",
+   "x": "เนื้อนุ่มมากๆ"
+  },
+  {
+   "w": "sarcastic",
+   "t": "ประชด, เหน็บแนม",
+   "c": "des",
+   "e": "Was that sarcastic or serious?",
+   "x": "นั่นประชดหรือพูดจริง"
+  },
+  {
+   "w": "jealous",
+   "t": "อิจฉา / หึง",
+   "c": "emo",
+   "e": "He gets jealous when she talks to anyone.",
+   "x": "เขาหึงเวลาเธอคุยกับใครก็ตาม"
+  },
+  {
+   "w": "savior",
+   "t": "ผู้มาช่วยให้รอด, พระผู้ไถ่",
+   "c": "rel",
+   "e": "They treated him like a savior.",
+   "x": "พวกเขาปฏิบัติกับเขาราวกับผู้มาโปรด"
+  },
+  {
+   "w": "fatigue",
+   "t": "ความเมื่อยล้า",
+   "c": "emo",
+   "e": "Chronic fatigue kept her in bed.",
+   "x": "ความอ่อนล้าเรื้อรังทำให้เธอลุกไม่ไหว"
+  },
+  {
+   "w": "acquaintance",
+   "t": "คนรู้จัก (ไม่ถึงขั้นเพื่อน)",
+   "c": "ppl",
+   "e": "He's an acquaintance, not a friend.",
+   "x": "เขาเป็นแค่คนรู้จัก ไม่ใช่เพื่อน"
+  },
+  {
+   "w": "narcissistic",
+   "t": "หลงตัวเอง (เชิงจิตวิทยา)",
+   "c": "des",
+   "e": "His behavior is textbook narcissistic.",
+   "x": "พฤติกรรมเขาคือหลงตัวเองแบบตำรา"
+  },
+  {
+   "w": "ripe",
+   "t": "สุก, ได้ที่, ได้เวลา",
+   "c": "des",
+   "e": "The mangoes aren't ripe yet.",
+   "x": "มะม่วงยังไม่สุก"
+  },
+  {
+   "w": "idle",
+   "t": "ว่าง, ไม่ได้ใช้งาน, เกียจคร้าน",
+   "c": "des",
+   "e": "The machines sat idle for weeks.",
+   "x": "เครื่องจักรจอดนิ่งไม่ได้ใช้อยู่หลายสัปดาห์"
+  },
+  {
+   "w": "shabby",
+   "t": "กระจอก, ซอมซ่อ",
+   "c": "des",
+   "e": "He wore a shabby old coat.",
+   "x": "เขาใส่โค้ทเก่าซอมซ่อ"
+  },
+  {
+   "w": "amusing",
+   "t": "น่าขำ, น่าสนุก",
+   "c": "des",
+   "e": "I found the whole thing rather amusing.",
+   "x": "ฉันว่าเรื่องทั้งหมดนี่ค่อนข้างน่าขำ"
+  },
+  {
+   "w": "deal / duel / dual",
+   "t": "ข้อตกลง / ดวลกัน / คู่ สองส่วน",
+   "c": "gra",
+   "e": "They made a deal instead of a duel.",
+   "x": "พวกเขาทำข้อตกลงแทนที่จะดวลกัน",
+   "n": "dual-core = สองแกน · duel = ประลอง · deal = ตกลง/ซื้อขาย"
+  },
+  {
+   "w": "accomplice",
+   "t": "ผู้สมรู้ร่วมคิด",
+   "c": "ppl",
+   "e": "The driver was charged as an accomplice.",
+   "x": "คนขับถูกตั้งข้อหาเป็นผู้สมรู้ร่วมคิด"
+  },
+  {
+   "w": "hasty",
+   "t": "รีบร้อน, ผลีผลาม",
+   "c": "des",
+   "e": "Let's not make a hasty decision.",
+   "x": "อย่าเพิ่งตัดสินใจแบบรีบร้อน"
+  },
+  {
+   "w": "disciple",
+   "t": "ลูกศิษย์, สาวก",
+   "c": "rel",
+   "e": "He gathered twelve disciples.",
+   "x": "เขารวบรวมสาวกได้สิบสองคน"
+  },
+  {
+   "w": "vow",
+   "t": "คำสาบาน, ปฏิญาณ",
+   "c": "rel",
+   "e": "They exchanged vows at sunset.",
+   "x": "พวกเขากล่าวคำสาบานตอนพระอาทิตย์ตก"
+  },
+  {
+   "w": "tavern",
+   "t": "โรงเตี๊ยม, โรงเหล้า",
+   "c": "fan",
+   "e": "The party met at a tavern outside town.",
+   "x": "กลุ่มผจญภัยนัดเจอกันที่โรงเตี๊ยมนอกเมือง"
+  },
+  {
+   "w": "mumble",
+   "t": "พูดอู้อี้ พึมพำ",
+   "c": "act",
+   "e": "Stop mumbling and speak up.",
+   "x": "เลิกพึมพำแล้วพูดดังๆ หน่อย"
+  },
+  {
+   "w": "dumpling",
+   "t": "เกี๊ยว, ติ่มซำ",
+   "c": "day",
+   "e": "We ordered two baskets of dumplings.",
+   "x": "เราสั่งเกี๊ยวมาสองเข่ง"
+  },
+  {
+   "w": "exaggerate",
+   "t": "พูดเกินจริง",
+   "c": "act",
+   "e": "He always exaggerates his fish stories.",
+   "x": "เขาชอบเล่าเรื่องตกปลาเกินจริงตลอด"
+  },
+  {
+   "w": "chubby",
+   "t": "จ้ำม่ำ, อ้วนน่ารัก",
+   "c": "des",
+   "e": "The baby has chubby cheeks.",
+   "x": "เด็กมีแก้มจ้ำม่ำ"
+  },
+  {
+   "w": "irritated",
+   "t": "ระคายเคือง / หงุดหงิด",
+   "c": "emo",
+   "e": "My eyes are irritated from the smoke.",
+   "x": "ตาฉันระคายเคืองเพราะควัน"
+  },
+  {
+   "w": "corpse",
+   "t": "ศพ",
+   "c": "fan",
+   "e": "They found a corpse in the cellar.",
+   "x": "พวกเขาพบศพในห้องใต้ดิน"
+  },
+  {
+   "w": "raid",
+   "t": "บุกโจมตี, บุกตรวจค้น",
+   "c": "fan",
+   "e": "Police raided the warehouse at dawn.",
+   "x": "ตำรวจบุกค้นโกดังตอนรุ่งสาง"
+  },
+  {
+   "w": "minor",
+   "t": "ผู้เยาว์ / เล็กน้อย",
+   "c": "soc",
+   "e": "He was a minor at the time of the offense.",
+   "x": "ตอนก่อเหตุเขายังเป็นผู้เยาว์"
+  },
+  {
+   "w": "dwelling / residence",
+   "t": "ที่อยู่อาศัย",
+   "c": "day",
+   "e": "The permit covers a single dwelling.",
+   "x": "ใบอนุญาตครอบคลุมที่อยู่อาศัยหลังเดียว"
+  },
+  {
+   "w": "willing to",
+   "t": "เต็มใจที่จะ, พร้อมที่จะ",
+   "c": "gra",
+   "e": "I'm willing to try anything once.",
+   "x": "ฉันพร้อมจะลองอะไรก็ได้สักครั้ง"
+  },
+  {
+   "w": "tier",
+   "t": "ระดับชั้น",
+   "c": "des",
+   "e": "We offer three pricing tiers.",
+   "x": "เรามีราคาสามระดับ"
+  },
+  {
+   "w": "agitated",
+   "t": "กระวนกระวาย, หงุดหงิดไม่อยู่นิ่ง",
+   "c": "emo",
+   "e": "He became agitated when questioned.",
+   "x": "เขากระวนกระวายเมื่อถูกซักถาม"
+  },
+  {
+   "w": "scenario",
+   "t": "สถานการณ์สมมติ, บทภาพยนตร์",
+   "c": "lng",
+   "e": "Let's plan for the worst-case scenario.",
+   "x": "มาวางแผนเผื่อสถานการณ์เลวร้ายที่สุดกัน"
+  },
+  {
+   "w": "will never",
+   "t": "ไม่มีวัน...",
+   "c": "gra",
+   "e": "I will never forget that day.",
+   "x": "ฉันจะไม่มีวันลืมวันนั้น"
+  },
+  {
+   "w": "temper",
+   "t": "อารมณ์ (โดยเฉพาะโทสะ)",
+   "c": "emo",
+   "e": "He has a terrible temper.",
+   "x": "เขาเป็นคนอารมณ์ร้อนมาก",
+   "n": "lose your temper = อารมณ์เสีย ระเบิดออกมา"
+  },
+  {
+   "w": "illuminate",
+   "t": "ให้แสงสว่าง, ทำให้กระจ่าง",
+   "c": "act",
+   "e": "Candles illuminated the whole hall.",
+   "x": "เทียนส่องสว่างทั่วทั้งห้องโถง"
+  },
+  {
+   "w": "mudslinging",
+   "t": "การใส่ร้ายป้ายสี, สาดโคลน",
+   "c": "soc",
+   "e": "The campaign turned into pure mudslinging.",
+   "x": "การหาเสียงกลายเป็นการสาดโคลนล้วนๆ"
+  },
+  {
+   "w": "elite",
+   "t": "ชนชั้นนำ, หัวกะทิ",
+   "c": "soc",
+   "e": "A small elite controls most of the land.",
+   "x": "ชนชั้นนำกลุ่มเล็กๆ ครอบครองที่ดินส่วนใหญ่"
+  },
+  {
+   "w": "cliffhanger",
+   "t": "ตอนจบค้างคาชวนลุ้น",
+   "c": "lng",
+   "e": "The season ended on a cliffhanger.",
+   "x": "ซีซั่นจบแบบค้างคาชวนลุ้น",
+   "n": "ในโน้ตสะกดผิดเป็น cliffhangger"
+  },
+  {
+   "w": "sacrifice",
+   "t": "เสียสละ, การบูชายัญ",
+   "c": "act",
+   "e": "She sacrificed her weekends for this.",
+   "x": "เธอเสียสละวันหยุดทั้งหมดเพื่อสิ่งนี้"
+  },
+  {
+   "w": "stench",
+   "t": "กลิ่นเหม็นรุนแรง",
+   "c": "day",
+   "e": "The stench from the drain was unbearable.",
+   "x": "กลิ่นเหม็นจากท่อทนไม่ไหวเลย"
+  },
+  {
+   "w": "Stay hungry, stay foolish.",
+   "t": "จงหิวกระหายและกล้าทำในสิ่งที่คนอื่นว่าโง่",
+   "c": "sen",
+   "e": "Stay hungry, stay foolish.",
+   "x": "จงกระหายอยู่เสมอ และกล้าโง่อยู่เสมอ",
+   "n": "คำพูดปิดท้ายสุนทรพจน์ Stanford 2005 ของ Steve Jobs"
+  },
+  {
+   "w": "I would say",
+   "t": "ฉันว่านะ, ผมคิดว่า",
+   "c": "sen",
+   "e": "I would say it's worth the price.",
+   "x": "ผมว่ามันคุ้มราคานะ"
+  },
+  {
+   "w": "inform",
+   "t": "แจ้งให้ทราบ",
+   "c": "act",
+   "e": "Please inform me if anything changes.",
+   "x": "ถ้ามีอะไรเปลี่ยนช่วยแจ้งด้วย"
+  },
+  {
+   "w": "ajar",
+   "t": "แง้ม, เปิดอ้าเล็กน้อย",
+   "c": "des",
+   "e": "The door was left ajar.",
+   "x": "ประตูถูกทิ้งไว้แง้มๆ"
+  },
+  {
+   "w": "precise",
+   "t": "แม่นยำ, เที่ยงตรง",
+   "c": "des",
+   "e": "Give me the precise number.",
+   "x": "ขอตัวเลขที่แม่นยำหน่อย"
+  },
+  {
+   "w": "spices",
+   "t": "เครื่องเทศ",
+   "c": "day",
+   "e": "The curry needs more spices.",
+   "x": "แกงนี่ต้องใส่เครื่องเทศเพิ่ม"
+  },
+  {
+   "w": "So what do I do?",
+   "t": "แล้วฉันควรทำยังไง",
+   "c": "sen",
+   "e": "So what do I do now?",
+   "x": "แล้วตอนนี้ฉันควรทำยังไงต่อ"
+  },
+  {
+   "w": "jackal",
+   "t": "หมาใน / ลิ่วล้อรับใช้",
+   "c": "ppl",
+   "e": "He's just a jackal doing his boss's dirty work.",
+   "x": "เขาเป็นแค่ลิ่วล้อที่คอยทำงานสกปรกให้เจ้านาย"
+  },
+  {
+   "w": "whimper",
+   "t": "เสียงครวญคราง, ร้องเบาๆ",
+   "c": "act",
+   "e": "The dog whimpered by the door.",
+   "x": "หมาครางเบาๆ อยู่ข้างประตู"
+  },
+  {
+   "w": "stir",
+   "t": "คน, กวน / ปลุกเร้า",
+   "c": "act",
+   "e": "Stir the sauce so it doesn't burn.",
+   "x": "คนซอสด้วย เดี๋ยวไหม้"
+  },
+  {
+   "w": "tend to",
+   "t": "มีแนวโน้มที่จะ",
+   "c": "act",
+   "e": "He tends to arrive late.",
+   "x": "เขามักจะมาสาย"
+  },
+  {
+   "w": "cocoon",
+   "t": "รังไหม, ห่อหุ้มปกป้อง",
+   "c": "day",
+   "e": "She lived in a cocoon of routine.",
+   "x": "เธออยู่ในรังไหมของกิจวัตรเดิมๆ"
+  },
+  {
+   "w": "beehive",
+   "t": "รังผึ้ง / ที่ที่จอแจวุ่นวาย",
+   "c": "day",
+   "e": "The office was a beehive of activity.",
+   "x": "ออฟฟิศจอแจวุ่นวายเหมือนรังผึ้ง"
+  },
+  {
+   "w": "dip",
+   "t": "จุ่ม, จิ้ม",
+   "c": "act",
+   "e": "Dip the bread in the sauce.",
+   "x": "จิ้มขนมปังลงในซอส"
+  },
+  {
+   "w": "dive",
+   "t": "ดำน้ำ, พุ่งลง",
+   "c": "act",
+   "e": "He dove straight into the pool.",
+   "x": "เขาพุ่งลงสระไปเลย"
+  },
+  {
+   "w": "culprit",
+   "t": "ตัวการ, คนร้าย",
+   "c": "ppl",
+   "e": "The loose wire was the culprit.",
+   "x": "สายไฟหลวมนี่แหละคือตัวการ"
+  },
+  {
+   "w": "reveal",
+   "t": "เปิดเผย",
+   "c": "act",
+   "e": "She refused to reveal her source.",
+   "x": "เธอปฏิเสธที่จะเปิดเผยแหล่งข่าว"
+  },
+  {
+   "w": "sneer",
+   "t": "เยาะเย้ย, ยิ้มเหยียด",
+   "c": "act",
+   "e": "He sneered at the suggestion.",
+   "x": "เขายิ้มเหยียดกับข้อเสนอนั้น"
+  },
+  {
+   "w": "ashamed",
+   "t": "ละอายใจ",
+   "c": "emo",
+   "e": "I'm ashamed of how I acted.",
+   "x": "ฉันละอายใจกับสิ่งที่ทำลงไป"
+  },
+  {
+   "w": "childish",
+   "t": "งี่เง่าเหมือนเด็ก",
+   "c": "des",
+   "e": "Don't be childish about it.",
+   "x": "อย่าทำตัวเด็กๆ กับเรื่องนี้"
+  },
+  {
+   "w": "fussy",
+   "t": "จุกจิก, จู้จี้เรื่องมาก",
+   "c": "des",
+   "e": "He's very fussy about his coffee.",
+   "x": "เขาจู้จี้เรื่องกาแฟมาก"
+  },
+  {
+   "w": "frank",
+   "t": "ตรงไปตรงมา",
+   "c": "des",
+   "e": "To be frank, I don't like it.",
+   "x": "พูดตรงๆ นะ ฉันไม่ชอบมัน"
+  },
+  {
+   "w": "pity",
+   "t": "ความสงสาร / น่าเสียดาย",
+   "c": "emo",
+   "e": "What a pity you couldn't come.",
+   "x": "น่าเสียดายจังที่เธอมาไม่ได้"
+  },
+  {
+   "w": "assure",
+   "t": "รับรอง, ทำให้มั่นใจ",
+   "c": "act",
+   "e": "I assure you it's safe.",
+   "x": "ผมรับรองว่ามันปลอดภัย"
+  },
+  {
+   "w": "bow",
+   "t": "โค้งคำนับ",
+   "c": "act",
+   "e": "He bowed deeply to the abbot.",
+   "x": "เขาโค้งคำนับเจ้าอาวาสอย่างนอบน้อม"
+  },
+  {
+   "w": "dude",
+   "t": "เพื่อน, พวก (เรียกกันเล่นๆ)",
+   "c": "sla",
+   "e": "Dude, you have to see this.",
+   "x": "เพื่อน มาดูนี่เร็ว"
+  },
+  {
+   "w": "rot",
+   "t": "เน่าเปื่อย",
+   "c": "act",
+   "e": "The fruit rotted in a day.",
+   "x": "ผลไม้เน่าภายในวันเดียว"
+  },
+  {
+   "w": "concur",
+   "t": "เห็นพ้องด้วย (ทางการ)",
+   "c": "act",
+   "e": "I concur with the committee's finding.",
+   "x": "ผมเห็นพ้องกับข้อสรุปของคณะกรรมการ"
+  },
+  {
+   "w": "brink",
+   "t": "ขอบเหว, ปากเหว",
+   "c": "des",
+   "e": "The company is on the brink of collapse.",
+   "x": "บริษัทอยู่ปากเหวของการล่มสลาย"
+  },
+  {
+   "w": "compliment",
+   "t": "คำชม",
+   "c": "act",
+   "e": "She paid me a lovely compliment.",
+   "x": "เธอชมฉันซะน่ารักเลย",
+   "n": "อย่าสับสนกับ complement = สิ่งที่เติมเต็มให้ครบ"
+  },
+  {
+   "w": "artefact",
+   "t": "โบราณวัตถุ, สิ่งประดิษฐ์",
+   "c": "day",
+   "e": "The museum acquired three new artefacts.",
+   "x": "พิพิธภัณฑ์ได้โบราณวัตถุใหม่มาสามชิ้น",
+   "n": "US สะกด artifact"
+  },
+  {
+   "w": "appraiser",
+   "t": "ผู้ประเมินราคา",
+   "c": "ppl",
+   "e": "An appraiser valued the house at six million.",
+   "x": "ผู้ประเมินตีราคาบ้านไว้หกล้าน"
+  },
+  {
+   "w": "gaze",
+   "t": "จ้องมองนิ่ง (แบบครุ่นคิด)",
+   "c": "act",
+   "e": "She gazed out at the sea.",
+   "x": "เธอทอดสายตามองออกไปยังทะเล"
+  },
+  {
+   "w": "acquire",
+   "t": "ได้มา, เข้าซื้อกิจการ",
+   "c": "act",
+   "e": "They acquired the company last year.",
+   "x": "พวกเขาเข้าซื้อบริษัทนั้นเมื่อปีที่แล้ว"
+  },
+  {
+   "w": "territory",
+   "t": "อาณาเขต, พื้นที่ครอบครอง",
+   "c": "fan",
+   "e": "You're in enemy territory now.",
+   "x": "ตอนนี้นายอยู่ในเขตของศัตรูแล้ว"
+  },
+  {
+   "w": "clutch",
+   "t": "คว้าแน่น, กำไว้ / คลัตช์",
+   "c": "act",
+   "e": "She clutched the letter to her chest.",
+   "x": "เธอกำจดหมายแนบไว้กับอก"
+  },
+  {
+   "w": "tide",
+   "t": "กระแสน้ำขึ้นน้ำลง, กระแสความเปลี่ยนแปลง",
+   "c": "day",
+   "e": "The tide is turning in our favor.",
+   "x": "กระแสกำลังพลิกมาเข้าข้างเรา",
+   "n": "ในโน้ตแปลว่า 'วิกฤต' — จริงๆ tide คือกระแสน้ำ/กระแสสถานการณ์"
+  },
+  {
+   "w": "taunt",
+   "t": "ยั่วยุด้วยคำพูด, เย้าแหย่ให้โกรธ",
+   "c": "act",
+   "e": "The crowd taunted the referee.",
+   "x": "ฝูงชนโห่ยั่วกรรมการ"
+  },
+  {
+   "w": "disruption",
+   "t": "การหยุดชะงัก, การพลิกโฉมวงการ",
+   "c": "soc",
+   "e": "The strike caused major disruption.",
+   "x": "การประท้วงทำให้เกิดการหยุดชะงักครั้งใหญ่"
+  },
+  {
+   "w": "handiwork",
+   "t": "ฝีมือ, ผลงานที่ทำด้วยมือ",
+   "c": "des",
+   "e": "Is this mess your handiwork?",
+   "x": "ความเละเทะนี่ฝีมือเธอใช่ไหม"
+  },
+  {
+   "w": "hack",
+   "t": "สับ ฟัน / เจาะระบบ / ทางลัด",
+   "c": "act",
+   "e": "He hacked through the vines with a machete.",
+   "x": "เขาฟันเถาวัลย์ด้วยมีดพร้า"
+  },
+  {
+   "w": "mantra",
+   "t": "มนตร์, คำสวดภาวนา",
+   "c": "rel",
+   "e": "\"Slow is smooth\" became his mantra.",
+   "x": "\"ช้าคือลื่นไหล\" กลายเป็นคาถาประจำใจเขา"
+  },
+  {
+   "w": "bargain",
+   "t": "ต่อรองราคา / ของถูก",
+   "c": "act",
+   "e": "She bargained him down to half price.",
+   "x": "เธอต่อราคาเขาจนเหลือครึ่งเดียว"
+  },
+  {
+   "w": "interfere",
+   "t": "แทรกแซง, ก้าวก่าย",
+   "c": "act",
+   "e": "Don't interfere with their work.",
+   "x": "อย่าไปก้าวก่ายงานของพวกเขา"
+  },
+  {
+   "w": "Whatever it takes",
+   "t": "ไม่ว่าจะต้องแลกด้วยอะไรก็ตาม",
+   "c": "sen",
+   "e": "We'll finish it, whatever it takes.",
+   "x": "เราจะทำให้เสร็จ ไม่ว่าจะต้องแลกด้วยอะไรก็ตาม"
+  },
+  {
+   "w": "inevitable",
+   "t": "สิ่งที่หลีกเลี่ยงไม่ได้",
+   "c": "des",
+   "e": "A rematch felt inevitable.",
+   "x": "การรีแมตช์ดูเป็นสิ่งที่หลีกเลี่ยงไม่ได้"
+  },
+  {
+   "w": "pest",
+   "t": "ศัตรูพืช, ตัวก่อกวน",
+   "c": "day",
+   "e": "These insects are a serious pest.",
+   "x": "แมลงพวกนี้เป็นศัตรูพืชตัวร้าย"
+  },
+  {
+   "w": "cucumber",
+   "t": "แตงกวา",
+   "c": "day",
+   "e": "Cool as a cucumber.",
+   "x": "ใจเย็นสุดๆ (สำนวน)",
+   "n": "as cool as a cucumber = นิ่งมาก ไม่สะทกสะท้าน"
+  },
+  {
+   "w": "otter",
+   "t": "นาก",
+   "c": "day",
+   "e": "Otters hold hands while they sleep.",
+   "x": "นากจับมือกันตอนนอน"
+  },
+  {
+   "w": "squirrel",
+   "t": "กระรอก",
+   "c": "day",
+   "e": "A squirrel stole the whole sandwich.",
+   "x": "กระรอกขโมยแซนด์วิชไปทั้งชิ้น"
+  },
+  {
+   "w": "prodigy",
+   "t": "อัจฉริยะตั้งแต่เด็ก",
+   "c": "ppl",
+   "e": "She was a piano prodigy at seven.",
+   "x": "เธอเป็นอัจฉริยะเปียโนตั้งแต่อายุเจ็ดขวบ"
+  },
+  {
+   "w": "disastrous",
+   "t": "หายนะ, ล้มเหลวยับเยิน",
+   "c": "des",
+   "e": "The launch was disastrous.",
+   "x": "การเปิดตัวล้มเหลวยับเยิน"
+  },
+  {
+   "w": "arrogant",
+   "t": "หยิ่งยโส",
+   "c": "des",
+   "e": "He's talented but arrogant.",
+   "x": "เขาเก่งแต่หยิ่ง"
+  },
+  {
+   "w": "unwavering",
+   "t": "ไม่หวั่นไหว, ใจเด็ด",
+   "c": "des",
+   "e": "Her support was unwavering.",
+   "x": "การสนับสนุนของเธอไม่เคยหวั่นไหว"
+  },
+  {
+   "w": "devour",
+   "t": "กลืนกิน, สวาปาม",
+   "c": "act",
+   "e": "He devoured the entire book in a night.",
+   "x": "เขาอ่านหนังสือทั้งเล่มรวดเดียวจบในคืนเดียว"
+  },
+  {
+   "w": "sympathy",
+   "t": "ความเห็นใจ (สงสารจากภายนอก)",
+   "c": "emo",
+   "e": "You have my sympathy.",
+   "x": "ฉันเห็นใจนะ",
+   "n": "ต่างจาก empathy = เข้าใจเพราะรู้สึกร่วมไปด้วย"
+  },
+  {
+   "w": "empathy",
+   "t": "ความเข้าอกเข้าใจ (รู้สึกร่วม)",
+   "c": "emo",
+   "e": "Good designers need empathy.",
+   "x": "นักออกแบบที่ดีต้องมีความเข้าอกเข้าใจ"
+  },
+  {
+   "w": "hostile",
+   "t": "เป็นปฏิปักษ์, ไม่เป็นมิตร",
+   "c": "des",
+   "e": "The crowd turned hostile.",
+   "x": "ฝูงชนเริ่มไม่เป็นมิตร"
+  },
+  {
+   "w": "resemble",
+   "t": "คล้ายคลึงกับ",
+   "c": "act",
+   "e": "She resembles her grandmother.",
+   "x": "เธอหน้าคล้ายคุณยาย"
+  },
+  {
+   "w": "crumble",
+   "t": "ร่วนสลาย, พังทลาย",
+   "c": "act",
+   "e": "The old wall is starting to crumble.",
+   "x": "กำแพงเก่าเริ่มผุพัง"
+  },
+  {
+   "w": "pawnshop",
+   "t": "โรงรับจำนำ",
+   "c": "day",
+   "e": "He sold his watch at a pawnshop.",
+   "x": "เขาเอานาฬิกาไปจำนำ"
+  },
+  {
+   "w": "vagrant",
+   "t": "คนจรจัด",
+   "c": "ppl",
+   "e": "A vagrant slept under the bridge.",
+   "x": "คนจรจัดนอนอยู่ใต้สะพาน"
+  },
+  {
+   "w": "evaluation",
+   "t": "การประเมินผล",
+   "c": "soc",
+   "e": "The evaluation takes about a week.",
+   "x": "การประเมินใช้เวลาประมาณหนึ่งสัปดาห์"
+  },
+  {
+   "w": "consequences",
+   "t": "ผลที่ตามมา",
+   "c": "soc",
+   "e": "Every choice has consequences.",
+   "x": "ทุกทางเลือกมีผลที่ตามมา"
+  },
+  {
+   "w": "inquiry",
+   "t": "การสอบถาม, การไต่สวน",
+   "c": "soc",
+   "e": "They launched an official inquiry.",
+   "x": "พวกเขาเปิดการไต่สวนอย่างเป็นทางการ"
+  },
+  {
+   "w": "pivotal",
+   "t": "เป็นจุดเปลี่ยนสำคัญ",
+   "c": "des",
+   "e": "That match was pivotal to the season.",
+   "x": "เกมนั้นเป็นจุดเปลี่ยนของทั้งฤดูกาล"
+  },
+  {
+   "w": "In no time",
+   "t": "ในไม่ช้า, แป๊บเดียว",
+   "c": "sen",
+   "e": "We'll be done in no time.",
+   "x": "เดี๋ยวก็เสร็จแป๊บเดียว"
+  },
+  {
+   "w": "standing ovation",
+   "t": "การลุกขึ้นยืนปรบมือ",
+   "c": "sla",
+   "e": "The performance got a standing ovation.",
+   "x": "การแสดงได้รับการยืนปรบมือ"
+  },
+  {
+   "w": "introvert",
+   "t": "คนที่ชาร์จพลังจากการอยู่คนเดียว",
+   "c": "ppl",
+   "e": "As an introvert, parties drain me.",
+   "x": "ในฐานะคนอินโทรเวิร์ต ปาร์ตี้ดูดพลังฉันมาก"
+  },
+  {
+   "w": "extrovert",
+   "t": "คนที่ชาร์จพลังจากการเจอผู้คน",
+   "c": "ppl",
+   "e": "He's an extrovert who hates being alone.",
+   "x": "เขาเป็นเอ็กซ์โทรเวิร์ตที่เกลียดการอยู่คนเดียว"
+  },
+  {
+   "w": "routine",
+   "t": "กิจวัตรประจำวัน",
+   "c": "day",
+   "e": "My morning routine takes twenty minutes.",
+   "x": "กิจวัตรตอนเช้าของฉันใช้เวลายี่สิบนาที"
+  },
+  {
+   "w": "You are breathtaking.",
+   "t": "คุณน่าทึ่งจนหายใจไม่ทัน",
+   "c": "sen",
+   "e": "You're breathtaking.",
+   "x": "เธอน่าทึ่งจนลืมหายใจ"
+  },
+  {
+   "w": "skeptical",
+   "t": "กังขา, ไม่ค่อยเชื่อ",
+   "c": "des",
+   "e": "I'm skeptical about those numbers.",
+   "x": "ฉันกังขากับตัวเลขพวกนั้น"
+  },
+  {
+   "w": "patrol",
+   "t": "ลาดตระเวน",
+   "c": "act",
+   "e": "Guards patrol the perimeter at night.",
+   "x": "ยามลาดตระเวนรอบรั้วตอนกลางคืน"
+  },
+  {
+   "w": "certain",
+   "t": "แน่นอน, มั่นใจ / บางอย่าง",
+   "c": "des",
+   "e": "I'm certain I locked the door.",
+   "x": "ฉันมั่นใจว่าล็อกประตูแล้ว"
+  },
+  {
+   "w": "miscellaneous / assorted",
+   "t": "เบ็ดเตล็ด, คละแบบ",
+   "c": "des",
+   "e": "A box of miscellaneous cables.",
+   "x": "กล่องสายไฟเบ็ดเตล็ด"
+  },
+  {
+   "w": "bragger",
+   "t": "คนขี้อวด",
+   "c": "ppl",
+   "e": "Nobody likes a bragger.",
+   "x": "ไม่มีใครชอบคนขี้อวด",
+   "n": "รูปที่เจอบ่อยกว่าคือ braggart"
+  },
+  {
+   "w": "eligible",
+   "t": "มีคุณสมบัติ, เข้าเกณฑ์",
+   "c": "des",
+   "e": "You're eligible for a refund.",
+   "x": "คุณเข้าเกณฑ์ขอเงินคืนได้"
+  },
+  {
+   "w": "magnificent",
+   "t": "งดงามตระการตา",
+   "c": "des",
+   "e": "The view from the top is magnificent.",
+   "x": "วิวจากด้านบนงดงามตระการตา"
+  },
+  {
+   "w": "Mandarin",
+   "t": "ภาษาจีนกลาง",
+   "c": "lng",
+   "e": "She's learning Mandarin at night school.",
+   "x": "เธอเรียนภาษาจีนกลางที่โรงเรียนภาคค่ำ"
+  },
+  {
+   "w": "oath",
+   "t": "คำสาบาน, คำปฏิญาณ",
+   "c": "rel",
+   "e": "He took an oath to tell the truth.",
+   "x": "เขาสาบานว่าจะพูดความจริง"
+  },
+  {
+   "w": "sinister",
+   "t": "น่ากลัว, ส่อเจตนาร้าย",
+   "c": "des",
+   "e": "There's something sinister about that house.",
+   "x": "บ้านหลังนั้นมีอะไรบางอย่างที่น่าขนลุก"
+  },
+  {
+   "w": "propaganda",
+   "t": "การโฆษณาชวนเชื่อ",
+   "c": "soc",
+   "e": "The posters were pure propaganda.",
+   "x": "โปสเตอร์พวกนั้นคือการโฆษณาชวนเชื่อล้วนๆ"
+  },
+  {
+   "w": "guilty",
+   "t": "มีความผิด / รู้สึกผิด",
+   "c": "emo",
+   "e": "I feel guilty for not calling.",
+   "x": "ฉันรู้สึกผิดที่ไม่ได้โทรไป"
+  },
+  {
+   "w": "slipper",
+   "t": "รองเท้าแตะใส่ในบ้าน",
+   "c": "day",
+   "e": "Leave your shoes and wear slippers.",
+   "x": "ถอดรองเท้าแล้วใส่รองเท้าแตะในบ้าน"
+  },
+  {
+   "w": "slacker",
+   "t": "คนอู้งาน, คนเฉื่อย",
+   "c": "ppl",
+   "e": "Don't be a slacker on this project.",
+   "x": "อย่าอู้งานในโปรเจกต์นี้นะ"
+  },
+  {
+   "w": "rationalist",
+   "t": "คนที่ยึดเหตุผลเป็นหลัก",
+   "c": "ppl",
+   "e": "He's a rationalist to a fault.",
+   "x": "เขายึดเหตุผลจนเกินพอดี"
+  },
+  {
+   "w": "cabinet",
+   "t": "คณะรัฐมนตรี / ตู้เก็บของ",
+   "c": "soc",
+   "e": "The cabinet approved the budget.",
+   "x": "คณะรัฐมนตรีอนุมัติงบประมาณ"
+  },
+  {
+   "w": "tenant",
+   "t": "ผู้เช่า",
+   "c": "ppl",
+   "e": "The tenant hasn't paid for two months.",
+   "x": "ผู้เช่าไม่จ่ายค่าเช่ามาสองเดือนแล้ว"
+  },
+  {
+   "w": "diversion",
+   "t": "การเบี่ยงเบนความสนใจ / เส้นทางเลี่ยง",
+   "c": "soc",
+   "e": "The fire alarm was just a diversion.",
+   "x": "สัญญาณไฟไหม้เป็นแค่การเบี่ยงเบนความสนใจ"
+  },
+  {
+   "w": "monstrosity",
+   "t": "สิ่งที่อัปลักษณ์/โหดร้ายเกินมนุษย์",
+   "c": "des",
+   "e": "That building is an absolute monstrosity.",
+   "x": "ตึกนั้นอัปลักษณ์สุดๆ"
+  },
+  {
+   "w": "enhance",
+   "t": "ทำให้ดีขึ้น, เสริมให้เด่นขึ้น",
+   "c": "act",
+   "e": "A little salt enhances the flavor.",
+   "x": "เกลือนิดหน่อยช่วยชูรสให้ดีขึ้น"
+  },
+  {
+   "w": "morgue",
+   "t": "ห้องเก็บศพ",
+   "c": "day",
+   "e": "The body was taken to the morgue.",
+   "x": "ศพถูกนำไปห้องเก็บศพ"
+  },
+  {
+   "w": "sewer",
+   "t": "ท่อระบายน้ำเสีย",
+   "c": "day",
+   "e": "They escaped through the sewers.",
+   "x": "พวกเขาหนีออกไปทางท่อระบายน้ำ"
+  },
+  {
+   "w": "jest",
+   "t": "เรื่องล้อเล่น, พูดหยอก",
+   "c": "lng",
+   "e": "I said it in jest.",
+   "x": "ฉันพูดล้อเล่นน่า"
+  },
+  {
+   "w": "Never mind",
+   "t": "ช่างเถอะ, ไม่เป็นไร",
+   "c": "sen",
+   "e": "Never mind, I'll do it myself.",
+   "x": "ช่างเถอะ เดี๋ยวฉันทำเอง"
+  },
+  {
+   "w": "discipline",
+   "t": "ระเบียบวินัย / สาขาวิชา",
+   "c": "des",
+   "e": "It takes discipline to save money.",
+   "x": "การเก็บเงินต้องใช้วินัย"
+  },
+  {
+   "w": "rustic",
+   "t": "แบบชนบท, เรียบง่ายดิบๆ",
+   "c": "des",
+   "e": "The cafe has a rustic wooden interior.",
+   "x": "คาเฟ่ตกแต่งไม้สไตล์ชนบทดิบๆ"
+  },
+  {
+   "w": "Yeah, right!",
+   "t": "อ๋อ เหรอ (ประชด)",
+   "c": "sen",
+   "e": "\"I'll pay you back tomorrow.\" \"Yeah, right.\"",
+   "x": "\"พรุ่งนี้จะคืนเงินนะ\" \"อ๋อ เหรอ\""
+  },
+  {
+   "w": "shiver",
+   "t": "ตัวสั่น (เพราะหนาวหรือกลัว)",
+   "c": "act",
+   "e": "She shivered in the cold rain.",
+   "x": "เธอตัวสั่นในสายฝนที่หนาวเย็น"
+  },
+  {
+   "w": "Goldilocks",
+   "t": "พอเหมาะพอดี ไม่มากไม่น้อย",
+   "c": "sla",
+   "e": "It's the Goldilocks size — not too big, not too small.",
+   "x": "ขนาดกำลังพอดี ไม่ใหญ่ไป ไม่เล็กไป",
+   "n": "มาจากนิทาน Goldilocks and the Three Bears — เด็กหญิงที่ลองชิมข้าวต้มทุกชามจนเจอชามที่พอดี"
+  },
+  {
+   "w": "buzzkill",
+   "t": "ตัวทำลายบรรยากาศ",
+   "c": "sla",
+   "e": "Sorry to be a buzzkill, but we have work tomorrow.",
+   "x": "ขอโทษที่ทำลายบรรยากาศ แต่พรุ่งนี้เรามีงานนะ"
+  },
+  {
+   "w": "buyer's remorse",
+   "t": "อาการเสียใจหลังซื้อของ",
+   "c": "sla",
+   "e": "I had instant buyer's remorse.",
+   "x": "ฉันเสียใจที่ซื้อมันแทบจะทันที"
+  },
+  {
+   "w": "brain fade",
+   "t": "อาการมึนจำอะไรไม่ได้ชั่วขณะ",
+   "c": "sla",
+   "e": "Total brain fade — I forgot her name.",
+   "x": "มึนไปเลย ลืมชื่อเธอสนิท"
+  },
+  {
+   "w": "likelihood",
+   "t": "ความเป็นไปได้",
+   "c": "des",
+   "e": "There's a high likelihood of rain.",
+   "x": "มีความเป็นไปได้สูงว่าฝนจะตก"
+  },
+  {
+   "w": "Fat chance",
+   "t": "ฝันไปเถอะ, เป็นไปได้ยากมาก",
+   "c": "sla",
+   "e": "\"Think he'll apologize?\" \"Fat chance.\"",
+   "x": "\"คิดว่าเขาจะขอโทษไหม\" \"ฝันไปเถอะ\""
+  },
+  {
+   "w": "repulsed",
+   "t": "รู้สึกขยะแขยง",
+   "c": "emo",
+   "e": "I was repulsed by the smell.",
+   "x": "ฉันรู้สึกขยะแขยงกับกลิ่นนั้น"
+  },
+  {
+   "w": "encore",
+   "t": "การเรียกให้แสดงอีกรอบ",
+   "c": "sla",
+   "e": "The crowd shouted for an encore.",
+   "x": "ผู้ชมตะโกนขอให้เล่นอีกเพลง"
+  },
+  {
+   "w": "sterile",
+   "t": "ปลอดเชื้อ / เป็นหมัน / จืดชืดไร้ชีวิต",
+   "c": "des",
+   "e": "The room felt cold and sterile.",
+   "x": "ห้องนั้นให้ความรู้สึกเย็นชาและไร้ชีวิต"
+  },
+  {
+   "w": "specter",
+   "t": "ภูตผี, เงาที่หลอกหลอน",
+   "c": "fan",
+   "e": "The specter of war hung over the region.",
+   "x": "เงาแห่งสงครามแผ่คลุมทั้งภูมิภาค"
+  },
+  {
+   "w": "demonstrate",
+   "t": "สาธิต, แสดงให้เห็น / ชุมนุมประท้วง",
+   "c": "act",
+   "e": "Let me demonstrate how it works.",
+   "x": "ขอสาธิตให้ดูว่ามันทำงานยังไง"
+  },
+  {
+   "w": "mania",
+   "t": "ความคลั่งไคล้, ภาวะคลุ้มคลั่ง",
+   "c": "emo",
+   "e": "There's a mania for that game right now.",
+   "x": "ตอนนี้มีกระแสคลั่งเกมนั้นกันมาก"
+  },
+  {
+   "w": "hatch",
+   "t": "ฟักไข่ / ช่องประตูเล็ก",
+   "c": "act",
+   "e": "The eggs hatched this morning.",
+   "x": "ไข่ฟักออกมาเมื่อเช้านี้"
+  },
+  {
+   "w": "revolting",
+   "t": "น่ารังเกียจ, น่าสะอิดสะเอียน",
+   "c": "des",
+   "e": "That smell is revolting.",
+   "x": "กลิ่นนั้นน่าสะอิดสะเอียนมาก"
+  },
+  {
+   "w": "compatible",
+   "t": "เข้ากันได้",
+   "c": "des",
+   "e": "This charger isn't compatible with my phone.",
+   "x": "ที่ชาร์จนี้ใช้กับมือถือฉันไม่ได้"
+  },
+  {
+   "w": "possession",
+   "t": "สมบัติ, การครอบครอง",
+   "c": "day",
+   "e": "He lost all his possessions in the fire.",
+   "x": "เขาสูญเสียสมบัติทั้งหมดในกองเพลิง"
+  },
+  {
+   "w": "It's a typo.",
+   "t": "พิมพ์ผิดน่ะ",
+   "c": "sen",
+   "e": "Ignore that — it's a typo.",
+   "x": "ไม่ต้องสนใจ พิมพ์ผิดน่ะ"
+  },
+  {
+   "w": "quarantine",
+   "t": "การกักตัว, กักโรค",
+   "c": "soc",
+   "e": "They spent two weeks in quarantine.",
+   "x": "พวกเขากักตัวสองสัปดาห์"
+  },
+  {
+   "w": "or so",
+   "t": "ประมาณ, ราวๆ",
+   "c": "gra",
+   "e": "It'll take an hour or so.",
+   "x": "น่าจะใช้เวลาราวๆ ชั่วโมงหนึ่ง"
+  },
+  {
+   "w": "cuddle",
+   "t": "กอดซุก",
+   "c": "act",
+   "e": "The cat cuddled up next to me.",
+   "x": "แมวมาซุกกอดข้างๆ ฉัน"
+  },
+  {
+   "w": "sore",
+   "t": "เจ็บระบม / งอนน้อยใจ",
+   "c": "des",
+   "e": "My legs are sore from running.",
+   "x": "ขาฉันระบมจากการวิ่ง",
+   "n": "sore loser = คนแพ้ไม่เป็น"
+  },
+  {
+   "w": "mercenary",
+   "t": "ทหารรับจ้าง",
+   "c": "fan",
+   "e": "They hired mercenaries to guard the caravan.",
+   "x": "พวกเขาจ้างทหารรับจ้างคุ้มกันขบวน"
+  },
+  {
+   "w": "exotic",
+   "t": "แปลกใหม่จากต่างถิ่น",
+   "c": "des",
+   "e": "The market sells exotic fruit.",
+   "x": "ตลาดขายผลไม้แปลกๆ จากต่างถิ่น",
+   "n": "ในโน้ตสะกดผิดเป็น exitic"
+  },
+  {
+   "w": "double time",
+   "t": "ด่วนจี๋, เร่งความเร็วเป็นเท่าตัว",
+   "c": "sla",
+   "e": "Move it, double time!",
+   "x": "ไปเร็ว ด่วนจี๋เลย"
+  },
+  {
+   "w": "obligation",
+   "t": "ภาระผูกพัน, ข้อผูกมัด",
+   "c": "soc",
+   "e": "You're under no obligation to accept.",
+   "x": "คุณไม่มีข้อผูกมัดว่าต้องรับ",
+   "n": "ในโน้ตสะกดผิดเป็น oligation"
+  },
+  {
+   "w": "parlor",
+   "t": "ห้องรับแขก / ร้านให้บริการ",
+   "c": "day",
+   "e": "They waited in the front parlor.",
+   "x": "พวกเขารออยู่ในห้องรับแขกด้านหน้า"
+  },
+  {
+   "w": "dilemma",
+   "t": "ภาวะกลืนไม่เข้าคายไม่ออก",
+   "c": "emo",
+   "e": "I'm in a real dilemma here.",
+   "x": "ตอนนี้ฉันกลืนไม่เข้าคายไม่ออกจริงๆ"
+  },
+  {
+   "w": "sewage",
+   "t": "น้ำเสีย, สิ่งปฏิกูล",
+   "c": "day",
+   "e": "Raw sewage was leaking into the canal.",
+   "x": "น้ำเสียดิบรั่วลงคลอง"
+  },
+  {
+   "w": "pillar",
+   "t": "เสาหลัก, ฐานค้ำ",
+   "c": "day",
+   "e": "She's a pillar of the community.",
+   "x": "เธอเป็นเสาหลักของชุมชน"
+  },
+  {
+   "w": "embrace",
+   "t": "โอบกอด / น้อมรับ",
+   "c": "act",
+   "e": "He embraced the change instead of fighting it.",
+   "x": "เขาน้อมรับความเปลี่ยนแปลงแทนที่จะต่อต้าน"
+  },
+  {
+   "w": "about to",
+   "t": "กำลังจะ (ในอีกไม่กี่วินาที)",
+   "c": "gra",
+   "e": "I was about to call you.",
+   "x": "ฉันกำลังจะโทรหาเธอพอดี"
+  },
+  {
+   "w": "gonna",
+   "t": "จะ (going to แบบพูด)",
+   "c": "gra",
+   "e": "I'm gonna head out now.",
+   "x": "ฉันจะไปแล้วนะ"
+  },
+  {
+   "w": "conclude",
+   "t": "สรุป, ปิดท้าย",
+   "c": "act",
+   "e": "The report concludes with three suggestions.",
+   "x": "รายงานปิดท้ายด้วยข้อเสนอสามข้อ"
+  },
+  {
+   "w": "AKA (also known as)",
+   "t": "หรือที่รู้จักกันในชื่อ",
+   "c": "sla",
+   "e": "Bangkok, AKA Krung Thep.",
+   "x": "กรุงเทพฯ หรือที่รู้จักในชื่อ Krung Thep"
+  },
+  {
+   "w": "trajectory",
+   "t": "วิถีการเคลื่อนที่, เส้นทางการเติบโต",
+   "c": "des",
+   "e": "Her career is on an upward trajectory.",
+   "x": "อาชีพของเธออยู่บนเส้นทางขาขึ้น"
+  },
+  {
+   "w": "lad",
+   "t": "เด็กหนุ่ม, ไอ้หนุ่ม (UK)",
+   "c": "ppl",
+   "e": "He's a good lad.",
+   "x": "เขาเป็นเด็กหนุ่มที่ดี"
+  },
+  {
+   "w": "odd",
+   "t": "แปลก / เลขคี่",
+   "c": "des",
+   "e": "That's an odd thing to say.",
+   "x": "นั่นเป็นคำพูดที่แปลกนะ"
+  },
+  {
+   "w": "grace",
+   "t": "ความงดงามอ่อนช้อย / พระคุณ",
+   "c": "rel",
+   "e": "She handled the loss with grace.",
+   "x": "เธอรับมือกับความพ่ายแพ้อย่างสง่างาม"
+  },
+  {
+   "w": "cultivate",
+   "t": "เพาะปลูก, บ่มเพาะ ฝึกฝน",
+   "c": "act",
+   "e": "He cultivated the habit over years.",
+   "x": "เขาบ่มเพาะนิสัยนี้มาหลายปี"
+  },
+  {
+   "w": "versatile",
+   "t": "อเนกประสงค์, ปรับใช้ได้หลายแบบ",
+   "c": "des",
+   "e": "It's a versatile little tool.",
+   "x": "มันเป็นเครื่องมือเล็กๆ ที่ใช้ได้สารพัด",
+   "n": "ในโน้ตสะกดผิดเป็น versalite"
+  },
+  {
+   "w": "souvenir",
+   "t": "ของที่ระลึกจากการเดินทาง",
+   "c": "day",
+   "e": "I bought a souvenir from every trip.",
+   "x": "ฉันซื้อของที่ระลึกจากทุกทริป"
+  },
+  {
+   "w": "graduate diploma",
+   "t": "ประกาศนียบัตรบัณฑิต",
+   "c": "soc",
+   "e": "She's doing a graduate diploma in teaching.",
+   "x": "เธอกำลังเรียนประกาศนียบัตรบัณฑิตด้านการสอน",
+   "n": "ในโน้ตเขียน 'อนุปริญญาโท' — อนุปริญญาคือ associate degree"
+  },
+  {
+   "w": "incapacitate",
+   "t": "ทำให้ไร้ความสามารถ, ทำให้ทำอะไรไม่ได้",
+   "c": "act",
+   "e": "The injury incapacitated him for months.",
+   "x": "อาการบาดเจ็บทำให้เขาทำอะไรไม่ได้หลายเดือน",
+   "n": "ในโน้ตสะกดผิดเป็น incapacition"
+  },
+  {
+   "w": "fume",
+   "t": "ควันพิษ / เดือดดาล",
+   "c": "day",
+   "e": "Exhaust fumes filled the tunnel.",
+   "x": "ควันไอเสียคลุ้งเต็มอุโมงค์"
+  },
+  {
+   "w": "plague",
+   "t": "โรคระบาด / รบกวนไม่หยุด",
+   "c": "soc",
+   "e": "The project was plagued by delays.",
+   "x": "โปรเจกต์ถูกความล่าช้ารบกวนไม่หยุด"
+  },
+  {
+   "w": "proposition",
+   "t": "ข้อเสนอ",
+   "c": "soc",
+   "e": "That's an interesting proposition.",
+   "x": "นั่นเป็นข้อเสนอที่น่าสนใจ"
+  },
+  {
+   "w": "blight",
+   "t": "สิ่งบั่นทอน, โรคพืช / ทำให้เสียหาย",
+   "c": "act",
+   "e": "Corruption blighted the whole project.",
+   "x": "การทุจริตบั่นทอนโครงการทั้งหมด"
+  },
+  {
+   "w": "No biggie!",
+   "t": "ไม่ใช่เรื่องใหญ่",
+   "c": "sen",
+   "e": "You're late? No biggie.",
+   "x": "มาสายเหรอ ไม่ใช่เรื่องใหญ่"
+  },
+  {
+   "w": "obscene",
+   "t": "ลามก, หยาบโลน / มากเกินงาม",
+   "c": "des",
+   "e": "The price is obscene.",
+   "x": "ราคานี่มันเกินงามไปแล้ว"
+  },
+  {
+   "w": "canteen",
+   "t": "โรงอาหาร",
+   "c": "day",
+   "e": "Lunch is served in the canteen.",
+   "x": "มื้อกลางวันเสิร์ฟที่โรงอาหาร"
+  },
+  {
+   "w": "sour",
+   "t": "เปรี้ยว / บูดบึ้ง",
+   "c": "des",
+   "e": "The milk has gone sour.",
+   "x": "นมบูดแล้ว"
+  },
+  {
+   "w": "wallflower",
+   "t": "คนขี้อายที่ยืนอยู่ริมงาน",
+   "c": "ppl",
+   "e": "He was a wallflower at every party.",
+   "x": "เขาเป็นคนขี้อายที่ยืนอยู่มุมงานทุกครั้ง"
+  },
+  {
+   "w": "faint",
+   "t": "เป็นลม / จางแผ่ว",
+   "c": "act",
+   "e": "She fainted from the heat.",
+   "x": "เธอเป็นลมเพราะความร้อน"
+  },
+  {
+   "w": "crooked",
+   "t": "เบี้ยว, คด / ทุจริต",
+   "c": "des",
+   "e": "The picture is hanging crooked.",
+   "x": "รูปแขวนเบี้ยวอยู่"
+  },
+  {
+   "w": "roam",
+   "t": "ร่อนเร่, เดินเตร็ดเตร่",
+   "c": "act",
+   "e": "We roamed the old city for hours.",
+   "x": "เราเดินเตร็ดเตร่ในเมืองเก่าหลายชั่วโมง"
+  },
+  {
+   "w": "classify",
+   "t": "จำแนก, จัดหมวดหมู่",
+   "c": "act",
+   "e": "The files are classified by year.",
+   "x": "แฟ้มถูกจำแนกตามปี"
+  },
+  {
+   "w": "filthy",
+   "t": "สกปรกโสมม",
+   "c": "des",
+   "e": "The kitchen was absolutely filthy.",
+   "x": "ครัวสกปรกโสมมสุดๆ"
+  },
+  {
+   "w": "variant",
+   "t": "ตัวแปร, รูปแบบที่ต่างออกไป",
+   "c": "des",
+   "e": "We tested three variants of the design.",
+   "x": "เราทดสอบดีไซน์สามแบบ",
+   "n": "ในโน้ตสะกดผิดเป็น varaint"
+  },
+  {
+   "w": "servant",
+   "t": "คนรับใช้",
+   "c": "ppl",
+   "e": "The servants lived in the east wing.",
+   "x": "คนรับใช้อยู่ปีกตะวันออก"
+  },
+  {
+   "w": "sovereign",
+   "t": "องค์อธิปัตย์, ผู้มีอำนาจสูงสุด",
+   "c": "fan",
+   "e": "The sovereign alone can pardon him.",
+   "x": "มีเพียงองค์อธิปัตย์เท่านั้นที่อภัยโทษเขาได้"
+  },
+  {
+   "w": "emissary",
+   "t": "ทูต, ผู้แทนที่ถูกส่งไป",
+   "c": "fan",
+   "e": "An emissary arrived from the north.",
+   "x": "ทูตคนหนึ่งมาถึงจากทางเหนือ"
+  },
+  {
+   "w": "scythe",
+   "t": "เคียวใหญ่ด้ามยาว",
+   "c": "fan",
+   "e": "Death is always drawn with a scythe.",
+   "x": "ยมทูตมักถูกวาดคู่กับเคียวใหญ่"
+  },
+  {
+   "w": "veil",
+   "t": "ผ้าคลุมหน้า / ปกปิด",
+   "c": "day",
+   "e": "The deal was done under a veil of secrecy.",
+   "x": "ดีลนี้ทำกันภายใต้ม่านความลับ"
+  },
+  {
+   "w": "sulk",
+   "t": "งอน, ทำหน้าบึ้งเงียบ",
+   "c": "act",
+   "e": "He's been sulking all afternoon.",
+   "x": "เขางอนมาทั้งบ่ายแล้ว"
+  },
+  {
+   "w": "horny",
+   "t": "เงี่ยน, มีอารมณ์ทางเพศ",
+   "c": "des",
+   "e": "That's a crude way to say he's horny.",
+   "x": "นั่นเป็นวิธีพูดหยาบๆ ว่าเขาเงี่ยน",
+   "n": "คำหยาบ ใช้เฉพาะกับเพื่อนสนิท"
+  },
+  {
+   "w": "orphanage",
+   "t": "สถานเลี้ยงเด็กกำพร้า",
+   "c": "soc",
+   "e": "She grew up in an orphanage.",
+   "x": "เธอโตมาในสถานเลี้ยงเด็กกำพร้า"
+  },
+  {
+   "w": "recompense",
+   "t": "ค่าตอบแทน, การชดเชย",
+   "c": "soc",
+   "e": "He asked for no recompense.",
+   "x": "เขาไม่ได้ขอค่าตอบแทนใดๆ"
+  },
+  {
+   "w": "achievement",
+   "t": "ความสำเร็จ, การบรรลุเป้าหมาย",
+   "c": "des",
+   "e": "Finishing was an achievement in itself.",
+   "x": "แค่ทำจนจบก็เป็นความสำเร็จแล้ว",
+   "n": "ในโน้ตสะกดผิดเป็น archievement"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T16:00:00Z",
+  "updatedAt": "2026-08-10T06:44:45Z",
   "agents": [
     {
       "id": "claudy",
@@ -247,11 +247,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "แก้มังงะ/To Do ไม่อัปเดต — ย้าย routine จาก git push มาเขียน Firestore",
+      "task": "หน้า Vocabulary — คลังคำศัพท์ 619 คำ + เกมทายคำ",
       "report": {
-        "when": "19:07",
-        "title": "แก้มังงะ/To Do ไม่อัปเดต — ย้าย routine จาก git push มาเขียน Firestore",
-        "body": "เป้แจ้งว่าการ์ดมังงะค้าง 1 ส.ค. และ To Do ค้าง 2 ส.ค. · ไล่หาแล้วพบว่า routine ทั้งคู่ยังรันตรงเวลาทุกวันแต่ push ไม่ขึ้น — หลักฐาน: commit ทุกอันในรีโปเกิดในเวลาทำงานของคนไม่ใช่เวลา routine ยิง (07:35/08:05) ส่วน routine ที่เขียน Firestore (ดูดวง/อีเมล/ข่าว) อัปเดตครบทุกวัน สรุปว่า cloud routine push ขึ้น git ไม่ได้เลย · แก้โดยย้ายทั้งสองไปเขียน Firestore agents/manga + agents/todo (เก็บทั้งก้อนในฟิลด์ dataJson แบบเดียวกับ daysJson ของ agents/finance) แล้วให้ index.html + แอป Widget อ่าน Firestore ก่อน ไฟล์ .json เหลือเป็น fallback · เพิ่มฟิลด์ checkedAt เขียนทุกวันแม้ข้อมูลไม่เปลี่ยน การ์ดจะได้แยกออกว่า 'ตรวจแล้วไม่มีของใหม่' กับ 'routine พัง' · หมายเหตุ: มังงะไม่ได้พังจริง — One Piece 1190 ออก 9 ส.ค. Dandadan 243 ออก 10 ส.ค. Versus ยัง 35 ตรวจ niceoppai แล้ว"
+        "when": "13:44",
+        "title": "หน้า Vocabulary บน AGAPAE Dashboard",
+        "body": "แปลงโน้ตคำศัพท์จาก Google Docs เป็น vocab.json 619 คำไม่ซ้ำ พร้อมตัวอย่างประโยค EN/TH และจัด 13 หมวด · vocab.html มี 4 แท็บ (คลังคำ ค้นหา+กรอง, 5 คำวันนี้ แบบ flashcard, เกมทายคำ 10 ข้อ, ฟอร์มเพิ่มคำใหม่ซิงก์ Firestore agents/vocab) · เพิ่มลิงก์ Vocabulary บนแถบ nav ของ index.html"
       }
     },
     {
