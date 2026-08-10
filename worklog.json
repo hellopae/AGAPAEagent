@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-10T07:13:21Z",
+  "updatedAt": "2026-08-10T07:30:37Z",
   "entries": [
+    {
+      "id": "wl-260810-dale-widget-tabs",
+      "datetime": "2026-08-10T07:30:37Z",
+      "displayDate": "10 ส.ค. 2569",
+      "displayTime": "14:30",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AGAPAE Widget — จัดแถบบนใหม่เป็น 4 แท็บ + Work Log + สรุปการเงิน",
+      "summary": "ตามที่เป้สั่ง: ย้ายพาเนลใหญ่ขึ้นไปเป็นแท็บบน titlebar เรียง AGAPAE WIDGET / TEAM AGAPAE / การเงิน / VOCABULARY · TEAM AGAPAE = สถานะ agent (ย้ายมาจากแถวล่าง) + Work Log ใหม่ 25 รายการล่าสุด กดกางอ่านสรุปเต็ม+ไฟล์ที่แตะ พร้อมปุ่มเปิด dashboard · การเงิน = พาเนลสรุปเดือนนี้ใหม่ 4 ช่อง (รายรับรวม/รายจ่ายรวม/คงเหลือ/สุทธิ) + ปฏิทินเดิม — ช่องสุทธิสลับป้ายเอง ขาดทุนเมื่อ net ติดลบ กำไรเมื่อเป็นบวก จึงไม่ต้องมีสองช่องบอกเรื่องเดียวกัน · แท็บ AGAPAE WIDGET เหลือ Claude/BTC/Monthly · ข่าวเช้า/มังงะ · ดูดวง/อีเมล แล้ว To Do เต็มความกว้างข้างล่าง · แต่ละแท็บ mount ครั้งแรกแล้วซ่อนไว้ ไม่ unmount กันพาเนลที่พับไว้กับวันที่เลือกบนปฏิทินรีเซ็ต · build .app ใหม่ติดตั้งลง /Applications แล้ว",
+      "files": [
+        "Widget/src/App.jsx",
+        "Widget/src/App.css",
+        "Widget/README.md"
+      ]
+    },
     {
       "id": "wl-260810-dale-vocab-widget",
       "datetime": "2026-08-10T07:13:21Z",

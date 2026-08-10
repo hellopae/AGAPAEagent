@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T07:13:21Z",
+  "updatedAt": "2026-08-10T07:30:37Z",
   "agents": [
     {
       "id": "claudy",
@@ -247,11 +247,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "AGAPAE Widget — แท็บ Vocabulary บนหัวการ์ด",
+      "task": "AGAPAE Widget — แถบบน 4 แท็บ + Work Log + สรุปการเงิน",
       "report": {
-        "when": "14:13",
-        "title": "แท็บ Vocabulary บน AGAPAE Widget",
-        "body": "เพิ่มแถบสลับ AGAPAE WIDGET ↔ VOCABULARY บน titlebar · หน้าใหม่มี 5 คำวันนี้ (flashcard), เกมทายคำ 5 ข้อ, ค้นหาเร็ว + ปุ่มเปิดคลังเต็ม · ซิงก์คำที่จำได้แล้วผ่าน Firestore agents/vocab (field known) ให้ widget กับเว็บสุ่มคำชุดเดียวกัน · build + ติดตั้งลง /Applications เรียบร้อย"
+        "when": "14:30",
+        "title": "จัดแถบบน AGAPAE Widget ใหม่เป็น 4 แท็บ",
+        "body": "AGAPAE WIDGET / TEAM AGAPAE (+ Work Log 25 รายการ) / การเงิน (+ สรุป 4 ช่อง: รายรับรวม รายจ่ายรวม คงเหลือ กำไร-ขาดทุนสุทธิ) / VOCABULARY · แท็บซ่อนไว้แทนการ unmount เพื่อคงสถานะพาเนลและปฏิทิน · build + ติดตั้งลง /Applications เรียบร้อย"
       }
     },
     {
