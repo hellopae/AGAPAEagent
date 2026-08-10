@@ -1,6 +1,27 @@
 {
-  "updatedAt": "2026-08-10T06:44:45Z",
+  "updatedAt": "2026-08-10T07:13:21Z",
   "entries": [
+    {
+      "id": "wl-260810-dale-vocab-widget",
+      "datetime": "2026-08-10T07:13:21Z",
+      "displayDate": "10 ส.ค. 2569",
+      "displayTime": "14:13",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AGAPAE Widget — เพิ่มแท็บ Vocabulary บนหัวการ์ด",
+      "summary": "เพิ่มแถบสลับหน้าบน titlebar ของ Tauri widget: AGAPAE WIDGET ↔ VOCABULARY · หน้าใหม่มี 3 พาเนล — 5 คำวันนี้ (flashcard คลิกเปิดความหมาย + ปุ่มจำได้แล้ว + สุ่มชุดใหม่), เกมทายคำ 5 ข้อ (ตัวเลือกลวงจากหมวดเดียวกัน), ค้นหาคำศัพท์ (โชว์ 6 อันดับแรก + ปุ่มเปิดคลังเต็มบนเว็บ) · ไม่ยกคลัง 619 คำมาทั้งก้อนตามที่ตกลงกับเป้ — คลังเต็มยังอยู่บน vocab.html · แยก Panel ออกเป็น src/Panel.jsx ใช้ร่วมกันสองหน้า · เพิ่ม field known ใน Firestore agents/vocab ให้ widget กับเว็บใช้ชุดคำที่จำได้แล้วร่วมกัน จะได้สุ่ม 5 คำวันนี้ตรงกันเสมอ · build .app ใหม่แล้วติดตั้งลง /Applications (ของเดิมสำรองเป็น .bak-20260810)",
+      "files": [
+        "Widget/src/Vocab.jsx",
+        "Widget/src/Panel.jsx",
+        "Widget/src/App.jsx",
+        "Widget/src/App.css",
+        "Widget/README.md",
+        "vocab.html"
+      ]
+    },
     {
       "id": "wl-260810-dale-vocab-page",
       "datetime": "2026-08-10T06:44:45Z",

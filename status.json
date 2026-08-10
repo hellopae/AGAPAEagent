@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T06:44:45Z",
+  "updatedAt": "2026-08-10T07:13:21Z",
   "agents": [
     {
       "id": "claudy",
@@ -247,11 +247,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "หน้า Vocabulary — คลังคำศัพท์ 619 คำ + เกมทายคำ",
+      "task": "AGAPAE Widget — แท็บ Vocabulary บนหัวการ์ด",
       "report": {
-        "when": "13:44",
-        "title": "หน้า Vocabulary บน AGAPAE Dashboard",
-        "body": "แปลงโน้ตคำศัพท์จาก Google Docs เป็น vocab.json 619 คำไม่ซ้ำ พร้อมตัวอย่างประโยค EN/TH และจัด 13 หมวด · vocab.html มี 4 แท็บ (คลังคำ ค้นหา+กรอง, 5 คำวันนี้ แบบ flashcard, เกมทายคำ 10 ข้อ, ฟอร์มเพิ่มคำใหม่ซิงก์ Firestore agents/vocab) · เพิ่มลิงก์ Vocabulary บนแถบ nav ของ index.html"
+        "when": "14:13",
+        "title": "แท็บ Vocabulary บน AGAPAE Widget",
+        "body": "เพิ่มแถบสลับ AGAPAE WIDGET ↔ VOCABULARY บน titlebar · หน้าใหม่มี 5 คำวันนี้ (flashcard), เกมทายคำ 5 ข้อ, ค้นหาเร็ว + ปุ่มเปิดคลังเต็ม · ซิงก์คำที่จำได้แล้วผ่าน Firestore agents/vocab (field known) ให้ widget กับเว็บสุ่มคำชุดเดียวกัน · build + ติดตั้งลง /Applications เรียบร้อย"
       }
     },
     {
