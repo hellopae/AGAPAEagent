@@ -317,15 +317,22 @@ async function boot(){
   MINE = LS.get("vocab_mine", []);
   buildChips(); buildCatSelect(); renderList(); renderDaily(); renderMine();
 
-  // ซิงก์คำที่เพิ่มเองข้ามเครื่องผ่าน Firestore
+  // ซิงก์ข้ามเครื่องผ่าน Firestore — custom = คำที่เพิ่มเอง · known = คำที่จำได้แล้ว
+  // (widget บน Mac อ่าน/เขียน doc เดียวกัน จึงสุ่ม "5 คำวันนี้" ได้ชุดเดียวกันเสมอ)
   DOC.onSnapshot(d=>{
-    const remote = (d.exists && d.data().custom) || [];
+    const data = d.exists ? d.data() : {};
+    const remote = data.custom || [];
     if(Array.isArray(remote)){
       const map = new Map();
       remote.concat(MINE).forEach(w=>{ if(w && w.w) map.set(w.w.toLowerCase(), w) });
       MINE = [...map.values()];
       LS.set("vocab_mine", MINE);
       buildChips(); renderList(); renderMine();
+    }
+    if(Array.isArray(data.known)){
+      const merged = [...new Set(LS.get("vocab_known",[]).concat(data.known))];
+      LS.set("vocab_known", merged);
+      renderDaily();
     }
   }, ()=>{});
 }
@@ -431,7 +438,10 @@ function renderDaily(){
     const known = LS.get("vocab_known",[]);
     if(!list.includes(word)){
       list.push(word); LS.set(key,list);
-      if(!known.includes(word.toLowerCase())){ known.push(word.toLowerCase()); LS.set("vocab_known",known) }
+      if(!known.includes(word.toLowerCase())){
+        known.push(word.toLowerCase()); LS.set("vocab_known",known);
+        DOC.set({ known: firebase.firestore.FieldValue.arrayUnion(word.toLowerCase()) }, { merge:true }).catch(()=>{});
+      }
     }
     renderDaily();
   });
