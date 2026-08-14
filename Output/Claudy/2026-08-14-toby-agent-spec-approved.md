@@ -113,8 +113,8 @@ Kittanate อยากทำแอป/เกมหารายได้ตาม
 2. **สองไฟล์** — `scripts/hook-status.mjs` (MAP) **และ** `scripts/hook-gate.mjs`
    (MAP + NAME + `FACTUAL` + `WRITES_OUTPUT`) · ลืมไฟล์ที่สอง = หลุด quality gate ทั้งหมด
 3. `status.json` — entry ใหม่ใน `agents[]` (`status: "idle"`, `task: ""`)
-4. avatar — ใส่ path `avatars/Toby.png` ไว้เลย (Kittanate กำลังสร้างรูปเอง 14 ส.ค. 2569)
-   ถ้าถึงตอน build แล้วไฟล์ยังไม่มา ให้ทำต่อไปตามปกติแล้วระบุในรายงานว่ารูปยังไม่มา
+4. avatar — ✅ **มาแล้ว** `avatars/Toby.png` 768×1376 (Kittanate ส่ง 14 ส.ค. 2569) commit แล้ว
+   ใส่ path `avatars/Toby.png` ได้เลย ไม่ต้องใส่ `?v=` เพราะเป็นไฟล์ใหม่
 5. Firestore doc `agents/toby` — seed ตาม pattern `scripts/seed-firestore.mjs`
    ถ้ารันไม่ได้ (ไม่มี credential) **รายงานตามจริงว่าข้ามเพราะอะไร ห้ามบอกว่าทำแล้ว**
 6. เอกสาร 3 ที่ให้ตรงกัน:
@@ -122,7 +122,10 @@ Kittanate อยากทำแอป/เกมหารายได้ตาม
      (GAPS มีแต่ Social/Finance/Service ไม่มี Game อยู่แล้ว — ไม่ต้องลบอะไรออก)
    - `.claude/agents/claudy.md` — AGENT ROSTER + ROUTING GUIDE
    - `BACKLOG.md` — เพิ่ม section ของ Toby พร้อมงานแรก 3 ข้อ:
-     - P1: prototype เว็บตัวแรกของแอปแนว Cat on Chair (รอ concept จาก Minnie + core loop จาก Vera)
+     - P1: prototype เว็บตัวแรกของ **"Cat in Room"** — โจทย์เต็มอยู่ที่
+       `Output/Kittanate-source/2026-08-14-cat-in-room-brief.md`
+       โฟลเดอร์โปรเจกต์: `/Users/agapae/Documents/Work PAE/Claude/Cat in Room`
+       (รอ concept จาก Minnie + core loop จาก Vera ก่อน)
      - P2: โครง Capacitor wrapper สำหรับพอร์ตขึ้น iOS/Android
      - เสมอ: ทุก build ต้อง portrait-first และ Kittanate ต้องกดเล่นได้จริงก่อนถือว่าจบ
 
