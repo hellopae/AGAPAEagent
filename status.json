@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T11:10:15Z",
+  "updatedAt": "2026-08-14T11:27:13Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "แท็บ Pain Point + routine หาจุดเจ็บธุรกิจวันละ 3 ใบ",
+      "task": "ขยายขอบเขต Pain Point + ติดตั้งแอป Widget ตัวใหม่",
       "report": {
-        "when": "18:10",
-        "title": "Pain Point ขึ้นทั้งเว็บและ Widget แล้ว",
-        "body": "แท็บ Pain Point บน dashboard แสดง 3 ใบของวันนี้ + คลังไอเดียทั้งหมด · แอป Widget เปลี่ยนพาเนล MONTHLY เป็น PAIN POINT BUSINESS · routine 'Pain Point Daily' รันทุกเช้า 08:20 น. เขียน Firestore agents/painpoint · ค้างไว้: ต้อง tauri build + ติดตั้งแอป Widget ใหม่ถึงจะเห็นพาเนลใหม่บนเครื่อง และ routine ยังไม่เคยรันจริงสักครั้ง"
+        "when": "18:27",
+        "title": "Widget ตัวใหม่ติดตั้งแล้ว",
+        "body": "พาเนล PAIN POINT · BUSINESS แทน MONTHLY เรียบร้อย · ขอบเขตหัวข้อขยายเป็นธุรกิจอื่นและเรื่องชีวิตประจำวัน · routine รอบแรกจริงคือพรุ่งนี้ 08:20 น. · 3 ใบที่เห็นตอนนี้เป็น seed จาก scan วันแรกจึงยังเป็นเรื่องงานพิมพ์ทั้งหมด"
       }
     },
     {
