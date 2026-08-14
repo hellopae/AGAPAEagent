@@ -34,18 +34,20 @@ const MAP = {
   "libby-index": "libby",
   "mind-visual": "mind",
   "dale-devops": "dale",
+  "toby-gamedev": "toby",
 };
 const NAME = {
   minnie: "Minnie", reese: "Reese", rae: "Rae", vera: "Vera", chris: "Chris",
   nick: "Nick", libby: "Libby", mind: "Mind", dale: "Dale", news: "News", claudy: "Claudy",
+  toby: "Toby",
 };
 
 // output ของ agent เหล่านี้มี factual claims ได้ → ต้องผ่าน Reese ก่อน Chris (CLAUDE.md ข้อ 6)
-const FACTUAL = new Set(["minnie", "rae", "nick", "dale", "news"]);
+const FACTUAL = new Set(["minnie", "rae", "nick", "dale", "news", "toby"]);
 // งาน pure design/layout — ข้าม fact-check ได้ตาม SOP
 const VISUAL = new Set(["vera", "mind", "libby"]);
 // agent ที่ควรมีไฟล์ผลงานใน Output/<Name>/ (DoD ข้อ 1)
-const WRITES_OUTPUT = new Set(["minnie", "reese", "rae", "vera", "mind", "nick", "dale", "chris", "news"]);
+const WRITES_OUTPUT = new Set(["minnie", "reese", "rae", "vera", "mind", "nick", "dale", "chris", "news", "toby"]);
 
 const MAX_BLOCKS = 3;     // กันลูป: block ได้มากสุด 3 ครั้งต่อ session
 const MAX_QA_ROUNDS = 3;  // SOP-01: แก้เกิน 3 รอบยังไม่ผ่าน = หยุด รายงาน Kittanate

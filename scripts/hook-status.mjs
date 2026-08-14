@@ -33,6 +33,7 @@ const MAP = {
   "libby-index":    "libby",
   "mind-visual":    "mind",
   "dale-devops":    "dale",
+  "toby-gamedev":   "toby",
 };
 
 // ---- read stdin ----

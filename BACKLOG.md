@@ -222,6 +222,21 @@
 - [ ] P3: วางโครง TANAPAT web app ตัวใหม่ (Target stack: React+TS / Express / PostgreSQL) —
   **เริ่มเมื่อ Kittanate สั่งเท่านั้น** ตอนนี้แค่เตรียม checklist การตั้งโปรเจกต์ไว้
 
+## 🎮 Toby (Game & Interactive App) — agent ใหม่ เปิดใช้ 14 ส.ค. 2569
+
+โจทย์เต็ม: `Output/Kittanate-source/2026-08-14-cat-in-room-brief.md`
+โฟลเดอร์โปรเจกต์: `/Users/agapae/Documents/Work PAE/Claude/Cat in Room`
+
+- [ ] P1: **prototype เว็บตัวแรกของ "Cat in Room"** — เกมเลี้ยงแมวในห้องบรรยากาศไทย
+  core action = หิ้งพระ/สวดมนต์/นั่งสมาธิรายวัน (Kittanate ตัดสิน 14 ส.ค. 2569)
+  ⛔ **เริ่มไม่ได้จนกว่าจะมี** concept จาก Minnie + core loop/UX จาก Vera + ผ่าน Chris [culture]
+  MVP = ห้อง 1 ห้อง · แมว 1 ตัว · ของขยับได้ 5–8 ชิ้น · core action 1 อย่าง · เซฟ localStorage
+- [ ] P2: ระบบ asset ที่เพิ่มสัตว์ชนิดใหม่ได้โดยไม่แตะโค้ด (schema + naming convention)
+  — คอขวดของโปรเจกต์คือมือคนวาด ไม่ใช่โค้ด
+- [ ] P2: โครง Capacitor wrapper สำหรับพอร์ตขึ้น iOS/Android
+- [ ] เสมอ: ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)
+  และ Kittanate ต้องกดเล่นได้จริงก่อนถือว่าจบ
+
 ## 📰 News (Cloud Routine)
 
 - [ ] เสมอ: รันอัตโนมัติ 09:00 — Claudy เช็คทุกเช้าว่ามี worklog entry + อีเมลถึง Kittanate

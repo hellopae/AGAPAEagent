@@ -31,6 +31,7 @@
 | จัดระบบไฟล์ / metadata / index | **Libby** → `@libby-index` |
 | analytics / ยอดขาย / metrics | **Nick** → `@nick-analytics` |
 | build / deploy / API / repo / ระบบ | **Dale** → `@dale-devops` |
+| ทำเกม / แอป interactive / prototype ที่กดเล่นได้ | **Toby** → `@toby-gamedev` |
 | ข่าวรายวัน (09:00 ทุกวัน) | **Cloud routine** → News → Chris → Rae → email |
 
 ## ORCHESTRATION RULES

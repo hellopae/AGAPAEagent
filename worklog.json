@@ -1,6 +1,29 @@
 {
-  "updatedAt": "2026-08-10T07:38:53Z",
+  "updatedAt": "2026-08-14T09:03:53Z",
   "entries": [
+    {
+      "id": "wl-260814-claudy-zw2g",
+      "datetime": "2026-08-14T09:03:53Z",
+      "displayDate": "14 ส.ค. 2569",
+      "displayTime": "16:03",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "สร้าง agent Toby ครบ 7 จุด + ขึ้น dashboard",
+      "summary": "Kittanate อนุมัติสร้าง agent ใหม่สายทำเกม/แอป · แตะครบ 7 จุด: .claude/agents/toby-gamedev.md · MAP ใน hook-status.mjs และ hook-gate.mjs (กลุ่ม FACTUAL + WRITES_OUTPUT) · status.json · index.html SEED_AGENTS · avatars/Toby.png (Kittanate ส่งมาเอง 768x1376) · Firestore doc agents/toby sortOrder 10 · เอกสาร CLAUDE.md + claudy.md + BACKLOG.md · หมายเหตุ: Claudy ลงมือเองเพราะ session เปิดจากนอกโฟลเดอร์ทำให้ delegate dale-devops ไม่ได้ · เจอเพิ่ม: SOP-09 เขียนไว้ 6 จุด แต่ต้องแตะ index.html เป็นจุดที่ 7 ด้วย ไม่งั้น agent ใหม่ไม่ขึ้น dashboard",
+      "files": [
+        ".claude/agents/toby-gamedev.md",
+        "scripts/hook-status.mjs",
+        "scripts/hook-gate.mjs",
+        "status.json",
+        "index.html",
+        "CLAUDE.md",
+        ".claude/agents/claudy.md",
+        "BACKLOG.md"
+      ]
+    },
     {
       "id": "wl-260810-dale-finance-stack",
       "datetime": "2026-08-10T07:38:53Z",

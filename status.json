@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T07:38:53Z",
+  "updatedAt": "2026-08-14T09:03:53Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "Research Sprint — เป้ควรไปเรียนอะไรเพิ่ม",
+      "task": "สร้าง agent Toby ครบ 7 จุด + ขึ้น dashboard",
       "report": {
-        "when": "11:10",
-        "title": "Research Sprint — เป้ควรไปเรียนอะไรเพิ่ม",
-        "body": "คุม sprint 6 agent 2 รอบถกเถียง แล้วสรุปเอง: คอขวดของ TANAPAT คือชั่วโมงเครื่องที่ขายไม่ออก ไม่ใช่ราคา — 62% ของแผนไม่ใช่การเรียน ที่ต้องเรียนจริงเหลือ 88 ชม./ปี ตัดภาษาจีน/ญี่ปุ่นและอื่น ๆ รวม ~1,900 ชม. ข้อค้นพบสำคัญสุดคือลูกค้า 3 ใน 6 ราย (AEON/Blue Lotus/รพ.) อยู่บนสิ่งพิมพ์ที่กำลังถูกจอแทน → ต้องวินิจฉัยสาเหตุเครื่องว่าง 1 สุดสัปดาห์ ก่อนตัดสินใจเรื่องเรียน"
+        "when": "16:03",
+        "title": "Toby เข้าทีมแล้ว",
+        "body": "สร้าง agent Toby (toby-gamedev) ครบทุกจุด — agent file, hook MAP ทั้ง 2 ไฟล์, status.json, index.html, avatar, Firestore, เอกสาร 3 ที่ · กลุ่ม gate = FACTUAL + WRITES_OUTPUT เหมือน Dale · งานแรกของ Toby คือ prototype เว็บ Cat in Room รอ concept จาก Minnie และ core loop จาก Vera ก่อน"
       }
     },
     {
@@ -253,6 +253,29 @@
         "title": "แท็บการเงิน: สรุปบน ปฏิทินล่าง",
         "body": "เปลี่ยนจากซ้าย-ขวาเป็นบน-ล่างตามที่เป้ขอ ปฏิทินได้เต็มความกว้าง · การ์ดสรุปกางเป็น 4 ช่องแถวเดียวเมื่อหน้าต่างกว้าง · ตัดบรรทัดจำนวนวันที่เหลือที่ซ้ำกันออก"
       }
+    },
+    {
+      "id": "toby",
+      "name": "Toby",
+      "role": "Game & Interactive App Developer",
+      "pipeline": "standalone",
+      "img": "avatars/Toby.png",
+      "persona": "ทำของให้คนกดเล่นจริง ไม่ใช่ส่งแค่โค้ด — ถ้ายังไม่ได้รันดูเอง จะไม่พูดว่าเสร็จ",
+      "caps": [
+        "Prototype เว็บ Vite + React + TS (portrait-first)",
+        "Game loop / timer / animation / sprite sheet",
+        "รับงานวาดมือเข้าระบบเป็น asset ใช้งานได้",
+        "พอร์ตข้ามแพลตฟอร์ม: Capacitor / Tauri"
+      ],
+      "what": [
+        "สร้าง prototype ที่กดเล่นได้จริงทุกขั้น ไม่ใช่ส่งแค่โค้ด",
+        "build ทีละ 1 ฟีเจอร์ แล้วให้เทสต์ทันที ห้ามรวบ",
+        "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
+        "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
+      ],
+      "status": "idle",
+      "task": "",
+      "report": null
     },
     {
       "id": "news",
