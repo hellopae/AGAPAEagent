@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T09:03:53Z",
+  "updatedAt": "2026-08-14T11:10:15Z",
   "agents": [
     {
       "id": "claudy",
@@ -19,11 +19,11 @@
         "คุมบันทึก session และ work tracker"
       ],
       "status": "done",
-      "task": "สร้าง agent Toby ครบ 7 จุด + ขึ้น dashboard",
+      "task": "แท็บ Pain Point + routine หาจุดเจ็บธุรกิจวันละ 3 ใบ",
       "report": {
-        "when": "16:03",
-        "title": "Toby เข้าทีมแล้ว",
-        "body": "สร้าง agent Toby (toby-gamedev) ครบทุกจุด — agent file, hook MAP ทั้ง 2 ไฟล์, status.json, index.html, avatar, Firestore, เอกสาร 3 ที่ · กลุ่ม gate = FACTUAL + WRITES_OUTPUT เหมือน Dale · งานแรกของ Toby คือ prototype เว็บ Cat in Room รอ concept จาก Minnie และ core loop จาก Vera ก่อน"
+        "when": "18:10",
+        "title": "Pain Point ขึ้นทั้งเว็บและ Widget แล้ว",
+        "body": "แท็บ Pain Point บน dashboard แสดง 3 ใบของวันนี้ + คลังไอเดียทั้งหมด · แอป Widget เปลี่ยนพาเนล MONTHLY เป็น PAIN POINT BUSINESS · routine 'Pain Point Daily' รันทุกเช้า 08:20 น. เขียน Firestore agents/painpoint · ค้างไว้: ต้อง tauri build + ติดตั้งแอป Widget ใหม่ถึงจะเห็นพาเนลใหม่บนเครื่อง และ routine ยังไม่เคยรันจริงสักครั้ง"
       }
     },
     {

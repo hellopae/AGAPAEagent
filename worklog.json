@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-14T09:03:53Z",
+  "updatedAt": "2026-08-14T11:10:15Z",
   "entries": [
+    {
+      "id": "wl-260814-claudy-iege",
+      "datetime": "2026-08-14T11:10:15Z",
+      "displayDate": "14 ส.ค. 2569",
+      "displayTime": "18:10",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "แท็บ Pain Point + routine หาจุดเจ็บธุรกิจวันละ 3 ใบ",
+      "summary": "Kittanate สั่งเพิ่มทั้งบนเว็บและแอป Widget · เว็บ: แท็บ Pain Point ใหม่ แสดงการ์ดของวันนี้ + คลังไอเดียทั้งหมดแยกตามวัน อ่าน Firestore agents/painpoint (dataJson) ก่อน แล้ว fallback painpoint.json แพตเทิร์นเดียวกับ todo/manga · แอป Widget: พาเนล MONTHLY บทความ → PAIN POINT BUSINESS (build ผ่านแล้ว แต่ต้อง tauri build + ติดตั้งใหม่ถึงจะเห็นบนเครื่อง) · routine ใหม่ 'Pain Point Daily' รันทุก 08:20 น. เขียน Firestore เท่านั้น ไม่ push git ตามบทเรียนของ routine Manga · seed 3 ใบแรกจาก scan วันนี้ (สีเพี้ยนพิสูจน์ไม่ได้ / Canva ไม่พร้อมพิมพ์ / มือใหม่ส่งไฟล์ไม่เป็น) ทุกใบ status=unverified",
+      "files": [
+        "index.html",
+        "painpoint.json",
+        "Widget/src/App.jsx (คนละรีโป)"
+      ]
+    },
     {
       "id": "wl-260814-claudy-zw2g",
       "datetime": "2026-08-14T09:03:53Z",
