@@ -172,6 +172,63 @@
   .w-btc-sig .bs-bar i{display:block;height:100%;border-radius:999px}
   .w-btc-sig .bs-sub{font-size:10.5px;color:var(--ink-faint);line-height:1.4}
   .w-btc-sig .bs-src{font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em}
+  /* ---------- Pain Point view ---------- */
+  .pp-today-head,.pp-log-head{
+    display:flex;align-items:baseline;gap:10px;
+    margin:22px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+  .pp-log-head{margin-top:38px}
+  .pp-h{font-size:15px;font-weight:600;margin:0;font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .pp-date{font-size:11px;color:var(--ink-faint);margin-left:auto}
+  .pp-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .pp-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:8px;
+  }
+  .pp-card .pp-ind{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--gold);
+  }
+  .pp-card .pp-title{font-size:14.5px;font-weight:600;line-height:1.45}
+  .pp-card .pp-row{font-size:12.5px;line-height:1.65;color:var(--ink-faint)}
+  .pp-card .pp-row b{color:inherit;font-weight:600;opacity:.85}
+  .pp-card .pp-quote{
+    border-left:2px solid var(--gold);padding:2px 0 2px 10px;
+    font-size:12.5px;line-height:1.6;font-style:italic;
+  }
+  .pp-card .pp-idea{
+    background:rgba(0,0,0,.03);border-radius:8px;padding:8px 10px;
+    font-size:12.5px;line-height:1.6;
+  }
+  .pp-card .pp-foot{
+    display:flex;align-items:center;gap:8px;margin-top:2px;
+    font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint);
+  }
+  .pp-card .pp-foot a{color:var(--ink-faint)}
+  .pp-flag{
+    display:inline-block;padding:1px 6px;border-radius:999px;
+    border:1px solid var(--line);font-size:9.5px;letter-spacing:.04em;
+  }
+  .pp-flag.unverified{color:var(--flagged);border-color:var(--flagged)}
+  .pp-flag.verified{color:var(--done);border-color:var(--done)}
+  /* คลังไอเดีย — แถวเดียวต่อใบ อ่านไล่ได้เร็ว */
+  .pp-log-day{margin-bottom:18px}
+  .pp-log-day .pp-day-label{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-faint);
+    letter-spacing:.05em;margin-bottom:6px;
+  }
+  .pp-log-item{
+    display:flex;gap:10px;align-items:baseline;padding:7px 0;
+    border-bottom:1px solid var(--line);font-size:13px;line-height:1.6;
+  }
+  .pp-log-item .pp-log-ind{
+    flex:none;width:150px;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    color:var(--gold);text-transform:uppercase;letter-spacing:.05em;
+  }
+  @media(max-width:560px){
+    .pp-log-item{flex-direction:column;gap:2px}
+    .pp-log-item .pp-log-ind{width:auto}
+  }
   /* Manga widget */
   .w-manga{display:flex;flex-direction:column;gap:8px;min-height:0}
   .w-manga a.mg{
@@ -515,6 +572,9 @@
         Team Console <span class="tab-count" id="wlCount">0</span>
       </button>
       <button class="view-tab" data-v="widgets" onclick="switchView('widgets')">Widgets</button>
+      <button class="view-tab" data-v="pain" onclick="switchView('pain')">
+        Pain Point <span class="tab-count" id="painCount">0</span>
+      </button>
       <button class="view-tab" data-v="finance" onclick="switchView('finance')">การเงิน</button>
       <button class="view-tab" data-v="todo" onclick="switchView('todo')">
         To Do <span class="tab-count" id="todoCount">0</span>
@@ -593,6 +653,32 @@
       </div>
 
     </div>
+  </div>
+</div>
+
+<!-- ===== PAIN POINT VIEW ===== -->
+<div id="painView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Pain Point · Business</div>
+      <p>จุดที่เป็นปัญหาจริงของธุรกิจต่าง ๆ · 3 ไอเดียใหม่ทุกวัน</p>
+    </section>
+    <div class="pp-today-head">
+      <h3 class="pp-h">วันนี้</h3>
+      <span class="mono pp-date" id="ppDate">—</span>
+    </div>
+    <div id="ppToday"><div class="muted" style="padding:20px 0">กำลังโหลด…</div></div>
+
+    <div class="pp-log-head">
+      <h3 class="pp-h">คลังไอเดียทั้งหมด</h3>
+      <span class="mono pp-date" id="ppLogCount">—</span>
+    </div>
+    <div id="ppLog"></div>
+
+    <footer>
+      <span class="mono" id="ppModeTag">—</span>
+      <span id="ppModeMsg">ข้อมูลจากไฟล์ <span class="mono">painpoint.json</span></span>
+    </footer>
   </div>
 </div>
 
@@ -1167,9 +1253,11 @@ function switchView(v) {
   document.getElementById('widgetsView').style.display = v === 'widgets' ? '' : 'none';
   document.getElementById('financeView').style.display = v === 'finance' ? '' : 'none';
   document.getElementById('todoView').style.display = v === 'todo' ? '' : 'none';
+  document.getElementById('painView').style.display = v === 'pain' ? '' : 'none';
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
   if (v === 'finance') renderFinance();
   if (v === 'todo') renderTodo();
+  if (v === 'pain') renderPain();
   window.scrollTo(0, 0);
 }
 
@@ -1579,12 +1667,101 @@ async function loadTodo(){
 }
 
 /* =====================================================================
+   PAIN POINT — คลังไอเดียจุดเจ็บของธุรกิจ (routine เขียนวันละ 3 ใบ)
+   Firestore agents/painpoint (dataJson) มาก่อน · painpoint.json เป็น fallback
+   ===================================================================== */
+let PAIN = null;
+
+function ppCard(e){
+  const flag = e.status === 'verified'
+    ? '<span class="pp-flag verified">Reese ✓</span>'
+    : '<span class="pp-flag unverified">ยังไม่ fact-check</span>';
+  const src = e.source
+    ? `<a href="${TD_ESC(e.source)}" target="_blank" rel="noopener">ที่มา</a>` : '';
+  return `<div class="pp-card">
+    <div class="pp-ind">${TD_ESC(e.industry || 'ธุรกิจทั่วไป')}</div>
+    <div class="pp-title">${TD_ESC(e.title || '')}</div>
+    ${e.who ? `<div class="pp-row"><b>ใครเจ็บ:</b> ${TD_ESC(e.who)}</div>` : ''}
+    ${e.pain ? `<div class="pp-row"><b>เจ็บยังไง:</b> ${TD_ESC(e.pain)}</div>` : ''}
+    ${e.quote ? `<div class="pp-quote">“${TD_ESC(e.quote)}”</div>` : ''}
+    ${e.why ? `<div class="pp-row"><b>ทำไมยังไม่มีใครแก้:</b> ${TD_ESC(e.why)}</div>` : ''}
+    ${e.idea ? `<div class="pp-idea"><b>ไอเดีย:</b> ${TD_ESC(e.idea)}</div>` : ''}
+    <div class="pp-foot">${flag}${src ? ' · ' + src : ''}</div>
+  </div>`;
+}
+
+function renderPain(){
+  const todayBox = document.getElementById('ppToday');
+  const logBox   = document.getElementById('ppLog');
+  if(!todayBox || !logBox) return;
+  const all = (PAIN && Array.isArray(PAIN.entries)) ? PAIN.entries : [];
+  if(!all.length){
+    todayBox.innerHTML = '<div class="muted" style="padding:20px 0">ยังไม่มีไอเดีย — routine เขียนทุกเช้า</div>';
+    logBox.innerHTML = '';
+    return;
+  }
+  // "วันนี้" = วันที่ใหม่สุดที่มีในคลัง (ไม่ใช่วันที่ตามนาฬิกา — routine อาจยังไม่รันวันนี้)
+  const latest = all[0].date;
+  const today  = all.filter(e => e.date === latest);
+  const rest   = all.filter(e => e.date !== latest);
+
+  document.getElementById('ppDate').textContent = today[0].displayDate || latest || '';
+  todayBox.innerHTML = `<div class="pp-grid">${today.map(ppCard).join('')}</div>`;
+
+  document.getElementById('ppLogCount').textContent = `${all.length} ไอเดีย`;
+  // จัดกลุ่มตามวัน — เรียงวันใหม่ไปเก่า
+  const byDay = new Map();
+  rest.forEach(e => {
+    if(!byDay.has(e.date)) byDay.set(e.date, []);
+    byDay.get(e.date).push(e);
+  });
+  logBox.innerHTML = byDay.size
+    ? [...byDay.entries()].map(([d, list]) => `<div class="pp-log-day">
+        <div class="pp-day-label">${TD_ESC(list[0].displayDate || d)}</div>
+        ${list.map(e => `<div class="pp-log-item">
+          <span class="pp-log-ind">${TD_ESC(e.industry || '—')}</span>
+          <span>${TD_ESC(e.title || '')}</span>
+        </div>`).join('')}
+      </div>`).join('')
+    : '<div class="muted" style="padding:8px 0">ยังไม่มีไอเดียของวันก่อนหน้า — คลังจะสะสมขึ้นเองทุกวัน</div>';
+}
+
+function updatePainCount(){
+  const el = document.getElementById('painCount');
+  if(!el) return;
+  const all = (PAIN && Array.isArray(PAIN.entries)) ? PAIN.entries : [];
+  el.textContent = all.length;
+}
+
+async function loadPain(){
+  try{
+    PAIN = await fsPayload('painpoint');        // routine เขียน Firestore ทุกเช้า
+    if(!PAIN || !Array.isArray(PAIN.entries)){  // ไฟล์ในรีโปเป็น fallback (อาจเก่า)
+      const res = await fetch('painpoint.json?t=' + Date.now());
+      if(!res.ok) throw new Error(res.status);
+      PAIN = await res.json();
+    }
+    updatePainCount();
+    if(currentView === 'pain') renderPain();
+    const tag = document.getElementById('ppModeTag'), msg = document.getElementById('ppModeMsg');
+    if(tag){ tag.textContent = 'LIVE'; tag.style.color = 'var(--done)'; }
+    const chk = fsCheckedText(PAIN.checkedAt);
+    if(msg) msg.innerHTML = `อัปเดต ${TD_ESC(PAIN.updatedAt || '—')}${chk ? ' · ' + TD_ESC(chk) : ''}`;
+  }catch(e){
+    const tag = document.getElementById('ppModeTag'), msg = document.getElementById('ppModeMsg');
+    if(tag) tag.textContent = 'NO DATA';
+    if(msg) msg.textContent = 'อ่าน painpoint.json ไม่ได้ (ไฟล์หายหรือเปิดผ่าน file://)';
+  }
+}
+
+/* =====================================================================
    BOOT
    ===================================================================== */
 render();          // console grid with seed agents
 renderWorklog();   // worklog timeline (รวมอยู่ใน Console แล้ว) + tab count
 loadWorklog();     // async load real worklog data
 loadTodo();        // To Do list (todo.json)
+loadPain();        // Pain Point ธุรกิจ (painpoint.json / Firestore agents/painpoint)
 </script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
