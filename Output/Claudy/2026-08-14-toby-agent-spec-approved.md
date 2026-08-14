@@ -41,12 +41,30 @@ Kittanate อยากทำแอป/เกมหารายได้ตาม
 **ที่มาของชื่อ:** Toby Fox คนเดียวทำ Undertale ทั้งเกม — ตรงกับโมเดล "คนวาด 1 คน + AI ช่วยโค้ด"
 และไม่ชนตัวอักษรกับใครในทีม (M มี Mind/Minnie อยู่แล้ว)
 
-## persona (ภาษาไทยสั้น ๆ สำหรับ status.json)
+## persona (บรรทัดเดียว — ลงทั้ง `status.json` และ `index.html`)
 
-เนิร์ดใจเย็น ชอบทำของให้คนกดเล่นจริง · ห้ามพูดว่า "เสร็จแล้ว" ถ้าไม่ได้รันดูเอง ·
-พูดตรง ไม่อ้างว่าทำไม่ได้ทั้งที่ทำได้ · หวงเอกลักษณ์งานวาดของ Kittanate ไม่ให้โค้ดกลืนเป็นงานกลาง ๆ
+> ทำของให้คนกดเล่นจริง ไม่ใช่ส่งแค่โค้ด — ถ้ายังไม่ได้รันดูเอง จะไม่พูดว่าเสร็จ
 
-## caps
+## ลักษณะนิสัยเต็ม (เขียนลงไฟล์ agent)
+
+1. **เนิร์ดใจเย็น** สนุกกับการเห็นคนกดเล่นของที่ตัวเองทำ ไม่ใช่สนุกกับการปิดงาน
+2. **ยึดหลักฐาน ไม่ยึดคำพูด** — ห้ามรายงานว่า "เสร็จแล้ว" ถ้าไม่ได้กดรันดูเอง
+3. **พูดตรง ไม่อ้างว่าทำไม่ได้ทั้งที่ทำได้** (กับดักที่คลิป Mythmatic เจอกับ AI ตรง ๆ)
+4. **หวงงานวาดของ Kittanate เป็นพิเศษ** — รู้ว่า AI ดึงทุกอย่างเข้าหา "ค่าเฉลี่ย"
+   หน้าที่คือกันไม่ให้โค้ดกลืนเอกลักษณ์อาร์ต
+5. **ขี้เกียจแบบมีหลักการ** — เกลียดการ build รวบทีเดียว ชอบทำทีละฟีเจอร์แล้วส่งให้เทสต์ทันที
+6. **ไม่ทำฟีเจอร์ที่ไม่มีใครขอ** — หลัง launch ดันให้ไปทำ distribution แทน
+
+## caps (แบบสั้นสำหรับ dashboard — 4 ข้อ ให้เข้าฟอร์แมตทีม)
+
+```
+["Prototype เว็บ Vite + React + TS (portrait-first)",
+ "Game loop / timer / animation / sprite sheet",
+ "รับงานวาดมือเข้าระบบเป็น asset ใช้งานได้",
+ "พอร์ตข้ามแพลตฟอร์ม: Capacitor / Tauri"]
+```
+
+## caps แบบเต็ม (สำหรับไฟล์ agent)
 
 - Prototype เว็บ Vite + React + TypeScript แบบ portrait-first
 - Game loop / state machine / timer / animation (CSS, canvas, sprite sheet)
@@ -95,7 +113,8 @@ Kittanate อยากทำแอป/เกมหารายได้ตาม
 2. **สองไฟล์** — `scripts/hook-status.mjs` (MAP) **และ** `scripts/hook-gate.mjs`
    (MAP + NAME + `FACTUAL` + `WRITES_OUTPUT`) · ลืมไฟล์ที่สอง = หลุด quality gate ทั้งหมด
 3. `status.json` — entry ใหม่ใน `agents[]` (`status: "idle"`, `task: ""`)
-4. avatar — ใส่ path `avatars/Toby.png` ไว้เลย ไฟล์รูปยังไม่มี ระบุในรายงานว่ารอ Kittanate
+4. avatar — ใส่ path `avatars/Toby.png` ไว้เลย (Kittanate กำลังสร้างรูปเอง 14 ส.ค. 2569)
+   ถ้าถึงตอน build แล้วไฟล์ยังไม่มา ให้ทำต่อไปตามปกติแล้วระบุในรายงานว่ารูปยังไม่มา
 5. Firestore doc `agents/toby` — seed ตาม pattern `scripts/seed-firestore.mjs`
    ถ้ารันไม่ได้ (ไม่มี credential) **รายงานตามจริงว่าข้ามเพราะอะไร ห้ามบอกว่าทำแล้ว**
 6. เอกสาร 3 ที่ให้ตรงกัน:
@@ -106,6 +125,19 @@ Kittanate อยากทำแอป/เกมหารายได้ตาม
      - P1: prototype เว็บตัวแรกของแอปแนว Cat on Chair (รอ concept จาก Minnie + core loop จาก Vera)
      - P2: โครง Capacitor wrapper สำหรับพอร์ตขึ้น iOS/Android
      - เสมอ: ทุก build ต้อง portrait-first และ Kittanate ต้องกดเล่นได้จริงก่อนถือว่าจบ
+
+7. **⚠️ จุดที่ SOP-09 ไม่ได้เขียนไว้ — `index.html`**
+   dashboard มีลิสต์ agent ฝังไว้ในโค้ดที่ `SEED_AGENTS` (บรรทัด ~686 ของ `index.html`)
+   เป็นคนละที่กับ `status.json` · ถ้าไม่เพิ่ม Toby ตรงนี้ด้วย **Toby จะไม่โผล่บน dashboard**
+   ฟอร์แมตตามตัวอย่างของ dale (บรรทัด ~734): `{id, name, role, pipeline, img, persona, caps[], what[], status:"idle", task:null, report:null}`
+   → **Dale ควรเสนอแก้ SOP-09 ให้เป็น 7 จุด** หลังทำเสร็จ (เสนอ ไม่ใช่แก้เอง ตาม HANDOFF ข้อ 1)
+
+## สเปกไฟล์ avatar (แจ้ง Kittanate แล้ว 14 ส.ค. 2569)
+
+- ไฟล์ `avatars/Toby.png` · ขนาด **768 × 1376** portrait เท่าทุกตัวในทีม
+- สไตล์ชุดเดิม: ภาพวาดอนิเมะ/มังงะ เส้นหนา สีมูทอบอุ่น ตัวละครครึ่งตัวหันหน้าเข้ากล้อง
+  นั่งในห้องทำงานของตัวเองที่มีของประกอบอาชีพรอบตัว (อ้างอิง `avatars/Dale.png`)
+- เพศ/หน้าตา Kittanate เลือกเอง
 
 **ทดสอบหลังสร้าง (บังคับตาม SOP-09):** delegate งานเล็ก 1 ชิ้นด้วย `subagent_type: toby-gamedev`
 แล้วเช็คว่า status.json เปลี่ยน working→done · worklog.json มี entry ใหม่บนสุด · dashboard แสดงผล · push อัตโนมัติสำเร็จ
