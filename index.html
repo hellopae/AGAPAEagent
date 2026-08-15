@@ -190,21 +190,21 @@
     text-transform:uppercase;color:var(--gold);
   }
   .pp-card .pp-title{font-size:14.5px;font-weight:600;line-height:1.45}
-  .pp-card .pp-row{font-size:12.5px;line-height:1.65;color:var(--ink-faint)}
-  .pp-card .pp-row b{color:inherit;font-weight:600;opacity:.85}
-  .pp-card .pp-quote{
+  .pp-card .pp-row,.pp-log-body .pp-row{font-size:12.5px;line-height:1.65;color:var(--ink-faint)}
+  .pp-card .pp-row b,.pp-log-body .pp-row b{color:inherit;font-weight:600;opacity:.85}
+  .pp-card .pp-quote,.pp-log-body .pp-quote{
     border-left:2px solid var(--gold);padding:2px 0 2px 10px;
     font-size:12.5px;line-height:1.6;font-style:italic;
   }
-  .pp-card .pp-idea{
+  .pp-card .pp-idea,.pp-log-body .pp-idea{
     background:rgba(0,0,0,.03);border-radius:8px;padding:8px 10px;
     font-size:12.5px;line-height:1.6;
   }
-  .pp-card .pp-foot{
+  .pp-card .pp-foot,.pp-log-body .pp-foot{
     display:flex;align-items:center;gap:8px;margin-top:2px;
     font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint);
   }
-  .pp-card .pp-foot a{color:var(--ink-faint)}
+  .pp-card .pp-foot a,.pp-log-body .pp-foot a{color:var(--ink-faint)}
   .pp-flag{
     display:inline-block;padding:1px 6px;border-radius:999px;
     border:1px solid var(--line);font-size:9.5px;letter-spacing:.04em;
@@ -217,17 +217,40 @@
     font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-faint);
     letter-spacing:.05em;margin-bottom:6px;
   }
-  .pp-log-item{
+  .pp-log-item{border-bottom:1px solid var(--line)}
+  .pp-log-item>summary{
     display:flex;gap:10px;align-items:baseline;padding:7px 0;
-    border-bottom:1px solid var(--line);font-size:13px;line-height:1.6;
+    font-size:13px;line-height:1.6;cursor:pointer;list-style:none;
   }
+  .pp-log-item>summary::-webkit-details-marker{display:none}
+  .pp-log-item>summary:hover .pp-log-title{color:var(--gold)}
   .pp-log-item .pp-log-ind{
     flex:none;width:150px;font-family:"IBM Plex Mono",monospace;font-size:10px;
     color:var(--gold);text-transform:uppercase;letter-spacing:.05em;
   }
+  .pp-log-item .pp-log-title{flex:1}
+  .pp-log-item .pp-caret{
+    flex:none;margin-left:auto;font-size:9px;color:var(--ink-faint);
+    transition:transform .15s ease;
+  }
+  .pp-log-item[open]>summary .pp-caret{transform:rotate(90deg)}
+  .pp-log-item[open]>summary .pp-log-title{font-weight:600}
+  .pp-log-body{
+    display:flex;flex-direction:column;gap:8px;
+    padding:2px 0 14px;margin-left:160px;
+  }
+  .pp-log-toggle{
+    margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.05em;color:var(--ink-faint);background:none;
+    border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer;
+  }
+  .pp-log-toggle:hover{color:var(--gold);border-color:var(--gold)}
+  .pp-log-head .pp-date{margin-left:0}
   @media(max-width:560px){
-    .pp-log-item{flex-direction:column;gap:2px}
-    .pp-log-item .pp-log-ind{width:auto}
+    .pp-log-item>summary{flex-wrap:wrap;gap:2px}
+    .pp-log-item .pp-log-ind{width:100%}
+    .pp-log-item .pp-caret{margin-left:8px}
+    .pp-log-body{margin-left:0}
   }
   /* Manga widget */
   .w-manga{display:flex;flex-direction:column;gap:8px;min-height:0}
@@ -672,6 +695,7 @@
     <div class="pp-log-head">
       <h3 class="pp-h">คลังไอเดียทั้งหมด</h3>
       <span class="mono pp-date" id="ppLogCount">—</span>
+      <button class="pp-log-toggle" id="ppLogToggle" type="button">เปิดทั้งหมด</button>
     </div>
     <div id="ppLog"></div>
 
@@ -1672,22 +1696,39 @@ async function loadTodo(){
    ===================================================================== */
 let PAIN = null;
 
-function ppCard(e){
+/* เนื้อในของไอเดีย 1 ใบ — ใช้ร่วมกันทั้งการ์ด "วันนี้" และคลังไอเดียที่กางออก */
+function ppDetail(e){
   const flag = e.status === 'verified'
     ? '<span class="pp-flag verified">Reese ✓</span>'
     : '<span class="pp-flag unverified">ยังไม่ fact-check</span>';
   const src = e.source
     ? `<a href="${TD_ESC(e.source)}" target="_blank" rel="noopener">ที่มา</a>` : '';
-  return `<div class="pp-card">
-    <div class="pp-ind">${TD_ESC(e.industry || 'ธุรกิจทั่วไป')}</div>
-    <div class="pp-title">${TD_ESC(e.title || '')}</div>
-    ${e.who ? `<div class="pp-row"><b>ใครเจ็บ:</b> ${TD_ESC(e.who)}</div>` : ''}
+  return `${e.who ? `<div class="pp-row"><b>ใครเจ็บ:</b> ${TD_ESC(e.who)}</div>` : ''}
     ${e.pain ? `<div class="pp-row"><b>เจ็บยังไง:</b> ${TD_ESC(e.pain)}</div>` : ''}
     ${e.quote ? `<div class="pp-quote">“${TD_ESC(e.quote)}”</div>` : ''}
     ${e.why ? `<div class="pp-row"><b>ทำไมยังไม่มีใครแก้:</b> ${TD_ESC(e.why)}</div>` : ''}
     ${e.idea ? `<div class="pp-idea"><b>ไอเดีย:</b> ${TD_ESC(e.idea)}</div>` : ''}
-    <div class="pp-foot">${flag}${src ? ' · ' + src : ''}</div>
+    <div class="pp-foot">${flag}${src ? ' · ' + src : ''}</div>`;
+}
+
+function ppCard(e){
+  return `<div class="pp-card">
+    <div class="pp-ind">${TD_ESC(e.industry || 'ธุรกิจทั่วไป')}</div>
+    <div class="pp-title">${TD_ESC(e.title || '')}</div>
+    ${ppDetail(e)}
   </div>`;
+}
+
+/* คลังไอเดีย — หัวข้อเป็นแถวเดียว กดแล้วกางรายละเอียดเต็ม */
+function ppLogItem(e){
+  return `<details class="pp-log-item">
+    <summary>
+      <span class="pp-log-ind">${TD_ESC(e.industry || '—')}</span>
+      <span class="pp-log-title">${TD_ESC(e.title || '')}</span>
+      <span class="pp-caret">▶</span>
+    </summary>
+    <div class="pp-log-body">${ppDetail(e)}</div>
+  </details>`;
 }
 
 function renderPain(){
@@ -1718,13 +1759,29 @@ function renderPain(){
   logBox.innerHTML = byDay.size
     ? [...byDay.entries()].map(([d, list]) => `<div class="pp-log-day">
         <div class="pp-day-label">${TD_ESC(list[0].displayDate || d)}</div>
-        ${list.map(e => `<div class="pp-log-item">
-          <span class="pp-log-ind">${TD_ESC(e.industry || '—')}</span>
-          <span>${TD_ESC(e.title || '')}</span>
-        </div>`).join('')}
+        ${list.map(ppLogItem).join('')}
       </div>`).join('')
     : '<div class="muted" style="padding:8px 0">ยังไม่มีไอเดียของวันก่อนหน้า — คลังจะสะสมขึ้นเองทุกวัน</div>';
+  ppSyncToggle();
 }
+
+/* ปุ่มเปิด/ปิดรายละเอียดทั้งคลังพร้อมกัน */
+function ppSyncToggle(){
+  const btn = document.getElementById('ppLogToggle');
+  if(!btn) return;
+  const items = document.querySelectorAll('#ppLog .pp-log-item');
+  btn.style.display = items.length ? '' : 'none';
+  const allOpen = items.length && [...items].every(d => d.open);
+  btn.textContent = allOpen ? 'ปิดทั้งหมด' : 'เปิดทั้งหมด';
+}
+
+document.getElementById('ppLogToggle')?.addEventListener('click', () => {
+  const items = [...document.querySelectorAll('#ppLog .pp-log-item')];
+  const open = !(items.length && items.every(d => d.open));
+  items.forEach(d => { d.open = open; });
+  ppSyncToggle();
+});
+document.getElementById('ppLog')?.addEventListener('toggle', ppSyncToggle, true);
 
 function updatePainCount(){
   const el = document.getElementById('painCount');
