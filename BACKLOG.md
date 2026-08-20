@@ -237,6 +237,25 @@
 - [ ] เสมอ: ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)
   และ Kittanate ต้องกดเล่นได้จริงก่อนถือว่าจบ
 
+## 📢 Marketing (Strategy) — agent ใหม่ เปิดใช้ 20 ส.ค. 2569
+
+เปิดตามคำขอ Kittanate (20 ส.ค. 2569) — จุดเริ่มคือเตรียมลงผลงาน/คลิปบน social ของบริษัท
+โดยมีข้อมูล research Instagram Ads ที่ Reese เคยหาไว้รองรับอยู่แล้ว
+Scope: สังเคราะห์ research (Reese) + sales data (Nick) เป็นแผน ไม่เขียน copy/ออกแบบ/โพสต์เอง
+
+- [ ] P1: **แผนกลยุทธ์ launch แรก** — สังเคราะห์ Instagram Ads research ที่มีอยู่ (เช็คกับ Reese ว่าเอกสารอยู่ที่ path ไหน)
+  + ข้อมูลขาย Etsy/Gumroad จาก Nick (ถ้ายังไม่มี ให้ระบุว่าต้องขอ Nick ทำก่อน) → เสนอ channel priority
+  + ควรลง content/clip อะไรก่อน + ช่วงเวลา/งบ ads ที่แนะนำ (นี่คืองานทดสอบตาม SOP-09 ด้วย)
+- [ ] เสมอ: ทุกตัวเลขในแผนต้องอ้างอิงเอกสาร Reese/Nick จริง หรือมาร์กเป็น assumption ชัดเจน — ห้ามเดาตัวเลขตลาด/ยอดขาย
+- [ ] เสมอ: แผนที่มี factual claims ต้องผ่าน Reese [Fact-check] ก่อน Chris QA เหมือน agent อื่น
+
+⚠️ **บันทึกการสร้าง 20 ส.ค. 2569:** สำรวจ `Output/Reese/` แล้ว **ไม่พบ** เอกสาร Instagram Ads research
+เฉพาะของ TANAPAT — สิ่งที่ใกล้เคียงที่สุดคือ `Output/Research/AI-Money-Playbook-2026.md`
+(สรุปคลิป YouTube เรื่องโมเดลหารายได้ทั่วไป ไม่ใช่ ads research ของ TANAPAT โดยตรง)
+ถ้า Kittanate ยืนยันว่าเคยสั่งให้หาจริง ให้ Reese วิจัยใหม่ก่อน Marketing จะวางแผนได้แม่นขึ้น
+· `subagent_type: "marketing"` เรียกไม่ได้ในเซสชันที่สร้างไฟล์ agent เอง (registry โหลดตอนเริ่ม session
+ไม่ rescan กลางทาง) — ต้องทดสอบ delegate จริงในเซสชันถัดไปที่เปิดจากโฟลเดอร์นี้ตรงๆ ตาม SOP-09
+
 ## 📰 News (Cloud Routine)
 
 - [ ] เสมอ: รันอัตโนมัติ 09:00 — Claudy เช็คทุกเช้าว่ามี worklog entry + อีเมลถึง Kittanate

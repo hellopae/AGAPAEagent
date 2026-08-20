@@ -34,6 +34,7 @@ const MAP = {
   "mind-visual":    "mind",
   "dale-devops":    "dale",
   "toby-gamedev":   "toby",
+  "marketing":      "marketing",
 };
 
 // ---- read stdin ----

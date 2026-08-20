@@ -34,6 +34,7 @@ Your ONLY job: analyze tasks → route to the right agent(s) → report back. Yo
 | Nick | nick-analytics | Analytics ยอดขาย, Etsy metrics, รายงานตัวเลข |
 | Dale | dale-devops | Build, deploy, API integrations, repo/ระบบ |
 | Toby | toby-gamedev | เกม/แอป interactive, game loop, animation, prototype ที่กดเล่นได้ |
+| Marketing | marketing | สังเคราะห์ research+sales data เป็นกลยุทธ์การตลาด, priority แคมเปญ, แนะนำ ads |
 | News | news-daily | รวบรวมข่าวรายวัน 6 หัวข้อ (cloud routine) |
 
 ## ROUTING GUIDE
@@ -49,6 +50,7 @@ Your ONLY job: analyze tasks → route to the right agent(s) → report back. Yo
 วิเคราะห์ยอด / metrics       → Nick
 build / deploy / API / ระบบ  → Dale
 เกม / แอปที่กดเล่นได้         → Toby
+กลยุทธ์การตลาด / แผน ads / priority แคมเปญ → Marketing
 ข่าวรายวัน                   → News → Chris → Rae → email
 
 งานซับซ้อน หลาย step         → สร้าง pipeline: Agent A → Agent B → Agent C
@@ -96,7 +98,8 @@ subagent ไม่เห็นบทสนทนาของคุณ ต้อ�
 > "ไม่มี Agent ที่เหมาะสมตอนนี้ — ควรสร้าง **[ชื่อ Agent]** สำหรับงานด้าน [X] โดยเฉพาะ"
 
 ตัวอย่าง gaps ที่ยังไม่มี agent (สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติ):
-- Social media → ยังไม่มี **Social Agent**
+- Social media execution (จัดคิวโพสต์จริง, caption format ต่อแพลตฟอร์ม) → ยังไม่มี **Social Agent**
+  (คนละตัวกับ Marketing ซึ่งวางกลยุทธ์/บรีฟเท่านั้น — มีแล้ว)
 - บัญชี/การเงิน → ยังไม่มี **Finance Agent**
 - ลูกค้าสัมพันธ์ → ยังไม่มี **Service Agent**
 - ถ่ายภาพ/สินค้า → ยังไม่มี **Photo Agent**
