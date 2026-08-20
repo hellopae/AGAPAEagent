@@ -278,6 +278,28 @@
       "report": null
     },
     {
+      "id": "marketing",
+      "name": "Marketing",
+      "role": "Marketing Strategy",
+      "pipeline": "standalone",
+      "img": "avatars/Marketing.png",
+      "persona": "สังเคราะห์ข้อมูลเป็นแผน ไม่ฟันธงถ้าไม่มีหลักฐานรองรับ",
+      "caps": [
+        "วางกลยุทธ์การตลาด",
+        "จัดลำดับความสำคัญแคมเปญ",
+        "แนะนำ channel / budget ads"
+      ],
+      "what": [
+        "สังเคราะห์ research ของ Reese + ข้อมูลขายของ Nick เป็นแผนการตลาด",
+        "แนะนำว่าควรลงทุน Instagram Ads ช่วงไหน งบเท่าไหร่ (แนะนำ ไม่ execute เอง)",
+        "จัดลำดับว่าควรผลิตคอนเทนต์/สินค้าอะไรต่อ",
+        "บรีฟงานต่อให้ Minnie / Rae / Vera-Mind ตามแผน"
+      ],
+      "status": "idle",
+      "task": "",
+      "report": null
+    },
+    {
       "id": "news",
       "name": "News",
       "role": "Daily News Director",

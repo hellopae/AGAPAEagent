@@ -30,6 +30,7 @@
 | _(Chris แตกงานเองได้)_ | `chris-thai` · `chris-culture` · `chris-print` — **Claudy ห้ามเรียกตรง** |
 | จัดระบบไฟล์ / metadata / index | **Libby** → `@libby-index` |
 | analytics / ยอดขาย / metrics | **Nick** → `@nick-analytics` |
+| กลยุทธ์การตลาด / แผนแคมเปญ / ควรลง Ads ช่องไหน-เมื่อไหร่-งบเท่าไหร่ | **Marketing** → `@marketing` |
 | build / deploy / API / repo / ระบบ | **Dale** → `@dale-devops` |
 | ทำเกม / แอป interactive / prototype ที่กดเล่นได้ | **Toby** → `@toby-gamedev` |
 | ข่าวรายวัน (09:00 ทุกวัน) | **Cloud routine** → News → Chris → Rae → email |
@@ -68,11 +69,11 @@
 
 ## GAPS (ยังไม่มี agent file — สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติเท่านั้น)
 
-- **Social** — Social media management
+- **Social** — Social media *execution* (content calendar, caption format ต่อแพลตฟอร์ม, จัดคิวโพสต์จริง) — คนละตัวกับ Marketing (Marketing วางกลยุทธ์/บรีฟ, Social จะเป็นคนโพสต์จริงเมื่อ volume โพสต์เยอะพอ)
 - **Finance** — บัญชี / การเงิน
 - **Service** — ลูกค้าสัมพันธ์
 
-_(Mind, Libby, Dale มี agent file ครบแล้วตั้งแต่ 5 ก.ค. 2026)_
+_(Mind, Libby, Dale, Marketing มี agent file ครบแล้ว — Marketing เพิ่ม 20 ส.ค. 2026 ตามคำขอ Kittanate)_
 
 ---
 
