@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-08-14T11:27:13Z",
+  "updatedAt": "2026-08-21T04:34:34Z",
   "entries": [
+    {
+      "id": "wl-260821-claudy-1143",
+      "datetime": "2026-08-21T04:34:34Z",
+      "displayDate": "21 ส.ค. 2569",
+      "displayTime": "11:34",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "Widget — ตัด \"ดูดวง\" ออก · ย้าย Bitcoin มาแทน + กราฟ/คำวิเคราะห์",
+      "summary": "Kittanate สั่งจัดหน้า Widget ใหม่: ลบการ์ดดูดวงวันนี้ทิ้ง แล้วย้ายการ์ด BITCOIN จากคอลัมน์ซ้ายมาอยู่หัวคอลัมน์ขวาแทน (เหนืออีเมลใหม่) · เพิ่มกราฟราคา 90 วัน วาดด้วย SVG เอง (เส้นราคา + เส้นเฉลี่ย 50 วันแบบเส้นประ + แถบไล่สี) · เพิ่มบล็อก \"คำวิเคราะห์\" 5 บรรทัด (ราคาเทียบ MA50/MA200, สถานะ Golden/Death Cross, RSI แปลเป็นภาษาคน, ผลตอบแทน 20/60 วัน, แนวรับ-แนวต้านจากกรอบ 90 วัน) และบล็อก \"แนะนำ\" ที่เปลี่ยนข้อความตาม % โอกาสขึ้น + RSI (ร้อนเกิน 70 จะไม่เชียร์ซื้อ ให้รอย่อ) พร้อมบรรทัดกำกับว่าไม่ใช่คำแนะนำการลงทุน · เลิกดึง routine ดูดวงจาก Firestore ในแอป (doc agents/horoscope กับ routine ยังอยู่ ไม่ได้ปิด) · npm run tauri build + ติดตั้งทับ /Applications (สำรองตัวเดิมเป็น .bak-20260821) เปิดแอปใหม่แล้ว",
+      "files": [
+        "Widget/src/App.jsx (คนละรีโป)",
+        "Widget/src/App.css (คนละรีโป)",
+        "/Applications/AGAPAE Widget.app"
+      ]
+    },
     {
       "id": "wl-260814-claudy-4895",
       "datetime": "2026-08-14T11:27:13Z",
