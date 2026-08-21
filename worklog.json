@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-21T04:45:25Z",
+  "updatedAt": "2026-08-21T05:18:32Z",
   "entries": [
+    {
+      "id": "wl-260821-claudy-1520",
+      "datetime": "2026-08-21T05:18:32Z",
+      "displayDate": "21 ส.ค. 2569",
+      "displayTime": "15:20",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "สร้าง Addy — Agent การตลาด คนที่ 13 (ครบ 7 จุดตาม SOP-09)",
+      "summary": "ประชุมทีม 6 คนออกแบบ agent การตลาด: Minnie เสนอ 5 ชื่อ เชียร์ Cam · Mind ก็โหวต Cam · แต่ Chris ตี ❌ FAIL — คนไทยอ่าน Cam ว่า \"แคม\" ซึ่งพ้องกับคำเรียกอวัยวะเพศหญิง ขึ้นแดชบอร์ดที่ลูกค้าเห็นไม่ได้ (Reach ตกด้วย: ไทยออกเสียงเป็น \"รีด\" + ชน Reese) → เลือก Addy ตามที่ Chris เชียร์. Reese ให้หน้าที่ 7 ข้อเรียงตามคอขวดจริง + เจอช่องทางใหม่ที่ไม่เคยมีในรายงานไหน: จัดซื้อจัดจ้างภาครัฐ (กฎกระทรวงบังคับหน่วยงานรัฐซื้อจาก SME ที่ขึ้นทะเบียน สสว. ≥30% ของงบพัสดุ + e-Bidding ให้แต้มต่อราคา 10%) ยืนยัน Google ครองการค้นหาไทย 99.56% · LINE = ช่องปิดการขายไม่ใช่ช่องหา · Etsy ผู้ซื้อ −3.4% YoY. Nick ตรวจของจริงแล้วพบว่ายังไม่มีท่อข้อมูลการตลาดสักท่อ (เว็บไม่มี analytics tag เลย, Etsy ยังไม่เปิดขาย) ทั้ง Reese และ Nick แนะนำตรงกันว่างานแรกของ Addy ต้องเป็น baseline จากใบสั่งงาน ไม่ใช่แคมเปญ. Vera วาง pipeline เป็น content เข้าระหว่าง Reese→Rae. Mind รื้อร่างหน้าตาเดิมทิ้งเพราะซ้ำ Minnie เกือบทั้งดุ้น แล้วทำ character sheet + prompt ใหม่ (ผมหางม้าสูง เบลเซอร์แดงเชอร์รี่ #C8354E ชูนิ้วชี้ 1 นิ้ว ฉากหลังเป็นแท่นพิมพ์ที่เดินอยู่ + บอร์ดคิวเครื่องที่ช่องว่างถูกแปะทับด้วยแท็กงาน). สร้างจริงครบ 7 จุด: agent file · hook 2 ไฟล์ (FACTUAL + WRITES_OUTPUT) · status.json · SEED_AGENTS · Firestore 13 doc · เอกสาร CLAUDE.md/claudy.md/BACKLOG.md · Output/Addy/. แถมแก้บั๊กที่ Vera กับ Nick เจอ: index.html:713 hardcode \"10 Agents\" ทั้งที่มี 12 → ทำเป็น dynamic · PIPELINES[a.pipeline] ไม่มี guard 5 จุด ถ้าตั้ง pipeline ผิดการ์ดหายทั้งกระดาน → ใส่ fallback ครบ · SOP-09 ตกจุด SEED_AGENTS ไป → แก้เป็น 7 จุด + เพิ่มกฎเหล็กของชุด avatar และยุบ Social เข้า Addy. ค้าง: avatars/Addy.png (Kittanate สร้างเองจาก prompt)",
+      "output": "Output/Addy/2026-08-21-addy-charter.md"
+    },
     {
       "id": "wl-260821-claudy-1143",
       "datetime": "2026-08-21T04:45:25Z",

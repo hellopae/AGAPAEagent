@@ -23,6 +23,7 @@
 | ไอเดียใหม่ / concept / brainstorm | **Minnie** → `@minnie-ideas` |
 | วิจัยตลาด / ข้อมูล / คู่แข่ง | **Reese** → `@reese-research` |
 | ตรวจสอบข้อเท็จจริง / เช็ค reference / ความน่าเชื่อถือ | **Reese** → `@reese-research` |
+| แผนการตลาด / แคมเปญ / ช่องทางขาย / ข้อเสนอ / หาลูกค้าใหม่ | **Addy** → `@addy-marketing` |
 | เขียน copy / บทความ / ข้อความบนสินค้า | **Rae** → `@rae-writer` |
 | ออกแบบ UX / layout / wireframe | **Vera** → `@vera-design` |
 | กราฟิก / ภาพประกอบ / brand assets | **Mind** → `@mind-visual` |
@@ -54,6 +55,7 @@
    - Rae's scripts/articles → Reese fact-check
    - Nick's analytics reports → Reese fact-check
    - Dale's technical docs → Reese fact-check
+   - Addy's campaign plans / market claims → Reese fact-check
    - เฉพาะ output ที่ไม่มี factual claims (เช่น pure design/layout จาก Vera/Mind/Libby) จึงข้ามขั้นนี้ได้
    - ⚙️ **hook `scripts/hook-gate.mjs` บังคับข้อนี้จริง** — ถ้าเรียก `chris-qa` ทั้งที่ยังมีงานค้าง fact-check
      hook จะ **deny การเรียกทันที** ข้ามไม่ได้
@@ -68,11 +70,12 @@
 
 ## GAPS (ยังไม่มี agent file — สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติเท่านั้น)
 
-- **Social** — Social media management
 - **Finance** — บัญชี / การเงิน
 - **Service** — ลูกค้าสัมพันธ์
 
 _(Mind, Libby, Dale มี agent file ครบแล้วตั้งแต่ 5 ก.ค. 2026)_
+_(Social ถูกยุบรวมเข้า **Addy** เมื่อ 21 ส.ค. 2569 — งาน social เป็นแค่ 1 ช่องทางในแผนของ Addy
+ไม่แยกเป็น agent ต่างหาก อย่าเสนอสร้าง Social ซ้ำอีก)_
 
 ---
 

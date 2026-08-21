@@ -710,7 +710,7 @@
 <div id="consoleView">
   <div class="wrap">
     <section class="hero">
-      <div class="ey mono">Creator Team · 1 Human · 10 Agents</div>
+      <div class="ey mono" id="teamCount">Creator Team · 1 Human · <span id="agentCount">—</span> Agents</div>
       <p>Dashboard ทีม Sub Agent ของ AGAPAE</p>
     </section>
 
@@ -809,6 +809,11 @@ const SEED_AGENTS = [
    caps:["วิจัยตลาด","วิเคราะห์คู่แข่ง","color psychology"],
    what:["หาเทรนด์พิธีบุญ/งานวัดของไทย","วิเคราะห์เทมเพลตคู่แข่งบน Etsy/Gumroad","ศึกษาจิตวิทยาสีสำหรับลูกค้าไทย","ส่งเอกสารวิจัยให้ Rae"],
    status:"working",task:"วิเคราะห์คู่แข่งการ์ดทำบุญบน Etsy",report:null},
+  {id:"addy",name:"Addy",role:"Marketing & Demand Gen",pipeline:"content",img:"avatars/Addy.png",
+   persona:"หางานมาเติมชั่วโมงเครื่องที่ขายไม่ออก — ทุกงานต้องจบที่ใบขอราคา ไม่ใช่ยอดไลก์",
+   caps:["แผนแคมเปญ & ข้อเสนอ","ช่องทาง: Google / LINE OA / จัดซื้อภาครัฐ","รายชื่อลูกค้ามุ่งหวัง","ตามใบเสนอราคา & เหตุผลที่แพ้"],
+   what:["ทำ baseline จากใบสั่งงานก่อน — ไม่เริ่มที่แคมเปญ","ส่ง brief ให้ Rae/Mind ไม่เขียนคำและไม่ทำภาพเอง","ส่ง log ดิบให้ Nick ไม่สรุปผลงานตัวเอง","เปิดช่องทางใหม่ได้ไตรมาสละ 1 ช่อง มีวันตัดสินล่วงหน้า"],
+   status:"idle",task:null,report:null},
   {id:"rae",name:"Rae",role:"Writer & Copy",pipeline:"design",img:"avatars/Rae.png",
    persona:"เขียนในนามแบรนด์ ไม่ใช่เขียนถึงแบรนด์",
    caps:["ข้อความไทย/อังกฤษ","คำอวยพร","listing copy"],
@@ -1305,9 +1310,11 @@ function mkChip(key,label,color,on){
 const grid = document.getElementById('grid');
 function render(){
   grid.innerHTML = '';
+  const cnt = document.getElementById('agentCount');
+  if (cnt) cnt.textContent = AGENTS.length;
   const list = AGENTS.filter(a => active==='all'||a.pipeline===active);
   list.forEach((a,i) => {
-    const p = PIPELINES[a.pipeline];
+    const p = PIPELINES[a.pipeline] || PIPELINES.standalone;
     const card = document.createElement('div');
     card.className = 'card';
     card.onclick = () => openDrawer(a);
@@ -1331,7 +1338,7 @@ function render(){
   updateStats();
 }
 function artHTML(a){
-  const grad = `linear-gradient(150deg,${PIPELINES[a.pipeline].color},#1b2330)`;
+  const grad = `linear-gradient(150deg,${(PIPELINES[a.pipeline]||PIPELINES.standalone).color},#1b2330)`;
   if(!a.img) return `<div class="ph-art" style="background:${grad}">${a.name[0]}</div>`;
   return `<img class="art" src="${a.img}" alt="${a.name}" onerror="this.outerHTML='<div class=\\'ph-art\\' style=\\'background:${grad}\\'>${a.name[0]}</div>'">`;
 }
@@ -1342,7 +1349,7 @@ function cardStatusHTML(s){
 }
 function avatarHTML(a){
   const initial = a.name[0];
-  const grad = `linear-gradient(140deg,${PIPELINES[a.pipeline].color},#1b2330)`;
+  const grad = `linear-gradient(140deg,${(PIPELINES[a.pipeline]||PIPELINES.standalone).color},#1b2330)`;
   if(!a.img) return `<div class="avatar ph" style="background:${grad}">${initial}</div>`;
   return `<img class="avatar" src="${a.img}" alt="${a.name}" onerror="this.outerHTML='<div class=\\'avatar ph\\' style=\\'background:${grad}\\'>${initial}</div>'">`;
 }
@@ -1364,7 +1371,7 @@ function updateStats(){
 const drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim');
 function openReport(id){ openDrawer(AGENTS.find(x=>x.id===id), true); }
 function openDrawer(a, scrollToReport){
-  const p = PIPELINES[a.pipeline];
+  const p = PIPELINES[a.pipeline] || PIPELINES.standalone;
   drawer.innerHTML = `
     <div class="drawer-head">
       ${avatarHTML(a)}
@@ -1417,7 +1424,7 @@ function buildWlFilters(){
   bar.appendChild(allBtn);
 
   agents.forEach(a => {
-    const p = PIPELINES[a.pipeline];
+    const p = PIPELINES[a.pipeline] || PIPELINES.standalone;
     const btn = document.createElement('button');
     btn.className = 'chip'; btn.dataset.key = a.id;
     btn.innerHTML = `<span class="dot" style="background:${p.color}"></span>${a.name}`;
