@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-08-24T18:39:15Z",
+  "updatedAt": "2026-08-24T18:52:00Z",
   "entries": [
+    {
+      "id": "wl-260825-claudy-0152",
+      "datetime": "2026-08-24T18:52:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "01:52",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png?v=3",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ยกออฟฟิศ 2D ไปไว้บน Widget ของ Mac ด้วย — แท็บ OFFICE",
+      "summary": "พอร์ตผังออฟฟิศทั้งชุดจากหน้าเว็บมาเป็นคอมโพเนนต์ React (src/Office.jsx) แล้วเพิ่มเป็นแท็บที่ 5 ชื่อ OFFICE ถัดจาก TEAM AGAPAE. ตัวเดินยังเป็น DOM ล้วนขยับผ่าน rAF ไม่ผูกกับ state ของ React — 13 ตัวที่ 60fps ถ้าให้ React re-render ทุกเฟรมจะหนักเกินจำเป็น React ดูแลแค่ mount/unmount กับ cleanup rAF ตอนปิดแท็บ. ข้อมูลสถานะดึงจาก team.agents ก้อนเดียวกับที่แท็บ TEAM AGAPAE ใช้อยู่แล้ว ไม่ได้ยิงเน็ตเพิ่ม. รูปพื้นออฟฟิศกับตัวละคร 13 ตัวคัดลอกเข้า public/office/ (1.8MB) bundle มากับแอป — ตั้งใจไม่ดึงจาก GitHub Pages เพราะจะติด CSP ของ Tauri และเปิดแอปตอนเน็ตไม่ดีจะขึ้นห้องว่าง. ปรับสีให้เข้าธีมการ์ดมืด: บับเบิลพื้นเข้ม ป้ายชื่อห้องพื้นเข้ม สีประจำสายใช้โทนสว่างกว่าบนเว็บ และหรี่รูปผังลงนิดให้ไม่แสบตา. ทดสอบใน headless Chrome (สตับ Tauri) ก่อน — ตัวละครโหลดครบ 13 บับเบิลขึ้นถูก ไม่มี error แล้ว build .app ติดตั้งทับ /Applications (สำรองของเดิมเป็น .bak-20260825) เปิดแอปให้แล้ว แอปโตเป็น 17MB",
+      "output": "Widget/src/Office.jsx · Widget/src/Office.css · Widget/public/office/"
+    },
     {
       "id": "wl-260825-claudy-0139",
       "datetime": "2026-08-24T18:39:15Z",
