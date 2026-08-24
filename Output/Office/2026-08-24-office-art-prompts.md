@@ -1,99 +1,93 @@
 # ออฟฟิศทีม AGAPAE — พรอมต์สำหรับ Gen รูป
 
-ตอนนี้ผังออฟฟิศบนหน้า Team Console **วาดด้วยโค้ดล้วน** (SVG + DOM) ยังไม่ต้องมีไฟล์รูปก็ทำงานได้
-เอกสารนี้คือพรอมต์สำหรับ gen รูปมาแทนของที่วาดไว้ เมื่อไหร่ก็ได้
+## สถานะตอนนี้
 
-## วิธีเอารูปมาใส่
+- **พื้นออฟฟิศ** — ใช้รูปที่ Gen มาแล้ว อยู่ที่ `office/floor.jpeg` · พิกัดห้อง ทางเดิน ประตู และโต๊ะทุกตัวใน `index.html` วัดจากรูปนี้ตรง ๆ
+  **ถ้า gen พื้นใหม่ ผังจะไม่ตรงกับที่วัดไว้ ต้องวัดใหม่ทั้งชุด** — ถ้าจะเปลี่ยนบอกก่อนนะครับ
+- **ตัวละคร** — ยังไม่มีไฟล์ ใช้หัว avatar เดิมกับลำตัวสีของสายงานไปก่อน
+  Claudy แบบ SD ที่ gen มาแล้ว **ใช้เป็นต้นแบบของทั้งทีม** — พรอมต์ด้านล่างล็อกสไตล์ตามตัวนั้น
 
-ในไฟล์ `index.html` มองหาบล็อกนี้ (อยู่ต้นส่วน OFFICE):
+## วิธีเอารูปตัวละครมาใส่
+
+1. บันทึกไฟล์เป็น `office/sprites/<id>.png` — id ใช้ตามนี้:
+   `claudy · minnie · reese · addy · rae · vera · mind · chris · libby · nick · dale · toby · news`
+2. เปิด `index.html` หาบรรทัด
 
 ```js
-const OFC_ART = { floor:null, sprites:{} };
+const OFC_ART = { floor:'office/floor.jpeg', sprites:{} };
 ```
 
-- **พื้นออฟฟิศทั้งใบ** → วางไฟล์ที่ `office/floor.png` แล้วแก้เป็น `floor:'office/floor.png'`
-  รูปจะถูกวางทับผังที่วาดด้วยโค้ด (ห้อง/เฟอร์นิเจอร์ที่วาดไว้จะไม่ถูกวาดซ้ำ) แต่ตัวเดินยังเดินตามผังเดิม
-  **ดังนั้นรูปต้องวางห้องตรงตำแหน่งเดิมเป๊ะ ๆ** — ดูตารางพิกัดท้ายเอกสาร
-- **ตัวเอเจนต์** → วางไฟล์ที่ `office/sprites/<id>.png` แล้วแก้เป็น
-  `sprites:{ claudy:'office/sprites/claudy.png', minnie:'office/sprites/minnie.png', ... }`
-  ใส่ทีละคนได้ ใครยังไม่มีรูปก็ใช้หัว avatar เดิมไปก่อน
+   แล้วเติมทีละคน (ใครยังไม่มีรูปก็ใช้หัว avatar เดิมไปก่อน ไม่พัง):
+
+```js
+const OFC_ART = { floor:'office/floor.jpeg', sprites:{
+  claudy:'office/sprites/claudy.png',
+  minnie:'office/sprites/minnie.png',
+}};
+```
+
+> ⚠️ **พื้นหลังต้องโปร่งใสจริง ๆ (PNG มี alpha)** — ตัว Claudy ที่ส่งมาพื้นหลังเป็นสีขาวทึบ
+> ถ้าเอาไปวางในออฟฟิศจะเห็นเป็นกล่องขาวรอบตัว · ตอน gen ให้สั่ง "transparent background, PNG with alpha"
+> หรือส่งไฟล์มา เดี๋ยวผมลบพื้นขาวออกให้
 
 ---
 
-## 1) พื้นออฟฟิศทั้งใบ (1 รูป)
+## พรอมต์ตัวละคร — สไตล์เดียวกับ Claudy
 
-ต้องเป็น **top-down floor plan** สัดส่วน **1000 × 640** (อัตราส่วน 25:16) พื้นหลังทึบ
-
-```
-Top-down 2D office floor plan illustration, flat vector style, soft warm editorial
-palette: cream paper background (#F4F2EE), off-white rooms (#FFFFFF), muted ink lines
-(#D2CEC4), accent colors limited to dusty navy #2A3344, warm brass #9A7B4F, slate teal
-#4A6670, muted plum #8A5A66, sage green #3A6B50. No text, no labels, no people.
-15 rectangular rooms arranged around a cross-shaped corridor, seen strictly from above.
-Furniture drawn simply and readably: desks with chairs, bookshelves, filing cabinets,
-server racks, a pinboard wall, a round meeting table, sofas, a pantry counter with a
-coffee machine, potted plants. Clean thin outlines, subtle drop shadows, no gradients,
-no perspective, no isometric tilt — pure orthographic top view. Aspect ratio 25:16.
-```
-
-## 2) ตัวเอเจนต์ (13 รูป — คนละไฟล์)
-
-ตัวเล็ก ๆ เดินได้ ยืนหันหน้าเข้าหาคนดู ต้อง **พื้นหลังโปร่งใส (PNG transparent)**
-ให้ตัวสูงประมาณ 4–5 เท่าของหัว และ **ตัดขอบชิดตัว** (เท้าอยู่ขอบล่างของรูปพอดี — โค้ดยึดจุดยืนที่เท้า)
-
-พรอมต์ฐาน (ใช้ร่วมกันทุกคน):
+พรอมต์ฐาน ใช้ร่วมกันทุกคน แล้วต่อท้ายด้วยบล็อกของแต่ละคน:
 
 ```
-Tiny 2D character sprite for a top-down office game, full body, standing, facing the
-viewer, flat vector style with clean outlines, soft warm editorial palette, chunky
-readable shapes, no background (transparent PNG), no text, no shadow baked in,
-centered, full body fits the frame with feet at the bottom edge, head slightly oversized
-(about 1/4 of body height) so the face reads at small size.
+Chibi SD-style anime character, full body, standing straight and facing the viewer,
+head about one third of the total body height, big expressive eyes, small simple nose,
+soft rounded body proportions, short stubby limbs.
+Clean flat cel-shaded coloring with bold dark navy outlines of even thickness,
+minimal shading, no gradients, no background details.
+Transparent background (PNG with alpha), no shadow, no text, no border.
+Centered, full body fits inside the frame with the feet touching the bottom edge,
+portrait aspect ratio about 9:16.
 ```
 
-ต่อท้ายด้วยคำอธิบายรายคน — ยึดสีตาม pipeline ของแต่ละคน:
+ต่อท้ายรายคน:
 
-| Agent | สี pipeline | ต่อท้ายพรอมต์ |
-|---|---|---|
-| Claudy | navy `#2A3344` | `A calm, composed young man in a dark navy blazer over a white shirt, holding a slim tablet, neat short black hair, quietly confident expression.` |
-| Minnie | brass `#9A7B4F` | `A bright, curious young woman in a mustard cardigan, short bob haircut, holding a fan of sticky notes, wide excited eyes.` |
-| Reese | brass `#9A7B4F` | `A focused professional woman in a warm brown blouse, glasses, hair tied back, carrying a thick folder of documents under one arm.` |
-| Addy | brass `#9A7B4F` | `An energetic saleswoman in a rust-red jacket, phone headset on, one hand raised mid-pitch, confident stance.` |
-| Rae | teal `#4A6670` | `A thoughtful writer in a soft teal knit sweater, long hair, holding a fountain pen and a small notebook, gentle expression.` |
-| Vera | teal `#4A6670` | `A precise UX designer in a slate blue shirt, straight neat hair, holding a ruler and a paper wireframe, measured posture.` |
-| Mind | teal `#4A6670` | `A sharp-eyed visual designer with a high ponytail and a cherry-red blazer, holding a drawing stylus, color swatch fan clipped to her belt.` |
-| Chris | plum `#8A5A66` | `A stern quality inspector in a deep plum vest, arms crossed, reading glasses low on the nose, red pen tucked behind one ear.` |
-| Libby | plum `#8A5A66` | `A tidy librarian in a muted plum cardigan, hair in a low bun, carrying a labelled archive box.` |
-| Nick | grey `#8C8A86` | `A data analyst in a grey henley, headphones around the neck, holding a coffee mug and looking at a floating chart.` |
-| Dale | grey `#8C8A86` | `A hands-on DevOps engineer in a grey work shirt with rolled sleeves, tool pouch on the belt, holding a network cable.` |
-| Toby | grey `#8C8A86` | `A playful game developer in a grey hoodie, sneakers, holding a game controller, relaxed grin.` |
-| News | green `#3A6B50` | `A neutral news anchor in a forest-green blazer, earpiece, holding a script sheet, composed newsroom posture.` |
+| id | ต่อท้ายพรอมต์ |
+|---|---|
+| `claudy` | *(มีแล้ว — ใช้เป็นต้นแบบ)* `A calm composed young man in a dark navy three-piece suit with an olive green tie, tousled dark navy hair, slight confident smile, holding a light grey tablet with both hands.` |
+| `minnie` | `A bright cheerful young woman in a mustard yellow cardigan over a white blouse, short dark bob haircut, wide excited eyes, holding a fan of colorful sticky notes in one hand.` |
+| `reese` | `A focused young woman in a warm brown blouse and beige skirt, round glasses, dark hair tied back in a low ponytail, hugging a thick stack of documents against her chest.` |
+| `addy` | `An energetic young woman in a rust-red blazer over a white shirt, long wavy dark hair, bright confident grin, holding a smartphone up in one hand.` |
+| `rae` | `A gentle thoughtful young woman in a soft teal knit sweater, long straight dark hair, calm half-smile, holding a small notebook and a fountain pen.` |
+| `vera` | `A precise young woman in a slate blue button-up shirt and dark trousers, neat straight shoulder-length hair, serious focused expression, holding a ruler and a paper wireframe sheet.` |
+| `mind` | `A sharp-eyed young woman in a cherry-red blazer over a white top, dark hair in a high ponytail, confident smirk, holding a drawing stylus, a color swatch fan clipped to her belt.` |
+| `chris` | `A stern middle-aged man in a deep plum vest over a white shirt, short greying dark hair, thin reading glasses low on his nose, arms crossed, a red pen tucked behind one ear.` |
+| `libby` | `A tidy young woman in a muted plum cardigan and long skirt, dark hair in a low bun, small polite smile, carrying a labelled archive box with both hands.` |
+| `nick` | `A relaxed young man in a grey henley shirt, dark messy hair, headphones resting around his neck, holding a coffee mug in one hand.` |
+| `dale` | `A hands-on young man in a grey work shirt with rolled-up sleeves and a tool pouch on his belt, short dark hair, easy grin, holding a coiled blue network cable.` |
+| `toby` | `A playful young man in a grey hoodie and sneakers, messy light brown hair, wide happy grin, holding a black game controller with both hands.` |
+| `news` | `A composed young man in a forest-green blazer and white shirt, neat short dark hair, an earpiece in one ear, holding a script sheet in one hand.` |
 
-> ถ้าอยากได้ท่าเดินด้วย ให้ gen เพิ่มเป็น sprite sheet 4 เฟรม (ยืน · ก้าวซ้าย · ยืน · ก้าวขวา)
-> เรียงแนวนอน พื้นหลังโปร่ง แล้วบอกผมไว้ เดี๋ยวผมแก้โค้ดให้เล่นเป็นแอนิเมชันแทนการเด้งขึ้นลง
+> อยากได้ **ท่าเดิน** ด้วยก็ gen เพิ่มเป็น sprite sheet 4 เฟรมเรียงแนวนอน
+> (ยืน · ก้าวซ้าย · ยืน · ก้าวขวา) พื้นหลังโปร่ง ขนาดเฟรมเท่ากันทุกเฟรม
+> แล้วบอกผม เดี๋ยวแก้โค้ดให้เล่นเป็นแอนิเมชันแทนการเด้งขึ้นลง
 
 ---
 
-## พิกัดห้อง (ถ้าจะ gen พื้นออฟฟิศให้ตรงผังเดิม)
+## ผังที่ใช้อยู่ (วัดจาก `office/floor.jpeg` — ระบบพิกัด 1296 × 816)
 
-ระบบพิกัด `1000 × 640` มุมซ้ายบน = (0,0)
-
-| ห้อง | เจ้าของ | x | y | กว้าง | สูง |
+| ห้อง | ใครอยู่ | x | y | กว้าง | สูง |
 |---|---|---|---|---|---|
-| ห้องไอเดีย | Minnie | 32 | 32 | 164 | 144 |
-| ห้องวิจัย | Reese | 228 | 32 | 182 | 144 |
-| ห้องข่าว | News | 410 | 32 | 182 | 144 |
-| มุมเขียน | Rae | 592 | 32 | 180 | 144 |
-| สตูดิโอภาพ | Mind | 804 | 32 | 164 | 144 |
-| โต๊ะขาย | Addy | 32 | 208 | 164 | 110 |
-| ห้องคลังไฟล์ | Libby | 32 | 320 | 164 | 110 |
-| ศูนย์คุมงาน | Claudy | 228 | 208 | 544 | 222 |
-| ห้องสเปค | Vera | 804 | 208 | 164 | 110 |
-| ห้องตรวจงาน | Chris | 804 | 320 | 164 | 110 |
-| ห้องข้อมูล | Nick | 32 | 462 | 164 | 146 |
-| ห้องเซิร์ฟเวอร์ | Dale | 228 | 462 | 182 | 146 |
-| ห้องเกม | Toby | 410 | 462 | 182 | 146 |
-| ห้องพัก | ส่วนกลาง | 592 | 462 | 180 | 146 |
-| แพนทรี่ | ส่วนกลาง | 804 | 462 | 164 | 146 |
+| ห้องไอเดีย & วิจัย | Minnie · Reese | 41 | 47 | 282 | 185 |
+| สตูดิโอภาพ | Mind | 325 | 47 | 155 | 185 |
+| ห้องเซิร์ฟเวอร์ | Dale | 482 | 47 | 145 | 187 |
+| มุมเขียน | Rae | 692 | 48 | 146 | 186 |
+| ห้องสเปค | Vera | 838 | 48 | 120 | 186 |
+| ห้องข่าว & ข้อมูล | News · Nick | 979 | 48 | 272 | 184 |
+| ห้องคลังไฟล์ | Libby | 41 | 236 | 229 | 96 |
+| โต๊ะขาย | Addy | 41 | 334 | 223 | 255 |
+| ห้องตรวจงาน | Chris | 41 | 596 | 277 | 184 |
+| ห้องเกม | Toby | 325 | 596 | 286 | 184 |
+| ศูนย์คุมงาน | Claudy | 323 | 316 | 295 | 206 |
+| ห้องประชุม | ส่วนกลาง | 681 | 314 | 291 | 210 |
+| แพนทรี่ | ส่วนกลาง | 681 | 591 | 237 | 191 |
+| ห้องพัก | ส่วนกลาง | 972 | 591 | 277 | 191 |
 
-ทางเดิน: แนวตั้งที่ x≈212 และ x≈788 · แนวนอนที่ y≈192 และ y≈446
+ทางเดิน: แนวตั้ง x≈300 · x≈650 · x≈1058 — แนวนอน y≈272 · y≈556

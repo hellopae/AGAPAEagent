@@ -201,79 +201,80 @@
   /* ===== OFFICE — ผังออฟฟิศ 2D ===== */
   .ofc{margin:8px 0 34px}
   .ofc-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
-  .ofc-sub{margin-top:6px;font-size:12.5px;line-height:1.6;color:var(--ink-soft);max-width:62ch}
-  .ofc-toggle{
-    margin-left:auto;flex:none;border:1px solid var(--line-strong);background:var(--card);
-    border-radius:999px;padding:7px 14px;font:inherit;font-size:11.5px;color:var(--ink-soft);
-    cursor:pointer;transition:border-color .15s,color .15s;
-  }
-  .ofc-toggle:hover{border-color:var(--gold);color:var(--gold)}
+  .ofc-sub{margin-top:6px;font-size:12.5px;line-height:1.6;color:var(--ink-soft);max-width:70ch}
   .ofc-scroll{overflow-x:auto;overflow-y:hidden;border-radius:var(--radius)}
   .ofc-stage{
-    position:relative;width:100%;min-width:640px;aspect-ratio:1000/640;
+    position:relative;width:100%;min-width:760px;aspect-ratio:1296/816;
     container-type:inline-size;background:var(--paper-2);
     border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;
   }
   .ofc-plan,.ofc-plan .ofc-svg{display:block;width:100%;height:100%}
-  .ofc-rname{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em}
-  .ofc-room rect:first-of-type{transition:stroke .2s}
+  .ofc-tagbg{fill:var(--card);opacity:.82}
+  .ofc-rname{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-soft);letter-spacing:.02em}
+  .ofc-room rect:first-of-type{transition:stroke .2s;stroke:transparent;stroke-width:2}
   .ofc-room:hover rect:first-of-type{stroke:var(--gold)}
   .ofc-room.on rect:first-of-type{stroke:var(--gold);stroke-width:3}
   .ofc-actors{position:absolute;inset:0;pointer-events:none}
 
-  /* ตัวเอเจนต์ — หัวใช้รูป avatar จริง ตัวเป็นสีของ pipeline */
+  /* ตัวเอเจนต์ — หัวใช้รูป avatar จริง ตัวเป็นสีของสายงาน */
   .ofc-guy{
     position:absolute;transform:translate(-50%,-100%);pointer-events:auto;
-    display:flex;flex-direction:column;align-items:center;gap:0;
-    width:3cqw;border:none;background:none;padding:0;cursor:pointer;
-  }
-  .ofc-guy .bub{
-    font-size:1.15cqw;line-height:1;height:1.35cqw;
-    filter:drop-shadow(0 1px 1px rgba(0,0,0,.18));
+    display:flex;flex-direction:column;align-items:center;
+    width:2.6cqw;border:none;background:none;padding:0;cursor:pointer;
   }
   .ofc-guy .head{
-    width:1.9cqw;height:1.9cqw;border-radius:50%;overflow:hidden;
-    border:.22cqw solid var(--card);box-shadow:0 .1cqw .3cqw rgba(27,28,32,.25);
+    width:2cqw;height:2cqw;border-radius:50%;overflow:hidden;
+    border:.2cqw solid var(--card);box-shadow:0 .1cqw .3cqw rgba(27,28,32,.3);
     background:var(--line);
   }
   .ofc-guy .head img{width:100%;height:100%;object-fit:cover;display:block}
   .ofc-guy[data-dir="l"] .head img{transform:scaleX(-1)}
   .ofc-guy .body{
-    width:1.6cqw;height:1.5cqw;margin-top:-.18cqw;
+    width:1.7cqw;height:1.55cqw;margin-top:-.2cqw;
     border-radius:.5cqw .5cqw .25cqw .25cqw;
-    box-shadow:0 .25cqw .35cqw rgba(27,28,32,.22);
+    box-shadow:0 .25cqw .35cqw rgba(27,28,32,.25);
+    outline:.16cqw solid var(--st,transparent);outline-offset:.06cqw;
   }
-  .ofc-guy .pix{width:4.4cqw;height:auto;display:block;image-rendering:pixelated;
+  .ofc-guy .pix{width:3.4cqw;height:auto;display:block;
     filter:drop-shadow(0 .2cqw .25cqw rgba(27,28,32,.28))}
   .ofc-guy[data-dir="l"] .pix{transform:scaleX(-1)}
+
+  /* ชื่อ + สถานะ ใต้ตัว — โผล่ตอนชี้ */
   .ofc-guy .nm{
-    position:absolute;top:100%;margin-top:.2cqw;white-space:nowrap;
-    font-family:"IBM Plex Mono",monospace;font-size:.95cqw;color:var(--ink-soft);
-    background:var(--card);border-radius:999px;padding:.1cqw .5cqw;
+    position:absolute;top:100%;margin-top:.15cqw;white-space:nowrap;
+    font-family:"IBM Plex Mono",monospace;font-size:.92cqw;color:var(--ink);
+    background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:.12cqw .55cqw;box-shadow:0 .1cqw .3cqw rgba(27,28,32,.14);
     opacity:0;transition:opacity .15s;
   }
+  .ofc-guy .nm i{font-style:normal;color:var(--st,var(--ink-faint))}
   .ofc-guy:hover .nm,.ofc-guy:focus-visible .nm{opacity:1}
   .ofc-guy:hover .head{border-color:var(--gold)}
+
+  /* บับเบิลความคิด */
+  .ofc-guy .think{
+    position:absolute;bottom:100%;margin-bottom:.5cqw;left:50%;transform:translateX(-50%);
+    display:flex;gap:.35cqw;align-items:flex-start;width:max-content;max-width:15cqw;
+    background:var(--card);border:1px solid var(--line-strong);border-radius:.9cqw;
+    padding:.4cqw .6cqw;box-shadow:0 .2cqw .6cqw rgba(27,28,32,.16);
+    font-size:.92cqw;line-height:1.45;color:var(--ink);text-align:left;
+    opacity:0;visibility:hidden;transition:opacity .25s;pointer-events:none;
+  }
+  .ofc-guy .think b{flex:none;font-size:1.05cqw;line-height:1.2}
+  .ofc-guy .think::after{
+    content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    border:.42cqw solid transparent;border-top-color:var(--card);
+  }
+  .ofc-guy[data-bx="l"] .think{left:0;transform:none}
+  .ofc-guy[data-bx="l"] .think::after{left:1.1cqw;transform:none}
+  .ofc-guy[data-bx="r"] .think{left:auto;right:0;transform:none}
+  .ofc-guy[data-bx="r"] .think::after{left:auto;right:1.1cqw;transform:none}
+  .ofc-guy[data-show="1"] .think,.ofc-guy:hover .think{opacity:1;visibility:visible}
+  .ofc-guy:hover{z-index:9999!important}
+
   /* เดิน = ตัวเด้งเบา ๆ (data-act ว่างตอนเดิน) */
   .ofc-guy[data-act=""]{animation:ofcBob .42s steps(2,end) infinite}
   @keyframes ofcBob{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,calc(-100% - .38cqw))}}
-
-  /* รายการคำขอของแต่ละคน */
-  .ofc-wishes{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;margin-top:16px}
-  .ofc-wish{
-    display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;
-    background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;
-    font:inherit;color:inherit;cursor:pointer;transition:border-color .15s;
-  }
-  .ofc-wish:hover{border-color:var(--gold)}
-  .ofc-wish img{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:none;background:var(--line)}
-  .ofc-wish span{font-size:11.5px;line-height:1.5;color:var(--ink-faint)}
-  .ofc-wish b{font-size:12.5px;color:var(--ink);font-weight:600}
-  .ofc-wish em{display:block;margin-top:3px;font-style:normal;color:var(--ink-soft);line-height:1.55}
-  @media(max-width:640px){
-    .ofc-toggle{margin-left:0}
-    .ofc-wishes{grid-template-columns:1fr}
-  }
   /* ---------- Pain Point view ---------- */
   .pp-today-head,.pp-log-head{
     display:flex;align-items:baseline;gap:10px;
@@ -819,9 +820,8 @@
       <div class="ofc-head">
         <div>
           <div class="ey mono" style="margin:0">Office · ออฟฟิศของทีม</div>
-          <p class="ofc-sub">แต่ละคนมีห้องของตัวเองตามที่ขอไว้ · แตะตัวเล็ก ๆ หรือแตะห้องเพื่อเปิดโปรไฟล์ · ท่าทางเดินตามสถานะจริงใน <span class="mono">status.json</span></p>
+          <p class="ofc-sub">แต่ละคนมีห้องของตัวเองตามที่ขอไว้ · เดินไปมาและคิดอะไรอยู่ตามสถานะจริงใน <span class="mono">status.json</span> · แตะตัวหรือแตะห้องเพื่อเปิดโปรไฟล์</p>
         </div>
-        <button class="ofc-toggle" id="ofcWishToggle" onclick="ofcToggleWish()" aria-expanded="false">เอเจนต์ขอห้องแบบไหน ▾</button>
       </div>
       <div class="ofc-scroll">
         <div class="ofc-stage" id="ofcStage">
@@ -829,7 +829,6 @@
           <div class="ofc-actors" id="ofcActors"></div>
         </div>
       </div>
-      <ul class="ofc-wishes" id="ofcWishList" hidden></ul>
     </section>
 
     <div class="filters" id="filters">
@@ -1737,265 +1736,158 @@ async function loadWorklog(){
 }
 
 /* =====================================================================
-   OFFICE — ผังออฟฟิศ 2D ของทีม (ผัง + ตัวเดิน วาดเป็น SVG/DOM ล้วน ไม่พึ่ง lib)
+   OFFICE — ผังออฟฟิศ 2D ของทีม
+   พื้นออฟฟิศใช้รูปที่ Gen มา (office/floor.jpeg) — พิกัดทุกอย่างอิงรูปนั้น
+   ระบบพิกัด 1296 x 816 ตามขนาดรูปจริง แล้วค่อยสเกลตามความกว้างที่แสดง
    ===================================================================== */
-const OFC_W = 1000, OFC_H = 640;
+const OFC_W = 1296, OFC_H = 816;
 
-/* จุดเดินบนทางเดิน — ทางเดินตั้ง 2 เส้น (x=212, x=788) และทางเดินนอน 2 เส้น (y=192, y=446) */
+/* รูปที่ Gen มา — ถ้าอยากกลับไปใช้ผังที่วาดด้วยโค้ด ตั้ง floor เป็น null
+   sprites: {agentId:'office/sprites/xxx.png'} ใส่ทีหลังได้ ใครไม่มีก็ใช้หัว avatar เดิม */
+const OFC_ART = { floor:'office/floor.jpeg', sprites:{} };
+
+/* จุดบนทางเดิน (พื้นที่โล่งในรูป) */
 const OFC_NODES = {
-  L1:[212,104], L2:[212,192], L3:[212,266], L4:[212,376], L5:[212,446], L6:[212,532],
-  R1:[788,104], R2:[788,192], R3:[788,266], R4:[788,376], R5:[788,446], R6:[788,532],
-  T1:[320,192], T2:[500,192], T3:[680,192],
-  B1:[320,446], B2:[500,446], B3:[680,446],
-  C1:[320,320], C2:[500,320], C3:[680,320],
+  A1:[300,272], A2:[362,272], A3:[556,272], A4:[650,272], A5:[806,272], A6:[940,272], A7:[1058,272],
+  L1:[300,392], L2:[300,470], L3:[300,556],
+  M1:[650,150], M2:[650,420], M3:[650,556],
+  B1:[362,556], B2:[500,556], B3:[800,556], B4:[944,556], B5:[1036,556],
+  R1:[1058,420], P1:[944,648],
 };
 const OFC_EDGES = {
-  L1:['L2'], L2:['L1','L3','T1'], L3:['L2','L4'], L4:['L3','L5'], L5:['L4','L6','B1'], L6:['L5'],
-  R1:['R2'], R2:['R1','R3','T3'], R3:['R2','R4'], R4:['R3','R5'], R5:['R4','R6','B3'], R6:['R5'],
-  T1:['L2','T2','C1'], T2:['T1','T3','C2'], T3:['T2','R2','C3'],
-  B1:['L5','B2','C1'], B2:['B1','B3','C2'], B3:['B2','R5','C3'],
-  C1:['T1','B1','C2'], C2:['C1','C3','T2','B2'], C3:['C2','T3','B3'],
+  A1:['A2','L1'], A2:['A1','A3'], A3:['A2','A4'], A4:['A3','A5','M1','M2'],
+  A5:['A4','A6'], A6:['A5','A7'], A7:['A6','R1'],
+  L1:['A1','L2'], L2:['L1','L3'], L3:['L2','B1'],
+  M1:['A4'], M2:['A4','M3'], M3:['M2','B2','B3'],
+  B1:['L3','B2'], B2:['B1','M3'], B3:['M3','B4'], B4:['B3','B5','P1'], B5:['B4','R1'],
+  R1:['A7','B5'], P1:['B4'],
 };
 
-/* ห้อง — owner = id เอเจนต์ (null = พื้นที่ส่วนกลาง) · node = จุดทางเดินหน้าห้อง */
+/* ห้อง — พิกัดวัดจากรูปจริง · door = ช่องประตูที่ต้องเดินผ่าน · node = จุดทางเดินหน้าห้อง
+   wish = คำขอของเจ้าของห้อง (เอามาใช้เป็นความคิดในบับเบิลด้วย) */
 const OFC_ROOMS = [
-  {key:'minnie', owner:'minnie', name:'ห้องไอเดีย',      x:32,  y:32,  w:164, h:144, kit:'ideas',    seat:[112,104], node:'L1', door:'R',
-   wish:'ขอผนังที่แปะโพสต์อิทได้ทั้งด้าน ไอเดียจะได้ไม่หายไปกับความจำ'},
-  {key:'reese',  owner:'reese',  name:'ห้องวิจัย',       x:228, y:32,  w:182, h:144, kit:'research', seat:[319,100], node:'T1', door:'D',
-   wish:'ขอชั้นหนังสือติดผนังกับจอสองจอ — จอหนึ่งเปิดแหล่งอ้างอิง อีกจอเขียนเฉพาะสิ่งที่ยืนยันแล้ว'},
-  {key:'news',   owner:'news',   name:'ห้องข่าว',        x:410, y:32,  w:182, h:144, kit:'news',     seat:[501,100], node:'T2', door:'D',
-   wish:'ขอนาฬิกาโลกหลายเรือนกับจอข่าวที่เปิดค้างไว้ ตื่นมาต้องรู้ทันทีว่าคืนที่ผ่านมามีอะไร'},
-  {key:'rae',    owner:'rae',    name:'มุมเขียน',        x:592, y:32,  w:180, h:144, kit:'writer',   seat:[682,100], node:'T3', door:'D',
-   wish:'ขอมุมเงียบ โคมไฟอุ่น ๆ กับโต๊ะไม้ — เสียงคีย์บอร์ดคนอื่นทำให้จังหวะประโยคเพี้ยน'},
-  {key:'mind',   owner:'mind',   name:'สตูดิโอภาพ',      x:804, y:32,  w:164, h:144, kit:'visual',   seat:[886,104], node:'R1', door:'L',
-   wish:'ขอไฟสีคงที่ทั้งวันกับแผ่นเทียบสีติดผนัง แล้วอย่าให้ใครเอาของสีจัดมาวางในเฟรม'},
-
-  {key:'addy',   owner:'addy',   name:'โต๊ะขาย',         x:32,  y:208, w:164, h:110, kit:'sales',    seat:[112,266], node:'L3', door:'R',
-   wish:'ขอโต๊ะติดกระดานไปป์ไลน์ เห็นทุกใบเสนอราคาที่ยังไม่ปิด กับโทรศัพท์ที่กดโทรออกได้จริง'},
-  {key:'libby',  owner:'libby',  name:'ห้องคลังไฟล์',    x:32,  y:320, w:164, h:110, kit:'archive',  seat:[112,376], node:'L4', door:'R',
-   wish:'ขอตู้ลิ้นชักติดป้ายทุกช่อง ไม่ต้องสวย ขอให้หยิบเจอในสามวินาที'},
-  {key:'vera',   owner:'vera',   name:'ห้องสเปค',        x:804, y:208, w:164, h:110, kit:'ux',       seat:[886,266], node:'R3', door:'L',
-   wish:'ขอจอแนวตั้ง กริดบนโต๊ะ กับที่ว่างพอวางกระดาษสเปคเรียงกันสามแผ่นโดยไม่ต้องซ้อน'},
-  {key:'chris',  owner:'chris',  name:'ห้องตรวจงาน',     x:804, y:320, w:164, h:110, kit:'quality',  seat:[886,376], node:'R4', door:'L',
-   wish:'ขอโต๊ะไฟส่องพิสูจน์อักษรกับประตูที่ปิดได้ — ตรวจงานไม่ควรมีคนยืนลุ้นอยู่ข้างหลัง'},
-
-  {key:'nick',   owner:'nick',   name:'ห้องข้อมูล',      x:32,  y:462, w:164, h:146, kit:'analytics',seat:[112,532], node:'L6', door:'R',
-   wish:'ขอจอกราฟสามจอเรียงกัน กับที่วางกาแฟที่ไม่เสี่ยงหกใส่คีย์บอร์ด'},
-  {key:'dale',   owner:'dale',   name:'ห้องเซิร์ฟเวอร์',  x:228, y:462, w:182, h:146, kit:'devops',   seat:[319,528], node:'B1', door:'U',
-   wish:'ขอห้องแยกที่มีตู้แร็ค เสียงพัดลมดังหน่อยไม่เป็นไร deploy พังตอนตีสองจะได้ไม่ต้องปลุกใคร'},
-  {key:'toby',   owner:'toby',   name:'ห้องเกม',         x:410, y:462, w:182, h:146, kit:'game',     seat:[501,528], node:'B2', door:'U',
-   wish:'ขอโซฟากับจอใหญ่ ต้องนั่งเล่นเองให้ครบก่อนถึงจะบอกว่าเกมเสร็จ'},
-
-  {key:'lounge', owner:null,     name:'ห้องพัก',         x:592, y:462, w:180, h:146, kit:'lounge',   seat:null,      node:'B3', door:'U',
-   wish:null},
-  {key:'pantry', owner:null,     name:'แพนทรี่',         x:804, y:462, w:164, h:146, kit:'pantry',   seat:null,      node:'R6', door:'L',
-   wish:null},
-  {key:'floor',  owner:'claudy', name:'ศูนย์คุมงาน',      x:228, y:208, w:544, h:222, kit:'control',  seat:[500,288], node:'C2', door:null,
-   wish:'ขอโต๊ะกลางออฟฟิศ เห็นทุกคนได้พร้อมกัน กับกระดานคิวงานที่ลบทั้งแผ่นได้ในทีเดียว'},
+  {key:'r1', name:'ห้องไอเดีย & วิจัย', x:41,   y:47,  w:282, h:185, node:'A1', door:[298,238],
+   seats:{minnie:[95,168], reese:[188,168]}},
+  {key:'r2', name:'สตูดิโอภาพ',        x:325,  y:47,  w:155, h:185, node:'A2', door:[358,238],
+   seats:{mind:[390,168]}},
+  {key:'r3', name:'ห้องเซิร์ฟเวอร์',    x:482,  y:47,  w:145, h:187, node:'A3', door:[556,240],
+   seats:{dale:[556,196]}},
+  {key:'r4', name:'มุมเขียน',           x:692,  y:48,  w:146, h:186, node:'A5', door:[806,240],
+   seats:{rae:[744,150]}},
+  {key:'r5', name:'ห้องสเปค',           x:838,  y:48,  w:120, h:186, node:'A6', door:[940,240],
+   seats:{vera:[912,168]}},
+  {key:'r6', name:'ห้องข่าว & ข้อมูล',  x:979,  y:48,  w:272, h:184, node:'A7', door:[1020,238],
+   seats:{news:[1100,172], nick:[1196,172]}},
+  {key:'l1', name:'ห้องคลังไฟล์',       x:41,   y:236, w:229, h:96,  node:'L1', door:[276,296],
+   seats:{libby:[150,312]}},
+  {key:'l2', name:'โต๊ะขาย',            x:41,   y:334, w:223, h:255, node:'L2', door:[270,470],
+   seats:{addy:[104,492]}},
+  {key:'bl', name:'ห้องตรวจงาน',        x:41,   y:596, w:277, h:184, node:'L3', door:[300,590],
+   seats:{chris:[108,726]}},
+  {key:'bm', name:'ห้องเกม',            x:325,  y:596, w:286, h:184, node:'B1', door:[362,590],
+   seats:{toby:[426,726]}},
+  {key:'war',name:'ศูนย์คุมงาน',        x:323,  y:316, w:295, h:206, node:'A3', door:[548,312],
+   seats:{claudy:[502,470]}},
+  {key:'meet',name:'ห้องประชุม',        x:681,  y:314, w:291, h:210, node:'A5', door:[756,310],
+   seats:{}},
+  {key:'pantry',name:'แพนทรี่',         x:681,  y:591, w:237, h:191, node:'P1', door:[922,648],
+   seats:{}},
+  {key:'lounge',name:'ห้องพัก',         x:972,  y:591, w:277, h:191, node:'B5', door:[1020,588],
+   seats:{}},
 ];
 
-/* จุดยืน/นั่งของกิจกรรมส่วนกลาง */
+/* จุดยืนของกิจกรรมส่วนกลาง */
 const OFC_SPOTS = {
-  pantry:  [[856,516],[906,548],[900,500]],
-  lounge:  [[634,540],[690,556],[722,516]],
-  meeting: [[318,372],[372,372],[345,404]],
-  control: [[452,326],[552,326]],
+  pantry:  [[800,676],[860,672],[762,706]],
+  lounge:  [[1150,650],[1152,772],[1214,712]],
+  meeting: [[798,452],[894,452],[846,496]],
+  control: [[456,472],[552,472]],
 };
+const OFC_SPOT_ROOM = {pantry:'pantry', lounge:'lounge', meeting:'meet', control:'war'};
 
-/* ---------- ชิ้นเฟอร์นิเจอร์พื้นฐาน (วาดเป็น SVG ตรง ๆ ไม่พึ่งรูป) ---------- */
-const ofcRect = (x,y,w,h,f,r) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r??3}" fill="${f}"/>`;
-const ofcCirc = (x,y,r,f) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${f}"/>`;
-const OFC_C = {wood:'#C9AE86', wood2:'#B4966B', metal:'#B9BCC2', dark:'#5A6472', screen:'#3E5366',
-               paper:'#EFECE4', green:'#6E8F72', warm:'#D8A65E', soft:'#DCD8CF'};
-
-/* โต๊ะทำงาน + เก้าอี้ (หันหน้าลง) */
-function ofcDesk(cx,cy,w){
-  w = w||64;
-  return ofcRect(cx-w/2, cy-14, w, 20, OFC_C.wood, 4)
-       + ofcRect(cx-w/2+3, cy-11, w-6, 4, OFC_C.wood2, 2)
-       + ofcCirc(cx, cy+14, 8, OFC_C.dark)
-       + ofcRect(cx-7, cy+18, 14, 5, OFC_C.dark, 2);
-}
-/* จอคอม n จอ วางบนโต๊ะ */
-function ofcScreens(cx,cy,n){
-  let s=''; const w=17, gap=4, tot=n*w+(n-1)*gap;
-  for(let i=0;i<n;i++){
-    const x = cx - tot/2 + i*(w+gap);
-    s += ofcRect(x, cy-26, w, 12, OFC_C.screen, 2) + ofcRect(x+6, cy-14, 5, 3, OFC_C.dark, 1);
-  }
-  return s;
-}
-/* ชั้นวาง/ตู้ ติดผนัง */
-function ofcShelf(x,y,w,h,rows){
-  let s = ofcRect(x,y,w,h,OFC_C.wood2,3);
-  const n = rows||3;
-  for(let i=1;i<n;i++) s += ofcRect(x+2, y+i*(h/n)-1, w-4, 2, '#00000018', 1);
-  for(let i=0;i<n;i++)
-    for(let j=0;j<4;j++)
-      s += ofcRect(x+5+j*(w-10)/4, y+i*(h/n)+3, 4, h/n-7, ['#8A5A66','#4A6670','#9A7B4F','#3A6B50'][(i+j)%4], 1);
-  return s;
-}
-/* กระดาน + โพสต์อิท */
-function ofcBoard(x,y,w,h,notes){
-  let s = ofcRect(x,y,w,h,OFC_C.paper,3) + `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="none" stroke="#00000018"/>`;
-  const cols = ['#D8A65E','#8FB48F','#D2A0A8','#9BB6C8'];
-  for(let i=0;i<(notes||6);i++){
-    const px = x+5+ (i%4)*((w-12)/4), py = y+5+ Math.floor(i/4)*((h-10)/2);
-    s += ofcRect(px, py, (w-14)/4, (h-14)/2, cols[i%4], 1);
-  }
-  return s;
-}
-const ofcPlant = (x,y) => ofcCirc(x,y,7,OFC_C.green) + ofcCirc(x-4,y-4,5,'#7FA083') + ofcRect(x-4,y+4,8,7,OFC_C.wood2,2);
-const ofcRack  = (x,y,w,h) => {
-  let s = ofcRect(x,y,w,h,'#6B7280',3);
-  for(let i=0;i<5;i++) s += ofcRect(x+3, y+4+i*((h-8)/5), w-6, (h-8)/5-2, '#4B5563', 1)
-                          + ofcCirc(x+w-7, y+4+i*((h-8)/5)+2, 1.4, i%2?'#8FB48F':'#D8A65E');
-  return s;
+/* สถานะ — ใช้คำเดียวกับที่การ์ดเอเจนต์ใช้ */
+const OFC_STATUS = {
+  working:{t:'กำลังทำงาน', e:'⌨️', c:'var(--working)'},
+  idle:   {t:'ว่าง',        e:'💤', c:'var(--idle)'},
+  done:   {t:'เสร็จแล้ว',   e:'✅', c:'var(--done)'},
+  flagged:{t:'รอแก้ไข',     e:'⚠️', c:'var(--flagged)'},
+  sent:   {t:'ส่งแล้ว',     e:'📧', c:'var(--sent)'},
 };
-const ofcSofa = (x,y,w) => ofcRect(x,y,w,20,'#7C8794',6) + ofcRect(x+3,y+3,w-6,11,'#95A0AC',5);
+const OFC_ACT = {desk:'⌨️', coffee:'☕', chat:'💬', report:'📋', check:'🔍', meet:'🗂️', rest:'😌', play:'🎮', walk:'👣'};
 
-/* ---------- ชุดของแต่ละห้อง ---------- */
-function ofcKit(kit, r){
-  const cx = r.x + r.w/2, top = r.y + 26, bot = r.y + r.h;
-  switch(kit){
-    case 'ideas':
-      return ofcBoard(r.x+12, top, r.w-24, 34, 8) + ofcDesk(cx, r.seat[1], 60) + ofcPlant(r.x+r.w-20, bot-18);
-    case 'research':
-      return ofcShelf(r.x+10, top, 46, 40, 3) + ofcShelf(r.x+r.w-56, top, 46, 40, 3)
-           + ofcDesk(cx, r.seat[1], 66) + ofcScreens(cx, r.seat[1], 2);
-    case 'news':{
-      let s = ofcDesk(cx, r.seat[1], 72) + ofcScreens(cx, r.seat[1], 3);
-      for(let i=0;i<4;i++){
-        const x = r.x+22+i*((r.w-44)/3);
-        s += ofcCirc(x, top+12, 8, OFC_C.paper) + `<circle cx="${x}" cy="${top+12}" r="8" fill="none" stroke="#00000022"/>`
-           + `<line x1="${x}" y1="${top+12}" x2="${x}" y2="${top+7}" stroke="#5A6472" stroke-width="1.4"/>`;
-      }
-      return s;
-    }
-    case 'writer':
-      return ofcDesk(cx, r.seat[1], 58) + ofcRect(cx-10, r.seat[1]-24, 20, 10, OFC_C.paper, 1)
-           + ofcCirc(cx+34, r.seat[1]-16, 7, OFC_C.warm) + ofcRect(cx+32, r.seat[1]-10, 4, 12, OFC_C.wood2, 1)
-           + ofcShelf(r.x+12, top, 40, 30, 2) + ofcPlant(r.x+r.w-22, bot-18);
-    case 'visual':
-      return ofcDesk(cx, r.seat[1], 62) + ofcRect(cx-16, r.seat[1]-26, 32, 14, OFC_C.screen, 2)
-           + (()=>{ let s=''; const cols=['#8A5A66','#9A7B4F','#4A6670','#3A6B50','#D8A65E','#7C8794'];
-               for(let i=0;i<6;i++) s += ofcRect(r.x+14+i*((r.w-28)/6), top, (r.w-34)/6, 22, cols[i], 2); return s; })();
-    case 'sales':
-      return ofcBoard(r.x+10, top-4, r.w-20, 26, 4) + ofcDesk(cx, r.seat[1], 58)
-           + ofcRect(cx+20, r.seat[1]-22, 9, 12, OFC_C.dark, 2);
-    case 'archive':{
-      let s='';
-      for(let i=0;i<4;i++){
-        const x = r.x+12+i*((r.w-24)/4);
-        s += ofcRect(x, top-4, (r.w-30)/4, 30, OFC_C.metal, 2);
-        for(let j=0;j<3;j++) s += ofcRect(x+2, top-1+j*9, (r.w-34)/4, 6, '#D6D9DE', 1);
-      }
-      return s + ofcDesk(cx, r.seat[1], 52);
-    }
-    case 'ux':
-      return ofcDesk(cx, r.seat[1], 58) + ofcRect(cx-7, r.seat[1]-30, 14, 20, OFC_C.screen, 2)
-           + ofcRect(r.x+12, top-2, 34, 24, OFC_C.paper, 2) + ofcRect(r.x+r.w-46, top-2, 34, 24, OFC_C.paper, 2);
-    case 'quality':
-      return ofcDesk(cx, r.seat[1], 58) + ofcRect(cx-22, r.seat[1]-26, 44, 14, '#F7F4EC', 2)
-           + `<rect x="${cx-22}" y="${r.seat[1]-26}" width="44" height="14" rx="2" fill="none" stroke="#00000022"/>`
-           + ofcCirc(cx+30, r.seat[1]-18, 6, '#8A5A66') + ofcPlant(r.x+16, bot-18);
-    case 'analytics':{
-      let s = ofcDesk(cx, r.seat[1], 66) + ofcScreens(cx, r.seat[1], 3);
-      s += ofcRect(r.x+12, top-2, r.w-24, 28, OFC_C.paper, 2);
-      for(let i=0;i<7;i++) s += ofcRect(r.x+18+i*((r.w-40)/7), top+22-(4+((i*5)%18)), (r.w-52)/7, 4+((i*5)%18), '#4A6670', 1);
-      return s;
-    }
-    case 'devops':
-      return ofcRack(r.x+12, top-4, 30, 44) + ofcRack(r.x+r.w-42, top-4, 30, 44)
-           + ofcDesk(cx, r.seat[1], 62) + ofcScreens(cx, r.seat[1], 2);
-    case 'game':
-      return ofcRect(cx-40, top-4, 80, 32, OFC_C.screen, 3) + ofcRect(cx-34, top+2, 68, 20, '#4E6A85', 2)
-           + ofcSofa(cx-34, r.seat[1]-4, 68) + ofcCirc(cx-52, r.seat[1]+6, 6, OFC_C.warm);
-    case 'lounge':
-      return ofcSofa(r.x+16, r.y+40, 70) + ofcSofa(r.x+r.w-56, r.y+92, 40)
-           + ofcRect(r.x+r.w/2-16, r.y+72, 32, 18, OFC_C.wood, 4) + ofcPlant(r.x+18, bot-20);
-    case 'pantry':{
-      let s = ofcRect(r.x+12, r.y+34, r.w-24, 16, OFC_C.metal, 3);
-      s += ofcRect(r.x+20, r.y+22, 16, 14, '#6B7280', 2) + ofcCirc(r.x+28, r.y+40, 3, '#3E3E44');
-      s += ofcRect(r.x+r.w-46, r.y+20, 26, 30, '#D6D9DE', 3);
-      s += ofcCirc(r.x+r.w/2, r.y+92, 18, OFC_C.wood) + ofcCirc(r.x+r.w/2, r.y+92, 12, OFC_C.wood2);
-      return s;
-    }
-    case 'control':{
-      /* โต๊ะคุมงานกลางห้อง + กระดานคิว + โต๊ะประชุม */
-      let s = ofcRect(r.x+18, r.y+16, r.w-36, 22, OFC_C.paper, 3);
-      for(let i=0;i<9;i++) s += ofcRect(r.x+28+i*((r.w-56)/9), r.y+21, (r.w-76)/9, 12, ['#3E5366','#5E7A66','#9A7B4F'][i%3], 1);
-      s += ofcRect(r.seat[0]-52, r.seat[1]-14, 104, 22, OFC_C.wood, 5)
-         + ofcRect(r.seat[0]-46, r.seat[1]-11, 92, 5, OFC_C.wood2, 2)
-         + ofcScreens(r.seat[0], r.seat[1], 2)
-         + ofcCirc(r.seat[0], r.seat[1]+16, 8, OFC_C.dark);
-      s += `<ellipse cx="345" cy="384" rx="48" ry="26" fill="${OFC_C.wood}"/><ellipse cx="345" cy="381" rx="40" ry="20" fill="${OFC_C.wood2}"/>`;
-      [[300,360],[390,360],[300,408],[390,408]].forEach(p=>{ s += ofcCirc(p[0],p[1],7,OFC_C.dark); });
-      s += ofcPlant(r.x+r.w-34, r.y+r.h-28) + ofcPlant(r.x+26, r.y+r.h-28);
-      return s;
-    }
-  }
-  return '';
+/* ความคิดในบับเบิล — ของใครของมัน ตามนิสัยที่เขียนไว้ใน persona */
+const OFC_THINK = {
+  claudy:{desk:['ใครว่างบ้าง เดี๋ยวต้องกระจายงานรอบบ่าย','ขอโต๊ะกลางออฟฟิศไว้แบบนี้แหละ เห็นทุกคนพร้อมกัน','คิวงานยาวไป ต้องตัดอันที่ยังไม่จำเป็นออก'],
+         chat:['งานถึงไหนแล้ว ติดตรงไหนบอกได้','อันนี้ส่ง Chris ตรวจก่อนนะ'],
+         meet:['สรุปให้จบในสิบห้านาที','ใครรับอันนี้ต่อ']},
+  minnie:{desk:['ขอผนังแปะโพสต์อิทได้ทั้งด้าน ไอเดียจะได้ไม่หายไปกับความจำ','อันนี้น่าจะต่อยอดได้อีกสามทาง','ถ้ากลับด้านคิดล่ะ จะเป็นยังไง'],
+         chat:['ฟังไอเดียนี้ก่อน เพิ่งคิดออกเมื่อกี้'],
+         coffee:['เดินเปลี่ยนที่แป๊บ เดี๋ยวไอเดียมาเอง']},
+  reese:{desk:['ขอชั้นหนังสือกับจอสองจอ จอนึงเปิดแหล่งอ้างอิงไว้','ยังไม่มีหลักฐาน ยังไม่เขียนลงไป','ตัวเลขนี้มาจากไหน ต้องหาต้นทางก่อน'],
+         chat:['ขอแหล่งที่มาหน่อย เดี๋ยวไปเช็กให้'],
+         check:['ให้ Chris ดูก่อน เผื่อผมมองข้าม']},
+  addy:{desk:['ขอโต๊ะติดกระดานไปป์ไลน์ เห็นใบเสนอราคาที่ยังไม่ปิดทุกใบ','ใบนี้เงียบไปสามวันแล้ว ต้องตามแล้ว','ยอดไลก์ไม่ช่วย ต้องได้ใบขอราคา'],
+        chat:['มีลูกค้าถามงานแบบนี้ ทำทันไหม'],
+        report:['ปิดได้อีกใบแล้ว']},
+  rae:{desk:['ขอมุมเงียบกับโคมไฟอุ่น ๆ เสียงคีย์บอร์ดคนอื่นทำจังหวะประโยคเพี้ยน','ประโยคนี้ยาวไป ตัดครึ่งน่าจะคมกว่า','เขียนในนามแบรนด์ ไม่ใช่เขียนถึงแบรนด์'],
+       chat:['อ่านให้ฟังหน่อยได้ไหม ติดตรงคำนี้'],
+       coffee:['ตันแล้ว ขอเดินสักรอบ']},
+  vera:{desk:['ขอจอแนวตั้งกับที่ว่างพอวางสเปคเรียงกันสามแผ่น','ระยะนี้ไม่เท่ากันสองพิกเซล แก้ก่อน','บนมือถือปุ่มนี้เล็กไป กดพลาดแน่'],
+       chat:['ขอดูสเปคจริงก่อน อย่าเพิ่งลงมือ'],
+       meet:['วัดได้ไหม ถ้าวัดไม่ได้ก็ยังไม่ใช่สเปค']},
+  mind:{desk:['ขอไฟสีคงที่ทั้งวันกับแผ่นเทียบสีติดผนัง','โทนนี้ยังไม่นิ่ง ลดความอิ่มสีลงอีกนิด','อย่าเอาของสีจัดมาวางในเฟรม'],
+       chat:['ชุดนี้ต้องคุมโทนให้เหมือนกันทั้งชุดนะ'],
+       rest:['พักตาสักครู่ ดูสีนานไปเริ่มเพี้ยน']},
+  chris:{desk:['ขอโต๊ะไฟส่องพิสูจน์อักษรกับประตูที่ปิดได้','ไม่มีอะไรผ่านโดยไม่ถูกตรวจ','คำนี้ในบริบทงานบุญใช้ไม่ได้ ต้องเปลี่ยน'],
+        chat:['ตรงนี้ต้องแก้ก่อนนะ ยังส่งไม่ได้'],
+        check:['อ่านอีกรอบช้า ๆ เดี๋ยวเจอ']},
+  libby:{desk:['ขอตู้ลิ้นชักติดป้ายทุกช่อง ขอให้หยิบเจอในสามวินาที','ไฟล์นี้ชื่อไม่ตรงแบบ เดี๋ยวหาไม่เจอ','ไม่แก้เนื้อหา จัดแต่ระบบให้ค้นเจอ'],
+        chat:['ไฟล์นั้นอยู่ในคลัง เดี๋ยวส่งลิงก์ให้'],
+        report:['จัด index รอบนี้เสร็จแล้ว']},
+  nick:{desk:['ขอจอกราฟสามจอเรียงกัน กับที่วางกาแฟที่ไม่หกใส่คีย์บอร์ด','ตัวเลขยังไม่ชัดพอ ยังไม่ฟันธง','ยังไม่มีท่อข้อมูลตรงนี้เลย ต้องวางก่อน'],
+       chat:['ขอข้อมูลจริงก่อน เดาไม่ได้'],
+       coffee:['รอ query รันอยู่ ขอกาแฟก่อน']},
+  dale:{desk:['ขอห้องแยกที่มีตู้แร็ค deploy พังตอนตีสองจะได้ไม่ต้องปลุกใคร','build ผ่านแล้ว รอขึ้น URL จริง','เสียงพัดลมดังกว่าเดิม ต้องไปดู'],
+       chat:['เดี๋ยว deploy ให้ รอสองนาที'],
+       report:['ขึ้นเว็บจริงแล้ว เปิดดูได้เลย']},
+  toby:{desk:['ขอโซฟากับจอใหญ่ ต้องนั่งเล่นเองให้ครบก่อนถึงจะบอกว่าเสร็จ','ยังไม่ได้รันดูเอง ยังไม่พูดว่าเสร็จ','จังหวะตรงนี้ยังหน่วง ต้องแก้ game loop'],
+       play:['เทสต์ด่านนี้อีกรอบ เผื่อมีบั๊ก','เล่นเองแล้วถึงจะรู้ว่าสนุกจริงไหม'],
+       chat:['ลองกดเล่นดูก่อน แล้วบอกว่ารู้สึกยังไง']},
+  news:{desk:['ขอนาฬิกาโลกหลายเรือนกับจอข่าวที่เปิดค้างไว้','คืนที่ผ่านมามีอะไรบ้าง ไล่ให้ครบหกหัวข้อ','อันนี้ยังมีแค่สำนักเดียว รอยืนยันก่อน'],
+       chat:['ข่าวนี้เกี่ยวกับงานเราตรง ๆ นะ'],
+       report:['สรุปข่าววันนี้ครบแล้ว']},
+};
+/* ความคิดกลาง — ใครไม่มีของตัวเองในกิจกรรมนั้นก็ใช้อันนี้ */
+const OFC_THINK_ANY = {
+  desk:['โฟกัสอีกสักพัก เดี๋ยวจบ','ทำอันนี้ให้เสร็จก่อนค่อยเปิดอันใหม่'],
+  coffee:['ขอกาแฟก่อน หัวจะได้แล่น','พักสองนาที เดี๋ยวกลับไปต่อ'],
+  chat:['ขอถามแป๊บนึง','อันนี้ต้องคุยกันก่อนทำ'],
+  report:['ส่ง Claudy แล้ว รออีกงาน','อันนี้เสร็จแล้วนะ'],
+  check:['ขอให้ Chris ตรวจก่อนส่ง','รอผลตรวจอยู่'],
+  meet:['ประชุมสั้น ๆ พอ','จดไว้ก่อน เดี๋ยวลืม'],
+  rest:['นั่งพักสักครู่','ยืดเส้นหน่อย นั่งนานไป'],
+  play:['ขอเล่นสักตา','พักสมองก่อน'],
+  walk:['เดินไปก่อน','ขอทางหน่อย'],
+};
+function ofcThink(id, act){
+  const mine = (OFC_THINK[id]||{})[act];
+  const any  = OFC_THINK_ANY[act] || OFC_THINK_ANY.desk;
+  return ofcPick(mine && mine.length ? mine : any);
 }
-
-/* ---------- ประกอบผังทั้งชั้น ---------- */
-function ofcFloorSVG(){
-  let s = `<svg viewBox="0 0 ${OFC_W} ${OFC_H}" class="ofc-svg" role="img" aria-label="ผังออฟฟิศทีม AGAPAE">`;
-  s += `<defs><pattern id="ofcTile" width="40" height="40" patternUnits="userSpaceOnUse">
-        <rect width="40" height="40" fill="var(--paper)"/>
-        <path d="M40 0V40H0" fill="none" stroke="var(--line)" stroke-width="1" opacity=".55"/>
-      </pattern></defs>`;
-  s += `<rect x="8" y="8" width="${OFC_W-16}" height="${OFC_H-16}" rx="16" fill="url(#ofcTile)" stroke="var(--line-strong)" stroke-width="2"/>`;
-  if(OFC_ART.floor){
-    /* มีรูปพื้นที่ Gen มาแล้ว — วางทับพื้นลายกระเบื้อง ห้อง/เฟอร์นิเจอร์ที่วาดด้วยโค้ดข้ามไป */
-    return s + `<image href="${OFC_ART.floor}" x="8" y="8" width="${OFC_W-16}" height="${OFC_H-16}" preserveAspectRatio="xMidYMid slice"/>`
-             + OFC_ROOMS.map(r=>`<g class="ofc-room" data-key="${r.key}"><rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="10" fill="transparent" stroke="none"/></g>`).join('')
-             + `</svg>`;
-  }
-
-  OFC_ROOMS.forEach(r=>{
-    const col = r.owner ? ofcColor(OFC_PIPE[r.owner]||'standalone') : 'var(--ink-faint)';
-    s += `<g class="ofc-room" data-key="${r.key}">`;
-    s += `<rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="10" fill="var(--card)" stroke="var(--line-strong)" stroke-width="${r.key==='floor'?0:1.5}"/>`;
-    if(r.key!=='floor') s += `<rect x="${r.x}" y="${r.y}" width="${r.w}" height="4" rx="2" fill="${col}" opacity=".85"/>`;
-    /* ช่องประตู — เจาะผนังด้วยเส้นสีพื้น */
-    if(r.door){
-      const g = 34;
-      if(r.door==='R') s += `<line x1="${r.x+r.w}" y1="${r.y+r.h/2-g/2}" x2="${r.x+r.w}" y2="${r.y+r.h/2+g/2}" stroke="var(--paper)" stroke-width="4"/>`;
-      if(r.door==='L') s += `<line x1="${r.x}" y1="${r.y+r.h/2-g/2}" x2="${r.x}" y2="${r.y+r.h/2+g/2}" stroke="var(--paper)" stroke-width="4"/>`;
-      if(r.door==='D') s += `<line x1="${r.x+r.w/2-g/2}" y1="${r.y+r.h}" x2="${r.x+r.w/2+g/2}" y2="${r.y+r.h}" stroke="var(--paper)" stroke-width="4"/>`;
-      if(r.door==='U') s += `<line x1="${r.x+r.w/2-g/2}" y1="${r.y}" x2="${r.x+r.w/2+g/2}" y2="${r.y}" stroke="var(--paper)" stroke-width="4"/>`;
-    }
-    s += ofcKit(r.kit, r);
-    s += `<text class="ofc-rname" x="${r.x+10}" y="${r.y+17}" fill="var(--ink-faint)">${r.name}</text>`;
-    s += `</g>`;
-  });
-  return s + `</svg>`;
-}
-
-/* ---------- ช่องเสียบรูปที่ Gen มาทีหลัง ----------
-   floor  : รูปพื้นออฟฟิศเต็มใบ (อัตราส่วน 1000x640) — ใส่แล้วจะวางทับผังที่วาดด้วยโค้ด
-   sprites: {agentId: 'office/sprites/claudy.png'} — ตัวเต็มตัวแทนหัว+ลำตัวที่วาดไว้
-   ปล่อยเป็น null ไว้ = ใช้ผัง/ตัวที่วาดด้วยโค้ดตามเดิม (ไม่ต้องมีไฟล์รูปก็ทำงานได้) */
-const OFC_ART = { floor:null, sprites:{} };
 
 /* ---------- ตัวเดิน 2D ---------- */
-let OFC_PIPE = {};          /* id -> pipeline (เติมตอน init จาก AGENTS) */
+let OFC_PIPE = {};
 const OFC_ACTORS = [];
-/* สีประจำสาย — อ่านจาก PIPELINES ตรง ๆ (ชื่อ pipeline ไม่ตรงกับชื่อตัวแปร CSS ทุกตัว) */
+let ofcRaf = null, ofcLast = 0;
 const ofcColor = pl => ((typeof PIPELINES!=='undefined' && PIPELINES[pl]) || {color:'var(--ink-faint)'}).color;
-let ofcRaf = null, ofcLast = 0, ofcStage = null;
-
-function ofcRoomOf(id){ return OFC_ROOMS.find(r=>r.owner===id) || null; }
-function ofcRoomByKey(k){ return OFC_ROOMS.find(r=>r.key===k) || null; }
 const ofcPick = a => a[Math.floor(Math.random()*a.length)];
-/* สุ่มจุดยืนในพื้นที่ส่วนกลาง + เขยิบนิดหน่อย จะได้ไม่ยืนซ้อนกันเป๊ะ */
-const ofcSpot = list => { const p = ofcPick(list||[[500,320]]);
-  return [p[0]+(Math.random()*20-10), p[1]+(Math.random()*14-7)]; };
+const ofcSpot = list => { const p = ofcPick(list||[[650,420]]);
+  return [p[0]+(Math.random()*22-11), p[1]+(Math.random()*16-8)]; };
+function ofcRoomOf(id){ return OFC_ROOMS.find(r=>r.seats && r.seats[id]) || null; }
+function ofcRoomByKey(k){ return OFC_ROOMS.find(r=>r.key===k) || null; }
 
-/* หาเส้นทางระหว่างจุดทางเดินด้วย BFS */
 function ofcRoute(from, to){
-  if(from===to) return [to];
+  if(from===to) return [];
   const prev={}, seen={[from]:1}, q=[from];
   while(q.length){
     const n=q.shift();
@@ -2009,48 +1901,40 @@ function ofcRoute(from, to){
   return [to];
 }
 
-/* จุดหมายถัดไปของเอเจนต์ — อิงสถานะจริงใน status.json */
+/* จุดหมายถัดไป — อิงสถานะจริงใน status.json */
 function ofcNextGoal(ac){
   const a = (typeof AGENTS!=='undefined' ? AGENTS : []).find(x=>x.id===ac.id);
   const st = a ? a.status : 'idle';
   const home = ofcRoomOf(ac.id);
   const roll = Math.random();
 
-  const goHome = () => ({node:home?home.node:'C2', pos:home&&home.seat?[home.seat[0],home.seat[1]+38]:[500,320], act:'desk', dwell:10000+Math.random()*15000});
-  const goSpot = (key, act, dwell) => {
-    const r = ofcRoomByKey(key);
-    return {node:r?r.node:'C2', pos:ofcSpot(OFC_SPOTS[key]), act, dwell};
-  };
+  const goHome = () => ({room:home, node:home?home.node:'A4',
+    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+34] : [650,420],
+    act:'desk', dwell:11000+Math.random()*15000});
+  const goSpot = (key, act, dwell) => { const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
+    return {room:r, node:r.node, pos:ofcSpot(OFC_SPOTS[key]), act, dwell}; };
   const goVisit = () => {
-    const others = OFC_ROOMS.filter(r=>r.owner && r.owner!==ac.id && r.seat);
-    const r = ofcPick(others);
-    return {node:r.node, pos:[r.seat[0]+26+Math.random()*10, r.seat[1]+38], act:'chat', dwell:4000+Math.random()*5000};
+    const cands=[]; OFC_ROOMS.forEach(r=>Object.keys(r.seats||{}).forEach(k=>{ if(k!==ac.id) cands.push([r,k]); }));
+    const [r,k] = ofcPick(cands);
+    return {room:r, node:r.node, pos:[r.seats[k][0]+34+Math.random()*12, r.seats[k][1]+34], act:'chat', dwell:4500+Math.random()*5000};
   };
-  const goBoss = () => {
-    const r = ofcRoomByKey('floor');
-    return {node:'C2', pos:ofcSpot(OFC_SPOTS.control), act:'report', dwell:4000+Math.random()*4000};
-  };
-  const goCheck = () => {
-    const r = ofcRoomByKey('chris');
-    return {node:r.node, pos:[r.seat[0]+30, r.seat[1]+38], act:'check', dwell:5000+Math.random()*5000};
-  };
-  const goMeet = () => ({node:'C1', pos:ofcSpot(OFC_SPOTS.meeting), act:'meet', dwell:6000+Math.random()*7000});
+  const goCheck = () => { const r = ofcRoomByKey('bl');
+    return {room:r, node:r.node, pos:[r.seats.chris[0]+38, r.seats.chris[1]+34], act:'check', dwell:5000+Math.random()*5000}; };
 
-  /* Claudy อยู่โต๊ะกลางเป็นหลัก บางทีเดินไปดูงานตามห้อง */
   if(ac.id==='claudy'){
     if(roll<0.62) return goHome();
     if(roll<0.80) return goVisit();
     if(roll<0.92) return goSpot('pantry','coffee',5000+Math.random()*4000);
-    return goMeet();
+    return goSpot('meeting','meet',6000+Math.random()*7000);
   }
   if(st==='working'){
     if(roll<0.74) return goHome();
-    if(roll<0.78) return goSpot('pantry','coffee',4000+Math.random()*4000);
-    if(roll<0.90) return goVisit();
-    return goMeet();
+    if(roll<0.84) return goSpot('pantry','coffee',4000+Math.random()*4000);
+    if(roll<0.94) return goVisit();
+    return goSpot('meeting','meet',6000+Math.random()*6000);
   }
   if(st==='done' || st==='sent'){
-    if(roll<0.26) return goBoss();
+    if(roll<0.26) return goSpot('control','report',4000+Math.random()*4000);
     if(roll<0.44) return goSpot('lounge','rest',6000+Math.random()*7000);
     if(roll<0.58) return goSpot('pantry','coffee',5000+Math.random()*4000);
     return goHome();
@@ -2058,35 +1942,61 @@ function ofcNextGoal(ac){
   if(st==='flagged'){
     if(roll<0.45) return goCheck();
     if(roll<0.75) return goHome();
-    return goBoss();
+    return goSpot('control','report',4000+Math.random()*4000);
   }
-  /* idle */
   if(roll<0.34) return goSpot('lounge','play',7000+Math.random()*8000);
   if(roll<0.58) return goSpot('pantry','coffee',5000+Math.random()*5000);
   if(roll<0.78) return goVisit();
   if(roll<0.90) return goHome();
-  return goMeet();
+  return goSpot('meeting','meet',6000+Math.random()*6000);
 }
 
-const OFC_BUB = {desk:'⌨️', coffee:'☕', chat:'💬', report:'📋', check:'🔍', meet:'🗂️', rest:'😌', play:'🎮'};
+/* บับเบิลความคิด + แถบสถานะ */
+const OFC_MAX_BUBBLE = 4;
+function ofcSay(ac, act, force){
+  if(!force && OFC_ACTORS.filter(x=>x!==ac && x.el.dataset.show==='1').length >= OFC_MAX_BUBBLE) return;
+  const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===ac.id);
+  const st = OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle;
+  /* 1 ใน 4 ครั้งพูดถึงงานจริงที่ค้างอยู่ใน status.json แทนความคิดทั่วไป */
+  const txt = (a && a.task && Math.random()<0.25) ? a.task : ofcThink(ac.id, act);
+  ac.think.innerHTML = `<b>${OFC_ACT[act]||''}</b><span>${txt}</span>`;
+  ac.el.style.setProperty('--st', st.c);
+  ac.el.dataset.show = '1';
+  ac.sayLeft = 5200 + Math.random()*2500;
+}
+function ofcStatusText(ac){
+  const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===ac.id);
+  const st = OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle;
+  ac.el.style.setProperty('--st', st.c);
+  ac.nm.innerHTML = `${a?a.name:ac.id} <i>${st.e} ${st.t}</i>`;
+}
 
 function ofcStartWalk(ac, goal){
-  const fromNode = ac.node || 'C2';
-  const route = ofcRoute(fromNode, goal.node).map(n=>OFC_NODES[n]);
-  ac.path = route.concat([goal.pos]);
+  const legs = [];
+  if(ac.door) legs.push(ac.door);                       /* ออกจากประตูห้องเดิมก่อน */
+  ofcRoute(ac.node, goal.node).forEach(n=>legs.push(OFC_NODES[n]));
+  if(goal.room && goal.room.door) legs.push(goal.room.door);
+  legs.push(goal.pos);
+  ac.path = legs;
   ac.goal = goal;
   ac.state = 'walk';
   ac.el.dataset.act = '';
-  ac.bub.textContent = '';
+  if(Math.random()<0.28) ofcSay(ac,'walk'); else { ac.el.dataset.show=''; ac.sayLeft=0; }
 }
 
 function ofcTick(ts){
   const dt = Math.min(80, ts - (ofcLast||ts)); ofcLast = ts;
   for(const ac of OFC_ACTORS){
+    if(ac.sayLeft>0){ ac.sayLeft-=dt; if(ac.sayLeft<=0) ac.el.dataset.show=''; }
     if(ac.state==='walk'){
       const t = ac.path[0];
-      if(!t){ ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
-              ac.el.dataset.act=ac.goal.act; ac.bub.textContent=OFC_BUB[ac.goal.act]||''; continue; }
+      if(!t){
+        ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
+        ac.door=ac.goal.room?ac.goal.room.door:null;
+        ac.el.dataset.act=ac.goal.act;
+        ofcStatusText(ac); ofcSay(ac, ac.goal.act);
+        continue;
+      }
       const dx=t[0]-ac.x, dy=t[1]-ac.y, d=Math.hypot(dx,dy);
       const step = ac.speed*dt/1000;
       if(d<=step){ ac.x=t[0]; ac.y=t[1]; ac.path.shift(); }
@@ -2094,8 +2004,11 @@ function ofcTick(ts){
       ac.el.style.left=(ac.x/OFC_W*100)+'%';
       ac.el.style.top =(ac.y/OFC_H*100)+'%';
       ac.el.style.zIndex = Math.round(ac.y);
+      ac.el.dataset.bx = ac.x<190 ? 'l' : (ac.x>OFC_W-190 ? 'r' : '');
     } else {
       ac.wait -= dt;
+      /* ระหว่างอยู่กับที่ ก็คิดเรื่องใหม่เป็นระยะ */
+      if(ac.wait>2500 && ac.sayLeft<=-4000){ ofcSay(ac, ac.goal.act); }
       if(ac.wait<=0) ofcStartWalk(ac, ofcNextGoal(ac));
     }
   }
@@ -2105,57 +2018,65 @@ function ofcTick(ts){
 function ofcBuildActors(){
   const layer = document.getElementById('ofcActors');
   if(!layer) return;
-  layer.innerHTML = '';
-  OFC_ACTORS.length = 0;
+  layer.innerHTML = ''; OFC_ACTORS.length = 0;
   (typeof AGENTS!=='undefined'?AGENTS:[]).forEach((a,i)=>{
     OFC_PIPE[a.id] = a.pipeline || 'standalone';
     const home = ofcRoomOf(a.id);
-    const start = home && home.seat ? [home.seat[0], home.seat[1]+38] : [500,320];
+    const seat = home ? home.seats[a.id] : [650,420];
+    const start = [seat[0], seat[1]+34];
+    const art = OFC_ART.sprites[a.id];
     const el = document.createElement('button');
-    el.className = 'ofc-guy';
-    el.type = 'button';
-    el.dataset.dir = 'r';
+    el.className = 'ofc-guy'; el.type='button'; el.dataset.dir='r'; el.dataset.act='desk';
     el.title = `${a.name} — ${a.role}`;
     el.style.left=(start[0]/OFC_W*100)+'%';
     el.style.top =(start[1]/OFC_H*100)+'%';
-    const art = OFC_ART.sprites[a.id];
+    el.style.zIndex = Math.round(start[1]);
+    el.dataset.bx = start[0]<190 ? 'l' : (start[0]>OFC_W-190 ? 'r' : '');
     el.innerHTML = `
-      <span class="bub"></span>
-      ${art
-        ? `<img class="pix" src="${art}" alt="${a.name}">`
-        : `<span class="head"><img src="${a.img}" alt="${a.name}" loading="lazy"></span>
-           <span class="body" style="background:${ofcColor(a.pipeline||'standalone')}"></span>`}
-      <span class="nm">${a.name}</span>`;
+      <span class="think"></span>
+      ${art ? `<img class="pix" src="${art}" alt="${a.name}">`
+            : `<span class="head"><img src="${a.img}" alt="${a.name}" loading="lazy"></span>
+               <span class="body" style="background:${ofcColor(a.pipeline||'standalone')}"></span>`}
+      <span class="nm"></span>`;
     el.onclick = () => { if(typeof openDrawer==='function') openDrawer(a); };
     layer.appendChild(el);
-    const ac = {id:a.id, x:start[0], y:start[1], el, bub:el.querySelector('.bub'),
-                node:home?home.node:'C2', path:[], state:'act', wait:600+i*450,
-                speed:52+Math.random()*22, goal:{act:'desk',dwell:0,node:home?home.node:'C2'}};
-    el.dataset.act = 'desk';
-    ac.bub.textContent = OFC_BUB.desk;
-    el.style.zIndex = Math.round(start[1]);
+    const ac = {id:a.id, x:start[0], y:start[1], el, think:el.querySelector('.think'), nm:el.querySelector('.nm'),
+                node:home?home.node:'A4', door:home?home.door:null, path:[], state:'act',
+                wait:1200+i*700, sayLeft:0, speed:58+Math.random()*26,
+                goal:{act:'desk', dwell:0, node:home?home.node:'A4', room:home}};
     OFC_ACTORS.push(ac);
+    ofcStatusText(ac);
+    setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
 }
 
-/* รายการ "เอเจนต์ขอห้องแบบไหน" — คำขอของแต่ละคนตามนิสัยตัวเอง */
-function ofcWishHTML(){
-  return OFC_ROOMS.filter(r=>r.owner && r.wish).map(r=>{
-    const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===r.owner);
-    return `<li><button class="ofc-wish" onclick="ofcFocus('${r.key}')">
-        <img src="${a?a.img:''}" alt="">
-        <span><b>${a?a.name:r.owner}</b> · ${r.name}<em>“${r.wish}”</em></span>
-      </button></li>`;
-  }).join('');
+/* ผังพื้น — ใช้รูปที่ Gen มา แล้วแปะป้ายชื่อห้องทับ */
+function ofcFloorSVG(){
+  let s = `<svg viewBox="0 0 ${OFC_W} ${OFC_H}" class="ofc-svg" role="img" aria-label="ผังออฟฟิศทีม AGAPAE">`;
+  if(OFC_ART.floor){
+    s += `<image href="${OFC_ART.floor}" x="0" y="0" width="${OFC_W}" height="${OFC_H}" preserveAspectRatio="xMidYMid slice"/>`;
+  } else {
+    s += `<rect x="0" y="0" width="${OFC_W}" height="${OFC_H}" fill="var(--paper)"/>`;
+    s += OFC_ROOMS.map(r=>`<rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="8" fill="var(--card)" stroke="var(--line-strong)"/>`).join('');
+  }
+  OFC_ROOMS.forEach(r=>{
+    const owners = Object.keys(r.seats||{});
+    const col = owners.length ? ofcColor(OFC_PIPE[owners[0]]||'standalone') : 'var(--ink-faint)';
+    s += `<g class="ofc-room" data-key="${r.key}">
+      <rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="8" fill="transparent"/>
+      <rect class="ofc-tagbg" x="${r.x+8}" y="${r.y+7}" width="${r.name.length*8.2+22}" height="19" rx="9.5"/>
+      <circle cx="${r.x+18}" cy="${r.y+16.5}" r="3.4" fill="${col}"/>
+      <text class="ofc-rname" x="${r.x+26}" y="${r.y+21}">${r.name}</text>
+    </g>`;
+  });
+  return s + `</svg>`;
 }
 
-/* กดชื่อในรายการแล้วไฮไลต์ห้องนั้นบนผัง */
 function ofcFocus(key){
-  const stage = document.getElementById('ofcStage');
-  if(!stage) return;
+  const stage = document.getElementById('ofcStage'); if(!stage) return;
   stage.querySelectorAll('.ofc-room.on').forEach(g=>g.classList.remove('on'));
   const g = stage.querySelector(`.ofc-room[data-key="${key}"]`);
-  if(g){ g.classList.add('on'); g.scrollIntoView({block:'nearest',behavior:'smooth'}); }
+  if(g) g.classList.add('on');
 }
 
 function ofcInit(){
@@ -2164,32 +2085,21 @@ function ofcInit(){
   (typeof AGENTS!=='undefined'?AGENTS:[]).forEach(a=>{ OFC_PIPE[a.id]=a.pipeline||'standalone'; });
   stage.querySelector('.ofc-plan').innerHTML = ofcFloorSVG();
   ofcBuildActors();
-  const wl = document.getElementById('ofcWishList');
-  if(wl) wl.innerHTML = ofcWishHTML();
   stage.querySelectorAll('.ofc-room').forEach(g=>{
-    g.style.cursor = 'pointer';
+    g.style.cursor='pointer';
     g.addEventListener('click', ()=>{
       const r = ofcRoomByKey(g.dataset.key);
-      const a = r && r.owner && (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===r.owner);
+      const own = r && Object.keys(r.seats||{})[0];
+      const a = own && (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===own);
       if(a && typeof openDrawer==='function') openDrawer(a); else ofcFocus(g.dataset.key);
     });
   });
-  stage.dataset.ready = '1';
+  stage.dataset.ready='1';
   ofcResume();
 }
 function ofcResume(){ if(!ofcRaf && document.getElementById('ofcStage')){ ofcLast=0; ofcRaf=requestAnimationFrame(ofcTick); } }
 function ofcPause(){ if(ofcRaf){ cancelAnimationFrame(ofcRaf); ofcRaf=null; } }
 document.addEventListener('visibilitychange', ()=> document.hidden ? ofcPause() : ofcResume());
-
-function ofcToggleWish(){
-  const list = document.getElementById('ofcWishList');
-  const btn  = document.getElementById('ofcWishToggle');
-  if(!list||!btn) return;
-  const open = list.hasAttribute('hidden');
-  if(open) list.removeAttribute('hidden'); else list.setAttribute('hidden','');
-  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  btn.textContent = open ? 'เอเจนต์ขอห้องแบบไหน ▴' : 'เอเจนต์ขอห้องแบบไหน ▾';
-}
 
 /* =====================================================================
    TO DO — รายการจาก Todoist (project PAE To Do) ผ่านไฟล์ todo.json
