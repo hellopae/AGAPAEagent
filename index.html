@@ -200,8 +200,38 @@
   .br-src{margin-top:9px;font-size:9px;line-height:1.5;color:var(--ink-faint);opacity:.8}
   /* ===== OFFICE — ผังออฟฟิศ 2D ===== */
   .ofc{margin:8px 0 34px}
-  .ofc-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
-  .ofc-sub{margin-top:6px;font-size:12.5px;line-height:1.6;color:var(--ink-soft);max-width:70ch}
+
+  /* แถวรูปเอเจนต์เหนือผัง — 7 คนต่อแถว (13 คน = 2 แถว) */
+  .ofc-team{
+    display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-bottom:16px;
+  }
+  .tm{
+    display:flex;flex-direction:column;align-items:center;gap:3px;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 8px 11px;font:inherit;color:inherit;text-align:center;cursor:pointer;
+    border-top:2px solid var(--st,var(--line));transition:border-color .15s,transform .15s;
+  }
+  .tm:hover{border-color:var(--gold);border-top-color:var(--st,var(--gold));transform:translateY(-2px)}
+  .tm-pic{
+    height:62px;display:flex;align-items:flex-end;justify-content:center;
+  }
+  .tm-pic img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+  .tm-pic.av img{
+    height:46px;width:46px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--line);background:var(--paper);
+  }
+  .tm-nm{font-size:12px;font-weight:600;line-height:1.3;margin-top:4px}
+  .tm-st{
+    font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.02em;
+    color:var(--st,var(--ink-faint));
+  }
+  .tm-up{
+    font-size:10px;line-height:1.45;color:var(--ink-faint);margin-top:3px;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  @media(max-width:900px){ .ofc-team{grid-template-columns:repeat(5,minmax(0,1fr))} }
+  @media(max-width:640px){ .ofc-team{grid-template-columns:repeat(3,minmax(0,1fr))} .tm-up{-webkit-line-clamp:2} }
+  @media(max-width:400px){ .ofc-team{grid-template-columns:repeat(2,minmax(0,1fr))} }
   .ofc-scroll{overflow-x:auto;overflow-y:hidden;border-radius:var(--radius)}
   .ofc-stage{
     position:relative;width:100%;min-width:760px;aspect-ratio:1296/816;
@@ -822,12 +852,7 @@
 
     <!-- ===== OFFICE — ผังออฟฟิศ 2D ที่ทีมทำงานกันจริง ๆ ===== -->
     <section class="ofc">
-      <div class="ofc-head">
-        <div>
-          <div class="ey mono" style="margin:0">Office · ออฟฟิศของทีม</div>
-          <p class="ofc-sub">แต่ละคนมีห้องของตัวเองตามที่ขอไว้ · เดินไปมาและคิดอะไรอยู่ตามสถานะจริงใน <span class="mono">status.json</span> · แตะตัวหรือแตะห้องเพื่อเปิดโปรไฟล์</p>
-        </div>
-      </div>
+      <div class="ofc-team" id="ofcTeam"></div>
       <div class="ofc-scroll">
         <div class="ofc-stage" id="ofcStage">
           <div class="ofc-plan"></div>
@@ -1752,6 +1777,7 @@ const OFC_W = 1296, OFC_H = 816;
 const OFC_ART = { floor:'office/floor.jpeg', sprites:{
   claudy:'office/sprites/claudy.png',
   minnie:'office/sprites/minnie.png',
+  reese:'office/sprites/reese.png',
 }};
 
 /* จุดบนทางเดิน (พื้นที่โล่งในรูป) */
@@ -2081,6 +2107,29 @@ function ofcFloorSVG(){
   return s + `</svg>`;
 }
 
+/* แถวรูปเอเจนต์เหนือผัง — รูป + สถานะ + งานล่าสุดที่ทำ */
+function ofcOpen(id){
+  const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===id);
+  if(a && typeof openDrawer==='function') openDrawer(a);
+}
+function ofcRenderTeam(){
+  const box = document.getElementById('ofcTeam');
+  if(!box) return;
+  const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  box.innerHTML = (typeof AGENTS!=='undefined'?AGENTS:[]).map(a=>{
+    const st  = OFC_STATUS[a.status] || OFC_STATUS.idle;
+    const art = OFC_ART.sprites[a.id];
+    const upd = (a.report && a.report.title) || a.task || 'ยังไม่มีงานค้าง';
+    return `<button class="tm" type="button" onclick="ofcOpen('${a.id}')" style="--st:${st.c}"
+              title="${esc(a.name)} — ${esc(a.role)}">
+      <span class="tm-pic${art?'':' av'}"><img src="${art||a.img}" alt="${esc(a.name)}" loading="lazy"></span>
+      <span class="tm-nm">${esc(a.name)}</span>
+      <span class="tm-st">${st.e} ${st.t}</span>
+      <span class="tm-up">${esc(upd)}</span>
+    </button>`;
+  }).join('');
+}
+
 function ofcFocus(key){
   const stage = document.getElementById('ofcStage'); if(!stage) return;
   stage.querySelectorAll('.ofc-room.on').forEach(g=>g.classList.remove('on'));
@@ -2094,6 +2143,7 @@ function ofcInit(){
   (typeof AGENTS!=='undefined'?AGENTS:[]).forEach(a=>{ OFC_PIPE[a.id]=a.pipeline||'standalone'; });
   stage.querySelector('.ofc-plan').innerHTML = ofcFloorSVG();
   ofcBuildActors();
+  ofcRenderTeam();
   stage.querySelectorAll('.ofc-room').forEach(g=>{
     g.style.cursor='pointer';
     g.addEventListener('click', ()=>{
@@ -2400,7 +2450,7 @@ firebase.firestore().collection("agents").orderBy("sortOrder").onSnapshot(snap=>
   // รวม: SEED เป็นรายชื่อหลัก (ครบทุกคน รวม Dale) + ทับด้วยข้อมูลสดจาก Firestore
   // กัน Firestore ที่ยังไม่มีบาง agent (เช่น dale) ทำให้คนหายจากเว็บ
   AGENTS = SEED_AGENTS.map(a => fs[a.id] ? {...a, ...fs[a.id]} : a);
-  if(typeof ofcBuildActors==='function' && document.getElementById('ofcStage')) ofcBuildActors();
+  if(typeof ofcBuildActors==='function' && document.getElementById('ofcStage')){ ofcBuildActors(); ofcRenderTeam(); }
   // เผื่อ Firestore มี agent ที่ไม่มีใน seed ก็เพิ่มต่อท้าย
   Object.values(fs).forEach(x => { if(!SEED_AGENTS.some(a=>a.id===x.id)) AGENTS.push(x); });
   render();
