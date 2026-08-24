@@ -213,14 +213,14 @@
   }
   .tm:hover{border-color:var(--gold);border-top-color:var(--st,var(--gold));transform:translateY(-2px)}
   .tm-pic{
-    height:62px;display:flex;align-items:flex-end;justify-content:center;
+    width:100%;height:104px;border-radius:9px;overflow:hidden;background:var(--paper);
+    display:flex;align-items:flex-end;justify-content:center;
   }
+  /* ตัว SD พื้นโปร่ง — ยืนเต็มความสูงกรอบ */
   .tm-pic img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
-  .tm-pic.av img{
-    height:46px;width:46px;border-radius:50%;object-fit:cover;
-    border:2px solid var(--line);background:var(--paper);
-  }
-  .tm-nm{font-size:12px;font-weight:600;line-height:1.3;margin-top:4px}
+  /* ยังไม่มีตัว SD — ใช้รูปการ์ดเต็มกรอบ เล็งกลางใบหน้าเหมือนการ์ดด้านล่าง */
+  .tm-pic.av img{width:100%;height:100%;object-fit:cover}
+  .tm-nm{font-size:12px;font-weight:600;line-height:1.3;margin-top:6px}
   .tm-st{
     font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.02em;
     color:var(--st,var(--ink-faint));
@@ -1775,6 +1775,7 @@ const OFC_W = 1296, OFC_H = 816;
 /* รูปที่ Gen มา — ถ้าอยากกลับไปใช้ผังที่วาดด้วยโค้ด ตั้ง floor เป็น null
    sprites: {agentId:'office/sprites/xxx.png'} ใส่ทีหลังได้ ใครไม่มีก็ใช้หัว avatar เดิม */
 const OFC_ART = { floor:'office/floor.jpeg', sprites:{
+  addy:'office/sprites/addy.png',
   claudy:'office/sprites/claudy.png',
   minnie:'office/sprites/minnie.png',
   reese:'office/sprites/reese.png',
@@ -2122,7 +2123,8 @@ function ofcRenderTeam(){
     const upd = (a.report && a.report.title) || a.task || 'ยังไม่มีงานค้าง';
     return `<button class="tm" type="button" onclick="ofcOpen('${a.id}')" style="--st:${st.c}"
               title="${esc(a.name)} — ${esc(a.role)}">
-      <span class="tm-pic${art?'':' av'}"><img src="${art||a.img}" alt="${esc(a.name)}" loading="lazy"></span>
+      <span class="tm-pic${art?'':' av'}"><img src="${art||a.img}" alt="${esc(a.name)}"
+        ${art?'':'style="'+facePos(a.id)+'"'} loading="lazy"></span>
       <span class="tm-nm">${esc(a.name)}</span>
       <span class="tm-st">${st.e} ${st.t}</span>
       <span class="tm-up">${esc(upd)}</span>
