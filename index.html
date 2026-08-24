@@ -172,6 +172,41 @@
   .w-btc-sig .bs-bar i{display:block;height:100%;border-radius:999px}
   .w-btc-sig .bs-sub{font-size:10.5px;color:var(--ink-faint);line-height:1.4}
   .w-btc-sig .bs-src{font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em}
+  /* คำวิเคราะห์ + คำแนะนำจากตลาดจริง (Deribit options + Binance futures + Fear&Greed) */
+  .w-mkt{margin-top:8px}
+  .w-mkt .mk-head{
+    display:flex;align-items:baseline;gap:8px;margin-bottom:6px;
+    font-size:11px;font-weight:600;
+  }
+  .w-mkt .mk-head .mk-t{font-family:"Noto Sans Thai","Space Grotesk",sans-serif}
+  .w-mkt .mk-head .mk-t.up{color:var(--done)} .w-mkt .mk-head .mk-t.dn{color:var(--flagged)}
+  .w-mkt .mk-head .mk-t.mid{color:var(--ink-faint)}
+  .w-mkt .mk-head .mk-pct{
+    margin-left:auto;flex:none;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint);
+  }
+  .w-mkt ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+  .w-mkt li{
+    position:relative;padding-left:11px;font-size:11px;line-height:1.5;color:var(--ink);
+  }
+  .w-mkt li::before{content:'';position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.55}
+  .w-mkt .mk-align{
+    margin-top:7px;font-size:10.5px;line-height:1.45;color:var(--ink-faint);
+    border-left:2px solid var(--line);padding-left:8px;
+  }
+  .w-mkt .mk-align.good{border-color:var(--done);color:var(--done)}
+  .w-mkt .mk-align.warn{border-color:var(--gold);color:var(--gold)}
+  .w-mkt .mk-adv{
+    display:flex;gap:7px;align-items:flex-start;margin-top:8px;
+    background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 9px;
+  }
+  .w-mkt .mk-adv .tag{
+    flex:none;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-faint);padding-top:1px;
+  }
+  .w-mkt .mk-adv .txt{font-size:11.5px;line-height:1.45;font-weight:500}
+  .w-mkt .mk-adv.good{border-color:var(--done)} .w-mkt .mk-adv.good .txt{color:var(--done)}
+  .w-mkt .mk-adv.warn{border-color:var(--gold)} .w-mkt .mk-adv.warn .txt{color:var(--gold)}
+  .w-mkt .mk-adv.bad{border-color:var(--flagged)} .w-mkt .mk-adv.bad .txt{color:var(--flagged)}
   /* ---------- Pain Point view ---------- */
   .pp-today-head,.pp-log-head{
     display:flex;align-items:baseline;gap:10px;
@@ -650,6 +685,7 @@
         <a class="w-btc-sig" id="wBtcSig" href="https://hellopae.github.io/investai/" target="_blank" rel="noopener noreferrer">
           <span class="w-empty">กำลังวิเคราะห์แนวโน้ม…</span>
         </a>
+        <div class="w-mkt" id="wBtcMkt"><span class="w-empty">กำลังอ่านตลาดออปชันและอนุพันธ์…</span></div>
         <div class="w-news" id="wNews"><span class="w-empty">รอสรุปข่าวประจำวัน (routine 09:00)</span></div>
       </div>
 
@@ -1181,6 +1217,7 @@ async function loadBtcSignal(){
     const closes = j.map(k=>+k[4]);
     const sig = btcSignal(closes);
     if(!sig){ box.innerHTML = '<span class="w-empty">ข้อมูลไม่พอวิเคราะห์</span>'; return; }
+    BTC_TECH = sig.prob;
     const cls = sig.up ? 'up' : 'dn';
     const col = sig.up ? 'var(--done)' : 'var(--flagged)';
     box.innerHTML = `
@@ -1195,8 +1232,200 @@ async function loadBtcSignal(){
     box.innerHTML = '<span class="w-empty">วิเคราะห์แนวโน้มไม่ได้ (Binance ต่อไม่ได้)</span>';
   }
 }
-loadBtcSignal();
-setInterval(loadBtcSignal, 600000);
+let BTC_TECH = null;   // % โอกาสขึ้นสายเทคนิค — ใช้เทียบกับฝั่งตลาดจริง
+
+/* =====================================================================
+   BTC MARKET CONTEXT — "เงินจริงในตลาด" (ย่อจาก investai)
+   Deribit options + Binance Futures + Fear&Greed — เรียกตรงได้ทุกเส้น
+   ไม่ต้องใช้ proxy ไม่ต้องมี API key
+   ===================================================================== */
+const MKT_MON={JAN:0,FEB:1,MAR:2,APR:3,MAY:4,JUN:5,JUL:6,AUG:7,SEP:8,OCT:9,NOV:10,DEC:11};
+function mktParseInstr(name){
+  const p=name.split('-'); if(p.length!==4) return null;
+  const d=p[1].match(/^(\d{1,2})([A-Z]{3})(\d{2})$/); if(!d) return null;
+  const mo=MKT_MON[d[2]]; if(mo==null) return null;
+  return {ms:Date.UTC(2000+ +d[3],mo,+d[1],8,0,0), strike:+p[2], cp:p[3]};
+}
+function mktInterp(pairs,x){
+  const a=pairs.filter(p=>p[1]!=null&&isFinite(p[1])).sort((u,v)=>u[0]-v[0]);
+  if(!a.length) return null;
+  if(x<=a[0][0]) return a[0][1];
+  if(x>=a[a.length-1][0]) return a[a.length-1][1];
+  for(let i=1;i<a.length;i++){ if(a[i][0]>=x){ const [x0,y0]=a[i-1],[x1,y1]=a[i];
+    return x1===x0?y1:y0+(y1-y0)*(x-x0)/(x1-x0); } }
+  return null;
+}
+/* ดึงกระดานออปชัน Deribit ทั้งกระดานใน request เดียว แล้วสรุปเฉพาะงวดที่ OI หนาสุด */
+async function mktOptions(){
+  const [ix,bk]=await Promise.all([
+    fetch('https://www.deribit.com/api/v2/public/get_index_price?index_name=btc_usd').then(r=>r.json()),
+    fetch('https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option').then(r=>r.json())
+  ]);
+  const rows=bk.result||[]; if(!rows.length) return null;
+  let S=ix.result&&ix.result.index_price;
+  if(!S){ const u=rows.find(r=>r.underlying_price); S=u?u.underlying_price:null; }
+  if(!S) return null;
+  const now=Date.now(), map=new Map();
+  for(const r of rows){
+    const q=mktParseInstr(r.instrument_name); if(!q) continue;
+    const dte=(q.ms-now)/86400000; if(dte<0.02) continue;
+    let e=map.get(q.ms);
+    if(!e){ e={ms:q.ms,dte,calls:new Map(),puts:new Map(),oiC:0,oiP:0,ivs:[]}; map.set(q.ms,e); }
+    const oi=r.open_interest||0;
+    (q.cp==='C'?e.calls:e.puts).set(q.strike,((q.cp==='C'?e.calls:e.puts).get(q.strike)||0)+oi);
+    q.cp==='C'?e.oiC+=oi:e.oiP+=oi;
+    if(r.mark_iv) e.ivs.push({k:q.strike,iv:r.mark_iv,cp:q.cp});
+  }
+  const exps=[...map.values()].map(e=>{
+    e.oiTotal=e.oiC+e.oiP;
+    const atm=e.ivs.slice().sort((a,b)=>Math.abs(a.k-S)-Math.abs(b.k-S))[0];
+    e.atmIV=atm?atm.iv:null;
+    e.sigma=e.atmIV?S*(e.atmIV/100)*Math.sqrt(e.dte/365):null;
+    e.pcr=e.oiC?e.oiP/e.oiC:null;
+    // put skew: IV ของพุตที่ -20% เทียบ ATM
+    const tgt=S*0.8, ps=e.ivs.filter(v=>v.cp==='P');
+    const near=ps.length?ps.slice().sort((a,b)=>Math.abs(a.k-tgt)-Math.abs(b.k-tgt))[0]:null;
+    e.skew=(near&&e.atmIV&&Math.abs(near.k-tgt)/S<0.12)?near.iv-e.atmIV:null;
+    // max pain
+    const ks=[...new Set([...e.calls.keys(),...e.puts.keys()])].sort((a,b)=>a-b);
+    let best=null,bestV=Infinity;
+    for(const k of ks){ let v=0;
+      for(const [ck,co] of e.calls) if(ck<k) v+=(k-ck)*co;
+      for(const [pk,po] of e.puts)  if(pk>k) v+=(pk-k)*po;
+      if(v<bestV){bestV=v;best=k;} }
+    e.maxPain=best;
+    return e;
+  }).sort((a,b)=>a.dte-b.dte);
+  const cand=exps.filter(e=>e.dte<=45);
+  const e=(cand.length?cand:exps).reduce((a,b)=>b.oiTotal>a.oiTotal?b:a);
+  const MIN=Math.max(5,e.oiTotal*0.01);
+  const put =[...e.puts .entries()].filter(([k,v])=>k<S&&v>=MIN).sort((a,b)=>b[0]-a[0])[0];
+  const call=[...e.calls.entries()].filter(([k,v])=>k>S&&v>=MIN).sort((a,b)=>a[0]-b[0])[0];
+  const em=e.sigma?0.7979*e.sigma:null;
+  const skew30=mktInterp(exps.map(x=>[x.dte,x.skew]),30);
+  return {
+    spot:S, dte:e.dte, expMs:e.ms, atmIV:e.atmIV,
+    em, emPct:em?em/S*100:null,
+    put:put?put[0]:null, putOI:put?put[1]:null,
+    call:call?call[0]:null, callOI:call?call[1]:null,
+    maxPain:e.maxPain, pcr:e.pcr, skew30
+  };
+}
+/* อารมณ์ฝั่งอนุพันธ์ — ยิ่งคนแห่ไปทางเดียวกันมาก ยิ่งให้คะแนนสวนทาง */
+async function mktFlow(skew30){
+  const F='https://fapi.binance.com';
+  const get=u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null);
+  const [pi,ls,oih,tk,fng]=await Promise.all([
+    get(F+'/fapi/v1/premiumIndex?symbol=BTCUSDT'),
+    get(F+'/futures/data/globalLongShortAccountRatio?symbol=BTCUSDT&period=1h&limit=1'),
+    get(F+'/futures/data/openInterestHist?symbol=BTCUSDT&period=1h&limit=25'),
+    get(F+'/futures/data/takerlongshortRatio?symbol=BTCUSDT&period=1h&limit=1'),
+    get('https://api.alternative.me/fng/?limit=1')
+  ]);
+  const cl=x=>Math.max(-1,Math.min(1,x));
+  const parts=[]; const o={};
+  if(pi&&pi.lastFundingRate!=null){ o.funding=+pi.lastFundingRate;
+    parts.push({s:cl(-o.funding/0.0004),w:1.1,k:'funding'}); }
+  if(ls&&ls.length){ o.ls=+ls[ls.length-1].longShortRatio;
+    parts.push({s:cl(-(o.ls-1)/0.6),w:1.0,k:'ls'}); }
+  if(oih&&oih.length>1){ const a=+oih[0].sumOpenInterest,b=+oih[oih.length-1].sumOpenInterest;
+    o.oiChg=(b-a)/a; parts.push({s:cl(o.oiChg/0.06),w:0.8,k:'oi'}); }
+  if(tk&&tk.length){ o.taker=+tk[tk.length-1].buySellRatio;
+    parts.push({s:cl((o.taker-1)/0.35),w:0.8,k:'taker'}); }
+  if(fng&&fng.data&&fng.data.length){ o.fng=+fng.data[0].value;
+    parts.push({s:cl(-(o.fng-50)/40),w:0.9,k:'fng'}); }
+  if(skew30!=null){ o.skew=skew30;
+    parts.push({s:cl(-(skew30-6)/10),w:1.0,k:'skew'}); }
+  if(!parts.length) return null;
+  const tw=parts.reduce((s,p)=>s+p.w,0);
+  const score=parts.reduce((s,p)=>s+p.s*p.w,0)/tw;
+  o.parts=parts; o.score=score; o.pct=Math.round(50+score*32);
+  return o;
+}
+
+/* แปลตัวเลขเป็นภาษาคน — คำวิเคราะห์ + คำแนะนำ (ใช้ร่วมกับ % โอกาสขึ้นสายเทคนิค) */
+function mktRead(o,f,techProb){
+  const usd=x=>'$'+Math.round(x).toLocaleString('en-US');
+  const notes=[]; let mkVote=null;
+  if(o){
+    const lo=o.spot-o.em, hi=o.spot+o.em;
+    const dd=new Date(o.expMs), M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+    notes.push(`ตลาดออปชันให้กรอบอีก ${Math.round(o.dte)} วัน (ถึง ${dd.getUTCDate()} ${M[dd.getUTCMonth()]}) ที่ ±${o.emPct.toFixed(1)}% — ราว ${usd(lo)}–${usd(hi)}`);
+    if(o.put&&o.call) notes.push(`กำแพงเดิมพัน — แนวรับ ${usd(o.put)} (${Math.round(o.putOI)} สัญญา) · แนวต้าน ${usd(o.call)} (${Math.round(o.callOI)} สัญญา)`);
+    else if(o.call) notes.push(`ด่านถัดไปฝั่งบน ${usd(o.call)} (${Math.round(o.callOI)} สัญญา) — ฝั่งล่างยังไม่มีกองใหญ่`);
+    if(o.maxPain!=null) notes.push(`จุดที่คนซื้อออปชันเจ็บสุด (max pain) ${usd(o.maxPain)} · พุตต่อคอล ${o.pcr!=null?o.pcr.toFixed(2):'—'}`);
+    if(o.skew30!=null){
+      const s=o.skew30;
+      const t=s>=14?'แพงมาก — คนแห่ซื้อประกันขาลง ระวังไว้ก่อน'
+             :s>=10?'ค่อนข้างแพง — เริ่มมีคนซื้อประกันขาลงกันเยอะ'
+             :s>=4 ?'อยู่ในระดับปกติ'
+             :s>=0 ?'ถูกกว่าปกติ — ตลาดค่อนข้างชะล่าใจ'
+                   :'ถูกผิดปกติ — คนกลัวพลาดขาขึ้นมากกว่ากลัวลง';
+      notes.push(`ราคาประกันขาลง 30 วัน ${s>=0?'+':''}${s.toFixed(1)} จุด · ${t}`);
+    }
+  }
+  if(f){
+    const bits=[];
+    if(f.funding!=null) bits.push(`ค่าธรรมเนียมสัญญา ${(f.funding*100).toFixed(3)}%`);
+    if(f.ls!=null) bits.push(`ลอง:ชอร์ต ${f.ls.toFixed(2)}`);
+    if(f.oiChg!=null) bits.push(`สัญญาคงค้าง 24 ชม. ${f.oiChg>=0?'+':''}${(f.oiChg*100).toFixed(1)}%`);
+    if(f.fng!=null) bits.push(`Fear&Greed ${f.fng}`);
+    if(bits.length) notes.push(bits.join(' · '));
+    mkVote=(f.pct-50)/32;
+  }
+  const pct=f?f.pct:null;
+  const tone=pct==null?'mid':pct>=56?'up':pct<=44?'dn':'mid';
+  const headline=pct==null?'ยังอ่านอารมณ์ตลาดไม่ได้'
+    :tone==='up'?'เงินจริงในตลาดยังเอียงไปทางบวก'
+    :tone==='dn'?'เงินจริงในตลาดเอียงไปทางระวังตัว'
+                :'เงินจริงในตลาดยังไม่เลือกข้าง';
+
+  let align=null;
+  if(pct!=null&&techProb!=null){
+    const td=(techProb-50)/50, md=mkVote;
+    if(Math.abs(md)<0.12) align={cls:'',txt:'เงินจริงยังไม่เอียงไปทางไหน — เชื่อกราฟได้แต่ยังไม่มีแรงหนุนยืนยัน'};
+    else if(Math.abs(td)<0.06) align={cls:'',txt:'กราฟยังไม่มีทิศชัด — ตอนนี้ให้ดูฝั่งเงินจริงเป็นหลัก'};
+    else if(Math.sign(td)===Math.sign(md))
+      align={cls:'good',txt:'กราฟกับเงินจริงไปทางเดียวกัน — สัญญาณน่าเชื่อขึ้น'};
+    else align={cls:'warn',txt:'กราฟกับเงินจริงสวนกัน — ลดขนาดไม้ รอให้ตรงกันก่อนค่อยลงหนัก'};
+  }
+
+  let advice,adviceCls;
+  const t=techProb==null?50:techProb, m=pct==null?50:pct;
+  const hot=o&&o.skew30!=null&&o.skew30>=13, greed=f&&f.fng!=null&&f.fng>=75;
+  if(t>=58&&m>=56){ advice='ทั้งกราฟและเงินจริงหนุนขึ้น — ทยอยสะสมเป็นไม้ ๆ ตั้ง stop ใต้แนวรับออปชัน'; adviceCls='good'; }
+  else if(t>=58&&m<=44){ advice=(greed?'กราฟดีแต่คนโลภแล้วและ':'กราฟดีแต่')+'ฝั่งอนุพันธ์เริ่มระวัง — ถือของเดิม อย่าไล่ราคา รอย่อ'; adviceCls='warn'; }
+  else if(t<=42&&m<=44){ advice='ทั้งสองฝั่งกดลง — ลดความเสี่ยง ชะลอซื้อเพิ่ม รอราคานิ่งเหนือแนวรับก่อน'; adviceCls='bad'; }
+  else if(t<=42&&m>=56){ advice='กราฟยังลงแต่เงินจริงเริ่มกลับ — รอราคายืนเหนือแนวต้านออปชันค่อยเข้า'; adviceCls='warn'; }
+  else if(hot){ advice='ก้ำกึ่ง และประกันขาลงแพงผิดปกติ — ถือเงินสดบางส่วนไว้รับความผันผวน'; adviceCls='warn'; }
+  else { advice='สัญญาณยังก้ำกึ่งทั้งสองฝั่ง — ยังไม่ต้องรีบ ซื้อเฉพาะเมื่อลงมาใกล้แนวรับ'; adviceCls=''; }
+
+  return {pct,tone,headline,notes,align,advice,adviceCls};
+}
+
+/* วาดบล็อกคำวิเคราะห์ + คำแนะนำใต้การ์ด Bitcoin */
+async function loadBtcMkt(){
+  const box = document.getElementById('wBtcMkt');
+  if(!box) return;
+  try{
+    const o = await mktOptions().catch(()=>null);
+    const f = await mktFlow(o && o.skew30).catch(()=>null);
+    if(!o && !f){ box.innerHTML = '<span class="w-empty">อ่านตลาดออปชันไม่ได้ (Deribit ต่อไม่ได้)</span>'; return; }
+    const r = mktRead(o, f, BTC_TECH);
+    const esc = t => String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    box.innerHTML =
+      '<div class="mk-head"><span class="mk-t ' + r.tone + '">📡 ' + esc(r.headline) + '</span>' +
+      (r.pct!=null ? '<span class="mk-pct">อารมณ์ตลาด ' + r.pct + '/100</span>' : '') + '</div>' +
+      '<ul>' + r.notes.map(n=>'<li>' + esc(n) + '</li>').join('') + '</ul>' +
+      (r.align ? '<div class="mk-align ' + r.align.cls + '">' + esc(r.align.txt) + '</div>' : '') +
+      '<div class="mk-adv ' + r.adviceCls + '"><span class="tag">แนะนำ</span><span class="txt">' + esc(r.advice) + '</span></div>';
+  }catch(e){
+    box.innerHTML = '<span class="w-empty">อ่านตลาดออปชันไม่ได้</span>';
+  }
+}
+
+loadBtcSignal().then(loadBtcMkt);
+setInterval(()=>{ loadBtcSignal().then(loadBtcMkt); }, 600000);
 
 /* =====================================================================
    FINANCE — อ่าน Firestore agents/finance (เขียนโดยแอป budget2569)
