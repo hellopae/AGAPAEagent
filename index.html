@@ -235,11 +235,16 @@
     box-shadow:0 .25cqw .35cqw rgba(27,28,32,.25);
     outline:.16cqw solid var(--st,transparent);outline-offset:.06cqw;
   }
-  .ofc-guy .pix{width:3.4cqw;height:auto;display:block;
+  .ofc-guy .pix{height:5.4cqw;width:auto;display:block;
     filter:drop-shadow(0 .2cqw .25cqw rgba(27,28,32,.28))}
   .ofc-guy[data-dir="l"] .pix{transform:scaleX(-1)}
 
   /* ชื่อ + สถานะ ใต้ตัว — โผล่ตอนชี้ */
+  .ofc-guy .sdot{
+    position:absolute;right:-.15cqw;bottom:.45cqw;width:.62cqw;height:.62cqw;border-radius:50%;
+    background:var(--st,var(--ink-faint));border:.13cqw solid var(--card);
+    box-shadow:0 .05cqw .15cqw rgba(27,28,32,.3);
+  }
   .ofc-guy .nm{
     position:absolute;top:100%;margin-top:.15cqw;white-space:nowrap;
     font-family:"IBM Plex Mono",monospace;font-size:.92cqw;color:var(--ink);
@@ -1744,7 +1749,10 @@ const OFC_W = 1296, OFC_H = 816;
 
 /* รูปที่ Gen มา — ถ้าอยากกลับไปใช้ผังที่วาดด้วยโค้ด ตั้ง floor เป็น null
    sprites: {agentId:'office/sprites/xxx.png'} ใส่ทีหลังได้ ใครไม่มีก็ใช้หัว avatar เดิม */
-const OFC_ART = { floor:'office/floor.jpeg', sprites:{} };
+const OFC_ART = { floor:'office/floor.jpeg', sprites:{
+  claudy:'office/sprites/claudy.png',
+  minnie:'office/sprites/minnie.png',
+}};
 
 /* จุดบนทางเดิน (พื้นที่โล่งในรูป) */
 const OFC_NODES = {
@@ -2037,6 +2045,7 @@ function ofcBuildActors(){
       ${art ? `<img class="pix" src="${art}" alt="${a.name}">`
             : `<span class="head"><img src="${a.img}" alt="${a.name}" loading="lazy"></span>
                <span class="body" style="background:${ofcColor(a.pipeline||'standalone')}"></span>`}
+      <span class="sdot"></span>
       <span class="nm"></span>`;
     el.onclick = () => { if(typeof openDrawer==='function') openDrawer(a); };
     layer.appendChild(el);
