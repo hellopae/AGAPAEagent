@@ -172,6 +172,32 @@
   .w-btc-sig .bs-bar i{display:block;height:100%;border-radius:999px}
   .w-btc-sig .bs-sub{font-size:10.5px;color:var(--ink-faint);line-height:1.4}
   .w-btc-sig .bs-src{font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em}
+  /* คำวิเคราะห์ + คำแนะนำ ใต้การ์ด Bitcoin (ชุดเดียวกับแอป Widget บน Mac) */
+  .w-btc-read:empty{display:none}
+  .br-head{
+    margin-top:12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .br-notes{list-style:none;margin-top:6px;display:flex;flex-direction:column;gap:5px}
+  .br-notes li{position:relative;padding-left:12px;font-size:11.5px;line-height:1.5;color:var(--ink)}
+  .br-notes li::before{
+    content:'';position:absolute;left:1px;top:7px;width:4px;height:4px;border-radius:50%;
+    background:var(--gold);opacity:.55;
+  }
+  .br-adv{
+    display:flex;gap:8px;align-items:flex-start;margin-top:11px;
+    background:var(--paper);border:1px solid var(--line);border-left:2px solid var(--ink-faint);
+    border-radius:8px;padding:8px 10px;
+  }
+  .br-adv.good{border-left-color:var(--done)} .br-adv.good .txt{color:var(--done)}
+  .br-adv.warn{border-left-color:var(--gold)} .br-adv.warn .txt{color:var(--gold)}
+  .br-adv.bad{border-left-color:var(--flagged)} .br-adv.bad .txt{color:var(--flagged)}
+  .br-adv .tag{
+    flex:none;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-faint);padding-top:2px;
+  }
+  .br-adv .txt{font-size:11.5px;line-height:1.5;font-weight:500}
+  .br-src{margin-top:9px;font-size:9px;line-height:1.5;color:var(--ink-faint);opacity:.8}
   /* ---------- Pain Point view ---------- */
   .pp-today-head,.pp-log-head{
     display:flex;align-items:baseline;gap:10px;
@@ -613,7 +639,7 @@
   <div class="wrap">
     <section class="hero">
       <div class="ey mono">Widgets · สรุปสด</div>
-      <p>Claude Limit · งานของ Agent · Bitcoin &amp; ข่าว · อัปเดตมังงะ</p>
+      <p>Claude Limit · สรุปข่าวประจำวัน · Bitcoin · อัปเดตมังงะ · ดูดวง · To Do</p>
     </section>
     <div class="widget-grid">
 
@@ -628,20 +654,17 @@
         <div class="w-sub" id="wLimitSub">รอข้อมูลจากแอป AGAPAE Widget (เปิดแอปค้างไว้)</div>
       </div>
 
-      <!-- Agent work today -->
-      <div class="widget" id="wWork">
-        <div class="wh"><span class="wdot" style="background:var(--working)"></span><h4>งานของ Agent</h4></div>
-        <div class="w-row"><span class="k">กำลังทำ</span><span class="v" id="wWorking">0</span></div>
-        <div class="w-row"><span class="k">เสร็จวันนี้</span><span class="v" id="wDoneToday">0</span></div>
-        <div class="w-row"><span class="k">ทั้งหมดใน log</span><span class="v" id="wTotal">0</span></div>
-        <div class="w-sub" id="wLatest">—</div>
+      <!-- สรุปข่าวประจำวัน (Firestore agents/daily · routine 09:00) -->
+      <div class="widget" id="wNewsW">
+        <div class="wh"><span class="wdot" style="background:var(--c-news)"></span><h4>สรุปข่าวประจำวัน</h4><span class="wup" id="wNewsUp">—</span></div>
+        <div class="w-news" id="wNews"><span class="w-empty">รอสรุปข่าวประจำวัน (routine 09:00)</span></div>
       </div>
 
-      <!-- Daily routines: news + bitcoin -->
+      <!-- Bitcoin — ราคา + สรุปแนวโน้ม + คำวิเคราะห์/คำแนะนำ -->
       <div class="widget" id="wDaily">
-        <div class="wh"><span class="wdot" style="background:var(--c-news)"></span><h4>Daily Routines</h4><span class="wup" id="wDailyUp">—</span></div>
+        <div class="wh"><span class="wdot" style="background:var(--gold)"></span><h4>Bitcoin</h4><span class="wup" id="wBtcUp">—</span></div>
         <div class="w-row" style="align-items:center">
-          <span class="k">Bitcoin</span>
+          <span class="k">ราคา</span>
           <span style="display:flex;align-items:baseline;gap:8px">
             <span class="v mono" id="wBtc">—</span>
             <span class="w-chg" id="wBtcChg"></span>
@@ -650,7 +673,7 @@
         <a class="w-btc-sig" id="wBtcSig" href="https://hellopae.github.io/investai/" target="_blank" rel="noopener noreferrer">
           <span class="w-empty">กำลังวิเคราะห์แนวโน้ม…</span>
         </a>
-        <div class="w-news" id="wNews"><span class="w-empty">รอสรุปข่าวประจำวัน (routine 09:00)</span></div>
+        <div class="w-btc-read" id="wBtcRead"></div>
       </div>
 
       <!-- Manga updates -->
@@ -947,7 +970,6 @@ function mergeWorklog(){
   WORKLOG = [...map.values()].sort((a,b) => String(b.datetime||'').localeCompare(String(a.datetime||'')));
   updateWlStats();
   buildWlFilters();
-  updateWorkWidget();
   renderDaily(DAILY_DOC);
   renderWorklogEntries();
 }
@@ -993,28 +1015,18 @@ function renderLimit(d){
   document.getElementById('wLimitUp').textContent = relTime(d.updatedAt);
 }
 
-/* --- widget: agent work (จาก AGENTS + WORKLOG ที่มีอยู่แล้ว) --- */
-function updateWorkWidget(){
-  const today = new Date().toISOString().slice(0,10);
-  document.getElementById('wWorking').textContent = AGENTS.filter(a=>a.status==='working').length;
-  document.getElementById('wDoneToday').textContent = WORKLOG.filter(e=>String(e.datetime||'').slice(0,10)===today).length;
-  document.getElementById('wTotal').textContent = WORKLOG.length;
-  const latest = WORKLOG[0];
-  document.getElementById('wLatest').textContent = latest ? `ล่าสุด: ${latest.agentName} — ${latest.title}` : '—';
-}
-
 /* --- widget: daily routines — news digest (Firestore agents/daily) --- */
 function renderDaily(d){
   const box = document.getElementById('wNews');
   // fallback: entry ล่าสุดของ News agent จาก worklog
   const wlNews = WORKLOG.find(e=>e.agent==='news');
   if(d && Array.isArray(d.items) && d.items.length){
-    box.innerHTML = `<div class="nt">${d.title || 'สรุปข่าวประจำวัน'}</div>
-      <ul>${d.items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
-    document.getElementById('wDailyUp').textContent = relTime(d.updatedAt);
+    const t = d.title && d.title !== 'สรุปข่าวประจำวัน' ? `<div class="nt">${d.title}</div>` : '';
+    box.innerHTML = `${t}<ul>${d.items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
+    document.getElementById('wNewsUp').textContent = relTime(d.updatedAt);
   } else if(wlNews){
     box.innerHTML = `<div class="nt">${wlNews.title}</div><ul><li>${wlNews.summary}</li></ul>`;
-    document.getElementById('wDailyUp').textContent = wlNews.displayDate || '—';
+    document.getElementById('wNewsUp').textContent = wlNews.displayDate || '—';
   }
 }
 let DAILY_DOC = null;
@@ -1169,7 +1181,45 @@ function btcSignal(P){
   const conf = Math.abs(prob-50);
   const dirWord = up ? 'มีโอกาสขึ้นมากกว่าลง' : 'มีโอกาสลงมากกว่าขึ้น';
   const confTxt = conf>=18?'ค่อนข้างชัด' : conf>=9?'พอมีน้ำหนัก' : 'ยังก้ำกึ่ง';
-  return { prob, up, reason, dirWord, confTxt, rsi:Math.round(rsi) };
+
+  // แนวรับ/แนวต้าน = ต่ำสุด/สูงสุดของ 90 วันหลังสุด
+  const win = P.slice(-90);
+  const low90 = Math.min(...win), high90 = Math.max(...win);
+  const pct = x => `${x>=0?'+':''}${(x*100).toFixed(1)}%`;
+  const usd = x => '$'+Math.round(x).toLocaleString('en-US');
+
+  // คำวิเคราะห์ — ภาษาคนอ่านรู้เรื่อง ไม่ต้องรู้จักศัพท์เทคนิคมาก่อน
+  const notes = [];
+  if(ma50!=null){
+    const d50=(cur-ma50)/ma50;
+    notes.push(ma200!=null
+      ? `ราคาอยู่${d50>=0?'เหนือ':'ใต้'}เส้นเฉลี่ย 50 วัน ${pct(d50)} และ${cur>=ma200?'เหนือ':'ใต้'}เส้น 200 วัน ${pct((cur-ma200)/ma200)}`
+      : `ราคาอยู่${d50>=0?'เหนือ':'ใต้'}เส้นเฉลี่ย 50 วัน ${pct(d50)}`);
+  }
+  if(ma50!=null && ma200!=null){
+    notes.push(ma50>ma200
+      ? 'เส้น 50 วันอยู่เหนือเส้น 200 วัน (Golden Cross) — โครงสร้างใหญ่เป็นขาขึ้น'
+      : 'เส้น 50 วันยังอยู่ใต้เส้น 200 วัน (Death Cross) — โครงสร้างใหญ่ยังไม่กลับเป็นขาขึ้นเต็มตัว');
+  }
+  const rsiTxt = rsi>=70 ? 'ร้อนแล้ว คนไล่ซื้อเยอะ เสี่ยงย่อ'
+    : rsi<=30 ? 'ขายกันมากไป มีลุ้นเด้ง'
+    : rsi>=55 ? 'แรงซื้อนำเล็กน้อย ยังไม่ร้อน'
+    : rsi>=45 ? 'แรงซื้อ-ขายพอ ๆ กัน'
+    : 'แรงขายนำเล็กน้อย';
+  notes.push(`RSI ${Math.round(rsi)} — ${rsiTxt}`);
+  notes.push(`ผลตอบแทน 20 วัน ${pct(mom20)} · 60 วัน ${pct(mom60)}`);
+  notes.push(`กรอบ 90 วัน — แนวรับ ~${usd(low90)} · แนวต้าน ~${usd(high90)}`);
+
+  // คำแนะนำ — ผูกกับ prob + RSI ไม่ให้เชียร์ซื้อตอนราคาร้อนจัด
+  let advice, adviceCls;
+  if(prob>=65 && rsi>=70){ advice='แนวโน้มดีแต่ราคาร้อนแล้ว — รอย่อค่อยเก็บ อย่าไล่ราคา'; adviceCls='warn'; }
+  else if(prob>=65){ advice='จังหวะสะสมได้ — แบ่งไม้ซื้อเป็นรอบ ๆ อย่าลงทีเดียวหมด'; adviceCls='good'; }
+  else if(prob>=55){ advice='ถือของเดิมไว้ ซื้อเพิ่มเฉพาะตอนราคาย่อลงมาใกล้แนวรับ'; adviceCls='good'; }
+  else if(prob>=45){ advice='สัญญาณก้ำกึ่ง — ยังไม่ต้องรีบ รอให้ทิศทางชัดก่อน'; adviceCls=''; }
+  else if(rsi<=30){ advice='ขาลงแต่ลงลึกมากแล้ว — รอสัญญาณกลับตัว อย่ารีบสวน'; adviceCls='warn'; }
+  else { advice='ลดความเสี่ยงไว้ก่อน — ชะลอซื้อเพิ่ม รอแนวโน้มกลับด้าน'; adviceCls='bad'; }
+
+  return { prob, up, reason, dirWord, confTxt, rsi:Math.round(rsi), notes, advice, adviceCls };
 }
 async function loadBtcSignal(){
   const box = document.getElementById('wBtcSig');
@@ -1191,8 +1241,20 @@ async function loadBtcSignal(){
       <div class="bs-bar"><i style="width:${sig.prob}%;background:${col}"></i></div>
       <div class="bs-sub">ความชัดเจน ${sig.confTxt} · ${sig.reason}</div>
       <div class="bs-src">investai · แตะดูเต็ม ↗</div>`;
+    const read = document.getElementById('wBtcRead');
+    if(read){
+      read.innerHTML = `
+        <div class="br-head mono">คำวิเคราะห์</div>
+        <ul class="br-notes">${sig.notes.map(t=>`<li>${t}</li>`).join('')}</ul>
+        <div class="br-adv ${sig.adviceCls}"><span class="tag mono">แนะนำ</span><span class="txt">${sig.advice}</span></div>
+        <div class="br-src mono">คำนวณจากแท่งเทียนรายวัน Binance · ไม่ใช่คำแนะนำการลงทุน ตัดสินใจเองทุกครั้ง</div>`;
+    }
+    const up = document.getElementById('wBtcUp');
+    if(up) up.textContent = 'เพิ่งอัปเดต';
   }catch(e){
     box.innerHTML = '<span class="w-empty">วิเคราะห์แนวโน้มไม่ได้ (Binance ต่อไม่ได้)</span>';
+    const read = document.getElementById('wBtcRead');
+    if(read) read.innerHTML = '';
   }
 }
 loadBtcSignal();
@@ -1385,7 +1447,6 @@ function updateStats(){
   document.getElementById('nWorking').textContent = AGENTS.filter(a=>a.status==='working').length;
   document.getElementById('nIdle').textContent = AGENTS.filter(a=>a.status==='idle').length;
   document.getElementById('nDone').textContent = AGENTS.filter(a=>a.status==='done').length;
-  updateWorkWidget();
 }
 
 /* =====================================================================
