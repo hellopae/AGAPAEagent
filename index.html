@@ -1922,18 +1922,10 @@ const OFC_ART = { floor:'office/floor2.2.png', sprites:{
 /* ท่าเดิน — สไปรท์ชีต 3 เฟรม (กว้าง 3 เท่าของเฟรมเดียว) ของใครของมัน
    ใครยังไม่มีไฟล์ก็ข้ามไป ตัวนั้นจะใช้ท่ายืนตอนเดินเหมือนเดิม */
 const OFC_WALK = {
-  claudy:'office/sprites/Claudy-W.png',
-  minnie:'office/sprites/Minnie-W.png',
-  reese: 'office/sprites/Reese-W.png',
-  addy:  'office/sprites/Addy-W.png',
-  rae:   'office/sprites/Rae-W.png',
-  mind:  'office/sprites/Mind-W.png',
-  chris: 'office/sprites/Chris-W.png',
-  libby: 'office/sprites/Libby-W.png',
-  nick:  'office/sprites/Nick-W.png',
-  dale:  'office/sprites/Dale-W.png',
-  news:  'office/sprites/News-W.png',
-  /* รอไฟล์: toby, vera — วาดเสร็จแล้วเพิ่มบรรทัดเดียวตรงนี้ */
+  /* ปิดท่าเดินของคนไว้ก่อน (25 ส.ค. 69) — ชีตแต่ละคนสเกล/ทิศทาง/ระยะขอบเฟรมไม่ตรงกัน
+     ทำให้บางคนเดินถอยหลัง บางคนตัวใหญ่กว่าเพื่อน และมีเฟรมข้างเคียงโผล่มา
+     ไฟล์ยังอยู่ใน office/sprites/*-W.png ถ้าจะเปิดใช้อีกครั้งให้ทำชีตให้เท่ากันก่อน
+     แล้วค่อยใส่กลับทีละบรรทัด เช่น  claudy:'office/sprites/Claudy-W.png' */
 };
 const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
 
