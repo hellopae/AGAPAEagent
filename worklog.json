@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T04:03:00Z",
+  "updatedAt": "2026-08-25T04:25:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -1981,6 +1981,24 @@
         "office/sprites/cat/idle1.png",
         "office/sprites/cat/idle2.png",
         "office/sprites/cat/idle3.png"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-office-toys",
+      "datetime": "2026-08-25T04:25:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "11:25",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ของเล่นน้องส้ม — ลูกบอล + ที่นอนแมว",
+      "summary": "เพิ่มที่นอนแมวในห้องพัก (แมวเลิกนอนสุ่มตามมุม กลับมานอนที่นอนตัวเอง) และลูกบอลที่กลิ้งไปตามจุดบนทางเดินเท่านั้นเพื่อไม่ให้ทะลุกำแพง · แมวเดินไปเตะแล้วไล่ต่อ 2-3 ครั้ง มีบทพูดของแมวตอนเล่นบอล · บอลหยุดใกล้เอเจนต์คนไหน มีโอกาส 60% ที่คนนั้นเตะกลับพร้อมบทพูดของตัวเอง · กดที่ลูกบอลเตะเองได้ ลูบแมวแล้วแมวจะอยากเล่นบอลต่อ · รูปย่อเป็น ball.png 180px และ bed.png 400px",
+      "files": [
+        "index.html",
+        "office/sprites/cat/ball.png",
+        "office/sprites/cat/bed.png"
       ]
     }
   ]
