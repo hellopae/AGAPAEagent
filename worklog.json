@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T06:05:00Z",
+  "updatedAt": "2026-08-25T06:20:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -2069,6 +2069,24 @@
       "files": [
         "index.html",
         "office/floor2.png"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-ps5-tank-table",
+      "datetime": "2026-08-25T06:20:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "13:20",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ตู้ปลาขึ้นโต๊ะ + PS5 ในห้องเกม",
+      "summary": "เปลี่ยนพื้นเป็น floor2.1.png (เป้เพิ่มโต๊ะในห้องพัก) · เทียบรูปเก่า-ใหม่ด้วย blend difference เจอจุดต่างจุดเดียวคือโต๊ะที่ [1146-1214, 795-838] · ย่อตู้ปลาจาก 6.2cqw เหลือ 5.0cqw ให้พอดีหน้าโต๊ะแล้ววางทับบนโต๊ะ · ย้ายจุดยืนดูปลาของแมว/เอเจนต์ และที่นอนแมวตามไปด้วย · วาง PS5 บนตู้ข้างทีวีในห้องเกม เพิ่มจุดหมาย goPS5 ยืนเล่นได้สองคน (Toby 24% · ว่าง 14% · เสร็จแล้ว 10% · ทำงานอยู่ 3%) พร้อมบทพูดของแต่ละคน และแสงจอทีวีติดกะพริบตอนมีคนเล่น · รันจำลอง 9000 เฟรมผ่าน ไม่มีใครหลุดขอบ",
+      "files": [
+        "index.html",
+        "office/floor2.1.png",
+        "office/sprites/cat/playstation.png"
       ]
     }
   ]
