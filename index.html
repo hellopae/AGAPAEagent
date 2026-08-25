@@ -2701,13 +2701,13 @@ function ofcCatGoal(){
             pos:[OFC_BALL.x + (Math.random()<0.5?-37:37), OFC_BALL.y + 10],
             act:'ball', dwell:1400};
   }
-  if((c && c.wantFish) || r0 < 0.50){             /* ไปนั่งดูปลา */
+  if((c && c.wantFish) || r0 < 0.40){             /* ไปนั่งดูปลา */
     if(c) c.wantFish = false;
     const lg0 = ofcRoomByKey('lounge');
     return {node:lg0.node, door:lg0.door, pos:[OFC_FISH_POS[0], OFC_FISH_POS[1]],
             act:'fish', dwell:7000+Math.random()*7000};
   }
-  if(r0 < 0.38){                                  /* ไปนอนที่นอนตัวเอง */
+  if(r0 < 0.56){                                  /* ไปนอนที่นอนตัวเอง */
     const lg = ofcRoomByKey('lounge');
     return {node:lg.node, door:lg.door, pos:[OFC_BED_POS[0], OFC_BED_POS[1]+6],
             act:'sleep', dwell:14000+Math.random()*10000};
