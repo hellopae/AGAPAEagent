@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T16:49:21Z",
+  "updatedAt": "2026-08-25T16:52:22Z",
   "agents": [
     {
       "id": "claudy",
@@ -269,11 +269,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "ยกระบบ EXP / LV / MVP ขึ้น Widget บน Mac",
+      "task": "แก้ node ที่พังจาก llhttp + เก็บกวาด backup ของ Widget",
       "report": {
-        "when": "23:49",
-        "title": "Widget ตัวใหม่มีระบบระดับแล้ว",
-        "body": "พอร์ตสูตรเลเวลไปเป็น src/levels.js แล้วต่อเข้าแท็บ TEAM AGAPAE\n— ป้าย LV + ระดับใต้ชื่อทุกการ์ด\n— 👑 MVP / 🔥 สตรีค มุมขวาบนของรูป\n— แถบ MVP เหนือแถวการ์ด\n\nbuild Tauri release ผ่าน (40 วิ) · ditto ทับ /Applications/AGAPAE Widget.app\nสำรองตัวเก่าไว้ที่ .bak-20260825-2347 · เปิดใช้งานแล้ว\n\n⚠️ node ในเครื่องพัง — Homebrew อัป llhttp เป็น 9.4.3 แต่ node 25.8.2 ลิงก์กับ 9.3\nรอบนี้เลี่ยงด้วย DYLD_LIBRARY_PATH ชี้ไป Cellar/llhttp/9.3.1 ยังไม่ได้แก้ต้นเหตุ (brew reinstall node)"
+        "when": "23:52",
+        "title": "node ใช้ได้ปกติแล้ว · เคลียร์ backup คืน 90MB",
+        "body": "brew reinstall node เรียบร้อย — แต่ brew ดึง formula ล่าสุดมาให้\nnode 25.8.2 → 26.7.0 · npm → 11.19.0 (ข้ามเมเจอร์ ไม่ใช่แค่ reinstall)\n\nทดสอบแล้ว: npm run build ของ Widget ผ่าน ได้ hash ไฟล์เดิมเป๊ะ\n→ ตัวใน /Applications ยังเป็นตัวล่าสุด ไม่ต้อง build ใหม่\n\nลบ backup เก่าของ Widget 6 ตัว (bak-20260807 → bak-20260825) คืนพื้นที่ 90MB\nเหลือ bak-20260825-2347 ไว้ตัวเดียวสำหรับย้อนกลับ"
       }
     },
     {
