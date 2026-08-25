@@ -305,6 +305,19 @@
   .ofc-guy[data-show="1"] .think,.ofc-guy:hover .think{opacity:1;visibility:visible}
   .ofc-guy:hover{z-index:9999!important}
 
+  /* ท่าเดิน — สไปรท์ชีต 3 เฟรมต่อคน หันขวาเป็นค่าตั้งต้น
+     ใครยังไม่มีไฟล์ -W ก็ใช้ท่ายืนเดิม (ไม่ตั้ง data-walk) */
+  .ofc-guy .walk{
+    display:none;height:7cqw;width:4.19cqw;
+    background:var(--walk) 0 0/300% 100% no-repeat;
+    filter:drop-shadow(0 .2cqw .25cqw rgba(27,28,32,.28));
+  }
+  .ofc-guy[data-walk="1"][data-act=""] .pix{display:none}
+  .ofc-guy[data-walk="1"][data-act=""] .walk{display:block;animation:ofcStep .54s steps(3) infinite}
+  .ofc-guy[data-dir="l"] .walk{transform:scaleX(-1)}
+  @keyframes ofcStep{from{background-position-x:0%}to{background-position-x:150%}}
+  .ofc-cat .walk{height:4.6cqw;width:2.95cqw}
+
   /* เดิน = ตัวเด้งเบา ๆ (data-act ว่างตอนเดิน) */
   .ofc-guy[data-act=""]{animation:ofcBob .42s steps(2,end) infinite}
   @keyframes ofcBob{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,calc(-100% - .38cqw))}}
@@ -1906,6 +1919,24 @@ const OFC_ART = { floor:'office/floor2.2.png', sprites:{
   news:'office/sprites/news.png',
 }};
 
+/* ท่าเดิน — สไปรท์ชีต 3 เฟรม (กว้าง 3 เท่าของเฟรมเดียว) ของใครของมัน
+   ใครยังไม่มีไฟล์ก็ข้ามไป ตัวนั้นจะใช้ท่ายืนตอนเดินเหมือนเดิม */
+const OFC_WALK = {
+  claudy:'office/sprites/Claudy-W.png',
+  minnie:'office/sprites/Minnie-W.png',
+  reese: 'office/sprites/Reese-W.png',
+  addy:  'office/sprites/Addy-W.png',
+  rae:   'office/sprites/Rae-W.png',
+  mind:  'office/sprites/Mind-W.png',
+  chris: 'office/sprites/Chris-W.png',
+  libby: 'office/sprites/Libby-W.png',
+  nick:  'office/sprites/Nick-W.png',
+  dale:  'office/sprites/Dale-W.png',
+  news:  'office/sprites/News-W.png',
+  /* รอไฟล์: toby, vera — วาดเสร็จแล้วเพิ่มบรรทัดเดียวตรงนี้ */
+};
+const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
+
 /* จุดบนทางเดิน — วัดจาก floor2.png ทีละจุด
    A = ทางเดินยาวใต้ห้องแถวบน · L = ทางเดินตั้งฝั่งซ้าย · B = ทางเดินยาวกลางล่าง */
 const OFC_NODES = {
@@ -2355,8 +2386,11 @@ function ofcBuildActors(){
     el.style.top =(start[1]/OFC_H*100)+'%';
     el.style.zIndex = Math.round(start[1]);
     el.dataset.bx = start[0]<230 ? 'l' : (start[0]>OFC_W-230 ? 'r' : '');
+    const walkArt = OFC_WALK[a.id];
+    if(art && walkArt){ el.dataset.walk = '1'; el.style.setProperty('--walk', `url("${walkArt}")`); }
     el.innerHTML = `
       <span class="think"></span>
+      ${art && walkArt ? `<i class="walk"></i>` : ''}
       ${art ? `<img class="pix" src="${art}" alt="${a.name}">`
             : `<span class="head"><img src="${a.img}" alt="${a.name}" loading="lazy"></span>
                <span class="body" style="background:${ofcColor(a.pipeline||'standalone')}"></span>`}
@@ -2373,6 +2407,8 @@ function ofcBuildActors(){
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
   ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
+  /* พรีโหลดรูปท่าเดิน (background-image ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
+  setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK].forEach(u=>{ const i=new Image(); i.src=u; }); }, 1500);
 }
 
 /* ผังพื้น — ใช้รูปที่ Gen มา แล้วแปะป้ายชื่อห้องทับ */
@@ -2758,8 +2794,11 @@ function ofcBuildCat(){
   el.style.top  = (py/OFC_H*100)+'%';
   el.style.zIndex = Math.round(py) + 1;
   el.dataset.bx = px<230 ? 'l' : (px>OFC_W-230 ? 'r' : '');
+  el.dataset.walk = '1';
+  el.style.setProperty('--walk', `url("${OFC_CAT_WALK}")`);
   el.innerHTML = `
     <span class="think"></span>
+    <i class="walk"></i>
     <img class="pix" src="${OFC_CAT_ART[0]}" alt="${OFC_CAT_NAME}">
     <span class="sdot"></span>
     <span class="nm">${OFC_CAT_NAME} <i>😺 แมวประจำออฟฟิศ</i></span>`;

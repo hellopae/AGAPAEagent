@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T07:10:00Z",
+  "updatedAt": "2026-08-25T09:35:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -2120,6 +2120,24 @@
       "files": [
         "index.html",
         "office/floor2.2.png"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-walkcycle",
+      "datetime": "2026-08-25T09:35:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "16:35",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ท่าเดินของทีม (สไปรท์ชีต 3 เฟรม)",
+      "summary": "ต่อสไปรท์ชีตท่าเดินที่เป้วาดมา 11 คน + แมว เข้ากับตัวเดินในผังออฟฟิศ · ใช้ background-size 300% แล้วเลื่อน background-position-x 0→150% ด้วย steps(3) รอบละ .54 วิ ไม่ต้องแตะ JS ต่อเฟรม · โชว์ท่าเดินเฉพาะตอน data-act ว่าง (กำลังเดิน) ที่เหลือกลับไปใช้ท่ายืนเดิม พลิกซ้าย-ขวาด้วย scaleX ตาม data-dir · ขนาดปรับเป็น 7cqw ให้สูงเท่าท่ายืน (ในชีตตัวละครกินพื้นที่เฟรมแค่ ~76%) แมว 4.6cqw · ย้าย Dale-W.png ที่วางผิดโฟลเดอร์ cat/ ออกมา · ย่อชีตทุกไฟล์เหลือสูง 320px รวม 5.1MB → 2.7MB · พรีโหลดด้วย new Image() หลังสร้างตัวเดิน 1.5 วิ เพราะ background-image ของ element ที่ display:none เบราว์เซอร์จะยังไม่โหลด · ใครยังไม่มีไฟล์ (toby, vera) ไม่ตั้ง data-walk ตัวนั้นใช้ท่ายืนตอนเดิน ตรวจแล้วว่าไม่หาย",
+      "files": [
+        "index.html",
+        "office/sprites/*-W.png",
+        "office/sprites/cat/Cat-W.png"
       ]
     }
   ]
