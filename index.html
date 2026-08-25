@@ -232,13 +232,13 @@
   @media(max-width:400px){ .ofc-team{grid-template-columns:repeat(2,minmax(0,1fr))} }
   .ofc-scroll{overflow-x:auto;overflow-y:hidden;border-radius:var(--radius)}
   .ofc-stage{
-    position:relative;width:100%;min-width:760px;aspect-ratio:1296/816;
+    position:relative;width:100%;min-width:880px;aspect-ratio:1586/992;
     container-type:inline-size;background:var(--paper-2);
     border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;
   }
   .ofc-plan,.ofc-plan .ofc-svg{display:block;width:100%;height:100%}
   .ofc-tagbg{fill:var(--card);opacity:.82}
-  .ofc-rname{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink-soft);letter-spacing:.02em}
+  .ofc-rname{font-family:"IBM Plex Mono",monospace;font-size:13px;fill:var(--ink-soft);letter-spacing:.02em}
   .ofc-room rect:first-of-type{transition:stroke .2s;stroke:transparent;stroke-width:2}
   .ofc-room:hover rect:first-of-type{stroke:var(--gold)}
   .ofc-room.on rect:first-of-type{stroke:var(--gold);stroke-width:3}
@@ -1851,14 +1851,14 @@ async function loadWorklog(){
 
 /* =====================================================================
    OFFICE — ผังออฟฟิศ 2D ของทีม
-   พื้นออฟฟิศใช้รูปที่ Gen มา (office/floor.jpeg) — พิกัดทุกอย่างอิงรูปนั้น
-   ระบบพิกัด 1296 x 816 ตามขนาดรูปจริง แล้วค่อยสเกลตามความกว้างที่แสดง
+   พื้นออฟฟิศใช้รูปที่ Gen มา (office/floor2.png) — พิกัดทุกอย่างอิงรูปนั้น
+   ระบบพิกัด 1586 x 992 ตามขนาดรูปจริง แล้วค่อยสเกลตามความกว้างที่แสดง
    ===================================================================== */
-const OFC_W = 1296, OFC_H = 816;
+const OFC_W = 1586, OFC_H = 992;
 
 /* รูปที่ Gen มา — ถ้าอยากกลับไปใช้ผังที่วาดด้วยโค้ด ตั้ง floor เป็น null
    sprites: {agentId:'office/sprites/xxx.png'} ใส่ทีหลังได้ ใครไม่มีก็ใช้หัว avatar เดิม */
-const OFC_ART = { floor:'office/floor.jpeg', sprites:{
+const OFC_ART = { floor:'office/floor2.png', sprites:{
   claudy:'office/sprites/claudy.png',
   minnie:'office/sprites/minnie.png',
   reese:'office/sprites/reese.png',
@@ -1874,62 +1874,64 @@ const OFC_ART = { floor:'office/floor.jpeg', sprites:{
   news:'office/sprites/news.png',
 }};
 
-/* จุดบนทางเดิน (พื้นที่โล่งในรูป) */
+/* จุดบนทางเดิน — วัดจาก floor2.png ทีละจุด
+   A = ทางเดินยาวใต้ห้องแถวบน · L = ทางเดินตั้งฝั่งซ้าย · B = ทางเดินยาวกลางล่าง */
 const OFC_NODES = {
-  A1:[300,272], A2:[362,272], A3:[556,272], A4:[650,272], A5:[806,272], A6:[940,272], A7:[1058,272],
-  L1:[300,392], L2:[300,470], L3:[300,556],
-  M1:[650,150], M2:[650,420], M3:[650,556],
-  B1:[362,556], B2:[500,556], B3:[800,556], B4:[944,556], B5:[1036,556],
-  R1:[1058,420], P1:[944,648],
+  A1:[250,290], A2:[450,290], A3:[625,290], A4:[665,290], A5:[790,290], A6:[885,290],
+  A7:[910,290], A8:[1085,290], A9:[1220,290], A10:[1265,290], A11:[1350,290],
+  L2:[300,358], L3:[300,490], L4:[350,640],
+  B1:[350,645], B2:[500,645], B3:[617,645], B4:[700,645], B5:[790,645],
+  B6:[910,645], B7:[1070,645], B8:[1210,600],
+  BM1:[680,740],
 };
 const OFC_EDGES = {
-  A1:['A2','L1'], A2:['A1','A3'], A3:['A2','A4'], A4:['A3','A5','M1','M2'],
-  A5:['A4','A6'], A6:['A5','A7'], A7:['A6','R1'],
-  L1:['A1','L2'], L2:['L1','L3'], L3:['L2','B1'],
-  M1:['A4'], M2:['A4','M3'], M3:['M2','B2','B3'],
-  B1:['L3','B2'], B2:['B1','M3'], B3:['M3','B4'], B4:['B3','B5','P1'], B5:['B4','R1'],
-  R1:['A7','B5'], P1:['B4'],
+  A1:['A2','L2'], A2:['A1','A3'], A3:['A2','A4'], A4:['A3','A5'],
+  A5:['A4','A6','B5'], A6:['A5','A7'], A7:['A6','A8'], A8:['A7','A9'],
+  A9:['A8','A10','B8'], A10:['A9','A11'], A11:['A10'],
+  L2:['A1','L3'], L3:['L2','L4'], L4:['L3','B1'],
+  B1:['L4','B2'], B2:['B1','B3'], B3:['B2','B4'], B4:['B3','B5','BM1'], BM1:['B4'],
+  B5:['B4','A5','B6'], B6:['B5','B7'], B7:['B6','B8'], B8:['B7','A9'],
 };
 
 /* ห้อง — พิกัดวัดจากรูปจริง · door = ช่องประตูที่ต้องเดินผ่าน · node = จุดทางเดินหน้าห้อง
-   wish = คำขอของเจ้าของห้อง (เอามาใช้เป็นความคิดในบับเบิลด้วย) */
+   seats = จุดอ้างอิงของแต่ละคน (ยืนจริงต่ำกว่านี้ 42) */
 const OFC_ROOMS = [
-  {key:'r1', name:'ห้องไอเดีย & วิจัย', x:41,   y:47,  w:282, h:185, node:'A1', door:[298,238],
-   seats:{minnie:[95,168], reese:[188,168]}},
-  {key:'r2', name:'สตูดิโอภาพ',        x:325,  y:47,  w:155, h:185, node:'A2', door:[358,238],
-   seats:{mind:[390,168]}},
-  {key:'r3', name:'ห้องเซิร์ฟเวอร์',    x:482,  y:47,  w:145, h:187, node:'A3', door:[556,240],
-   seats:{dale:[556,196]}},
-  {key:'r4', name:'มุมเขียน',           x:692,  y:48,  w:146, h:186, node:'A5', door:[806,240],
-   seats:{rae:[744,150]}},
-  {key:'r5', name:'ห้องสเปค',           x:838,  y:48,  w:120, h:186, node:'A6', door:[940,240],
-   seats:{vera:[912,168]}},
-  {key:'r6', name:'ห้องข่าว & ข้อมูล',  x:979,  y:48,  w:272, h:184, node:'A7', door:[1020,238],
-   seats:{news:[1100,172], nick:[1196,172]}},
-  {key:'l1', name:'ห้องคลังไฟล์',       x:41,   y:236, w:229, h:96,  node:'L1', door:[276,296],
-   seats:{libby:[150,312]}},
-  {key:'l2', name:'โต๊ะขาย',            x:41,   y:334, w:223, h:255, node:'L2', door:[270,470],
-   seats:{addy:[104,492]}},
-  {key:'bl', name:'ห้องตรวจงาน',        x:41,   y:596, w:277, h:184, node:'L3', door:[300,590],
-   seats:{chris:[108,726]}},
-  {key:'bm', name:'ห้องเกม',            x:325,  y:596, w:286, h:184, node:'B1', door:[362,590],
-   seats:{toby:[426,726]}},
-  {key:'war',name:'ศูนย์คุมงาน',        x:323,  y:316, w:295, h:206, node:'A3', door:[548,312],
-   seats:{claudy:[502,470]}},
-  {key:'meet',name:'ห้องประชุม',        x:681,  y:314, w:291, h:210, node:'A5', door:[756,310],
+  {key:'r1', name:'ห้องไอเดีย & วิจัย', x:40,   y:45,  w:232, h:200, node:'A1', door:[250,245],
+   seats:{minnie:[160,108], reese:[230,108]}},
+  {key:'r2', name:'สตูดิโอภาพ',        x:272,  y:45,  w:230, h:200, node:'A2', door:[450,245],
+   seats:{mind:[380,108]}},
+  {key:'r3', name:'ห้องเซิร์ฟเวอร์',    x:507,  y:45,  w:220, h:200, node:'A4', door:[665,245],
+   seats:{dale:[595,108]}},
+  {key:'r4', name:'มุมเขียน',           x:730,  y:45,  w:200, h:200, node:'A6', door:[885,245],
+   seats:{rae:[810,108]}},
+  {key:'r5', name:'ห้องสเปค',           x:935,  y:45,  w:215, h:200, node:'A8', door:[1085,245],
+   seats:{vera:[1020,108]}},
+  {key:'r6', name:'ห้องข่าว & ข้อมูล',  x:1150, y:45,  w:150, h:200, node:'A10', door:[1265,252],
+   seats:{news:[1200,108], nick:[1262,108]}},
+  {key:'l1', name:'ห้องคลังไฟล์',       x:40,   y:255, w:172, h:160, node:'L2', door:[218,358],
+   seats:{libby:[120,293]}},
+  {key:'l2', name:'โต๊ะขาย',            x:40,   y:420, w:240, h:208, node:'L3', door:[283,490],
+   seats:{addy:[215,518]}},
+  {key:'bm', name:'ห้องเกม',            x:45,   y:630, w:595, h:295, node:'BM1', door:[637,738],
+   seats:{toby:[140,738]}},
+  {key:'war',name:'ศูนย์คุมงาน',        x:417,  y:332, w:333, h:273, node:'A3', door:[625,335],
+   seats:{claudy:[575,533]}},
+  {key:'bl', name:'ห้องตรวจงาน',        x:1287, y:335, w:243, h:220, node:'A11', door:[1350,336],
+   seats:{chris:[1350,478]}},
+  {key:'meet',name:'ห้องประชุม',        x:832,  y:332, w:323, h:273, node:'A7', door:[910,336],
    seats:{}},
-  {key:'pantry',name:'แพนทรี่',         x:681,  y:591, w:237, h:191, node:'P1', door:[922,648],
+  {key:'pantry',name:'แพนทรี่',         x:720,  y:688, w:375, h:232, node:'B7', door:[1070,688],
    seats:{}},
-  {key:'lounge',name:'ห้องพัก',         x:972,  y:591, w:277, h:191, node:'B5', door:[1020,588],
+  {key:'lounge',name:'ห้องพัก',         x:1120, y:688, w:420, h:232, node:'B8', door:[1268,628],
    seats:{}},
 ];
 
 /* จุดยืนของกิจกรรมส่วนกลาง */
 const OFC_SPOTS = {
-  pantry:  [[800,676],[860,672],[762,706]],
-  lounge:  [[1150,650],[1152,772],[1214,712]],
-  meeting: [[798,452],[894,452],[846,496]],
-  control: [[456,472],[552,472]],
+  pantry:  [[850,772],[950,772],[1045,800]],
+  lounge:  [[1360,760],[1450,860],[1300,800]],
+  meeting: [[900,585],[1000,585],[1090,585]],
+  control: [[500,578],[660,578]],
 };
 const OFC_SPOT_ROOM = {pantry:'pantry', lounge:'lounge', meeting:'meet', control:'war'};
 
@@ -2015,8 +2017,8 @@ const OFC_ACTORS = [];
 let ofcRaf = null, ofcLast = 0;
 const ofcColor = pl => ((typeof PIPELINES!=='undefined' && PIPELINES[pl]) || {color:'var(--ink-faint)'}).color;
 const ofcPick = a => a[Math.floor(Math.random()*a.length)];
-const ofcSpot = list => { const p = ofcPick(list||[[650,420]]);
-  return [p[0]+(Math.random()*22-11), p[1]+(Math.random()*16-8)]; };
+const ofcSpot = list => { const p = ofcPick(list||[[790,645]]);
+  return [p[0]+(Math.random()*26-13), p[1]+(Math.random()*18-9)]; };
 function ofcRoomOf(id){ return OFC_ROOMS.find(r=>r.seats && r.seats[id]) || null; }
 function ofcRoomByKey(k){ return OFC_ROOMS.find(r=>r.key===k) || null; }
 
@@ -2042,21 +2044,21 @@ function ofcNextGoal(ac){
   const home = ofcRoomOf(ac.id);
   const roll = Math.random();
 
-  const goHome = () => ({room:home, node:home?home.node:'A4',
-    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+34] : [650,420],
+  const goHome = () => ({room:home, node:home?home.node:'B5',
+    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+42] : [790,645],
     act:'desk', dwell:11000+Math.random()*15000});
   const goSpot = (key, act, dwell) => { const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
     return {room:r, node:r.node, pos:ofcSpot(OFC_SPOTS[key]), act, dwell}; };
   const goVisit = () => {
     const cands=[]; OFC_ROOMS.forEach(r=>Object.keys(r.seats||{}).forEach(k=>{ if(k!==ac.id) cands.push([r,k]); }));
     const [r,k] = ofcPick(cands);
-    return {room:r, node:r.node, pos:[r.seats[k][0]+34+Math.random()*12, r.seats[k][1]+34], act:'chat', dwell:4500+Math.random()*5000};
+    return {room:r, node:r.node, pos:[r.seats[k][0]+42+Math.random()*14, r.seats[k][1]+42], act:'chat', dwell:4500+Math.random()*5000};
   };
   const goCheck = () => { const r = ofcRoomByKey('bl');
-    return {room:r, node:r.node, pos:[r.seats.chris[0]+38, r.seats.chris[1]+34], act:'check', dwell:5000+Math.random()*5000}; };
+    return {room:r, node:r.node, pos:[r.seats.chris[0]+46, r.seats.chris[1]+42], act:'check', dwell:5000+Math.random()*5000}; };
   /* ออกไปเตะบอลที่ทางเดิน — Toby ชอบที่สุด คนที่ว่างก็ออกไปบ่อยกว่าคนที่กำลังทำงาน */
   const goBall = () => ({room:null, node:OFC_BALL.node, ball:true,
-    pos:[OFC_BALL.x + (Math.random()<0.5?-36:36), OFC_BALL.y+10],
+    pos:[OFC_BALL.x + (Math.random()<0.5?-44:44), OFC_BALL.y+12],
     act:'play', dwell:3200+Math.random()*2600});
 
   if(OFC_BALL && !OFC_BALL.rolling){
@@ -2081,7 +2083,7 @@ function ofcNextGoal(ac){
   const pFish = st==='flagged' ? 0.18 : (st==='idle' ? 0.12 : 0.05);
   if(Math.random() < pFish){
     const r = ofcRoomByKey('lounge');
-    return {room:r, node:r.node, pos:[OFC_FISH_STAND[0]+(Math.random()*22-11), OFC_FISH_STAND[1]],
+    return {room:r, node:r.node, pos:[OFC_FISH_STAND[0]+(Math.random()*26-13), OFC_FISH_STAND[1]],
             act:'fish', dwell:6000+Math.random()*6000};
   }
 
@@ -2118,7 +2120,7 @@ function ofcNextGoal(ac){
 /* เอเจนต์เดินไปถึงลูกบอลแล้ว — เตะ ถ้าบอลยังอยู่ตรงนั้น */
 function ofcKickBall(ac){
   const b = OFC_BALL;
-  const near = b && !b.rolling && Math.hypot(b.x-ac.x, b.y-ac.y) < 140;
+  const near = b && !b.rolling && Math.hypot(b.x-ac.x, b.y-ac.y) < 172;
   const txt = near ? ofcPick(OFC_BALL_REACT[ac.id] || OFC_BALL_REACT_ANY)
                    : ofcPick(['บอลกลิ้งไปไหนแล้ว','ช้าไปนิดเดียว']);
   ac.think.innerHTML = `<b>⚽</b><span>${txt}</span>`;
@@ -2181,7 +2183,7 @@ function ofcTick(ts){
       ac.el.style.left=(ac.x/OFC_W*100)+'%';
       ac.el.style.top =(ac.y/OFC_H*100)+'%';
       ac.el.style.zIndex = Math.round(ac.y);
-      ac.el.dataset.bx = ac.x<190 ? 'l' : (ac.x>OFC_W-190 ? 'r' : '');
+      ac.el.dataset.bx = ac.x<230 ? 'l' : (ac.x>OFC_W-230 ? 'r' : '');
     } else {
       ac.wait -= dt;
       /* ระหว่างอยู่กับที่ ก็คิดเรื่องใหม่เป็นระยะ */
@@ -2211,8 +2213,8 @@ function ofcBuildActors(){
   (typeof AGENTS!=='undefined'?AGENTS:[]).forEach((a,i)=>{
     OFC_PIPE[a.id] = a.pipeline || 'standalone';
     const home = ofcRoomOf(a.id);
-    const seat = home ? home.seats[a.id] : [650,420];
-    const start = [seat[0], seat[1]+34];
+    const seat = home ? home.seats[a.id] : [790,645];
+    const start = [seat[0], seat[1]+42];
     const art = OFC_ART.sprites[a.id];
     const el = document.createElement('button');
     el.className = 'ofc-guy'; el.type='button'; el.dataset.dir='r'; el.dataset.act='desk';
@@ -2220,7 +2222,7 @@ function ofcBuildActors(){
     el.style.left=(start[0]/OFC_W*100)+'%';
     el.style.top =(start[1]/OFC_H*100)+'%';
     el.style.zIndex = Math.round(start[1]);
-    el.dataset.bx = start[0]<190 ? 'l' : (start[0]>OFC_W-190 ? 'r' : '');
+    el.dataset.bx = start[0]<230 ? 'l' : (start[0]>OFC_W-230 ? 'r' : '');
     el.innerHTML = `
       <span class="think"></span>
       ${art ? `<img class="pix" src="${art}" alt="${a.name}">`
@@ -2231,9 +2233,9 @@ function ofcBuildActors(){
     el.onclick = () => { if(typeof openDrawer==='function') openDrawer(a); };
     layer.appendChild(el);
     const ac = {id:a.id, x:start[0], y:start[1], el, think:el.querySelector('.think'), nm:el.querySelector('.nm'),
-                node:home?home.node:'A4', door:home?home.door:null, path:[], state:'act',
-                wait:1200+i*700, sayLeft:0, speed:58+Math.random()*26,
-                goal:{act:'desk', dwell:0, node:home?home.node:'A4', room:home}};
+                node:home?home.node:'B5', door:home?home.door:null, path:[], state:'act',
+                wait:1200+i*700, sayLeft:0, speed:71+Math.random()*32,
+                goal:{act:'desk', dwell:0, node:home?home.node:'B5', room:home}};
     OFC_ACTORS.push(ac);
     ofcStatusText(ac);
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
@@ -2255,9 +2257,9 @@ function ofcFloorSVG(){
     const col = owners.length ? ofcColor(OFC_PIPE[owners[0]]||'standalone') : 'var(--ink-faint)';
     s += `<g class="ofc-room" data-key="${r.key}">
       <rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="8" fill="transparent"/>
-      <rect class="ofc-tagbg" x="${r.x+8}" y="${r.y+7}" width="${r.name.length*8.2+22}" height="19" rx="9.5"/>
-      <circle cx="${r.x+18}" cy="${r.y+16.5}" r="3.4" fill="${col}"/>
-      <text class="ofc-rname" x="${r.x+26}" y="${r.y+21}">${r.name}</text>
+      <rect class="ofc-tagbg" x="${r.x+9}" y="${r.y+8}" width="${r.name.length*9.8+26}" height="23" rx="11.5"/>
+      <circle cx="${r.x+21}" cy="${r.y+19.5}" r="4" fill="${col}"/>
+      <text class="ofc-rname" x="${r.x+31}" y="${r.y+25}">${r.name}</text>
     </g>`;
   });
   return s + `</svg>`;
@@ -2302,14 +2304,14 @@ const OFC_CAT_NAME = 'ส้ม';
 
 /* มุมโปรด — room = คีย์ห้อง (null = อยู่บนทางเดิน ต้องใส่ node เอง) */
 const OFC_CAT_SPOTS = [
-  {room:'lounge', pos:[1150,660]}, {room:'lounge', pos:[1212,716]},
-  {room:'pantry', pos:[796,680]},  {room:'pantry', pos:[762,708]},
-  {room:'war',    pos:[456,478]},
-  {room:'meet',   pos:[846,496]},
-  {room:'bm',     pos:[440,752]},
-  {room:null, node:'M2', pos:[650,420]},
-  {room:null, node:'A4', pos:[650,276]},
-  {room:null, node:'L2', pos:[302,470]},
+  {room:'lounge', pos:[1370,740]}, {room:'lounge', pos:[1460,890]},
+  {room:'pantry', pos:[860,780]},  {room:'pantry', pos:[1046,764]},
+  {room:'war',    pos:[520,580]},
+  {room:'meet',   pos:[906,588]},
+  {room:'bm',     pos:[576,884]},  {room:'bm', pos:[240,890]},
+  {room:null, node:'B2', pos:[500,645]},
+  {room:null, node:'A5', pos:[790,292]},
+  {room:null, node:'L3', pos:[300,490]},
 ];
 
 const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'💛', ball:'⚽', fish:'🐟'};
@@ -2317,18 +2319,18 @@ const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'�
 /* ของเล่น — ที่นอนแมวในห้องพัก กับลูกบอลที่กลิ้งไปตามทางเดิน */
 const OFC_BED_ART  = 'office/sprites/cat/bed.png';
 const OFC_BALL_ART = 'office/sprites/cat/ball.png';
-const OFC_BED_POS  = [1060,745];      /* ที่ว่างกลางห้องพัก ใต้ตู้ปลา */
+const OFC_BED_POS  = [1350,870];      /* ที่ว่างกลางห้องพัก ห่างจากตู้ปลา */
 const OFC_TANK_ART = 'office/sprites/cat/tank.png';
-const OFC_TANK_POS = [1052,662];      /* ติดผนังฝั่งตู้ทีวี เหนือที่นอนแมว */
-const OFC_TANK_W   = 6.17;            /* cqw — กว้าง 80 หน่วยของผัง */
-const OFC_FISH_POS = [1090,700];      /* แมวนั่งดูปลาที่ปลายตู้ ไม่บังปลา */
-const OFC_FISH_STAND = [1020,712];    /* จุดยืนดูปลาของเอเจนต์ อีกฝั่งของตู้ */
+const OFC_TANK_POS = [1180,800];      /* ห้องพัก ฝั่งซ้าย ไม่บังป้ายชื่อห้อง */
+const OFC_TANK_W   = 6.2;             /* cqw — กว้าง ~98 หน่วยของผัง */
+const OFC_FISH_POS = [1248,812];      /* แมวนั่งดูปลาที่ปลายตู้ ไม่บังปลา */
+const OFC_FISH_STAND = [1268,862];    /* จุดยืนดูปลาของเอเจนต์ ถัดจากแมว */
 const OFC_PP_ART   = 'office/sprites/cat/pingpong.png';
-const OFC_PP_POS   = [475,643];       /* ห้องเกม เหนือโต๊ะทำงาน */
-const OFC_PP_W     = 12.4;            /* cqw */
-const OFC_PP_SIDE  = {A:[398,652], B:[552,652]};
-const OFC_BALL_HOME= [650,420];       /* ทางเดินกลางออฟฟิศ (node M2) */
-const OFC_BALL_NODE= 'M2';
+const OFC_PP_POS   = [430,800];       /* กลางที่ว่างของห้องเกม */
+const OFC_PP_W     = 16.9;            /* cqw */
+const OFC_PP_SIDE  = {A:[300,812], B:[560,812]};
+const OFC_BALL_HOME= [790,645];       /* ทางเดินกลางล่าง (node B5) */
+const OFC_BALL_NODE= 'B5';
 const OFC_BALL_REACT = {
   toby:['บอลมาแล้ว เตะกลับ!','เกมจริงมันต้องแบบนี้'],
   dale:['อย่าให้กลิ้งเข้าห้องแร็คนะ','เตะเบา ๆ นะ ของขึ้นเซิร์ฟอยู่'],
@@ -2390,8 +2392,8 @@ function ofcHearts(x, y){
     const h = document.createElement('span');
     h.className = 'ofc-heart';
     h.textContent = ofcPick(['💛','🧡','💗','✨']);
-    h.style.left = ((x + (i-1)*18)/OFC_W*100)+'%';
-    h.style.top  = ((y - 8 - i*5)/OFC_H*100)+'%';
+    h.style.left = ((x + (i-1)*22)/OFC_W*100)+'%';
+    h.style.top  = ((y - 10 - i*6)/OFC_H*100)+'%';
     h.style.animationDelay = (i*150)+'ms';
     h.style.zIndex = 9999;
     layer.appendChild(h);
@@ -2410,7 +2412,7 @@ function ofcBallKick(byName){
   b.path = route.map(n=>OFC_NODES[n]);
   b.node = route[route.length-1];
   b.rolling = true;
-  b.speed = 250 + Math.random()*90;
+  b.speed = 305 + Math.random()*110;
   const dx = b.path[0][0] - b.x;
   b.el.dataset.roll = dx < 0 ? 'l' : 'r';
 }
@@ -2419,7 +2421,7 @@ function ofcBallKick(byName){
 function ofcBallRest(){
   const b = OFC_BALL; if(!b) return;
   b.rolling = false; b.el.dataset.roll = '';
-  const near = OFC_ACTORS.filter(a=>Math.hypot(a.x-b.x, a.y-b.y) < 150);
+  const near = OFC_ACTORS.filter(a=>Math.hypot(a.x-b.x, a.y-b.y) < 185);
   if(near.length && Math.random() < 0.6){
     const a = ofcPick(near);
     a.think.innerHTML = `<b>⚽</b><span>${ofcPick(OFC_BALL_REACT[a.id] || OFC_BALL_REACT_ANY)}</span>`;
@@ -2436,7 +2438,7 @@ function ofcBallTick(dt){
   const step = b.speed*dt/1000;
   if(d<=step){ b.x=t[0]; b.y=t[1]; b.path.shift(); }
   else { b.x+=dx/d*step; b.y+=dy/d*step; }
-  b.speed = Math.max(120, b.speed - dt*0.06);          /* ค่อย ๆ ช้าลงเหมือนกลิ้งจริง */
+  b.speed = Math.max(150, b.speed - dt*0.07);          /* ค่อย ๆ ช้าลงเหมือนกลิ้งจริง */
   b.el.style.left=(b.x/OFC_W*100)+'%';
   b.el.style.top =(b.y/OFC_H*100)+'%';
   b.el.style.zIndex = Math.round(b.y);
@@ -2496,14 +2498,14 @@ function ofcCatGoal(){
   /* ไล่บอลต่อจากที่เตะไว้ */
   if(c && c.chase > 0 && OFC_BALL && !OFC_BALL.rolling){
     return {ball:true, node:OFC_BALL.node, door:null,
-            pos:[OFC_BALL.x + (Math.random()<0.5?-30:30), OFC_BALL.y + 8],
+            pos:[OFC_BALL.x + (Math.random()<0.5?-37:37), OFC_BALL.y + 10],
             act:'ball', dwell:1400};
   }
   const r0 = Math.random();
   if(r0 < 0.22 && OFC_BALL && !OFC_BALL.rolling){
     if(c) c.chase = 2 + Math.floor(Math.random()*2);
     return {ball:true, node:OFC_BALL.node, door:null,
-            pos:[OFC_BALL.x + (Math.random()<0.5?-30:30), OFC_BALL.y + 8],
+            pos:[OFC_BALL.x + (Math.random()<0.5?-37:37), OFC_BALL.y + 10],
             act:'ball', dwell:1400};
   }
   if((c && c.wantFish) || r0 < 0.50){             /* ไปนั่งดูปลา */
@@ -2519,8 +2521,8 @@ function ofcCatGoal(){
   }
   if(Math.random() < 0.45 && OFC_ACTORS.length){
     const a = ofcPick(OFC_ACTORS);
-    const side = Math.random()<0.5 ? -40 : 40;
-    return {follow:a.id, node:a.node, door:a.door, pos:[a.x+side, a.y+8],
+    const side = Math.random()<0.5 ? -49 : 49;
+    return {follow:a.id, node:a.node, door:a.door, pos:[a.x+side, a.y+10],
             act:'play', dwell:5000+Math.random()*4500};
   }
   const s = ofcPick(OFC_CAT_SPOTS);
@@ -2545,7 +2547,7 @@ function ofcCatStartWalk(goal){
 /* ถึงตัวเอเจนต์แล้ว — แมวเล่น เอเจนต์พูดตอบ */
 function ofcCatMeet(a){
   const c = OFC_CAT_AC; if(!c) return;
-  if(Math.hypot(a.x-c.x, a.y-c.y) > 120){    /* เขาเดินไปแล้ว — นั่งรอตรงนี้แทน */
+  if(Math.hypot(a.x-c.x, a.y-c.y) > 147){    /* เขาเดินไปแล้ว — นั่งรอตรงนี้แทน */
     c.goal.act = 'sit'; c.el.dataset.act = 'sit'; ofcCatSay('sit');
     return;
   }
@@ -2568,7 +2570,7 @@ function ofcPet(){
     c.wait = Math.max(c.wait, 3400);
   }
   if(OFC_BALL && !OFC_BALL.rolling) c.chase = 2;   /* ลูบแล้วอยากเล่นบอลต่อ */
-  const near = OFC_ACTORS.filter(a=>Math.hypot(a.x-c.x, a.y-c.y) < 160);
+  const near = OFC_ACTORS.filter(a=>Math.hypot(a.x-c.x, a.y-c.y) < 196);
   if(near.length){
     const a = ofcPick(near);
     a.think.innerHTML = `<b>🐱</b><span>${ofcPick(OFC_CAT_REACT[a.id] || OFC_CAT_REACT_ANY)}</span>`;
@@ -2590,7 +2592,7 @@ function ofcBuildCat(){
   el.style.left = (px/OFC_W*100)+'%';
   el.style.top  = (py/OFC_H*100)+'%';
   el.style.zIndex = Math.round(py) + 1;
-  el.dataset.bx = px<190 ? 'l' : (px>OFC_W-190 ? 'r' : '');
+  el.dataset.bx = px<230 ? 'l' : (px>OFC_W-230 ? 'r' : '');
   el.innerHTML = `
     <span class="think"></span>
     <img class="pix" src="${OFC_CAT_ART[0]}" alt="${OFC_CAT_NAME}">
@@ -2603,7 +2605,7 @@ function ofcBuildCat(){
     : {
     x:px, y:py, el, think:el.querySelector('.think'), img:el.querySelector('.pix'),
     node:home, door: r0 ? r0.door : null,
-    path:[], state:'act', wait:4200, sayLeft:0, speed:76, frame:0, ft:0, pet:0, chase:0,
+    path:[], state:'act', wait:4200, sayLeft:0, speed:93, frame:0, ft:0, pet:0, chase:0,
     goal:{act:'sit', dwell:4200, node:home, door: r0 ? r0.door : null},
   };
   if(!old) setTimeout(()=>ofcCatSay('sit'), 2600);
@@ -2641,7 +2643,7 @@ function ofcCatTick(dt){
     c.el.style.left=(c.x/OFC_W*100)+'%';
     c.el.style.top =(c.y/OFC_H*100)+'%';
     c.el.style.zIndex = Math.round(c.y) + 1;
-    c.el.dataset.bx = c.x<190 ? 'l' : (c.x>OFC_W-190 ? 'r' : '');
+    c.el.dataset.bx = c.x<230 ? 'l' : (c.x>OFC_W-230 ? 'r' : '');
   } else {
     c.wait -= dt;
     if(c.wait>2600 && c.sayLeft<=-4500) ofcCatSay(c.goal.act);
