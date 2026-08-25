@@ -308,6 +308,26 @@
   /* เดิน = ตัวเด้งเบา ๆ (data-act ว่างตอนเดิน) */
   .ofc-guy[data-act=""]{animation:ofcBob .42s steps(2,end) infinite}
   @keyframes ofcBob{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,calc(-100% - .38cqw))}}
+
+  /* ---------- ส้ม แมวประจำออฟฟิศ (ใช้สไตล์ .ofc-guy ร่วมกัน แล้วทับเฉพาะที่ต่าง) ---------- */
+  .ofc-cat{width:3.4cqw}
+  .ofc-cat .pix{width:3.4cqw;height:auto}
+  .ofc-cat .sdot{display:none}
+  .ofc-cat .nm i{color:var(--gold)}
+  .ofc-cat[data-act="sleep"] .pix{opacity:.92}
+  .ofc-cat[data-act="sleep"]{animation:ofcCatBreath 2.8s ease-in-out infinite}
+  @keyframes ofcCatBreath{0%,100%{transform:translate(-50%,-100%) scale(1)}50%{transform:translate(-50%,-100%) scale(1.04)}}
+  .ofc-cat[data-act="play"]{animation:ofcCatHop .36s ease-in-out infinite}
+  @keyframes ofcCatHop{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,calc(-100% - .7cqw))}}
+  .ofc-heart{
+    position:absolute;transform:translate(-50%,-100%);font-size:1.35cqw;line-height:1;
+    pointer-events:none;opacity:0;animation:ofcHeart 1.25s ease-out forwards;
+  }
+  @keyframes ofcHeart{
+    0%{opacity:0;transform:translate(-50%,-100%) scale(.6)}
+    22%{opacity:1;transform:translate(-50%,-145%) scale(1)}
+    100%{opacity:0;transform:translate(-50%,-250%) scale(1)}
+  }
   /* ---------- Pain Point view ---------- */
   .pp-today-head,.pp-log-head{
     display:flex;align-items:baseline;gap:10px;
@@ -2054,6 +2074,7 @@ function ofcTick(ts){
       if(ac.wait<=0) ofcStartWalk(ac, ofcNextGoal(ac));
     }
   }
+  ofcCatTick(dt);
   ofcRaf = requestAnimationFrame(ofcTick);
 }
 
@@ -2091,6 +2112,7 @@ function ofcBuildActors(){
     ofcStatusText(ac);
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
+  ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
 }
 
 /* ผังพื้น — ใช้รูปที่ Gen มา แล้วแปะป้ายชื่อห้องทับ */
@@ -2142,6 +2164,208 @@ function ofcFocus(key){
   stage.querySelectorAll('.ofc-room.on').forEach(g=>g.classList.remove('on'));
   const g = stage.querySelector(`.ofc-room[data-key="${key}"]`);
   if(g) g.classList.add('on');
+}
+
+/* =====================================================================
+   ส้ม — แมวประจำออฟฟิศ
+   เดินเล่นเองตามทางเดินเดียวกับเอเจนต์ แวะไปกวนคนที่นั่งทำงาน
+   นอนตามมุมโปรด และกดที่ตัวเพื่อลูบได้
+   ===================================================================== */
+const OFC_CAT_ART  = ['office/sprites/cat/idle1.png','office/sprites/cat/idle2.png','office/sprites/cat/idle3.png'];
+const OFC_CAT_NAME = 'ส้ม';
+
+/* มุมโปรด — room = คีย์ห้อง (null = อยู่บนทางเดิน ต้องใส่ node เอง) */
+const OFC_CAT_SPOTS = [
+  {room:'lounge', pos:[1150,660]}, {room:'lounge', pos:[1212,716]},
+  {room:'pantry', pos:[796,680]},  {room:'pantry', pos:[762,708]},
+  {room:'war',    pos:[456,478]},
+  {room:'meet',   pos:[846,496]},
+  {room:'bm',     pos:[440,752]},
+  {room:null, node:'M2', pos:[650,420]},
+  {room:null, node:'A4', pos:[650,276]},
+  {room:null, node:'L2', pos:[302,470]},
+];
+
+const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'💛'};
+const OFC_CAT_SAY = {
+  sit:  ['เมี้ยว~','นั่งตรงนี้แหละ','แดดอุ่นดี','มองอยู่นะ'],
+  sleep:['zzZ...','ห้ามปลุก','ขอนอนก่อนนะ'],
+  play: ['เมี้ยว! เอาอีก','ฟู้~ ชอบ','จับหางไม่ได้นะ','เล่นด้วยหน่อยสิ'],
+  walk: ['เดินสำรวจก่อน','ไปดูตรงโน้นหน่อย','ได้กลิ่นขนม'],
+  pet:  ['ฟู้~ ฟู้~','ลูบตรงคางสิ','ชอบบบ','อีกทีก็ได้'],
+};
+
+/* เอเจนต์พูดตอนน้องส้มมาหา — ตามนิสัยของแต่ละคน */
+const OFC_CAT_REACT = {
+  claudy:['น้องส้มมาตรวจคิวงานอีกแล้ว','นั่งตรงนี้ได้ แต่ห้ามเหยียบคีย์บอร์ด'],
+  minnie:['แมวมานั่งทับสมุดไอเดียอีกแล้ว','เดี๋ยว ไอเดียเพิ่งมา... หายแล้ว'],
+  reese:['ขออ่านให้จบก่อน... เอ้า ก็ได้ ลูบแป๊บนึง','ส้มไม่มีแหล่งอ้างอิง แต่ยอม'],
+  addy:['ส้มมานั่งด้วย วันนี้ปิดใบได้แน่','ขนติดใบเสนอราคาหมดแล้ว'],
+  rae:['ประโยคที่คิดไว้หลุดหมดเลย','ลูบสองที เดี๋ยวเขียนต่อ'],
+  vera:['ระยะเป๊ะมาก นั่งกลางคีย์บอร์ดพอดี','อันนี้วัดไม่ได้ แต่ผ่าน'],
+  mind:['สีขนนี้เอาไปทำพาเลตได้เลย','อย่าเพิ่งเดินผ่านหน้าจอเทียบสีนะ'],
+  chris:['ห้ามเดินบนต้นฉบับ... เอ้า เดินแล้ว','ตรวจงานอยู่นะส้ม เดี๋ยวค่อยเล่น'],
+  libby:['อย่านอนบนแฟ้ม เพิ่งจัดเสร็จ','ส้มอยู่ในระบบไหนไม่รู้ แต่หาเจอตลอด'],
+  nick:['ข้อมูลบอกว่าลูบแมวสามนาทีแล้วงานเดินขึ้น','รอ query อยู่พอดี มาเลยส้ม'],
+  dale:['ส้ม ห้ามเข้าห้องแร็คนะ','เดี๋ยว deploy เสร็จค่อยเล่นกัน'],
+  toby:['มาเทสต์เกมด้วยกันไหม','ส้มกดจอยไม่ได้ แต่ดูเก่ง'],
+  news:['ข่าวด่วน น้องส้มบุกโต๊ะข่าว','ยืนยันแล้วหนึ่งสำนัก ว่าแมวน่ารัก'],
+};
+const OFC_CAT_REACT_ANY = ['น้องส้มมาแล้ว ขอลูบแป๊บ','พักมือลูบแมวก่อน','เมี้ยวอะไรนะ เดี๋ยวหาขนมให้','ขนติดเสื้อหมด แต่ก็ยอม'];
+
+let OFC_CAT_AC = null;
+
+function ofcCatSay(act, txt){
+  const c = OFC_CAT_AC; if(!c) return;
+  c.think.innerHTML = `<b>${OFC_CAT_ACT[act]||'😺'}</b><span>${txt || ofcPick(OFC_CAT_SAY[act]||OFC_CAT_SAY.sit)}</span>`;
+  c.el.dataset.show = '1';
+  c.sayLeft = 4200 + Math.random()*2200;
+}
+
+/* หัวใจลอยขึ้นตรงตำแหน่งแมว */
+function ofcHearts(x, y){
+  const layer = document.getElementById('ofcActors'); if(!layer) return;
+  for(let i=0;i<3;i++){
+    const h = document.createElement('span');
+    h.className = 'ofc-heart';
+    h.textContent = ofcPick(['💛','🧡','💗','✨']);
+    h.style.left = ((x + (i-1)*18)/OFC_W*100)+'%';
+    h.style.top  = ((y - 8 - i*5)/OFC_H*100)+'%';
+    h.style.animationDelay = (i*150)+'ms';
+    h.style.zIndex = 9999;
+    layer.appendChild(h);
+    setTimeout(()=>h.remove(), 1600 + i*150);
+  }
+}
+
+/* จุดหมายถัดไปของแมว — 45% ไปหาเอเจนต์ ที่เหลือไปมุมโปรด */
+function ofcCatGoal(){
+  if(Math.random() < 0.45 && OFC_ACTORS.length){
+    const a = ofcPick(OFC_ACTORS);
+    const side = Math.random()<0.5 ? -40 : 40;
+    return {follow:a.id, node:a.node, door:a.door, pos:[a.x+side, a.y+8],
+            act:'play', dwell:5000+Math.random()*4500};
+  }
+  const s = ofcPick(OFC_CAT_SPOTS);
+  const r = s.room ? ofcRoomByKey(s.room) : null;
+  const nap = Math.random() < 0.38;
+  return {node: r ? r.node : s.node, door: r ? r.door : null,
+          pos:[s.pos[0]+(Math.random()*20-10), s.pos[1]+(Math.random()*12-6)],
+          act: nap ? 'sleep' : 'sit',
+          dwell: nap ? 12000+Math.random()*10000 : 6000+Math.random()*6000};
+}
+
+function ofcCatStartWalk(goal){
+  const c = OFC_CAT_AC; if(!c) return;
+  const legs = [];
+  if(c.door) legs.push(c.door);
+  ofcRoute(c.node, goal.node).forEach(n=>legs.push(OFC_NODES[n]));
+  if(goal.door) legs.push(goal.door);
+  legs.push(goal.pos);
+  c.path = legs; c.goal = goal; c.state = 'walk';
+  c.el.dataset.act = '';
+  if(Math.random()<0.3) ofcCatSay('walk'); else { c.el.dataset.show=''; c.sayLeft=0; }
+}
+
+/* ถึงตัวเอเจนต์แล้ว — แมวเล่น เอเจนต์พูดตอบ */
+function ofcCatMeet(a){
+  const c = OFC_CAT_AC; if(!c) return;
+  if(Math.hypot(a.x-c.x, a.y-c.y) > 120){    /* เขาเดินไปแล้ว — นั่งรอตรงนี้แทน */
+    c.goal.act = 'sit'; c.el.dataset.act = 'sit'; ofcCatSay('sit');
+    return;
+  }
+  ofcCatSay('play');
+  ofcHearts(c.x, c.y);
+  const txt = ofcPick(OFC_CAT_REACT[a.id] || OFC_CAT_REACT_ANY);
+  a.think.innerHTML = `<b>🐱</b><span>${txt}</span>`;
+  a.el.dataset.show = '1';
+  a.sayLeft = 5200 + Math.random()*2000;
+}
+
+/* กดที่ตัวแมว = ลูบ */
+function ofcPet(){
+  const c = OFC_CAT_AC; if(!c) return;
+  c.pet++;
+  ofcHearts(c.x, c.y);
+  ofcCatSay('pet');
+  if(c.state !== 'walk'){
+    c.goal.act = 'play'; c.el.dataset.act = 'play';
+    c.wait = Math.max(c.wait, 3400);
+  }
+  const near = OFC_ACTORS.filter(a=>Math.hypot(a.x-c.x, a.y-c.y) < 160);
+  if(near.length){
+    const a = ofcPick(near);
+    a.think.innerHTML = `<b>🐱</b><span>${ofcPick(OFC_CAT_REACT[a.id] || OFC_CAT_REACT_ANY)}</span>`;
+    a.el.dataset.show = '1'; a.sayLeft = 4800;
+  }
+}
+
+function ofcBuildCat(){
+  const layer = document.getElementById('ofcActors');
+  if(!layer) return;
+  const old = OFC_CAT_AC;                       /* สร้างใหม่แล้วคืนตำแหน่ง/สถานะเดิมให้แมว */
+  const s0 = OFC_CAT_SPOTS[0], r0 = ofcRoomByKey(s0.room);
+  const el = document.createElement('button');
+  el.className = 'ofc-guy ofc-cat'; el.type = 'button';
+  el.dataset.dir = 'r'; el.dataset.act = 'sit';
+  el.title = `${OFC_CAT_NAME} — แมวประจำออฟฟิศ (กดเพื่อลูบ)`;
+  const px = old ? old.x : s0.pos[0], py = old ? old.y : s0.pos[1];
+  if(old){ el.dataset.dir = old.el.dataset.dir || 'r'; el.dataset.act = old.el.dataset.act || 'sit'; }
+  el.style.left = (px/OFC_W*100)+'%';
+  el.style.top  = (py/OFC_H*100)+'%';
+  el.style.zIndex = Math.round(py) + 1;
+  el.dataset.bx = px<190 ? 'l' : (px>OFC_W-190 ? 'r' : '');
+  el.innerHTML = `
+    <span class="think"></span>
+    <img class="pix" src="${OFC_CAT_ART[0]}" alt="${OFC_CAT_NAME}">
+    <span class="sdot"></span>
+    <span class="nm">${OFC_CAT_NAME} <i>😺 แมวประจำออฟฟิศ</i></span>`;
+  el.onclick = ofcPet;
+  layer.appendChild(el);
+  const home = r0 ? r0.node : (s0.node||'A4');
+  OFC_CAT_AC = old ? {...old, el, think:el.querySelector('.think'), img:el.querySelector('.pix'), sayLeft:0}
+    : {
+    x:px, y:py, el, think:el.querySelector('.think'), img:el.querySelector('.pix'),
+    node:home, door: r0 ? r0.door : null,
+    path:[], state:'act', wait:4200, sayLeft:0, speed:76, frame:0, ft:0, pet:0,
+    goal:{act:'sit', dwell:4200, node:home, door: r0 ? r0.door : null},
+  };
+  if(!old) setTimeout(()=>ofcCatSay('sit'), 2600);
+}
+
+function ofcCatTick(dt){
+  const c = OFC_CAT_AC; if(!c) return;
+
+  /* หางแกว่ง — สลับสามเฟรม เดินเร็ว นอนช้า */
+  c.ft += dt;
+  const fstep = c.state==='walk' ? 150 : (c.goal.act==='sleep' ? 640 : 300);
+  if(c.ft >= fstep){ c.ft = 0; c.frame = (c.frame+1) % OFC_CAT_ART.length; c.img.src = OFC_CAT_ART[c.frame]; }
+
+  if(c.sayLeft>0){ c.sayLeft -= dt; if(c.sayLeft<=0) c.el.dataset.show=''; }
+
+  if(c.state==='walk'){
+    const t = c.path[0];
+    if(!t){
+      c.state='act'; c.wait=c.goal.dwell; c.node=c.goal.node; c.door=c.goal.door||null;
+      c.el.dataset.act = c.goal.act;
+      const tgt = c.goal.follow && OFC_ACTORS.find(x=>x.id===c.goal.follow);
+      if(tgt) ofcCatMeet(tgt);
+      else { if(c.goal.follow){ c.goal.act='sit'; c.el.dataset.act='sit'; } ofcCatSay(c.goal.act); }
+      return;
+    }
+    const dx=t[0]-c.x, dy=t[1]-c.y, d=Math.hypot(dx,dy);
+    const step = c.speed*dt/1000;
+    if(d<=step){ c.x=t[0]; c.y=t[1]; c.path.shift(); }
+    else { c.x+=dx/d*step; c.y+=dy/d*step; if(Math.abs(dx)>2) c.el.dataset.dir = dx<0?'l':'r'; }
+    c.el.style.left=(c.x/OFC_W*100)+'%';
+    c.el.style.top =(c.y/OFC_H*100)+'%';
+    c.el.style.zIndex = Math.round(c.y) + 1;
+    c.el.dataset.bx = c.x<190 ? 'l' : (c.x>OFC_W-190 ? 'r' : '');
+  } else {
+    c.wait -= dt;
+    if(c.wait>2600 && c.sayLeft<=-4500) ofcCatSay(c.goal.act);
+    if(c.wait<=0) ofcCatStartWalk(ofcCatGoal());
+  }
 }
 
 function ofcInit(){
