@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-08-25T16:41:12Z",
+  "updatedAt": "2026-08-25T16:49:21Z",
   "entries": [
+    {
+      "id": "wl-260825-dale-lvwidget",
+      "datetime": "2026-08-25T16:49:21Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "23:49",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ยกระบบ EXP / LV / MVP ขึ้น Widget บน Mac",
+      "summary": "พอร์ตสูตรเลเวลจาก index.html ไปเป็น src/levels.js ในโปรเจกต์ Widget แล้วต่อเข้าแท็บ TEAM AGAPAE — ป้ายระดับใต้ชื่อทุกการ์ด · 👑/🔥 มุมขวาบนของรูป · แถบ MVP เหนือแถวการ์ด. สีระดับแยกค่าธีมมืด/สว่างไว้ที่ --t-simple…--t-diamond ใน Office.css. build Tauri release ผ่าน (40 วิ) แล้ว ditto ทับ /Applications/AGAPAE Widget.app (สำรองตัวเก่าเป็น .bak-20260825-2347) เปิดใช้งานแล้ว. หมายเหตุ: node ในเครื่องพังจาก Homebrew อัป llhttp เป็น 9.4.3 แต่ node 25.8.2 ลิงก์กับ 9.3 ไว้ — เลี่ยงด้วยการ build ผ่าน DYLD_LIBRARY_PATH ชี้ไป Cellar/llhttp/9.3.1 ยังไม่ได้แก้ที่ต้นเหตุ",
+      "project": "agapae-widget",
+      "projectLabel": "AGAPAE Widget"
+    },
     {
       "id": "wl-260825-toby-lvsystem",
       "datetime": "2026-08-25T16:41:12Z",
