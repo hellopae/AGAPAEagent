@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T04:25:00Z",
+  "updatedAt": "2026-08-25T04:45:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -1999,6 +1999,22 @@
         "index.html",
         "office/sprites/cat/ball.png",
         "office/sprites/cat/bed.png"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-office-football",
+      "datetime": "2026-08-25T04:45:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "11:45",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "เอเจนต์เตะบอลได้ + ย้ายที่นอนแมว",
+      "summary": "ย้ายที่นอนแมวจาก [1030,700] ไป [1058,714] — วัดจากรูปพื้นจริงแล้วว่าเว้นระยะจากตู้ทีวี กระถางต้นไม้ โต๊ะกลาง และโซฟาทุกตัว · เพิ่มจุดหมาย goBall ให้เอเจนต์เดินออกมาเตะบอลเองตามสถานะ (Toby 30% · ว่าง 20% · เสร็จแล้ว 15% · กำลังทำงาน 6%) · ถึงแล้วเตะจริงถ้าบอลยังอยู่ในระยะ 140px ไม่งั้นบ่นว่าช้าไปนิดเดียว",
+      "files": [
+        "index.html"
       ]
     }
   ]

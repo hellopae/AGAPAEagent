@@ -1997,6 +1997,16 @@ function ofcNextGoal(ac){
   };
   const goCheck = () => { const r = ofcRoomByKey('bl');
     return {room:r, node:r.node, pos:[r.seats.chris[0]+38, r.seats.chris[1]+34], act:'check', dwell:5000+Math.random()*5000}; };
+  /* ออกไปเตะบอลที่ทางเดิน — Toby ชอบที่สุด คนที่ว่างก็ออกไปบ่อยกว่าคนที่กำลังทำงาน */
+  const goBall = () => ({room:null, node:OFC_BALL.node, ball:true,
+    pos:[OFC_BALL.x + (Math.random()<0.5?-36:36), OFC_BALL.y+10],
+    act:'play', dwell:3200+Math.random()*2600});
+
+  if(OFC_BALL && !OFC_BALL.rolling){
+    const pBall = ac.id==='toby' ? 0.30
+                : (st==='idle' ? 0.20 : (st==='done'||st==='sent' ? 0.15 : 0.06));
+    if(Math.random() < pBall) return goBall();
+  }
 
   if(ac.id==='claudy'){
     if(roll<0.62) return goHome();
@@ -2026,6 +2036,18 @@ function ofcNextGoal(ac){
   if(roll<0.78) return goVisit();
   if(roll<0.90) return goHome();
   return goSpot('meeting','meet',6000+Math.random()*6000);
+}
+
+/* เอเจนต์เดินไปถึงลูกบอลแล้ว — เตะ ถ้าบอลยังอยู่ตรงนั้น */
+function ofcKickBall(ac){
+  const b = OFC_BALL;
+  const near = b && !b.rolling && Math.hypot(b.x-ac.x, b.y-ac.y) < 140;
+  const txt = near ? ofcPick(OFC_BALL_REACT[ac.id] || OFC_BALL_REACT_ANY)
+                   : ofcPick(['บอลกลิ้งไปไหนแล้ว','ช้าไปนิดเดียว']);
+  ac.think.innerHTML = `<b>⚽</b><span>${txt}</span>`;
+  ac.el.dataset.show = '1';
+  ac.sayLeft = 4600 + Math.random()*1600;
+  if(near) setTimeout(()=>ofcBallKick(ac.id), 800);
 }
 
 /* บับเบิลความคิด + แถบสถานะ */
@@ -2071,7 +2093,8 @@ function ofcTick(ts){
         ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
         ac.door=ac.goal.room?ac.goal.room.door:null;
         ac.el.dataset.act=ac.goal.act;
-        ofcStatusText(ac); ofcSay(ac, ac.goal.act);
+        ofcStatusText(ac);
+        if(ac.goal.ball) ofcKickBall(ac); else ofcSay(ac, ac.goal.act);
         continue;
       }
       const dx=t[0]-ac.x, dy=t[1]-ac.y, d=Math.hypot(dx,dy);
@@ -2208,7 +2231,7 @@ const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'�
 /* ของเล่น — ที่นอนแมวในห้องพัก กับลูกบอลที่กลิ้งไปตามทางเดิน */
 const OFC_BED_ART  = 'office/sprites/cat/bed.png';
 const OFC_BALL_ART = 'office/sprites/cat/ball.png';
-const OFC_BED_POS  = [1030,700];      /* ในห้องพัก ฝั่งประตู */
+const OFC_BED_POS  = [1058,714];      /* ที่ว่างกลางห้องพัก เว้นระยะจากตู้ทีวีและโซฟา */
 const OFC_BALL_HOME= [650,420];       /* ทางเดินกลางออฟฟิศ (node M2) */
 const OFC_BALL_NODE= 'M2';
 const OFC_BALL_REACT = {
