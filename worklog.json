@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T05:05:00Z",
+  "updatedAt": "2026-08-25T05:20:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -2033,6 +2033,25 @@
         "index.html",
         "office/sprites/cat/tank.png",
         "office/sprites/cat/pingpong.png"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-fish-art",
+      "datetime": "2026-08-25T05:20:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "12:20",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ใส่รูปปลาจริงลงตู้ปลา",
+      "summary": "แทนปลา SVG ชั่วคราวด้วยรูปที่เป้ส่งมาใหม่ ย่อเป็น clown.png / tang.png / pinky.png (240px) ตั้งชื่อไม่ให้ชนกับไฟล์ต้นฉบับ เพราะ macOS ไม่แยกตัวพิมพ์ใหญ่-เล็ก ครั้งก่อนย่อทับชื่อเดิมแล้วไฟล์หาย · ทุกตัวหันซ้าย คีย์เฟรมเดิมพลิกตัวตอนว่ายกลับได้พอดี · เก็บ floor2.png (ChatGPT) กับ floor3.jpeg (Gemini) ไว้ใน office/ รอเลือกผังใหม่",
+      "files": [
+        "index.html",
+        "office/sprites/cat/clown.png",
+        "office/sprites/cat/tang.png",
+        "office/sprites/cat/pinky.png"
       ]
     }
   ]

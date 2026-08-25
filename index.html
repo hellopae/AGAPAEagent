@@ -2341,24 +2341,10 @@ const OFC_BALL_REACT = {
 const OFC_BALL_REACT_ANY = ['เตะกลับให้แล้ว','ส้ม รับบอล!','บอลมาทางนี้','โอเค อีกที'];
 let OFC_BALL = null;
 
-/* ปลาสามตัวในตู้ — วาดด้วย SVG ไว้ก่อน สลับเป็นไฟล์รูปได้โดยแก้ที่ฟังก์ชันนี้ที่เดียว */
-function ofcFishSVG(kind){
-  const P = {
-    /* ตัวส้มลายขาว */
-    1:{body:'#f0713a', fin:'#f7a072', band:'#fdf3e3', line:'#c8542a'},
-    /* ตัวฟ้าครีบเหลือง */
-    2:{body:'#3ba3e0', fin:'#ffd23f', band:'#173b6e', line:'#1f6fb2'},
-    /* ตัวชมพูพาสเทล */
-    3:{body:'#f7c0cb', fin:'#f4a3b4', band:'#8ad3cd', line:'#5b3a35'},
-  }[kind];
-  return `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" class="ofc-fish f${kind}" aria-hidden="true">
-    <path d="M52 20 L60 9 L60 31 Z" fill="${P.fin}" stroke="${P.line}" stroke-width="1.6" stroke-linejoin="round"/>
-    <ellipse cx="27" cy="20" rx="26" ry="15" fill="${P.body}" stroke="${P.line}" stroke-width="1.8"/>
-    <path d="M30 6 Q34 20 30 34" fill="none" stroke="${P.band}" stroke-width="5" stroke-linecap="round"/>
-    <path d="M24 33 Q28 39 34 34" fill="${P.fin}" stroke="${P.line}" stroke-width="1.4" stroke-linejoin="round"/>
-    <circle cx="12" cy="17" r="4.2" fill="#fff" stroke="${P.line}" stroke-width="1.2"/>
-    <circle cx="11" cy="17" r="2.1" fill="#2b1d1a"/>
-  </svg>`;
+/* ปลาสามตัวในตู้ — รูปที่เป้ส่งมา ทุกตัวหันซ้าย คีย์เฟรมพลิกตัวตอนว่ายกลับ */
+const OFC_FISH_ART = ['office/sprites/cat/clown.png','office/sprites/cat/tang.png','office/sprites/cat/pinky.png'];
+function ofcFishImg(kind){
+  return `<img class="ofc-fish f${kind}" src="${OFC_FISH_ART[kind-1]}" alt="" loading="lazy">`;
 }
 const OFC_CAT_SAY = {
   sit:  ['เมี้ยว~','นั่งตรงนี้แหละ','แดดอุ่นดี','มองอยู่นะ'],
@@ -2475,7 +2461,7 @@ function ofcBuildProps(){
   tank.style.top  = (OFC_TANK_POS[1]/OFC_H*100)+'%';
   tank.style.zIndex = Math.round(OFC_TANK_POS[1]) - 1;
   tank.innerHTML = `<img src="${OFC_TANK_ART}" alt="ตู้ปลา">
-    <span class="water">${ofcFishSVG(1)}${ofcFishSVG(2)}${ofcFishSVG(3)}</span>`;
+    <span class="water">${ofcFishImg(1)}${ofcFishImg(2)}${ofcFishImg(3)}</span>`;
   tank.onclick = () => { if(OFC_CAT_AC) OFC_CAT_AC.wantFish = true; };
   layer.appendChild(tank);
 
