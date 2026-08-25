@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T16:05:00Z",
+  "updatedAt": "2026-08-25T16:00:00Z",
   "entries": [
     {
       "id": "wl-260825-claudy-0202",
@@ -2174,6 +2174,22 @@
         "Widget/src/App.jsx",
         "Widget/src/App.css",
         "Widget/public/office/"
+      ]
+    },
+    {
+      "id": "wl-260825-claudy-widget-install",
+      "datetime": "2026-08-25T16:00:00Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "23:00",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ติดตั้ง Widget เวอร์ชันใหม่ลงเครื่อง",
+      "summary": "build Tauri release ผ่านใน 54 วิ ได้ทั้ง .app และ .dmg แล้ว ditto ทับ /Applications/AGAPAE Widget.app (เดิม 25 ส.ค. 02:01 → ใหม่ 22:59) เปิดทดสอบแล้วรันได้ · วิธี build ต้องข้าม beforeBuildCommand ด้วย --config '{\"build\":{\"beforeBuildCommand\":\"\"}}' แล้วรัน vite build เองก่อน เพราะ npm เรียก node ผ่าน /usr/bin/env ซึ่ง macOS SIP ตัด DYLD_FALLBACK_LIBRARY_PATH ทิ้ง ทำให้ node ที่ลิงก์ llhttp ผิดเวอร์ชันพังกลางทาง · แก้ถาวรที่ brew reinstall node แล้วจะใช้ npm run tauri build ได้ตามปกติ",
+      "files": [
+        "Widget/src-tauri/target/release/bundle/macos/AGAPAE Widget.app"
       ]
     }
   ]
