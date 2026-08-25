@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-08-25T16:00:00Z",
+  "updatedAt": "2026-08-25T16:41:12Z",
   "entries": [
+    {
+      "id": "wl-260825-toby-lvsystem",
+      "datetime": "2026-08-25T16:41:12Z",
+      "displayDate": "25 ส.ค. 2569",
+      "displayTime": "23:41",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "เฟส 1 — ระบบ EXP / LV / ระดับ / MVP ในออฟฟิศ",
+      "summary": "ใส่ระบบเลเวลแบบ Kairosoft ลงแดชบอร์ด นับ EXP จากงานจริงใน worklog.json ล้วน ๆ ไม่มีตัวเลขปั้น. งานเสร็จ 10 EXP · ส่งออก 12 · ติดปัญหา 4. เลเวลถัดไปใช้ 20+LV×5 EXP. ระดับ Simple(LV1) → Silver(5) → Gold(10) → Platinum(15) → Diamond(20). ตอนนี้ Claudy 🥇 Gold LV10 · Dale/Reese/Minnie/Chris 🥈 Silver · ที่เหลือ 🌱 Simple. เพิ่มแถบ MVP เหนือแถวรูปทีม (คนปิดงานมากสุดใน 7 วันล่าสุด ได้ 👑 บนรูป) · 🔥 ให้คนทำงานติดกัน 3 วันขึ้นไป · ป้ายระดับขึ้นทั้งแถวออฟฟิศ การ์ดทีม และ drawer · เลเวลอัปแล้วเด้งป๊อปอัปมุมจอ",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
     {
       "id": "wl-260825-claudy-0202",
       "datetime": "2026-08-24T19:02:35Z",

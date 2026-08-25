@@ -198,6 +198,86 @@
   }
   .br-adv .txt{font-size:11.5px;line-height:1.5;font-weight:500}
   .br-src{margin-top:9px;font-size:9px;line-height:1.5;color:var(--ink-faint);opacity:.8}
+
+  /* ===== LEVEL — EXP / LV / ระดับ / MVP ===== */
+  /* แถบ MVP เหนือแถวรูปทีม */
+  .lv-mvp{
+    display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+    background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);
+    border-radius:12px;padding:10px 14px;margin-bottom:14px;
+  }
+  .lv-mvp .crown{font-size:18px;line-height:1;flex:none}
+  .lv-mvp .lab{
+    font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-faint);flex:none;
+  }
+  .lv-mvp .face{width:28px;height:28px;border-radius:8px;object-fit:cover;display:block;flex:none}
+  .lv-mvp .who{font-size:13px;font-weight:600}
+  .lv-mvp .sub{font-size:11px;color:var(--ink-soft)}
+  .lv-mvp .none{font-size:11.5px;color:var(--ink-faint)}
+  .lv-mvp .sp{flex:1}
+
+  /* ป้ายระดับ — ใช้ซ้ำทั้งแถวออฟฟิศ การ์ดทีม และ drawer
+     สีมาจาก --tier ที่ใส่ inline ต่อคน */
+  .lv-pill{
+    display:inline-flex;align-items:center;gap:4px;
+    font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.05em;
+    padding:2px 7px;border-radius:999px;white-space:nowrap;line-height:1.5;
+    color:var(--tier,var(--ink-faint));
+    border:1px solid var(--tier,var(--line));
+    background:var(--paper-2);
+  }
+  .lv-pill.on-dark{background:rgba(18,20,26,.42);backdrop-filter:blur(6px);color:#fff;border-color:rgba(255,255,255,.34)}
+  .lv-pill.on-dark .em{color:inherit}
+
+  /* เหรียญพิเศษ 👑 MVP · 🔥 สตรีค */
+  .lv-marks{display:inline-flex;gap:2px;font-size:12px;line-height:1}
+  .tm-pic .lv-marks{
+    position:absolute;top:5px;right:5px;z-index:2;
+    background:rgba(252,251,248,.9);border-radius:999px;padding:2px 5px;
+    box-shadow:0 1px 3px rgba(27,28,32,.18);
+  }
+  .card .lv-marks{font-size:14px;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+
+  /* แถบ EXP */
+  .lv-bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+  .lv-bar i{display:block;height:100%;border-radius:999px;background:var(--tier,var(--gold))}
+  .lv-panel .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+  .lv-panel .exp{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-faint);margin-top:6px;
+    display:flex;justify-content:space-between;gap:10px;
+  }
+  .lv-panel .nums{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;
+  }
+  .lv-panel .nums div{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:9px;padding:8px 9px;text-align:center;
+  }
+  .lv-panel .nums b{display:block;font-size:16px;font-weight:600;line-height:1.2}
+  .lv-panel .nums span{
+    font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-faint);
+  }
+
+  /* บรรทัดระดับบนการ์ดทีม — meta ยึดขอบล่าง เพิ่มแถวแล้วจะสูงขึ้นบนม่านดำ ไม่ล้นการ์ด */
+  .card .lvline{display:flex;align-items:center;gap:6px;margin-top:8px}
+  .card .lvline + .statline{margin-top:9px}
+
+  /* ป๊อปอัปตอนเลเวลอัป */
+  .lv-toast{
+    position:fixed;right:20px;bottom:20px;z-index:60;
+    display:flex;align-items:center;gap:11px;
+    background:var(--card);border:1px solid var(--line);border-left:3px solid var(--tier,var(--gold));
+    border-radius:12px;padding:11px 15px 11px 13px;box-shadow:var(--shadow);
+    transform:translateY(14px);opacity:0;transition:transform .3s cubic-bezier(.4,0,.2,1),opacity .3s;
+  }
+  .lv-toast.on{transform:none;opacity:1}
+  .lv-toast img{width:34px;height:34px;border-radius:9px;object-fit:cover;display:block}
+  .lv-toast .t1{font-size:9px;font-family:"IBM Plex Mono",monospace;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-faint)}
+  .lv-toast .t2{font-size:13px;font-weight:600}
+  @media(max-width:640px){ .lv-toast{left:16px;right:16px;bottom:16px} }
+
   /* ===== OFFICE — ผังออฟฟิศ 2D ===== */
   .ofc{margin:8px 0 34px}
 
@@ -215,6 +295,7 @@
   /* รูปการ์ดเต็มกรอบ เล็งกลางใบหน้าด้วยค่าเดียวกับการ์ดด้านล่าง
      (ตัว SD ใช้เฉพาะในผังออฟฟิศ ไม่ใช้ในแถวนี้) */
   .tm-pic{
+    position:relative;
     width:100%;height:104px;border-radius:9px;overflow:hidden;background:var(--paper);display:block;
   }
   .tm-pic img{width:100%;height:100%;object-fit:cover;display:block}
@@ -981,6 +1062,7 @@
 
     <!-- ===== OFFICE — ผังออฟฟิศ 2D ที่ทีมทำงานกันจริง ๆ ===== -->
     <section class="ofc">
+      <div class="lv-mvp" id="lvMvp"></div>
       <div class="ofc-team" id="ofcTeam"></div>
       <div class="ofc-scroll">
         <div class="ofc-stage" id="ofcStage">
@@ -1224,6 +1306,11 @@ function mergeWorklog(){
   buildWlFilters();
   renderDaily(DAILY_DOC);
   renderWorklogEntries();
+  /* งานเพิ่ม = EXP เพิ่ม — คิดใหม่แล้ววาดป้ายระดับซ้ำทุกที่ */
+  lvCompute();
+  lvRenderMvp();
+  render();
+  if(document.getElementById('ofcTeam')) ofcRenderTeam();
 }
 
 /* =====================================================================
@@ -1645,6 +1732,7 @@ function render(){
       <div class="meta">
         <div class="name">${a.name}</div>
         <div class="role">${a.role}</div>
+        <div class="lvline">${lvPill(a.id,'on-dark')}${lvMarks(a.id)}</div>
         <div class="statline">
           ${cardStatusHTML(a.status)}
           ${a.report?`<button class="rpt-pill" onclick="event.stopPropagation();openReport('${a.id}')">รายงาน →</button>`:''}
@@ -1718,6 +1806,7 @@ function openDrawer(a, scrollToReport){
     </div>
     <div class="drawer-body">
       <div class="sec"><h4>สถานะ</h4>${badgeHTML(a.status)}${a.task?`<p style="margin-top:10px">${a.task}</p>`:`<p style="margin-top:10px" class="empty">ยังไม่มีงานที่กำลังทำ</p>`}</div>
+      <div class="sec"><h4>ระดับ</h4>${lvPanel(a.id)}</div>
       <div class="sec"><h4>บุคลิก</h4><p>${a.persona}</p></div>
       <div class="sec what"><h4>หน้าที่</h4><ul>${a.what.map(w=>`<li>${w}</li>`).join('')}</ul></div>
       <div class="sec"><h4>ความสามารถ</h4><div class="caps">${a.caps.map(c=>`<span class="cap">${c}</span>`).join('')}</div></div>
@@ -1892,6 +1981,177 @@ async function loadWorklog(){
     if(msg) msg.textContent = 'ใช้ข้อมูลตัวอย่าง (worklog.json ไม่พบหรือเปิดผ่าน file://)';
     renderWorklogEntries();
   }
+}
+
+/* =====================================================================
+   LEVEL — EXP / LV / ระดับ / MVP ประจำสัปดาห์
+   นับจากงานจริงใน WORKLOG (worklog.json + Firestore) ล้วน ๆ ไม่มีตัวเลขปั้น
+   คนที่ยังไม่มีงานในบันทึกก็เริ่มที่ LV 1 Simple ตามปกติ
+   ===================================================================== */
+
+/* EXP ต่องานหนึ่งชิ้น — งานที่ส่งออกไปแล้วได้มากกว่างานที่ยังติดปัญหา */
+const LV_EXP = {sent:12, done:10, flagged:4, blocked:2};
+const LV_EXP_ANY = 6;
+
+/* EXP ที่ต้องใช้ขึ้นเลเวลถัดไป — ยิ่งสูงยิ่งกินงานเยอะ
+   LV1→2 ใช้ 25 (2–3 งาน) · LV10→11 ใช้ 70 (7 งาน) */
+const lvNeed = lv => 20 + lv*5;
+
+/* ระดับ — min = เลเวลต่ำสุดของระดับนั้น */
+const LV_TIERS = [
+  {key:'simple',   min:1,  name:'Simple',   emoji:'🌱', color:'#8C8A86'},
+  {key:'silver',   min:5,  name:'Silver',   emoji:'🥈', color:'#7C8794'},
+  {key:'gold',     min:10, name:'Gold',     emoji:'🥇', color:'#A8843F'},
+  {key:'platinum', min:15, name:'Platinum', emoji:'🏆', color:'#4A6670'},
+  {key:'diamond',  min:20, name:'Diamond',  emoji:'💎', color:'#6A5F9E'},
+];
+const lvTier = lv => LV_TIERS.reduce((acc,t) => lv >= t.min ? t : acc, LV_TIERS[0]);
+
+/* EXP สะสม → เลเวล + ความคืบหน้าในเลเวลนั้น */
+function lvFromExp(exp){
+  let lv = 1, left = Math.max(0, exp|0);
+  while(lv < 99 && left >= lvNeed(lv)){ left -= lvNeed(lv); lv++; }
+  return {lv, into:left, need:lvNeed(lv)};
+}
+
+/* วันที่แบบเวลาไทย (UTC+7) — worklog เก็บเป็น UTC */
+const lvDayKey = ms => new Date(ms + 7*3600*1000).toISOString().slice(0,10);
+const LV_WEEK_MS = 7*24*3600*1000;
+
+/* ทำงานติดต่อกันกี่วัน — นับถอยจากวันนี้ (หรือเมื่อวาน ถ้าวันนี้ยังไม่มีงาน) */
+function lvStreak(days){
+  if(!days || !days.size) return 0;
+  const now = Date.now();
+  const start = days.has(lvDayKey(now)) ? lvDayKey(now)
+              : (days.has(lvDayKey(now - 86400000)) ? lvDayKey(now - 86400000) : null);
+  if(!start) return 0;
+  let n = 0, t = Date.parse(start + 'T00:00:00Z');
+  while(days.has(new Date(t).toISOString().slice(0,10))){ n++; t -= 86400000; }
+  return n;
+}
+
+let LVL = {};       /* agentId → {exp, jobs, week, lv, into, need, tier, streak, mvp} */
+let LV_MVP = [];    /* agentId ที่ได้ MVP (เท่ากันได้หลายคน) */
+
+function lvCompute(){
+  const now = Date.now();
+  const stat = {}, days = {};
+  (typeof WORKLOG !== 'undefined' ? WORKLOG : []).forEach(e => {
+    if(!e || !e.agent) return;
+    const s = stat[e.agent] || (stat[e.agent] = {exp:0, jobs:0, week:0});
+    s.exp  += (LV_EXP[e.status] ?? LV_EXP_ANY);
+    s.jobs += 1;
+    const t = Date.parse(e.datetime || '');
+    if(isNaN(t)) return;
+    if(now - t <= LV_WEEK_MS) s.week += 1;
+    (days[e.agent] || (days[e.agent] = new Set())).add(lvDayKey(t));
+  });
+
+  LVL = {};
+  (typeof AGENTS !== 'undefined' ? AGENTS : []).forEach(a => {
+    const s = stat[a.id] || {exp:0, jobs:0, week:0};
+    const p = lvFromExp(s.exp);
+    LVL[a.id] = {...s, ...p, tier:lvTier(p.lv), streak:lvStreak(days[a.id]), mvp:false};
+  });
+
+  /* MVP — ปิดงานมากที่สุดใน 7 วันล่าสุด · เสมอกันได้หลายคน · ไม่มีงานเลยก็ไม่มี MVP */
+  LV_MVP = [];
+  const top = Object.values(LVL).reduce((m,v) => Math.max(m, v.week), 0);
+  if(top > 0) Object.keys(LVL).forEach(id => {
+    if(LVL[id].week === top){ LVL[id].mvp = true; LV_MVP.push(id); }
+  });
+
+  lvCheckUp();
+}
+
+/* ---------- ชิ้นส่วน HTML ที่เอาไปแปะได้ทุกที่ ---------- */
+
+function lvPill(id, cls){
+  const v = LVL[id]; if(!v) return '';
+  return `<span class="lv-pill${cls ? ' '+cls : ''}" style="--tier:${v.tier.color}"
+    title="EXP ${v.exp} · ปิดงานสะสม ${v.jobs} ชิ้น"><span class="em">${v.tier.emoji}</span> LV ${v.lv} · ${v.tier.name}</span>`;
+}
+
+function lvMarks(id){
+  const v = LVL[id]; if(!v) return '';
+  const m = [];
+  if(v.mvp) m.push(`<span title="MVP — ปิด ${v.week} งานใน 7 วันล่าสุด">👑</span>`);
+  if(v.streak >= 3) m.push(`<span title="ทำงานติดกัน ${v.streak} วัน">🔥</span>`);
+  return m.length ? `<span class="lv-marks">${m.join('')}</span>` : '';
+}
+
+/* แผงเต็มใน drawer */
+function lvPanel(id){
+  const v = LVL[id];
+  if(!v) return `<p class="empty">ยังคำนวณระดับไม่ได้</p>`;
+  const pct = Math.round(v.into / v.need * 100);
+  const next = lvTier(v.lv + 1);
+  const remain = v.need - v.into;
+  const note = next.key !== v.tier.key
+    ? `อีก ${remain} EXP ขึ้น ${next.emoji} ${next.name}`
+    : `อีก ${remain} EXP ขึ้น LV ${v.lv + 1}`;
+  return `<div class="lv-panel" style="--tier:${v.tier.color}">
+    <div class="row">${lvPill(id)}${lvMarks(id)}</div>
+    <div class="lv-bar"><i style="width:${pct}%"></i></div>
+    <div class="exp"><span>EXP ${v.into} / ${v.need}</span><span>${note}</span></div>
+    <div class="nums">
+      <div><b>${v.jobs}</b><span>งานสะสม</span></div>
+      <div><b>${v.week}</b><span>7 วันล่าสุด</span></div>
+      <div><b>${v.streak}</b><span>วันติดกัน</span></div>
+    </div>
+  </div>`;
+}
+
+/* แถบ MVP เหนือแถวรูปทีม */
+function lvRenderMvp(){
+  const box = document.getElementById('lvMvp'); if(!box) return;
+  if(!LV_MVP.length){
+    box.innerHTML = `<span class="crown">👑</span><span class="lab">MVP</span>
+      <span class="none">ยังไม่มีงานปิดใน 7 วันล่าสุด</span>`;
+    return;
+  }
+  const who = LV_MVP.map(id => (AGENTS.find(a=>a.id===id) || {id, name:id})).filter(Boolean);
+  const n = LVL[who[0].id].week;
+  box.innerHTML = `<span class="crown">👑</span><span class="lab">MVP · 7 วันล่าสุด</span>
+    ${who.map(a => `<img class="face" src="${a.img||''}" alt="${a.name}" style="${facePos(a.id)}"
+        onerror="this.style.display='none'">`).join('')}
+    <span class="who">${who.map(a=>a.name).join(' · ')}</span>
+    ${lvPill(who[0].id)}
+    <span class="sp"></span>
+    <span class="sub">ปิด ${n} งาน</span>`;
+}
+
+/* ---------- เลเวลอัป → ป๊อปอัปมุมจอ ---------- */
+const LV_STORE = 'agapae.lv';
+
+function lvCheckUp(){
+  let prev = {};
+  try{ prev = JSON.parse(localStorage.getItem(LV_STORE) || '{}'); }catch(e){}
+  const ups = [];
+  const cur = {};
+  Object.keys(LVL).forEach(id => {
+    cur[id] = LVL[id].lv;
+    /* ครั้งแรกที่เปิดเว็บยังไม่มีของเก่า — ไม่เด้งย้อนหลังทั้งทีม */
+    if(prev[id] != null && LVL[id].lv > prev[id]) ups.push(id);
+  });
+  try{ localStorage.setItem(LV_STORE, JSON.stringify(cur)); }catch(e){}
+  ups.forEach((id,i) => setTimeout(() => lvToast(id), i*1000));
+}
+
+function lvToast(id){
+  const v = LVL[id], a = AGENTS.find(x=>x.id===id);
+  if(!v || !a) return;
+  const el = document.createElement('div');
+  el.className = 'lv-toast';
+  el.style.setProperty('--tier', v.tier.color);
+  el.innerHTML = `<img src="${a.img||''}" alt="${a.name}" style="${facePos(id)}"
+      onerror="this.style.display='none'">
+    <div><div class="t1">Level up</div>
+      <div class="t2">${a.name} → LV ${v.lv}</div></div>
+    ${lvPill(id)}`;
+  document.body.appendChild(el);
+  requestAnimationFrame(()=>el.classList.add('on'));
+  setTimeout(()=>{ el.classList.remove('on'); setTimeout(()=>el.remove(), 400); }, 5200);
 }
 
 /* =====================================================================
@@ -2440,8 +2700,9 @@ function ofcRenderTeam(){
     const upd = (a.report && a.report.title) || a.task || 'ยังไม่มีงานค้าง';
     return `<button class="tm" type="button" onclick="ofcOpen('${a.id}')" style="--st:${st.c}"
               title="${esc(a.name)} — ${esc(a.role)}">
-      <span class="tm-pic"><img src="${a.img}" alt="${esc(a.name)}" style="${facePos(a.id)}" loading="lazy"></span>
+      <span class="tm-pic"><img src="${a.img}" alt="${esc(a.name)}" style="${facePos(a.id)}" loading="lazy">${lvMarks(a.id)}</span>
       <span class="tm-nm">${esc(a.name)}</span>
+      ${lvPill(a.id)}
       <span class="tm-st">${st.e} ${st.t}</span>
       <span class="tm-up">${esc(upd)}</span>
     </button>`;
@@ -3135,7 +3396,9 @@ async function loadPain(){
 /* =====================================================================
    BOOT
    ===================================================================== */
+lvCompute();       // EXP / LV / MVP จาก worklog (seed ก่อน แล้วคิดใหม่ตอนโหลดของจริง)
 render();          // console grid with seed agents
+lvRenderMvp();     // แถบ MVP ประจำสัปดาห์
 ofcInit();         // ผังออฟฟิศ + ตัวเดิน
 renderWorklog();   // worklog timeline (รวมอยู่ใน Console แล้ว) + tab count
 loadWorklog();     // async load real worklog data
@@ -3160,6 +3423,7 @@ firebase.firestore().collection("agents").orderBy("sortOrder").onSnapshot(snap=>
   // รวม: SEED เป็นรายชื่อหลัก (ครบทุกคน รวม Dale) + ทับด้วยข้อมูลสดจาก Firestore
   // กัน Firestore ที่ยังไม่มีบาง agent (เช่น dale) ทำให้คนหายจากเว็บ
   AGENTS = SEED_AGENTS.map(a => fs[a.id] ? {...a, ...fs[a.id]} : a);
+  lvCompute(); lvRenderMvp();
   if(typeof ofcBuildActors==='function' && document.getElementById('ofcStage')){ ofcBuildActors(); ofcRenderTeam(); }
   // เผื่อ Firestore มี agent ที่ไม่มีใน seed ก็เพิ่มต่อท้าย
   Object.values(fs).forEach(x => { if(!SEED_AGENTS.some(a=>a.id===x.id)) AGENTS.push(x); });

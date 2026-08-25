@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T16:00:00Z",
+  "updatedAt": "2026-08-25T16:41:12Z",
   "agents": [
     {
       "id": "claudy",
@@ -295,9 +295,13 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "idle",
-      "task": "",
-      "report": null
+      "status": "done",
+      "task": "เฟส 1 — ระบบ EXP / LV / ระดับ / MVP ในออฟฟิศ",
+      "report": {
+        "when": "23:41",
+        "title": "ระบบเลเวลในออฟฟิศพร้อมใช้แล้ว",
+        "body": "นับ EXP จากงานจริงใน worklog.json — เสร็จ 10 · ส่งออก 12 · ติดปัญหา 4 EXP\nเลเวลถัดไปใช้ 20 + LV×5 EXP\nระดับ: 🌱 Simple (LV1) · 🥈 Silver (5) · 🥇 Gold (10) · 🏆 Platinum (15) · 💎 Diamond (20)\n\nสถานะตอนนี้: Claudy 🥇 Gold LV10 · Dale LV7 / Reese LV6 / Minnie LV6 / Chris LV5 🥈 Silver · ที่เหลือ 🌱 Simple\n👑 MVP 7 วันล่าสุด = Claudy (ปิด 26 งาน)\n\nป้ายระดับขึ้นทั้งแถวรูปในออฟฟิศ การ์ดทีม และหน้ารายละเอียด · เลเวลอัปแล้วเด้งป๊อปอัปมุมจอ\nเฟส 2 (มินิเกมกดเล่นกับ Agent) ยังไม่ได้เริ่ม"
+      }
     },
     {
       "id": "news",
