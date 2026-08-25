@@ -1883,14 +1883,14 @@ async function loadWorklog(){
 
 /* =====================================================================
    OFFICE — ผังออฟฟิศ 2D ของทีม
-   พื้นออฟฟิศใช้รูปที่ Gen มา (office/floor2.1.png) — พิกัดทุกอย่างอิงรูปนั้น
+   พื้นออฟฟิศใช้รูปที่ Gen มา (office/floor2.2.png) — พิกัดทุกอย่างอิงรูปนั้น
    ระบบพิกัด 1586 x 992 ตามขนาดรูปจริง แล้วค่อยสเกลตามความกว้างที่แสดง
    ===================================================================== */
 const OFC_W = 1586, OFC_H = 992;
 
 /* รูปที่ Gen มา — ถ้าอยากกลับไปใช้ผังที่วาดด้วยโค้ด ตั้ง floor เป็น null
    sprites: {agentId:'office/sprites/xxx.png'} ใส่ทีหลังได้ ใครไม่มีก็ใช้หัว avatar เดิม */
-const OFC_ART = { floor:'office/floor2.1.png', sprites:{
+const OFC_ART = { floor:'office/floor2.2.png', sprites:{
   claudy:'office/sprites/claudy.png',
   minnie:'office/sprites/minnie.png',
   reese:'office/sprites/reese.png',
@@ -1929,17 +1929,19 @@ const OFC_EDGES = {
    seats = จุดอ้างอิงของแต่ละคน (ยืนจริงต่ำกว่านี้ 42) */
 const OFC_ROOMS = [
   {key:'r1', name:'ห้องไอเดีย & วิจัย', x:40,   y:45,  w:232, h:200, node:'A1', door:[250,245],
-   seats:{minnie:[160,108], reese:[230,108]}},
+   seats:{minnie:[130,173], reese:[218,173]}},
   {key:'r2', name:'สตูดิโอภาพ',        x:272,  y:45,  w:230, h:200, node:'A2', door:[450,245],
-   seats:{mind:[380,108]}},
+   seats:{mind:[370,173]}},
   {key:'r3', name:'ห้องเซิร์ฟเวอร์',    x:507,  y:45,  w:220, h:200, node:'A4', door:[665,245],
-   seats:{dale:[595,108]}},
+   seats:{dale:[610,173]}},
   {key:'r4', name:'มุมเขียน',           x:730,  y:45,  w:200, h:200, node:'A6', door:[885,245],
-   seats:{rae:[810,108]}},
+   seats:{rae:[820,173]}},
   {key:'r5', name:'ห้องสเปค',           x:935,  y:45,  w:215, h:200, node:'A8', door:[1085,245],
-   seats:{vera:[1020,108]}},
-  {key:'r6', name:'ห้องข่าว & ข้อมูล',  x:1150, y:45,  w:150, h:200, node:'A10', door:[1265,252],
-   seats:{news:[1200,108], nick:[1262,108]}},
+   seats:{vera:[1030,178]}},
+  {key:'r6', name:'ห้องข่าว',           x:1150, y:45,  w:150, h:200, node:'A10', door:[1265,252],
+   seats:{news:[1200,180]}},
+  {key:'r7', name:'โต๊ะข้อมูลสด',       x:1302, y:45,  w:228, h:205, node:'A11', door:[1375,258],
+   seats:{nick:[1375,183]}},
   {key:'l1', name:'ห้องคลังไฟล์',       x:40,   y:255, w:172, h:160, node:'L2', door:[218,358],
    seats:{libby:[120,293]}},
   {key:'l2', name:'โต๊ะขาย',            x:40,   y:420, w:240, h:208, node:'L3', door:[283,490],
@@ -2071,6 +2073,59 @@ function ofcRoute(from, to){
   return [to];
 }
 
+/* กันตัวซ้อนกัน — ตอนยืนอยู่กับที่ ถ้าใครใกล้เกินไปให้ค่อย ๆ เขยิบออกจากกัน
+   ขยับได้ไกลสุด OFC_SEP_MAX จากจุดที่ตั้งใจไปยืน จะได้ไม่หลุดออกนอกห้อง */
+const OFC_SEP = 44, OFC_SEP_MAX = 46;
+
+/* ถึงที่หมายแล้วมีคนยืนอยู่ตรงนั้นพอดี — เลื่อนไปยืนข้าง ๆ เป็นช่อง ๆ ทันที
+   ทำตอนถึงที่ ไม่ต้องรอแรงดันค่อย ๆ ผลัก จะได้ไม่มีจังหวะที่เห็นตัวซ้อนกัน */
+const OFC_STACK_OFF = [[0,0],[46,0],[-46,0],[24,26],[-24,26],[92,0],[-92,0]];
+function ofcPlaceAt(ac, x, y){
+  ac.x = x; ac.y = y;
+  ac.el.style.left = (x/OFC_W*100)+'%';
+  ac.el.style.top  = (y/OFC_H*100)+'%';
+  ac.el.style.zIndex = Math.round(y);
+  ac.el.dataset.bx = x<230 ? 'l' : (x>OFC_W-230 ? 'r' : '');
+}
+function ofcAvoidStack(ac){
+  const gp = (ac.goal && ac.goal.pos) || [ac.x, ac.y];
+  const clash = (x,y) => OFC_ACTORS.some(b => b!==ac && b.state==='act' &&
+                          Math.hypot(b.x-x, (b.y-y)*1.6) < OFC_SEP);
+  for(const off of OFC_STACK_OFF){
+    const x = gp[0]+off[0], y = gp[1]+off[1];
+    if(!clash(x,y)){ ofcPlaceAt(ac, x, y); return; }
+  }
+}
+
+function ofcSeparate(dt){
+  const n = OFC_ACTORS.length;
+  for(let i=0;i<n;i++){
+    const a = OFC_ACTORS[i];
+    if(a.state !== 'act') continue;
+    let mx = 0, my = 0;
+    for(let j=0;j<n;j++){
+      if(j === i) continue;
+      const b = OFC_ACTORS[j];
+      if(b.state !== 'act') continue;
+      let dx = a.x-b.x, dy = (a.y-b.y)*1.6;   /* แนวตั้งนับให้ห่างกว่าจริง เพราะตัวสูงกว่ากว้าง */
+      let d = Math.hypot(dx, dy);
+      if(d > OFC_SEP) continue;
+      if(d < 0.01){ dx = (i<j? -1: 1); dy = 0; d = 1; }
+      const w = (OFC_SEP-d)/OFC_SEP;
+      mx += dx/d*w; my += dy/d*w*0.45;
+    }
+    if(!mx && !my) continue;
+    const step = 38*dt/1000;
+    let nx = a.x + mx*step, ny = a.y + my*step;
+    const gp = a.goal && a.goal.pos;
+    if(gp){
+      const ox = nx-gp[0], oy = ny-gp[1], od = Math.hypot(ox, oy);
+      if(od > OFC_SEP_MAX){ nx = gp[0]+ox/od*OFC_SEP_MAX; ny = gp[1]+oy/od*OFC_SEP_MAX; }
+    }
+    ofcPlaceAt(a, nx, ny);
+  }
+}
+
 /* จุดหมายถัดไป — อิงสถานะจริงใน status.json */
 function ofcNextGoal(ac){
   const a = (typeof AGENTS!=='undefined' ? AGENTS : []).find(x=>x.id===ac.id);
@@ -2082,7 +2137,11 @@ function ofcNextGoal(ac){
     pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+42] : [790,645],
     act:'desk', dwell:11000+Math.random()*15000});
   const goSpot = (key, act, dwell) => { const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
-    return {room:r, node:r.node, pos:ofcSpot(OFC_SPOTS[key]), act, dwell}; };
+    /* เลี่ยงจุดที่มีคนยืนอยู่แล้ว ถ้าเต็มหมดค่อยสุ่มตามเดิม */
+    const all = OFC_SPOTS[key] || [];
+    const free = all.filter(p => !OFC_ACTORS.some(x => x!==ac && x.state==='act' &&
+                  Math.hypot(x.x-p[0], x.y-p[1]) < 42));
+    return {room:r, node:r.node, pos:ofcSpot(free.length ? free : all), act, dwell}; };
   const goVisit = () => {
     const cands=[]; OFC_ROOMS.forEach(r=>Object.keys(r.seats||{}).forEach(k=>{ if(k!==ac.id) cands.push([r,k]); }));
     const [r,k] = ofcPick(cands);
@@ -2219,6 +2278,7 @@ function ofcTick(ts){
         ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
         ac.door=ac.goal.room?ac.goal.room.door:null;
         ac.el.dataset.act=ac.goal.act;
+        ofcAvoidStack(ac);
         ofcStatusText(ac);
         if(ac.goal.ball) ofcKickBall(ac); else ofcSay(ac, ac.goal.act);
         continue;
@@ -2238,6 +2298,7 @@ function ofcTick(ts){
       if(ac.wait<=0) ofcStartWalk(ac, ofcNextGoal(ac));
     }
   }
+  ofcSeparate(dt);
   ofcCatTick(dt);
   ofcBallTick(dt);
   ofcPPUpdate();
