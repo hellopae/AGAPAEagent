@@ -334,6 +334,57 @@
   .ofc-ball[data-roll="l"] img{animation:ofcRoll .45s linear infinite reverse}
   @keyframes ofcRoll{to{transform:rotate(360deg)}}
 
+  /* ตู้ปลาในห้องพัก — ปลาว่ายวนอยู่ในตู้ */
+  .ofc-tank{
+    position:absolute;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;
+    border:none;background:none;padding:0;line-height:0;
+    filter:drop-shadow(0 .15cqw .25cqw rgba(27,28,32,.22));
+  }
+  .ofc-tank>img{width:100%;height:auto;display:block}
+  .ofc-tank .water{position:absolute;left:6%;top:10%;width:89%;height:83%;overflow:hidden}
+  .ofc-fish{position:absolute;height:auto;display:block}
+  .ofc-fish.f1{width:26%;left:4%;top:34%;animation:ofcSwim1 11s ease-in-out infinite}
+  .ofc-fish.f2{width:24%;left:38%;top:14%;animation:ofcSwim2 15s ease-in-out infinite}
+  .ofc-fish.f3{width:20%;left:16%;top:58%;animation:ofcSwim3 9s ease-in-out infinite}
+  @keyframes ofcSwim1{
+    0%{transform:translate(0,0) scaleX(-1)}
+    45%{transform:translate(215%,-16%) scaleX(-1)}
+    50%{transform:translate(215%,-16%) scaleX(1)}
+    95%{transform:translate(0,12%) scaleX(1)}
+    100%{transform:translate(0,0) scaleX(-1)}
+  }
+  @keyframes ofcSwim2{
+    0%{transform:translate(0,0) scaleX(1)}
+    45%{transform:translate(-130%,28%) scaleX(1)}
+    50%{transform:translate(-130%,28%) scaleX(-1)}
+    95%{transform:translate(6%,-6%) scaleX(-1)}
+    100%{transform:translate(0,0) scaleX(1)}
+  }
+  @keyframes ofcSwim3{
+    0%{transform:translate(0,0) scaleX(-1)}
+    45%{transform:translate(190%,-22%) scaleX(-1)}
+    50%{transform:translate(190%,-22%) scaleX(1)}
+    95%{transform:translate(10%,4%) scaleX(1)}
+    100%{transform:translate(0,0) scaleX(-1)}
+  }
+
+  /* โต๊ะปิงปองในห้องเกม */
+  .ofc-pp{
+    position:absolute;transform:translate(-50%,-50%);pointer-events:none;
+    filter:drop-shadow(0 .15cqw .25cqw rgba(27,28,32,.22));
+  }
+  .ofc-pp>img{width:100%;height:auto;display:block}
+  .ofc-pp .pball{
+    position:absolute;left:20%;top:47%;width:1.6%;aspect-ratio:1;border-radius:50%;
+    background:#fff;box-shadow:0 0 0 .08cqw rgba(27,28,32,.35);opacity:0;
+  }
+  .ofc-pp[data-rally="1"] .pball{opacity:1;animation:ofcPP .62s ease-in-out infinite alternate}
+  @keyframes ofcPP{
+    0%{left:20%;top:47%}
+    50%{top:38%}
+    100%{left:76%;top:47%}
+  }
+
   .ofc-heart{
     position:absolute;transform:translate(-50%,-100%);font-size:1.35cqw;line-height:1;
     pointer-events:none;opacity:0;animation:ofcHeart 1.25s ease-out forwards;
@@ -1890,7 +1941,7 @@ const OFC_STATUS = {
   flagged:{t:'รอแก้ไข',     e:'⚠️', c:'var(--flagged)'},
   sent:   {t:'ส่งแล้ว',     e:'📧', c:'var(--sent)'},
 };
-const OFC_ACT = {desk:'⌨️', coffee:'☕', chat:'💬', report:'📋', check:'🔍', meet:'🗂️', rest:'😌', play:'🎮', walk:'👣'};
+const OFC_ACT = {desk:'⌨️', coffee:'☕', chat:'💬', report:'📋', check:'🔍', meet:'🗂️', rest:'😌', play:'🎮', walk:'👣', pp:'🏓', fish:'🐟'};
 
 /* ความคิดในบับเบิล — ของใครของมัน ตามนิสัยที่เขียนไว้ใน persona */
 const OFC_THINK = {
@@ -1912,22 +1963,26 @@ const OFC_THINK = {
   vera:{desk:['ขอจอแนวตั้งกับที่ว่างพอวางสเปคเรียงกันสามแผ่น','ระยะนี้ไม่เท่ากันสองพิกเซล แก้ก่อน','บนมือถือปุ่มนี้เล็กไป กดพลาดแน่'],
        chat:['ขอดูสเปคจริงก่อน อย่าเพิ่งลงมือ'],
        meet:['วัดได้ไหม ถ้าวัดไม่ได้ก็ยังไม่ใช่สเปค']},
-  mind:{desk:['ขอไฟสีคงที่ทั้งวันกับแผ่นเทียบสีติดผนัง','โทนนี้ยังไม่นิ่ง ลดความอิ่มสีลงอีกนิด','อย่าเอาของสีจัดมาวางในเฟรม'],
+  mind:{fish:['สีในตู้คุมโทนดีกว่างานเมื่อเช้าอีก','ส้มตัดกับฟ้า สวยดี'],
+       desk:['ขอไฟสีคงที่ทั้งวันกับแผ่นเทียบสีติดผนัง','โทนนี้ยังไม่นิ่ง ลดความอิ่มสีลงอีกนิด','อย่าเอาของสีจัดมาวางในเฟรม'],
        chat:['ชุดนี้ต้องคุมโทนให้เหมือนกันทั้งชุดนะ'],
        rest:['พักตาสักครู่ ดูสีนานไปเริ่มเพี้ยน']},
-  chris:{desk:['ขอโต๊ะไฟส่องพิสูจน์อักษรกับประตูที่ปิดได้','ไม่มีอะไรผ่านโดยไม่ถูกตรวจ','คำนี้ในบริบทงานบุญใช้ไม่ได้ ต้องเปลี่ยน'],
+  chris:{fish:['ปลาไม่ต้องตรวจ ดูอย่างเดียว','ตรงนี้เงียบดี'],
+        desk:['ขอโต๊ะไฟส่องพิสูจน์อักษรกับประตูที่ปิดได้','ไม่มีอะไรผ่านโดยไม่ถูกตรวจ','คำนี้ในบริบทงานบุญใช้ไม่ได้ ต้องเปลี่ยน'],
         chat:['ตรงนี้ต้องแก้ก่อนนะ ยังส่งไม่ได้'],
         check:['อ่านอีกรอบช้า ๆ เดี๋ยวเจอ']},
   libby:{desk:['ขอตู้ลิ้นชักติดป้ายทุกช่อง ขอให้หยิบเจอในสามวินาที','ไฟล์นี้ชื่อไม่ตรงแบบ เดี๋ยวหาไม่เจอ','ไม่แก้เนื้อหา จัดแต่ระบบให้ค้นเจอ'],
         chat:['ไฟล์นั้นอยู่ในคลัง เดี๋ยวส่งลิงก์ให้'],
         report:['จัด index รอบนี้เสร็จแล้ว']},
-  nick:{desk:['ขอจอกราฟสามจอเรียงกัน กับที่วางกาแฟที่ไม่หกใส่คีย์บอร์ด','ตัวเลขยังไม่ชัดพอ ยังไม่ฟันธง','ยังไม่มีท่อข้อมูลตรงนี้เลย ต้องวางก่อน'],
+  nick:{fish:['นับได้สามตัว ไม่มีตัวไหนหาย','ว่ายวนเป็นรอบ จับจังหวะได้'],
+       desk:['ขอจอกราฟสามจอเรียงกัน กับที่วางกาแฟที่ไม่หกใส่คีย์บอร์ด','ตัวเลขยังไม่ชัดพอ ยังไม่ฟันธง','ยังไม่มีท่อข้อมูลตรงนี้เลย ต้องวางก่อน'],
        chat:['ขอข้อมูลจริงก่อน เดาไม่ได้'],
        coffee:['รอ query รันอยู่ ขอกาแฟก่อน']},
   dale:{desk:['ขอห้องแยกที่มีตู้แร็ค deploy พังตอนตีสองจะได้ไม่ต้องปลุกใคร','build ผ่านแล้ว รอขึ้น URL จริง','เสียงพัดลมดังกว่าเดิม ต้องไปดู'],
        chat:['เดี๋ยว deploy ให้ รอสองนาที'],
        report:['ขึ้นเว็บจริงแล้ว เปิดดูได้เลย']},
-  toby:{desk:['ขอโซฟากับจอใหญ่ ต้องนั่งเล่นเองให้ครบก่อนถึงจะบอกว่าเสร็จ','ยังไม่ได้รันดูเอง ยังไม่พูดว่าเสร็จ','จังหวะตรงนี้ยังหน่วง ต้องแก้ game loop'],
+  toby:{pp:['เกมนี้แพ้ไม่ได้','ใส่สปินหน่อย','เสิร์ฟแรงกว่านี้ได้อีก'],
+       desk:['ขอโซฟากับจอใหญ่ ต้องนั่งเล่นเองให้ครบก่อนถึงจะบอกว่าเสร็จ','ยังไม่ได้รันดูเอง ยังไม่พูดว่าเสร็จ','จังหวะตรงนี้ยังหน่วง ต้องแก้ game loop'],
        play:['เทสต์ด่านนี้อีกรอบ เผื่อมีบั๊ก','เล่นเองแล้วถึงจะรู้ว่าสนุกจริงไหม'],
        chat:['ลองกดเล่นดูก่อน แล้วบอกว่ารู้สึกยังไง']},
   news:{desk:['ขอนาฬิกาโลกหลายเรือนกับจอข่าวที่เปิดค้างไว้','คืนที่ผ่านมามีอะไรบ้าง ไล่ให้ครบหกหัวข้อ','อันนี้ยังมีแค่สำนักเดียว รอยืนยันก่อน'],
@@ -1945,6 +2000,8 @@ const OFC_THINK_ANY = {
   rest:['นั่งพักสักครู่','ยืดเส้นหน่อย นั่งนานไป'],
   play:['ขอเล่นสักตา','พักสมองก่อน'],
   walk:['เดินไปก่อน','ขอทางหน่อย'],
+  pp:['ตาผมเสิร์ฟนะ','รับได้ไหมล่ะ','สิบเอ็ดแต้มก่อน','ลูกนี้ยาก'],
+  fish:['ดูปลาแล้วใจเย็นลง','ขอพักสายตาสักครู่','ตัวสีส้มว่ายเร็วกว่าเพื่อน'],
 };
 function ofcThink(id, act){
   const mine = (OFC_THINK[id]||{})[act];
@@ -2003,9 +2060,29 @@ function ofcNextGoal(ac){
     act:'play', dwell:3200+Math.random()*2600});
 
   if(OFC_BALL && !OFC_BALL.rolling){
-    const pBall = ac.id==='toby' ? 0.30
-                : (st==='idle' ? 0.20 : (st==='done'||st==='sent' ? 0.15 : 0.06));
+    const pBall = ac.id==='toby' ? 0.24
+                : (st==='idle' ? 0.16 : (st==='done'||st==='sent' ? 0.12 : 0.05));
     if(Math.random() < pBall) return goBall();
+  }
+  /* โต๊ะปิงปอง — ยืนได้ข้างละคน ถ้าเต็มก็ไปทำอย่างอื่น */
+  const goPP = () => {
+    const taken = k => OFC_ACTORS.some(a=>a!==ac && a.goal && a.goal.pp===k);
+    const side = !taken('A') ? 'A' : (!taken('B') ? 'B' : null);
+    if(!side) return null;
+    const r = ofcRoomByKey('bm');
+    return {room:r, node:r.node, pp:side, pos:OFC_PP_SIDE[side].slice(),
+            act:'pp', dwell:9000+Math.random()*8000};
+  };
+  const pPP = ac.id==='toby' ? 0.26
+            : (st==='idle' ? 0.16 : (st==='done'||st==='sent' ? 0.12 : 0.04));
+  if(Math.random() < pPP){ const g = goPP(); if(g) return g; }
+
+  /* ตู้ปลาในห้องพัก — คนที่งานติดขัดแวะไปคลายเครียดบ่อยหน่อย */
+  const pFish = st==='flagged' ? 0.18 : (st==='idle' ? 0.12 : 0.05);
+  if(Math.random() < pFish){
+    const r = ofcRoomByKey('lounge');
+    return {room:r, node:r.node, pos:[OFC_FISH_STAND[0]+(Math.random()*22-11), OFC_FISH_STAND[1]],
+            act:'fish', dwell:6000+Math.random()*6000};
   }
 
   if(ac.id==='claudy'){
@@ -2114,7 +2191,16 @@ function ofcTick(ts){
   }
   ofcCatTick(dt);
   ofcBallTick(dt);
+  ofcPPUpdate();
   ofcRaf = requestAnimationFrame(ofcTick);
+}
+
+/* ลูกปิงปองเด้งเฉพาะตอนมีคนยืนครบสองฝั่ง */
+function ofcPPUpdate(){
+  const el = document.getElementById('ofcPP'); if(!el) return;
+  const n = OFC_ACTORS.filter(a=>a.goal && a.goal.pp && a.state==='act').length;
+  const v = n>=2 ? '1' : '';
+  if(el.dataset.rally !== v) el.dataset.rally = v;
 }
 
 function ofcBuildActors(){
@@ -2226,12 +2312,21 @@ const OFC_CAT_SPOTS = [
   {room:null, node:'L2', pos:[302,470]},
 ];
 
-const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'💛', ball:'⚽'};
+const OFC_CAT_ACT = {sit:'😺', sleep:'💤', play:'🐾', walk:'🐈', pet:'💛', ball:'⚽', fish:'🐟'};
 
 /* ของเล่น — ที่นอนแมวในห้องพัก กับลูกบอลที่กลิ้งไปตามทางเดิน */
 const OFC_BED_ART  = 'office/sprites/cat/bed.png';
 const OFC_BALL_ART = 'office/sprites/cat/ball.png';
-const OFC_BED_POS  = [1058,714];      /* ที่ว่างกลางห้องพัก เว้นระยะจากตู้ทีวีและโซฟา */
+const OFC_BED_POS  = [1060,745];      /* ที่ว่างกลางห้องพัก ใต้ตู้ปลา */
+const OFC_TANK_ART = 'office/sprites/cat/tank.png';
+const OFC_TANK_POS = [1052,662];      /* ติดผนังฝั่งตู้ทีวี เหนือที่นอนแมว */
+const OFC_TANK_W   = 6.17;            /* cqw — กว้าง 80 หน่วยของผัง */
+const OFC_FISH_POS = [1090,700];      /* แมวนั่งดูปลาที่ปลายตู้ ไม่บังปลา */
+const OFC_FISH_STAND = [1020,712];    /* จุดยืนดูปลาของเอเจนต์ อีกฝั่งของตู้ */
+const OFC_PP_ART   = 'office/sprites/cat/pingpong.png';
+const OFC_PP_POS   = [475,643];       /* ห้องเกม เหนือโต๊ะทำงาน */
+const OFC_PP_W     = 12.4;            /* cqw */
+const OFC_PP_SIDE  = {A:[398,652], B:[552,652]};
 const OFC_BALL_HOME= [650,420];       /* ทางเดินกลางออฟฟิศ (node M2) */
 const OFC_BALL_NODE= 'M2';
 const OFC_BALL_REACT = {
@@ -2245,6 +2340,26 @@ const OFC_BALL_REACT = {
 };
 const OFC_BALL_REACT_ANY = ['เตะกลับให้แล้ว','ส้ม รับบอล!','บอลมาทางนี้','โอเค อีกที'];
 let OFC_BALL = null;
+
+/* ปลาสามตัวในตู้ — วาดด้วย SVG ไว้ก่อน สลับเป็นไฟล์รูปได้โดยแก้ที่ฟังก์ชันนี้ที่เดียว */
+function ofcFishSVG(kind){
+  const P = {
+    /* ตัวส้มลายขาว */
+    1:{body:'#f0713a', fin:'#f7a072', band:'#fdf3e3', line:'#c8542a'},
+    /* ตัวฟ้าครีบเหลือง */
+    2:{body:'#3ba3e0', fin:'#ffd23f', band:'#173b6e', line:'#1f6fb2'},
+    /* ตัวชมพูพาสเทล */
+    3:{body:'#f7c0cb', fin:'#f4a3b4', band:'#8ad3cd', line:'#5b3a35'},
+  }[kind];
+  return `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" class="ofc-fish f${kind}" aria-hidden="true">
+    <path d="M52 20 L60 9 L60 31 Z" fill="${P.fin}" stroke="${P.line}" stroke-width="1.6" stroke-linejoin="round"/>
+    <ellipse cx="27" cy="20" rx="26" ry="15" fill="${P.body}" stroke="${P.line}" stroke-width="1.8"/>
+    <path d="M30 6 Q34 20 30 34" fill="none" stroke="${P.band}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M24 33 Q28 39 34 34" fill="${P.fin}" stroke="${P.line}" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="12" cy="17" r="4.2" fill="#fff" stroke="${P.line}" stroke-width="1.2"/>
+    <circle cx="11" cy="17" r="2.1" fill="#2b1d1a"/>
+  </svg>`;
+}
 const OFC_CAT_SAY = {
   sit:  ['เมี้ยว~','นั่งตรงนี้แหละ','แดดอุ่นดี','มองอยู่นะ'],
   sleep:['zzZ...','ห้ามปลุก','ขอนอนก่อนนะ'],
@@ -2252,6 +2367,7 @@ const OFC_CAT_SAY = {
   walk: ['เดินสำรวจก่อน','ไปดูตรงโน้นหน่อย','ได้กลิ่นขนม'],
   pet:  ['ฟู้~ ฟู้~','ลูบตรงคางสิ','ชอบบบ','อีกทีก็ได้'],
   ball: ['เมี้ยว! บอล','เตะโดนแล้ว','ไล่ต่อ','อันนี้ของเรา'],
+  fish: ['ปลา...','ตัวนั้นว่ายเร็ว','จับไม่ได้ แต่ดูได้','นั่งดูทั้งวันก็ได้'],
 };
 
 /* เอเจนต์พูดตอนน้องส้มมาหา — ตามนิสัยของแต่ละคน */
@@ -2351,6 +2467,27 @@ function ofcBuildProps(){
   bed.style.zIndex = Math.round(OFC_BED_POS[1]) - 2;
   layer.appendChild(bed);
 
+  const tank = document.createElement('button');
+  tank.className = 'ofc-tank'; tank.type = 'button';
+  tank.title = 'ตู้ปลา';
+  tank.style.width = OFC_TANK_W + 'cqw';
+  tank.style.left = (OFC_TANK_POS[0]/OFC_W*100)+'%';
+  tank.style.top  = (OFC_TANK_POS[1]/OFC_H*100)+'%';
+  tank.style.zIndex = Math.round(OFC_TANK_POS[1]) - 1;
+  tank.innerHTML = `<img src="${OFC_TANK_ART}" alt="ตู้ปลา">
+    <span class="water">${ofcFishSVG(1)}${ofcFishSVG(2)}${ofcFishSVG(3)}</span>`;
+  tank.onclick = () => { if(OFC_CAT_AC) OFC_CAT_AC.wantFish = true; };
+  layer.appendChild(tank);
+
+  const pp = document.createElement('div');
+  pp.className = 'ofc-pp'; pp.id = 'ofcPP';
+  pp.style.width = OFC_PP_W + 'cqw';
+  pp.style.left = (OFC_PP_POS[0]/OFC_W*100)+'%';
+  pp.style.top  = (OFC_PP_POS[1]/OFC_H*100)+'%';
+  pp.style.zIndex = Math.round(OFC_PP_POS[1]) - 1;
+  pp.innerHTML = `<img src="${OFC_PP_ART}" alt="โต๊ะปิงปอง"><span class="pball"></span>`;
+  layer.appendChild(pp);
+
   const old = OFC_BALL;
   const bx = old ? old.x : OFC_BALL_HOME[0], by = old ? old.y : OFC_BALL_HOME[1];
   const el = document.createElement('button');
@@ -2382,6 +2519,12 @@ function ofcCatGoal(){
     return {ball:true, node:OFC_BALL.node, door:null,
             pos:[OFC_BALL.x + (Math.random()<0.5?-30:30), OFC_BALL.y + 8],
             act:'ball', dwell:1400};
+  }
+  if((c && c.wantFish) || r0 < 0.50){             /* ไปนั่งดูปลา */
+    if(c) c.wantFish = false;
+    const lg0 = ofcRoomByKey('lounge');
+    return {node:lg0.node, door:lg0.door, pos:[OFC_FISH_POS[0], OFC_FISH_POS[1]],
+            act:'fish', dwell:7000+Math.random()*7000};
   }
   if(r0 < 0.38){                                  /* ไปนอนที่นอนตัวเอง */
     const lg = ofcRoomByKey('lounge');
