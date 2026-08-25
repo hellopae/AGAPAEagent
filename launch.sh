@@ -19,7 +19,7 @@ sleep 1
 
 # 2. เปิด dashboard ใน browser
 echo "▶ เปิด dashboard ใน browser"
-open "http://localhost:3333/tanapat-studio-dashboard.html"
+open "http://localhost:3333/index.html"
 
 # 3. เปิด VS Code workspace
 echo "▶ เปิด VS Code workspace"
@@ -32,5 +32,5 @@ fi
 
 echo ""
 echo "✅ เสร็จแล้ว!"
-echo "   Dashboard → http://localhost:3333/tanapat-studio-dashboard.html"
+echo "   Dashboard → http://localhost:3333/index.html"
 echo "   Output files → ${DIR}/Output/"
