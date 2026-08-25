@@ -368,6 +368,25 @@
     100%{transform:translate(0,0) scaleX(-1)}
   }
 
+  /* กระดานงานค้างในศูนย์คุมงาน */
+  .ofc-board{
+    position:absolute;transform:translate(-50%,0);pointer-events:none;
+    background:var(--card);border:1px solid var(--line-strong);border-radius:.5cqw;
+    padding:.45cqw .55cqw;box-shadow:0 .18cqw .45cqw rgba(27,28,32,.18);
+    font-size:.78cqw;line-height:1.28;color:var(--ink);text-align:left;
+  }
+  .ofc-board .bd-head{
+    display:flex;justify-content:space-between;align-items:baseline;gap:.4cqw;
+    font-family:"IBM Plex Mono",monospace;font-size:.76cqw;color:var(--ink-soft);
+    border-bottom:1px solid var(--line);padding-bottom:.22cqw;margin-bottom:.28cqw;
+  }
+  .ofc-board .bd-head b{color:var(--ink);font-size:.86cqw}
+  .ofc-board .bd-row{display:flex;align-items:center;gap:.3cqw;white-space:nowrap;overflow:hidden}
+  .ofc-board .bd-dot{flex:none;width:.42cqw;height:.42cqw;border-radius:50%}
+  .ofc-board .bd-nm{flex:none;font-weight:600}
+  .ofc-board .bd-tk{flex:1;min-width:0;color:var(--ink-soft);overflow:hidden;text-overflow:ellipsis}
+  .ofc-board .bd-empty,.ofc-board .bd-more{color:var(--ink-faint);font-size:.74cqw}
+
   /* PS5 + แสงจอทีวีในห้องเกม */
   .ofc-ps5{
     position:absolute;transform:translate(-50%,-50%);pointer-events:none;height:auto;display:block;
@@ -2225,6 +2244,22 @@ function ofcTick(ts){
   ofcRaf = requestAnimationFrame(ofcTick);
 }
 
+/* กระดานงานค้าง — ชื่อกับงานที่ค้างจริงของคนที่สถานะ กำลังทำงาน / รอแก้ไข */
+function ofcBoardRender(){
+  const el = document.getElementById('ofcBoard'); if(!el) return;
+  const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const list = (typeof AGENTS!=='undefined'?AGENTS:[]).filter(a=>a.status==='working'||a.status==='flagged');
+  const rows = list.slice(0,3).map(a=>{
+    const st = OFC_STATUS[a.status] || OFC_STATUS.idle;
+    return `<div class="bd-row"><span class="bd-dot" style="background:${st.c}"></span>
+      <span class="bd-nm">${esc(a.name)}</span>
+      <span class="bd-tk">${esc(a.task || st.t)}</span></div>`;
+  }).join('');
+  el.innerHTML = `<div class="bd-head"><span>งานที่ค้าง</span><b>${list.length}</b></div>
+    ${rows || '<div class="bd-empty">ไม่มีงานค้าง</div>'}
+    ${list.length>3 ? `<div class="bd-more">อีก ${list.length-3} งาน</div>` : ''}`;
+}
+
 /* ลูกปิงปองเด้งเฉพาะตอนมีคนยืนครบสองฝั่ง */
 function ofcPPUpdate(){
   const el = document.getElementById('ofcPP');
@@ -2307,6 +2342,7 @@ function ofcOpen(id){
   if(a && typeof openDrawer==='function') openDrawer(a);
 }
 function ofcRenderTeam(){
+  ofcBoardRender();
   const box = document.getElementById('ofcTeam');
   if(!box) return;
   const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -2367,10 +2403,12 @@ const OFC_PP_W     = 16.9;            /* cqw */
 const OFC_PP_SIDE  = {A:[300,812], B:[560,812]};
 /* ทีวีในห้องเกมอยู่บนตู้ล่าง (จอราว 105-152, 897-913) — วาง PS5 ไว้ข้าง ๆ */
 const OFC_PS5_ART  = 'office/sprites/cat/playstation.png';
-const OFC_PS5_POS  = [180,902];
+const OFC_PS5_POS  = [182,884];
 const OFC_PS5_W    = 2.2;             /* cqw */
 const OFC_TV_POS   = [128,904];       /* ตำแหน่งจอ ใช้ทำแสงจอตอนมีคนเล่น */
 const OFC_PS5_SIDE = {A:[118,862], B:[180,862]};
+/* กระดานงานค้างบนผนังศูนย์คุมงาน — อ่านจาก AGENTS (status.json / Firestore) จริง */
+const OFC_BOARD = {x:548, y:368, w:176};   /* ยึดขอบบน ไม่ให้ทับป้ายชื่อห้องกับโต๊ะ */
 const OFC_BALL_HOME= [790,645];       /* ทางเดินกลางล่าง (node B5) */
 const OFC_BALL_NODE= 'B5';
 const OFC_BALL_REACT = {
@@ -2517,6 +2555,15 @@ function ofcBuildProps(){
   pp.style.zIndex = Math.round(OFC_PP_POS[1]) - 1;
   pp.innerHTML = `<img src="${OFC_PP_ART}" alt="โต๊ะปิงปอง"><span class="pball"></span>`;
   layer.appendChild(pp);
+
+  const board = document.createElement('div');
+  board.className = 'ofc-board'; board.id = 'ofcBoard';
+  board.style.left = (OFC_BOARD.x/OFC_W*100)+'%';
+  board.style.top  = (OFC_BOARD.y/OFC_H*100)+'%';
+  board.style.width  = (OFC_BOARD.w/OFC_W*100)+'cqw';
+  board.style.zIndex = Math.round(OFC_BOARD.y) - 3;
+  layer.appendChild(board);
+  ofcBoardRender();
 
   const ps5 = document.createElement('img');
   ps5.className = 'ofc-ps5'; ps5.src = OFC_PS5_ART; ps5.alt = 'PS5';
