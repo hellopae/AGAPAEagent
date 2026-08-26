@@ -480,15 +480,18 @@ function gmPingpong(stage){
    ทิศตรงข้ามที่ลาก = ทางที่บอลไป · ลากไกล = แรง = บอลไปได้ไกลขึ้น
    ===================================================================== */
 function gmFootball(stage){
-  const W = 640, H = 400;
+  /* สูงกว่าเกมอื่นเพราะต้องเหลือที่ใต้ลูกไว้ลากถอยหลัง
+     ลูกอยู่ที่ y = H-130 → มีที่ว่างใต้ลูก 130px เท่ากับระยะลากเต็มพอดี
+     ลากเกินขอบก็ยังได้ เพราะจับ pointer capture ไว้แล้ว */
+  const W = 640, H = 460;
   const {cv, ctx} = gmCanvas(stage, W, H);
   const hud = gmHud(stage);
   const GX = 120, GW = 400, GY = 62, GH = 130;   /* กรอบประตู */
-  const B0 = {x:W/2, y:H-56};                    /* จุดตั้งลูก */
-  const MAXPULL = 150;                           /* ลากไกลสุดที่นับเป็นแรงเต็ม */
-  const BASE = 60, MAXDIST = 300;                /* ระยะที่บอลวิ่ง = BASE + power*MAXDIST
-                                                    ระยะจากจุดตั้งลูกถึงประตูคือ 152-282
-                                                    → power ~0.31-0.74 คือช่วงที่เข้ากรอบ
+  const B0 = {x:W/2, y:H-130};                   /* จุดตั้งลูก */
+  const MAXPULL = 130;                           /* ลากไกลสุดที่นับเป็นแรงเต็ม */
+  const BASE = 50, MAXDIST = 280;                /* ระยะที่บอลวิ่ง = BASE + power*MAXDIST
+                                                    ระยะจากจุดตั้งลูกถึงประตูคือ 138-268
+                                                    → power ~0.31-0.78 คือช่วงที่เข้ากรอบ
                                                     ต่ำกว่านั้นไม่ถึง สูงกว่านั้นข้ามคาน */
   const S = {shot:0, goals:0, phase:'aim', t:0, drag:null, ball:{...B0}, shotv:null,
              keep:GX+GW/2, keepTo:GX+GW/2, msg:'ลากลูกบอลถอยหลังแล้วปล่อย',
@@ -551,30 +554,36 @@ function gmFootball(stage){
     S.keep = GX + GW/2; S.keepTo = GX + GW/2;
   }
 
-  /* ---- ลาก ---- */
+  /* ---- ลาก ----
+     ใช้ pointer capture เพื่อให้ลากเลยขอบ canvas ออกไปแล้วยังตามอยู่
+     ถ้าผูก mousemove ไว้กับ canvas เฉย ๆ พอเมาส์ออกนอกขอบจะหยุดติดตามทันที
+     (pointer events ครอบทั้งเมาส์และนิ้วในทางเดียว) */
+  let pid = null;
   const down = e => {
     if(S.over || S.phase !== 'aim') return;
     e.preventDefault();
+    pid = e.pointerId;
+    try{ cv.setPointerCapture(pid); }catch(err){}
     S.drag = gmPos(cv, e);
   };
   const move = e => {
-    if(!S.drag) return;
+    if(pid === null || e.pointerId !== pid) return;
     e.preventDefault();
     S.drag = gmPos(cv, e);
   };
   const up = e => {
-    if(!S.drag) return;
+    if(pid === null || e.pointerId !== pid) return;
     e.preventDefault();
+    try{ cv.releasePointerCapture(pid); }catch(err){}
+    pid = null;
     const a = aimFrom(S.drag);
     S.drag = null;
     if(a) shoot(a);
   };
-  cv.addEventListener('mousedown', down);
-  cv.addEventListener('mousemove', move);
-  window.addEventListener('mouseup', up);
-  cv.addEventListener('touchstart', down, {passive:false});
-  cv.addEventListener('touchmove', move, {passive:false});
-  cv.addEventListener('touchend', up, {passive:false});
+  cv.addEventListener('pointerdown', down);
+  cv.addEventListener('pointermove', move);
+  cv.addEventListener('pointerup', up);
+  cv.addEventListener('pointercancel', up);
 
   function step(dt){
     S.t += dt;
@@ -622,10 +631,15 @@ function gmFootball(stage){
     if(S.phase === 'aim' && S.drag){
       const a = aimFrom(S.drag);
       if(a){
-        /* ยางหนังสติ๊ก — จากลูกไปที่นิ้ว */
-        ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = 3;
-        ctx.setLineDash([]);
-        ctx.beginPath(); ctx.moveTo(B0.x, B0.y); ctx.lineTo(S.drag.x, S.drag.y); ctx.stroke();
+        /* ยางหนังสติ๊ก — หยุดที่ MAXPULL ถึงจะลากเมาส์ออกนอกจอไปไกลแค่ไหน
+           เส้นก็ไม่พุ่งหลุด และเห็นชัดว่าแรงเต็มแล้ว */
+        const px = B0.x - a.dx * MAXPULL * a.pow;
+        const py = B0.y - a.dy * MAXPULL * a.pow;
+        ctx.strokeStyle = a.pow >= 1 ? 'rgba(240,144,122,.8)' : 'rgba(255,255,255,.35)';
+        ctx.lineWidth = 3; ctx.setLineDash([]);
+        ctx.beginPath(); ctx.moveTo(B0.x, B0.y); ctx.lineTo(px, py); ctx.stroke();
+        ctx.fillStyle = a.pow >= 1 ? '#F0907A' : 'rgba(255,255,255,.5)';
+        ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI*2); ctx.fill();
         /* เส้นประบอกทางที่บอลจะไป */
         ctx.strokeStyle = '#FFD976'; ctx.lineWidth = 2.5;
         ctx.setLineDash([7,9]);
@@ -635,7 +649,7 @@ function gmFootball(stage){
         ctx.strokeStyle = '#FFD976'; ctx.lineWidth = 2.5;
         ctx.beginPath(); ctx.arc(a.tx, a.ty, 9, 0, Math.PI*2); ctx.stroke();
         /* แถบแรง */
-        const bw = 170, bx = W/2 - bw/2, by = H - 20;
+        const bw = 170, bx = W/2 - bw/2, by = H - 18;
         ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.beginPath(); ctx.roundRect(bx,by,bw,9,5); ctx.fill();
         ctx.fillStyle = a.pow > .74 ? '#F0907A' : (a.pow < .31 ? '#8FA9C0' : '#FFD976');
         ctx.beginPath(); ctx.roundRect(bx,by,bw*a.pow,9,5); ctx.fill();
@@ -656,7 +670,7 @@ function gmFootball(stage){
     if(S.msg){
       ctx.fillStyle = 'rgba(255,255,255,.94)';
       ctx.font = '600 17px "Noto Sans Thai",sans-serif'; ctx.textAlign = 'center';
-      ctx.fillText(S.msg, W/2, H - 34);
+      ctx.fillText(S.msg, W/2, H - 38);
     }
     hud.innerHTML = `<span class="mono">ลูกที่ <b>${Math.min(S.shot+1,10)}</b>/10</span>
       <span class="gm-hud-mid mono">เข้า ${S.goals}</span>
@@ -666,12 +680,10 @@ function gmFootball(stage){
   const stop = gmLoop(step);
   return () => {
     stop();
-    cv.removeEventListener('mousedown', down);
-    cv.removeEventListener('mousemove', move);
-    window.removeEventListener('mouseup', up);
-    cv.removeEventListener('touchstart', down);
-    cv.removeEventListener('touchmove', move);
-    cv.removeEventListener('touchend', up);
+    cv.removeEventListener('pointerdown', down);
+    cv.removeEventListener('pointermove', move);
+    cv.removeEventListener('pointerup', up);
+    cv.removeEventListener('pointercancel', up);
   };
 }
 

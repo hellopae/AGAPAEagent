@@ -270,6 +270,10 @@
     width:min(720px,94vw);background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);box-shadow:0 20px 60px rgba(18,20,26,.4);overflow:hidden;
   }
+  /* เกมยิงประตูสูงกว่าเกมอื่น (640x460) — จอเตี้ยให้ย่อการ์ดลง
+     การ์ดแคบลง = canvas เตี้ยลงตามอัตราส่วน ไม่ต้องเลื่อนหน้าจอ */
+  @media(max-height:820px){ .gm-card{width:min(600px,94vw)} }
+  @media(max-height:700px){ .gm-card{width:min(500px,94vw)} }
   .gm-bar{
     display:flex;align-items:center;gap:9px;padding:11px 14px;
     border-bottom:1px solid var(--line);background:var(--paper-2);
