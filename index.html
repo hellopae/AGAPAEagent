@@ -260,13 +260,35 @@
   .gm-tap.ofc-sudoku:hover{
     filter:drop-shadow(0 0 .45cqw var(--gold));transform:translate(-50%,-100%) translateY(-.18cqw);
   }
-  /* ตู้เกม + ถ้วยกาแฟ — ยึดขอบล่างเหมือนตัวละคร */
-  .ofc-arcade,.ofc-coffee{
+  /* ตู้เกม — ยึดขอบล่างเหมือนตัวละคร */
+  .ofc-arcade{
     position:absolute;transform:translate(-50%,-100%);
     border:none;background:none;padding:0;display:block;line-height:0;
   }
-  .ofc-arcade img,.ofc-coffee img{width:100%;display:block;
+  .ofc-arcade img{width:100%;display:block;
     filter:drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3))}
+
+  /* เครื่องชงกาแฟ — กรอบโปร่งใสคลุมเคาน์เตอร์ทั้งช่วง (ถ้วยใบเดียวเล็กเกินกด)
+     ตอนชี้ถึงจะเห็นเป็นแถบจาง ๆ ว่ากดตรงไหนได้ */
+  .ofc-coffee{
+    position:absolute;transform:translate(-50%,-100%);
+    border:none;background:none;padding:0;display:block;line-height:0;
+    border-radius:.45cqw;transition:background .16s,box-shadow .16s;
+  }
+  .ofc-coffee img{
+    position:absolute;transform:translateX(-50%);display:block;
+    filter:drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3));
+    transition:filter .16s,transform .16s;
+  }
+  .gm-tap.ofc-coffee:hover{
+    background:rgba(154,123,79,.15);
+    box-shadow:inset 0 0 0 .12cqw rgba(154,123,79,.5);
+  }
+  /* ต้องเขียนทับ .gm-tap:hover img ที่ตั้ง transform ทิ้ง ไม่งั้น translateX(-50%) หาย ถ้วยเลื่อน */
+  .gm-tap.ofc-coffee:hover img{
+    filter:drop-shadow(0 0 .5cqw var(--gold)) drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3));
+    transform:translateX(-50%) translateY(-.18cqw);
+  }
 
   /* โกลฟุตบอลบนทางเดิน — ตัวละครเดินผ่านหน้าได้ (z ต่ำกว่าแถวเดิน) */
   .ofc-goal{
@@ -3051,11 +3073,16 @@ const OFC_ARCADE_ART = 'office/sprites/cat/arcade-cab.png';
 const OFC_ARCADE_POS = [250, 900];
 const OFC_ARCADE_W   = 3.0;           /* cqw */
 
-/* ถ้วยกาแฟบนเคาน์เตอร์แพนทรี่ — เครื่องชงที่วาดไว้ในรูปพื้นอยู่ราว x 872-905
-   วางถ้วยในช่องว่างระหว่างเครื่องปิ้งกับกาต้มน้ำ ให้เป็นปุ่มกดเล่นเกมชงกาแฟ */
-const OFC_COFFEE_ART = 'office/sprites/cat/hand-coffee.png';
-const OFC_COFFEE_POS = [947, 726];
-const OFC_COFFEE_W   = 1.5;           /* cqw */
+/* ปุ่มเล่นเกมชงกาแฟบนเคาน์เตอร์แพนทรี่
+   26 ส.ค. 2569 — เดิมกดได้แค่ที่ถ้วย (กว้าง 1.5cqw ≈ 24 หน่วย) เล็กเกินกว่าจะเล็งถูก
+   เลยเปลี่ยนเป็นกรอบคลุมเคาน์เตอร์ทั้งช่วง: เครื่องชงอยู่ x 874-906 · ของชิ้นขวาสุด x 966-981
+   หน้าเคาน์เตอร์อยู่ y 700-740 → กรอบกิน x 866-990 · y 694-746 (พอดีแถบเคาน์เตอร์ ไม่ล้นขึ้นกำแพง)
+   จุดยืนของ agent ในแพนทรี่คือ y 772/772/800 ต่ำกว่ากรอบทุกจุด z จึงไม่ไปบังใคร
+   ตัวถ้วยยังวาดที่พิกัดเดิม แค่ย้ายไปเป็นลูกในกรอบ */
+const OFC_COFFEE_ART  = 'office/sprites/cat/hand-coffee.png';
+const OFC_COFFEE_ZONE = {x:928, y:746, w:124, h:52};   /* กลาง-ล่างของกรอบ + ขนาด (หน่วยผัง) */
+const OFC_COFFEE_POS  = [947, 726];                    /* ถ้วย — กลาง-ล่างของรูป (หน่วยผัง) */
+const OFC_COFFEE_W    = 1.5;                           /* cqw */
 const OFC_GOAL_ART = 'office/sprites/cat/Goal.png';
 const OFC_GOAL_POS = [372, 430];
 const OFC_GOAL_W   = 5.0;             /* cqw */
@@ -3247,14 +3274,23 @@ function ofcBuildProps(){
   arc.innerHTML = `<img src="${OFC_ARCADE_ART}" alt="ตู้เกม">`;
   layer.appendChild(arc);
 
+  /* กรอบกดเล่นเกมชงกาแฟ — ยึดกลาง-ล่างเหมือนของชิ้นอื่น แต่กำหนดความสูงเองด้วย
+     (cqw คิดจากความกว้างคอนเทนเนอร์ทั้งคู่ ทั้งกว้างและสูงจึงหารด้วย OFC_W) */
+  const cz  = OFC_COFFEE_ZONE;
   const cof = document.createElement('button');
   cof.className = 'ofc-coffee'; cof.type = 'button'; cof.id = 'ofcCoffee';
   cof.title = 'เครื่องชงกาแฟ';
-  cof.style.width = OFC_COFFEE_W + 'cqw';
-  cof.style.left = (OFC_COFFEE_POS[0]/OFC_W*100)+'%';
-  cof.style.top  = (OFC_COFFEE_POS[1]/OFC_H*100)+'%';
-  cof.style.zIndex = Math.round(OFC_COFFEE_POS[1]) - 1;
-  cof.innerHTML = `<img src="${OFC_COFFEE_ART}" alt="เครื่องชงกาแฟ">`;
+  cof.style.width  = (cz.w/OFC_W*100) + 'cqw';
+  cof.style.height = (cz.h/OFC_W*100) + 'cqw';
+  cof.style.left = (cz.x/OFC_W*100)+'%';
+  cof.style.top  = (cz.y/OFC_H*100)+'%';
+  cof.style.zIndex = Math.round(cz.y) - 1;
+  /* ถ้วยอยู่ในกรอบ — แปลงพิกัดผังเป็น % ของกรอบ จะได้ยังทับที่เดิมเป๊ะ */
+  const cupW = OFC_COFFEE_W * OFC_W/100;                       /* cqw → หน่วยผัง */
+  cof.innerHTML = `<img src="${OFC_COFFEE_ART}" alt="เครื่องชงกาแฟ" style="` +
+    `left:${(OFC_COFFEE_POS[0] - (cz.x - cz.w/2)) / cz.w * 100}%;` +
+    `bottom:${(cz.y - OFC_COFFEE_POS[1]) / cz.h * 100}%;` +
+    `width:${cupW / cz.w * 100}%">`;
   layer.appendChild(cof);
 
   const goal = document.createElement('button');
