@@ -18,7 +18,7 @@ const GM_DEFS = {
   pingpong: {label:'ปิงปอง',    emoji:'🏓', room:'bm',     rival:'toby', solo:false,
              unit:'แต้ม', how:'เลื่อนเมาส์ขึ้นลงคุมไม้ · ใครถึง 5 แต้มก่อนชนะ'},
   football: {label:'ยิงจุดโทษ',  emoji:'⚽', room:null,     rival:'dale', solo:false,
-             unit:'ลูก',  how:'กดครั้งแรกล็อกทิศ กดอีกทีล็อกแรง · ยิง 10 ลูก เข้า 6 ลูกขึ้นไปถือว่าชนะ'},
+             unit:'ลูก',  how:'ลากลูกบอลถอยหลังแล้วปล่อย — ทิศตรงข้ามที่ลากคือทางที่บอลไป ลากไกล = แรง · ยิง 10 ลูก เข้า 6 ลูกขึ้นไปชนะ'},
   fishing:  {label:'ตกปลา',      emoji:'🎣', room:'lounge', rival:null,   solo:true,
              unit:'ตัว',  how:'กดที่ตัวปลาให้ทันใน 45 วินาที · ยิ่งจับได้มาก ปลายิ่งว่ายเร็ว'},
 };
@@ -32,6 +32,49 @@ const gmBlank = () => ({
 
 let GM = gmBlank();
 const GM_LS = 'agapae.games';
+
+/* รูปที่เอาไปวาดบน canvas — เป้ใช้รูปโปรไฟล์ ตัดวงกลม · agent ใช้สไปรท์ SD ตัวเดียวกับในผัง */
+const GM_ART = {
+  pae:  'avatars/Pae.png',
+  toby: 'office/sprites/toby.png',
+  dale: 'office/sprites/dale.png',
+};
+const GM_IMG = {};
+function gmImg(key){
+  if(!GM_IMG[key]){ const i = new Image(); i.src = GM_ART[key]; GM_IMG[key] = i; }
+  return GM_IMG[key];
+}
+/* พรีโหลดไว้ก่อน จะได้ไม่วืบตอนเปิดเกมครั้งแรก */
+Object.keys(GM_ART).forEach(gmImg);
+
+/* วาดรูปคนแบบรักษาสัดส่วน ยึดกลางล่าง — flip = พลิกให้หันเข้าหาสนาม */
+function gmDrawFig(ctx, key, cx, baseY, h, flip){
+  const im = gmImg(key);
+  if(!im.complete || !im.naturalWidth) return false;
+  const w = im.naturalWidth / im.naturalHeight * h;
+  ctx.save();
+  ctx.translate(cx, baseY);
+  if(flip) ctx.scale(-1, 1);
+  ctx.drawImage(im, -w/2, -h, w, h);
+  ctx.restore();
+  return true;
+}
+
+/* วาดรูปเป้เป็นวงกลม */
+function gmDrawPae(ctx, cx, cy, r){
+  const im = gmImg('pae');
+  ctx.save();
+  ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2); ctx.closePath();
+  if(im.complete && im.naturalWidth){
+    ctx.clip();
+    ctx.drawImage(im, cx-r, cy-r, r*2, r*2);
+  }else{
+    ctx.fillStyle = '#9A7B4F'; ctx.fill();
+  }
+  ctx.restore();
+  ctx.strokeStyle = 'rgba(255,255,255,.85)'; ctx.lineWidth = 2.5;
+  ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2); ctx.stroke();
+}
 
 /* ---------- ตัวช่วยเล็ก ๆ ---------- */
 const gmAgent   = id => (typeof AGENTS !== 'undefined' ? AGENTS : []).find(a => a.id === id) || null;
@@ -401,6 +444,12 @@ function gmPingpong(stage){
     ctx.fillRect(22, S.me - PH/2, PW, PH);
     ctx.fillStyle = '#C9CFD8';
     ctx.fillRect(W-22-PW, S.ai - PH/2, PW, PH);
+    /* คนถือไม้ — ขยับตามไม้ของตัวเอง เป้าอยู่ด้านนอกไม้ ไม่บังทางลูก
+       จำกัดช่วงไม่ให้ล้นขอบบน/ล่างของโต๊ะ */
+    const pY = gmClamp(S.me, 34, H-34);
+    gmDrawPae(ctx, 62, pY, 23);
+    const tBase = gmClamp(S.ai, 34, H-40) + 34;
+    gmDrawFig(ctx, 'toby', W-62, tBase, 72, true);
     /* ลูก */
     ctx.fillStyle = '#fff';
     ctx.beginPath(); ctx.arc(S.bx, S.by, 7, 0, Math.PI*2); ctx.fill();
@@ -427,38 +476,64 @@ function gmPingpong(stage){
 
 /* =====================================================================
    เกม 2 — ⚽ ยิงจุดโทษ (Dale เป็นโกล)
+   เล็งแบบ Angry Birds — ลากลูกบอลถอยหลังแล้วปล่อย
+   ทิศตรงข้ามที่ลาก = ทางที่บอลไป · ลากไกล = แรง = บอลไปได้ไกลขึ้น
    ===================================================================== */
 function gmFootball(stage){
   const W = 640, H = 400;
   const {cv, ctx} = gmCanvas(stage, W, H);
   const hud = gmHud(stage);
   const GX = 120, GW = 400, GY = 62, GH = 130;   /* กรอบประตู */
-  const S = {shot:0, goals:0, phase:'aim', t:0, aim:0, pow:0, msg:'กดเพื่อล็อกทิศ',
-             ball:null, keep:GX+GW/2, keepTo:GX+GW/2, flash:0, over:false};
-  const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+  const B0 = {x:W/2, y:H-56};                    /* จุดตั้งลูก */
+  const MAXPULL = 150;                           /* ลากไกลสุดที่นับเป็นแรงเต็ม */
+  const BASE = 60, MAXDIST = 300;                /* ระยะที่บอลวิ่ง = BASE + power*MAXDIST
+                                                    ระยะจากจุดตั้งลูกถึงประตูคือ 152-282
+                                                    → power ~0.31-0.74 คือช่วงที่เข้ากรอบ
+                                                    ต่ำกว่านั้นไม่ถึง สูงกว่านั้นข้ามคาน */
+  const S = {shot:0, goals:0, phase:'aim', t:0, drag:null, ball:{...B0}, shotv:null,
+             keep:GX+GW/2, keepTo:GX+GW/2, msg:'ลากลูกบอลถอยหลังแล้วปล่อย',
+             flash:0, over:false};
 
-  function shoot(){
-    const tx = GX + 26 + (GW - 52) * S.aim;
-    const ty = GY + GH - 18 - (GH - 46) * S.pow;
-    /* Dale เดาทาง — ยิ่งยิงไปแล้วหลายลูก ยิ่งอ่านทางเก่งขึ้น */
+  /* ลากอยู่ตอนนี้ได้ทิศกับแรงเท่าไหร่ */
+  function aimFrom(p){
+    const dx = B0.x - p.x, dy = B0.y - p.y;
+    const len = Math.hypot(dx, dy);
+    if(len < 6) return null;
+    const pow = gmClamp(len / MAXPULL, 0, 1);
+    const dist = BASE + pow * MAXDIST;
+    return {dx:dx/len, dy:dy/len, pow, dist,
+            tx: B0.x + dx/len * dist, ty: B0.y + dy/len * dist};
+  }
+
+  function shoot(a){
+    S.shotv = a;
+    /* Dale เดาทาง — ยิงไปแล้วหลายลูก ยิ่งอ่านทางเก่งขึ้น */
     const read = 0.30 + S.shot * 0.035;
     const guess = Math.random() < read
-      ? tx + (Math.random()*90 - 45)
+      ? a.tx + (Math.random()*90 - 45)
       : GX + 40 + Math.random() * (GW - 80);
     S.keepTo = gmClamp(guess, GX+24, GX+GW-24);
-    S.ball = {x:W/2, y:H-42, tx, ty, t:0};
+    S.ball = {...B0, t:0};
     S.phase = 'fly'; S.msg = '';
   }
 
   function land(){
-    const b = S.ball;
-    const reach = 62;
-    const tooHigh = b.ty < GY + 10;
-    const saved = !tooHigh && Math.abs(b.tx - S.keepTo) < reach && Math.abs(b.ty - (GY+GH-40)) < 95;
-    const goal = !tooHigh && !saved;
+    const a = S.shotv;
+    const inX = a.tx > GX && a.tx < GX + GW;
+    const overBar = a.ty < GY;
+    const tooWeak = a.ty > GY + GH;
+    let goal = false;
+    if(overBar)       S.msg = 'ข้ามคาน';
+    else if(tooWeak)  S.msg = 'แรงไม่พอ ไม่ถึงประตู';
+    else if(!inX)     S.msg = 'ออกนอกกรอบ';
+    else{
+      /* ลูกเบาโกลปัดง่ายกว่า — ยิ่งแรงยิ่งเอื้อมไม่ทัน */
+      const reach = 52 + (1 - a.pow) * 26;
+      if(Math.abs(a.tx - S.keepTo) < reach) S.msg = `${gmName('dale')} เซฟไว้ได้`;
+      else { goal = true; S.msg = 'เข้า!'; }
+    }
     if(goal){ S.goals++; S.flash = 1; }
     S.shot++;
-    S.msg = goal ? 'เข้า!' : (tooHigh ? 'ข้ามคาน' : `${gmName('dale')} เซฟไว้ได้`);
     S.phase = 'wait'; S.t = 0;
   }
 
@@ -470,41 +545,53 @@ function gmFootball(stage){
         `<span class="mono">ยิงเข้า ${S.goals} จาก 10 ลูก</span>`), 240);
       return;
     }
-    S.phase = 'aim'; S.t = 0; S.aim = 0; S.pow = 0;
-    S.msg = 'กดเพื่อล็อกทิศ'; S.ball = null;
+    S.phase = 'aim'; S.t = 0; S.drag = null; S.shotv = null;
+    S.ball = {...B0};
+    S.msg = 'ลากลูกบอลถอยหลังแล้วปล่อย';
     S.keep = GX + GW/2; S.keepTo = GX + GW/2;
   }
 
-  const onTap = e => {
+  /* ---- ลาก ---- */
+  const down = e => {
+    if(S.over || S.phase !== 'aim') return;
     e.preventDefault();
-    if(S.over) return;
-    if(S.phase === 'aim'){ S.phase = 'power'; S.t = 0; S.msg = 'กดอีกทีเพื่อล็อกแรง'; }
-    else if(S.phase === 'power'){ shoot(); }
+    S.drag = gmPos(cv, e);
   };
-  cv.addEventListener('mousedown', onTap);
-  cv.addEventListener('touchstart', onTap, {passive:false});
-  const kd = e => { if(e.key === ' ' || e.key === 'Enter') onTap(e); };
-  document.addEventListener('keydown', kd);
+  const move = e => {
+    if(!S.drag) return;
+    e.preventDefault();
+    S.drag = gmPos(cv, e);
+  };
+  const up = e => {
+    if(!S.drag) return;
+    e.preventDefault();
+    const a = aimFrom(S.drag);
+    S.drag = null;
+    if(a) shoot(a);
+  };
+  cv.addEventListener('mousedown', down);
+  cv.addEventListener('mousemove', move);
+  window.addEventListener('mouseup', up);
+  cv.addEventListener('touchstart', down, {passive:false});
+  cv.addEventListener('touchmove', move, {passive:false});
+  cv.addEventListener('touchend', up, {passive:false});
 
   function step(dt){
     S.t += dt;
     if(S.flash > 0) S.flash = Math.max(0, S.flash - dt*1.6);
-    if(S.phase === 'aim')   S.aim = (Math.sin(S.t * 3.1) + 1) / 2;
-    if(S.phase === 'power') S.pow = (Math.sin(S.t * 3.9) + 1) / 2;
     if(S.phase === 'fly'){
-      const b = S.ball;
-      b.t = Math.min(1, b.t + dt * 1.7);
-      b.x = W/2 + (b.tx - W/2) * b.t;
-      b.y = (H-42) + (b.ty - (H-42)) * b.t;
+      const b = S.ball, a = S.shotv;
+      b.t = Math.min(1, b.t + dt * 1.9);
+      b.x = B0.x + (a.tx - B0.x) * b.t;
+      b.y = B0.y + (a.ty - B0.y) * b.t;
       S.keep += gmClamp(S.keepTo - S.keep, -560*dt, 560*dt);
       if(b.t >= 1) land();
     }
-    if(S.phase === 'wait' && S.t > 1.15) next();
+    if(S.phase === 'wait' && S.t > 1.2) next();
     draw();
   }
 
   function draw(){
-    /* สนาม */
     const g = ctx.createLinearGradient(0,0,0,H);
     g.addColorStop(0, '#3F6B4A'); g.addColorStop(1, '#2E5238');
     ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
@@ -516,31 +603,50 @@ function gmFootball(stage){
     ctx.strokeStyle = 'rgba(255,255,255,.16)'; ctx.lineWidth = 1;
     for(let x = GX+16; x < GX+GW; x += 22){ ctx.beginPath(); ctx.moveTo(x,GY); ctx.lineTo(x,GY+GH); ctx.stroke(); }
     for(let y = GY+14; y < GY+GH; y += 22){ ctx.beginPath(); ctx.moveTo(GX,y); ctx.lineTo(GX+GW,y); ctx.stroke(); }
-    /* Dale */
-    ctx.fillStyle = '#D8C56A';
-    const kx = S.keep, ky = GY + GH - 40;
-    ctx.beginPath(); ctx.roundRect(kx-26, ky-40, 52, 66, 9); ctx.fill();
-    ctx.fillStyle = 'rgba(27,28,32,.75)';
-    ctx.font = '600 11px "IBM Plex Mono",monospace'; ctx.textAlign = 'center';
-    ctx.fillText('DALE', kx, ky+4);
 
-    /* แถบเล็ง */
-    if(S.phase === 'aim' || S.phase === 'power'){
-      const ax = GX + 26 + (GW - 52) * S.aim;
-      ctx.strokeStyle = S.phase === 'aim' ? '#FFD976' : 'rgba(255,217,118,.45)';
-      ctx.lineWidth = 3; ctx.beginPath();
-      ctx.moveTo(ax, GY+GH+8); ctx.lineTo(ax, GY+GH+26); ctx.stroke();
+    /* Dale — สไปรท์ SD ตัวเดียวกับในผังออฟฟิศ ยืนกลางประตู */
+    const kx = S.keep, kBase = GY + GH + 6;
+    ctx.save();
+    ctx.globalAlpha = .22; ctx.fillStyle = '#000';
+    ctx.beginPath(); ctx.ellipse(kx, kBase, 24, 6, 0, 0, Math.PI*2); ctx.fill();
+    ctx.restore();
+    if(!gmDrawFig(ctx, 'dale', kx, kBase, 86, false)){
+      ctx.fillStyle = '#D8C56A';
+      ctx.beginPath(); ctx.roundRect(kx-26, kBase-66, 52, 66, 9); ctx.fill();
     }
-    if(S.phase === 'power'){
-      const bw = 190, bx = W/2 - bw/2, by = H - 24;
-      ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.beginPath(); ctx.roundRect(bx,by,bw,11,6); ctx.fill();
-      ctx.fillStyle = '#FFD976'; ctx.beginPath(); ctx.roundRect(bx,by,bw*S.pow,11,6); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,.72)';
+    ctx.font = '600 10px "IBM Plex Mono",monospace'; ctx.textAlign = 'center';
+    ctx.fillText('DALE', kx, kBase + 17);
+
+    /* เส้นเล็งตอนลาก */
+    if(S.phase === 'aim' && S.drag){
+      const a = aimFrom(S.drag);
+      if(a){
+        /* ยางหนังสติ๊ก — จากลูกไปที่นิ้ว */
+        ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = 3;
+        ctx.setLineDash([]);
+        ctx.beginPath(); ctx.moveTo(B0.x, B0.y); ctx.lineTo(S.drag.x, S.drag.y); ctx.stroke();
+        /* เส้นประบอกทางที่บอลจะไป */
+        ctx.strokeStyle = '#FFD976'; ctx.lineWidth = 2.5;
+        ctx.setLineDash([7,9]);
+        ctx.beginPath(); ctx.moveTo(B0.x, B0.y); ctx.lineTo(a.tx, a.ty); ctx.stroke();
+        ctx.setLineDash([]);
+        /* จุดตกเป้า */
+        ctx.strokeStyle = '#FFD976'; ctx.lineWidth = 2.5;
+        ctx.beginPath(); ctx.arc(a.tx, a.ty, 9, 0, Math.PI*2); ctx.stroke();
+        /* แถบแรง */
+        const bw = 170, bx = W/2 - bw/2, by = H - 20;
+        ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.beginPath(); ctx.roundRect(bx,by,bw,9,5); ctx.fill();
+        ctx.fillStyle = a.pow > .74 ? '#F0907A' : (a.pow < .31 ? '#8FA9C0' : '#FFD976');
+        ctx.beginPath(); ctx.roundRect(bx,by,bw*a.pow,9,5); ctx.fill();
+      }
     }
+
     /* ลูกบอล */
     const b = S.ball;
-    const bx = b ? b.x : W/2, by = b ? b.y : H-42;
+    const shrink = S.phase === 'fly' ? 1 - 0.28*b.t : 1;
     ctx.fillStyle = '#fff';
-    ctx.beginPath(); ctx.arc(bx, by, b ? 9 - 2.2*b.t : 9, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(b.x, b.y, 10*shrink, 0, Math.PI*2); ctx.fill();
     ctx.strokeStyle = 'rgba(27,28,32,.45)'; ctx.lineWidth = 1.4; ctx.stroke();
 
     if(S.flash > 0){
@@ -549,8 +655,8 @@ function gmFootball(stage){
     }
     if(S.msg){
       ctx.fillStyle = 'rgba(255,255,255,.94)';
-      ctx.font = '600 18px "Noto Sans Thai",sans-serif'; ctx.textAlign = 'center';
-      ctx.fillText(S.msg, W/2, H - 52);
+      ctx.font = '600 17px "Noto Sans Thai",sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(S.msg, W/2, H - 34);
     }
     hud.innerHTML = `<span class="mono">ลูกที่ <b>${Math.min(S.shot+1,10)}</b>/10</span>
       <span class="gm-hud-mid mono">เข้า ${S.goals}</span>
@@ -560,9 +666,12 @@ function gmFootball(stage){
   const stop = gmLoop(step);
   return () => {
     stop();
-    cv.removeEventListener('mousedown', onTap);
-    cv.removeEventListener('touchstart', onTap);
-    document.removeEventListener('keydown', kd);
+    cv.removeEventListener('mousedown', down);
+    cv.removeEventListener('mousemove', move);
+    window.removeEventListener('mouseup', up);
+    cv.removeEventListener('touchstart', down);
+    cv.removeEventListener('touchmove', move);
+    cv.removeEventListener('touchend', up);
   };
 }
 
