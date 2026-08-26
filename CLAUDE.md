@@ -13,10 +13,11 @@
 3. **`SOP/SOP-01..11`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
    web feature, research, ข่าวเช้า, worklog/dashboard, เกณฑ์ QA, การสร้าง agent ใหม่, **มาตรฐานงานออกแบบ**)
 4. **Skills ใน `.claude/skills/`** — `new-article`, `new-template`, `fact-check-gate`,
-   `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review` — ใช้เมื่องานตรง trigger
+   `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review`, `web-design` — ใช้เมื่องานตรง trigger
    - **งาน visual/design**: Mind/Vera ใช้ skill เนทีฟ `artifact-design` ("Claude Design") ตาม `SOP/SOP-10-visual-design.md` — สำรวจ asset ต้นทางก่อน, ล็อกขนาดจริง, ใช้ asset จริง
-   - **งานเวป (UI)**: ยึด **`DESIGN.md`** ที่ root เป็นแหล่งความจริงของ design token (สี/ฟอนต์/ระยะ/คอมโพเนนต์)
-     ห้าม hardcode สีนอก token — ขั้นตอนและการเลือกระดับ implement ดู `SOP/SOP-11-design-system.md`
+   - **งานเวป (UI)**: เรียก skill **`web-design`** ก่อนเขียน CSS บรรทัดแรก — ยึด **`DESIGN.md`** ที่ root
+     เป็นแหล่งความจริงของ design token (สี/ฟอนต์/ระยะ/คอมโพเนนต์) ห้าม hardcode สีนอก token
+     ขั้นตอนและการเลือกระดับ implement ดู `SOP/SOP-11-design-system.md`
 
 ## ROUTING TABLE
 
