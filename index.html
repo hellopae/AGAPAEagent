@@ -348,6 +348,33 @@
     filter:drop-shadow(0 .2cqw .25cqw rgba(27,28,32,.28))}
   .ofc-guy[data-dir="l"] .pix{transform:scaleX(-1)}
 
+  /* ของในมือ — โผล่เฉพาะตอนทำกิจกรรมนั้น ไม่ต้องแตะ loop เพราะ data-act ถูกตั้งให้อยู่แล้ว
+     (ตอนเดิน data-act เป็นค่าว่าง ของเลยหายไปเอง) */
+  .ofc-guy .item{
+    display:none;position:absolute;bottom:1.75cqw;left:50%;
+    transform:translateX(-50%);margin-left:.5cqw;
+    width:1.7cqw;height:1.7cqw;pointer-events:none;
+    background-repeat:no-repeat;background-position:center bottom;background-size:contain;
+    filter:drop-shadow(0 .12cqw .2cqw rgba(27,28,32,.3));
+  }
+  .ofc-guy[data-dir="l"] .item{transform:translateX(-50%) scaleX(-1);margin-left:-.5cqw}
+  .ofc-guy[data-act="pp"] .item,
+  .ofc-guy[data-act="ps5"] .item,
+  .ofc-guy[data-act="coffee"] .item{display:block}
+  .ofc-guy[data-act="pp"] .item{
+    background-image:url("office/sprites/cat/hand-pp.png");width:1.95cqw;height:1.95cqw;
+  }
+  .ofc-guy[data-act="coffee"] .item{
+    background-image:url("office/sprites/cat/hand-coffee.png");width:1.3cqw;height:1.3cqw;
+    bottom:1.95cqw;margin-left:.42cqw;
+  }
+  /* จอยถือสองมือ อยู่กลางตัว ไม่เยื้องข้าง */
+  .ofc-guy[data-act="ps5"] .item{
+    background-image:url("office/sprites/cat/hand-ps5.png");width:1.5cqw;height:1.5cqw;
+    bottom:1.65cqw;margin-left:0;
+  }
+  .ofc-guy[data-dir="l"][data-act="ps5"] .item{margin-left:0}
+
   /* ชื่อ + สถานะ ใต้ตัว — โผล่ตอนชี้ */
   .ofc-guy .sdot{
     position:absolute;right:-.15cqw;bottom:.45cqw;width:.62cqw;height:.62cqw;border-radius:50%;
@@ -2191,6 +2218,15 @@ const OFC_WALK = {
 };
 const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
 
+/* ของที่ถือในมือตอนทำกิจกรรม — คีย์ตรงกับ act ใน OFC_ACT
+   ตัวที่วาดจริงคือ CSS `.ofc-guy[data-act="..."] .item` (พาธต้องตรงกับที่นี่)
+   ตารางนี้มีไว้พรีโหลดรูป และกันลืมว่ามีไฟล์ไหนใช้อยู่บ้าง */
+const OFC_HAND = {
+  pp:     'office/sprites/cat/hand-pp.png',      /* ไม้ปิงปอง */
+  ps5:    'office/sprites/cat/hand-ps5.png',     /* จอย PS5 */
+  coffee: 'office/sprites/cat/hand-coffee.png',  /* ถ้วยกาแฟ */
+};
+
 /* จุดบนทางเดิน — วัดจาก floor2.png ทีละจุด
    A = ทางเดินยาวใต้ห้องแถวบน · L = ทางเดินตั้งฝั่งซ้าย · B = ทางเดินยาวกลางล่าง */
 const OFC_NODES = {
@@ -2648,6 +2684,7 @@ function ofcBuildActors(){
       ${art ? `<img class="pix" src="${art}" alt="${a.name}">`
             : `<span class="head"><img src="${a.img}" alt="${a.name}" loading="lazy"></span>
                <span class="body" style="background:${ofcColor(a.pipeline||'standalone')}"></span>`}
+      <i class="item"></i>
       <span class="sdot"></span>
       <span class="nm"></span>`;
     el.onclick = () => { if(typeof openDrawer==='function') openDrawer(a); };
@@ -2662,7 +2699,8 @@ function ofcBuildActors(){
   });
   ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
   /* พรีโหลดรูปท่าเดิน (background-image ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
-  setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK].forEach(u=>{ const i=new Image(); i.src=u; }); }, 1500);
+  setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK, ...Object.values(OFC_HAND)]
+    .forEach(u=>{ const i=new Image(); i.src=u; }); }, 1500);
 }
 
 /* ผังพื้น — ใช้รูปที่ Gen มา แล้วแปะป้ายชื่อห้องทับ */
