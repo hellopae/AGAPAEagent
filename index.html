@@ -241,7 +241,11 @@
 
   /* ของที่กดเล่นเกมได้ — โต๊ะปิงปอง · ตู้ปลา · โกล
      กดที่ตัวของเลย ไม่มีปุ่มลอย */
-  .gm-tap{cursor:pointer}
+  /* .ofc-actors เป็น pointer-events:none ทั้งชั้น ของที่กดได้ต้องเปิดเอง
+     (ตู้ปลาเปิดไว้อยู่แล้ว แต่โต๊ะปิงปองเป็น none และโกลไม่ได้ตั้งไว้)
+     ต้องเขียน .ofc-stage นำหน้าเพื่อให้ specificity สูงกว่า .ofc-pp{pointer-events:none}
+     ที่อยู่ท้ายไฟล์ ไม่งั้นกฎหลังชนะแล้วโต๊ะปิงปองยังกดไม่ได้เหมือนเดิม */
+  .ofc-stage .gm-tap{cursor:pointer;pointer-events:auto}
   .gm-tap img,.gm-tap>img{transition:filter .16s,transform .16s}
   .gm-tap:hover img{
     filter:drop-shadow(0 0 .5cqw var(--gold)) drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3));
@@ -2919,11 +2923,14 @@ const OFC_TANK_POS = [1180,810];      /* วางบนโต๊ะในห้
 const OFC_TANK_W   = 5.0;             /* cqw — กว้างพอดีหน้าโต๊ะ */
 const OFC_FISH_POS = [1244,848];      /* แมวนั่งดูปลาข้างโต๊ะ ไม่บังปลา */
 const OFC_FISH_STAND = [1290,878];    /* จุดยืนดูปลาของเอเจนต์ ถัดจากแมว */
-/* โกลฟุตบอล — วางบนทางเดินกลางล่าง ถัดจากจุดพักลูกบอล (B5 [790,645])
-   ตั้ง y ไว้เหนือแนวเดิน 645 นิดหน่อย ตัวละครจะเดินผ่านหน้าโกล ไม่ใช่ทะลุ */
+/* โกลฟุตบอล — ทางเดินกลางล่าง ถัดไปทางขวาจากจุดพักลูกบอล (B5 [790,645])
+   ทางเดินช่วงนี้กว้างแค่ y 605 (ขอบล่างห้องประชุม) ถึง 688 (ขอบบนแพนทรี่)
+   พิกัดยึดขอบล่างของรูป (translate -100%) — ตัวโกลสูง 5.0cqw x 215/300 ≈ 57 หน่วย
+   ตั้งขอบล่างไว้ 684 ตัวโกลจึงกินแค่ y 627-684 อยู่ในทางเดินพอดี ไม่ทับกำแพงห้องประชุม
+   z สูงกว่าแนวเดิน 645 เพื่อให้คนที่เดินผ่านอยู่ "หลัง" โกลตามระยะจริง */
 const OFC_GOAL_ART = 'office/sprites/cat/Goal.png';
-const OFC_GOAL_POS = [912, 624];
-const OFC_GOAL_W   = 5.6;             /* cqw */
+const OFC_GOAL_POS = [960, 684];
+const OFC_GOAL_W   = 5.0;             /* cqw */
 const OFC_PP_ART   = 'office/sprites/cat/pingpong.png';
 const OFC_PP_POS   = [430,800];       /* กลางที่ว่างของห้องเกม */
 const OFC_PP_W     = 16.9;            /* cqw */
