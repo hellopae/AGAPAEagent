@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-08-26T16:40:47Z",
+  "updatedAt": "2026-08-26T16:54:27Z",
   "entries": [
+    {
+      "id": "wl-260826-news-mailwidget",
+      "datetime": "2026-08-26T16:54:27Z",
+      "displayDate": "26 ส.ค. 2569",
+      "displayTime": "23:54",
+      "agent": "news",
+      "agentName": "News",
+      "agentImg": "avatars/News.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "แท็บ Widgets เปลี่ยนการ์ดดูดวง → อีเมลใหม่",
+      "summary": "เอาการ์ดดูดวงวันนี้ (พร้อมแถบดวงกำเนิดกับ CSS .w-natal) ออกจากแท็บ Widgets แล้ววางการ์ดอีเมลใหม่แทน อ่านจาก Firestore agents/email ที่ Email Check routine เขียนไว้รอบเช้า 08:00 (ตัว doc มีอยู่แล้ว เว็บแค่ยังไม่เคยแสดง). ยึดกติกาเดียวกับฝั่ง Widget บน Mac — อ่านแค่ items/count/date/updatedAt เท่านั้น เพราะ doc นี้เปิดอ่านได้ด้วย API key ที่ฝังในหน้าเว็บสาธารณะ items ฝั่ง routine ใส่มาแค่ 'ชื่อผู้ส่ง · เวลา' ไม่มีชื่อเรื่องอีเมล. ไม่มีอีเมลใหม่ก็ยังโชว์เวลาที่เช็คล่าสุด จะได้รู้ว่า routine ยังเดินอยู่. routine ดูดวงยังเขียน agents/horoscope ต่อไปเหมือนเดิม แค่เว็บไม่ได้แสดงแล้ว",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
     {
       "id": "wl-260826-dale-coffee2",
       "datetime": "2026-08-26T16:40:47Z",

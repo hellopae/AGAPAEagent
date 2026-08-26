@@ -148,14 +148,6 @@
   }
   .w-news li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
   .w-empty{font-size:12px;color:var(--ink-faint);font-style:italic}
-  /* แถบดวงกำเนิด — ค่าคงที่ ไม่ได้มาจาก Firestore (ดู renderHoro) */
-  .w-natal{
-    display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-bottom:6px;
-    font-size:10.5px;letter-spacing:.04em;color:var(--ink-faint);
-    font-family:"IBM Plex Mono",monospace;
-  }
-  .w-natal b{color:var(--gold);font-weight:600}
-  .w-natal .sep{opacity:.4}
   /* Bitcoin trend summary (จาก investai) */
   .w-btc-sig{
     display:block;text-decoration:none;color:inherit;
@@ -1237,7 +1229,7 @@
   <div class="wrap">
     <section class="hero">
       <div class="ey mono">Widgets · สรุปสด</div>
-      <p>Claude Limit · สรุปข่าวประจำวัน · Bitcoin · อัปเดตมังงะ · ดูดวง · To Do</p>
+      <p>Claude Limit · สรุปข่าวประจำวัน · Bitcoin · อัปเดตมังงะ · อีเมลใหม่ · To Do</p>
     </section>
     <div class="widget-grid">
 
@@ -1280,15 +1272,13 @@
         <div class="w-manga" id="wMangaList"><span class="w-empty">กำลังโหลด…</span></div>
       </div>
 
-      <!-- Horoscope — ดูดวงรายวัน (Firestore agents/horoscope) -->
-      <div class="widget" id="wHoro">
-        <div class="wh"><span class="wdot" style="background:var(--c-content, var(--gold))"></span><h4>ดูดวงวันนี้</h4><span class="wup" id="wHoroUp">—</span></div>
-        <div class="w-natal" title="เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ — ลัคนาคำนวณแบบนิรายนะ (ลาหิรี); ฝั่งสากล/สายนะ = กันย์ 6°58′">
-          <span>ลัคนา <b>สิงห์ 13°21′</b></span><span class="sep">·</span>
-          <span>ราศี <b>มกร</b></span><span class="sep">·</span>
-          <span>ปี <b>กุน</b></span>
-        </div>
-        <div class="w-news" id="wHoroBox"><span class="w-empty">รอดวงประจำวัน (routine ทุกเช้า 07:13)</span></div>
+      <!-- อีเมลใหม่ (Firestore agents/email · routine รอบเช้า 08:00)
+           ⚠️ อ่านแค่ items / count / date / updatedAt เท่านั้น
+           doc นี้เปิดอ่านได้ด้วย API key ที่ฝังในหน้าเว็บสาธารณะ — ฝั่ง routine ตกลงกันว่า
+           items มีแค่ "ชื่อผู้ส่ง · เวลา" ไม่มีชื่อเรื่องอีเมล ฝั่งนี้จึงห้ามไปดึงฟิลด์อื่นเพิ่ม -->
+      <div class="widget" id="wMail">
+        <div class="wh"><span class="wdot" style="background:var(--c-content, var(--gold))"></span><h4>อีเมลใหม่</h4><span class="wup" id="wMailUp">—</span></div>
+        <div class="w-news" id="wMailBox"><span class="w-empty">รอผลเช็คอีเมล (routine รอบเช้า 08:00)</span></div>
       </div>
 
       <!-- To Do — ใกล้ครบกำหนด -->
@@ -1647,15 +1637,21 @@ function renderDaily(d){
 }
 let DAILY_DOC = null;
 
-/* --- widget: ดูดวงรายวัน (Firestore agents/horoscope) --- */
-function renderHoro(d){
-  const box = document.getElementById('wHoroBox');
-  if(!box) return;
-  if(!d || !Array.isArray(d.items) || !d.items.length) return;
-  box.innerHTML = `<div class="nt">${d.date || d.title || 'ดวงวันนี้'}</div>
-    <ul>${d.items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
-  const up = document.getElementById('wHoroUp');
+/* --- widget: อีเมลใหม่ (Firestore agents/email) ---
+   ไม่มีอีเมลใหม่ก็ยังต้องบอกว่าเช็คไปแล้ว จะได้รู้ว่า routine ยังทำงานอยู่ */
+function renderMail(d){
+  const box = document.getElementById('wMailBox');
+  if(!box || !d) return;
+  const items = Array.isArray(d.items) ? d.items : [];
+  const up = document.getElementById('wMailUp');
   if(up) up.textContent = relTime(d.updatedAt);
+  if(!items.length){
+    box.innerHTML = `<span class="w-empty">ยังไม่มีอีเมลใหม่</span>`;
+    return;
+  }
+  const n = Number(d.count) || items.length;
+  box.innerHTML = `<div class="nt">${d.date || d.title || 'อีเมลใหม่'} · ${n} ฉบับ</div>
+    <ul>${items.slice(0,6).map(t=>`<li>${t}</li>`).join('')}</ul>`;
 }
 
 /* --- widget: bitcoin (CoinGecko — refresh ทุก 3 นาที) --- */
@@ -3811,10 +3807,10 @@ firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
 firebase.firestore().collection("agents").doc("daily").onSnapshot(d=>{
   if(d.exists){ DAILY_DOC = d.data(); renderDaily(DAILY_DOC); }
 },err=>console.warn("Firestore daily:",err));
-/* widget: ดูดวงรายวัน — เขียนโดย Daily Horoscope routine */
-firebase.firestore().collection("agents").doc("horoscope").onSnapshot(d=>{
-  if(d.exists) renderHoro(d.data());
-},err=>console.warn("Firestore horoscope:",err));
+/* widget: อีเมลใหม่ — เขียนโดย Email Check routine */
+firebase.firestore().collection("agents").doc("email").onSnapshot(d=>{
+  if(d.exists) renderMail(d.data());
+},err=>console.warn("Firestore email:",err));
 /* แท็บการเงิน — เขียนโดยแอป budget2569 (agents/finance) */
 firebase.firestore().collection("agents").doc("finance").onSnapshot(d=>{
   if(!d.exists) return;
