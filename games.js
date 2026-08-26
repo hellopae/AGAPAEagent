@@ -27,6 +27,10 @@ const GM_DEFS = {
              unit:'แถว', how:'← → เลื่อน · ↑ หมุน · ↓ ลงเร็ว · Space ทิ้งลงสุด · เก็บให้ได้แถวเยอะที่สุด'},
   sudoku:   {label:'ซูโดกุ',     emoji:'🔢', room:'r5',     rival:'vera', solo:false,
              unit:'วิ',   how:'กดช่องแล้วพิมพ์ 1-9 (หรือกดแป้นเลขข้างล่าง) · ทำให้เสร็จก่อนเวลาของ Vera ถึงจะชนะ'},
+  coffee:   {label:'ชงกาแฟ',     emoji:'☕', room:'pantry', rival:null,   solo:true,
+             unit:'แก้ว', how:'กดค้างเพื่อรินให้ถึงแถบที่เขาสั่ง ปล่อยเพื่อเสิร์ฟ · ริน 10 แก้ว รินเกินคือเสีย'},
+  breakout: {label:'ทุบอิฐ',     emoji:'🧱', room:'bm',     rival:null,   solo:true,
+             unit:'ก้อน', how:'เลื่อนเมาส์คุมแป้น · ทุบอิฐให้หมด มีลูก 3 ลูก'},
 };
 
 /* ค่าตั้งต้นก่อนที่ Firestore จะตอบ — agent เจ้าถิ่นถือแชมป์ไว้ก่อน */
@@ -37,6 +41,8 @@ const gmBlank = () => ({
   snake:    {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
   tetris:   {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
   sudoku:   {champion:'vera', streak:0, best:{who:'vera', score:0},  vsPae:{win:0, lose:0}, lastPlayed:null},
+  coffee:   {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
+  breakout: {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
 });
 
 let GM = gmBlank();
@@ -87,13 +93,13 @@ function gmDrawPae(ctx, cx, cy, r){
 
 /* ---------- ตัวช่วยเล็ก ๆ ---------- */
 const gmAgent   = id => (typeof AGENTS !== 'undefined' ? AGENTS : []).find(a => a.id === id) || null;
-const gmName    = id => id === 'pae' ? 'เป้' : (gmAgent(id)?.name || '—');
+const gmName    = id => id === 'pae' ? 'PAE' : (gmAgent(id)?.name || '—');
 const gmEsc     = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const gmClamp   = (v, a, b) => v < a ? a : (v > b ? b : v);
 const gmPick    = a => a[Math.floor(Math.random() * a.length)];
 
 function gmFace(id, cls){
-  if(id === 'pae') return `<span class="${cls} gm-pae">เป้</span>`;
+  if(id === 'pae') return `<img class="${cls}" src="${GM_ART.pae}" alt="PAE" loading="lazy">`;
   const a = gmAgent(id);
   if(!a) return `<span class="${cls} gm-pae">?</span>`;
   const fp = typeof facePos === 'function' ? facePos(id) : '';
@@ -145,7 +151,7 @@ function gmRenderBoard(){
       ? (g.best && g.best.score ? `สถิติ ${g.best.score} ${d.unit}` : 'ยังไม่มีใครเล่น')
       : (g.streak > 0 ? `ป้องกันได้ ${g.streak} ครั้ง` : 'เพิ่งขึ้นแท่น');
     const vs = d.solo ? '' :
-      `<span class="gm-vs mono">เป้ ${g.vsPae?.win ?? 0}–${g.vsPae?.lose ?? 0}</span>`;
+      `<span class="gm-vs mono">PAE ${g.vsPae?.win ?? 0}–${g.vsPae?.lose ?? 0}</span>`;
     return `<div class="gm-row">
       <span class="gm-em">${d.emoji}</span>
       <span class="gm-lab">${gmEsc(d.label)}</span>
@@ -157,7 +163,7 @@ function gmRenderBoard(){
   }).join('');
   box.innerHTML = `<div class="gm-head"><span class="gm-trophy">🏆</span>
       <span class="gm-title">กระดานแชมป์</span>
-      <span class="gm-sub">กดปุ่มเล่นเพื่อท้าชิง — หรือกดที่โต๊ะปิงปอง ตู้ปลา และโกลในผังก็ได้</span>
+      <span class="gm-sub">กดปุ่มเล่นเพื่อท้าชิง — หรือกดที่ของในผัง: โต๊ะปิงปอง · โกล · ตู้ปลา · เครื่องเกม · ตู้เกม · เครื่องชงกาแฟ · แป้นซูโดกุ</span>
     </div>${rows}`;
 }
 
@@ -307,7 +313,7 @@ const GM_SAY = {
   fishing: { win:['ปลาว่ายเร็วขึ้นแล้วนะ'], lose:['เยี่ยม! ปลาเยอะเลย'] },
   sudoku: {
     win:  ['ตัวเลขมันต้องเป๊ะแบบนี้','ช้าไปนิดเดียวเอง ลองใหม่','เวลาของเรายังยืนอยู่'],
-    lose: ['เร็วกว่าเราจริง ยอมรับ','โอเค สถิติเป็นของเป้แล้ว','เก่งขึ้นเยอะเลยนะ'],
+    lose: ['เร็วกว่าเราจริง ยอมรับ','โอเค สถิติเป็นของ PAE แล้ว','เก่งขึ้นเยอะเลยนะ'],
   },
 };
 
@@ -436,7 +442,7 @@ function gmPingpong(stage){
       draw();
       setTimeout(() => gmResult(stage, 'pingpong',
         {win:S.my >= 5, score:S.my},
-        `<span class="mono">เป้ ${S.my} — ${S.ay} Toby</span>`), 420);
+        `<span class="mono">PAE ${S.my} — ${S.ay} Toby</span>`), 420);
       return;
     }
     serve(S.my > S.ay);
@@ -472,7 +478,7 @@ function gmPingpong(stage){
       ctx.textAlign = 'center';
       ctx.fillText('พร้อม...', W/2, H/2 - 34);
     }
-    hud.innerHTML = `<span class="mono">เป้ <b>${S.my}</b></span>
+    hud.innerHTML = `<span class="mono">PAE <b>${S.my}</b></span>
       <span class="gm-hud-mid mono">แรลลี่ ${S.rally}</span>
       <span class="mono"><b>${S.ay}</b> Toby</span>`;
   }
@@ -903,6 +909,19 @@ function gmSnake(stage){
       ctx.roundRect(b.x*CELL+2, b.y*CELL+2, CELL-4, CELL-4, i===0 ? 7 : 5);
       ctx.fill();
     });
+    /* ตาบนหัว — เรียงตามแนวตั้งฉากกับทิศที่ไป ตาดำเหลือบไปข้างหน้า */
+    const hd = S.body[0];
+    const hx = hd.x*CELL + CELL/2, hy = hd.y*CELL + CELL/2;
+    const d = S.dir, side = {x:-d.y, y:d.x};
+    const ER = CELL*0.19, PR = CELL*0.095;
+    [-1, 1].forEach(sg => {
+      const ex = hx + d.x*CELL*0.14 + side.x*CELL*0.20*sg;
+      const ey = hy + d.y*CELL*0.14 + side.y*CELL*0.20*sg;
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(ex, ey, ER, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#1B1C20';
+      ctx.beginPath(); ctx.arc(ex + d.x*ER*0.42, ey + d.y*ER*0.42, PR, 0, Math.PI*2); ctx.fill();
+    });
     if(!S.started){
       ctx.fillStyle = 'rgba(18,20,26,.55)'; ctx.fillRect(0,0,W,H);
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center';
@@ -1246,8 +1265,289 @@ function gmSudoku(stage){
   return () => { clearInterval(tick); document.removeEventListener('keydown', kd); };
 }
 
+/* =====================================================================
+   เกม 7 — ☕ ชงกาแฟให้ทีม (เล่นคนเดียว แต่มี agent มาสั่งจริง)
+   กดค้างเพื่อริน ปล่อยเพื่อเสิร์ฟ — ต้องให้ระดับน้ำอยู่ในแถบที่เขาสั่ง
+   ===================================================================== */
+const GM_COFFEE_ORDER = {
+  claudy:'ดำล้วน ไม่หวาน', minnie:'ลาเต้เยอะ ๆ นม', reese:'อเมริกาโน่ เข้ม',
+  addy:'เอสเปรสโซ่ช็อตเดียว', rae:'คาปูชิโน่ ฟองหนา', vera:'ตวงให้พอดีขอบ',
+  mind:'ลาเต้ ขอสีสวย ๆ', chris:'ดำ ไม่ใส่อะไร', libby:'ชาเขียวก็ได้นะ',
+  nick:'อะไรก็ได้ที่คาเฟอีนเยอะ', dale:'แก้วใหญ่ ยาว ๆ', toby:'หวานหน่อย',
+  news:'ร้อน ๆ ก่อนออกข่าว',
+};
+const GM_COFFEE_OK   = ['พอดีเป๊ะ ขอบคุณ!','อันนี้แหละที่ต้องการ','เก่งมาก กำลังดี'];
+const GM_COFFEE_OVER = ['ล้นแล้ว!','เยอะไปนิดนะ','หกใส่โต๊ะหมดเลย'];
+const GM_COFFEE_LOW  = ['น้อยไปหน่อย','นี่ครึ่งแก้วเอง','ขออีกนิดได้ไหม'];
+
+function gmCoffee(stage){
+  const W = 640, H = 400, CUPS = 10;
+  const {cv, ctx} = gmCanvas(stage, W, H);
+  const hud = gmHud(stage);
+  const ids = (typeof AGENTS !== 'undefined' ? AGENTS : []).map(a => a.id);
+  const CX = W/2, CTOP = 120, CH = 190, CW = 130;   /* กรอบแก้ว */
+
+  const S = {n:0, ok:0, fill:0, pouring:false, phase:'ready', t:0,
+             who:null, lo:0, hi:0, msg:'', say:'', over:false};
+
+  function nextCup(){
+    if(S.n >= CUPS){
+      S.over = true;
+      setTimeout(() => gmResult(stage, 'coffee', {score:S.ok},
+        `<span class="mono">เสิร์ฟถูกใจ ${S.ok} จาก ${CUPS} แก้ว</span>`), 260);
+      return;
+    }
+    S.who = ids.length ? gmPick(ids) : 'claudy';
+    /* แถบเป้าหมายแคบลงเรื่อย ๆ ตามจำนวนแก้วที่ผ่านมา */
+    const band = 0.20 - Math.min(0.10, S.n * 0.011);
+    S.lo = 0.30 + Math.random() * (0.62 - band - 0.30);
+    S.hi = S.lo + band;
+    S.fill = 0; S.phase = 'pour'; S.msg = ''; S.say = '';
+  }
+  nextCup();
+
+  function serve(){
+    if(S.phase !== 'pour') return;
+    S.pouring = false;
+    const good = S.fill >= S.lo && S.fill <= S.hi;
+    if(good){ S.ok++; S.msg = 'พอดี!'; S.say = gmPick(GM_COFFEE_OK); }
+    else if(S.fill > S.hi){ S.msg = 'ล้น'; S.say = gmPick(GM_COFFEE_OVER); }
+    else { S.msg = 'น้อยไป'; S.say = gmPick(GM_COFFEE_LOW); }
+    S.n++;
+    S.phase = 'wait'; S.t = 0;
+  }
+
+  let pid = null;
+  const down = e => {
+    if(S.over || S.phase !== 'pour') return;
+    e.preventDefault();
+    pid = e.pointerId;
+    try{ cv.setPointerCapture(pid); }catch(err){}
+    S.pouring = true;
+  };
+  const up = e => {
+    if(pid === null || (e.pointerId != null && e.pointerId !== pid)) return;
+    e.preventDefault();
+    try{ cv.releasePointerCapture(pid); }catch(err){}
+    pid = null;
+    serve();
+  };
+  cv.addEventListener('pointerdown', down);
+  cv.addEventListener('pointerup', up);
+  cv.addEventListener('pointercancel', up);
+  const kd = e => { if(e.key === ' ' && S.phase === 'pour' && !S.pouring){ S.pouring = true; } };
+  const ku = e => { if(e.key === ' ' && S.pouring) serve(); };
+  document.addEventListener('keydown', kd);
+  document.addEventListener('keyup', ku);
+
+  function step(dt){
+    S.t += dt;
+    if(S.phase === 'pour' && S.pouring){
+      S.fill = Math.min(1.25, S.fill + dt * 0.42);
+      if(S.fill >= 1.25) serve();          /* ล้นสุดแก้ว บังคับเสิร์ฟ */
+    }
+    if(S.phase === 'wait' && S.t > 1.5) nextCup();
+    draw();
+  }
+
+  function draw(){
+    const g = ctx.createLinearGradient(0,0,0,H);
+    g.addColorStop(0, '#33302B'); g.addColorStop(1, '#22201D');
+    ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+
+    /* คนที่มาสั่ง — ยืนซ้ายมือ พร้อมบับเบิลออเดอร์ */
+    if(S.who){
+      gmDrawFig(ctx, S.who, 96, CTOP + CH + 22, 118, false);
+      ctx.fillStyle = 'rgba(255,255,255,.9)';
+      ctx.font = '600 13px "Noto Sans Thai",sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(gmName(S.who), 96, CTOP + CH + 44);
+      const order = GM_COFFEE_ORDER[S.who] || 'อะไรก็ได้';
+      ctx.font = '400 12px "Noto Sans Thai",sans-serif';
+      ctx.fillStyle = 'rgba(255,255,255,.62)';
+      ctx.fillText(S.say || `"${order}"`, 150, CTOP - 34);
+    }
+
+    /* แก้ว */
+    const cl = CX - CW/2, cr = CX + CW/2, cb = CTOP + CH;
+    ctx.fillStyle = 'rgba(255,255,255,.07)';
+    ctx.beginPath(); ctx.roundRect(cl, CTOP, CW, CH, [6,6,16,16]); ctx.fill();
+    /* แถบเป้าหมาย */
+    const yOf = f => cb - CH * gmClamp(f, 0, 1);
+    ctx.fillStyle = 'rgba(154,187,166,.3)';
+    ctx.fillRect(cl, yOf(S.hi), CW, yOf(S.lo) - yOf(S.hi));
+    ctx.strokeStyle = 'rgba(154,187,166,.85)'; ctx.lineWidth = 2;
+    [S.lo, S.hi].forEach(f => {
+      ctx.beginPath(); ctx.moveTo(cl, yOf(f)); ctx.lineTo(cr, yOf(f)); ctx.stroke();
+    });
+    /* กาแฟในแก้ว */
+    const fy = yOf(S.fill);
+    const cg = ctx.createLinearGradient(0, fy, 0, cb);
+    cg.addColorStop(0, '#7B5230'); cg.addColorStop(1, '#4A2F1B');
+    ctx.save();
+    ctx.beginPath(); ctx.roundRect(cl+3, CTOP+3, CW-6, CH-6, [4,4,14,14]); ctx.clip();
+    ctx.fillStyle = cg;
+    ctx.fillRect(cl, Math.max(CTOP, fy), CW, cb - Math.max(CTOP, fy));
+    if(S.fill > 0){
+      ctx.fillStyle = 'rgba(214,186,150,.65)';
+      ctx.fillRect(cl, Math.max(CTOP, fy), CW, 5);
+    }
+    ctx.restore();
+    ctx.strokeStyle = 'rgba(255,255,255,.34)'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.roundRect(cl, CTOP, CW, CH, [6,6,16,16]); ctx.stroke();
+    /* หูแก้ว */
+    ctx.beginPath(); ctx.arc(cr + 16, CTOP + CH*0.42, 20, -Math.PI/2.1, Math.PI/2.1); ctx.stroke();
+
+    /* สายน้ำตอนริน */
+    if(S.pouring){
+      ctx.fillStyle = 'rgba(140,96,58,.85)';
+      ctx.fillRect(CX - 5, 44, 10, Math.max(0, fy - 44));
+    }
+    /* หัวเครื่องชง */
+    ctx.fillStyle = '#4A4744';
+    ctx.beginPath(); ctx.roundRect(CX - 42, 18, 84, 28, 7); ctx.fill();
+    ctx.fillStyle = '#2E2C2A';
+    ctx.beginPath(); ctx.roundRect(CX - 9, 44, 18, 10, 3); ctx.fill();
+
+    if(S.msg){
+      ctx.textAlign = 'center';
+      ctx.fillStyle = S.msg === 'พอดี!' ? '#B7D8BE' : '#E8BDB0';
+      ctx.font = '600 20px "Noto Sans Thai",sans-serif';
+      ctx.fillText(S.msg, CX, CTOP + CH + 62);
+    }else if(S.phase === 'pour' && !S.pouring && S.fill === 0){
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(255,255,255,.6)';
+      ctx.font = '400 13px "Noto Sans Thai",sans-serif';
+      ctx.fillText('กดค้างเพื่อริน · ปล่อยเพื่อเสิร์ฟ', CX, CTOP + CH + 62);
+    }
+    hud.innerHTML = `<span class="mono">แก้วที่ <b>${Math.min(S.n+1, CUPS)}</b>/${CUPS}</span>
+      <span class="gm-hud-mid mono">ถูกใจ ${S.ok}</span>
+      <span class="mono">กดค้าง = ริน</span>`;
+  }
+
+  const stop = gmLoop(step);
+  return () => {
+    stop();
+    cv.removeEventListener('pointerdown', down);
+    cv.removeEventListener('pointerup', up);
+    cv.removeEventListener('pointercancel', up);
+    document.removeEventListener('keydown', kd);
+    document.removeEventListener('keyup', ku);
+  };
+}
+
+/* =====================================================================
+   เกม 8 — 🧱 ทุบอิฐ (ในตู้เกมห้องเกม)
+   ===================================================================== */
+function gmBreakout(stage){
+  const W = 640, H = 430;
+  const {cv, ctx} = gmCanvas(stage, W, H);
+  const hud = gmHud(stage);
+  const COLS = 10, ROWS = 5, BW = 56, BH = 20, BGAP = 6;
+  const OFFX = (W - (COLS*(BW+BGAP) - BGAP))/2, OFFY = 54;
+  const PADW = 96, PADH = 12, PADY = H - 34;
+  const COLORS = ['#C9707A','#D19A62','#CDBE6B','#84B08C','#7B9EC4'];
+
+  const bricks = [];
+  for(let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++)
+    bricks.push({x:OFFX + c*(BW+BGAP), y:OFFY + r*(BH+BGAP), c:COLORS[r], alive:true});
+
+  const S = {px:W/2, bx:W/2, by:PADY-40, vx:190, vy:-250, lives:3, hit:0, over:false, stuck:true};
+
+  const onMove = e => { S.px = gmClamp(gmPos(cv,e).x, PADW/2, W-PADW/2); };
+  const onTap  = e => { e.preventDefault(); S.stuck = false; };
+  cv.addEventListener('pointermove', onMove);
+  cv.addEventListener('pointerdown', onTap);
+  const kd = e => { if(e.key === ' ') S.stuck = false; };
+  document.addEventListener('keydown', kd);
+
+  function reset(){
+    S.bx = S.px; S.by = PADY - 40;
+    S.vx = (Math.random() < 0.5 ? -1 : 1) * 190; S.vy = -250;
+    S.stuck = true;
+  }
+  function end(){
+    S.over = true;
+    setTimeout(() => gmResult(stage, 'breakout', {score:S.hit},
+      `<span class="mono">ทุบได้ ${S.hit} จาก ${ROWS*COLS} ก้อน</span>`), 300);
+  }
+
+  function step(dt){
+    if(S.over) return draw();
+    if(S.stuck){ S.bx = S.px; S.by = PADY - 40; return draw(); }
+
+    S.bx += S.vx*dt; S.by += S.vy*dt;
+    if(S.bx < 9){ S.bx = 9; S.vx = Math.abs(S.vx); }
+    if(S.bx > W-9){ S.bx = W-9; S.vx = -Math.abs(S.vx); }
+    if(S.by < 9){ S.by = 9; S.vy = Math.abs(S.vy); }
+
+    /* แป้น — มุมสะท้อนขึ้นกับว่าโดนตรงไหนของแป้น */
+    if(S.by > PADY - 9 && S.by < PADY + PADH && S.vy > 0
+       && S.bx > S.px - PADW/2 - 6 && S.bx < S.px + PADW/2 + 6){
+      S.by = PADY - 9;
+      const rel = (S.bx - S.px) / (PADW/2);
+      const sp = Math.min(430, Math.hypot(S.vx, S.vy) * 1.02);
+      const ang = rel * 1.05;
+      S.vx = sp * Math.sin(ang);
+      S.vy = -sp * Math.cos(ang);
+    }
+
+    /* อิฐ */
+    for(const b of bricks){
+      if(!b.alive) continue;
+      if(S.bx > b.x-8 && S.bx < b.x+BW+8 && S.by > b.y-8 && S.by < b.y+BH+8){
+        b.alive = false; S.hit++;
+        /* ชนด้านบน/ล่าง หรือด้านข้าง — ดูว่าทะลุเข้ามาทางไหนมากกว่า */
+        const ox = Math.min(Math.abs(S.bx - b.x), Math.abs(S.bx - (b.x+BW)));
+        const oy = Math.min(Math.abs(S.by - b.y), Math.abs(S.by - (b.y+BH)));
+        if(oy < ox) S.vy = -S.vy; else S.vx = -S.vx;
+        break;
+      }
+    }
+    if(!bricks.some(b => b.alive)) return end();
+
+    if(S.by > H + 12){
+      S.lives--;
+      if(S.lives <= 0) return end();
+      reset();
+    }
+    draw();
+  }
+
+  function draw(){
+    ctx.fillStyle = '#161C26'; ctx.fillRect(0,0,W,H);
+    bricks.forEach(b => {
+      if(!b.alive) return;
+      ctx.fillStyle = b.c;
+      ctx.beginPath(); ctx.roundRect(b.x, b.y, BW, BH, 4); ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,.18)';
+      ctx.fillRect(b.x+3, b.y+3, BW-6, 3);
+    });
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--gold').trim() || '#9A7B4F';
+    ctx.beginPath(); ctx.roundRect(S.px - PADW/2, PADY, PADW, PADH, 6); ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.arc(S.bx, S.by, 8, 0, Math.PI*2); ctx.fill();
+    if(S.stuck && !S.over){
+      ctx.fillStyle = 'rgba(255,255,255,.7)'; ctx.textAlign = 'center';
+      ctx.font = '600 15px "Noto Sans Thai",sans-serif';
+      ctx.fillText('กดเพื่อปล่อยลูก', W/2, PADY - 70);
+    }
+    hud.innerHTML = `<span class="mono">ทุบได้ <b>${S.hit}</b></span>
+      <span class="gm-hud-mid mono">${'●'.repeat(Math.max(0,S.lives))}</span>
+      <span class="mono">เลื่อนเมาส์คุมแป้น</span>`;
+  }
+
+  const stop = gmLoop(step);
+  return () => {
+    stop();
+    cv.removeEventListener('pointermove', onMove);
+    cv.removeEventListener('pointerdown', onTap);
+    document.removeEventListener('keydown', kd);
+  };
+}
+
 const GM_GAMES = {pingpong:gmPingpong, football:gmFootball, fishing:gmFishing,
-                  snake:gmSnake, tetris:gmTetris, sudoku:gmSudoku};
+                  snake:gmSnake, tetris:gmTetris, sudoku:gmSudoku,
+                  coffee:gmCoffee, breakout:gmBreakout};
 
 /* =====================================================================
    เมนูเลือกเกม — ใช้ตอนของชิ้นเดียวมีหลายเกม (PS5 มีทั้งงูกับเตตริส)
@@ -1265,6 +1565,14 @@ function gmOpenMenu(keys, title, sub){
 
   const stage = document.getElementById('gmStage');
   stage.innerHTML = `<div class="gm-menu">${keys.map(k => {
+    /* รายการที่เป็นลิงก์ออกนอกเว็บ เขียนเป็น object แทนคีย์เกม */
+    if(typeof k === 'object'){
+      return `<a class="gm-menu-b" href="${k.url}" target="_blank" rel="noopener">
+        <span class="em">${k.emoji}</span>
+        <span class="nm">${gmEsc(k.label)}</span>
+        <span class="ch"><span class="none">${gmEsc(k.note || 'เปิดในแท็บใหม่')}</span></span>
+      </a>`;
+    }
     const d = GM_DEFS[k], g = GM[k] || {};
     const champ = g.champion
       ? `${gmFace(g.champion,'gm-av')} <span>${gmEsc(gmName(g.champion))} · ${g.best?.score ?? 0} ${d.unit}</span>`
@@ -1302,11 +1610,18 @@ function gmTapFn(el, tag, title, fn){
   el.addEventListener('click', fn);
 }
 
+const GM_RUSHEXIT = {label:'RushExit', emoji:'🚪', url:'https://hellopae.github.io/RushExit/',
+                     note:'เกมของ PAE · เปิดแท็บใหม่'};
+
 function gmAttachOffice(){
   gmTap(document.getElementById('ofcPP'),     'pingpong');
   gmTap(document.querySelector('.ofc-tank'),  'fishing');
   gmTap(document.getElementById('ofcGoal'),   'football');
   gmTap(document.getElementById('ofcSudoku'), 'sudoku');
+  gmTap(document.getElementById('ofcCoffee'), 'coffee');
+  /* ตู้เกมในห้องเกม — ทุบอิฐ + ลิงก์ไป RushExit */
+  gmTapFn(document.getElementById('ofcArcade'), 'arcade', '🕹️ ตู้เกม',
+    () => gmOpenMenu(['breakout', GM_RUSHEXIT], 'ตู้เกม', 'ห้องเกม'));
   /* เครื่องเกมมี 2 เกม — เปิดเมนูให้เลือก
      ตัวเครื่องเล็กมาก (2.2cqw) เลยให้กดที่จอทีวีได้ด้วย จะได้เล็งง่ายขึ้น */
   const menu = () => gmOpenMenu(['snake','tetris'], 'เครื่องเกม', 'ห้องเกม · เลือกได้ 2 เกม');

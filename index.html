@@ -268,6 +268,14 @@
   .gm-tap.ofc-sudoku:hover{
     filter:drop-shadow(0 0 .45cqw var(--gold));transform:translate(-50%,-100%) translateY(-.18cqw);
   }
+  /* ตู้เกม + ถ้วยกาแฟ — ยึดขอบล่างเหมือนตัวละคร */
+  .ofc-arcade,.ofc-coffee{
+    position:absolute;transform:translate(-50%,-100%);
+    border:none;background:none;padding:0;display:block;line-height:0;
+  }
+  .ofc-arcade img,.ofc-coffee img{width:100%;display:block;
+    filter:drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3))}
+
   /* โกลฟุตบอลบนทางเดิน — ตัวละครเดินผ่านหน้าได้ (z ต่ำกว่าแถวเดิน) */
   .ofc-goal{
     position:absolute;transform:translate(-50%,-100%);
@@ -3001,17 +3009,27 @@ const OFC_TANK_POS = [1180,810];      /* วางบนโต๊ะในห้
 const OFC_TANK_W   = 5.0;             /* cqw — กว้างพอดีหน้าโต๊ะ */
 const OFC_FISH_POS = [1244,848];      /* แมวนั่งดูปลาข้างโต๊ะ ไม่บังปลา */
 const OFC_FISH_STAND = [1290,878];    /* จุดยืนดูปลาของเอเจนต์ ถัดจากแมว */
-/* โกลฟุตบอล — ทางเดินกลางล่าง ถัดไปทางขวาจากจุดพักลูกบอล (B5 [790,645])
-   ทางเดินช่วงนี้กว้างแค่ y 605 (ขอบล่างห้องประชุม) ถึง 688 (ขอบบนแพนทรี่)
-   พิกัดยึดขอบล่างของรูป (translate -100%) — ตัวโกลสูง 5.0cqw x 215/300 ≈ 57 หน่วย
-   ตั้งขอบล่างไว้ 684 ตัวโกลจึงกินแค่ y 627-684 อยู่ในทางเดินพอดี ไม่ทับกำแพงห้องประชุม
-   z สูงกว่าแนวเดิน 645 เพื่อให้คนที่เดินผ่านอยู่ "หลัง" โกลตามระยะจริง */
+/* โกลฟุตบอล — ย้ายมาทางเดินตั้งฝั่งซ้าย (แนว L2-L3 ที่ x=300) ที่ว่างกว่าเดิมเยอะ
+   ทางเดินช่วงนี้กว้าง x 285 (ขอบขวาห้องคลังไฟล์/โต๊ะขาย) ถึง 417 (ขอบซ้ายศูนย์คุมงาน)
+   ยึดขอบล่างของรูป — ตัวโกลกว้าง 79 สูง 57 หน่วย → กิน x 315-395 · y 373-430 */
 /* แป้นซูโดกุบนโต๊ะห้องสเปค (r5 x 935-1150 · y 45-245 · Vera นั่งที่ [1030,178])
    วาดด้วย CSS ไม่ใช้รูป — ขนาดเท่านี้ตารางจิ๋ว ๆ ก็อ่านออกแล้ว */
 const OFC_SUDOKU_POS = [975, 218];
 const OFC_SUDOKU_W   = 2.8;           /* cqw */
+
+/* ตู้เกมในห้องเกม (bm x 45-640 · y 630-925) — วางซ้ายของโต๊ะปิงปอง (โต๊ะกิน x 296-564)
+   รูป 138x300 → 3.0cqw กว้าง 48 สูง 104 หน่วย · กิน x 226-274 · y 686-790 */
+const OFC_ARCADE_ART = 'office/sprites/cat/arcade-cab.png';
+const OFC_ARCADE_POS = [250, 790];
+const OFC_ARCADE_W   = 3.0;           /* cqw */
+
+/* ถ้วยกาแฟบนเคาน์เตอร์แพนทรี่ — เครื่องชงที่วาดไว้ในรูปพื้นอยู่ราว x 872-905
+   วางถ้วยในช่องว่างระหว่างเครื่องปิ้งกับกาต้มน้ำ ให้เป็นปุ่มกดเล่นเกมชงกาแฟ */
+const OFC_COFFEE_ART = 'office/sprites/cat/hand-coffee.png';
+const OFC_COFFEE_POS = [947, 726];
+const OFC_COFFEE_W   = 1.5;           /* cqw */
 const OFC_GOAL_ART = 'office/sprites/cat/Goal.png';
-const OFC_GOAL_POS = [960, 684];
+const OFC_GOAL_POS = [355, 430];
 const OFC_GOAL_W   = 5.0;             /* cqw */
 const OFC_PP_ART   = 'office/sprites/cat/pingpong.png';
 const OFC_PP_POS   = [430,800];       /* กลางที่ว่างของห้องเกม */
@@ -3190,6 +3208,26 @@ function ofcBuildProps(){
   sd.style.zIndex = Math.round(OFC_SUDOKU_POS[1]) - 1;
   sd.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
   layer.appendChild(sd);
+
+  const arc = document.createElement('button');
+  arc.className = 'ofc-arcade'; arc.type = 'button'; arc.id = 'ofcArcade';
+  arc.title = 'ตู้เกม';
+  arc.style.width = OFC_ARCADE_W + 'cqw';
+  arc.style.left = (OFC_ARCADE_POS[0]/OFC_W*100)+'%';
+  arc.style.top  = (OFC_ARCADE_POS[1]/OFC_H*100)+'%';
+  arc.style.zIndex = Math.round(OFC_ARCADE_POS[1]) - 2;
+  arc.innerHTML = `<img src="${OFC_ARCADE_ART}" alt="ตู้เกม">`;
+  layer.appendChild(arc);
+
+  const cof = document.createElement('button');
+  cof.className = 'ofc-coffee'; cof.type = 'button'; cof.id = 'ofcCoffee';
+  cof.title = 'เครื่องชงกาแฟ';
+  cof.style.width = OFC_COFFEE_W + 'cqw';
+  cof.style.left = (OFC_COFFEE_POS[0]/OFC_W*100)+'%';
+  cof.style.top  = (OFC_COFFEE_POS[1]/OFC_H*100)+'%';
+  cof.style.zIndex = Math.round(OFC_COFFEE_POS[1]) - 1;
+  cof.innerHTML = `<img src="${OFC_COFFEE_ART}" alt="เครื่องชงกาแฟ">`;
+  layer.appendChild(cof);
 
   const goal = document.createElement('button');
   goal.className = 'ofc-goal'; goal.type = 'button'; goal.id = 'ofcGoal';
