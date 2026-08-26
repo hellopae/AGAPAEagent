@@ -13,7 +13,10 @@
 3. **`SOP/SOP-01..11`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
    web feature, research, ข่าวเช้า, worklog/dashboard, เกณฑ์ QA, การสร้าง agent ใหม่, **มาตรฐานงานออกแบบ**)
 4. **Skills ใน `.claude/skills/`** — `new-article`, `new-template`, `fact-check-gate`,
-   `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review`, `web-design` — ใช้เมื่องานตรง trigger
+   `qa-gate`, `worklog-sync`, `deploy-pages`, `weekly-review`, `web-design`, `skill-harvest` — ใช้เมื่องานตรง trigger
+   - **ระบบเก่งขึ้นเอง**: จบเทิร์นที่ทำงานใหญ่ hook `scripts/hook-skill.mjs` จะถาม **ครั้งเดียว**
+     ว่ารอบนี้ได้ "วิธีทำ" ที่ควรเก็บเป็น skill ไหม — ตัดสินตามเกณฑ์ใน skill `skill-harvest`
+     ถ้าไม่เข้าเกณฑ์ บอกเหตุผลสั้นๆ แล้วจบเทิร์นได้ ไม่ต้องฝืนเขียน
    - **งาน visual/design**: Mind/Vera ใช้ skill เนทีฟ `artifact-design` ("Claude Design") ตาม `SOP/SOP-10-visual-design.md` — สำรวจ asset ต้นทางก่อน, ล็อกขนาดจริง, ใช้ asset จริง
    - **งานเวป (UI)**: เรียก skill **`web-design`** ก่อนเขียน CSS บรรทัดแรก — ยึด **`DESIGN.md`** ที่ root
      เป็นแหล่งความจริงของ design token (สี/ฟอนต์/ระยะ/คอมโพเนนต์) ห้าม hardcode สีนอก token

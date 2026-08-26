@@ -45,6 +45,12 @@
             "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-gate.mjs\" stop",
             "timeout": 30,
             "statusMessage": "ตรวจ Definition of Done…"
+          },
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-skill.mjs\" stop",
+            "timeout": 20,
+            "statusMessage": "เก็บเกี่ยว skill จากงานที่เพิ่งทำ…"
           }
         ]
       }
