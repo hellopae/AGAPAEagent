@@ -199,6 +199,132 @@
   .br-adv .txt{font-size:11.5px;line-height:1.5;font-weight:500}
   .br-src{margin-top:9px;font-size:9px;line-height:1.5;color:var(--ink-faint);opacity:.8}
 
+
+  /* ===== MINIGAME — กระดานแชมป์ · ปุ่ม ▶ ในผัง · โมดัลเกม (games.js) ===== */
+  .gm-board{
+    margin-top:14px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:13px 16px 15px;box-shadow:var(--shadow);
+  }
+  .gm-head{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:11px}
+  .gm-trophy{font-size:15px}
+  .gm-title{font-size:13px;font-weight:600}
+  .gm-sub{font-size:10.5px;color:var(--ink-faint)}
+  .gm-row{
+    display:flex;align-items:center;gap:10px;padding:8px 0;
+    border-top:1px solid var(--line);
+  }
+  .gm-row:first-of-type{border-top:none}
+  .gm-em{font-size:15px;flex:none;width:20px;text-align:center}
+  .gm-lab{font-size:12.5px;font-weight:600;flex:none;min-width:86px}
+  .gm-champ{display:inline-flex;align-items:center;gap:6px;flex:none;min-width:112px}
+  .gm-av{width:22px;height:22px;border-radius:6px;object-fit:cover;display:block;flex:none}
+  .gm-av.sm{width:18px;height:18px;border-radius:5px}
+  .gm-pae{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--gold);color:#fff;font-size:9px;font-weight:600;letter-spacing:.02em;
+  }
+  .gm-who{font-size:12px;font-weight:600}
+  .gm-none{font-size:11px;color:var(--ink-faint)}
+  .gm-note{font-size:11px;color:var(--ink-soft);flex:1;min-width:0}
+  .gm-vs{font-size:10px;color:var(--ink-faint);flex:none}
+  .gm-play{
+    flex:none;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;
+    padding:5px 13px;border-radius:999px;cursor:pointer;color:#fff;
+    background:var(--accent);border:1px solid transparent;transition:.15s;
+  }
+  .gm-play:hover{background:var(--gold)}
+  @media(max-width:640px){
+    .gm-row{flex-wrap:wrap;gap:7px}
+    .gm-note{flex:1 0 100%;order:9}
+    .gm-lab{min-width:0}
+  }
+
+  /* ปุ่ม ▶ ลอยบนของในผัง — โผล่ตอนชี้ที่ผัง */
+  .ofc-stage .gm-pin{
+    position:absolute;transform:translate(-50%,-50%);
+    width:2.1cqw;height:2.1cqw;border-radius:50%;padding:0;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.9cqw;line-height:1;color:#fff;cursor:pointer;
+    background:var(--accent);border:.16cqw solid var(--card);
+    box-shadow:0 .15cqw .4cqw rgba(27,28,32,.35);
+    opacity:0;transition:opacity .18s,transform .18s;z-index:900;
+  }
+  .ofc-stage:hover .gm-pin{opacity:.92}
+  .ofc-stage .gm-pin:hover{opacity:1;background:var(--gold);transform:translate(-50%,-50%) scale(1.14)}
+  .ofc-stage .gm-pin:focus-visible{opacity:1;outline:2px solid var(--gold);outline-offset:2px}
+  /* ปุ่มที่เกาะกับ prop — วางมุมขวาบนของ prop นั้น */
+  .gm-host{position:relative}
+  .gm-host > .gm-pin{left:100%;top:0}
+
+  /* โมดัลเกม */
+  .gm-modal{position:fixed;inset:0;z-index:70;display:none}
+  .gm-modal.on{display:block}
+  .gm-scrim{position:absolute;inset:0;background:rgba(18,20,26,.62);backdrop-filter:blur(3px)}
+  .gm-card{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:min(720px,94vw);background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:0 20px 60px rgba(18,20,26,.4);overflow:hidden;
+  }
+  .gm-bar{
+    display:flex;align-items:center;gap:9px;padding:11px 14px;
+    border-bottom:1px solid var(--line);background:var(--paper-2);
+  }
+  .gm-bar-em{font-size:16px;flex:none}
+  .gm-bar-nm{font-size:13px;font-weight:600;flex:none}
+  .gm-bar-vs{
+    display:inline-flex;align-items:center;gap:6px;flex:1;min-width:0;
+    font-size:11px;color:var(--ink-soft);
+  }
+  .gm-x{
+    flex:none;width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;
+    background:transparent;border:1px solid var(--line);color:var(--ink-soft);transition:.15s;
+  }
+  .gm-x:hover{background:var(--paper);color:var(--ink)}
+  .gm-stage{position:relative;background:var(--accent);line-height:0}
+  .gm-cv{display:block;width:100%;height:auto;touch-action:none}
+  .gm-hud{
+    position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:10px;
+    padding:8px 13px;font-size:11px;color:rgba(255,255,255,.9);line-height:1.4;
+    background:linear-gradient(180deg,rgba(18,20,26,.55),rgba(18,20,26,0));
+    pointer-events:none;
+  }
+  .gm-hud b{font-size:13px}
+  .gm-hud-mid{flex:1;text-align:center}
+  .gm-hud .gm-warn{color:#FFB4A2}
+  .gm-foot{padding:9px 14px;border-top:1px solid var(--line);background:var(--paper-2)}
+  .gm-how{font-size:10.5px;color:var(--ink-faint);line-height:1.5}
+
+  /* การ์ดผลตอนจบเกม */
+  .gm-over{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(18,20,26,.72);backdrop-filter:blur(2px);line-height:1.5;
+    animation:gmFade .25s ease-out;
+  }
+  @keyframes gmFade{from{opacity:0}to{opacity:1}}
+  .gm-over-in{text-align:center;color:#fff;padding:22px;max-width:88%}
+  .gm-over-h{font-size:18px;font-weight:600;margin-bottom:7px}
+  .gm-over.win .gm-over-h{color:#B7D8BE}
+  .gm-over.lose .gm-over-h{color:#E8BDB0}
+  .gm-over-l{font-size:12px;color:rgba(255,255,255,.72);margin-bottom:11px}
+  .gm-over-say{
+    display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:center;
+    font-size:11.5px;color:rgba(255,255,255,.86);
+    background:rgba(255,255,255,.08);border-radius:999px;padding:5px 13px;margin-bottom:11px;
+  }
+  .gm-over-champ{
+    display:flex;align-items:center;gap:7px;justify-content:center;
+    font-size:11.5px;color:rgba(255,255,255,.8);margin-bottom:15px;
+  }
+  .gm-over-btn{display:flex;gap:9px;justify-content:center}
+  .gm-again,.gm-quit{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;
+    padding:8px 17px;border-radius:999px;cursor:pointer;transition:.15s;
+  }
+  .gm-again{background:var(--gold);color:#fff;border:1px solid transparent}
+  .gm-again:hover{filter:brightness(1.1)}
+  .gm-quit{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3)}
+  .gm-quit:hover{background:rgba(255,255,255,.1);color:#fff}
+
   /* ===== LEVEL — EXP / LV / ระดับ / MVP ===== */
   /* แถบ MVP เหนือแถวรูปทีม */
   .lv-mvp{
@@ -1097,6 +1223,7 @@
           <div class="ofc-actors" id="ofcActors"></div>
         </div>
       </div>
+      <div class="gm-board" id="gmBoard"></div>
     </section>
 
     <div class="filters" id="filters">
@@ -2698,6 +2825,7 @@ function ofcBuildActors(){
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
   ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
+  if(typeof gmAttachOffice === 'function') gmAttachOffice();   /* ปุ่ม ▶ เปิดเกม (games.js) */
   /* พรีโหลดรูปท่าเดิน (background-image ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
   setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK, ...Object.values(OFC_HAND)]
     .forEach(u=>{ const i=new Image(); i.src=u; }); }, 1500);
@@ -3446,6 +3574,8 @@ loadTodo();        // To Do list (todo.json)
 loadPain();        // Pain Point ธุรกิจ (painpoint.json / Firestore agents/painpoint)
 </script>
 
+<script src="games.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
@@ -3481,6 +3611,10 @@ firebase.firestore().collection("agents").doc("worklog").onSnapshot(d=>{
   if(tag){ tag.textContent="LIVE"; tag.style.color="var(--done)"; }
   if(msg) msg.innerHTML='Real-time จาก <span class="mono">Firestore</span> + <span class="mono">worklog.json</span>';
 },err=>console.warn("Firestore worklog:",err));
+/* กระดานแชมป์มินิเกม — เขียนจากหน้าเว็บเองตอนเล่นจบ (games.js) */
+firebase.firestore().collection("agents").doc("games").onSnapshot(d=>{
+  if(d.exists && typeof gmApplyDoc === 'function') gmApplyDoc(d.data());
+},err=>console.warn("Firestore games:",err));
 /* widget: Claude limit — เขียนโดย scripts/push-limit.mjs บนเครื่อง */
 firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
   if(d.exists) renderLimit(d.data());
