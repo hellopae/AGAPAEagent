@@ -239,25 +239,26 @@
     .gm-lab{min-width:0}
   }
 
-  /* ปุ่ม ▶ ลอยบนของในผัง — โผล่ตอนชี้ที่ผัง */
-  .ofc-stage .gm-pin{
-    position:absolute;transform:translate(-50%,-50%);
-    width:2.1cqw;height:2.1cqw;border-radius:50%;padding:0;
-    display:flex;align-items:center;justify-content:center;
-    font-size:.9cqw;line-height:1;color:#fff;cursor:pointer;
-    background:var(--accent);border:.16cqw solid var(--card);
-    box-shadow:0 .15cqw .4cqw rgba(27,28,32,.35);
-    opacity:0;transition:opacity .18s,transform .18s;z-index:900;
+  /* ของที่กดเล่นเกมได้ — โต๊ะปิงปอง · ตู้ปลา · โกล
+     กดที่ตัวของเลย ไม่มีปุ่มลอย */
+  .gm-tap{cursor:pointer}
+  .gm-tap img,.gm-tap>img{transition:filter .16s,transform .16s}
+  .gm-tap:hover img{
+    filter:drop-shadow(0 0 .5cqw var(--gold)) drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.3));
+    transform:translateY(-.18cqw);
   }
-  .ofc-stage:hover .gm-pin{opacity:.92}
-  .ofc-stage .gm-pin:hover{opacity:1;background:var(--gold);transform:translate(-50%,-50%) scale(1.14)}
-  .ofc-stage .gm-pin:focus-visible{opacity:1;outline:2px solid var(--gold);outline-offset:2px}
-  /* ปุ่มที่เกาะกับ prop — วางมุมขวาบนของ prop นั้น */
-  .gm-host{position:relative}
-  .gm-host > .gm-pin{left:100%;top:0}
+  .gm-tap:focus-visible{outline:.2cqw solid var(--gold);outline-offset:.15cqw;border-radius:.4cqw}
+
+  /* โกลฟุตบอลบนทางเดิน — ตัวละครเดินผ่านหน้าได้ (z ต่ำกว่าแถวเดิน) */
+  .ofc-goal{
+    position:absolute;transform:translate(-50%,-100%);
+    border:none;background:none;padding:0;display:block;line-height:0;
+  }
+  .ofc-goal img{width:100%;display:block;
+    filter:drop-shadow(0 .2cqw .3cqw rgba(27,28,32,.28))}
 
   /* โมดัลเกม */
-  .gm-modal{position:fixed;inset:0;z-index:70;display:none}
+  .gm-modal{position:fixed;inset:0;z-index:2147483000;display:none}
   .gm-modal.on{display:block}
   .gm-scrim{position:absolute;inset:0;background:rgba(18,20,26,.62);backdrop-filter:blur(3px)}
   .gm-card{
@@ -441,6 +442,9 @@
   .ofc-stage{
     position:relative;width:100%;min-width:880px;aspect-ratio:1586/992;
     container-type:inline-size;background:var(--paper-2);
+    /* ขัง z-index ของตัวละคร/ของในผัง (300-900 และ :hover 9999) ไว้ในนี้
+       ไม่งั้นมันไปแข่งกับ modal/drawer ที่ระดับ root แล้วเดินทับ popup */
+    isolation:isolate;
     border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;
   }
   .ofc-plan,.ofc-plan .ofc-svg{display:block;width:100%;height:100%}
@@ -2915,6 +2919,11 @@ const OFC_TANK_POS = [1180,810];      /* วางบนโต๊ะในห้
 const OFC_TANK_W   = 5.0;             /* cqw — กว้างพอดีหน้าโต๊ะ */
 const OFC_FISH_POS = [1244,848];      /* แมวนั่งดูปลาข้างโต๊ะ ไม่บังปลา */
 const OFC_FISH_STAND = [1290,878];    /* จุดยืนดูปลาของเอเจนต์ ถัดจากแมว */
+/* โกลฟุตบอล — วางบนทางเดินกลางล่าง ถัดจากจุดพักลูกบอล (B5 [790,645])
+   ตั้ง y ไว้เหนือแนวเดิน 645 นิดหน่อย ตัวละครจะเดินผ่านหน้าโกล ไม่ใช่ทะลุ */
+const OFC_GOAL_ART = 'office/sprites/cat/Goal.png';
+const OFC_GOAL_POS = [912, 624];
+const OFC_GOAL_W   = 5.6;             /* cqw */
 const OFC_PP_ART   = 'office/sprites/cat/pingpong.png';
 const OFC_PP_POS   = [430,800];       /* กลางที่ว่างของห้องเกม */
 const OFC_PP_W     = 16.9;            /* cqw */
@@ -3082,6 +3091,16 @@ function ofcBuildProps(){
   board.style.zIndex = Math.round(OFC_BOARD.y) - 3;
   layer.appendChild(board);
   ofcBoardRender();
+
+  const goal = document.createElement('button');
+  goal.className = 'ofc-goal'; goal.type = 'button'; goal.id = 'ofcGoal';
+  goal.title = 'โกลฟุตบอล';
+  goal.style.width = OFC_GOAL_W + 'cqw';
+  goal.style.left = (OFC_GOAL_POS[0]/OFC_W*100)+'%';
+  goal.style.top  = (OFC_GOAL_POS[1]/OFC_H*100)+'%';
+  goal.style.zIndex = Math.round(OFC_GOAL_POS[1]) - 3;
+  goal.innerHTML = `<img src="${OFC_GOAL_ART}" alt="โกลฟุตบอล">`;
+  layer.appendChild(goal);
 
   const ps5 = document.createElement('img');
   ps5.className = 'ofc-ps5'; ps5.src = OFC_PS5_ART; ps5.alt = 'PS5';

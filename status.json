@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T03:15:14Z",
+  "updatedAt": "2026-08-26T03:28:10Z",
   "agents": [
     {
       "id": "claudy",
@@ -269,11 +269,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "แก้ node ที่พังจาก llhttp + เก็บกวาด backup ของ Widget",
+      "task": "แก้ตัวละครเดินทับ popup เกม + เปลี่ยนเป็นกดที่ของในผัง",
       "report": {
-        "when": "23:52",
-        "title": "node ใช้ได้ปกติแล้ว · เคลียร์ backup คืน 90MB",
-        "body": "brew reinstall node เรียบร้อย — แต่ brew ดึง formula ล่าสุดมาให้\nnode 25.8.2 → 26.7.0 · npm → 11.19.0 (ข้ามเมเจอร์ ไม่ใช่แค่ reinstall)\n\nทดสอบแล้ว: npm run build ของ Widget ผ่าน ได้ hash ไฟล์เดิมเป๊ะ\n→ ตัวใน /Applications ยังเป็นตัวล่าสุด ไม่ต้อง build ใหม่\n\nลบ backup เก่าของ Widget 6 ตัว (bak-20260807 → bak-20260825) คืนพื้นที่ 90MB\nเหลือ bak-20260825-2347 ไว้ตัวเดียวสำหรับย้อนกลับ"
+        "when": "10:28",
+        "title": "popup เกมไม่โดนทับแล้ว · กดที่ของได้เลย",
+        "body": "สาเหตุ: .ofc-stage ไม่ได้สร้าง stacking context ตัวละคร z-index 300-900\n(และ :hover 9999!important) เลยไปแข่งกับ modal ที่ตั้งไว้แค่ 70 ที่ระดับ root\n\nแก้: isolation:isolate ที่ .ofc-stage + ดัน modal เป็น 2147483000\nผลพลอยได้ — :hover 9999 ไม่ไปทับ header/drawer อีกแล้ว\n\nเอาปุ่ม ▶ ออก เปลี่ยนเป็นกดที่ของเลย:\n🏓 โต๊ะปิงปอง · 🎣 ตู้ปลา · ⚽ โกลฟุตบอล (วางใหม่บนทางเดินข้างลูกบอล)\nของที่กดได้เรืองสีทองตอนชี้ · ตู้ปลายังเรียกน้องส้มมาดูปลาได้เหมือนเดิม"
       }
     },
     {

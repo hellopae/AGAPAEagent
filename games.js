@@ -105,7 +105,7 @@ function gmRenderBoard(){
   }).join('');
   box.innerHTML = `<div class="gm-head"><span class="gm-trophy">🏆</span>
       <span class="gm-title">กระดานแชมป์</span>
-      <span class="gm-sub">กดปุ่มเล่นเพื่อท้าชิง — หรือกด ▶ ที่ของในผังก็ได้</span>
+      <span class="gm-sub">กดปุ่มเล่นเพื่อท้าชิง — หรือกดที่โต๊ะปิงปอง ตู้ปลา และโกลในผังก็ได้</span>
     </div>${rows}`;
 }
 
@@ -683,48 +683,22 @@ function gmFishing(stage){
 const GM_GAMES = {pingpong:gmPingpong, football:gmFootball, fishing:gmFishing};
 
 /* =====================================================================
-   ปุ่ม ▶ บนของในผังออฟฟิศ
-   เรียกหลัง ofcBuildActors() ทุกครั้ง — ของถูกสร้างใหม่หมดตอน AGENTS เปลี่ยน
-   ใช้ปุ่มลอยแทนการ hijack onclick เดิม เพราะลูกบอลกับตู้ปลามีลูกเล่นของมันอยู่แล้ว
-   (เตะบอล / เรียกน้องส้มมาดูปลา) ไม่อยากให้หาย
+   ต่อของในผังให้กดเล่นเกมได้ — โต๊ะปิงปอง · ตู้ปลา · โกล
+   เรียกหลัง ofcBuildActors() ทุกครั้ง เพราะของถูกสร้างใหม่หมด
+   ใช้ addEventListener ไม่ทับ onclick เดิม — ตู้ปลายังเรียกน้องส้มมาดูปลาได้เหมือนเดิม
    ===================================================================== */
-function gmPin(host, key, dx, dy){
-  if(!host) return;
-  const d = GM_DEFS[key];
-  const b = document.createElement('button');
-  b.className = 'gm-pin'; b.type = 'button';
-  b.title = `เล่น${d.label}`;
-  b.textContent = '▶';
-  if(dx != null) b.style.left = dx;
-  if(dy != null) b.style.top = dy;
-  b.onclick = e => { e.stopPropagation(); e.preventDefault(); gmOpen(key); };
-  host.appendChild(b);
-  host.classList.add('gm-host');
+function gmTap(el, key){
+  if(!el || el.dataset.gm) return;
+  el.dataset.gm = key;
+  el.classList.add('gm-tap');
+  el.title = `${GM_DEFS[key].emoji} เล่น${GM_DEFS[key].label}`;
+  el.addEventListener('click', () => gmOpen(key));
 }
 
 function gmAttachOffice(){
-  const pp = document.getElementById('ofcPP');
-  if(pp && !pp.querySelector('.gm-pin')) gmPin(pp, 'pingpong');
-
-  const tank = document.querySelector('.ofc-tank');
-  if(tank && !tank.querySelector('.gm-pin')) gmPin(tank, 'fishing');
-
-  const ball = document.querySelector('.ofc-ball');
-  if(ball && !ball.parentElement.querySelector('.gm-pin-ball')){
-    /* ลูกบอลเป็นปุ่มเตะอยู่แล้วและเลื่อนตำแหน่งตลอด — วางปุ่มไว้บนสนาม
-       ตรงจุดพักของบอลแทน ไม่เกาะไปกับตัวบอล */
-    const layer = document.getElementById('ofcActors');
-    if(layer){
-      const b = document.createElement('button');
-      b.className = 'gm-pin gm-pin-ball'; b.type = 'button';
-      b.title = 'เล่นยิงจุดโทษ'; b.textContent = '▶';
-      b.style.left = (OFC_BALL_HOME[0] / OFC_W * 100) + '%';
-      b.style.top  = ((OFC_BALL_HOME[1] - 40) / OFC_H * 100) + '%';
-      b.style.zIndex = Math.round(OFC_BALL_HOME[1]) + 4;
-      b.onclick = e => { e.stopPropagation(); gmOpen('football'); };
-      layer.appendChild(b);
-    }
-  }
+  gmTap(document.getElementById('ofcPP'),   'pingpong');
+  gmTap(document.querySelector('.ofc-tank'), 'fishing');
+  gmTap(document.getElementById('ofcGoal'), 'football');
 }
 
 /* ---------- boot ---------- */

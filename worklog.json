@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-08-26T03:15:14Z",
+  "updatedAt": "2026-08-26T03:28:10Z",
   "entries": [
+    {
+      "id": "wl-260826-dale-gmfix",
+      "datetime": "2026-08-26T03:28:10Z",
+      "displayDate": "26 ส.ค. 2569",
+      "displayTime": "10:28",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "แก้ตัวละครเดินทับ popup เกม + เปลี่ยนเป็นกดที่ของในผัง",
+      "summary": "บั๊ก: ตัวละครกับของในผังเดินทับหน้าต่างเกม เพราะ .ofc-stage ไม่ได้สร้าง stacking context ของตัวเอง ตัวละครที่มี z-index 300-900 (และ :hover 9999!important) เลยไปแข่งกับ modal ที่ตั้งไว้แค่ 70 ที่ระดับ root. แก้สองชั้น — ใส่ isolation:isolate ที่ .ofc-stage ขัง z-index ทั้งหมดไว้ในผัง (ผลพลอยได้คือ :hover 9999 ไม่ไปทับ header/drawer อีก) และดัน .gm-modal เป็น 2147483000. เปลี่ยนวิธีเปิดเกมตามที่เป้สั่ง — เอาปุ่ม ▶ วงกลมดำออก ให้กดที่ตัวของเลย: โต๊ะปิงปอง ตู้ปลา และโกลฟุตบอลที่เพิ่งวางใหม่บนทางเดิน [912,624] ถัดจากจุดพักลูกบอล ตั้ง z ต่ำกว่าแนวเดินเพื่อให้ตัวละครเดินผ่านหน้าโกล. ของที่กดได้จะเรืองสีทองตอนเอาเมาส์ชี้. ใช้ addEventListener ไม่ทับ onclick เดิม ตู้ปลายังเรียกน้องส้มมาดูปลาได้เหมือนเดิม",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
     {
       "id": "wl-260826-toby-games1",
       "datetime": "2026-08-26T03:15:14Z",
