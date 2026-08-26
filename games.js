@@ -26,9 +26,9 @@ const GM_DEFS = {
   tetris:   {label:'เตตริส',     emoji:'🧱', room:'bm',     rival:null,   solo:true,
              unit:'แถว', how:'← → เลื่อน · ↑ หมุน · ↓ ลงเร็ว · Space ทิ้งลงสุด · เก็บให้ได้แถวเยอะที่สุด'},
   sudoku:   {label:'ซูโดกุ',     emoji:'🔢', room:'r5',     rival:'vera', solo:false,
-             unit:'วิ',   how:'กดช่องแล้วพิมพ์ 1-9 (หรือกดแป้นเลขข้างล่าง) · ทำให้เสร็จก่อนเวลาของ Vera ถึงจะชนะ'},
+             unit:'วิ',   how:'เลือกระดับ ง่าย/ปกติ/ยาก ได้ · กดช่องแล้วพิมพ์ 1-9 (หรือกดแป้นเลขข้างล่าง) · ทำให้เสร็จก่อนเวลาของ Vera ถึงจะชนะ'},
   coffee:   {label:'ชงกาแฟ',     emoji:'☕', room:'pantry', rival:null,   solo:true,
-             unit:'แก้ว', how:'กดค้างเพื่อรินให้ถึงแถบที่เขาสั่ง ปล่อยเพื่อเสิร์ฟ · ริน 10 แก้ว รินเกินคือเสีย'},
+             unit:'ดาว', how:'กดค้างรินให้ถึงแถบที่เขาสั่ง · ปล่อยแล้วใส่ นม/น้ำตาล/ครีม ให้ครบ (หรือกด 1 2 3) · กดเสิร์ฟแล้วเขาให้ดาว 1-5 ดวง · ชง 10 แก้ว'},
   breakout: {label:'ทุบอิฐ',     emoji:'🧱', room:'bm',     rival:null,   solo:true,
              unit:'ก้อน', how:'เลื่อนเมาส์คุมแป้น · ทุบอิฐให้หมด มีลูก 3 ลูก'},
 };
@@ -56,7 +56,13 @@ const GM_ART = {
 };
 const GM_IMG = {};
 function gmImg(key){
-  if(!GM_IMG[key]){ const i = new Image(); i.src = GM_ART[key]; GM_IMG[key] = i; }
+  if(!GM_IMG[key]){
+    const i = new Image();
+    /* คีย์ที่ไม่ได้อยู่ใน GM_ART ถือว่าเป็น id ของ agent → ใช้สไปรท์ SD ตัวเดียวกับในผัง
+       (เกมชงกาแฟสุ่มคนมาสั่งจากทั้งทีม ไม่ได้มีแค่ toby/dale) */
+    i.src = GM_ART[key] || `office/sprites/${key}.png`;
+    GM_IMG[key] = i;
+  }
   return GM_IMG[key];
 }
 /* พรีโหลดไว้ก่อน จะได้ไม่วืบตอนเปิดเกมครั้งแรก */
@@ -1114,26 +1120,56 @@ function gmTetris(stage){
    ทำเป็น DOM ไม่ใช่ canvas เพราะต้องกดช่องกับพิมพ์เลข
    ตรวจคำตอบด้วยกติกาซูโดกุตรง ๆ (แถว/หลัก/บล็อกต้องมี 1-9 ครบ)
    ไม่ได้เทียบกับเฉลยที่เก็บไว้ — โจทย์ที่มีหลายคำตอบก็เลยไม่พังตาม
-   ===================================================================== */
-const GM_SUDOKU_PAR = 480;   /* เวลาของ Vera (วินาที) — ทำเร็วกว่านี้ถึงจะชนะ */
 
-function gmSudokuGen(){
-  const g = new Array(81).fill(0);
-  const ok = (i, v) => {
-    const r = (i/9)|0, c = i%9, br = ((r/3)|0)*3, bc = ((c/3)|0)*3;
-    for(let k=0;k<9;k++){
-      if(g[r*9+k] === v) return false;
-      if(g[k*9+c] === v) return false;
-      if(g[(br+((k/3)|0))*9 + bc + k%3] === v) return false;
+   เลือกระดับความยากได้ 3 ระดับ — เจาะช่องออกมากขึ้น + เวลาของ Vera สั้นลง
+   โจทย์ทุกใบเจาะแบบเช็คคำตอบเดียว (unique) จะได้ไล่ตรรกะออกจริง ไม่ต้องเดา
+   ===================================================================== */
+const GM_SUDOKU_LV = [
+  {k:'easy',   label:'ง่าย',  holes:34, par:720},
+  {k:'normal', label:'ปกติ',  holes:44, par:540},
+  {k:'hard',   label:'ยาก',   holes:52, par:420},
+];
+const GM_SUDOKU_LS = 'agapae.sudoku.lv';
+const gmSudokuLv = () => GM_SUDOKU_LV.find(l => l.k === localStorage.getItem(GM_SUDOKU_LS))
+                      || GM_SUDOKU_LV[0];
+
+/* ตรวจว่าเลข v ลงช่อง i ได้ไหมตามกติกา */
+function gmSdOk(g, i, v){
+  const r = (i/9)|0, c = i%9, br = ((r/3)|0)*3, bc = ((c/3)|0)*3;
+  for(let k=0;k<9;k++){
+    if(g[r*9+k] === v) return false;
+    if(g[k*9+c] === v) return false;
+    if(g[(br+((k/3)|0))*9 + bc + k%3] === v) return false;
+  }
+  return true;
+}
+
+/* นับจำนวนคำตอบ แต่หยุดทันทีที่เจอครบ limit (ใช้ limit=2 พอ — แค่อยากรู้ว่าซ้ำไหม) */
+function gmSdCount(puz, limit){
+  const g = puz.slice();
+  let n = 0;
+  const go = () => {
+    if(n >= limit) return;
+    const i = g.indexOf(0);
+    if(i < 0){ n++; return; }
+    for(let v=1;v<=9;v++){
+      if(!gmSdOk(g, i, v)) continue;
+      g[i] = v; go(); g[i] = 0;
+      if(n >= limit) return;
     }
-    return true;
   };
+  go();
+  return n;
+}
+
+function gmSudokuGen(holes){
+  const g = new Array(81).fill(0);
   const fill = i => {
     if(i === 81) return true;
     const nums = [1,2,3,4,5,6,7,8,9];
     for(let j=8;j>0;j--){ const k = Math.floor(Math.random()*(j+1)); [nums[j],nums[k]] = [nums[k],nums[j]]; }
     for(const v of nums){
-      if(!ok(i,v)) continue;
+      if(!gmSdOk(g, i, v)) continue;
       g[i] = v;
       if(fill(i+1)) return true;
       g[i] = 0;
@@ -1141,11 +1177,19 @@ function gmSudokuGen(){
     return false;
   };
   fill(0);
-  /* เจาะช่องออก 45 ช่อง เหลือโจทย์ 36 ตัว */
+  /* เจาะทีละช่อง — ถ้าเจาะแล้วคำตอบไม่เหลือแบบเดียว ให้ใส่กลับ
+     บางระดับอาจเจาะไม่ครบตามเป้า ก็ปล่อยไป โจทย์ยังใช้ได้ */
   const idx = [...Array(81).keys()];
   for(let j=80;j>0;j--){ const k = Math.floor(Math.random()*(j+1)); [idx[j],idx[k]] = [idx[k],idx[j]]; }
   const puz = g.slice();
-  idx.slice(0,45).forEach(i => { puz[i] = 0; });
+  let dug = 0;
+  for(const i of idx){
+    if(dug >= holes) break;
+    const keep = puz[i];
+    puz[i] = 0;
+    if(gmSdCount(puz, 2) === 1) dug++;
+    else puz[i] = keep;
+  }
   return puz;
 }
 
@@ -1164,31 +1208,34 @@ function gmSudokuDone(v){
   return true;
 }
 
+const gmMMSS = s => `${Math.floor(s/60)}:${String(Math.round(s)%60).padStart(2,'0')}`;
+
 function gmSudoku(stage){
-  const puz = gmSudokuGen();
-  const val = puz.slice();
-  let sel = -1, t0 = Date.now(), over = false;
+  let lv = gmSudokuLv();
+  let puz = [], val = [], sel = -1, t0 = 0, over = false;
 
   const wrap = document.createElement('div');
   wrap.className = 'sd-wrap';
   wrap.innerHTML = `
     <div class="sd-top">
       <span class="mono">เวลา <b id="sdTime">0:00</b></span>
-      <span class="sd-par mono">เวลาของ ${gmEsc(gmName('vera'))} ${Math.floor(GM_SUDOKU_PAR/60)}:00</span>
+      <span class="sd-par mono" id="sdPar"></span>
     </div>
+    <div class="sd-lv" id="sdLv">${GM_SUDOKU_LV.map(l =>
+      `<button class="sd-lvb" type="button" data-lv="${l.k}">${l.label}</button>`).join('')}</div>
     <div class="sd-grid" id="sdGrid"></div>
     <div class="sd-pad" id="sdPad"></div>`;
   stage.appendChild(wrap);
 
   const gridEl = wrap.querySelector('#sdGrid');
-  const cells = [];
+  const parEl  = wrap.querySelector('#sdPar');
+  const tEl    = wrap.querySelector('#sdTime');
+  const cells  = [];
   for(let i=0;i<81;i++){
     const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'sd-c' + (puz[i] ? ' fixed' : '');
+    b.type = 'button'; b.className = 'sd-c';
     if(i%3 === 2 && i%9 !== 8) b.classList.add('br');
     if(((i/9)|0)%3 === 2 && i < 72) b.classList.add('bb');
-    b.textContent = puz[i] || '';
     b.onclick = () => { if(!puz[i] && !over){ sel = i; paint(); } };
     gridEl.appendChild(b);
     cells.push(b);
@@ -1202,6 +1249,31 @@ function gmSudoku(stage){
     b.onclick = () => put(n);
     padEl.appendChild(b);
   });
+
+  /* เปลี่ยนระดับ = แจกโจทย์ใหม่และเริ่มจับเวลาใหม่ */
+  wrap.querySelector('#sdLv').addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if(!b) return;
+    const next = GM_SUDOKU_LV.find(l => l.k === b.dataset.lv);
+    if(!next || (next.k === lv.k && !over)) return;
+    lv = next;
+    try{ localStorage.setItem(GM_SUDOKU_LS, lv.k); }catch(err){}
+    deal();
+  });
+
+  function deal(){
+    over = false; sel = -1;
+    puz = gmSudokuGen(lv.holes);
+    val = puz.slice();
+    t0 = Date.now();
+    parEl.textContent = `เวลาของ ${gmName('vera')} ${gmMMSS(lv.par)}`;
+    tEl.textContent = '0:00';
+    tEl.parentElement.classList.remove('sd-late');
+    cells.forEach((b,i) => b.classList.toggle('fixed', !!puz[i]));
+    wrap.querySelectorAll('.sd-lvb').forEach(b =>
+      b.classList.toggle('on', b.dataset.lv === lv.k));
+    paint();
+  }
 
   function put(n){
     if(over || sel < 0 || puz[sel]) return;
@@ -1236,10 +1308,9 @@ function gmSudoku(stage){
   function finish(){
     over = true;
     const secs = Math.round((Date.now() - t0)/1000);
-    const mm = Math.floor(secs/60), ss = String(secs%60).padStart(2,'0');
     setTimeout(() => gmResult(stage, 'sudoku',
-      {win: secs < GM_SUDOKU_PAR, score: Math.max(0, GM_SUDOKU_PAR - secs)},
-      `<span class="mono">ใช้เวลา ${mm}:${ss} · เวลาของ ${gmEsc(gmName('vera'))} 8:00</span>`), 300);
+      {win: secs < lv.par, score: Math.max(0, lv.par - secs)},
+      `<span class="mono">ระดับ${lv.label} · ใช้เวลา ${gmMMSS(secs)} · เวลาของ ${gmEsc(gmName('vera'))} ${gmMMSS(lv.par)}</span>`), 300);
   }
 
   const kd = e => {
@@ -1253,68 +1324,158 @@ function gmSudoku(stage){
   };
   document.addEventListener('keydown', kd);
 
-  const tEl = wrap.querySelector('#sdTime');
   const tick = setInterval(() => {
     if(over) return;
     const s2 = Math.round((Date.now() - t0)/1000);
-    tEl.textContent = `${Math.floor(s2/60)}:${String(s2%60).padStart(2,'0')}`;
-    tEl.parentElement.classList.toggle('sd-late', s2 >= GM_SUDOKU_PAR);
+    tEl.textContent = gmMMSS(s2);
+    tEl.parentElement.classList.toggle('sd-late', s2 >= lv.par);
   }, 500);
 
-  paint();
+  deal();
   return () => { clearInterval(tick); document.removeEventListener('keydown', kd); };
 }
 
 /* =====================================================================
    เกม 7 — ☕ ชงกาแฟให้ทีม (เล่นคนเดียว แต่มี agent มาสั่งจริง)
-   กดค้างเพื่อริน ปล่อยเพื่อเสิร์ฟ — ต้องให้ระดับน้ำอยู่ในแถบที่เขาสั่ง
+   2 จังหวะต่อแก้ว:
+     1) กดค้างรินกาแฟให้ระดับอยู่ในแถบที่เขาสั่ง — ปล่อยเมื่อพอ
+     2) ใส่ส่วนผสม นม / น้ำตาล / ครีม ให้ครบตามออเดอร์ แล้วกดเสิร์ฟ
+   เสร็จแล้วคนสั่งให้ดาว 1-5 ดวง · สกอร์ = ดาวรวมทั้ง 10 แก้ว (เต็ม 50)
    ===================================================================== */
-const GM_COFFEE_ORDER = {
-  claudy:'ดำล้วน ไม่หวาน', minnie:'ลาเต้เยอะ ๆ นม', reese:'อเมริกาโน่ เข้ม',
-  addy:'เอสเปรสโซ่ช็อตเดียว', rae:'คาปูชิโน่ ฟองหนา', vera:'ตวงให้พอดีขอบ',
-  mind:'ลาเต้ ขอสีสวย ๆ', chris:'ดำ ไม่ใส่อะไร', libby:'ชาเขียวก็ได้นะ',
-  nick:'อะไรก็ได้ที่คาเฟอีนเยอะ', dale:'แก้วใหญ่ ยาว ๆ', toby:'หวานหน่อย',
-  news:'ร้อน ๆ ก่อนออกข่าว',
+const GM_COFFEE_MIX = [
+  {k:'milk',  label:'นม',     em:'🥛', key:'1'},
+  {k:'sugar', label:'น้ำตาล', em:'🍬', key:'2'},
+  {k:'cream', label:'ครีม',   em:'🍦', key:'3'},
+];
+/* สูตรประจำตัวของแต่ละคน — ใช้เป็นออเดอร์บ่อย ๆ แต่บางแก้วก็สั่งนอกสูตร */
+const GM_COFFEE_TASTE = {
+  claudy:{say:'ดำล้วน ไม่หวาน',        milk:0, sugar:0, cream:0},
+  minnie:{say:'ลาเต้เยอะ ๆ นม',        milk:2, sugar:1, cream:0},
+  reese: {say:'อเมริกาโน่ เข้ม',        milk:0, sugar:0, cream:1},
+  addy:  {say:'เอสเปรสโซ่ช็อตเดียว',    milk:0, sugar:1, cream:0},
+  rae:   {say:'คาปูชิโน่ ฟองหนา',       milk:1, sugar:1, cream:1},
+  vera:  {say:'ตวงให้พอดีขอบ',          milk:1, sugar:0, cream:0},
+  mind:  {say:'ลาเต้ ขอสีสวย ๆ',        milk:2, sugar:0, cream:1},
+  chris: {say:'ดำ ไม่ใส่อะไร',          milk:0, sugar:0, cream:0},
+  libby: {say:'หวานได้ แต่อย่าข้น',     milk:1, sugar:2, cream:0},
+  nick:  {say:'อะไรก็ได้ที่คาเฟอีนเยอะ', milk:0, sugar:2, cream:0},
+  dale:  {say:'แก้วใหญ่ ยาว ๆ',         milk:1, sugar:1, cream:0},
+  toby:  {say:'หวานหน่อย',              milk:1, sugar:2, cream:1},
+  news:  {say:'ร้อน ๆ ก่อนออกข่าว',     milk:0, sugar:1, cream:0},
 };
-const GM_COFFEE_OK   = ['พอดีเป๊ะ ขอบคุณ!','อันนี้แหละที่ต้องการ','เก่งมาก กำลังดี'];
-const GM_COFFEE_OVER = ['ล้นแล้ว!','เยอะไปนิดนะ','หกใส่โต๊ะหมดเลย'];
-const GM_COFFEE_LOW  = ['น้อยไปหน่อย','นี่ครึ่งแก้วเอง','ขออีกนิดได้ไหม'];
+/* คำติชมแยกตามจำนวนดาวที่ให้ */
+const GM_COFFEE_SAY = {
+  5: ['เป๊ะมาก! แก้วนี้ 5 ดาวเลย','อร่อยที่สุดตั้งแต่เคยกินมา','นี่แหละรสที่รอ ขอบคุณ!'],
+  4: ['อร่อยนะ ขาดอีกนิดเดียวเอง','ดีเลย เกือบเป๊ะแล้ว','กินได้สบาย ๆ ขอบคุณ'],
+  3: ['พอไหว แต่ไม่ใช่ที่สั่งนะ','กลาง ๆ อ่ะ','โอเคแหละ แต่รอบหน้าเอาใหม่'],
+  2: ['อันนี้ไม่ค่อยตรงเลย','ชงใหม่ได้ไหม...','รสเพี้ยนไปเยอะนะ'],
+  1: ['นี่กาแฟเหรอ','ขอเทิ้งได้ไหม','เอาไปคืนเครื่องเถอะ'],
+};
 
 function gmCoffee(stage){
   const W = 640, H = 400, CUPS = 10;
   const {cv, ctx} = gmCanvas(stage, W, H);
   const hud = gmHud(stage);
   const ids = (typeof AGENTS !== 'undefined' ? AGENTS : []).map(a => a.id);
-  const CX = W/2, CTOP = 120, CH = 190, CW = 130;   /* กรอบแก้ว */
+  const CX = W/2, CTOP = 118, CH = 188, CW = 130;   /* กรอบแก้ว */
 
-  const S = {n:0, ok:0, fill:0, pouring:false, phase:'ready', t:0,
-             who:null, lo:0, hi:0, msg:'', say:'', over:false};
+  const S = {n:0, stars:0, full:0, fill:0, pouring:false, phase:'pour', t:0,
+             who:null, lo:0, hi:0, need:{milk:0,sugar:0,cream:0},
+             add:{milk:0,sugar:0,cream:0}, rate:0, msg:'', say:'', over:false};
+
+  /* ---- แถบปุ่มส่วนผสม (DOM เพราะกดง่ายกว่าเล็งบน canvas) ---- */
+  const bar = document.createElement('div');
+  bar.className = 'cf-bar';
+  bar.innerHTML = GM_COFFEE_MIX.map(m =>
+    `<button class="cf-b" type="button" data-mix="${m.k}">
+       <span class="em">${m.em}</span><span>${m.label}</span><span class="n" data-n="${m.k}">0</span>
+     </button>`).join('') +
+    `<button class="cf-b cf-serve" type="button" data-serve="1">เสิร์ฟ ↵</button>`;
+  stage.appendChild(bar);
+
+  const onBar = e => {
+    const b = e.target.closest('button');
+    if(!b || S.over) return;
+    if(b.dataset.serve) return serve();
+    const k = b.dataset.mix;
+    if(k) addMix(k);
+  };
+  bar.addEventListener('click', onBar);
+
+  function addMix(k){
+    if(S.phase !== 'mix') return;
+    S.add[k] = S.add[k] >= 3 ? 0 : S.add[k] + 1;   /* กดวนกลับ 0 ถ้าใส่เกิน */
+    paintBar();
+  }
+
+  function paintBar(){
+    const live = S.phase === 'mix' && !S.over;
+    bar.querySelectorAll('button').forEach(b => { b.disabled = !live; });
+    GM_COFFEE_MIX.forEach(m => {
+      const el = bar.querySelector(`[data-n="${m.k}"]`);
+      if(el) el.textContent = S.add[m.k];
+      const btn = bar.querySelector(`[data-mix="${m.k}"]`);
+      if(btn) btn.classList.toggle('on', S.add[m.k] > 0);
+    });
+  }
 
   function nextCup(){
     if(S.n >= CUPS){
-      S.over = true;
-      setTimeout(() => gmResult(stage, 'coffee', {score:S.ok},
-        `<span class="mono">เสิร์ฟถูกใจ ${S.ok} จาก ${CUPS} แก้ว</span>`), 260);
+      S.over = true; paintBar();
+      setTimeout(() => gmResult(stage, 'coffee', {score:S.stars},
+        `<span class="mono">เสิร์ฟครบ ${CUPS} แก้ว · ได้ ${S.stars} ดาวจาก ${CUPS*5} · 5 ดาวเต็ม ${S.full} แก้ว</span>`), 300);
       return;
     }
     S.who = ids.length ? gmPick(ids) : 'claudy';
-    /* แถบเป้าหมายแคบลงเรื่อย ๆ ตามจำนวนแก้วที่ผ่านมา */
-    const band = 0.20 - Math.min(0.10, S.n * 0.011);
+    gmImg(S.who);                                   /* เริ่มโหลดรูปทันที จะได้ไม่วืบ */
+    /* แถบกาแฟแคบลงเรื่อย ๆ ตามจำนวนแก้วที่ผ่านมา */
+    const band = 0.20 - Math.min(0.09, S.n * 0.010);
     S.lo = 0.30 + Math.random() * (0.62 - band - 0.30);
     S.hi = S.lo + band;
-    S.fill = 0; S.phase = 'pour'; S.msg = ''; S.say = '';
+    /* ออเดอร์ส่วนผสม — 60% สั่งตามสูตรประจำตัว ที่เหลือสั่งนอกสูตร */
+    const t = GM_COFFEE_TASTE[S.who];
+    if(t && Math.random() < 0.6){
+      S.need = {milk:t.milk, sugar:t.sugar, cream:t.cream};
+    }else{
+      S.need = {milk:(Math.random()*3)|0, sugar:(Math.random()*3)|0, cream:(Math.random()*2)|0};
+    }
+    S.add = {milk:0, sugar:0, cream:0};
+    S.fill = 0; S.phase = 'pour'; S.msg = ''; S.say = ''; S.rate = 0;
+    paintBar();
   }
   nextCup();
 
+  /* ให้ดาว — เริ่มที่ 5 แล้วหักตามความคลาดเคลื่อน */
+  function rate(){
+    let st = 5;
+    const band = S.hi - S.lo;
+    const off = S.fill > S.hi ? S.fill - S.hi : (S.fill < S.lo ? S.lo - S.fill : 0);
+    if(off > 0) st -= off > band * 0.8 ? 3 : 1;
+    let miss = 0;
+    GM_COFFEE_MIX.forEach(m => { miss += Math.abs(S.add[m.k] - S.need[m.k]); });
+    st -= Math.min(3, miss);
+    return gmClamp(st, 1, 5);
+  }
+
   function serve(){
-    if(S.phase !== 'pour') return;
-    S.pouring = false;
-    const good = S.fill >= S.lo && S.fill <= S.hi;
-    if(good){ S.ok++; S.msg = 'พอดี!'; S.say = gmPick(GM_COFFEE_OK); }
-    else if(S.fill > S.hi){ S.msg = 'ล้น'; S.say = gmPick(GM_COFFEE_OVER); }
-    else { S.msg = 'น้อยไป'; S.say = gmPick(GM_COFFEE_LOW); }
+    if(S.phase !== 'mix' || S.over) return;
+    S.rate = rate();
+    S.stars += S.rate;
+    if(S.rate === 5) S.full++;
+    S.say = gmPick(GM_COFFEE_SAY[S.rate]);
+    S.msg = S.rate >= 4 ? 'ถูกใจ!' : (S.rate === 3 ? 'พอไหว' : 'ไม่ตรงเลย');
     S.n++;
     S.phase = 'wait'; S.t = 0;
+    paintBar();
+  }
+
+  /* ปล่อยมือจากการริน = จบจังหวะรินแล้วไปใส่ส่วนผสม */
+  function stopPour(){
+    if(S.phase !== 'pour') return;
+    S.pouring = false;
+    if(S.fill <= 0) return;          /* ยังไม่ได้รินอะไรเลย ให้รินต่อได้ */
+    S.phase = 'mix';
+    paintBar();
   }
 
   let pid = null;
@@ -1330,13 +1491,21 @@ function gmCoffee(stage){
     e.preventDefault();
     try{ cv.releasePointerCapture(pid); }catch(err){}
     pid = null;
-    serve();
+    stopPour();
   };
   cv.addEventListener('pointerdown', down);
   cv.addEventListener('pointerup', up);
   cv.addEventListener('pointercancel', up);
-  const kd = e => { if(e.key === ' ' && S.phase === 'pour' && !S.pouring){ S.pouring = true; } };
-  const ku = e => { if(e.key === ' ' && S.pouring) serve(); };
+
+  const kd = e => {
+    if(S.over) return;
+    if(e.key === ' ' && S.phase === 'pour' && !S.pouring){ S.pouring = true; return; }
+    if(S.phase !== 'mix') return;
+    if(e.key === 'Enter'){ serve(); return; }
+    const m = GM_COFFEE_MIX.find(x => x.key === e.key);
+    if(m) addMix(m.k);
+  };
+  const ku = e => { if(e.key === ' ' && S.pouring) stopPour(); };
   document.addEventListener('keydown', kd);
   document.addEventListener('keyup', ku);
 
@@ -1344,10 +1513,26 @@ function gmCoffee(stage){
     S.t += dt;
     if(S.phase === 'pour' && S.pouring){
       S.fill = Math.min(1.25, S.fill + dt * 0.42);
-      if(S.fill >= 1.25) serve();          /* ล้นสุดแก้ว บังคับเสิร์ฟ */
+      if(S.fill >= 1.25) stopPour();          /* ล้นสุดแก้ว บังคับไปจังหวะถัดไป */
     }
-    if(S.phase === 'wait' && S.t > 1.5) nextCup();
+    if(S.phase === 'wait' && S.t > 2.1) nextCup();
     draw();
+  }
+
+  /* ---- วาด ---- */
+  const CF_TH = '"Noto Sans Thai",sans-serif';
+
+  /* รูปคนสั่ง — ถ้าสไปรท์ยังโหลดไม่เสร็จ วาดวงกลมพร้อมอักษรย่อไปก่อน */
+  function drawWho(x, baseY, h){
+    if(gmDrawFig(ctx, S.who, x, baseY, h, false)) return;
+    const r = h * 0.24;
+    ctx.fillStyle = 'rgba(255,255,255,.13)';
+    ctx.beginPath(); ctx.arc(x, baseY - r - 6, r, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,.6)';
+    ctx.font = `600 ${Math.round(r)}px ${CF_TH}`; ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(gmName(S.who).slice(0,2), x, baseY - r - 6);
+    ctx.textBaseline = 'alphabetic';
   }
 
   function draw(){
@@ -1355,41 +1540,71 @@ function gmCoffee(stage){
     g.addColorStop(0, '#33302B'); g.addColorStop(1, '#22201D');
     ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
 
-    /* คนที่มาสั่ง — ยืนซ้ายมือ พร้อมบับเบิลออเดอร์ */
+    const cl = CX - CW/2, cr = CX + CW/2, cb = CTOP + CH;
+    const yOf = f => cb - CH * gmClamp(f, 0, 1);
+
+    /* คนที่มาสั่ง — ยืนซ้ายมือ พร้อมออเดอร์ */
     if(S.who){
-      gmDrawFig(ctx, S.who, 96, CTOP + CH + 22, 118, false);
+      drawWho(96, cb + 20, 116);
+      ctx.textAlign = 'center';
       ctx.fillStyle = 'rgba(255,255,255,.9)';
-      ctx.font = '600 13px "Noto Sans Thai",sans-serif'; ctx.textAlign = 'center';
-      ctx.fillText(gmName(S.who), 96, CTOP + CH + 44);
-      const order = GM_COFFEE_ORDER[S.who] || 'อะไรก็ได้';
-      ctx.font = '400 12px "Noto Sans Thai",sans-serif';
-      ctx.fillStyle = 'rgba(255,255,255,.62)';
-      ctx.fillText(S.say || `"${order}"`, 150, CTOP - 34);
+      ctx.font = `600 13px ${CF_TH}`;
+      ctx.fillText(gmName(S.who), 96, cb + 42);
+
+      /* บับเบิลออเดอร์ / คำติชม */
+      const t = GM_COFFEE_TASTE[S.who];
+      ctx.font = `400 12px ${CF_TH}`;
+      ctx.fillStyle = 'rgba(255,255,255,.66)';
+      ctx.fillText(S.say ? `"${S.say}"` : `"${t ? t.say : 'อะไรก็ได้'}"`, 150, 44);
+
+      /* รายการส่วนผสมที่สั่ง — โชว์ไว้ตลอด ไม่ต้องจำ */
+      if(S.phase !== 'wait'){
+        const want = GM_COFFEE_MIX.filter(m => S.need[m.k] > 0)
+                                  .map(m => `${m.em}×${S.need[m.k]}`).join('  ');
+        ctx.font = `500 13px ${CF_TH}`;
+        ctx.fillStyle = 'rgba(255,255,255,.82)';
+        ctx.fillText(want || 'ไม่ใส่อะไรเลย', 150, 68);
+      }
     }
 
     /* แก้ว */
-    const cl = CX - CW/2, cr = CX + CW/2, cb = CTOP + CH;
     ctx.fillStyle = 'rgba(255,255,255,.07)';
     ctx.beginPath(); ctx.roundRect(cl, CTOP, CW, CH, [6,6,16,16]); ctx.fill();
-    /* แถบเป้าหมาย */
-    const yOf = f => cb - CH * gmClamp(f, 0, 1);
+    /* แถบเป้าหมายของกาแฟ */
     ctx.fillStyle = 'rgba(154,187,166,.3)';
     ctx.fillRect(cl, yOf(S.hi), CW, yOf(S.lo) - yOf(S.hi));
     ctx.strokeStyle = 'rgba(154,187,166,.85)'; ctx.lineWidth = 2;
     [S.lo, S.hi].forEach(f => {
       ctx.beginPath(); ctx.moveTo(cl, yOf(f)); ctx.lineTo(cr, yOf(f)); ctx.stroke();
     });
-    /* กาแฟในแก้ว */
-    const fy = yOf(S.fill);
-    const cg = ctx.createLinearGradient(0, fy, 0, cb);
-    cg.addColorStop(0, '#7B5230'); cg.addColorStop(1, '#4A2F1B');
+
+    /* ของเหลวในแก้ว — กาแฟ + นม (จางลง) + น้ำตาลก้นแก้ว + ครีมลอยหน้า */
+    const fy = yOf(S.fill), top = Math.max(CTOP, fy);
     ctx.save();
     ctx.beginPath(); ctx.roundRect(cl+3, CTOP+3, CW-6, CH-6, [4,4,14,14]); ctx.clip();
+    const cg = ctx.createLinearGradient(0, fy, 0, cb);
+    cg.addColorStop(0, '#7B5230'); cg.addColorStop(1, '#4A2F1B');
     ctx.fillStyle = cg;
-    ctx.fillRect(cl, Math.max(CTOP, fy), CW, cb - Math.max(CTOP, fy));
+    ctx.fillRect(cl, top, CW, cb - top);
+    if(S.add.milk){
+      ctx.fillStyle = `rgba(233,220,198,${0.17 * S.add.milk})`;
+      ctx.fillRect(cl, top, CW, cb - top);
+    }
+    if(S.add.sugar){
+      ctx.fillStyle = 'rgba(255,255,255,.5)';
+      for(let i=0;i<S.add.sugar*4;i++){
+        const x = cl + 14 + ((i*29) % (CW-28)), y = cb - 8 - (i%3)*7;
+        ctx.beginPath(); ctx.arc(x, y, 2.6, 0, Math.PI*2); ctx.fill();
+      }
+    }
     if(S.fill > 0){
-      ctx.fillStyle = 'rgba(214,186,150,.65)';
-      ctx.fillRect(cl, Math.max(CTOP, fy), CW, 5);
+      if(S.add.cream){
+        ctx.fillStyle = 'rgba(250,242,228,.92)';
+        ctx.fillRect(cl, top, CW, 9 + S.add.cream * 5);
+      }else{
+        ctx.fillStyle = 'rgba(214,186,150,.65)';
+        ctx.fillRect(cl, top, CW, 5);
+      }
     }
     ctx.restore();
     ctx.strokeStyle = 'rgba(255,255,255,.34)'; ctx.lineWidth = 2.5;
@@ -1400,33 +1615,42 @@ function gmCoffee(stage){
     /* สายน้ำตอนริน */
     if(S.pouring){
       ctx.fillStyle = 'rgba(140,96,58,.85)';
-      ctx.fillRect(CX - 5, 44, 10, Math.max(0, fy - 44));
+      ctx.fillRect(CX - 5, 42, 10, Math.max(0, fy - 42));
     }
     /* หัวเครื่องชง */
     ctx.fillStyle = '#4A4744';
-    ctx.beginPath(); ctx.roundRect(CX - 42, 18, 84, 28, 7); ctx.fill();
+    ctx.beginPath(); ctx.roundRect(CX - 42, 16, 84, 28, 7); ctx.fill();
     ctx.fillStyle = '#2E2C2A';
-    ctx.beginPath(); ctx.roundRect(CX - 9, 44, 18, 10, 3); ctx.fill();
+    ctx.beginPath(); ctx.roundRect(CX - 9, 42, 18, 10, 3); ctx.fill();
 
-    if(S.msg){
-      ctx.textAlign = 'center';
-      ctx.fillStyle = S.msg === 'พอดี!' ? '#B7D8BE' : '#E8BDB0';
-      ctx.font = '600 20px "Noto Sans Thai",sans-serif';
-      ctx.fillText(S.msg, CX, CTOP + CH + 62);
-    }else if(S.phase === 'pour' && !S.pouring && S.fill === 0){
-      ctx.textAlign = 'center';
+    /* ข้อความใต้แก้ว */
+    ctx.textAlign = 'center';
+    if(S.phase === 'wait'){
+      ctx.fillStyle = S.rate >= 4 ? '#B7D8BE' : (S.rate === 3 ? '#DFD3AE' : '#E8BDB0');
+      ctx.font = `600 26px ${CF_TH}`;
+      ctx.fillText('★'.repeat(S.rate) + '☆'.repeat(5 - S.rate), CX, cb + 46);
+      ctx.font = `600 14px ${CF_TH}`;
+      ctx.fillText(S.msg, CX, cb + 68);
+    }else if(S.phase === 'mix'){
+      ctx.fillStyle = 'rgba(255,255,255,.62)';
+      ctx.font = `400 13px ${CF_TH}`;
+      ctx.fillText('ใส่ส่วนผสมให้ครบ แล้วกดเสิร์ฟ', CX, cb + 50);
+    }else if(!S.pouring && S.fill === 0){
       ctx.fillStyle = 'rgba(255,255,255,.6)';
-      ctx.font = '400 13px "Noto Sans Thai",sans-serif';
-      ctx.fillText('กดค้างเพื่อริน · ปล่อยเพื่อเสิร์ฟ', CX, CTOP + CH + 62);
+      ctx.font = `400 13px ${CF_TH}`;
+      ctx.fillText('กดค้างที่แก้วเพื่อริน · ปล่อยเมื่อถึงแถบ', CX, cb + 50);
     }
+
     hud.innerHTML = `<span class="mono">แก้วที่ <b>${Math.min(S.n+1, CUPS)}</b>/${CUPS}</span>
-      <span class="gm-hud-mid mono">ถูกใจ ${S.ok}</span>
-      <span class="mono">กดค้าง = ริน</span>`;
+      <span class="gm-hud-mid mono">★ ${S.stars}</span>
+      <span class="mono">${S.phase === 'mix' ? 'ใส่ส่วนผสมแล้วเสิร์ฟ'
+        : (S.phase === 'wait' ? `ได้ ${S.rate} ดาว` : 'กดค้าง = ริน')}</span>`;
   }
 
   const stop = gmLoop(step);
   return () => {
     stop();
+    bar.removeEventListener('click', onBar);
     cv.removeEventListener('pointerdown', down);
     cv.removeEventListener('pointerup', up);
     cv.removeEventListener('pointercancel', up);

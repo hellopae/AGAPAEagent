@@ -1,6 +1,51 @@
 {
-  "updatedAt": "2026-08-26T05:25:57Z",
+  "updatedAt": "2026-08-26T16:40:47Z",
   "entries": [
+    {
+      "id": "wl-260826-dale-coffee2",
+      "datetime": "2026-08-26T16:40:47Z",
+      "displayDate": "26 ส.ค. 2569",
+      "displayTime": "23:40",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "เกมชงกาแฟ — ใส่ส่วนผสมได้ + ให้ดาว 1-5 ดวง",
+      "summary": "แก้บั๊กรูปคนสั่งไม่ขึ้น: gmImg() อ่านจาก GM_ART ที่มีแค่ pae/toby/dale ทำให้ agent คนอื่นได้ Image ที่ src เป็น undefined เลยไม่วาดอะไรเลย ใส่ fallback ไปที่ office/sprites/<id>.png ครบทั้ง 13 คน และวาดวงกลมอักษรย่อคั่นระหว่างรูปยังโหลดไม่เสร็จ. เพิ่มจังหวะที่ 2 ต่อแก้ว — ปล่อยมือจากการรินแล้วใส่ นม/น้ำตาล/ครีม ตามออเดอร์ (กดปุ่มหรือคีย์ 1 2 3 · Enter เสิร์ฟ) ในแก้ววาดชั้นนมจางลง น้ำตาลเป็นเม็ดก้นแก้ว ครีมเป็นฝาโฟม. เสิร์ฟแล้วคนสั่งให้ดาว 1-5 ดวงพร้อมคำติชม หักดาวตามความคลาดเคลื่อนของระดับกาแฟและส่วนผสมที่ผิด สกอร์แชมป์เปลี่ยนจาก 'จำนวนแก้วที่ถูกใจ' เป็น 'ดาวรวม' (เต็ม 50)",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
+    {
+      "id": "wl-260826-vera-sudokulv",
+      "datetime": "2026-08-26T16:40:47Z",
+      "displayDate": "26 ส.ค. 2569",
+      "displayTime": "23:40",
+      "agent": "vera",
+      "agentName": "Vera",
+      "agentImg": "avatars/Vera.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ซูโดกุ เลือกระดับความยากได้ 3 ระดับ",
+      "summary": "เดิมเจาะช่องออก 45 ช่องแบบสุ่มล้วน ไม่ได้เช็คว่าคำตอบเหลือแบบเดียว บางใบเลยต้องเดา เขียนตัวนับคำตอบ gmSdCount() แล้วเจาะทีละช่องเฉพาะที่ยังเหลือคำตอบเดียว ทุกใบไล่ตรรกะออกจริง. เพิ่มปุ่มเลือกระดับ ง่าย 34 ช่อง/12 นาที · ปกติ 44 ช่อง/9 นาที · ยาก 52 ช่อง/7 นาที กดสลับได้ระหว่างเล่น (แจกโจทย์ใหม่) จำระดับล่าสุดไว้ใน localStorage. ทดสอบ 25 ใบต่อระดับ ได้จำนวนช่องตรงเป้าทุกใบและคำตอบเดียวทุกใบ ใบยากสุดใช้ 39 ms",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
+    {
+      "id": "wl-260826-toby-widgetoffice",
+      "datetime": "2026-08-26T16:40:47Z",
+      "displayDate": "26 ส.ค. 2569",
+      "displayTime": "23:40",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ตัดผังออฟฟิศออกจาก Widget · ตัดหมากรุกออกจากแผน",
+      "summary": "Widget จอ 600x640 เล่นเกมไม่ไหว เลยตัดผังออฟฟิศ 2D ออกทั้งหมด ลบ src/Office.jsx กับ public/office/ (4.2 MB · เทียบไฟล์แล้วซ้ำกับ AGAPAE Agent/office ทุกไฟล์) ย้าย CSS ที่ยังใช้อยู่ (การ์ดทีม + ป้ายระดับ + แถบ MVP) ไปไฟล์ใหม่ src/Team.css. build ผ่าน 40 modules. ตัดแผนหมากรุก vs Claudy ออกจาก PHASE2-GAMES.md ตามที่เจ้าของสั่ง เพราะ Chess/chess.html เดิมเป็น 2 คนเล่นไม่มี AI ต้องเขียน minimax ใหม่หมด",
+      "project": "agapae-dashboard",
+      "projectLabel": "AGAPAE Dashboard v2"
+    },
     {
       "id": "wl-260826-dale-propmove",
       "datetime": "2026-08-26T05:25:57Z",
