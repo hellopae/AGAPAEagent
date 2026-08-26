@@ -253,6 +253,21 @@
   }
   .gm-tap:focus-visible{outline:.2cqw solid var(--gold);outline-offset:.15cqw;border-radius:.4cqw}
 
+
+  /* แป้นซูโดกุบนโต๊ะห้องสเปค — ตาราง 3x3 จิ๋ว วาดด้วย CSS ไม่ใช้รูป */
+  .ofc-sudoku{
+    position:absolute;transform:translate(-50%,-100%);
+    aspect-ratio:1;padding:.18cqw;border:none;line-height:0;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:.1cqw;
+    background:var(--paper-2);border-radius:.25cqw;
+    box-shadow:0 .12cqw .28cqw rgba(27,28,32,.32);
+    transition:filter .16s,transform .16s;
+  }
+  .ofc-sudoku i{background:var(--line-strong);border-radius:.06cqw}
+  .ofc-sudoku i:nth-child(1),.ofc-sudoku i:nth-child(5),.ofc-sudoku i:nth-child(9){background:var(--working)}
+  .gm-tap.ofc-sudoku:hover{
+    filter:drop-shadow(0 0 .45cqw var(--gold));transform:translate(-50%,-100%) translateY(-.18cqw);
+  }
   /* โกลฟุตบอลบนทางเดิน — ตัวละครเดินผ่านหน้าได้ (z ต่ำกว่าแถวเดิน) */
   .ofc-goal{
     position:absolute;transform:translate(-50%,-100%);
@@ -333,6 +348,65 @@
   .gm-again:hover{filter:brightness(1.1)}
   .gm-quit{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3)}
   .gm-quit:hover{background:rgba(255,255,255,.1);color:#fff}
+
+
+  /* เมนูเลือกเกม (เครื่องเกมมีหลายเกม) */
+  .gm-menu{
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:26px;line-height:1.5;
+  }
+  .gm-menu-b{
+    display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;padding:20px 14px;color:#fff;font:inherit;transition:.15s;
+  }
+  .gm-menu-b:hover{background:rgba(255,255,255,.12);border-color:var(--gold);transform:translateY(-2px)}
+  .gm-menu-b .em{font-size:26px;line-height:1}
+  .gm-menu-b .nm{font-size:13.5px;font-weight:600}
+  .gm-menu-b .ch{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:10.5px;color:rgba(255,255,255,.62);
+  }
+  .gm-menu-b .ch .none{color:rgba(255,255,255,.4)}
+  @media(max-width:520px){ .gm-menu{grid-template-columns:1fr} }
+
+  /* ===== ซูโดกุ — เป็น DOM ไม่ใช่ canvas เพราะต้องกดช่องกับพิมพ์เลข ===== */
+  .sd-wrap{
+    line-height:1.5;padding:14px 16px 18px;display:flex;flex-direction:column;
+    align-items:center;gap:11px;
+  }
+  .sd-top{
+    display:flex;align-items:baseline;gap:14px;color:rgba(255,255,255,.82);font-size:11px;
+  }
+  .sd-top b{font-size:15px}
+  .sd-top.sd-late{color:#F0907A}
+  .sd-par{color:rgba(255,255,255,.5)}
+  .sd-grid{
+    display:grid;grid-template-columns:repeat(9,1fr);
+    background:var(--paper-2);border:2.5px solid var(--ink);border-radius:5px;overflow:hidden;
+    width:min(378px,86vw);
+  }
+  .sd-c{
+    aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+    font-family:"IBM Plex Mono",monospace;font-size:clamp(13px,3.4vw,17px);
+    background:var(--paper-2);color:var(--working);cursor:pointer;
+    border:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:0;transition:background .12s;
+  }
+  .sd-c.br{border-right:2px solid var(--ink)}
+  .sd-c.bb{border-bottom:2px solid var(--ink)}
+  .sd-c.fixed{color:var(--ink);font-weight:600;background:var(--paper);cursor:default}
+  .sd-c.peer{background:#EAE6DC}
+  .sd-c.sel{background:#DCE6EF;box-shadow:inset 0 0 0 2px var(--working)}
+  .sd-c.bad{color:#B0503C;background:#F5DED7}
+  .sd-c:not(.fixed):hover{background:#E8EDF3}
+  .sd-pad{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+  .sd-k{
+    width:38px;height:38px;border-radius:9px;cursor:pointer;
+    font-family:"IBM Plex Mono",monospace;font-size:15px;color:#fff;
+    background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);transition:.15s;
+  }
+  .sd-k:hover{background:var(--gold);border-color:transparent}
+  @media(max-height:820px){ .sd-k{width:33px;height:33px;font-size:13px} .sd-wrap{gap:8px;padding:10px 12px 13px} }
 
   /* ===== LEVEL — EXP / LV / ระดับ / MVP ===== */
   /* แถบ MVP เหนือแถวรูปทีม */
@@ -2932,6 +3006,10 @@ const OFC_FISH_STAND = [1290,878];    /* จุดยืนดูปลาขอ
    พิกัดยึดขอบล่างของรูป (translate -100%) — ตัวโกลสูง 5.0cqw x 215/300 ≈ 57 หน่วย
    ตั้งขอบล่างไว้ 684 ตัวโกลจึงกินแค่ y 627-684 อยู่ในทางเดินพอดี ไม่ทับกำแพงห้องประชุม
    z สูงกว่าแนวเดิน 645 เพื่อให้คนที่เดินผ่านอยู่ "หลัง" โกลตามระยะจริง */
+/* แป้นซูโดกุบนโต๊ะห้องสเปค (r5 x 935-1150 · y 45-245 · Vera นั่งที่ [1030,178])
+   วาดด้วย CSS ไม่ใช้รูป — ขนาดเท่านี้ตารางจิ๋ว ๆ ก็อ่านออกแล้ว */
+const OFC_SUDOKU_POS = [975, 218];
+const OFC_SUDOKU_W   = 2.8;           /* cqw */
 const OFC_GOAL_ART = 'office/sprites/cat/Goal.png';
 const OFC_GOAL_POS = [960, 684];
 const OFC_GOAL_W   = 5.0;             /* cqw */
@@ -3102,6 +3180,16 @@ function ofcBuildProps(){
   board.style.zIndex = Math.round(OFC_BOARD.y) - 3;
   layer.appendChild(board);
   ofcBoardRender();
+
+  const sd = document.createElement('button');
+  sd.className = 'ofc-sudoku'; sd.type = 'button'; sd.id = 'ofcSudoku';
+  sd.title = 'แป้นซูโดกุ';
+  sd.style.width = OFC_SUDOKU_W + 'cqw';
+  sd.style.left = (OFC_SUDOKU_POS[0]/OFC_W*100)+'%';
+  sd.style.top  = (OFC_SUDOKU_POS[1]/OFC_H*100)+'%';
+  sd.style.zIndex = Math.round(OFC_SUDOKU_POS[1]) - 1;
+  sd.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>';
+  layer.appendChild(sd);
 
   const goal = document.createElement('button');
   goal.className = 'ofc-goal'; goal.type = 'button'; goal.id = 'ofcGoal';

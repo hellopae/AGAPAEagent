@@ -21,6 +21,12 @@ const GM_DEFS = {
              unit:'ลูก',  how:'ลากลูกบอลถอยหลังแล้วปล่อย — ทิศตรงข้ามที่ลากคือทางที่บอลไป ลากไกล = แรง · ยิง 10 ลูก เข้า 6 ลูกขึ้นไปชนะ'},
   fishing:  {label:'ตกปลา',      emoji:'🎣', room:'lounge', rival:null,   solo:true,
              unit:'ตัว',  how:'กดที่ตัวปลาให้ทันใน 45 วินาที · ยิ่งจับได้มาก ปลายิ่งว่ายเร็ว'},
+  snake:    {label:'เกมงู',      emoji:'🐍', room:'bm',     rival:null,   solo:true,
+             unit:'แต้ม', how:'ลูกศรหรือ WASD บังคับทิศ · กินแล้วตัวยาวขึ้นและเร็วขึ้น ชนกำแพงหรือชนตัวเองจบเกม'},
+  tetris:   {label:'เตตริส',     emoji:'🧱', room:'bm',     rival:null,   solo:true,
+             unit:'แถว', how:'← → เลื่อน · ↑ หมุน · ↓ ลงเร็ว · Space ทิ้งลงสุด · เก็บให้ได้แถวเยอะที่สุด'},
+  sudoku:   {label:'ซูโดกุ',     emoji:'🔢', room:'r5',     rival:'vera', solo:false,
+             unit:'วิ',   how:'กดช่องแล้วพิมพ์ 1-9 (หรือกดแป้นเลขข้างล่าง) · ทำให้เสร็จก่อนเวลาของ Vera ถึงจะชนะ'},
 };
 
 /* ค่าตั้งต้นก่อนที่ Firestore จะตอบ — agent เจ้าถิ่นถือแชมป์ไว้ก่อน */
@@ -28,6 +34,9 @@ const gmBlank = () => ({
   pingpong: {champion:'toby', streak:0, best:{who:'toby', score:5},  vsPae:{win:0, lose:0}, lastPlayed:null},
   football: {champion:'dale', streak:0, best:{who:'dale', score:0},  vsPae:{win:0, lose:0}, lastPlayed:null},
   fishing:  {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
+  snake:    {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
+  tetris:   {champion:null,   streak:0, best:{who:null,  score:0},   vsPae:{win:0, lose:0}, lastPlayed:null},
+  sudoku:   {champion:'vera', streak:0, best:{who:'vera', score:0},  vsPae:{win:0, lose:0}, lastPlayed:null},
 });
 
 let GM = gmBlank();
@@ -296,6 +305,10 @@ const GM_SAY = {
     lose: ['เข้าได้ไง... ขอดู replay หน่อย','ยอม ยิงแม่นจริง','เดี๋ยวรอบหน้าไม่ให้เข้าแล้ว'],
   },
   fishing: { win:['ปลาว่ายเร็วขึ้นแล้วนะ'], lose:['เยี่ยม! ปลาเยอะเลย'] },
+  sudoku: {
+    win:  ['ตัวเลขมันต้องเป๊ะแบบนี้','ช้าไปนิดเดียวเอง ลองใหม่','เวลาของเรายังยืนอยู่'],
+    lose: ['เร็วกว่าเราจริง ยอมรับ','โอเค สถิติเป็นของเป้แล้ว','เก่งขึ้นเยอะเลยนะ'],
+  },
 };
 
 /* =====================================================================
@@ -801,7 +814,471 @@ function gmFishing(stage){
   };
 }
 
-const GM_GAMES = {pingpong:gmPingpong, football:gmFootball, fishing:gmFishing};
+/* =====================================================================
+   เกม 4 — 🐍 เกมงู (เล่นคนเดียว ทำสกอร์)
+   ===================================================================== */
+function gmSnake(stage){
+  const CELL = 24, COLS = 26, ROWS = 16;
+  const W = COLS*CELL, H = ROWS*CELL;
+  const {cv, ctx} = gmCanvas(stage, W, H);
+  const hud = gmHud(stage);
+  const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+
+  const S = {
+    body: [{x:6,y:8},{x:5,y:8},{x:4,y:8}],
+    dir: {x:1,y:0}, queue: [], food: null,
+    score: 0, acc: 0, sps: 7, over: false, started: false,
+  };
+
+  function placeFood(){
+    let p;
+    do{ p = {x:Math.floor(Math.random()*COLS), y:Math.floor(Math.random()*ROWS)}; }
+    while(S.body.some(b => b.x===p.x && b.y===p.y));
+    S.food = p;
+  }
+  placeFood();
+
+  const DIRS = {
+    ArrowUp:{x:0,y:-1}, ArrowDown:{x:0,y:1}, ArrowLeft:{x:-1,y:0}, ArrowRight:{x:1,y:0},
+    w:{x:0,y:-1}, s:{x:0,y:1}, a:{x:-1,y:0}, d:{x:1,y:0},
+  };
+  const kd = e => {
+    const d = DIRS[e.key] || DIRS[(e.key||'').toLowerCase()];
+    if(!d || S.over) return;
+    /* กันกดย้อนกลับทับตัวเอง — เทียบกับทิศที่จะใช้จริงคิวสุดท้าย */
+    const last = S.queue.length ? S.queue[S.queue.length-1] : S.dir;
+    if(d.x === -last.x && d.y === -last.y) return;
+    if(S.queue.length < 2) S.queue.push(d);
+    S.started = true;
+  };
+  document.addEventListener('keydown', kd);
+
+  function move(){
+    if(S.queue.length) S.dir = S.queue.shift();
+    const h = S.body[0];
+    const n = {x:h.x + S.dir.x, y:h.y + S.dir.y};
+    if(n.x < 0 || n.y < 0 || n.x >= COLS || n.y >= ROWS) return die();
+    /* หางกำลังจะขยับออก ชนหางช่องสุดท้ายไม่นับตาย */
+    if(S.body.slice(0, -1).some(b => b.x===n.x && b.y===n.y)) return die();
+    S.body.unshift(n);
+    if(n.x === S.food.x && n.y === S.food.y){
+      S.score++;
+      S.sps = Math.min(16, S.sps + 0.25);
+      placeFood();
+    }else{
+      S.body.pop();
+    }
+  }
+
+  function die(){
+    S.over = true;
+    setTimeout(() => gmResult(stage, 'snake', {score:S.score},
+      `<span class="mono">ยาว ${S.body.length} ช่อง</span>`), 320);
+  }
+
+  function step(dt){
+    if(!S.over && S.started){
+      S.acc += dt;
+      const per = 1 / S.sps;
+      while(S.acc >= per){ S.acc -= per; if(!S.over) move(); }
+    }
+    draw();
+  }
+
+  function draw(){
+    ctx.fillStyle = '#1B2430'; ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle = 'rgba(255,255,255,.045)'; ctx.lineWidth = 1;
+    for(let x=1;x<COLS;x++){ ctx.beginPath(); ctx.moveTo(x*CELL,0); ctx.lineTo(x*CELL,H); ctx.stroke(); }
+    for(let y=1;y<ROWS;y++){ ctx.beginPath(); ctx.moveTo(0,y*CELL); ctx.lineTo(W,y*CELL); ctx.stroke(); }
+    /* อาหาร */
+    const f = S.food;
+    ctx.fillStyle = '#E4785F';
+    ctx.beginPath(); ctx.arc(f.x*CELL+CELL/2, f.y*CELL+CELL/2, CELL*0.32, 0, Math.PI*2); ctx.fill();
+    /* ตัวงู — หัวสีทอง ตัวไล่จางไปทางหาง */
+    S.body.forEach((b,i) => {
+      const t = i / Math.max(1, S.body.length);
+      ctx.fillStyle = i === 0 ? (css('--gold') || '#9A7B4F')
+                              : `rgba(150,178,160,${0.92 - t*0.5})`;
+      ctx.beginPath();
+      ctx.roundRect(b.x*CELL+2, b.y*CELL+2, CELL-4, CELL-4, i===0 ? 7 : 5);
+      ctx.fill();
+    });
+    if(!S.started){
+      ctx.fillStyle = 'rgba(18,20,26,.55)'; ctx.fillRect(0,0,W,H);
+      ctx.fillStyle = '#fff'; ctx.textAlign = 'center';
+      ctx.font = '600 19px "Noto Sans Thai",sans-serif';
+      ctx.fillText('กดลูกศรเพื่อเริ่ม', W/2, H/2);
+    }
+    hud.innerHTML = `<span class="mono">แต้ม <b>${S.score}</b></span>
+      <span class="gm-hud-mid mono">ยาว ${S.body.length}</span>
+      <span class="mono">ลูกศร / WASD</span>`;
+  }
+
+  const stop = gmLoop(step);
+  return () => { stop(); document.removeEventListener('keydown', kd); };
+}
+
+/* =====================================================================
+   เกม 5 — 🧱 เตตริส (เล่นคนเดียว นับแถวที่เก็บได้)
+   ===================================================================== */
+function gmTetris(stage){
+  const COLS = 10, ROWS = 18, CELL = 22;
+  const PW = COLS*CELL, PH = ROWS*CELL;          /* กระดาน 220 x 396 */
+  /* canvas กว้างกว่ากระดานเยอะ เพราะถูกยืดเต็มความกว้าง popup
+     ถ้าทำแคบ อัตราส่วนจะสูงจนล้นจอเตี้ย — 560x440 ให้ความสูงที่แสดงจริงพอดี */
+  const W = 560, H = PH + 44;
+  const PX = 118, PY = 22;                       /* มุมซ้ายบนของกระดาน */
+  const {cv, ctx} = gmCanvas(stage, W, H);
+  const hud = gmHud(stage);
+
+  /* รูปทรงมาตรฐาน 7 ตัว เก็บเป็นเมทริกซ์ หมุนด้วยการทรานสโพส */
+  const SHAPES = {
+    I:{c:'#7FB3C8', m:[[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]]},
+    O:{c:'#D9C06A', m:[[1,1],[1,1]]},
+    T:{c:'#A98BC4', m:[[0,1,0],[1,1,1],[0,0,0]]},
+    S:{c:'#8FBF8A', m:[[0,1,1],[1,1,0],[0,0,0]]},
+    Z:{c:'#D08A7C', m:[[1,1,0],[0,1,1],[0,0,0]]},
+    J:{c:'#7E92C4', m:[[1,0,0],[1,1,1],[0,0,0]]},
+    L:{c:'#D9A46A', m:[[0,0,1],[1,1,1],[0,0,0]]},
+  };
+  const KEYS = Object.keys(SHAPES);
+
+  const grid = Array.from({length:ROWS}, () => new Array(COLS).fill(null));
+  const S = {cur:null, next:null, lines:0, acc:0, drop:0.85, over:false};
+
+  const rotate = m => m[0].map((_, i) => m.map(r => r[i]).reverse());
+
+  function spawn(){
+    S.cur = S.next || newPiece();
+    S.next = newPiece();
+    if(hits(S.cur.m, S.cur.x, S.cur.y)) end();
+  }
+  function newPiece(){
+    const k = gmPick(KEYS);
+    const sh = SHAPES[k];
+    return {k, m:sh.m.map(r=>r.slice()), c:sh.c,
+            x:Math.floor((COLS - sh.m[0].length)/2), y:0};
+  }
+  function hits(m, px, py){
+    for(let r=0;r<m.length;r++) for(let c=0;c<m[r].length;c++){
+      if(!m[r][c]) continue;
+      const x = px+c, y = py+r;
+      if(x < 0 || x >= COLS || y >= ROWS) return true;
+      if(y >= 0 && grid[y][x]) return true;
+    }
+    return false;
+  }
+  function lock(){
+    S.cur.m.forEach((row,r) => row.forEach((v,c) => {
+      if(v && S.cur.y+r >= 0) grid[S.cur.y+r][S.cur.x+c] = S.cur.c;
+    }));
+    /* เก็บแถวที่เต็ม */
+    let cleared = 0;
+    for(let r=ROWS-1;r>=0;r--){
+      if(grid[r].every(v => v)){
+        grid.splice(r,1);
+        grid.unshift(new Array(COLS).fill(null));
+        cleared++; r++;
+      }
+    }
+    if(cleared){
+      S.lines += cleared;
+      S.drop = Math.max(0.14, 0.85 - S.lines*0.035);
+    }
+    spawn();
+  }
+  function tryMove(dx, dy){
+    if(hits(S.cur.m, S.cur.x+dx, S.cur.y+dy)) return false;
+    S.cur.x += dx; S.cur.y += dy; return true;
+  }
+  function tryRotate(){
+    const m = rotate(S.cur.m);
+    /* เตะกำแพง — ลองขยับซ้ายขวานิดหน่อยถ้าหมุนแล้วชน */
+    for(const dx of [0,-1,1,-2,2]){
+      if(!hits(m, S.cur.x+dx, S.cur.y)){ S.cur.m = m; S.cur.x += dx; return; }
+    }
+  }
+  function end(){
+    S.over = true;
+    setTimeout(() => gmResult(stage, 'tetris', {score:S.lines},
+      `<span class="mono">เก็บได้ ${S.lines} แถว</span>`), 320);
+  }
+
+  const kd = e => {
+    if(S.over || !S.cur) return;
+    const k = e.key;
+    if(k === 'ArrowLeft')  tryMove(-1,0);
+    else if(k === 'ArrowRight') tryMove(1,0);
+    else if(k === 'ArrowDown')  { if(!tryMove(0,1)) lock(); S.acc = 0; }
+    else if(k === 'ArrowUp')    tryRotate();
+    else if(k === ' ')          { while(tryMove(0,1)){} lock(); S.acc = 0; }
+    else return;
+    draw();
+  };
+  document.addEventListener('keydown', kd);
+  spawn();
+
+  function step(dt){
+    if(!S.over){
+      S.acc += dt;
+      if(S.acc >= S.drop){ S.acc = 0; if(!tryMove(0,1)) lock(); }
+    }
+    draw();
+  }
+
+  function cellRect(x, y, col){
+    ctx.fillStyle = col;
+    ctx.beginPath(); ctx.roundRect(x+1, y+1, CELL-2, CELL-2, 4); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,.16)';
+    ctx.fillRect(x+3, y+3, CELL-6, 3);
+  }
+
+  function draw(){
+    ctx.fillStyle = '#1B2430'; ctx.fillRect(0,0,W,H);
+    /* กระดาน */
+    ctx.fillStyle = '#141B25';
+    ctx.fillRect(PX, PY, PW, PH);
+    ctx.strokeStyle = 'rgba(255,255,255,.14)'; ctx.lineWidth = 2;
+    ctx.strokeRect(PX, PY, PW, PH);
+    ctx.strokeStyle = 'rgba(255,255,255,.04)'; ctx.lineWidth = 1;
+    for(let c=1;c<COLS;c++){ ctx.beginPath(); ctx.moveTo(PX+c*CELL,PY); ctx.lineTo(PX+c*CELL,PY+PH); ctx.stroke(); }
+    for(let r=1;r<ROWS;r++){ ctx.beginPath(); ctx.moveTo(PX,PY+r*CELL); ctx.lineTo(PX+PW,PY+r*CELL); ctx.stroke(); }
+    /* ก้อนที่ลงแล้ว */
+    grid.forEach((row,r) => row.forEach((col,c) => {
+      if(col) cellRect(PX+c*CELL, PY+r*CELL, col);
+    }));
+    /* เงาบอกที่ตก */
+    if(S.cur && !S.over){
+      let gy = S.cur.y;
+      while(!hits(S.cur.m, S.cur.x, gy+1)) gy++;
+      S.cur.m.forEach((row,r) => row.forEach((v,c) => {
+        if(!v) return;
+        ctx.strokeStyle = 'rgba(255,255,255,.2)'; ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(PX+(S.cur.x+c)*CELL+2, PY+(gy+r)*CELL+2, CELL-4, CELL-4, 4);
+        ctx.stroke();
+      }));
+      S.cur.m.forEach((row,r) => row.forEach((v,c) => {
+        if(v && S.cur.y+r >= 0) cellRect(PX+(S.cur.x+c)*CELL, PY+(S.cur.y+r)*CELL, S.cur.c);
+      }));
+    }
+    /* ตัวถัดไป */
+    const NX = PX + PW + 40, NY = PY + 30;
+    ctx.fillStyle = 'rgba(255,255,255,.5)';
+    ctx.font = '600 10px "IBM Plex Mono",monospace'; ctx.textAlign = 'left';
+    ctx.fillText('NEXT', NX, NY - 12);
+    if(S.next){
+      const m = S.next.m, sc = 17;
+      m.forEach((row,r) => row.forEach((v,c) => {
+        if(!v) return;
+        ctx.fillStyle = S.next.c;
+        ctx.beginPath(); ctx.roundRect(NX+c*sc, NY+r*sc, sc-2, sc-2, 3); ctx.fill();
+      }));
+    }
+    ctx.fillStyle = 'rgba(255,255,255,.5)';
+    ctx.fillText('LINES', NX, NY + 108);
+    ctx.fillStyle = '#fff';
+    ctx.font = '600 26px "IBM Plex Mono",monospace';
+    ctx.fillText(String(S.lines), NX, NY + 138);
+
+    hud.innerHTML = `<span class="mono">แถว <b>${S.lines}</b></span>
+      <span class="gm-hud-mid mono">← → ↑ ↓</span>
+      <span class="mono">Space ทิ้งลงสุด</span>`;
+  }
+
+  const stop = gmLoop(step);
+  return () => { stop(); document.removeEventListener('keydown', kd); };
+}
+
+/* =====================================================================
+   เกม 6 — 🔢 ซูโดกุ แข่งเวลากับ Vera
+   ทำเป็น DOM ไม่ใช่ canvas เพราะต้องกดช่องกับพิมพ์เลข
+   ตรวจคำตอบด้วยกติกาซูโดกุตรง ๆ (แถว/หลัก/บล็อกต้องมี 1-9 ครบ)
+   ไม่ได้เทียบกับเฉลยที่เก็บไว้ — โจทย์ที่มีหลายคำตอบก็เลยไม่พังตาม
+   ===================================================================== */
+const GM_SUDOKU_PAR = 480;   /* เวลาของ Vera (วินาที) — ทำเร็วกว่านี้ถึงจะชนะ */
+
+function gmSudokuGen(){
+  const g = new Array(81).fill(0);
+  const ok = (i, v) => {
+    const r = (i/9)|0, c = i%9, br = ((r/3)|0)*3, bc = ((c/3)|0)*3;
+    for(let k=0;k<9;k++){
+      if(g[r*9+k] === v) return false;
+      if(g[k*9+c] === v) return false;
+      if(g[(br+((k/3)|0))*9 + bc + k%3] === v) return false;
+    }
+    return true;
+  };
+  const fill = i => {
+    if(i === 81) return true;
+    const nums = [1,2,3,4,5,6,7,8,9];
+    for(let j=8;j>0;j--){ const k = Math.floor(Math.random()*(j+1)); [nums[j],nums[k]] = [nums[k],nums[j]]; }
+    for(const v of nums){
+      if(!ok(i,v)) continue;
+      g[i] = v;
+      if(fill(i+1)) return true;
+      g[i] = 0;
+    }
+    return false;
+  };
+  fill(0);
+  /* เจาะช่องออก 45 ช่อง เหลือโจทย์ 36 ตัว */
+  const idx = [...Array(81).keys()];
+  for(let j=80;j>0;j--){ const k = Math.floor(Math.random()*(j+1)); [idx[j],idx[k]] = [idx[k],idx[j]]; }
+  const puz = g.slice();
+  idx.slice(0,45).forEach(i => { puz[i] = 0; });
+  return puz;
+}
+
+/* กติกาซูโดกุ — ครบและไม่ซ้ำทั้งแถว หลัก และบล็อก */
+function gmSudokuDone(v){
+  if(v.some(x => !x)) return false;
+  for(let k=0;k<9;k++){
+    const row = new Set(), col = new Set(), box = new Set();
+    for(let j=0;j<9;j++){
+      row.add(v[k*9+j]);
+      col.add(v[j*9+k]);
+      box.add(v[(((k/3)|0)*3 + ((j/3)|0))*9 + (k%3)*3 + j%3]);
+    }
+    if(row.size !== 9 || col.size !== 9 || box.size !== 9) return false;
+  }
+  return true;
+}
+
+function gmSudoku(stage){
+  const puz = gmSudokuGen();
+  const val = puz.slice();
+  let sel = -1, t0 = Date.now(), over = false;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'sd-wrap';
+  wrap.innerHTML = `
+    <div class="sd-top">
+      <span class="mono">เวลา <b id="sdTime">0:00</b></span>
+      <span class="sd-par mono">เวลาของ ${gmEsc(gmName('vera'))} ${Math.floor(GM_SUDOKU_PAR/60)}:00</span>
+    </div>
+    <div class="sd-grid" id="sdGrid"></div>
+    <div class="sd-pad" id="sdPad"></div>`;
+  stage.appendChild(wrap);
+
+  const gridEl = wrap.querySelector('#sdGrid');
+  const cells = [];
+  for(let i=0;i<81;i++){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'sd-c' + (puz[i] ? ' fixed' : '');
+    if(i%3 === 2 && i%9 !== 8) b.classList.add('br');
+    if(((i/9)|0)%3 === 2 && i < 72) b.classList.add('bb');
+    b.textContent = puz[i] || '';
+    b.onclick = () => { if(!puz[i] && !over){ sel = i; paint(); } };
+    gridEl.appendChild(b);
+    cells.push(b);
+  }
+
+  const padEl = wrap.querySelector('#sdPad');
+  [1,2,3,4,5,6,7,8,9,0].forEach(n => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'sd-k';
+    b.textContent = n === 0 ? '⌫' : n;
+    b.onclick = () => put(n);
+    padEl.appendChild(b);
+  });
+
+  function put(n){
+    if(over || sel < 0 || puz[sel]) return;
+    val[sel] = n;
+    paint();
+    if(gmSudokuDone(val)) finish();
+  }
+
+  /* ช่องที่ชนกติกา (ซ้ำในแถว/หลัก/บล็อก) ทำเป็นสีแดงให้เห็นทันที */
+  function bad(i){
+    const v = val[i];
+    if(!v) return false;
+    const r = (i/9)|0, c = i%9, br = ((r/3)|0)*3, bc = ((c/3)|0)*3;
+    for(let k=0;k<9;k++){
+      const a = r*9+k, b2 = k*9+c, d = (br+((k/3)|0))*9 + bc + k%3;
+      if(a !== i && val[a] === v) return true;
+      if(b2 !== i && val[b2] === v) return true;
+      if(d !== i && val[d] === v) return true;
+    }
+    return false;
+  }
+
+  function paint(){
+    cells.forEach((b,i) => {
+      b.textContent = val[i] || '';
+      b.classList.toggle('sel', i === sel);
+      b.classList.toggle('bad', bad(i));
+      b.classList.toggle('peer', sel >= 0 && i !== sel && val[i] && val[i] === val[sel]);
+    });
+  }
+
+  function finish(){
+    over = true;
+    const secs = Math.round((Date.now() - t0)/1000);
+    const mm = Math.floor(secs/60), ss = String(secs%60).padStart(2,'0');
+    setTimeout(() => gmResult(stage, 'sudoku',
+      {win: secs < GM_SUDOKU_PAR, score: Math.max(0, GM_SUDOKU_PAR - secs)},
+      `<span class="mono">ใช้เวลา ${mm}:${ss} · เวลาของ ${gmEsc(gmName('vera'))} 8:00</span>`), 300);
+  }
+
+  const kd = e => {
+    if(over) return;
+    if(e.key >= '1' && e.key <= '9') put(Number(e.key));
+    else if(e.key === 'Backspace' || e.key === 'Delete' || e.key === '0') put(0);
+    else if(sel >= 0){
+      const d = {ArrowLeft:-1, ArrowRight:1, ArrowUp:-9, ArrowDown:9}[e.key];
+      if(d != null){ sel = gmClamp(sel + d, 0, 80); paint(); }
+    }
+  };
+  document.addEventListener('keydown', kd);
+
+  const tEl = wrap.querySelector('#sdTime');
+  const tick = setInterval(() => {
+    if(over) return;
+    const s2 = Math.round((Date.now() - t0)/1000);
+    tEl.textContent = `${Math.floor(s2/60)}:${String(s2%60).padStart(2,'0')}`;
+    tEl.parentElement.classList.toggle('sd-late', s2 >= GM_SUDOKU_PAR);
+  }, 500);
+
+  paint();
+  return () => { clearInterval(tick); document.removeEventListener('keydown', kd); };
+}
+
+const GM_GAMES = {pingpong:gmPingpong, football:gmFootball, fishing:gmFishing,
+                  snake:gmSnake, tetris:gmTetris, sudoku:gmSudoku};
+
+/* =====================================================================
+   เมนูเลือกเกม — ใช้ตอนของชิ้นเดียวมีหลายเกม (PS5 มีทั้งงูกับเตตริส)
+   ===================================================================== */
+function gmOpenMenu(keys, title, sub){
+  gmClose();
+  const el = gmShell();
+  document.getElementById('gmBarEm').textContent = '🎮';
+  document.getElementById('gmBarNm').textContent = title || 'เลือกเกม';
+  document.getElementById('gmBarVs').textContent = sub || '';
+  document.getElementById('gmFoot').innerHTML = `<span class="gm-how">กดเลือกเกมที่อยากเล่น</span>`;
+  el.classList.add('on');
+  document.body.style.overflow = 'hidden';
+  if(typeof ofcPause === 'function') ofcPause();
+
+  const stage = document.getElementById('gmStage');
+  stage.innerHTML = `<div class="gm-menu">${keys.map(k => {
+    const d = GM_DEFS[k], g = GM[k] || {};
+    const champ = g.champion
+      ? `${gmFace(g.champion,'gm-av')} <span>${gmEsc(gmName(g.champion))} · ${g.best?.score ?? 0} ${d.unit}</span>`
+      : `<span class="none">ยังไม่มีใครเล่น</span>`;
+    return `<button class="gm-menu-b" type="button" onclick="gmOpen('${k}')">
+      <span class="em">${d.emoji}</span>
+      <span class="nm">${gmEsc(d.label)}</span>
+      <span class="ch">${champ}</span>
+    </button>`;
+  }).join('')}</div>`;
+  document.addEventListener('keydown', gmKey);
+  GM_CUR = {key:null, stop:()=>{}};
+}
+
 
 /* =====================================================================
    ต่อของในผังให้กดเล่นเกมได้ — โต๊ะปิงปอง · ตู้ปลา · โกล
@@ -816,10 +1293,26 @@ function gmTap(el, key){
   el.addEventListener('click', () => gmOpen(key));
 }
 
+/* ของที่เปิดเมนูหลายเกม (PS5) — ผูก handler เองแทนที่จะยิงเข้าเกมเดียว */
+function gmTapFn(el, tag, title, fn){
+  if(!el || el.dataset.gm) return;
+  el.dataset.gm = tag;
+  el.classList.add('gm-tap');
+  el.title = title;
+  el.addEventListener('click', fn);
+}
+
 function gmAttachOffice(){
-  gmTap(document.getElementById('ofcPP'),   'pingpong');
-  gmTap(document.querySelector('.ofc-tank'), 'fishing');
-  gmTap(document.getElementById('ofcGoal'), 'football');
+  gmTap(document.getElementById('ofcPP'),     'pingpong');
+  gmTap(document.querySelector('.ofc-tank'),  'fishing');
+  gmTap(document.getElementById('ofcGoal'),   'football');
+  gmTap(document.getElementById('ofcSudoku'), 'sudoku');
+  /* เครื่องเกมมี 2 เกม — เปิดเมนูให้เลือก
+     ตัวเครื่องเล็กมาก (2.2cqw) เลยให้กดที่จอทีวีได้ด้วย จะได้เล็งง่ายขึ้น */
+  const menu = () => gmOpenMenu(['snake','tetris'], 'เครื่องเกม', 'ห้องเกม · เลือกได้ 2 เกม');
+  gmTapFn(document.querySelector('.ofc-ps5'), 'ps5', '🎮 เล่นเกมบนเครื่อง', menu);
+  const tv = document.getElementById('ofcTV');
+  if(tv){ tv.style.pointerEvents = 'auto'; gmTapFn(tv, 'tv', '🎮 เล่นเกมบนเครื่อง', menu); }
 }
 
 /* ---------- boot ---------- */
