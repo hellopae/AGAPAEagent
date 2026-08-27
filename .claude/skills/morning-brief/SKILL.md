@@ -22,11 +22,20 @@ flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice
 
 ## เรื่องเสียง
 
-ตอนนี้เครื่องมีเสียงไทยตัวเดียวคือ **Kanya** — เสียงอังกฤษ 175 ตัวที่เหลืออ่านภาษาไทยไม่ออกเลย (ได้ไฟล์เงียบ) เพราะฉะนั้นอย่าไปใส่ `--voice Samantha`
+**macOS 15 มีเสียงไทยให้ตัวเดียวคือ Kanya** — ตรวจแล้วทั้งจาก `say -v '?'` (ไทย 1 จาก 176) และจาก System Settings เอง (ตั้ง System speech language เป็น Thai แล้ว System voice ขึ้น Kanya ตัวเดียว ไม่มี Manage Voices ให้โหลดเพิ่ม) ไม่มี Enhanced/Premium ของไทย
 
-เปลี่ยนเสียงถาวรได้ด้วย env `AGAPAE_VOICE` — โหลดเสียงไทยเพิ่มที่
-System Settings → Accessibility → Spoken Content → System Voice → Manage Voices → Thai
-(ตัว Enhanced/Premium ไฟล์ใหญ่กว่าแต่เสียงเป็นธรรมชาติกว่าเยอะ) โหลดเสร็จเช็คด้วย `node scripts/speak.mjs --list`
+เสียงอังกฤษ 175 ตัวที่เหลือ **อ่านภาษาไทยไม่ออก** — สั่ง `--voice Samantha` แล้วได้ไฟล์เงียบ 4 KB อย่าใช้
+
+ที่ปรับได้จริงมีสองอย่าง คือความเร็วกับระดับเสียง:
+
+```
+--rate 155   ช้า ฟังสบาย        --rate 215  เร็ว ประหยัดเวลา
+--pitch 32   ทุ้ม               --pitch 50  ใส (Kanya ตอบสนองช่วง 30-60 เกิน 60 ไม่ต่างแล้ว)
+```
+
+ตั้งถาวรด้วย env `AGAPAE_VOICE` / `AGAPAE_RATE` / `AGAPAE_PITCH` ใน `~/.zshrc`
+
+ถ้าอยากได้เสียงคุณภาพสูงกว่านี้ต้องออกไปใช้ TTS API ข้างนอก (เสียเงิน + ต้องต่อเน็ต) — `speak.mjs` แยก backend ไว้ให้ต่อเพิ่มได้
 
 ## ขั้นตอนเมื่อถูกเรียก
 

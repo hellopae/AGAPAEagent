@@ -2,17 +2,27 @@
 /* พูดข้อความออกลำโพงด้วยเสียงไทย Kanya ที่ติดมากับ macOS
    ใช้:  node speak.mjs "ข้อความ"
          node brief.mjs morning | node speak.mjs
-   flags: --voice <ชื่อเสียง>  --rate <คำ/นาที>  --save <ไฟล์.aiff>  --dry (แค่พิมพ์ ไม่พูด)
-          --list (ดูเสียงไทยที่เครื่องมี) */
+   flags: --voice <ชื่อเสียง>  --rate <คำ/นาที>  --pitch <30-60 ต่ำ=ทุ้ม>
+          --save <ไฟล์.aiff>  --dry (แค่พิมพ์ ไม่พูด)  --list (ดูเสียงไทยที่เครื่องมี)
+   env:   AGAPAE_VOICE  AGAPAE_RATE  AGAPAE_PITCH */
 import { spawn, execSync } from "node:child_process";
 
 const argv = process.argv.slice(2);
+/* flag ที่กินค่าถัดไป เช่น --rate 200 */
 const flag = (name, def) => {
   const i = argv.indexOf(name);
   if (i === -1) return def;
   const v = argv[i + 1];
-  argv.splice(i, v && !v.startsWith("--") ? 2 : 1);
-  return v && !v.startsWith("--") ? v : true;
+  if (v === undefined || v.startsWith("--")) { argv.splice(i, 1); return def; }
+  argv.splice(i, 2);
+  return v;
+};
+/* flag เปล่า เช่น --dry — ห้ามกินคำถัดไป ไม่งั้นข้อความหาย */
+const boolFlag = (name) => {
+  const i = argv.indexOf(name);
+  if (i === -1) return false;
+  argv.splice(i, 1);
+  return true;
 };
 
 if (argv.includes("--list")) {
@@ -21,14 +31,16 @@ if (argv.includes("--list")) {
   const thai = all.split("\n").filter((l) => l.includes("th_TH"));
   console.log(thai.length ? thai.join("\n") : "ไม่มีเสียงไทยในเครื่อง");
   console.log(`\nเสียงไทย ${thai.length} ตัว จากทั้งหมด ${all.trim().split("\n").length} ตัว`);
-  console.log("โหลดเพิ่ม: System Settings → Accessibility → Spoken Content → System Voice → Manage Voices → Thai");
+  console.log("macOS 15 มีเสียงไทยให้ตัวเดียวคือ Kanya (ตั้ง System speech language เป็น Thai แล้วก็ไม่มี Manage Voices ให้โหลดเพิ่ม)");
+  console.log("ปรับบุคลิกเสียงได้ด้วย --rate (ความเร็ว) กับ --pitch 30-60 (ต่ำ=ทุ้ม)");
   process.exit(0);
 }
 
 const voice = flag("--voice", process.env.AGAPAE_VOICE || "Kanya");
-const rate = flag("--rate", "180");
+const rate = flag("--rate", process.env.AGAPAE_RATE || "180");
+const pitch = flag("--pitch", process.env.AGAPAE_PITCH || null);
 const save = flag("--save", null);
-const dry = flag("--dry", false);
+const dry = boolFlag("--dry");
 
 /* ล้างของที่เสียงสังเคราะห์อ่านแล้วพัง — emoji, URL, สัญลักษณ์ markdown, เส้นคั่น */
 function clean(raw) {
@@ -69,7 +81,8 @@ if (dry) {
 const args = ["-v", voice, "-r", String(rate)];
 if (save) args.push("-o", String(save));
 const say = spawn("say", args, { stdio: ["pipe", "inherit", "inherit"] });
-say.stdin.end(text);
+/* [[pbas n]] คือคำสั่งฝังของ say — Kanya ตอบสนองช่วง 30-60 สูงกว่านั้นไม่ต่างแล้ว */
+say.stdin.end(pitch ? `[[pbas ${pitch}]] ${text}` : text);
 say.on("exit", (code) => {
   if (code !== 0) console.error(`say ล้มเหลว (exit ${code})`);
   if (save && code === 0) console.log(`บันทึกเสียงแล้ว: ${save}`);
