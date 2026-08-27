@@ -2,8 +2,9 @@
 /* พูดข้อความออกลำโพงด้วยเสียงไทย Kanya ที่ติดมากับ macOS
    ใช้:  node speak.mjs "ข้อความ"
          node brief.mjs morning | node speak.mjs
-   flags: --voice <ชื่อเสียง>  --rate <คำ/นาที>  --save <ไฟล์.aiff>  --dry (แค่พิมพ์ ไม่พูด) */
-import { spawn } from "node:child_process";
+   flags: --voice <ชื่อเสียง>  --rate <คำ/นาที>  --save <ไฟล์.aiff>  --dry (แค่พิมพ์ ไม่พูด)
+          --list (ดูเสียงไทยที่เครื่องมี) */
+import { spawn, execSync } from "node:child_process";
 
 const argv = process.argv.slice(2);
 const flag = (name, def) => {
@@ -14,7 +15,17 @@ const flag = (name, def) => {
   return v && !v.startsWith("--") ? v : true;
 };
 
-const voice = flag("--voice", "Kanya");
+if (argv.includes("--list")) {
+  /* เสียงอังกฤษอ่านภาษาไทยไม่ออก (ได้ไฟล์เงียบ) เลยโชว์เฉพาะ th_TH */
+  const all = execSync("say -v '?'", { encoding: "utf8" });
+  const thai = all.split("\n").filter((l) => l.includes("th_TH"));
+  console.log(thai.length ? thai.join("\n") : "ไม่มีเสียงไทยในเครื่อง");
+  console.log(`\nเสียงไทย ${thai.length} ตัว จากทั้งหมด ${all.trim().split("\n").length} ตัว`);
+  console.log("โหลดเพิ่ม: System Settings → Accessibility → Spoken Content → System Voice → Manage Voices → Thai");
+  process.exit(0);
+}
+
+const voice = flag("--voice", process.env.AGAPAE_VOICE || "Kanya");
 const rate = flag("--rate", "180");
 const save = flag("--save", null);
 const dry = flag("--dry", false);

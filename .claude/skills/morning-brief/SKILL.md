@@ -18,7 +18,15 @@ node scripts/speak.mjs "ข้อความอะไรก็ได้"
 
 หมวดที่ `--only` รับ: `ดวง` `อีเมล` `งาน` `ข่าว` `มังงะ`
 
-flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice` · `--save out.aiff` · `--dry` (พิมพ์ข้อความที่ล้างแล้ว ไม่พูด)
+flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice <ชื่อ>` · `--list` (ดูเสียงไทยที่มี) · `--save out.aiff` · `--dry` (พิมพ์ข้อความที่ล้างแล้ว ไม่พูด)
+
+## เรื่องเสียง
+
+ตอนนี้เครื่องมีเสียงไทยตัวเดียวคือ **Kanya** — เสียงอังกฤษ 175 ตัวที่เหลืออ่านภาษาไทยไม่ออกเลย (ได้ไฟล์เงียบ) เพราะฉะนั้นอย่าไปใส่ `--voice Samantha`
+
+เปลี่ยนเสียงถาวรได้ด้วย env `AGAPAE_VOICE` — โหลดเสียงไทยเพิ่มที่
+System Settings → Accessibility → Spoken Content → System Voice → Manage Voices → Thai
+(ตัว Enhanced/Premium ไฟล์ใหญ่กว่าแต่เสียงเป็นธรรมชาติกว่าเยอะ) โหลดเสร็จเช็คด้วย `node scripts/speak.mjs --list`
 
 ## ขั้นตอนเมื่อถูกเรียก
 
