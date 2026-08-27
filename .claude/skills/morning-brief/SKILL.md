@@ -16,7 +16,10 @@ node scripts/brief.mjs --only ดวง | node scripts/speak.mjs
 node scripts/speak.mjs "ข้อความอะไรก็ได้"
 ```
 
-หมวดที่ `--only` รับ: `ดวง` `อีเมล` `งาน` `ข่าว` `มังงะ`
+หมวดที่ `--only` รับ: `ดวง` `อีเมล` `งาน` `ข่าว` `มังงะ` `ราคา`
+
+`ราคา` = บิตคอยน์ (Binance) + ดัชนีความกลัวความโลภ + ทองไทย — **ดึงสดทุกครั้ง** ไม่ใช้ค่าที่ routine แช่ไว้
+ถ้าดึงราคาสดได้ หมวด `ข่าว` จะตัดบรรทัดทอง+BTC ที่ routine เขียนไว้ทิ้ง ไม่ให้อ่านซ้ำ
 
 flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice <ชื่อ>` · `--list` (ดูเสียงไทยที่มี) · `--save out.aiff` · `--dry` (พิมพ์ข้อความที่ล้างแล้ว ไม่พูด)
 
@@ -46,8 +49,29 @@ flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice
 
 ## แหล่งข้อมูล
 
-ทุกหมวดอ่านจาก Firestore `agents/*` ที่ routine เดิมเขียนไว้อยู่แล้ว (`horoscope`, `email`, `todo`, `daily`, `manga`)
-ไม่ต้องแก้ routine ไม่ต้องเพิ่ม doc ใหม่ — ถ้า routine ไหนยังไม่รันวันนั้น หมวดนั้นจะหายไปเงียบๆ ไม่ error
+| หมวด | มาจากไหน | สดแค่ไหน |
+|---|---|---|
+| ดวง ข่าว มังงะ | Firestore `agents/*` | เท่าที่ routine รันล่าสุด |
+| อีเมล งาน | Firestore `agents/email` `agents/todo` | เท่าที่ routine รันล่าสุด (มักตี 1) |
+| ราคา | Binance / ทองไทย / Fear&Greed | สดทุกครั้งที่รัน |
+
+ถ้า routine ไหนยังไม่รันวันนั้น หมวดนั้นจะหายไปเงียบๆ ไม่ error
+
+## เมื่อ Kittanate ขอ "เช็คอีเมล" หรือ "เช็คงาน" แบบสดๆ
+
+`brief.mjs` อ่านได้แค่ค่าที่ routine แช่ไว้ ถ้าเขาอยากรู้ **ตอนนี้จริงๆ** ให้ Claude เรียก connector เองแล้วค่อยส่งเข้า `speak.mjs`:
+
+- **อีเมล** → `mcp__claude_ai_Gmail__search_threads` query `is:unread in:inbox newer_than:3d`
+  ผลว่าง `{}` = ไม่มีอีเมลใหม่ ไม่ใช่ error
+- **งาน** → `mcp__claude_ai_Todoist__find-tasks-by-date` `startDate: "today"`, `daysCount: 7`, `overdueOption: "include-overdue"`
+
+แล้วเรียบเรียงเป็นประโยคสั้นๆ ส่งเข้า:
+
+```
+node scripts/speak.mjs "มีอีเมลใหม่ 2 ฉบับ ... งานวันนี้ ..."
+```
+
+**อย่าอ่านหัวข้ออีเมลเกิน 5 ฉบับ** และอย่าอ่านเนื้อในอีเมล — เอาแค่ใครส่งกับเรื่องอะไร
 
 ## หลักการ
 

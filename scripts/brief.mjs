@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /* ประกอบ "สรุปเช้า" จากข้อมูลจริงใน Firestore (agents/*) ออกมาเป็นข้อความสำหรับอ่านออกเสียง
    ใช้:  node brief.mjs                 → สรุปเช้าเต็ม
-         node brief.mjs --only ดวง      → เฉพาะบางหมวด (ดวง|อีเมล|งาน|ข่าว|มังงะ)
+         node brief.mjs --only ราคา     → เฉพาะบางหมวด (ดวง|อีเมล|งาน|ข่าว|มังงะ|ราคา)
          node brief.mjs | node speak.mjs
+   หมวด "ราคา" ดึงสดจาก API ทุกครั้ง (Binance / ทองไทย / Fear&Greed) ไม่ผ่าน Firestore
    หมายเหตุ: พิมพ์ออก stdout อย่างเดียว ไม่เขียนไฟล์ ไม่แตะ Firestore */
 
 const PROJECT = "agapae-studio";
@@ -51,6 +52,45 @@ const thDate = (iso) => {
   return `${d} ${TH_MON[m - 1]} ${String(y + 543).slice(-2)}`;
 };
 
+/* ---------- ราคา: ดึงสดทุกครั้ง ไม่ใช้ค่าที่ routine แช่ไว้ ---------- */
+async function json(url) {
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    return res.ok ? await res.json() : null;
+  } catch {
+    return null;
+  }
+}
+const num = (n, d = 0) => Number(n).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+
+async function prices() {
+  const [btc, fx, fng, gold] = await Promise.all([
+    json("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT"),
+    json("https://open.er-api.com/v6/latest/USD"),
+    json("https://api.alternative.me/fng/?limit=1"),
+    json("https://api.chnwt.dev/thai-gold-api/latest"),
+  ]);
+  const lines = [];
+  if (btc?.lastPrice) {
+    const usd = Number(btc.lastPrice);
+    const pct = Number(btc.priceChangePercent);
+    const dir = pct >= 0 ? "ขึ้น" : "ลง";
+    const thb = fx?.rates?.THB ? ` คิดเป็นเงินไทยราว ${num(usd * fx.rates.THB / 1e6, 2)} ล้านบาท` : "";
+    lines.push(`บิตคอยน์ ${num(usd)} ดอลลาร์ ${dir} ${Math.abs(pct).toFixed(2)} เปอร์เซ็นต์ใน 24 ชั่วโมง${thb}`);
+    lines.push(`ช่วง 24 ชั่วโมง สูงสุด ${num(btc.highPrice)} ต่ำสุด ${num(btc.lowPrice)} ดอลลาร์`);
+  }
+  const f = fng?.data?.[0];
+  if (f) {
+    const TH = { "Extreme Fear": "กลัวสุดขีด", Fear: "กลัว", Neutral: "กลางๆ", Greed: "โลภ", "Extreme Greed": "โลภสุดขีด" };
+    lines.push(`ดัชนีความกลัวความโลภอยู่ที่ ${f.value} คือโซน${TH[f.value_classification] || f.value_classification}`);
+  }
+  const g = gold?.response?.price;
+  /* ".00" ท้ายราคาทองทำให้เสียงอ่าน "จุดศูนย์ศูนย์" ตัดทิ้ง */
+  const baht = (v) => String(v).replace(/\.00$/, "");
+  if (g) lines.push(`ทองรูปพรรณขายออก ${baht(g.gold.sell)} บาท ทองแท่งขายออก ${baht(g.gold_bar.sell)} บาท`);
+  return lines;
+}
+
 const out = [];
 const push = (head, lines) => {
   const clean = (lines || []).filter(Boolean);
@@ -58,12 +98,13 @@ const push = (head, lines) => {
   out.push(head, ...clean, "");
 };
 
-const [horo, email, todo, daily, manga] = await Promise.all([
+const [horo, email, todo, daily, manga, price] = await Promise.all([
   want("ดวง") ? doc("horoscope") : null,
   want("อีเมล") ? doc("email") : null,
   want("งาน") ? doc("todo") : null,
   want("ข่าว") ? doc("daily") : null,
   want("มังงะ") ? doc("manga") : null,
+  want("ราคา") ? prices() : null,
 ]);
 
 const stamp = horo?.date || email?.date || today;
@@ -92,7 +133,13 @@ if (todo?.dataJson) {
   } catch {}
 }
 
-if (daily?.items?.length) push("ข่าววันนี้", daily.items.slice(0, 6));
+if (price?.length) push("ราคาตอนนี้", price);
+
+if (daily?.items?.length) {
+  /* ข่าวที่ routine แช่ไว้มีบรรทัดทอง+BTC อยู่ด้วย ถ้าดึงราคาสดมาได้แล้วก็ไม่ต้องอ่านซ้ำ */
+  const items = price?.length ? daily.items.filter((t) => !/ทอง|Bitcoin|BTC/i.test(t)) : daily.items;
+  push("ข่าววันนี้", items.slice(0, 6));
+}
 
 if (manga?.dataJson) {
   try {

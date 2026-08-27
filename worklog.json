@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T03:18:39Z",
+  "updatedAt": "2026-08-27T03:51:20Z",
   "entries": [
     {
       "id": "wl-260827-dale-skillharvest",
@@ -2504,6 +2504,23 @@
         "scripts/hook-speak.mjs",
         ".claude/skills/morning-brief/SKILL.md",
         ".claude/settings.json"
+      ]
+    },
+    {
+      "id": "wl-260827-claudy-brief-prices",
+      "datetime": "2026-08-27T03:51:20Z",
+      "displayDate": "27 ส.ค. 2569",
+      "displayTime": "11:05",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "เพิ่มหมวดราคาสดในสรุปเช้า + ทางเช็คอีเมล/งานแบบ real-time",
+      "summary": "brief.mjs เพิ่มหมวด ราคา ดึงสดทุกครั้งจาก Binance (BTCUSDT + ช่วง 24 ชม.) · open.er-api (แปลงเป็นบาท) · alternative.me (Fear&Greed แปลโซนเป็นไทย) · api.chnwt.dev (ทองรูปพรรณ+ทองแท่ง) ทุกตัวเรียกตรงไม่ต้องผ่าน proxy · ถ้าดึงราคาสดได้จะตัดบรรทัดทอง+BTC ที่ค้างใน agents/daily ทิ้งไม่ให้อ่านซ้ำ · ส่วนอีเมลกับงานที่ต้องการค่าสดจริงๆ ให้ Claude เรียก Gmail/Todoist MCP เองแล้วส่งเข้า speak.mjs เพราะ node script เรียก connector ไม่ได้ เขียนวิธีไว้ใน SKILL.md แล้ว",
+      "files": [
+        "scripts/brief.mjs",
+        ".claude/skills/morning-brief/SKILL.md"
       ]
     }
   ]
