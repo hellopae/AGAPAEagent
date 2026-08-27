@@ -51,6 +51,12 @@
             "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-skill.mjs\" stop",
             "timeout": 20,
             "statusMessage": "เก็บเกี่ยว skill จากงานที่เพิ่งทำ…"
+          },
+          {
+            "type": "command",
+            "command": "node \"/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/scripts/hook-speak.mjs\"",
+            "timeout": 10,
+            "statusMessage": "อ่านสรุปออกเสียง…"
           }
         ]
       }

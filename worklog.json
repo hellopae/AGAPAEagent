@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T18:20:00Z",
+  "updatedAt": "2026-08-27T03:18:39Z",
   "entries": [
     {
       "id": "wl-260827-dale-skillharvest",
@@ -2484,6 +2484,26 @@
       "summary": "build Tauri release ผ่านใน 54 วิ ได้ทั้ง .app และ .dmg แล้ว ditto ทับ /Applications/AGAPAE Widget.app (เดิม 25 ส.ค. 02:01 → ใหม่ 22:59) เปิดทดสอบแล้วรันได้ · วิธี build ต้องข้าม beforeBuildCommand ด้วย --config '{\"build\":{\"beforeBuildCommand\":\"\"}}' แล้วรัน vite build เองก่อน เพราะ npm เรียก node ผ่าน /usr/bin/env ซึ่ง macOS SIP ตัด DYLD_FALLBACK_LIBRARY_PATH ทิ้ง ทำให้ node ที่ลิงก์ llhttp ผิดเวอร์ชันพังกลางทาง · แก้ถาวรที่ brew reinstall node แล้วจะใช้ npm run tauri build ได้ตามปกติ",
       "files": [
         "Widget/src-tauri/target/release/bundle/macos/AGAPAE Widget.app"
+      ]
+    },
+    {
+      "id": "wl-260827-claudy-voice-layer",
+      "datetime": "2026-08-27T03:18:39Z",
+      "displayDate": "27 ส.ค. 2569",
+      "displayTime": "10:20",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ต่อชั้นเสียงให้ระบบ — สรุปเช้าอ่านออกเสียง",
+      "summary": "เทียบโพสต์ JARVIS OS ของ Dewviko กับระบบเดิมแล้วพบว่าขาดแค่ชั้นเสียง จึงทำเพิ่ม 3 ชิ้น โดยไม่จ่ายรายเดือน: speak.mjs ใช้เสียงไทย Kanya ที่ติดมากับ macOS พร้อมตัว clean ที่ตัด emoji/URL/สัญลักษณ์ markdown ออกก่อนอ่าน · brief.mjs ดึง agents/horoscope,email,todo,daily,manga จาก Firestore REST มาประกอบเป็นสรุปเช้าราว 1 นาที กรองงานเหลือแค่เลยกำหนด+วันนี้+7 วันข้างหน้า · hook-speak.mjs ต่อที่ Stop hook อ่านคำตอบสุดท้ายออกเสียง ปิดอยู่โดยดีฟอลต์ เปิดด้วย AGAPAE_SPEAK=1 · เสียงเข้าใช้ Dictation ของ macOS (Fn สองที) ไม่ต้องซื้อ Wispr Flow",
+      "files": [
+        "scripts/speak.mjs",
+        "scripts/brief.mjs",
+        "scripts/hook-speak.mjs",
+        ".claude/skills/morning-brief/SKILL.md",
+        ".claude/settings.json"
       ]
     }
   ]
