@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T03:51:20Z",
+  "updatedAt": "2026-08-27T04:08:04Z",
   "entries": [
     {
       "id": "wl-260827-dale-skillharvest",
@@ -2520,6 +2520,24 @@
       "summary": "brief.mjs เพิ่มหมวด ราคา ดึงสดทุกครั้งจาก Binance (BTCUSDT + ช่วง 24 ชม.) · open.er-api (แปลงเป็นบาท) · alternative.me (Fear&Greed แปลโซนเป็นไทย) · api.chnwt.dev (ทองรูปพรรณ+ทองแท่ง) ทุกตัวเรียกตรงไม่ต้องผ่าน proxy · ถ้าดึงราคาสดได้จะตัดบรรทัดทอง+BTC ที่ค้างใน agents/daily ทิ้งไม่ให้อ่านซ้ำ · ส่วนอีเมลกับงานที่ต้องการค่าสดจริงๆ ให้ Claude เรียก Gmail/Todoist MCP เองแล้วส่งเข้า speak.mjs เพราะ node script เรียก connector ไม่ได้ เขียนวิธีไว้ใน SKILL.md แล้ว",
       "files": [
         "scripts/brief.mjs",
+        ".claude/skills/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "wl-260827-claudy-routine-preset",
+      "datetime": "2026-08-27T04:08:04Z",
+      "displayDate": "27 ส.ค. 2569",
+      "displayTime": "11:30",
+      "agent": "claudy",
+      "agentName": "Claudy",
+      "agentImg": "avatars/Claudy.png",
+      "pipeline": "orchestrator",
+      "status": "done",
+      "title": "ทำ routine ประจำวันสำหรับอ่านออกเสียง ตัดดวงกับมังงะออก",
+      "summary": "brief.mjs เปลี่ยนค่าเริ่มต้นจาก \"ทุกหมวด\" เป็น routine ประจำวัน = ราคา + อีเมล + งาน + ข่าว · ดวงกับมังงะย้ายไปอยู่หลัง --all หรือ --only เพราะทำให้ยาวเกิน · บิตคอยน์ในโหมด routine เหลือบรรทัดเดียว ราคา+เปอร์เซ็นต์+แนวโน้ม (ฟังก์ชัน trend() แบ่ง 5 ระดับจาก % 24 ชม.) ส่วน --only ราคา ยังได้ตัวเต็มพร้อมช่วงสูงต่ำ แปลงเป็นบาท และ Fear&Greed · ประโยคเปิดเปลี่ยนเป็น \"routine วันนี้เป็นแบบนี้ครับ\" · เพิ่ม trigger \"อ่าน routine วันนี้ให้ฟังหน่อย\" ใน description ของสกิล · เตรียม launchd plist อ่านเองทุกเช้า 7 โมงไว้แล้วแต่ยังไม่ load รอ Kittanate ตัดสินใจ",
+      "files": [
+        "scripts/brief.mjs",
+        "scripts/com.agapae.morning-brief.plist",
         ".claude/skills/morning-brief/SKILL.md"
       ]
     }

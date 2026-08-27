@@ -1,6 +1,6 @@
 ---
 name: morning-brief
-description: สรุปเช้าอ่านออกเสียง — ดวง อีเมล งานที่ถึงกำหนด ข่าว มังงะ ดึงจาก Firestore แล้วให้เสียงไทย Kanya อ่านให้ฟัง ใช้เมื่อ Kittanate สั่ง "สรุปเช้า" "อ่านให้ฟัง" "พูดสรุป" หรือขอฟังเฉพาะหมวด
+description: อ่าน routine ประจำวันออกเสียง — ราคาบิตคอยน์+ทอง อีเมลใหม่ งานที่ถึงกำหนด ข่าว ใช้เมื่อ Kittanate สั่ง "อ่าน routine วันนี้ให้ฟังหน่อย" "สรุปเช้า" "อ่านให้ฟัง" "พูดสรุป" หรือขอฟังเฉพาะหมวด (ดวง มังงะ ต้องขอเองถึงจะอ่าน)
 ---
 
 # Skill: morning-brief
@@ -9,16 +9,28 @@ description: สรุปเช้าอ่านออกเสียง — �
 
 ## ใช้ยังไง
 
+**คำสั่งหลัก — "อ่าน routine วันนี้ให้ฟังหน่อย" ให้รันอันนี้:**
+
 ```
-node scripts/brief.mjs | node scripts/speak.mjs          # สรุปเช้าเต็ม พูดออกลำโพง
+node scripts/brief.mjs | node scripts/speak.mjs
+```
+
+```
 node scripts/brief.mjs                                   # ดูเป็นข้อความก่อน ไม่พูด
+node scripts/brief.mjs --all | node scripts/speak.mjs    # ใส่ดวง+มังงะเข้ามาด้วย
 node scripts/brief.mjs --only ดวง | node scripts/speak.mjs
 node scripts/speak.mjs "ข้อความอะไรก็ได้"
 ```
 
+**routine ประจำวัน (ค่าเริ่มต้น) = `ราคา` + `อีเมล` + `งาน` + `ข่าว`**
+ดวงกับมังงะ **ไม่อยู่ใน routine** เพราะทำให้ยาวเกิน — ต้องสั่ง `--only ดวง` / `--only มังงะ` / `--all` ถึงจะอ่าน
+
 หมวดที่ `--only` รับ: `ดวง` `อีเมล` `งาน` `ข่าว` `มังงะ` `ราคา`
 
-`ราคา` = บิตคอยน์ (Binance) + ดัชนีความกลัวความโลภ + ทองไทย — **ดึงสดทุกครั้ง** ไม่ใช้ค่าที่ routine แช่ไว้
+`ราคา` = บิตคอยน์ (Binance) + ทองไทย — **ดึงสดทุกครั้ง** ไม่ใช้ค่าที่ routine แช่ไว้
+
+- ใน routine ประจำวัน บิตคอยน์พูดแค่ **ราคา + เปอร์เซ็นต์ + แนวโน้ม** บรรทัดเดียว กับทองอีกบรรทัด
+- สั่ง `--only ราคา` ถึงจะได้ตัวเต็ม (ช่วงสูงสุด-ต่ำสุด 24 ชม., แปลงเป็นบาท, ดัชนีความกลัวความโลภ)
 ถ้าดึงราคาสดได้ หมวด `ข่าว` จะตัดบรรทัดทอง+BTC ที่ routine เขียนไว้ทิ้ง ไม่ให้อ่านซ้ำ
 
 flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--voice <ชื่อ>` · `--list` (ดูเสียงไทยที่มี) · `--save out.aiff` · `--dry` (พิมพ์ข้อความที่ล้างแล้ว ไม่พูด)
@@ -83,3 +95,16 @@ node scripts/speak.mjs "มีอีเมลใหม่ 2 ฉบับ ... ง
 
 `scripts/hook-speak.mjs` ต่อไว้ที่ Stop hook แล้ว แต่จะทำงานเฉพาะเมื่อ `AGAPAE_SPEAK=1`
 เปิดชั่วคราว: `AGAPAE_SPEAK=1 claude` — จบเทิร์นแล้วมันจะอ่านคำตอบสุดท้าย (ตัดที่ 320 ตัวอักษร) ออกเสียง
+
+
+## เปิดให้อ่านเองทุกเช้า 7 โมง (ยังไม่เปิด)
+
+`scripts/com.agapae.morning-brief.plist` เตรียมไว้แล้ว แต่ยังไม่ได้ติดตั้ง เพราะเสียงเด้งขึ้นมาเองตอนเช้าอาจไม่ใช่สิ่งที่ต้องการ
+
+```
+cp scripts/com.agapae.morning-brief.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.agapae.morning-brief.plist    # เปิด
+launchctl unload ~/Library/LaunchAgents/com.agapae.morning-brief.plist  # ปิด
+```
+
+ถ้าเครื่องหลับตอน 7 โมง มันจะอ่านตอนเครื่องตื่น · error ลงที่ `/tmp/agapae-morning-brief.log`

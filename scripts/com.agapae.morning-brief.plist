@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- อ่าน routine ประจำวันออกเสียงอัตโนมัติทุกเช้า 7 โมง — ยังไม่เปิดใช้
+     เปิด:  cp scripts/com.agapae.morning-brief.plist ~/Library/LaunchAgents/
+            launchctl load ~/Library/LaunchAgents/com.agapae.morning-brief.plist
+     ปิด:   launchctl unload ~/Library/LaunchAgents/com.agapae.morning-brief.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.agapae.morning-brief</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-lc</string>
+    <string>cd "$HOME/Documents/Work PAE/Claude/AGAPAE Agent" &amp;&amp; node scripts/brief.mjs | node scripts/speak.mjs</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>7</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardErrorPath</key>
+  <string>/tmp/agapae-morning-brief.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

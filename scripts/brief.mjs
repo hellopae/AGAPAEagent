@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* ประกอบ "สรุปเช้า" จากข้อมูลจริงใน Firestore (agents/*) ออกมาเป็นข้อความสำหรับอ่านออกเสียง
-   ใช้:  node brief.mjs                 → สรุปเช้าเต็ม
+   ใช้:  node brief.mjs                 → routine ประจำวัน = ราคา + อีเมล + งาน + ข่าว (ไม่มีดวง/มังงะ)
+         node brief.mjs --all           → ใส่ดวงกับมังงะเข้ามาด้วย
          node brief.mjs --only ราคา     → เฉพาะบางหมวด (ดวง|อีเมล|งาน|ข่าว|มังงะ|ราคา)
          node brief.mjs | node speak.mjs
    หมวด "ราคา" ดึงสดจาก API ทุกครั้ง (Binance / ทองไทย / Fear&Greed) ไม่ผ่าน Firestore
@@ -15,6 +16,9 @@ const only = (() => {
   const i = argv.indexOf("--only");
   return i === -1 ? null : argv[i + 1];
 })();
+const all = argv.includes("--all");
+/* routine ประจำวันตัดดวงกับมังงะออก — สองอย่างนี้ขอฟังเองเมื่ออยากฟัง */
+const ROUTINE = new Set(["ราคา", "อีเมล", "งาน", "ข่าว"]);
 
 /* แปลงค่า Firestore REST → ค่า JS ธรรมดา */
 function unwrap(v) {
@@ -42,7 +46,7 @@ async function doc(name) {
 
 const today = new Date().toISOString().slice(0, 10);
 const plusDays = (n) => new Date(Date.now() + n * 86400e3).toISOString().slice(0, 10);
-const want = (section) => !only || only === section;
+const want = (section) => (only ? only === section : all || ROUTINE.has(section));
 
 /* 2026-09-06 → "6 ก.ย. 69" ให้เสียงอ่านแล้วเข้าใจ */
 const TH_MON = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
@@ -63,11 +67,20 @@ async function json(url) {
 }
 const num = (n, d = 0) => Number(n).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 
-async function prices() {
+/* short = โหมด routine พูดแค่ราคากับแนวโน้ม / เต็ม = ใส่ช่วง 24 ชม. กับ Fear&Greed ด้วย */
+function trend(pct) {
+  if (pct >= 3) return "แนวโน้มขาขึ้นชัด";
+  if (pct >= 1) return "แนวโน้มขึ้นเล็กน้อย";
+  if (pct > -1) return "แนวโน้มทรงตัว";
+  if (pct > -3) return "แนวโน้มลงเล็กน้อย";
+  return "แนวโน้มขาลงชัด";
+}
+
+async function prices(short = false) {
   const [btc, fx, fng, gold] = await Promise.all([
     json("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT"),
-    json("https://open.er-api.com/v6/latest/USD"),
-    json("https://api.alternative.me/fng/?limit=1"),
+    short ? null : json("https://open.er-api.com/v6/latest/USD"),
+    short ? null : json("https://api.alternative.me/fng/?limit=1"),
     json("https://api.chnwt.dev/thai-gold-api/latest"),
   ]);
   const lines = [];
@@ -75,9 +88,13 @@ async function prices() {
     const usd = Number(btc.lastPrice);
     const pct = Number(btc.priceChangePercent);
     const dir = pct >= 0 ? "ขึ้น" : "ลง";
-    const thb = fx?.rates?.THB ? ` คิดเป็นเงินไทยราว ${num(usd * fx.rates.THB / 1e6, 2)} ล้านบาท` : "";
-    lines.push(`บิตคอยน์ ${num(usd)} ดอลลาร์ ${dir} ${Math.abs(pct).toFixed(2)} เปอร์เซ็นต์ใน 24 ชั่วโมง${thb}`);
-    lines.push(`ช่วง 24 ชั่วโมง สูงสุด ${num(btc.highPrice)} ต่ำสุด ${num(btc.lowPrice)} ดอลลาร์`);
+    if (short) {
+      lines.push(`บิตคอยน์ ${num(usd)} ดอลลาร์ ${dir} ${Math.abs(pct).toFixed(1)} เปอร์เซ็นต์ ${trend(pct)}`);
+    } else {
+      const thb = fx?.rates?.THB ? ` คิดเป็นเงินไทยราว ${num(usd * fx.rates.THB / 1e6, 2)} ล้านบาท` : "";
+      lines.push(`บิตคอยน์ ${num(usd)} ดอลลาร์ ${dir} ${Math.abs(pct).toFixed(2)} เปอร์เซ็นต์ใน 24 ชั่วโมง${thb} ${trend(pct)}`);
+      lines.push(`ช่วง 24 ชั่วโมง สูงสุด ${num(btc.highPrice)} ต่ำสุด ${num(btc.lowPrice)} ดอลลาร์`);
+    }
   }
   const f = fng?.data?.[0];
   if (f) {
@@ -87,7 +104,7 @@ async function prices() {
   const g = gold?.response?.price;
   /* ".00" ท้ายราคาทองทำให้เสียงอ่าน "จุดศูนย์ศูนย์" ตัดทิ้ง */
   const baht = (v) => String(v).replace(/\.00$/, "");
-  if (g) lines.push(`ทองรูปพรรณขายออก ${baht(g.gold.sell)} บาท ทองแท่งขายออก ${baht(g.gold_bar.sell)} บาท`);
+  if (g) lines.push(short ? `ทองรูปพรรณขายออก ${baht(g.gold.sell)} บาท` : `ทองรูปพรรณขายออก ${baht(g.gold.sell)} บาท ทองแท่งขายออก ${baht(g.gold_bar.sell)} บาท`);
   return lines;
 }
 
@@ -104,11 +121,11 @@ const [horo, email, todo, daily, manga, price] = await Promise.all([
   want("งาน") ? doc("todo") : null,
   want("ข่าว") ? doc("daily") : null,
   want("มังงะ") ? doc("manga") : null,
-  want("ราคา") ? prices() : null,
+  want("ราคา") ? prices(!only && !all) : null,
 ]);
 
 const stamp = horo?.date || email?.date || today;
-if (!only) out.push(`สวัสดีครับพี่เป้ วันนี้ ${stamp} สรุปเช้าให้ฟังครับ`, "");
+if (!only) out.push(`สวัสดีครับพี่เป้ วันนี้ ${stamp} routine วันนี้เป็นแบบนี้ครับ`, "");
 
 if (horo?.items?.length) push("ดวงวันนี้", horo.items);
 
