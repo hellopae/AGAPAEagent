@@ -3,8 +3,9 @@
    ใช้:  node speak.mjs "ข้อความ"
          node brief.mjs morning | node speak.mjs
    flags: --voice <ชื่อเสียง>  --rate <คำ/นาที>  --pitch <30-60 ต่ำ=ทุ้ม>
-          --save <ไฟล์.aiff>  --dry (แค่พิมพ์ ไม่พูด)  --list (ดูเสียงไทยที่เครื่องมี)
-   env:   AGAPAE_VOICE  AGAPAE_RATE  AGAPAE_PITCH */
+          --pause <มิลลิวินาที ระหว่างหัวข้อ>  --save <ไฟล์.aiff>
+          --dry (แค่พิมพ์ ไม่พูด)  --list (ดูเสียงไทยที่เครื่องมี)
+   env:   AGAPAE_VOICE  AGAPAE_RATE  AGAPAE_PITCH  AGAPAE_PAUSE */
 import { spawn, execSync } from "node:child_process";
 
 const argv = process.argv.slice(2);
@@ -39,12 +40,14 @@ if (argv.includes("--list")) {
 const voice = flag("--voice", process.env.AGAPAE_VOICE || "Kanya");
 const rate = flag("--rate", process.env.AGAPAE_RATE || "180");
 const pitch = flag("--pitch", process.env.AGAPAE_PITCH || null);
+const pause = Number(flag("--pause", process.env.AGAPAE_PAUSE || "800"));
 const save = flag("--save", null);
 const dry = boolFlag("--dry");
 
-/* ล้างของที่เสียงสังเคราะห์อ่านแล้วพัง — emoji, URL, สัญลักษณ์ markdown, เส้นคั่น */
+/* ล้างของที่เสียงสังเคราะห์อ่านแล้วพัง — emoji, URL, สัญลักษณ์ markdown, เส้นคั่น
+   บรรทัดว่างคือรอยต่อระหว่างหัวข้อ เก็บไว้แล้วแปลงเป็นช่วงเงียบทีหลัง */
 function clean(raw) {
-  return raw
+  const lines = raw
     .replace(/```[\s\S]*?```/g, " ")
     .replace(/https?:\/\/\S+/g, " ")
     .replace(/\p{Extended_Pictographic}️?/gu, " ")
@@ -53,11 +56,17 @@ function clean(raw) {
     .replace(/[-–—]{2,}/g, " ")
     .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
     .replace(/[ \t]+/g, " ")
-    .replace(/\n{2,}/g, "\n")
     .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean)
-    .join(".\n");
+    .map((l) => l.trim());
+
+  const out = [];
+  for (const l of lines) {
+    if (l) out.push(/[.!?]$/.test(l) ? l : l + ".");   // กันจุดซ้อนแบบ "48 ชม.."
+    else if (out.length && out[out.length - 1] !== "") out.push("");   // ยุบบรรทัดว่างติดกันให้เหลือรอยเดียว
+  }
+  while (out.length && out[out.length - 1] === "") out.pop();
+  /* [[slnc n]] คือคำสั่งเงียบ n มิลลิวินาทีของ say — เว้นจังหวะให้คนฟังตามทัน */
+  return out.map((l) => (l === "" ? `[[slnc ${pause}]]` : l)).join("\n");
 }
 
 async function readStdin() {
