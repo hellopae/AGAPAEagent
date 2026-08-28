@@ -67,6 +67,40 @@
   .brand h1{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.1}
   .brand .sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
   .live{display:flex;align-items:center;gap:18px}
+  /* ปุ่มอ่านออกเสียง — ซ่อนตัวเองถ้าเครื่องไม่มีเสียงไทย */
+  .speak-btn{
+    display:inline-flex;align-items:center;gap:7px;
+    min-height:38px;padding:8px 15px;
+    font-family:inherit;font-size:14px;line-height:1.4;
+    color:var(--paper-2);background:var(--accent);
+    border:1px solid var(--accent);border-radius:999px;
+    cursor:pointer;white-space:nowrap;
+    transition:filter .16s ease;
+  }
+  .speak-btn:hover{filter:brightness(1.25)}
+  .speak-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .speak-btn[hidden]{display:none}
+  .speak-btn.on{background:var(--flagged);border-color:var(--flagged)}
+  .speak-ico{font-size:11px;line-height:1}
+
+  /* กล่องข้อความ routine — เผื่ออยู่ในที่ที่ฟังไม่ได้ */
+  #speakDlg{
+    width:min(560px,calc(100vw - 32px));
+    border:1px solid var(--line-strong);border-radius:var(--radius);
+    background:var(--card);color:var(--ink);
+    padding:22px;box-shadow:var(--shadow);
+  }
+  #speakDlg::backdrop{background:rgba(27,28,32,.45)}
+  #speakDlg h3{font-size:17px;margin-bottom:4px}
+  #speakDlg .sub{color:var(--ink-faint);font-size:12px;margin-bottom:14px}
+  #speakText{
+    white-space:pre-wrap;line-height:1.75;font-size:15px;
+    max-height:56vh;overflow:auto;
+    border-top:1px solid var(--line);padding-top:14px;
+  }
+  #speakText .h{font-weight:600;display:block;margin-top:14px}
+  #speakText .h:first-child{margin-top:0}
+  #speakDlg .row{display:flex;gap:8px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
   .stat{text-align:right}
   .stat .n{font-size:20px;font-weight:600;line-height:1}
   .stat .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:3px}
@@ -1222,6 +1256,10 @@
       <div class="stat"><div class="n work" id="nWorking">0</div><div class="l">กำลังทำงาน</div></div>
       <div class="stat"><div class="n" id="nIdle">0</div><div class="l">ว่าง</div></div>
       <div class="stat"><div class="n" id="nDone">0</div><div class="l">เสร็จวันนี้</div></div>
+      <button type="button" class="speak-btn" id="btnSpeak" hidden
+              title="อ่าน routine วันนี้ออกเสียง">
+        <span class="speak-ico" aria-hidden="true">▶</span><span id="speakLabel">อ่าน routine</span>
+      </button>
     </div>
   </div>
 </header>
@@ -1737,6 +1775,231 @@ function fsCheckedText(checkedAt){
   if(isNaN(d)) return '';
   return 'ตรวจ ' + d.toLocaleString('th-TH',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
 }
+
+/* =========================================================================
+   อ่าน routine ออกเสียง — พอร์ตมาจาก scripts/brief.mjs + scripts/speak.mjs
+   ใช้ Web Speech API ของเบราว์เซอร์ ไม่ต้องมีเซิร์ฟเวอร์ ไม่มีค่าใช้จ่าย
+   routine = ราคา + อีเมล + งาน + ข่าว (ดวงกับมังงะไม่อยู่ใน routine เหมือนฝั่ง CLI)
+   ========================================================================= */
+
+/* อ่าน doc จาก Firestore แบบดิบ (fsPayload ใช้ไม่ได้ เพราะ email/daily ไม่ได้เก็บใน dataJson) */
+function fsUnwrap(v){
+  if(!v || typeof v !== 'object') return v;
+  if('stringValue'  in v) return v.stringValue;
+  if('integerValue' in v) return Number(v.integerValue);
+  if('doubleValue'  in v) return v.doubleValue;
+  if('booleanValue' in v) return v.booleanValue;
+  if('nullValue'    in v) return null;
+  if('arrayValue'   in v) return (v.arrayValue.values || []).map(fsUnwrap);
+  if('mapValue'     in v) return Object.fromEntries(Object.entries(v.mapValue.fields || {}).map(([k,x]) => [k, fsUnwrap(x)]));
+  return null;
+}
+async function fsDoc(kind){
+  try{
+    const r = await fetch(`https://firestore.googleapis.com/v1/projects/agapae-studio/databases/(default)/documents/agents/${kind}?key=${FS_KEY}&t=`+Date.now());
+    if(!r.ok) return null;
+    const f = (await r.json()).fields || {};
+    return Object.fromEntries(Object.entries(f).map(([k,v]) => [k, fsUnwrap(v)]));
+  }catch(e){ return null; }
+}
+
+const SPK_MON = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+function spkThDate(iso){
+  if(!iso || !/^\d{4}-\d{2}-\d{2}/.test(iso)) return null;
+  const [y,m,d] = iso.slice(0,10).split('-').map(Number);
+  return `${d} ${SPK_MON[m-1]} ${String(y+543).slice(-2)}`;
+}
+const spkNum = (n,d=0) => Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+function spkTrend(pct){
+  if(pct >= 3)  return 'แนวโน้มขาขึ้นชัด';
+  if(pct >= 1)  return 'แนวโน้มขึ้นเล็กน้อย';
+  if(pct > -1)  return 'แนวโน้มทรงตัว';
+  if(pct > -3)  return 'แนวโน้มลงเล็กน้อย';
+  return 'แนวโน้มขาลงชัด';
+}
+async function spkJson(url){
+  try{
+    const r = await fetch(url,{signal:AbortSignal.timeout(8000)});
+    return r.ok ? await r.json() : null;
+  }catch(e){ return null; }
+}
+
+/* ราคา — ดึงสดทุกครั้ง ไม่ใช้ค่าที่ routine แช่ไว้ · แหล่งไหนล่มก็ข้ามบรรทัดนั้นไปเงียบๆ */
+async function spkPrices(){
+  const [btc,gold] = await Promise.all([
+    spkJson('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT'),
+    spkJson('https://api.chnwt.dev/thai-gold-api/latest')
+  ]);
+  const lines = [];
+  if(btc && btc.lastPrice){
+    const usd = Number(btc.lastPrice), pct = Number(btc.priceChangePercent);
+    lines.push(`บิตคอยน์ ${spkNum(usd)} ดอลลาร์ ${pct>=0?'ขึ้น':'ลง'} ${Math.abs(pct).toFixed(1)} เปอร์เซ็นต์ ${spkTrend(pct)}`);
+  }
+  const g = gold && gold.response && gold.response.price;
+  /* ".00" ท้ายราคาทองทำให้เสียงอ่าน "จุดศูนย์ศูนย์" ตัดทิ้ง */
+  if(g) lines.push(`ทองรูปพรรณขายออก ${String(g.gold.sell).replace(/\.00$/,'')} บาท`);
+  return lines;
+}
+
+/* ประกอบข้อความ routine — ลำดับเดียวกับ brief.mjs: อีเมล → งาน → ราคา → ข่าว */
+async function buildBrief(){
+  const today = new Date().toISOString().slice(0,10);
+  const plus7 = new Date(Date.now() + 7*86400e3).toISOString().slice(0,10);
+
+  const [email, todo, daily, price] = await Promise.all([
+    fsDoc('email'), fsDoc('todo'), fsDoc('daily'), spkPrices()
+  ]);
+
+  const out = [];
+  const push = (head, lines) => {
+    const clean = (lines || []).filter(Boolean);
+    if(!clean.length) return;
+    out.push('§' + head, ...clean, '');
+  };
+
+  const stamp = (email && email.date) || new Date().toLocaleDateString('th-TH',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+  out.push(`สวัสดีครับพี่เป้ วันนี้ ${stamp} routine วันนี้เป็นแบบนี้ครับ`, '');
+
+  if(email){
+    const n = email.count || 0;
+    push('อีเมล', n ? [`มีอีเมลใหม่ ${n} ฉบับ`, ...(email.items || []).slice(0,5)] : ['ยังไม่มีอีเมลใหม่']);
+  }
+
+  if(todo && todo.dataJson){
+    try{
+      const t = JSON.parse(todo.dataJson);
+      const dated = (t.items || []).filter(i => i.due);
+      const late = dated.filter(i => i.due < today);
+      const now  = dated.filter(i => i.due === today);
+      const soon = dated.filter(i => i.due > today && i.due <= plus7).sort((a,b) => a.due.localeCompare(b.due));
+      const lines = [];
+      if(late.length) lines.push(`เลยกำหนด ${late.length} งาน`, ...late.slice(0,4).map(i => i.title));
+      if(now.length)  lines.push(`วันนี้มี ${now.length} งาน`, ...now.map(i => i.title));
+      if(soon.length) lines.push('ใน 7 วันข้างหน้า', ...soon.slice(0,4).map(i => `${spkThDate(i.due) || i.when} ${i.title}`));
+      if(!lines.length) lines.push(`ไม่มีงานที่ถึงกำหนดใน 7 วันนี้ ค้างในลิสต์ทั้งหมด ${(t.items||[]).length} รายการ`);
+      push('งาน', lines);
+    }catch(e){}
+  }
+
+  if(price.length) push('ราคาตอนนี้', price);
+
+  if(daily && daily.items && daily.items.length){
+    /* ข่าวที่ routine แช่ไว้มีบรรทัดทอง+BTC อยู่ด้วย ถ้าดึงราคาสดมาได้แล้วไม่ต้องอ่านซ้ำ */
+    const items = price.length ? daily.items.filter(t => !/ทอง|Bitcoin|BTC/i.test(t)) : daily.items;
+    push('ข่าววันนี้', items.slice(0,6));
+  }
+
+  return out.join('\n').trim();
+}
+
+/* ---------- เสียง ---------- */
+function thaiVoice(){
+  const vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
+  return vs.find(v => /^th/i.test(v.lang)) || null;
+}
+
+/* ล้างข้อความก่อนอ่าน — ชุดเดียวกับ speak.mjs (URL, emoji, มาร์กดาวน์, บุลเล็ต) */
+function spkClean(raw){
+  return String(raw)
+    .replace(/https?:\/\/\S+/g,' ')
+    .replace(/\p{Extended_Pictographic}️?/gu,' ')
+    .replace(/[*_`~#>|§]/g,' ')
+    .replace(/^[ \t]*[-–—•]+[ \t]+/gm,' ')
+    .replace(/[-–—]{2,}/g,' ')
+    .replace(/[ \t]+/g,' ')
+    .split('\n').map(l => l.trim()).join('\n');
+}
+
+let spkQueue = [], spkOn = false;
+
+function spkStop(){
+  spkOn = false;
+  spkQueue = [];
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const b = document.getElementById('btnSpeak');
+  if(b){
+    b.classList.remove('on');
+    b.querySelector('.speak-ico').textContent = '▶';
+    document.getElementById('speakLabel').textContent = 'อ่าน routine';
+  }
+}
+
+function spkNext(){
+  if(!spkOn) return;
+  const line = spkQueue.shift();
+  if(line === undefined){ spkStop(); return; }
+  if(!line.trim()){ setTimeout(spkNext, 700); return; }   // บรรทัดว่าง = เว้นจังหวะระหว่างหัวข้อ
+  const u = new SpeechSynthesisUtterance(line);
+  const v = thaiVoice();
+  if(v) u.voice = v;
+  u.lang = 'th-TH';
+  u.rate = 1.0;
+  u.onend = spkNext;
+  u.onerror = spkNext;
+  speechSynthesis.speak(u);
+}
+
+async function speakRoutine(){
+  if(spkOn){ spkStop(); return; }
+
+  const btn = document.getElementById('btnSpeak');
+  btn.disabled = true;
+  document.getElementById('speakLabel').textContent = 'กำลังดึงข้อมูล…';
+
+  let text = '';
+  try{ text = await buildBrief(); }catch(e){ text = ''; }
+
+  btn.disabled = false;
+  if(!text){
+    document.getElementById('speakLabel').textContent = 'อ่าน routine';
+    alert('ดึงข้อมูล routine ไม่ได้ ลองใหม่อีกครั้ง');
+    return;
+  }
+
+  /* โชว์ข้อความด้วย เผื่ออยู่ในที่ที่ฟังไม่ได้ */
+  const box = document.getElementById('speakText');
+  box.textContent = '';
+  text.split('\n').forEach(line => {
+    if(line.startsWith('§')){
+      const h = document.createElement('span');
+      h.className = 'h';
+      h.textContent = line.slice(1);
+      box.appendChild(h);
+    }else{
+      box.appendChild(document.createTextNode(line + '\n'));
+    }
+  });
+  document.getElementById('speakDlg').showModal();
+
+  spkQueue = spkClean(text).split('\n');
+  spkOn = true;
+  btn.classList.add('on');
+  btn.querySelector('.speak-ico').textContent = '■';
+  document.getElementById('speakLabel').textContent = 'หยุดอ่าน';
+  spkNext();
+}
+
+/* เสียงในเบราว์เซอร์โหลดแบบ async — ต้องรอ voiceschanged ก่อนถึงจะรู้ว่ามีเสียงไทยไหม */
+function initSpeak(){
+  const btn = document.getElementById('btnSpeak');
+  if(!btn || !('speechSynthesis' in window)) return;
+
+  const check = () => {
+    if(thaiVoice()){
+      btn.hidden = false;
+    }else{
+      btn.hidden = true;   // ไม่มีเสียงไทย ซ่อนปุ่มดีกว่าปล่อยให้อ่านเพี้ยน
+    }
+  };
+  check();
+  speechSynthesis.addEventListener('voiceschanged', check);
+  setTimeout(check, 1200);   // บาง Chromium ไม่ยิง voiceschanged
+
+  btn.addEventListener('click', speakRoutine);
+  document.getElementById('speakClose').addEventListener('click', () => document.getElementById('speakDlg').close());
+  document.getElementById('speakDlg').addEventListener('close', spkStop);
+}
+document.addEventListener('DOMContentLoaded', initSpeak);
 
 async function loadManga(){
   const box = document.getElementById('wMangaList');
@@ -3873,5 +4136,14 @@ firebase.firestore().collection("agents").doc("finance").onSnapshot(d=>{
   if(currentView==='finance') renderFinance();
 },err=>console.warn("Firestore finance:",err));
 </script>
+<dialog id="speakDlg" aria-labelledby="speakDlgTitle">
+  <h3 id="speakDlgTitle">routine วันนี้</h3>
+  <div class="sub">ราคา · อีเมล · งาน · ข่าว — ดวงกับมังงะไม่อยู่ใน routine</div>
+  <div id="speakText"></div>
+  <div class="row">
+    <button type="button" class="speak-btn" id="speakClose">ปิด</button>
+  </div>
+</dialog>
+
 </body>
 </html>
