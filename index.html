@@ -623,6 +623,48 @@
   .ofc-rstat.empty{opacity:.32}
   .ofc-rstat-dot{transition:fill .2s}
   .ofc-rstat-n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;fill:var(--ink-soft);letter-spacing:.02em}
+  /* แถบเช็คห้องว่าง — ห้องรวมที่ใครก็เข้าได้ (ไม่ใช่โต๊ะประจำใคร)
+     ว่าง = จางลง ไม่ใช่เน้นสี · มีคน = โชว์หน้าคนที่อยู่ในห้องจริงตอนนี้
+     ยึดกฎเดียวกับป้ายสถานะห้อง: ไม่มี badge แดง ไม่มีตัวเลขเด้ง ไม่มีตัวนับถอยหลัง */
+  .ofc-rooms{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+  .rm-lab{
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);margin-right:2px;
+  }
+  .rm{
+    display:flex;align-items:center;gap:8px;
+    background:var(--card);border:1px solid var(--line);border-radius:11px;
+    padding:7px 11px 7px 9px;font:inherit;color:inherit;cursor:pointer;
+    transition:border-color .15s,opacity .2s;
+  }
+  .rm:hover{border-color:var(--gold)}
+  .rm.free{opacity:.55}
+  .rm .rm-dot{flex:none;width:7px;height:7px;border-radius:50%;background:var(--st,var(--ink-faint))}
+  .rm .rm-nm{font-size:12px;font-weight:600;white-space:nowrap}
+  .rm .rm-st{
+    font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.02em;
+    color:var(--ink-faint);white-space:nowrap;
+  }
+  .rm .rm-who{display:flex;flex:none}
+  .rm .rm-who img{
+    width:19px;height:19px;border-radius:50%;object-fit:cover;display:block;
+    border:1.5px solid var(--card);margin-left:-6px;background:var(--line);
+  }
+  .rm .rm-who img:first-child{margin-left:0}
+
+  /* เป้ (เจ้าของออฟฟิศ) — ไม่ใช่เอเจนต์ ไม่มีโต๊ะประจำ เดินดูงานทั่วออฟฟิศ
+     ใช้โครง .ofc-guy ร่วมกับเอเจนต์ ทับเฉพาะกรอบหัว/สีตัว/ขนาด
+     ⚠️ ต้องขยายหัว+ตัวให้รวมกันได้ ~5.4cqw เท่าความสูงสไปรท์ของเอเจนต์
+     ไม่งั้นเป้จะตัวเล็กกว่าทุกคนครึ่งตัว เพราะค่า default ของ .head/.body รวมกันแค่ ~3.35cqw */
+  .ofc-guy.ofc-pae{width:3.2cqw}
+  .ofc-guy.ofc-pae .head{
+    width:3.1cqw;height:3.1cqw;border-width:.24cqw;
+    border-color:var(--gold);box-shadow:0 0 0 .16cqw rgba(154,123,79,.32);
+  }
+  .ofc-guy.ofc-pae .body{width:2.5cqw;height:2.5cqw;margin-top:-.3cqw;border-radius:.7cqw .7cqw .3cqw .3cqw}
+  .ofc-guy.ofc-pae .nm i{color:var(--gold)}
+  .ofc-guy.ofc-pae .item{bottom:2.6cqw}
+
   .ofc-room rect:first-of-type{transition:stroke .2s;stroke:transparent;stroke-width:2}
   .ofc-room:hover rect:first-of-type{stroke:var(--gold)}
   .ofc-room.on rect:first-of-type{stroke:var(--gold);stroke-width:3}
@@ -1403,6 +1445,7 @@
           <div class="ofc-actors" id="ofcActors"></div>
         </div>
       </div>
+      <div class="ofc-rooms" id="ofcRooms"></div>
       <div class="gm-board" id="gmBoard"></div>
     </section>
 
@@ -3050,8 +3093,11 @@ function ofcSeparate(dt){
   }
 }
 
-/* จุดหมายถัดไป — อิงสถานะจริงใน status.json */
+/* จุดหมายถัดไป — อิงสถานะจริงใน status.json
+   "guest" = ตัวละครที่ไม่ใช่เอเจนต์ (ตอนนี้มีเป้คนเดียว ดู office-live.js)
+   ไม่มีแถวใน status.json และไม่มีโต๊ะประจำ จึงเลือกที่ไปด้วยกติกาของตัวเอง */
 function ofcNextGoal(ac){
+  if(ac.guest) return ac.guest.goal(ac);
   const a = (typeof AGENTS!=='undefined' ? AGENTS : []).find(x=>x.id===ac.id);
   const st = a ? a.status : 'idle';
   const home = ofcRoomOf(ac.id);
@@ -3168,7 +3214,7 @@ const OFC_MAX_BUBBLE = 4;
 function ofcSay(ac, act, force){
   if(!force && OFC_ACTORS.filter(x=>x!==ac && x.el.dataset.show==='1').length >= OFC_MAX_BUBBLE) return;
   const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===ac.id);
-  const st = OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle;
+  const st = ac.guest ? ac.guest.st : (OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle);
   /* 1 ใน 4 ครั้งพูดถึงงานจริงที่ค้างอยู่ใน status.json แทนความคิดทั่วไป */
   const txt = (a && a.task && Math.random()<0.25) ? a.task : ofcThink(ac.id, act);
   ac.think.innerHTML = `<b>${OFC_ACT[act]||''}</b><span>${txt}</span>`;
@@ -3178,7 +3224,8 @@ function ofcSay(ac, act, force){
 }
 function ofcStatusText(ac){
   const a = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===ac.id);
-  const st = OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle;
+  const st = ac.guest ? ac.guest.st : (OFC_STATUS[(a&&a.status)||'idle'] || OFC_STATUS.idle);
+  if(ac.guest){ ac.el.style.setProperty('--st', st.c); ac.nm.innerHTML = `${ac.guest.name} <i>${st.e} ${st.t}</i>`; return; }
   ac.el.style.setProperty('--st', st.c);
   ac.nm.innerHTML = `${a?a.name:ac.id} <i>${st.e} ${st.t}</i>`;
 }
@@ -3312,6 +3359,7 @@ function ofcBuildActors(){
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
   ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
+  if(typeof ofcPaeBuild === 'function') ofcPaeBuild();         /* เป้เดินอยู่ในออฟฟิศด้วย (office-live.js) */
   if(typeof gmAttachOffice === 'function') gmAttachOffice();   /* ปุ่ม ▶ เปิดเกม (games.js) */
   ofcRoomStatusRender();                        /* ป้ายห้องอัปเดตทันที ไม่ต้องรอ throttle รอบแรก */
   /* พรีโหลดรูปท่าเดิน + รูปนั่ง (background-image / src ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
@@ -3382,6 +3430,7 @@ function ofcRoomStatusRender(){
     dot.style.fill = st.c;
     txt.textContent = n;
   });
+  if(typeof ofcRoomsRender === 'function') ofcRoomsRender();   /* แถบเช็คห้องว่างใต้ผัง (office-live.js) */
 }
 
 /* แถวรูปเอเจนต์เหนือผัง — รูป + สถานะ + งานล่าสุดที่ทำ */
@@ -4185,6 +4234,7 @@ loadPain();        // Pain Point ธุรกิจ (painpoint.json / Firestore 
 </script>
 
 <script src="games.js"></script>
+<script src="office-live.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
