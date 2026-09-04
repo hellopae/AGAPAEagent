@@ -2756,10 +2756,13 @@ const OFC_WALK = {
 const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
 
 /* ท่านั่งทำงานที่โต๊ะ — คนละไฟล์กับท่าเดิน ไม่เกี่ยวกับปัญหาที่ทำให้ปิด OFC_WALK ไว้
-   Mind กำลังเขียน prompt ให้เจ้าของไป gen รูปทีละคน ยังไม่มีไฟล์จริงสักคน (4 ก.ย. 69)
-   พอได้ไฟล์มาให้เติมทีละบรรทัด เช่น  vera:'office/sprites/Vera-SIT.png',
-   ใครยังไม่มีในตารางนี้ = fallback ไปยืนที่โต๊ะเหมือนเดิมทุกอย่าง (ดู ofcSitSet) */
-const OFC_SIT = {};
+   เติมทีละบรรทัดเมื่อ gen รูปคนนั้นเสร็จ ใครยังไม่มีในตารางนี้
+   = fallback ไปยืนที่โต๊ะเหมือนเดิมทุกอย่าง (ดู ofcSitSet)
+   รูปใหม่ทุกไฟล์ต้องรันผ่าน  python3 scripts/fit-sit-sprite.py <ไฟล์>  ก่อนเสมอ
+   ไม่งั้นตัวจะลอยเหนือพื้นและหัวเล็กกว่าท่ายืน (ขอบใสใต้เก้าอี้ที่ตัว gen ทิ้งไว้) */
+const OFC_SIT = {
+  addy: 'office/sprites/Addy-SIT.png',
+};
 
 /* ของที่ถือในมือตอนทำกิจกรรม — คีย์ตรงกับ act ใน OFC_ACT
    ตัวที่วาดจริงคือ CSS `.ofc-guy[data-act="..."] .item` (พาธต้องตรงกับที่นี่)
@@ -2926,6 +2929,18 @@ function ofcRoomByKey(k){ return OFC_ROOMS.find(r=>r.key===k) || null; }
    ไม่มี = ใช้ +42 เท่าเดิมเป๊ะ (ยืน) */
 function ofcDeskOffset(id){ return OFC_SIT[id] ? 18 : 42; }
 
+/* จุดที่ "นั่ง" จริง — ไม่ใช่จุดเดียวกับที่ยืน
+   จุด seat เดิมคือที่ยืนข้างโต๊ะ ส่วนเก้าอี้ที่วาดไว้ในผัง (floor2.2.png) อยู่คนละตำแหน่ง
+   และแต่ละห้องวางเก้าอี้ไม่เหมือนกัน จึงต้องจิ้มพิกัดทีละคน วัดจากรูปเก้าอี้ในผังจริง
+   ใครยังไม่มีในตารางนี้ = ใช้ seat + ofcDeskOffset เหมือนเดิม */
+const OFC_SIT_POS = {
+  addy: [128, 505],
+};
+function ofcDeskPos(id, seat){
+  if(OFC_SIT[id] && OFC_SIT_POS[id]) return OFC_SIT_POS[id].slice();
+  return [seat[0], seat[1] + ofcDeskOffset(id)];
+}
+
 /* สลับรูปนั่ง/ยืนที่โต๊ะ — เรียกตอนสร้างตัวละครครั้งแรกและทุกครั้งที่ถึง/ออกจากโต๊ะ
    ใครไม่มีรูปนั่งใน OFC_SIT เลย ฟังก์ชันนี้จะไม่แตะ src เลย (ยืนเหมือนเดิมทุกอย่าง) */
 function ofcSitSet(ac, sit){
@@ -3017,7 +3032,7 @@ function ofcNextGoal(ac){
   /* dwell ยาวขึ้นกว่าเดิม (เดิม 11000+rand*15000 ทุกคนเท่ากัน) โดยเฉพาะคนที่กำลังทำงานอยู่จริง ๆ
      จะได้นั่งโต๊ะนานพอสมควร ไม่ใช่แค่แวะแป๊บเดียวแล้วเดินต่อ */
   const goHome = () => ({room:home, node:home?home.node:'B5',
-    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+ofcDeskOffset(ac.id)] : [790,645],
+    pos: home ? ofcDeskPos(ac.id, home.seats[ac.id]) : [790,645],
     act:'desk', dwell: st==='working' ? 24000+Math.random()*26000 : 16000+Math.random()*16000});
   const goSpot = (key, act, dwell) => { const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
     /* เลี่ยงจุดที่มีคนยืนอยู่แล้ว ถ้าเต็มหมดค่อยสุ่มตามเดิม */
@@ -3236,7 +3251,7 @@ function ofcBuildActors(){
     OFC_PIPE[a.id] = a.pipeline || 'standalone';
     const home = ofcRoomOf(a.id);
     const seat = home ? home.seats[a.id] : [790,645];
-    const start = [seat[0], seat[1]+ofcDeskOffset(a.id)];
+    const start = ofcDeskPos(a.id, seat);
     const art = OFC_ART.sprites[a.id];
     const el = document.createElement('button');
     el.className = 'ofc-guy'; el.type='button'; el.dataset.dir='r'; el.dataset.act='desk';
