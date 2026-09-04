@@ -135,7 +135,7 @@ function ofcPaeBuild(){
     goal:{act:'walk', dwell:0, node:'B5', room:null},
   };
   OFC_PAE.goal = ofcPaeGoal;                      /* ofcNextGoal() เรียกผ่าน ac.guest.goal */
-  el.onclick = () => ofcSay(ac, ac.goal.act || 'walk', true);
+  el.onclick = () => OFC_CTRL.on ? ofcCtrlUse() : ofcSay(ac, ac.goal.act || 'walk', true);
   OFC_ACTORS.push(ac);
   ofcStatusText(ac);
   if(!OFC_CTRL.on) setTimeout(()=>ofcSay(ac,'walk'), 2200);
@@ -210,7 +210,8 @@ function ofcRoomJump(key){
    ระหว่างบังคับ ofcTick() จะข้ามสมองอัตโนมัติของเป้ไปเรียก ofcCtrlStep() แทน
    ===================================================================== */
 const OFC_CTRL_SPEED = 168;              /* หน่วยผัง/วินาที — เร็วกว่าเอเจนต์ (71-103) ให้กดแล้วรู้สึกตอบสนอง */
-const OFC_CTRL = {on:false, keys:new Set(), target:null, near:null, nearMs:0, pos:null};
+const OFC_CTRL = {on:false, keys:new Set(), target:null, near:null, nearMs:0, pos:null,
+                  seat:null, promptTxt:null, promptMs:0};
 
 /* ---- พื้นที่ที่เดินได้ ----------------------------------------------
    ผังเป็นรูปเดียว ไม่มีข้อมูล collision จึงประกอบเอาจากของที่มีอยู่แล้ว:
@@ -266,6 +267,8 @@ function ofcCtrlStep(ac, dt){
     if(d > 7){ dx = tx/d; dy = ty/d; } else c.target = null;
   }
 
+  if((dx || dy) && c.seat) ofcCtrlStand(ac);       /* กดเดินทั้งที่นั่งอยู่ = ลุกก่อน */
+
   if(dx || dy){
     const n = Math.hypot(dx,dy) || 1;
     const step = OFC_CTRL_SPEED*dt/1000;
@@ -281,10 +284,13 @@ function ofcCtrlStep(ac, dt){
     if(Math.abs(dx) > 0.2) ac.el.dataset.dir = dx<0 ? 'l' : 'r';
     ac.el.dataset.act = '';                         /* '' = เด้งตัวตอนเดิน (คลาสเดียวกับเอเจนต์) */
     c.near = null; c.nearMs = 0;
-  } else {
+    ofcCtrlBall(ac);
+    ofcCtrlCam(ac);
+  } else if(!c.seat){
     ac.el.dataset.act = 'walk';                     /* ยืนนิ่ง ไม่มีของในมือ ไม่เด้ง */
     ofcCtrlGreet(ac, dt);
   }
+  ofcCtrlPrompt(ac, dt);
 }
 
 /* ยืนนิ่งข้างใครสักพัก แล้วคนนั้นทักกลับ — คนละคนทักซ้ำได้ทุก 20 วิ */
@@ -303,6 +309,7 @@ function ofcCtrlGreet(ac, dt){
 function ofcCtrlSet(on, quiet){
   const c = OFC_CTRL;
   c.on = !!on; c.keys.clear(); c.target = null; c.near = null; c.nearMs = 0;
+  c.seat = null; c.promptTxt = null; c.promptMs = 0;
   if(!c.on) c.pos = null;
   const ac = OFC_ACTORS.find(a => a.id === OFC_PAE.id);
   const stage = document.getElementById('ofcStage');
@@ -338,8 +345,9 @@ function ofcCtrlRender(){
       <img src="${OFC_PAE.img}" alt="${OFC_PAE.name}">
       ${on ? 'ปล่อยเป้' : 'บังคับเป้'}
     </button>
+    ${on ? `<button class="ctrl-btn" type="button" onclick="ofcCtrlUse()">⎵ ใช้ / นั่ง</button>` : ''}
     <span class="ctrl-hint">${on
-      ? '<kbd>←↑↓→</kbd> หรือ <kbd>WASD</kbd> เดิน · แตะบนผังก็ได้ · <kbd>Esc</kbd> ออก'
+      ? '<kbd>←↑↓→</kbd> หรือ <kbd>WASD</kbd> เดิน · <kbd>Space</kbd> คุย/เล่น/นั่ง · <kbd>Esc</kbd> ออก · มือถือแตะบนผังได้'
       : 'กดปุ่มนี้หรือ <kbd>P</kbd> แล้วเดินเป้เองได้ทั้งออฟฟิศ'}</span>`;
 }
 
@@ -353,11 +361,15 @@ function ofcCtrlBind(){
   ofcCtrlBind.done = true;
 
   const typing = e => /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+  /* เกมเปิดอยู่ = ปุ่มทุกดอกเป็นของเกม ห้ามแย่ง (งู/เตตริส/ทุบอิฐ ใช้ลูกศรกับ space)
+     GM_CUR ของ games.js เป็น null เมื่อไม่มีเกมเปิด */
+  const inGame = () => typeof GM_CUR !== 'undefined' && GM_CUR;
   addEventListener('keydown', e=>{
-    if(typing(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+    if(typing(e) || e.metaKey || e.ctrlKey || e.altKey || inGame()) return;
     if((e.key==='p' || e.key==='P') && !OFC_CTRL.on){ ofcCtrlSet(true); e.preventDefault(); return; }
     if(!OFC_CTRL.on) return;
     if(e.key==='Escape'){ ofcCtrlSet(false); return; }
+    if(e.key===' ' || e.key==='Spacebar'){ ofcCtrlUse(); e.preventDefault(); return; }
     const k = OFC_CTRL_KEY[e.key];
     if(k){ OFC_CTRL.keys.add(k); OFC_CTRL.target = null; e.preventDefault(); }
   });
@@ -378,4 +390,137 @@ function ofcCtrlBind(){
     stage.addEventListener('pointerdown', aim, true);
     stage.addEventListener('pointermove', e=>{ if(OFC_CTRL.on && e.buttons) aim(e); }, true);
   }
+}
+
+/* =====================================================================
+   เดินไปกดเอง — ยืนใกล้อะไรแล้วขึ้นป้าย "⎵ ..." กด Space เพื่อใช้ของชิ้นนั้น
+   ของที่กดได้ 4 แบบ: เอเจนต์ (เปิดการ์ด) · แมวส้ม (ลูบ) · ของเล่นเกม · ที่นั่ง
+   เกมไม่ได้เรียก gmOpen() ตรง ๆ แต่สั่ง .click() ที่ element จริงในผัง
+   → เมนูของตู้เกม/เครื่องเกมที่ games.js ผูกไว้ ใช้ตัวเดียวกันเสมอ ไม่ต้องก๊อปมาเขียนซ้ำ
+   ===================================================================== */
+
+/* ที่นั่งที่ไม่ใช่โต๊ะประจำใคร — วัดจากเฟอร์นิเจอร์ในผัง floor2.2.png ทีละตัว
+   กติกาเดียวกับ OFC_SIT_POS: จุดนี้คือ "ก้นสไปรท์" ให้ตัวทับครึ่งล่างของเฟอร์นิเจอร์
+   โต๊ะประจำของเอเจนต์ไม่ต้องใส่ที่นี่ — ofcUsePoints() ดึงจาก OFC_SIT_POS ให้เองตอนเจ้าของไม่อยู่ */
+const OFC_SEATS = [
+  {pos:[965, 589],  label:'เก้าอี้ห้องประชุม'},   /* โต๊ะประชุมวงรี 940-1075 x 437-547 · เก้าอี้แถวล่าง 3 ตัว */
+  {pos:[1010,589],  label:'เก้าอี้ห้องประชุม'},
+  {pos:[1052,589],  label:'เก้าอี้ห้องประชุม'},
+  {pos:[1500,762],  label:'โซฟาห้องพัก'},         /* โซฟายาวชิดผนังขวา 1483-1520 x 697-888 — นั่งได้ 2 ที่ */
+  {pos:[1500,848],  label:'โซฟาห้องพัก'},
+  {pos:[1430,437],  label:'โซฟาห้องตรวจงาน'},     /* โซฟา 1379-1480 x 350-395 */
+  {pos:[82, 826],   label:'โซฟาห้องเกม'},         /* โซฟาชิดผนังซ้าย 52-95 x 748-848 — สั้น นั่งได้ที่เดียว
+                                                     x เยื้องขวาจากกลางโซฟา (74) กันตัวล้นออกนอกกำแพง */
+];
+
+/* ของเล่นเกมในผัง — พิกัดใช้ค่าเดียวกับตอนวาง (ofcBuildProps) จะได้ไม่หลุดกันเวลาย้ายของ */
+function ofcUseGames(){
+  const cz = OFC_COFFEE_ZONE;
+  return [
+    ['#ofcPP',     OFC_PP_POS,            118, 'เล่นปิงปอง'],
+    ['.ofc-tank',  OFC_TANK_POS,           82, 'ตกปลา'],
+    ['#ofcGoal',   OFC_GOAL_POS,           96, 'ยิงจุดโทษ'],
+    ['#ofcSudoku', OFC_SUDOKU_POS,         82, 'เล่นซูโดกุ'],
+    ['#ofcArcade', OFC_ARCADE_POS,         86, 'ตู้เกม'],
+    ['.ofc-ps5',   OFC_PS5_POS,            86, 'เครื่องเกม'],
+    ['#ofcCoffee', [cz.x, cz.y],           92, 'ชงกาแฟ'],
+  ];
+}
+
+/* รวมของที่กดได้ทั้งหมด ณ วินาทีนี้ แล้วคืนอันที่ "ใกล้ที่สุดเทียบกับระยะเอื้อมของมัน"
+   (หารด้วย r เพื่อให้ของชิ้นเล็กที่ต้องเข้าใกล้ ชนะของชิ้นใหญ่ที่ยืนห่างก็ถึง) */
+function ofcUseNear(ac){
+  let best = null, bestScore = 1;
+  const put = (x, y, r, label, act) => {
+    const s = Math.hypot(ac.x-x, (ac.y-y)*1.25) / r;
+    if(s < bestScore){ bestScore = s; best = {label, act}; }
+  };
+
+  for(const [sel, pos, r, label] of ofcUseGames()){
+    const el = document.querySelector(sel);
+    if(el) put(pos[0], pos[1], r, label, ()=>el.click());
+  }
+  for(const a of OFC_ACTORS){
+    if(a === ac || a.guest) continue;
+    const ag = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===a.id);
+    put(a.x, a.y, 76, 'คุยกับ '+(ag?ag.name:a.id), ()=>{
+      ofcSay(a, 'chat', true);
+      if(ag && typeof openDrawer==='function') openDrawer(ag);
+    });
+  }
+  if(typeof OFC_CAT_AC !== 'undefined' && OFC_CAT_AC)
+    put(OFC_CAT_AC.x, OFC_CAT_AC.y, 66, 'ลูบน้องส้ม', ()=>ofcPet());
+
+  /* ที่นั่งกลาง + โต๊ะเอเจนต์ที่เจ้าของไม่ได้นั่งอยู่ */
+  const seats = OFC_SEATS.slice();
+  for(const id in OFC_SIT_POS){
+    const owner = OFC_ACTORS.find(a=>a.id===id);
+    if(owner && Math.hypot(owner.x-OFC_SIT_POS[id][0], owner.y-OFC_SIT_POS[id][1]) < 40) continue;
+    const ag = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===id);
+    seats.push({pos:OFC_SIT_POS[id], label:'นั่งโต๊ะ'+(ag?' '+ag.name:'')});
+  }
+  for(const s of seats) put(s.pos[0], s.pos[1], 72, s.label, ()=>ofcCtrlSit(ac, s));
+
+  return best;
+}
+
+/* นั่ง/ลุก — ใช้รูปนั่งชุดเดียวกับตอนเดินเอง (OFC_SIT.pae) */
+function ofcCtrlSit(ac, seat){
+  OFC_CTRL.seat = seat;
+  ofcPlaceAt(ac, seat.pos[0], seat.pos[1]);
+  ac.el.dataset.act = 'desk';
+  ofcSitSet(ac, true);
+}
+function ofcCtrlStand(ac){
+  if(!OFC_CTRL.seat) return;
+  OFC_CTRL.seat = null;
+  ofcSitSet(ac, false);
+  ac.el.dataset.act = 'walk';
+}
+
+/* กด Space — นั่งอยู่ = ลุก · ไม่ได้นั่ง = ใช้ของที่ใกล้ที่สุด */
+function ofcCtrlUse(){
+  const ac = OFC_ACTORS.find(a => a.id === OFC_PAE.id);
+  if(!ac || !OFC_CTRL.on) return;
+  if(OFC_CTRL.seat){ ofcCtrlStand(ac); return; }
+  const hit = ofcUseNear(ac);
+  if(hit) hit.act();
+}
+
+/* ป้าย "⎵ ..." เหนือหัว — ยืมช่องป้ายชื่อเดิมมาใช้ ไม่ต้องเพิ่ม element
+   (ป้ายชื่อปกติโผล่เฉพาะตอน hover อยู่แล้ว ระหว่างบังคับจึงไม่ได้บังอะไร) */
+function ofcCtrlPrompt(ac, dt){
+  OFC_CTRL.promptMs += dt;                    /* สแกนของรอบตัวทุก ~180ms พอ ไม่ต้องทุกเฟรม */
+  if(OFC_CTRL.promptMs < 180) return;
+  OFC_CTRL.promptMs = 0;
+  const hit = OFC_CTRL.seat ? {label:'ลุกขึ้น'} : ofcUseNear(ac);
+  const txt = hit ? hit.label : null;
+  if(txt === OFC_CTRL.promptTxt) return;      /* เขียน DOM เฉพาะตอนเปลี่ยนจริง */
+  OFC_CTRL.promptTxt = txt;
+  if(txt){ ac.el.dataset.use = '1'; ac.nm.innerHTML = `<i>⎵</i> ${txt}`; }
+  else   { ac.el.dataset.use = '';  ofcStatusText(ac); }
+}
+
+/* เดินชนบอล = เตะ (ใช้ฟังก์ชันเดียวกับที่เอเจนต์เตะ บอลจะกลิ้งไปตามทางเดินเอง) */
+function ofcCtrlBall(ac){
+  const b = (typeof OFC_BALL !== 'undefined') ? OFC_BALL : null;
+  if(!b || b.rolling) return;
+  if(Math.hypot(b.x-ac.x, b.y-ac.y) < 40) ofcBallKick(OFC_PAE.id);
+}
+
+/* กล้องตามเป้ — ผังกว้างขั้นต่ำ 880px ถ้าจอแคบกว่านั้นเป้เดินหลุดจอแล้วหาไม่เจอ
+   เลื่อนเฉพาะตอนตัวใกล้ขอบ ไม่ล็อกไว้กลางจอตลอด จะได้ไม่เมาภาพ */
+function ofcCtrlCam(ac){
+  const scroll = document.querySelector('.ofc-scroll');
+  const stage = document.getElementById('ofcStage');
+  if(!scroll || !stage) return;
+  const over = scroll.scrollWidth - scroll.clientWidth;
+  if(over <= 8) return;
+  const px = ac.x/OFC_W*stage.offsetWidth;
+  const pad = Math.min(160, scroll.clientWidth*0.3);
+  const lo = scroll.scrollLeft + pad, hi = scroll.scrollLeft + scroll.clientWidth - pad;
+  let to = null;
+  if(px < lo) to = px - pad;
+  else if(px > hi) to = px - scroll.clientWidth + pad;
+  if(to !== null) scroll.scrollLeft = Math.max(0, Math.min(over, to));
 }
