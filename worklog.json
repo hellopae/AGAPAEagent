@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T10:40:00Z",
+  "updatedAt": "2026-09-04T06:24:02Z",
   "entries": [
     {
       "id": "wl-260903-claudy-phase3-gamification",
@@ -2571,6 +2571,22 @@
         "scripts/brief.mjs",
         "scripts/com.agapae.morning-brief.plist",
         ".claude/skills/morning-brief/SKILL.md"
+      ]
+    },
+    {
+      "id": "wl-260904-mind-sit-sprite-prompts",
+      "datetime": "2026-09-04T06:24:02Z",
+      "displayDate": "4 ก.ย. 2569",
+      "displayTime": "13:24",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "เขียน prompt gen สไปรท์ท่านั่ง 13 เอเจนต์",
+      "summary": "เปิดดูสไปรท์ยืนจริงทุกไฟล์ (-SD.png ความละเอียดสูง) ครบทั้ง 13 คน จดทรงผม สีผม แว่น เสื้อผ้า ป้ายชื่อ และของที่ถือ แล้วเขียน prompt ภาษาอังกฤษแยกรายคน + style block ร่วม สำหรับให้เจ้าของเอาไป gen เอง — ยังไม่ gen รูปจริงและไม่แก้โค้ดเว็บ · สเปกบังคับ: หันหน้าตรงเหมือนรูปยืน หัวขนาดเท่าเดิม ก้นเก้าอี้ชิดขอบล่าง canvas เท่าไฟล์ -SD เดิม (อ่านขนาดจริงด้วย sips — ส่วนใหญ่ 572×1024, Claudy/Libby/Reese ใหญ่กว่าเป็น 768×1376) พื้นหลังโปร่งใส · แนบตารางไฟล์ผลลัพธ์ที่ต้องได้ (<Name>-SIT.png) และวิธีแก้ถ้าหัวไม่เท่ารูปยืน · งาน pure visual spec ไม่มี factual claim จึงข้าม fact-check ตามที่ Claudy สั่ง",
+      "files": [
+        "Output/Mind/sit-sprite-prompts.md"
       ]
     }
   ]
