@@ -4,3 +4,4 @@ node_modules/
 scripts/.gate-state.json
 scripts/.skill-state.json
 CLAUDE.md.bak-doctor
+*.orig

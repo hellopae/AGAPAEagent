@@ -2757,12 +2757,24 @@ const OFC_WALK = {
 const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
 
 /* ท่านั่งทำงานที่โต๊ะ — คนละไฟล์กับท่าเดิน ไม่เกี่ยวกับปัญหาที่ทำให้ปิด OFC_WALK ไว้
-   เติมทีละบรรทัดเมื่อ gen รูปคนนั้นเสร็จ ใครยังไม่มีในตารางนี้
-   = fallback ไปยืนที่โต๊ะเหมือนเดิมทุกอย่าง (ดู ofcSitSet)
+   ครบทั้ง 13 คนแล้ว (4 ก.ย. 69) ใครหลุดจากตารางนี้ = fallback ไปยืนที่โต๊ะ (ดู ofcSitSet)
    รูปใหม่ทุกไฟล์ต้องรันผ่าน  python3 scripts/fit-sit-sprite.py <ไฟล์>  ก่อนเสมอ
-   ไม่งั้นตัวจะลอยเหนือพื้นและหัวเล็กกว่าท่ายืน (ขอบใสใต้เก้าอี้ที่ตัว gen ทิ้งไว้) */
+   ไม่งั้นตัวจะลอยเหนือพื้นและหัวเล็กกว่าท่ายืน (ขอบใสใต้เก้าอี้ที่ตัว gen ทิ้งไว้)
+   ชื่อไฟล์ห้ามมีเว้นวรรคนำหน้า — GitHub Pages เสิร์ฟไม่ตรงพาธ */
 const OFC_SIT = {
-  addy: 'office/sprites/Addy-SIT.png',
+  claudy: 'office/sprites/Claudy-SIT.png',
+  minnie: 'office/sprites/Minnie-SIT.png',
+  reese:  'office/sprites/Reese-SIT.png',
+  addy:   'office/sprites/Addy-SIT.png',
+  rae:    'office/sprites/Rae-SIT.png',
+  vera:   'office/sprites/Vera-SIT.png',
+  mind:   'office/sprites/Mind-SIT.png',
+  chris:  'office/sprites/Chris-SIT.png',
+  libby:  'office/sprites/Libby-SIT.png',
+  nick:   'office/sprites/Nick-SIT.png',
+  dale:   'office/sprites/Dale-SIT.png',
+  toby:   'office/sprites/Toby-SIT.png',
+  news:   'office/sprites/News-SIT.png',
 };
 
 /* ของที่ถือในมือตอนทำกิจกรรม — คีย์ตรงกับ act ใน OFC_ACT
@@ -2938,7 +2950,19 @@ function ofcDeskOffset(id){ return OFC_SIT[id] ? 18 : 42; }
    ถ้าวางไว้เหนือโต๊ะทั้งตัวจะอ่านเป็น "นั่งบนโต๊ะ" เพราะเลเยอร์ตัวละครอยู่บนผังเสมอ
    โต๊ะบังขาไม่ได้ (ผังเป็นรูปเดียว ไม่ได้แยกชิ้น) */
 const OFC_SIT_POS = {
-  addy: [128, 578],
+  minnie: [117, 218],   /* r1 โต๊ะยาวฝั่งซ้าย */
+  reese:  [227, 232],   /* r1 โต๊ะกลม — ต่ำกว่าเพื่อนนิดเพื่อให้ขอบโต๊ะโผล่เหนือหัว */
+  mind:   [395, 222],   /* r2 โต๊ะตัดต่อ */
+  dale:   [640, 240],   /* r3 เคาน์เตอร์ใต้ตู้แร็ค (ห้องนี้ไม่มีเก้าอี้ในผัง) */
+  rae:    [835, 214],   /* r4 โต๊ะเขียน */
+  vera:   [1026, 226],  /* r5 โต๊ะ 2 จอ */
+  news:   [1218, 238],  /* r6 โต๊ะใต้นาฬิกา */
+  nick:   [1374, 238],  /* r7 โต๊ะซ้ายของสองตัว */
+  libby:  [120, 358],   /* l1 ช่องทางเดินระหว่างชั้นหนังสือ (ไม่มีโต๊ะ) */
+  addy:   [128, 578],   /* l2 โต๊ะขาย */
+  claudy: [615, 572],   /* war เก้าอี้ด้านล่างของโต๊ะรวม */
+  chris:  [1426, 529],  /* bl โต๊ะกลางห้องตรวจงาน */
+  toby:   [140, 776],   /* bm โต๊ะมุมซ้ายบนของห้องเกม */
 };
 function ofcDeskPos(id, seat){
   if(OFC_SIT[id] && OFC_SIT_POS[id]) return OFC_SIT_POS[id].slice();
