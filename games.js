@@ -48,9 +48,12 @@ const gmBlank = () => ({
 let GM = gmBlank();
 const GM_LS = 'agapae.games';
 
-/* รูปที่เอาไปวาดบน canvas — เป้ใช้รูปโปรไฟล์ ตัดวงกลม · agent ใช้สไปรท์ SD ตัวเดียวกับในผัง */
+/* รูปที่เอาไปวาดบน canvas — ทุกคนใช้สไปรท์ SD ตัวเดียวกับในผังออฟฟิศ
+   `pae` (รูปโปรไฟล์วงกลม) ยังต้องมีอยู่ เพราะ gmFace() ใช้ทำหน้ากลมเล็ก ๆ ในหัวเกม/กระดานแชมป์
+   ส่วนตัวที่วาดลงสนามใช้ `pae_sd` ที่เป็นสไปรท์เต็มตัว */
 const GM_ART = {
-  pae:  'avatars/Pae.png',
+  pae:    'avatars/Pae.png',
+  pae_sd: 'office/sprites/pae.png',
   toby: 'office/sprites/toby.png',
   dale: 'office/sprites/dale.png',
 };
@@ -81,7 +84,7 @@ function gmDrawFig(ctx, key, cx, baseY, h, flip){
   return true;
 }
 
-/* วาดรูปเป้เป็นวงกลม */
+/* วาดรูปเป้เป็นวงกลม — ใช้เป็น fallback ตอนสไปรท์ยังโหลดไม่เสร็จ */
 function gmDrawPae(ctx, cx, cy, r){
   const im = gmImg('pae');
   ctx.save();
@@ -471,8 +474,17 @@ function gmPingpong(stage){
     ctx.fillRect(W-22-PW, S.ai - PH/2, PW, PH);
     /* คนถือไม้ — ขยับตามไม้ของตัวเอง เป้าอยู่ด้านนอกไม้ ไม่บังทางลูก
        จำกัดช่วงไม่ให้ล้นขอบบน/ล่างของโต๊ะ */
-    const pY = gmClamp(S.me, 34, H-34);
-    gmDrawPae(ctx, 62, pY, 23);
+    const pBase = gmClamp(S.me, 34, H-40) + 34;
+    /* เป้ผมดำเสื้อดำ ทับพื้นสนามสีกรมท่าแล้วจมหาย — ใส่แสงนวลไว้ข้างหลังให้ตัดขอบออกมา
+       (ฝั่ง Toby เสื้อส้มอยู่แล้ว ไม่ต้องใส่) */
+    const glow = ctx.createRadialGradient(62, pBase-34, 4, 62, pBase-34, 44);
+    glow.addColorStop(0, 'rgba(226,232,240,.20)');
+    glow.addColorStop(1, 'rgba(226,232,240,0)');
+    ctx.fillStyle = glow;
+    ctx.beginPath(); ctx.arc(62, pBase-34, 44, 0, Math.PI*2); ctx.fill();
+    /* สไปรท์เต็มตัวเหมือนฝั่ง Toby — ถ้ารูปยังโหลดไม่เสร็จค่อยตกไปวาดหน้ากลมแบบเดิม */
+    if(!gmDrawFig(ctx, 'pae_sd', 62, pBase, 72, false))
+      gmDrawPae(ctx, 62, gmClamp(S.me, 34, H-34), 23);
     const tBase = gmClamp(S.ai, 34, H-40) + 34;
     gmDrawFig(ctx, 'toby', W-62, tBase, 72, true);
     /* ลูก */

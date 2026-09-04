@@ -293,6 +293,20 @@ function ofcCtrlStep(ac, dt){
   ofcCtrlPrompt(ac, dt);
 }
 
+/* ทักเป้ — เลี่ยงครับ/ค่ะ เพราะทีมมีทั้งผู้ชายผู้หญิง ใช้ประโยคกลาง ๆ ชุดเดียวกันได้หมด
+   ครึ่งหนึ่งของครั้ง ตอบเป็นงานที่ค้างอยู่จริงใน status.json แทนคำทักทายลอย ๆ */
+const OFC_HELLO = ['สวัสดีพี่เป้','พี่เป้มาพอดีเลย','ว่าไงพี่เป้','พี่เป้แวะมาดูงานเหรอ',
+                   'กำลังจะไปหาพอดี','มีอะไรให้ช่วยไหม','เดี๋ยวเสร็จแล้วส่งให้ดู'];
+function ofcCtrlHello(a){
+  const ag = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===a.id);
+  const st = OFC_STATUS[(ag&&ag.status)||'idle'] || OFC_STATUS.idle;
+  const txt = (ag && ag.task && Math.random()<0.45) ? 'กำลังทำ ' + ag.task : ofcPick(OFC_HELLO);
+  a.think.innerHTML = `<b>💬</b><span>${txt}</span>`;
+  a.el.style.setProperty('--st', st.c);
+  a.el.dataset.show = '1';
+  a.sayLeft = 5200;
+}
+
 /* ยืนนิ่งข้างใครสักพัก แล้วคนนั้นทักกลับ — คนละคนทักซ้ำได้ทุก 20 วิ */
 function ofcCtrlGreet(ac, dt){
   const c = OFC_CTRL;
@@ -302,7 +316,7 @@ function ofcCtrlGreet(ac, dt){
   c.nearMs += dt;
   if(c.nearMs < 700) return;
   c.nearMs = -20000;                                /* ทักแล้วเงียบไป 20 วิ กันพูดรัว */
-  ofcSay(who, 'chat', true);
+  ofcCtrlHello(who);
 }
 
 /* ---- เปิด/ปิดโหมดบังคับ ---- */
@@ -443,10 +457,7 @@ function ofcUseNear(ac){
   for(const a of OFC_ACTORS){
     if(a === ac || a.guest) continue;
     const ag = (typeof AGENTS!=='undefined'?AGENTS:[]).find(x=>x.id===a.id);
-    put(a.x, a.y, 76, 'คุยกับ '+(ag?ag.name:a.id), ()=>{
-      ofcSay(a, 'chat', true);
-      if(ag && typeof openDrawer==='function') openDrawer(ag);
-    });
+    put(a.x, a.y, 76, 'คุยกับ '+(ag?ag.name:a.id), ()=>ofcCtrlHello(a));
   }
   if(typeof OFC_CAT_AC !== 'undefined' && OFC_CAT_AC)
     put(OFC_CAT_AC.x, OFC_CAT_AC.y, 66, 'ลูบน้องส้ม', ()=>ofcPet());
