@@ -1,12 +1,13 @@
 /* =====================================================================
-   OFFICE LIVE — เป้เดินอยู่ในออฟฟิศ + แถบเช็คห้องว่าง
+   OFFICE LIVE — เป้เดินอยู่ในออฟฟิศ (เดินเองก็ได้ บังคับก็ได้) + แถบเช็คห้องว่าง
    แยกไฟล์ตามกติกาท้าย PHASE2-GAMES.md ("index.html ใหญ่มากแล้ว — ของใหม่แยกไฟล์เสมอ")
 
-   ต่อเข้ากับผังใน index.html แค่ 5 จุด จุดละ 1-2 บรรทัด:
+   ต่อเข้ากับผังใน index.html แค่ 6 จุด จุดละ 1-2 บรรทัด:
      ofcBuildActors()      → เรียก ofcPaeBuild()   สร้างตัวเป้หลังสร้างเอเจนต์ครบ
      ofcRoomStatusRender() → เรียก ofcRoomsRender() วาดแถบห้องว่างใต้ผัง
      ofcNextGoal()         → ac.guest ? ac.guest.goal(ac)  เลือกที่ไปด้วยกติกาของเป้เอง
      ofcStatusText()/ofcSay() → ใช้ ac.guest.st แทนการหาสถานะจาก status.json
+     ofcTick()             → ac.ctrl ? ofcCtrlStep(ac,dt)  ตอนกำลังถูกบังคับ ข้ามสมองอัตโนมัติ
    ที่เหลือ (เดิน/หลบตัวซ้อน/บับเบิล/นับคนในห้อง) ใช้ลูปเดิมของเอเจนต์ทั้งหมด
    ===================================================================== */
 
@@ -102,7 +103,9 @@ function ofcPaeGoal(ac){
 function ofcPaeBuild(){
   const layer = document.getElementById('ofcActors');
   if(!layer) return;
-  const start = [790, 645];                       /* เริ่มที่ทางเดินกลางล่าง (node B5) */
+  /* ofcBuildActors() รันใหม่ทุกครั้งที่ Firestore ส่งสถานะมา — ถ้ากำลังบังคับอยู่
+     ต้องคืนตำแหน่งเดิมให้ ไม่งั้นเป้จะวาร์ปกลับกลางออฟฟิศคาที่กำลังเดิน */
+  const start = (OFC_CTRL.on && OFC_CTRL.pos) ? OFC_CTRL.pos.slice() : [790, 645];
   const art = OFC_PAE.art;
   const el = document.createElement('button');
   el.className = 'ofc-guy ofc-pae' + (art ? '' : ' ofc-pae-fb');
@@ -135,7 +138,9 @@ function ofcPaeBuild(){
   el.onclick = () => ofcSay(ac, ac.goal.act || 'walk', true);
   OFC_ACTORS.push(ac);
   ofcStatusText(ac);
-  setTimeout(()=>ofcSay(ac,'walk'), 2200);
+  if(!OFC_CTRL.on) setTimeout(()=>ofcSay(ac,'walk'), 2200);
+  ofcCtrlBind();                 /* ผูกปุ่มกด/แตะจอครั้งเดียว (ตัวมันกันซ้ำเอง) */
+  ofcCtrlSet(OFC_CTRL.on, true); /* วาดแถบปุ่ม + คืนโหมดบังคับถ้าค้างอยู่ก่อน rebuild */
 }
 
 /* บับเบิลของเป้ — เสียบเข้า OFC_THINK ให้ ofcThink() หาเจอเหมือนเอเจนต์คนหนึ่ง
@@ -197,4 +202,180 @@ function ofcRoomJump(key){
   if(!r || !scroll || !stage) return;
   const mid = (r.x + r.w/2) / OFC_W * stage.offsetWidth;
   scroll.scrollTo({left: Math.max(0, mid - scroll.clientWidth/2), behavior:'smooth'});
+}
+
+/* =====================================================================
+   บังคับเป้เอง — ลูกศร/WASD บนคอม · แตะแล้วลากบนผังสำหรับมือถือ
+   กดปุ่ม "บังคับเป้" ใต้ผัง หรือกด P · ออกด้วย Esc หรือกดปุ่มซ้ำ
+   ระหว่างบังคับ ofcTick() จะข้ามสมองอัตโนมัติของเป้ไปเรียก ofcCtrlStep() แทน
+   ===================================================================== */
+const OFC_CTRL_SPEED = 168;              /* หน่วยผัง/วินาที — เร็วกว่าเอเจนต์ (71-103) ให้กดแล้วรู้สึกตอบสนอง */
+const OFC_CTRL = {on:false, keys:new Set(), target:null, near:null, nearMs:0, pos:null};
+
+/* ---- พื้นที่ที่เดินได้ ----------------------------------------------
+   ผังเป็นรูปเดียว ไม่มีข้อมูล collision จึงประกอบเอาจากของที่มีอยู่แล้ว:
+     1. ในกรอบห้อง (หดเข้า 12 หน่วย ไม่ให้ยืนคร่อมกำแพง)
+     2. แถบกว้าง 34 หน่วยตามเส้นทางเดิน OFC_EDGES (เส้นเดียวกับที่เอเจนต์ใช้)
+     3. ช่องประตู: node → door → จุดแรกในห้อง — ต่อข้อ 1 กับ 2 เข้าหากัน
+        (ห้องพัก/ห้องเกม/แพนทรี่ วาง door ห่างขอบห้องหลายสิบหน่วย ถ้าไม่มีข้อนี้จะเข้าห้องไม่ได้)
+   คิดครั้งเดียวตอนเรียกครั้งแรกแล้วเก็บไว้ ไม่ได้คิดใหม่ทุกเฟรม
+   -------------------------------------------------------------------- */
+let OFC_WALK_SEG = null;
+const ofcSegDist = (x, y, a, b) => {
+  const vx = b[0]-a[0], vy = b[1]-a[1];
+  const len = vx*vx + vy*vy;
+  let t = len ? ((x-a[0])*vx + (y-a[1])*vy) / len : 0;
+  t = t<0 ? 0 : (t>1 ? 1 : t);
+  return Math.hypot(x - (a[0]+vx*t), y - (a[1]+vy*t));
+};
+function ofcWalkSegments(){
+  if(OFC_WALK_SEG) return OFC_WALK_SEG;
+  const segs = [];
+  const seen = {};
+  for(const a in OFC_EDGES) for(const b of (OFC_EDGES[a]||[])){
+    const k = a<b ? a+'|'+b : b+'|'+a;
+    if(seen[k] || !OFC_NODES[a] || !OFC_NODES[b]) continue;
+    seen[k] = 1; segs.push([OFC_NODES[a], OFC_NODES[b], 34]);
+  }
+  for(const r of OFC_ROOMS){
+    if(!r.door) continue;
+    const n = OFC_NODES[r.node];
+    const clamp = (v,lo,hi) => v<lo ? lo : (v>hi ? hi : v);
+    const entry = [clamp(r.door[0], r.x+16, r.x+r.w-16), clamp(r.door[1], r.y+16, r.y+r.h-16)];
+    if(n) segs.push([n, r.door, 30]);
+    segs.push([r.door, entry, 30]);
+  }
+  return (OFC_WALK_SEG = segs);
+}
+function ofcWalkable(x, y){
+  for(const r of OFC_ROOMS)
+    if(x>=r.x+12 && x<=r.x+r.w-12 && y>=r.y+12 && y<=r.y+r.h-12) return true;
+  for(const [a,b,w] of ofcWalkSegments())
+    if(ofcSegDist(x,y,a,b) < w) return true;
+  return false;
+}
+
+/* ---- ลูปเดินตอนถูกบังคับ — เรียกจาก ofcTick() แทนสมองอัตโนมัติ ---- */
+function ofcCtrlStep(ac, dt){
+  const c = OFC_CTRL;
+  c.pos = [ac.x, ac.y];              /* จำไว้เผื่อ ofcBuildActors() รันใหม่ระหว่างเดิน */
+  let dx = (c.keys.has('r')?1:0) - (c.keys.has('l')?1:0);
+  let dy = (c.keys.has('d')?1:0) - (c.keys.has('u')?1:0);
+  if(!dx && !dy && c.target){                       /* มือถือ: เดินเข้าหาจุดที่แตะไว้ */
+    const tx = c.target[0]-ac.x, ty = c.target[1]-ac.y, d = Math.hypot(tx,ty);
+    if(d > 7){ dx = tx/d; dy = ty/d; } else c.target = null;
+  }
+
+  if(dx || dy){
+    const n = Math.hypot(dx,dy) || 1;
+    const step = OFC_CTRL_SPEED*dt/1000;
+    const mx = dx/n*step, my = dy/n*step;
+    const free = ofcWalkable(ac.x, ac.y);           /* หลุดออกนอกพื้นที่แล้วให้เดินได้อิสระ จะได้ไม่ค้างถาวร */
+    let nx = ac.x+mx, ny = ac.y+my;
+    if(free && !ofcWalkable(nx, ny)){               /* ชนกำแพง — ไถลไปตามกำแพงทีละแกน */
+      if(ofcWalkable(ac.x+mx, ac.y)){ nx = ac.x+mx; ny = ac.y; }
+      else if(ofcWalkable(ac.x, ac.y+my)){ nx = ac.x; ny = ac.y+my; }
+      else { nx = ac.x; ny = ac.y; c.target = null; }
+    }
+    ofcPlaceAt(ac, nx, ny);
+    if(Math.abs(dx) > 0.2) ac.el.dataset.dir = dx<0 ? 'l' : 'r';
+    ac.el.dataset.act = '';                         /* '' = เด้งตัวตอนเดิน (คลาสเดียวกับเอเจนต์) */
+    c.near = null; c.nearMs = 0;
+  } else {
+    ac.el.dataset.act = 'walk';                     /* ยืนนิ่ง ไม่มีของในมือ ไม่เด้ง */
+    ofcCtrlGreet(ac, dt);
+  }
+}
+
+/* ยืนนิ่งข้างใครสักพัก แล้วคนนั้นทักกลับ — คนละคนทักซ้ำได้ทุก 20 วิ */
+function ofcCtrlGreet(ac, dt){
+  const c = OFC_CTRL;
+  const who = OFC_ACTORS.find(x => x!==ac && !x.guest && Math.hypot(x.x-ac.x, (x.y-ac.y)*1.4) < 74);
+  if(!who){ c.near = null; c.nearMs = 0; return; }
+  if(c.near !== who.id){ c.near = who.id; c.nearMs = 0; }
+  c.nearMs += dt;
+  if(c.nearMs < 700) return;
+  c.nearMs = -20000;                                /* ทักแล้วเงียบไป 20 วิ กันพูดรัว */
+  ofcSay(who, 'chat', true);
+}
+
+/* ---- เปิด/ปิดโหมดบังคับ ---- */
+function ofcCtrlSet(on, quiet){
+  const c = OFC_CTRL;
+  c.on = !!on; c.keys.clear(); c.target = null; c.near = null; c.nearMs = 0;
+  if(!c.on) c.pos = null;
+  const ac = OFC_ACTORS.find(a => a.id === OFC_PAE.id);
+  const stage = document.getElementById('ofcStage');
+  if(stage) stage.dataset.ctrl = c.on ? '1' : '';
+  if(ac){
+    ac.ctrl = c.on;
+    if(c.on){
+      /* state 'ctrl' ไม่ใช่ 'act' — กัน ofcSeparate() ดันตัวเป้ออกจากที่ที่เพิ่งบังคับให้ไปยืน
+         (ฟังก์ชันนั้นแตะเฉพาะ state==='act') ส่วน ofcTick ไม่แตะอยู่แล้วเพราะ ac.ctrl ตัดตั้งแต่ต้นลูป */
+      ac.state = 'ctrl'; ac.path = []; ac.wait = 0;
+      ac.goal = {act:'walk', dwell:0, node:ac.node, room:null};
+      ofcSitSet(ac, false);                         /* ลุกจากเก้าอี้ก่อนถ้ากำลังนั่งอยู่ */
+      ac.el.dataset.act = 'walk';
+      if(!quiet){
+        ac.think.innerHTML = '<b>🎮</b><span>ลูกศร / WASD เดิน · Esc ออก</span>';
+        ac.el.dataset.show = '1'; ac.sayLeft = 4200;
+      }
+    } else {
+      ac.state = 'act'; ac.wait = 400;              /* ปล่อยแล้วกลับไปเดินเองในอีกแป๊บ */
+      ac.el.dataset.show = ''; ac.sayLeft = 0;
+    }
+  }
+  ofcCtrlRender();
+}
+function ofcCtrlToggle(){ ofcCtrlSet(!OFC_CTRL.on); }
+
+function ofcCtrlRender(){
+  const box = document.getElementById('ofcCtrl');
+  if(!box) return;
+  const on = OFC_CTRL.on;
+  box.innerHTML = `
+    <button class="ctrl-btn" type="button" data-on="${on?1:''}" onclick="ofcCtrlToggle()">
+      <img src="${OFC_PAE.img}" alt="${OFC_PAE.name}">
+      ${on ? 'ปล่อยเป้' : 'บังคับเป้'}
+    </button>
+    <span class="ctrl-hint">${on
+      ? '<kbd>←↑↓→</kbd> หรือ <kbd>WASD</kbd> เดิน · แตะบนผังก็ได้ · <kbd>Esc</kbd> ออก'
+      : 'กดปุ่มนี้หรือ <kbd>P</kbd> แล้วเดินเป้เองได้ทั้งออฟฟิศ'}</span>`;
+}
+
+/* ---- ปุ่มกด + แตะจอ — ติดครั้งเดียว ไม่ผูกกับ ofcBuildActors ที่รันซ้ำได้ ---- */
+const OFC_CTRL_KEY = {
+  ArrowLeft:'l', ArrowRight:'r', ArrowUp:'u', ArrowDown:'d',
+  a:'l', d:'r', w:'u', s:'d', A:'l', D:'r', W:'u', S:'d',
+};
+function ofcCtrlBind(){
+  if(ofcCtrlBind.done) return;
+  ofcCtrlBind.done = true;
+
+  const typing = e => /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+  addEventListener('keydown', e=>{
+    if(typing(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+    if((e.key==='p' || e.key==='P') && !OFC_CTRL.on){ ofcCtrlSet(true); e.preventDefault(); return; }
+    if(!OFC_CTRL.on) return;
+    if(e.key==='Escape'){ ofcCtrlSet(false); return; }
+    const k = OFC_CTRL_KEY[e.key];
+    if(k){ OFC_CTRL.keys.add(k); OFC_CTRL.target = null; e.preventDefault(); }
+  });
+  addEventListener('keyup', e=>{
+    const k = OFC_CTRL_KEY[e.key];
+    if(k) OFC_CTRL.keys.delete(k);
+  });
+  addEventListener('blur', ()=> OFC_CTRL.keys.clear());   /* สลับแท็บทั้งที่ยังกดค้าง = เดินไม่หยุด */
+
+  const stage = document.getElementById('ofcStage');
+  if(stage){
+    const aim = e => {
+      if(!OFC_CTRL.on) return;
+      const r = stage.getBoundingClientRect();
+      OFC_CTRL.target = [(e.clientX-r.left)/r.width*OFC_W, (e.clientY-r.top)/r.height*OFC_H];
+      e.preventDefault(); e.stopPropagation();      /* กันไปโดนคลิกห้อง/เปิด drawer */
+    };
+    stage.addEventListener('pointerdown', aim, true);
+    stage.addEventListener('pointermove', e=>{ if(OFC_CTRL.on && e.buttons) aim(e); }, true);
+  }
 }

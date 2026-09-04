@@ -626,6 +626,27 @@
   /* แถบเช็คห้องว่าง — ห้องรวมที่ใครก็เข้าได้ (ไม่ใช่โต๊ะประจำใคร)
      ว่าง = จางลง ไม่ใช่เน้นสี · มีคน = โชว์หน้าคนที่อยู่ในห้องจริงตอนนี้
      ยึดกฎเดียวกับป้ายสถานะห้อง: ไม่มี badge แดง ไม่มีตัวเลขเด้ง ไม่มีตัวนับถอยหลัง */
+  /* แถบบังคับเป้ — กดแล้วเดินเองด้วยลูกศร/WASD หรือแตะบนผัง (office-live.js) */
+  .ofc-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+  .ctrl-btn{
+    display:flex;align-items:center;gap:7px;
+    background:var(--card);border:1px solid var(--line-strong);border-radius:11px;
+    padding:7px 12px;font:inherit;font-size:12px;font-weight:600;color:inherit;cursor:pointer;
+    transition:border-color .15s,background .15s,color .15s;
+  }
+  .ctrl-btn:hover{border-color:var(--gold)}
+  .ctrl-btn img{width:19px;height:19px;border-radius:50%;object-fit:cover;display:block}
+  .ctrl-btn[data-on="1"]{background:var(--accent);border-color:var(--accent);color:var(--paper-2)}
+  .ctrl-hint{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.02em;color:var(--ink-faint);
+  }
+  .ctrl-hint kbd{
+    font-family:inherit;font-size:10px;background:var(--paper);border:1px solid var(--line-strong);
+    border-radius:4px;padding:1px 4px;color:var(--ink-soft);
+  }
+  /* กำลังบังคับอยู่ — ขอบผังเป็นทองไว้บอกว่าปุ่มลูกศรตอนนี้เป็นของเป้ ไม่ใช่ของหน้าเว็บ */
+  .ofc-stage[data-ctrl="1"]{outline:2px solid var(--gold);outline-offset:-2px}
+
   .ofc-rooms{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
   .rm-lab{
     font-size:9px;letter-spacing:.14em;text-transform:uppercase;
@@ -1446,6 +1467,7 @@
           <div class="ofc-actors" id="ofcActors"></div>
         </div>
       </div>
+      <div class="ofc-ctrl" id="ofcCtrl"></div>
       <div class="ofc-rooms" id="ofcRooms"></div>
       <div class="gm-board" id="gmBoard"></div>
     </section>
@@ -3249,6 +3271,8 @@ function ofcTick(ts){
   const dt = Math.min(80, ts - (ofcLast||ts)); ofcLast = ts;
   for(const ac of OFC_ACTORS){
     if(ac.sayLeft>0){ ac.sayLeft-=dt; if(ac.sayLeft<=0) ac.el.dataset.show=''; }
+    /* ตัวที่ Kittanate กำลังบังคับอยู่ ไม่ต้องคิดเอง — ปุ่มลูกศร/แตะจอสั่งแทน (office-live.js) */
+    if(ac.ctrl && typeof ofcCtrlStep === 'function'){ ofcCtrlStep(ac, dt); continue; }
     if(ac.state==='walk'){
       const t = ac.path[0];
       if(!t){
