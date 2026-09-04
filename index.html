@@ -617,6 +617,12 @@
   .ofc-plan,.ofc-plan .ofc-svg{display:block;width:100%;height:100%}
   .ofc-tagbg{fill:var(--card);opacity:.82}
   .ofc-rname{font-family:"IBM Plex Mono",monospace;font-size:13px;fill:var(--ink-soft);letter-spacing:.02em}
+  /* ป้ายสถานะห้อง — จุดสี + ตัวเลขคนเล็ก ๆ ต่อท้ายป้ายชื่อห้อง เงียบ ๆ ไม่ใช่ badge เตือน
+     ห้องว่าง (ยังไม่มีใครเดินเข้าไป) จางลงด้วย .empty แทนการซ่อน ไม่ให้ป้ายกระพริบเข้าออก */
+  .ofc-rstat{transition:opacity .2s}
+  .ofc-rstat.empty{opacity:.32}
+  .ofc-rstat-dot{transition:fill .2s}
+  .ofc-rstat-n{font-family:"IBM Plex Mono",monospace;font-size:11.5px;fill:var(--ink-soft);letter-spacing:.02em}
   .ofc-room rect:first-of-type{transition:stroke .2s;stroke:transparent;stroke-width:2}
   .ofc-room:hover rect:first-of-type{stroke:var(--gold)}
   .ofc-room.on rect:first-of-type{stroke:var(--gold);stroke-width:3}
@@ -2749,6 +2755,12 @@ const OFC_WALK = {
 };
 const OFC_CAT_WALK = 'office/sprites/cat/Cat-W.png';
 
+/* ท่านั่งทำงานที่โต๊ะ — คนละไฟล์กับท่าเดิน ไม่เกี่ยวกับปัญหาที่ทำให้ปิด OFC_WALK ไว้
+   Mind กำลังเขียน prompt ให้เจ้าของไป gen รูปทีละคน ยังไม่มีไฟล์จริงสักคน (4 ก.ย. 69)
+   พอได้ไฟล์มาให้เติมทีละบรรทัด เช่น  vera:'office/sprites/Vera-SIT.png',
+   ใครยังไม่มีในตารางนี้ = fallback ไปยืนที่โต๊ะเหมือนเดิมทุกอย่าง (ดู ofcSitSet) */
+const OFC_SIT = {};
+
 /* ของที่ถือในมือตอนทำกิจกรรม — คีย์ตรงกับ act ใน OFC_ACT
    ตัวที่วาดจริงคือ CSS `.ofc-guy[data-act="..."] .item` (พาธต้องตรงกับที่นี่)
    ตารางนี้มีไว้พรีโหลดรูป และกันลืมว่ามีไฟล์ไหนใช้อยู่บ้าง */
@@ -2902,13 +2914,30 @@ function ofcThink(id, act){
 /* ---------- ตัวเดิน 2D ---------- */
 let OFC_PIPE = {};
 const OFC_ACTORS = [];
-let ofcRaf = null, ofcLast = 0;
+let ofcRaf = null, ofcLast = 0, ofcRoomStatAcc = 0;
 const ofcColor = pl => ((typeof PIPELINES!=='undefined' && PIPELINES[pl]) || {color:'var(--ink-faint)'}).color;
 const ofcPick = a => a[Math.floor(Math.random()*a.length)];
 const ofcSpot = list => { const p = ofcPick(list||[[790,645]]);
   return [p[0]+(Math.random()*26-13), p[1]+(Math.random()*18-9)]; };
 function ofcRoomOf(id){ return OFC_ROOMS.find(r=>r.seats && r.seats[id]) || null; }
 function ofcRoomByKey(k){ return OFC_ROOMS.find(r=>r.key===k) || null; }
+
+/* ระยะจากจุด seat ถึงตำแหน่งยืน/นั่งจริงที่โต๊ะ — มีรูปนั่งของคนนั้นแล้วขยับเข้าใกล้โต๊ะกว่าเดิม
+   ไม่มี = ใช้ +42 เท่าเดิมเป๊ะ (ยืน) */
+function ofcDeskOffset(id){ return OFC_SIT[id] ? 18 : 42; }
+
+/* สลับรูปนั่ง/ยืนที่โต๊ะ — เรียกตอนสร้างตัวละครครั้งแรกและทุกครั้งที่ถึง/ออกจากโต๊ะ
+   ใครไม่มีรูปนั่งใน OFC_SIT เลย ฟังก์ชันนี้จะไม่แตะ src เลย (ยืนเหมือนเดิมทุกอย่าง) */
+function ofcSitSet(ac, sit){
+  const sitArt = OFC_SIT[ac.id];
+  if(sit && sitArt){
+    ac.el.dataset.sit = '1';
+    if(ac.pixEl && ac.pixEl.getAttribute('src') !== sitArt) ac.pixEl.src = sitArt;
+  } else {
+    ac.el.dataset.sit = '';
+    if(ac.pixEl && ac.standArt && ac.pixEl.getAttribute('src') !== ac.standArt) ac.pixEl.src = ac.standArt;
+  }
+}
 
 function ofcRoute(from, to){
   if(from===to) return [];
@@ -2985,9 +3014,11 @@ function ofcNextGoal(ac){
   const home = ofcRoomOf(ac.id);
   const roll = Math.random();
 
+  /* dwell ยาวขึ้นกว่าเดิม (เดิม 11000+rand*15000 ทุกคนเท่ากัน) โดยเฉพาะคนที่กำลังทำงานอยู่จริง ๆ
+     จะได้นั่งโต๊ะนานพอสมควร ไม่ใช่แค่แวะแป๊บเดียวแล้วเดินต่อ */
   const goHome = () => ({room:home, node:home?home.node:'B5',
-    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+42] : [790,645],
-    act:'desk', dwell:11000+Math.random()*15000});
+    pos: home ? [home.seats[ac.id][0], home.seats[ac.id][1]+ofcDeskOffset(ac.id)] : [790,645],
+    act:'desk', dwell: st==='working' ? 24000+Math.random()*26000 : 16000+Math.random()*16000});
   const goSpot = (key, act, dwell) => { const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
     /* เลี่ยงจุดที่มีคนยืนอยู่แล้ว ถ้าเต็มหมดค่อยสุ่มตามเดิม */
     const all = OFC_SPOTS[key] || [];
@@ -3052,9 +3083,11 @@ function ofcNextGoal(ac){
     return goSpot('meeting','meet',6000+Math.random()*7000);
   }
   if(st==='working'){
-    if(roll<0.74) return goHome();
-    if(roll<0.84) return goSpot('pantry','coffee',4000+Math.random()*4000);
-    if(roll<0.94) return goVisit();
+    /* เดิม 0.74/0.84/0.94 — เจ้าของบ่นว่าเดินไปเดินมาอย่างเดียว ยกโอกาสอยู่โต๊ะขึ้นเป็น 0.85
+       กิจกรรมอื่นยังเกิดอยู่ทั้งหมด แค่สัดส่วนลดลง (กาแฟ/ไปคุย/ประชุม) */
+    if(roll<0.85) return goHome();
+    if(roll<0.91) return goSpot('pantry','coffee',4000+Math.random()*4000);
+    if(roll<0.97) return goVisit();
     return goSpot('meeting','meet',6000+Math.random()*6000);
   }
   if(st==='done' || st==='sent'){
@@ -3117,6 +3150,7 @@ function ofcStartWalk(ac, goal){
   ac.goal = goal;
   ac.state = 'walk';
   ac.el.dataset.act = '';
+  ofcSitSet(ac, false);   /* เริ่มเดิน = ลุกยืนทันที ไม่ว่ากำลังนั่งอะไรอยู่ */
   if(Math.random()<0.28) ofcSay(ac,'walk'); else { ac.el.dataset.show=''; ac.sayLeft=0; }
 }
 
@@ -3130,6 +3164,7 @@ function ofcTick(ts){
         ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
         ac.door=ac.goal.room?ac.goal.room.door:null;
         ac.el.dataset.act=ac.goal.act;
+        ofcSitSet(ac, ac.goal.act==='desk');   /* ถึงโต๊ะตัวเองแล้ว = นั่ง (ถ้ามีรูปนั่ง) */
         ofcAvoidStack(ac);
         ofcStatusText(ac);
         if(ac.goal.ball) ofcKickBall(ac); else ofcSay(ac, ac.goal.act);
@@ -3154,6 +3189,9 @@ function ofcTick(ts){
   ofcCatTick(dt);
   ofcBallTick(dt);
   ofcPPUpdate();
+  /* ป้ายสถานะห้อง — throttle ไว้ทุก ~500ms ไม่ต้องคำนวณทุกเฟรม */
+  ofcRoomStatAcc += dt;
+  if(ofcRoomStatAcc >= 500){ ofcRoomStatAcc = 0; ofcRoomStatusRender(); }
   ofcRaf = requestAnimationFrame(ofcTick);
 }
 
@@ -3198,7 +3236,7 @@ function ofcBuildActors(){
     OFC_PIPE[a.id] = a.pipeline || 'standalone';
     const home = ofcRoomOf(a.id);
     const seat = home ? home.seats[a.id] : [790,645];
-    const start = [seat[0], seat[1]+42];
+    const start = [seat[0], seat[1]+ofcDeskOffset(a.id)];
     const art = OFC_ART.sprites[a.id];
     const el = document.createElement('button');
     el.className = 'ofc-guy'; el.type='button'; el.dataset.dir='r'; el.dataset.act='desk';
@@ -3221,17 +3259,20 @@ function ofcBuildActors(){
     el.onclick = () => { if(typeof openDrawer==='function') openDrawer(a); };
     layer.appendChild(el);
     const ac = {id:a.id, x:start[0], y:start[1], el, think:el.querySelector('.think'), nm:el.querySelector('.nm'),
+                pixEl: el.querySelector('.pix'), standArt: art,
                 node:home?home.node:'B5', door:home?home.door:null, path:[], state:'act',
                 wait:1200+i*700, sayLeft:0, speed:71+Math.random()*32,
                 goal:{act:'desk', dwell:0, node:home?home.node:'B5', room:home}};
     OFC_ACTORS.push(ac);
+    ofcSitSet(ac, true);   /* เริ่มต้นทุกคนอยู่ที่โต๊ะตัวเอง — นั่งเลยถ้ามีรูปนั่ง */
     ofcStatusText(ac);
     setTimeout(()=>ofcSay(ac,'desk'), 900+i*1700);
   });
   ofcBuildCat();                                /* แมวอยู่ layer เดียวกัน ต้องสร้างใหม่ตามด้วย */
   if(typeof gmAttachOffice === 'function') gmAttachOffice();   /* ปุ่ม ▶ เปิดเกม (games.js) */
-  /* พรีโหลดรูปท่าเดิน (background-image ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
-  setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK, ...Object.values(OFC_HAND)]
+  ofcRoomStatusRender();                        /* ป้ายห้องอัปเดตทันที ไม่ต้องรอ throttle รอบแรก */
+  /* พรีโหลดรูปท่าเดิน + รูปนั่ง (background-image / src ของ element ที่ยังซ่อนอยู่ เบราว์เซอร์จะยังไม่โหลดให้) */
+  setTimeout(()=>{ [...Object.values(OFC_WALK), OFC_CAT_WALK, ...Object.values(OFC_HAND), ...Object.values(OFC_SIT)]
     .forEach(u=>{ const i=new Image(); i.src=u; }); }, 1500);
 }
 
@@ -3247,14 +3288,57 @@ function ofcFloorSVG(){
   OFC_ROOMS.forEach(r=>{
     const owners = Object.keys(r.seats||{});
     const col = owners.length ? ofcColor(OFC_PIPE[owners[0]]||'standalone') : 'var(--ink-faint)';
+    const tagW = r.name.length*9.8+26;
+    /* ป้ายสถานะห้องวางไว้ "ใต้" ป้ายชื่อห้อง ไม่ใช่ต่อท้าย — บางห้องแคบ (r1/l1) ป้ายชื่อห้อง
+       กินเกือบเต็มความกว้างห้องอยู่แล้ว วางในแนวตั้งกันชนขอบห้อง ปลอดภัยกว่าทุกขนาดห้อง */
+    const stY = r.y+8+23+5;
     s += `<g class="ofc-room" data-key="${r.key}">
       <rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="8" fill="transparent"/>
-      <rect class="ofc-tagbg" x="${r.x+9}" y="${r.y+8}" width="${r.name.length*9.8+26}" height="23" rx="11.5"/>
+      <rect class="ofc-tagbg" x="${r.x+9}" y="${r.y+8}" width="${tagW}" height="23" rx="11.5"/>
       <circle cx="${r.x+21}" cy="${r.y+19.5}" r="4" fill="${col}"/>
       <text class="ofc-rname" x="${r.x+31}" y="${r.y+25}">${r.name}</text>
+      <g class="ofc-rstat empty" data-room="${r.key}">
+        <rect class="ofc-tagbg" x="${r.x+9}" y="${stY}" width="34" height="18" rx="9"/>
+        <circle class="ofc-rstat-dot" cx="${r.x+9+11}" cy="${stY+9}" r="3.2" fill="var(--ink-faint)"/>
+        <text class="ofc-rstat-n" x="${r.x+9+18}" y="${stY+13}"></text>
+      </g>
     </g>`;
   });
   return s + `</svg>`;
+}
+
+/* ป้ายสถานะห้อง — จำนวนคนที่อยู่ในห้องตอนนี้ + สถานะรวม (จุดสี)
+   นับจากพิกัดจริงของ OFC_ACTORS ว่าตกในกรอบห้องไหน (OFC_ROOMS x,y,w,h) ไม่ใช่จาก seats
+   เพื่อให้ห้องที่ seats ว่าง (meet/pantry/lounge) นับได้ด้วยตอนมีคนแวะไปทำกิจกรรม
+   เรียกจาก ofcTick() ทุก ~500ms (throttle) และเรียกซ้ำทันทีทุกครั้งที่ ofcBuildActors() รัน
+   (เช่นตอน Firestore ส่งสถานะเอเจนต์ใหม่มา) — ห้ามใส่ badge แดง/ตัวเลขเด้ง/ตัวนับถอยหลัง
+   ตามกฎที่วางไว้ใน PHASE2-GAMES.md (เฟส 3, "ห้ามทำ") จุดสี+ตัวเลขเล็กพอ */
+function ofcRoomStatusRender(){
+  const groups = document.querySelectorAll('#ofcStage .ofc-rstat');
+  if(!groups.length) return;
+  const AG = typeof AGENTS!=='undefined' ? AGENTS : [];
+  const order = ['flagged','working','sent','done','idle'];   /* ลำดับความสำคัญเวลาห้องมีหลายคนหลายสถานะ */
+  groups.forEach(g=>{
+    const key = g.dataset.room;
+    const r = OFC_ROOMS.find(x=>x.key===key);
+    if(!r) return;
+    const here = OFC_ACTORS.filter(ac => ac.x>=r.x && ac.x<=r.x+r.w && ac.y>=r.y && ac.y<=r.y+r.h);
+    const n = here.length;
+    const dot = g.querySelector('.ofc-rstat-dot');
+    const txt = g.querySelector('.ofc-rstat-n');
+    if(!n){
+      g.classList.add('empty');
+      dot.style.fill = 'var(--ink-faint)';
+      txt.textContent = '';
+      return;
+    }
+    const statuses = here.map(ac => { const a = AG.find(x=>x.id===ac.id); return (a && a.status) || 'idle'; });
+    const key2 = order.find(s=>statuses.includes(s)) || 'idle';
+    const st = OFC_STATUS[key2] || OFC_STATUS.idle;
+    g.classList.remove('empty');
+    dot.style.fill = st.c;
+    txt.textContent = n;
+  });
 }
 
 /* แถวรูปเอเจนต์เหนือผัง — รูป + สถานะ + งานล่าสุดที่ทำ */
