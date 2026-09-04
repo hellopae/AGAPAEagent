@@ -653,17 +653,18 @@
   .rm .rm-who img:first-child{margin-left:0}
 
   /* เป้ (เจ้าของออฟฟิศ) — ไม่ใช่เอเจนต์ ไม่มีโต๊ะประจำ เดินดูงานทั่วออฟฟิศ
-     ใช้โครง .ofc-guy ร่วมกับเอเจนต์ ทับเฉพาะกรอบหัว/สีตัว/ขนาด
+     ปกติใช้สไปรท์เต็มตัวชุดเดียวกับทีม (.pix ขนาด 5.4cqw เท่ากันหมด) ป้ายชื่อเป็นสีทอง */
+  .ofc-guy.ofc-pae .nm i{color:var(--gold)}
+  /* fallback ตอนยังไม่มีไฟล์สไปรท์ (OFC_PAE.art = null) → หัว avatar + ตัวสีทอง
      ⚠️ ต้องขยายหัว+ตัวให้รวมกันได้ ~5.4cqw เท่าความสูงสไปรท์ของเอเจนต์
      ไม่งั้นเป้จะตัวเล็กกว่าทุกคนครึ่งตัว เพราะค่า default ของ .head/.body รวมกันแค่ ~3.35cqw */
-  .ofc-guy.ofc-pae{width:3.2cqw}
-  .ofc-guy.ofc-pae .head{
+  .ofc-guy.ofc-pae-fb{width:3.2cqw}
+  .ofc-guy.ofc-pae-fb .head{
     width:3.1cqw;height:3.1cqw;border-width:.24cqw;
     border-color:var(--gold);box-shadow:0 0 0 .16cqw rgba(154,123,79,.32);
   }
-  .ofc-guy.ofc-pae .body{width:2.5cqw;height:2.5cqw;margin-top:-.3cqw;border-radius:.7cqw .7cqw .3cqw .3cqw}
-  .ofc-guy.ofc-pae .nm i{color:var(--gold)}
-  .ofc-guy.ofc-pae .item{bottom:2.6cqw}
+  .ofc-guy.ofc-pae-fb .body{width:2.5cqw;height:2.5cqw;margin-top:-.3cqw;border-radius:.7cqw .7cqw .3cqw .3cqw}
+  .ofc-guy.ofc-pae-fb .item{bottom:2.6cqw}
 
   .ofc-room rect:first-of-type{transition:stroke .2s;stroke:transparent;stroke-width:2}
   .ofc-room:hover rect:first-of-type{stroke:var(--gold)}
@@ -3254,7 +3255,9 @@ function ofcTick(ts){
         ac.state='act'; ac.wait=ac.goal.dwell; ac.node=ac.goal.node;
         ac.door=ac.goal.room?ac.goal.room.door:null;
         ac.el.dataset.act=ac.goal.act;
-        ofcSitSet(ac, ac.goal.act==='desk');   /* ถึงโต๊ะตัวเองแล้ว = นั่ง (ถ้ามีรูปนั่ง) */
+        /* ถึงโต๊ะตัวเองแล้ว = นั่ง (ถ้ามีรูปนั่ง) · goal.sit = จุดอื่นที่มีที่ให้นั่งจริงในผัง
+           เช่นเป้ไปนั่งห้องประชุม/ห้องพัก/ศูนย์คุมงาน (ดู ofcPaeGoal ใน office-live.js) */
+        ofcSitSet(ac, ac.goal.act==='desk' || ac.goal.sit===true);
         ofcAvoidStack(ac);
         ofcStatusText(ac);
         if(ac.goal.ball) ofcKickBall(ac); else ofcSay(ac, ac.goal.act);

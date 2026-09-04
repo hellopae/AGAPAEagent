@@ -18,7 +18,15 @@
 const OFC_PAE = {
   id:'pae', name:'เป้', img:'avatars/Pae.png',
   st:{t:'เจ้าของ', e:'👑', c:'var(--gold)'},
+  /* สไปรท์เต็มตัวชุดเดียวกับทีม — ถ้าตั้งเป็น null จะตกไปใช้หัว avatar + ตัวสีทองแทน
+     (โครง fallback ยังอยู่ครบใน ofcPaeBuild + CSS .ofc-pae-fb) */
+  art:    'office/sprites/pae.png',
+  sitArt: 'office/sprites/Pae-SIT.png',
 };
+
+/* ท่านั่งของเป้ใช้ตารางเดียวกับทีม เพื่อให้ ofcSitSet() กับบล็อกพรีโหลดใน index.html
+   เห็นไฟล์นี้โดยไม่ต้องแก้อะไรเพิ่ม */
+if(typeof OFC_SIT !== 'undefined' && OFC_PAE.sitArt) OFC_SIT[OFC_PAE.id] = OFC_PAE.sitArt;
 
 /* ความคิดในบับเบิล — โทนเดียวกับ OFC_THINK ของเอเจนต์ แต่เป็นมุมของคนที่สั่งงาน */
 const OFC_PAE_THINK = {
@@ -52,12 +60,15 @@ function ofcPaeGoal(ac){
             act: (AG.find(x=>x.id===k)||{}).status === 'flagged' ? 'check' : 'chat',
             dwell:5000+Math.random()*6000};
   };
-  const goSpot = (key, act, dwell) => {
+  /* sit:true = ถึงที่แล้วเปลี่ยนเป็นรูปนั่ง (ofcTick อ่าน goal.sit)
+     ใช้กับห้องที่มีที่ให้นั่งจริงในผัง — ศูนย์คุมงาน/ห้องประชุม/ห้องพัก
+     ไม่ใช้กับแพนทรี่ (ยืนชงกาแฟ) */
+  const goSpot = (key, act, dwell, sit) => {
     const r = ofcRoomByKey(OFC_SPOT_ROOM[key]);
     const all = OFC_SPOTS[key] || [];
     const free = all.filter(p => !OFC_ACTORS.some(x => x!==ac && x.state==='act' &&
                   Math.hypot(x.x-p[0], x.y-p[1]) < 42));
-    return {room:r, node:r.node, pos:ofcSpot(free.length ? free : all), act,
+    return {room:r, node:r.node, pos:ofcSpot(free.length ? free : all), act, sit:!!sit,
             dwell:dwell || 5000+Math.random()*5000};
   };
   /* ปิงปอง/PS5 — จองข้างเดียวกับที่เอเจนต์ใช้ ถ้าเต็มสองข้างแล้วก็ไม่ไป */
@@ -79,10 +90,10 @@ function ofcPaeGoal(ac){
   if(Math.random()<0.10){ const g = goSide(OFC_PS5_SIDE,'ps5','ps5',10000+Math.random()*8000); if(g) return g; }
 
   if(roll<0.44) return goDesk();
-  if(roll<0.62) return goSpot('control','report', 6000+Math.random()*5000);
+  if(roll<0.62) return goSpot('control','report', 6000+Math.random()*5000, true);
   if(roll<0.76) return goSpot('pantry','coffee', 5000+Math.random()*4000);
-  if(roll<0.88) return goSpot('lounge','rest', 7000+Math.random()*7000);
-  return goSpot('meeting','meet', 6000+Math.random()*6000);
+  if(roll<0.88) return goSpot('lounge','rest', 7000+Math.random()*7000);   /* ห้องพักมีแต่โซฟา ยืนเหมือนทีม */
+  return goSpot('meeting','meet', 6000+Math.random()*6000, true);
 }
 
 /* สร้างตัวเป้ลงใน layer เดียวกับเอเจนต์ แล้วดัน entry เข้า OFC_ACTORS
@@ -92,8 +103,9 @@ function ofcPaeBuild(){
   const layer = document.getElementById('ofcActors');
   if(!layer) return;
   const start = [790, 645];                       /* เริ่มที่ทางเดินกลางล่าง (node B5) */
+  const art = OFC_PAE.art;
   const el = document.createElement('button');
-  el.className = 'ofc-guy ofc-pae';
+  el.className = 'ofc-guy ofc-pae' + (art ? '' : ' ofc-pae-fb');
   el.type = 'button';
   el.dataset.dir = 'r';
   el.dataset.act = 'walk';
@@ -103,8 +115,9 @@ function ofcPaeBuild(){
   el.style.zIndex = Math.round(start[1]);
   el.innerHTML = `
     <span class="think"></span>
-    <span class="head"><img src="${OFC_PAE.img}" alt="${OFC_PAE.name}"></span>
-    <span class="body" style="background:var(--gold)"></span>
+    ${art ? `<img class="pix" src="${art}" alt="${OFC_PAE.name}">`
+          : `<span class="head"><img src="${OFC_PAE.img}" alt="${OFC_PAE.name}"></span>
+             <span class="body" style="background:var(--gold)"></span>`}
     <i class="item"></i>
     <span class="sdot"></span>
     <span class="nm"></span>`;
@@ -113,7 +126,7 @@ function ofcPaeBuild(){
   const ac = {
     id:OFC_PAE.id, guest:OFC_PAE, x:start[0], y:start[1], el,
     think:el.querySelector('.think'), nm:el.querySelector('.nm'),
-    pixEl:null, standArt:null,
+    pixEl:el.querySelector('.pix'), standArt:art,
     node:'B5', door:null, path:[], state:'act',
     wait:2600, sayLeft:0, speed:78,
     goal:{act:'walk', dwell:0, node:'B5', room:null},
