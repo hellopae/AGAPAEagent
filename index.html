@@ -993,6 +993,15 @@
   }
   .pp-log-toggle:hover{color:var(--gold);border-color:var(--gold)}
   .pp-log-head .pp-date{margin-left:0}
+  /* บทความ — ใช้โครงการ์ดชุด .pp-* ร่วมกัน เพิ่มเฉพาะโครงเรื่องกับคีย์เวิร์ด */
+  .pp-out{margin:2px 0 0;padding-left:18px;font-size:12.5px;line-height:1.7;color:var(--ink-faint)}
+  .pp-kws{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+  .pp-kw{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.03em;
+    color:var(--ink-faint);border:1px solid var(--line);border-radius:999px;padding:2px 8px;
+  }
+  .pp-flag.written{color:var(--done);border-color:var(--done)}
+  .pp-flag.chosen{color:var(--gold);border-color:var(--gold)}
   @media(max-width:560px){
     .pp-log-item>summary{flex-wrap:wrap;gap:2px}
     .pp-log-item .pp-log-ind{width:100%}
@@ -1347,9 +1356,12 @@
         Team Console <span class="tab-count" id="wlCount">0</span>
       </button>
       <button class="view-tab" data-v="widgets" onclick="switchView('widgets')">Widgets</button>
-      <button class="view-tab" data-v="pain" onclick="switchView('pain')">
-        Pain Point <span class="tab-count" id="painCount">0</span>
+      <button class="view-tab" data-v="article" onclick="switchView('article')">
+        บทความ <span class="tab-count" id="articleCount">0</span>
       </button>
+      <!-- แท็บ Pain Point ถอดออกจากหน้าจอ 5 ก.ย. 2569 ตามที่ Kittanate สั่ง —
+           ข้อมูลยังอยู่ครบ (painpoint.json + Firestore agents/painpoint) และ view ยังอยู่ข้างล่าง
+           เปิดกลับมาได้ด้วยการเอาคอมเมนต์ปุ่มนี้ออก -->
       <button class="view-tab" data-v="finance" onclick="switchView('finance')">การเงิน</button>
       <button class="view-tab" data-v="todo" onclick="switchView('todo')">
         To Do <span class="tab-count" id="todoCount">0</span>
@@ -1450,6 +1462,33 @@
     <footer>
       <span class="mono" id="ppModeTag">—</span>
       <span id="ppModeMsg">ข้อมูลจากไฟล์ <span class="mono">painpoint.json</span></span>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== ARTICLE VIEW ===== -->
+<div id="articleView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Article · Printing Knowledge</div>
+      <p>หัวข้อบทความความรู้งานพิมพ์ · 3 หัวข้อใหม่ทุกสัปดาห์ ให้เลือกไปเขียนต่อ</p>
+    </section>
+    <div class="pp-today-head">
+      <h3 class="pp-h">สัปดาห์นี้</h3>
+      <span class="mono pp-date" id="arWeek">—</span>
+    </div>
+    <div id="arThis"><div class="muted" style="padding:20px 0">กำลังโหลด…</div></div>
+
+    <div class="pp-log-head">
+      <h3 class="pp-h">คลังหัวข้อทั้งหมด</h3>
+      <span class="mono pp-date" id="arLogCount">—</span>
+      <button class="pp-log-toggle" id="arLogToggle" type="button">เปิดทั้งหมด</button>
+    </div>
+    <div id="arLog"></div>
+
+    <footer>
+      <span class="mono" id="arModeTag">—</span>
+      <span id="arModeMsg">ข้อมูลจากไฟล์ <span class="mono">article.json</span></span>
     </footer>
   </div>
 </div>
@@ -2321,10 +2360,13 @@ function switchView(v) {
   document.getElementById('financeView').style.display = v === 'finance' ? '' : 'none';
   document.getElementById('todoView').style.display = v === 'todo' ? '' : 'none';
   document.getElementById('painView').style.display = v === 'pain' ? '' : 'none';
+  document.getElementById('articleView').style.display = v === 'article' ? '' : 'none';
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
   if (v === 'finance') renderFinance();
   if (v === 'todo') renderTodo();
-  if (v === 'pain') renderPain();
+  if (v === 'article') renderArticle();
+  // Pain Point ไม่มีแท็บแล้ว — โหลดตอนเปิดจริงเท่านั้น ไม่กิน request ตอน boot
+  if (v === 'pain') { PAIN ? renderPain() : loadPain(); }
   /* ผังออฟฟิศวิ่ง rAF อยู่ — พักไว้ตอนไม่ได้ดู */
   if (typeof ofcResume === 'function') { v === 'console' ? ofcResume() : ofcPause(); }
   window.scrollTo(0, 0);
@@ -4224,6 +4266,136 @@ document.getElementById('ppLogToggle')?.addEventListener('click', () => {
 });
 document.getElementById('ppLog')?.addEventListener('toggle', ppSyncToggle, true);
 
+/* =====================================================================
+   ARTICLE — คลังหัวข้อบทความความรู้งานพิมพ์ (routine เขียนสัปดาห์ละ 3 หัวข้อ)
+   Firestore agents/article (dataJson) มาก่อน · article.json เป็น fallback
+   เข้ามาแทนที่แท็บ Pain Point บนหน้าจอ 5 ก.ย. 2569 — โครงการ์ดใช้ CSS ชุด .pp-* ร่วมกัน
+   ===================================================================== */
+let ARTICLE = null;
+
+const AR_FLAG = {
+  written: '<span class="pp-flag written">เขียนแล้ว</span>',
+  chosen:  '<span class="pp-flag chosen">เลือกแล้ว</span>',
+  idea:    '<span class="pp-flag unverified">ยังไม่ได้เลือก</span>',
+};
+
+/* เนื้อในของหัวข้อ 1 อัน — ใช้ร่วมกันทั้งการ์ด "สัปดาห์นี้" และคลังที่กางออก */
+function arDetail(e){
+  const flag = AR_FLAG[e.status] || AR_FLAG.idea;
+  const file = e.file
+    ? `<a href="${TD_ESC(e.file)}" target="_blank" rel="noopener">ไฟล์บทความ</a>` : '';
+  const outline = Array.isArray(e.outline) && e.outline.length
+    ? `<div class="pp-row"><b>โครงเรื่อง:</b></div>
+       <ol class="pp-out">${e.outline.map(o => `<li>${TD_ESC(o)}</li>`).join('')}</ol>` : '';
+  const kws = Array.isArray(e.keywords) && e.keywords.length
+    ? `<div class="pp-kws">${e.keywords.map(k => `<span class="pp-kw">${TD_ESC(k)}</span>`).join('')}</div>` : '';
+  return `${e.hook ? `<div class="pp-quote">“${TD_ESC(e.hook)}”</div>` : ''}
+    ${e.audience ? `<div class="pp-row"><b>เขียนให้ใครอ่าน:</b> ${TD_ESC(e.audience)}</div>` : ''}
+    ${e.why ? `<div class="pp-row"><b>ทำไมหัวข้อนี้ดึงคน:</b> ${TD_ESC(e.why)}</div>` : ''}
+    ${outline}
+    ${kws}
+    ${e.channel ? `<div class="pp-idea"><b>ลงช่องทาง:</b> ${TD_ESC(e.channel)}</div>` : ''}
+    <div class="pp-foot">${flag}${file ? ' · ' + file : ''}</div>`;
+}
+
+function arCard(e){
+  return `<div class="pp-card">
+    <div class="pp-ind">${TD_ESC(e.category || 'ความรู้งานพิมพ์')}</div>
+    <div class="pp-title">${TD_ESC(e.title || '')}</div>
+    ${arDetail(e)}
+  </div>`;
+}
+
+function arLogItem(e){
+  return `<details class="pp-log-item">
+    <summary>
+      <span class="pp-log-ind">${TD_ESC(e.category || '—')}</span>
+      <span class="pp-log-title">${TD_ESC(e.title || '')}</span>
+      <span class="pp-caret">▶</span>
+    </summary>
+    <div class="pp-log-body">${arDetail(e)}</div>
+  </details>`;
+}
+
+function renderArticle(){
+  const thisBox = document.getElementById('arThis');
+  const logBox  = document.getElementById('arLog');
+  if(!thisBox || !logBox) return;
+  const all = (ARTICLE && Array.isArray(ARTICLE.entries)) ? ARTICLE.entries : [];
+  if(!all.length){
+    thisBox.innerHTML = '<div class="muted" style="padding:20px 0">ยังไม่มีหัวข้อ — routine เขียนสัปดาห์ละครั้ง</div>';
+    logBox.innerHTML = '';
+    return;
+  }
+  // "สัปดาห์นี้" = สัปดาห์ใหม่สุดที่มีในคลัง (routine อาจยังไม่รันรอบนี้)
+  const latest  = all[0].week;
+  const current = all.filter(e => e.week === latest);
+  const rest    = all.filter(e => e.week !== latest);
+
+  document.getElementById('arWeek').textContent = current[0].displayDate || latest || '';
+  thisBox.innerHTML = `<div class="pp-grid">${current.map(arCard).join('')}</div>`;
+
+  document.getElementById('arLogCount').textContent = `${all.length} หัวข้อ`;
+  // จัดกลุ่มตามสัปดาห์ — ใหม่ไปเก่า
+  const byWeek = new Map();
+  rest.forEach(e => {
+    if(!byWeek.has(e.week)) byWeek.set(e.week, []);
+    byWeek.get(e.week).push(e);
+  });
+  logBox.innerHTML = byWeek.size
+    ? [...byWeek.entries()].map(([w, list]) => `<div class="pp-log-day">
+        <div class="pp-day-label">${TD_ESC(list[0].displayDate || w)}</div>
+        ${list.map(arLogItem).join('')}
+      </div>`).join('')
+    : '<div class="muted" style="padding:8px 0">ยังไม่มีหัวข้อของสัปดาห์ก่อน — คลังจะสะสมขึ้นเองทุกสัปดาห์</div>';
+  arSyncToggle();
+}
+
+function arSyncToggle(){
+  const btn = document.getElementById('arLogToggle');
+  if(!btn) return;
+  const items = document.querySelectorAll('#arLog .pp-log-item');
+  btn.style.display = items.length ? '' : 'none';
+  const allOpen = items.length && [...items].every(d => d.open);
+  btn.textContent = allOpen ? 'ปิดทั้งหมด' : 'เปิดทั้งหมด';
+}
+
+document.getElementById('arLogToggle')?.addEventListener('click', () => {
+  const items = [...document.querySelectorAll('#arLog .pp-log-item')];
+  const open = !(items.length && items.every(d => d.open));
+  items.forEach(d => { d.open = open; });
+  arSyncToggle();
+});
+document.getElementById('arLog')?.addEventListener('toggle', arSyncToggle, true);
+
+function updateArticleCount(){
+  const el = document.getElementById('articleCount');
+  if(!el) return;
+  const all = (ARTICLE && Array.isArray(ARTICLE.entries)) ? ARTICLE.entries : [];
+  el.textContent = all.length;
+}
+
+async function loadArticle(){
+  try{
+    ARTICLE = await fsPayload('article');            // routine เขียน Firestore สัปดาห์ละครั้ง
+    if(!ARTICLE || !Array.isArray(ARTICLE.entries)){     // ไฟล์ในรีโปเป็น fallback (อาจเก่า)
+      const res = await fetch('article.json?t=' + Date.now());
+      if(!res.ok) throw new Error(res.status);
+      ARTICLE = await res.json();
+    }
+    updateArticleCount();
+    if(currentView === 'article') renderArticle();
+    const tag = document.getElementById('arModeTag'), msg = document.getElementById('arModeMsg');
+    if(tag){ tag.textContent = 'LIVE'; tag.style.color = 'var(--done)'; }
+    const chk = fsCheckedText(ARTICLE.checkedAt);
+    if(msg) msg.innerHTML = `อัปเดต ${TD_ESC(ARTICLE.updatedAt || '—')}${chk ? ' · ' + TD_ESC(chk) : ''}`;
+  }catch(e){
+    const tag = document.getElementById('arModeTag'), msg = document.getElementById('arModeMsg');
+    if(tag) tag.textContent = 'NO DATA';
+    if(msg) msg.textContent = 'อ่าน article.json ไม่ได้ (ไฟล์หายหรือเปิดผ่าน file://)';
+  }
+}
+
 function updatePainCount(){
   const el = document.getElementById('painCount');
   if(!el) return;
@@ -4262,7 +4434,9 @@ ofcInit();         // ผังออฟฟิศ + ตัวเดิน
 renderWorklog();   // worklog timeline (รวมอยู่ใน Console แล้ว) + tab count
 loadWorklog();     // async load real worklog data
 loadTodo();        // To Do list (todo.json)
-loadPain();        // Pain Point ธุรกิจ (painpoint.json / Firestore agents/painpoint)
+loadArticle();     // หัวข้อบทความรายสัปดาห์ (article.json / Firestore agents/article)
+                   /* Pain Point ไม่โหลดตอน boot แล้ว — ไม่มีแท็บบนหน้าจอ
+                      โค้ดกับข้อมูลยังอยู่ครบ โหลดเมื่อ switchView('pain') เท่านั้น */
 </script>
 
 <script src="games.js"></script>

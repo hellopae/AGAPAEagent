@@ -8,6 +8,9 @@
 ระบบนี้ถูกวางโครงสร้างโดย **Claude Fable 5 (Senior Architect)** เมื่อ 5 ก.ค. 2026
 และส่งมอบให้ **Claude Opus 4.8 (Junior Engineer)** ทำงานตามคู่มือ — **ห้ามด้นสดนอกคู่มือ**
 
+0. **`CONTEXT.md`** — ข้อตกลงกับ Kittanate ที่ไม่ได้อยู่ในโค้ด (วิธีตอบ, ทิศทางบทความ, กติกา git,
+   ความรู้กระดาษ, กับดักที่เคยเจอ) — **สำคัญกับ session จากเว็บ/มือถือเป็นพิเศษ** เพราะ memory
+   ของ Claude เป็นไฟล์ในเครื่อง MacBook ไม่ขึ้น cloud ไฟล์นี้คือฉบับที่ cloud อ่านได้
 1. **`HANDOFF.md`** — อ่านก่อนเสมอ: บทบาท, Definition of Done, กับดักที่เคยเจอ
 2. **`BACKLOG.md`** — งานมอบหมายของทุก agent เรียง priority
 3. **`SOP/SOP-01..11`** — คู่มือปฏิบัติละเอียดทุก workflow (orchestration, บทความ, template,
