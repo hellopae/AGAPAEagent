@@ -5,7 +5,7 @@
 
 > **เปลี่ยนวิธีส่งมอบ 19 ก.ค. 2569 (Kittanate สั่ง):** เลิกส่งอีเมล/Gmail draft ทั้ง 3 routines —
 > ผลลัพธ์เขียนลง Firestore แทน: `agents/daily` (ข่าวเช้า) / `agents/weekly` (การเงิน) / `agents/monthly` (ไอเดียบทความ)
-> แสดงบน **AGAPAE Widget (แอป macOS)** และ **หน้า Routines** https://hellopae.github.io/AGAPAEagent/routines.html
+> แสดงบน **หน้า Routines** https://hellopae.github.io/AGAPAEagent/routines.html (แอป Widget บน macOS ปลดระวางแล้ว 7 ก.ย. 2569)
 > สคริปต์เขียนด้วยมือ: `scripts/push-daily.mjs` — การเช็คว่า routine รันสำเร็จ = ดู `updatedAt` ของ doc แทนการเช็คอีเมล
 
 ## Pipeline

@@ -198,7 +198,7 @@
   .w-btc-sig .bs-bar i{display:block;height:100%;border-radius:999px}
   .w-btc-sig .bs-sub{font-size:10.5px;color:var(--ink-faint);line-height:1.4}
   .w-btc-sig .bs-src{font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em}
-  /* คำวิเคราะห์ + คำแนะนำ ใต้การ์ด Bitcoin (ชุดเดียวกับแอป Widget บน Mac) */
+  /* คำวิเคราะห์ + คำแนะนำ ใต้การ์ด Bitcoin */
   .w-btc-read:empty{display:none}
   .br-head{
     margin-top:12px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
@@ -1389,7 +1389,7 @@
         <div class="w-bar"><i id="wLimitBar" style="width:0%"></i></div>
         <div class="w-lim-row" style="margin-top:12px"><span class="k mono">Weekly · 7 วัน <b id="wLimitWkPct">—</b></span><span class="v mono" id="wLimitWkReset">—</span></div>
         <div class="w-bar"><i id="wLimitWkBar" style="width:0%"></i></div>
-        <div class="w-sub" id="wLimitSub">รอข้อมูลจากแอป AGAPAE Widget (เปิดแอปค้างไว้)</div>
+        <div class="w-sub" id="wLimitSub">กำลังโหลด…</div>
       </div>
 
       <!-- สรุปข่าวประจำวัน (Firestore agents/daily · routine 09:00) -->
@@ -1773,9 +1773,9 @@ function relTime(iso){
 /* --- widget: Claude limit (Firestore doc agents/claude_limit) --- */
 function renderLimit(d){
   if(!d) return;
-  const fromWidget = d.fiveHourPct != null;          // แอป Widget เขียน = ตัวเลขจริงจาก usage endpoint
-  const pct   = Math.min(100, Math.round(fromWidget ? d.fiveHourPct : (d.pct ?? 0)));
-  const wkPct = fromWidget ? Math.min(100, Math.round(d.sevenDayPct ?? 0)) : null;
+  const isReal = d.fiveHourPct != null;             // ตัวเลขจริงจาก oauth/usage · null = ตกไปใช้ ccusage ประมาณการ
+  const pct   = Math.min(100, Math.round(isReal ? d.fiveHourPct : (d.pct ?? 0)));
+  const wkPct = isReal ? Math.min(100, Math.round(d.sevenDayPct ?? 0)) : null;
   const barCls = p => p >= 85 ? 'hot' : p >= 60 ? 'warn' : '';
   const hhmm  = iso => iso ? new Date(iso).toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'}) : '—';
   const dayHm = iso => iso ? new Date(iso).toLocaleString('th-TH',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '—';
@@ -1784,7 +1784,7 @@ function renderLimit(d){
   const bar = document.getElementById('wLimitBar');
   bar.style.width = pct+'%';
   bar.className = barCls(pct);
-  document.getElementById('wLimitReset').textContent = 'รีเซ็ต ' + hhmm(fromWidget ? d.fiveHourResetAt : d.resetAt) + ' น.';
+  document.getElementById('wLimitReset').textContent = 'รีเซ็ต ' + hhmm(isReal ? d.fiveHourResetAt : d.resetAt) + ' น.';
 
   const wkBar = document.getElementById('wLimitWkBar');
   document.getElementById('wLimitWkPct').textContent = wkPct === null ? '—' : wkPct + '%';
@@ -1792,9 +1792,9 @@ function renderLimit(d){
   wkBar.style.width = (wkPct ?? 0) + '%';
   wkBar.className = barCls(wkPct ?? 0);
 
-  document.getElementById('wLimitSub').textContent = fromWidget
-    ? 'ตัวเลขจริงจากบัญชี Claude · ส่งมาจากแอป AGAPAE Widget'
-    : (d.usedTokens ? `${(d.usedTokens/1000).toFixed(0)}k / ${(d.limitTokens/1e6).toFixed(1)}M tokens (ccusage ประมาณการ)` : 'รอข้อมูลจากแอป Widget');
+  document.getElementById('wLimitSub').textContent = isReal
+    ? 'ตัวเลขจริงจากบัญชี Claude · อัปเดตทุกครั้งที่ agent ทำงาน'
+    : (d.usedTokens ? `${(d.usedTokens/1000).toFixed(0)}k / ${(d.limitTokens/1e6).toFixed(1)}M tokens (ccusage ประมาณการ)` : 'รอข้อมูลรอบถัดไป');
   document.getElementById('wLimitUp').textContent = relTime(d.updatedAt);
 }
 
@@ -1848,7 +1848,7 @@ loadBtc();
 setInterval(loadBtc, 180000);
 
 /* =====================================================================
-   MANGA — อ่าน manga.json (ตัวเดียวกับ Widget บนคอม) เพื่อดูบนมือถือได้
+   MANGA — อ่าน manga.json
    ===================================================================== */
 function mgShortDate(iso){
   if(!iso) return null;
@@ -2276,7 +2276,7 @@ setInterval(loadBtcSignal, 600000);
 
 /* =====================================================================
    FINANCE — อ่าน Firestore agents/finance (เขียนโดยแอป budget2569)
-   สรุปรายรับ-รายจ่าย + ปฏิทินรายวัน (port จาก Widget บนคอม)
+   สรุปรายรับ-รายจ่าย + ปฏิทินรายวัน
    ===================================================================== */
 let FIN = null, finSel = null;
 const TH_DOW = ["อา","จ","อ","พ","พฤ","ศ","ส"];
@@ -2665,7 +2665,7 @@ async function loadWorklog(){
    LEVEL — EXP / LV / ระดับ / MVP ประจำสัปดาห์
    นับจากงานจริงใน WORKLOG (worklog.json + Firestore) ล้วน ๆ ไม่มีตัวเลขปั้น
    คนที่ยังไม่มีงานในบันทึกก็เริ่มที่ LV 1 Simple ตามปกติ
-   สูตรชุดนี้ก๊อปไว้ที่ Widget ด้วย (Claude/Widget/src/levels.js) — แก้ที่นี่ต้องแก้ที่นั่น
+   สูตรชุดนี้เคยก๊อปไว้ที่แอป Widget ด้วย — 7 ก.ย. 2569 เลิกใช้แอปแล้ว ที่นี่คือที่เดียว
    ให้ตรงกัน ไม่งั้นเลเวลบนเว็บกับบน widget จะไม่เท่ากัน
    ===================================================================== */
 
@@ -4481,7 +4481,7 @@ firebase.firestore().collection("agents").doc("worklog").onSnapshot(d=>{
 firebase.firestore().collection("agents").doc("games").onSnapshot(d=>{
   if(d.exists && typeof gmApplyDoc === 'function') gmApplyDoc(d.data());
 },err=>console.warn("Firestore games:",err));
-/* widget: Claude limit — เขียนโดย scripts/push-limit.mjs บนเครื่อง */
+/* การ์ด Claude limit — เขียนโดย scripts/push-limit.mjs บนเครื่อง (ตัวเลขจริงจาก oauth/usage) */
 firebase.firestore().collection("agents").doc("claude_limit").onSnapshot(d=>{
   if(d.exists) renderLimit(d.data());
 },err=>console.warn("Firestore claude_limit:",err));

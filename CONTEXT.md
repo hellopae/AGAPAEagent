@@ -67,10 +67,14 @@ Founder / developer ที่ TANAPAT Printing (ธนะพัฒน์พร�
 อ่าน `DESIGN.md` ก่อนเขียน CSS บรรทัดแรกเสมอ — 29 design token ชุดเดียวใช้ทุกโปรเจกต์ ห้าม hardcode สี
 ขั้นตอนเลือกระดับ implement ดู `SOP/SOP-11-design-system.md`
 
-## AGAPAE Widget ≠ Dashboard
+## แอป AGAPAE Widget — ปลดระวางแล้ว (7 ก.ย. 2569)
 
-เวลาเป้พูดว่า "Widget" เขามักหมายถึง **แอป macOS ลอยหน้าจอ** ที่ `~/Documents/Work PAE/Claude/Widget`
-(Tauri v2 + React/Vite, `src/App.jsx`) — **ไม่ใช่ git repo** ไม่ต้อง commit/push
-แก้แล้วต้อง `npm run tauri build` แล้วติดตั้งใหม่ถึงจะเห็นบนเครื่อง
-มันอ่าน `.json` จาก GitHub Pages ของ repo นี้ + Firestore `agents/*`
-**แก้ที่เว็บไม่ไปโผล่ที่แอป และกลับกัน — ต้องแก้ทั้งสองที่**
+เดิม "Widget" ของเป้ = **แอป macOS ลอยหน้าจอ** (Tauri v2) ที่ `~/Documents/Work PAE/Claude/Widget`
+**Kittanate สั่งลบทิ้งแล้ว** เพราะไม่ได้เปิดอีกตั้งแต่ถอด Office ออก และกินพื้นที่ 4.4 GB
+ลบทั้งโฟลเดอร์ + `.app` ใน /Applications (ซอร์สเก็บเป็น zip ที่ `Output/Dale/2026-09-07-widget-source-archive.zip`)
+
+**ตอนนี้ "Widget" หมายถึงแท็บ Widgets บน dashboard เท่านั้น — มีที่เดียว ไม่ต้องแก้สองที่แล้ว**
+
+งานที่แอปเคยทำคนเดียวถูกย้ายมาที่ `scripts/push-limit.mjs`: ดึง % limit จริงจาก
+`api.anthropic.com/api/oauth/usage` (token จาก Keychain) แล้วเขียน Firestore `agents/claude_limit`
+ทุกครั้งที่ hook ทำงาน — รายละเอียดใน `Output/Dale/2026-09-07-widget-retire.md`

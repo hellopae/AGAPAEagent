@@ -4,7 +4,7 @@
 > ไม่ต้องไปไล่อ่านโค้ดซ้ำ ทุกอย่างที่ต้องรู้อยู่ในนี้แล้ว
 >
 > **เฟส 1 (EXP / LV / ระดับ / MVP) ทำเสร็จและ push แล้ว** ทั้งเว็บและ Widget
-> โค้ดอยู่ที่หัวข้อ `LEVEL` ใน `index.html` และ `Claude/Widget/src/levels.js`
+> โค้ดอยู่ที่หัวข้อ `LEVEL` ใน `index.html`
 >
 > **อัปเดต 26 ส.ค. 2569** — เกมทั้ง 8 ลงครบแล้ว · ♟️ หมากรุก **ตัดทิ้ง** (เจ้าของสั่ง เพราะต้องเขียน AI ใหม่หมด)
 > · ผังออฟฟิศ 2D บน Widget **ตัดออกแล้ว** ไปเล่นบนเว็บอย่างเดียว
@@ -206,23 +206,15 @@ unlocked: ["toby-secret-2"]        // ใหม่ — บทพูดลับ�
 ## กับดักที่เจอมาแล้ว — อย่าเหยียบซ้ำ
 
 - **ท่าเดินของคนปิดอยู่** (`OFC_WALK = {}`) เพราะสไปรท์ชีตแต่ละคนสเกล/ทิศทางไม่ตรงกัน เดินถอยหลังบ้าง ตัวใหญ่ไม่เท่ากันบ้าง — **อย่าเปิดกลับโดยไม่ทำชีตให้เท่ากันก่อน** ไฟล์ยังอยู่ที่ `office/sprites/*-W.png`
-- **สูตรเลเวลมี 2 ที่ ต้องตรงกัน** — `index.html` หัวข้อ `LEVEL` กับ `Claude/Widget/src/levels.js` แก้ที่เดียวแล้วลืมอีกที่ เลเวลบนเว็บกับ Widget จะไม่เท่ากัน
+- ~~**สูตรเลเวลมี 2 ที่ ต้องตรงกัน**~~ — หมดปัญหาแล้ว 7 ก.ย. 2569 ลบแอป Widget ทิ้ง สูตรเหลือที่เดียวคือ `index.html` หัวข้อ `LEVEL`
 - **`agents/email` และ doc อื่นใน `agents/` อ่านได้ด้วย API key ที่ฝังในหน้าเว็บสาธารณะ** — `agents/games` ก็เหมือนกัน อย่าเก็บอะไรที่เป็นความลับลงไป (สถิติเกมไม่เป็นไร)
 - **GitHub Pages ค้าง** → เช็คว่า `.nojekyll` ยังอยู่
 - **`index.html` ใหญ่มากแล้ว** — ของใหม่แยกไฟล์เสมอ
 
-## คำสั่ง build Widget (กันลืม)
+## ~~คำสั่ง build Widget~~ — ยกเลิก 7 ก.ย. 2569
 
-```bash
-cd "/Users/agapae/Documents/Work PAE/Claude/Widget"
-npm run build                       # ใช้ได้ปกติแล้ว
-npm run tauri build                 # ได้ .app ที่ src-tauri/target/release/bundle/macos/
-
-# ติดตั้งทับ (สำรองตัวเก่าก่อนเสมอ)
-ditto "/Applications/AGAPAE Widget.app" "/Applications/AGAPAE Widget.app.bak-$(date +%Y%m%d-%H%M)"
-rm -rf "/Applications/AGAPAE Widget.app"
-ditto "src-tauri/target/release/bundle/macos/AGAPAE Widget.app" "/Applications/AGAPAE Widget.app"
-```
+แอป AGAPAE Widget ถูกลบออกจากเครื่องแล้ว (ดู `Output/Dale/2026-09-07-widget-retire.md`)
+ไม่มีอะไรต้อง build นอกจากหน้าเว็บ
 
 > node เคยพังจาก Homebrew อัป `llhttp` เป็น 9.4.3 แต่ node 25.8.2 ลิงก์กับ 9.3 ไว้
 > แก้แล้วด้วย `brew reinstall node` → ได้ **node 26.7.0 + npm 11.19.0** (ข้ามเมเจอร์ ไม่ใช่แค่ลงซ้ำ)

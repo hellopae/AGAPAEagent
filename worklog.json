@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-09-05T09:10:00Z",
+  "updatedAt": "2026-09-07T16:30:11Z",
   "entries": [
+    {
+      "id": "wl-260907-dale-widget-retire",
+      "datetime": "2026-09-07T16:30:00Z",
+      "displayDate": "7 ก.ย. 2569",
+      "displayTime": "23:30",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "ปลดระวางแอป AGAPAE Widget บน Mac — ย้ายตัวเลข Claude Limit มาไว้ที่ hook",
+      "summary": "เป้ไม่ได้เปิดแอป Widget อีกเลยตั้งแต่ถอด Office ออก สั่งลบทิ้ง แต่ห่วงว่าจะกระทบการ์ด Claude Limit บนเว็บ — ตรวจแล้วกระทบจริง: Firestore agents/claude_limit มี 2 แหล่ง คือแอป (fiveHourPct/sevenDayPct = ตัวเลขจริงจาก oauth/usage) กับ scripts/push-limit.mjs (pct = ccusage ประมาณการ) และ renderLimit() เลือกตัวจากแอปก่อนเสมอ ถ้าลบเฉย ๆ ฟิลด์เก่าจะค้างใน Firestore แล้วการ์ดจะแช่ตัวเลขเดิมตลอดไป. แก้ด้วยการย้าย logic จากฝั่ง Rust ของแอปมาไว้ใน push-limit.mjs: อ่าน OAuth token สดจาก Keychain แล้วยิง api.anthropic.com/api/oauth/usage พร้อม User-Agent claude-code/<version> (ขาดไม่ได้ ไม่งั้น 429) ได้ % จริงทั้ง 5 ชม. และ 7 วัน ถ้าล้มเหลวตกไปใช้ ccusage พร้อมล้างฟิลด์ตัวจริงเป็น null กันเลขค้าง — ทดสอบรันจริงได้ 200 เขียนขึ้น Firestore สำเร็จ. ดีกว่าเดิมตรงที่อัปเดตทุกครั้งที่ agent ทำงาน ไม่ต้องเปิดแอปค้างไว้. ลบโฟลเดอร์ Widget (4.4 GB ส่วนใหญ่เป็น build cache ของ Rust) + .app ใน /Applications อีก 3 ตัว เก็บซอร์สเป็น zip 824 KB ไว้ที่ Output/Dale/ พร้อมวิธีรื้อกลับมา. อัปเดตเอกสารที่อ้างถึงแอปทั้งหมด (CONTEXT.md, PHASE2-GAMES.md, SOP-06, scripts/README.md) — สูตรเลเวลที่เคยต้อง sync 2 ที่ เหลือที่เดียวแล้ว",
+      "tags": [
+        "ระบบ",
+        "ทำความสะอาด",
+        "dashboard",
+        "Claude limit"
+      ]
+    },
     {
       "id": "wl-260905-claudy-game-direction",
       "datetime": "2026-09-05T09:10:00Z",
