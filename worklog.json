@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-07T16:30:11Z",
+  "updatedAt": "2026-09-07T17:53:30.837Z",
   "entries": [
+    {
+      "id": "wl-260907-toby-hfq1",
+      "datetime": "2026-09-07T17:53:30Z",
+      "displayDate": "8 ก.ย. 2569",
+      "displayTime": "00:53",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "อเวจี Phase 3 — หน้าปก มินิเกม 3 ชุด สำนวนมีชื่อ ประตูสวรรค์ ด่าน 2-3",
+      "summary": "ลงเกมจริงแล้วทั้งชุด เทสต์ใน Chrome จริงทุกเส้นทาง ไม่ใช่แค่ส่งโค้ด\n\nหน้าปก — ชั้นเต็มจอ เล่นต่อ/เริ่มใหม่/ตั้งค่า เกมไม่เดินจนกว่าจะกด (กันบันทึกอัตโนมัติทับเซฟเก่า) ยังไม่มี img/cover.png ก็ใช้ไล่สีสำรองได้\n\nเสียง — src/sfx.js สังเคราะห์เสียง action ทั้งหมดด้วย WebAudio 0 ไฟล์ 0 ไบต์ ตอบโจทย์ที่เจ"
+    },
     {
       "id": "wl-260907-dale-widget-retire",
       "datetime": "2026-09-07T16:30:00Z",
