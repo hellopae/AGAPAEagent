@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-09-09T17:01:44.000Z",
+  "updatedAt": "2026-09-10T07:42:00Z",
   "entries": [
+    {
+      "id": "wl-260910-chris-ag0s",
+      "datetime": "2026-09-10T06:55:00Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "13:55",
+      "agent": "chris",
+      "agentName": "Chris",
+      "agentImg": "avatars/Chris.png?v=2",
+      "pipeline": "quality",
+      "status": "done",
+      "title": "ตรวจ QA สปรินต์ศึกษาบทความ AI Agent — FAIL แล้ว PASS",
+      "summary": "ตรวจ 4 ไฟล์ของสปรินต์ (research ของ Reese, gap analysis ของ Dale, idea cards ของ Minnie, fact-check).\n\nรอบแรกตี ❌ FAIL — จับได้ว่าการแก้ blocker ตกไป 1 จุด: Dale บรรทัด 379 ยังเขียน 'จาก 76' ทั้งที่จุดอื่นแก้เป็น 71 แล้ว นอกจากนี้เตือนว่า Minnie เขียนว่างานซ่อม hook ของ Dale 'จะเกิดแน่' 3 จุด ทั้งที่ BACKLOG ระบุว่ารอ Kittanate อนุมัติ\n\nรอบ re-check ตี ✅ PASS — grep ยืนยันว่าเลข 76 ที่เกี่ยวกับ MATS ไม่เหลือในไฟล์, ถ้อยคำเงื่อนไขที่เติมอ่านเป็นไทยธรรมชาติ, ไม่พบข้อมูลต้นทุน TANAPAT รั่วในทั้ง 4 ไฟล์, ไม่พบ overclaim เรื่อง gate (Dale แยกข้อเท็จจริงกับสมมุติฐานสาเหตุถูก), ไม่มีใครเสนอสร้าง agent ใหม่"
+    },
+    {
+      "id": "wl-260910-reese-ag1s",
+      "datetime": "2026-09-10T06:20:00Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "13:20",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Fact-check งาน Dale + Minnie — PASS-WITH-FIXES เจอนับผิด 4 จุด",
+      "summary": "เปิดไฟล์จริงตรวจข้ออ้างเรื่องโค้ดของ Dale ทีละข้อ ไม่เชื่อตามที่เขียน\n\nยืนยันถูกต้อง: .gate-state.json mtime 29 ก.ค. · .skill-state.json ไม่มีไฟล์จริง · hook-skill เข้า settings.json 27 ส.ค. (git log) · worklog 189 entries · hook-gate.mjs:89 ผูก session_id · Libby index ค้าง 6 ก.ค. 34 ไฟล์ · PrintCost 2 ไฟล์ diff=0 · fixed:true=21 · ไม่มีข้อมูลต้นทุน TANAPAT รั่ว\n\nแก้แล้ว 4 จุด: MATS 76→71 รายการ · '5 จาก 12 agent มีผลงาน ≤3 ชิ้น'→'4 จาก 12' (Nick มี 5 ชิ้น ไม่เข้าเกณฑ์) ผิดที่ Dale แล้วต่อไปที่ Minnie · Dale อ้าง BACKLOG.md:244–248 ผิดบรรทัด (เป็นของ Toby) → 259, 263–264"
+    },
+    {
+      "id": "wl-260910-minnie-ag2s",
+      "datetime": "2026-09-10T05:35:00Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "12:35",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png?v=3",
+      "pipeline": "content",
+      "status": "done",
+      "title": "ต่อยอดบทความ Agent เป็นโอกาส — 9 ไอเดีย 3 ทิศทาง",
+      "summary": "อ่านผล verify ของ Reese แล้วคิดต่อ ไม่ยึดตามบทความต้นทาง\n\nทิศคอนเทนต์/คอร์ส: โมดูล 'จับระบบที่ตายเงียบ' ต่อ Course Agent · เช็คลิสต์ 5 ข้อก่อนซื้อคอร์ส agent · หน้า 'เปิดบ้าน AGAPAE'\nทิศปรับระบบเราเอง: ป้ายสถานะความน่าเชื่อถือ 1 บรรทัด · เช็คก่อนนอนคำสั่งเดียว · index อัตโนมัติแทนของ Libby ที่ค้าง\nทิศงานพิมพ์: ตัวช่วยแปลงบรีฟเป็นสเปกคิดราคาได้ · แยกข้อมูลวัสดุออกจาก HTML · ขายเป็นบริการให้อาชีพที่ต้องเสนอราคาทุกวัน\n\nควรทำก่อน: ป้ายสถานะบน dashboard ว่ากลไกตรวจงานยังทำงานอยู่ไหม — เกาะงานซ่อม hook ที่ต้องทำอยู่แล้ว เพิ่ม 1–2 ชม.\nตัดทิ้ง: แข่งด้วยจำนวน agent · แปลคอร์ส Google มาขาย · ก็อปโครง 3 ชั้นมาทำเทมเพลตขาย · vector DB/Memory Bank/MCP ต่อ DB"
+    },
+    {
+      "id": "wl-260910-dale-ag3s",
+      "datetime": "2026-09-10T05:05:00Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "12:05",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png?v=2",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Gap analysis 15 หัวข้อคอร์ส Google เทียบระบบ AGAPAE — เจอ quality gate ตายเงียบ 6 สัปดาห์",
+      "summary": "ไล่เทียบ 15 หัวข้อของคอร์ส Google กับโค้ดจริงของเรา แล้วเจอของที่สำคัญกว่าตัวบทความ\n\nhook ตัวแรกของแต่ละ event block ทำงาน ตัวที่ 2/3 ไม่ทำงาน — status/worklog สดถึงวันนี้ แต่ .gate-state.json ค้าง 29 ก.ค. และ .skill-state.json ไม่เคยเกิดขึ้นเลยทั้งที่ hook เข้า settings ตั้งแต่ 27 ส.ค. คัดสคริปต์ไปรันแยกด้วย payload ปลอมแล้วลอจิกไม่ผิด → ปัญหาอยู่ที่การถูกเรียกจริง (สมมุติฐาน: hook แย่ง stdin) แปลว่า fact-check gate + DoD gate ที่ CLAUDE.md บอกว่าบังคับด้วยโค้ด ไม่มีผลบังคับมา 6 สัปดาห์\n\nอีก 2 ช่องว่าง: ไม่มี regression test ของ agent เลย · Libby index ค้าง 34 จาก ~120 ไฟล์\n\nตอบตรง ๆ: routing table ไม่ควรเปลี่ยนเป็น dynamic · 16 agent พอแล้วไม่ควรเพิ่มตามเคส 27 ตัว · MCP เขียนเองคุ้มเฉพาะแบบ local stdio ตัวแรกคือ tanapat-print แต่ต้องแยก data/materials.json ออกจาก HTML ก่อน"
+    },
+    {
+      "id": "wl-260910-reese-ag4s",
+      "datetime": "2026-09-10T04:50:00Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "11:50",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "ตรวจบทความ Agent 2 ชิ้น — คอร์ส Google จริง เคส 27 agent เป็น funnel ขายคอร์ส",
+      "summary": "คอร์ส Google: playlist มีจริง 11 ตอน (พาดหัวถูก) 15 หัวข้อในโพสต์ก็ถูกทั้ง 15 แต่เป็น chapter ย่อยไม่ใช่ตอน · ฟรีจริง สอนบน ADK ซึ่งเป็น Apache-2.0 model-agnostic รันบนเครื่องเองได้ · แต่ Memory Bank ไม่ฟรี ผูก GCP 100% และเริ่มเก็บเงินจริง 1 ก.ย. 2569 · โพสต์ผิด 1 จุด: semantic search มาจาก Memory Bank ไม่ใช่ PreloadMemoryTool · ของแถมที่โพสต์ไม่บอก: ADK ขึ้น 2.0 มี breaking changes คลิปเป็นยุค 1.x\n\nเคส Linara Bozieva: คนจริง ต้นฉบับคือ Business Insider แบบ as-told-to (20 พ.ค. 69) ซึ่ง BI ไม่ตรวจตัวเลขให้ · บทความไทยไม่ขยายตัวเลข แต่แปลคลาด 2 จุด — 'ลูกค้า 14 ราย' ต้นฉบับคือ 14 client profiles / 'สเกลได้ 20–25' ต้นฉบับมี I think กำกับ · เลข 27 ล้าสมัย (Forbes ส.ค. = 35, เว็บเธอเอง 30+, อีกเว็บ 100+) → จำนวน agent ไม่ใช่หน่วยวัดที่มีความหมาย · โครงสร้าง 3 ชั้นไม่มี repo สาธารณะ ถูกทำเป็นสินค้าขาย $497/$997/$4,997 · diagram ในภาพเป็น n8n ที่ไม่ใช่ระบบเธอ (n8n ไม่มี node ชื่อ Grog)\n\nแนะนำไม่ย้ายไป ADK แต่หยิบมาใช้ได้: เก็บ trajectory ของ tool call เทียบ SOP · ลอง MCP Toolbox for Databases ต่อ Claude Code เข้า Firestore ตรง ๆ · วางแผน memory ที่ค้นได้ก่อน MEMORY.md โตเกิน"
+    },
     {
       "id": "wl-260910-toby-a1x9",
       "datetime": "2026-09-10T01:20:00Z",
