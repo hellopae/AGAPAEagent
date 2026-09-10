@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-10T13:33:57.596Z",
+  "updatedAt": "2026-09-10T13:33:58.931Z",
   "entries": [
+    {
+      "id": "wl-260910-mind-j8d0",
+      "datetime": "2026-09-10T13:33:58Z",
+      "displayDate": "10 ก.ย. 2569",
+      "displayTime": "20:33",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "อเวจี — prompt รูปโซน 2-3",
+      "summary": "prompt ครบสองโซนรูปแบบเดียวกับโซน 1 · ชุด A 12 ชิ้น (ฉาก หอทะเบียน สถานีทัณฑ์ 4 ยมทูต 6) + ชุด B 11 + ชุด C 9-10 ต่อโซน · ใช้รูปโซน 1 ซ้ำได้: เปรต สุนัขนรก พญายม ตะราง · ชี้ว่าโค้ดยังไม่อ่าน img/Asia, img/West · crew-kan-west แก้ตาม Chris ไม่ให้ออกมาเป็นโอดิน"
+    },
     {
       "id": "wl-260910-reese-j7bx",
       "datetime": "2026-09-10T13:33:57Z",
