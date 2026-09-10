@@ -62,6 +62,15 @@ Founder / developer ที่ TANAPAT Printing (ธนะพัฒน์พร�
 - **`gh` CLI ไม่ได้ล็อกอินบนเครื่องนี้** แต่ `git credential fill` ดึง token ออกมาใช้กับ REST API ได้
 - ถ้า Dashboard ดูเหมือนไม่อัปเดต เช็ก `.nojekyll` ก่อน — GitHub Pages เคย stall เพราะเรื่องนี้
 
+## เอกสารอ้างอิงใน `refs/` (เรียกอ่านได้เลยเมื่อโจทย์ตรง)
+
+- **`refs/agent-patterns.md`** — สรุปย่อบทความ AI Agent 2 ชิ้น (10 ก.ย. 2569): คอร์ส Multi-Agent
+  ของ Google Cloud Tech (ADK) และเคส "สร้าง agent 27 ตัว" ของ Linara Bozieva
+  ผ่าน Reese fact-check + Chris QA แล้ว มีทั้งข้อที่จริง ข้อที่เกินจริง และมติของทีมว่าจะเอาอะไรมาใช้/ไม่เอาอะไร
+  **ถ้าโจทย์เกี่ยวกับสถาปัตยกรรม agent / memory / MCP / การเทสต์ agent → อ่านไฟล์นี้ก่อนไปค้นใหม่**
+  มติที่ตกลงแล้วและไม่ต้องถกซ้ำ: ไม่ย้ายไป ADK · ไม่เปลี่ยน routing เป็น dynamic · หยุดที่ 16 agent
+  · ยังไม่ทำ vector DB / Memory Bank
+
 ## งาน UI
 
 อ่าน `DESIGN.md` ก่อนเขียน CSS บรรทัดแรกเสมอ — 29 design token ชุดเดียวใช้ทุกโปรเจกต์ ห้าม hardcode สี
