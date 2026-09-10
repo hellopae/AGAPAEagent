@@ -5,3 +5,4 @@ scripts/.gate-state.json
 scripts/.skill-state.json
 CLAUDE.md.bak-doctor
 *.orig
+scripts/.hook-log.jsonl

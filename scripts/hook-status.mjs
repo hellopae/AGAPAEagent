@@ -10,6 +10,7 @@
    SubagentStop ยิงตอน agent ทำงานจบจริง และรองรับ nested subagent ด้วย
    ===================================================================== */
 import { readFileSync, writeFileSync } from "node:fs";
+import { logHook } from "./hook-log.mjs";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -39,7 +40,8 @@ const MAP = {
 
 // ---- read stdin ----
 let raw = "";
-try { raw = readFileSync(0, "utf8"); } catch { process.exit(0); }
+try { raw = readFileSync(0, "utf8"); } catch { logHook("status", mode, null); process.exit(0); }
+logHook("status", mode, raw);
 let ev = {};
 try { ev = JSON.parse(raw || "{}"); } catch { process.exit(0); }
 

@@ -9,10 +9,12 @@
    ไม่เคย block ไม่เคยทำให้เทิร์นพัง (พังเมื่อไหร่ก็เงียบแล้วออก exit 0)
    ===================================================================== */
 import { readFileSync, existsSync } from "node:fs";
+import { logHook } from "./hook-log.mjs";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
+logHook("speak", process.env.AGAPAE_SPEAK === "1" ? "stop" : "stop(disabled)", null);
 if (process.env.AGAPAE_SPEAK !== "1") process.exit(0);
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");

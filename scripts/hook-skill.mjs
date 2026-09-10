@@ -14,6 +14,7 @@
    state เก็บที่ scripts/.skill-state.json (ไม่ commit)
    ===================================================================== */
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { logHook } from "./hook-log.mjs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -47,8 +48,10 @@ function saveState(db, sid, s) {
 }
 
 /* ---------- อ่าน event ---------- */
-let ev = {};
-try { ev = JSON.parse(readFileSync(0, "utf8") || "{}"); } catch { process.exit(0); }
+let ev = {}, rawEv = "";
+try { rawEv = readFileSync(0, "utf8"); } catch { logHook("skill", mode, null); process.exit(0); }
+logHook("skill", mode, rawEv);
+try { ev = JSON.parse(rawEv || "{}"); } catch { process.exit(0); }
 const sid = ev.session_id || "no-session";
 
 /* ---------- โหมด skip: บันทึกว่าเทิร์นนี้ตัดสินใจไม่เก็บ พร้อมเหตุผล ---------- */

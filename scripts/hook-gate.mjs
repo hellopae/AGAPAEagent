@@ -12,6 +12,7 @@
    state เก็บที่ scripts/.gate-state.json (แยกตาม session_id, ไม่ commit)
    ===================================================================== */
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from "node:fs";
+import { logHook } from "./hook-log.mjs";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -54,8 +55,10 @@ const MAX_BLOCKS = 3;     // กันลูป: block ได้มากสุ�
 const MAX_QA_ROUNDS = 3;  // SOP-01: แก้เกิน 3 รอบยังไม่ผ่าน = หยุด รายงาน Kittanate
 
 /* ---------- อ่าน event ---------- */
-let ev = {};
-try { ev = JSON.parse(readFileSync(0, "utf8") || "{}"); } catch { process.exit(0); }
+let ev = {}, raw = "";
+try { raw = readFileSync(0, "utf8"); } catch { logHook("gate", mode, null); process.exit(0); }
+logHook("gate", mode, raw);
+try { ev = JSON.parse(raw || "{}"); } catch { process.exit(0); }
 const sid = ev.session_id || "no-session";
 
 /* ---------- state ---------- */
