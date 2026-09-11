@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-10T13:33:58.931Z",
+  "updatedAt": "2026-09-11T10:35:51.196Z",
   "entries": [
+    {
+      "id": "wl-260911-reese-m0bg",
+      "datetime": "2026-09-11T10:35:51Z",
+      "displayDate": "11 ก.ย. 2569",
+      "displayTime": "17:35",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese: real case references zone 2-3",
+      "summary": "งานทั้งสองเสร็จแล้ว แต่สำนวนเจ้าอาวาสยังไม่ผ่านการตรวจข้อเท็จจริง (❌ FAIL): ข้อความตอนนี้ยังระบุตัวพระจริงในคดีที่เพิ่งเป็นข่าวเมื่อวานได้ รอบนี้ไม่ได้แก้โค้ด\n\n**งาน A — ไฟล์วิจัย r2**\n- แก้ครบตาม W5, W2, W3 และ Note 5 ใส่บันทึก r2 ไว้หัวไฟล์แล้ว\n- W3 ยืนยันได้จาก ja.wikipedia 十王 และ 来迎: คติสิบราชาต"
+    },
     {
       "id": "wl-260910-mind-j8d0",
       "datetime": "2026-09-10T13:33:58Z",
