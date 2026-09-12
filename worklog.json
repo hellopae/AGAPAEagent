@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-12T10:57:06.209Z",
+  "updatedAt": "2026-09-12T11:03:06.518Z",
   "entries": [
+    {
+      "id": "wl-260912-minnie-0wt4",
+      "datetime": "2026-09-12T11:03:06Z",
+      "displayDate": "12 ก.ย. 2569",
+      "displayTime": "18:03",
+      "agent": "minnie",
+      "agentName": "Minnie",
+      "agentImg": "avatars/Minnie.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Minnie แก้การ์ดโซน 3-4",
+      "summary": "อ่านครบทั้งสองไฟล์แล้ว ส่งบล็อกที่แก้กลับมาให้ Claudy เขียนลงไฟล์ เรียงตามลำดับที่ปรากฏใน `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Minnie/2026-09-12-avegee-zone3-merged-zone4.md`\n\n```\n=== FIX 1 · §1.4 ตารางปีก — แถวปีกกรีก (Sonnenrad) ===\n--- OLD ---\n| **ปีกกรีก — \"ลานศาลเก่า\"** "
+    },
     {
       "id": "wl-260912-rae-t6sh",
       "datetime": "2026-09-12T10:57:06Z",
