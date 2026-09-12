@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T10:39:07.604Z",
+  "updatedAt": "2026-09-12T01:43:28.559Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,8 +43,8 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "done",
-      "task": "Minnie: zone 3 theme alternatives",
+      "status": "working",
+      "task": "Minnie: merged zone 3 + zone 4",
       "report": {
         "when": "17:39",
         "title": "Minnie: zone 3 theme alternatives",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese: real case references zone 2-3",
+      "status": "working",
+      "task": "Reese: real cases zone 2-4",
       "report": {
         "when": "17:35",
         "title": "Reese: real case references zone 2-3",
@@ -169,12 +169,12 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
-      "task": "Mind: fix zone 2-3 prompts per QA",
+      "status": "done",
+      "task": "Mind: finish zone 2 prompts",
       "report": {
-        "when": "20:33",
-        "title": "อเวจี — prompt รูปโซน 2-3",
-        "body": "prompt ครบสองโซนรูปแบบเดียวกับโซน 1 · ชุด A 12 ชิ้น (ฉาก หอทะเบียน สถานีทัณฑ์ 4 ยมทูต 6) + ชุด B 11 + ชุด C 9-10 ต่อโซน · ใช้รูปโซน 1 ซ้ำได้: เปรต สุนัขนรก พญายม ตะราง · ชี้ว่าโค้ดยังไม่อ่าน img/Asia, img/West · crew-kan-west แก้ตาม Chris ไม่ให้ออกมาเป็นโอดิน"
+        "when": "08:43",
+        "title": "Mind: finish zone 2 prompts",
+        "body": "ไฟล์แก้จบแล้ว: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-09-10-avegee-zone2-3-prompts.md`\n\n**สิ่งที่ session ก่อนทำไว้แล้ว (ตรวจแล้ว ไม่ทำซ้ำ)** — W1 ริมฝั่งซันซุไม่มีกรวด · W3 `the golden way up to the heavenly realm` + ชื่อไทย \"ประตูเทวภูมิ\" · Note 1 `blade tips glowing dull red with heat` · Note 2 `a plain grey sash tied at the waist, not a robe` · Note 3 คาชะ `a single tail` · Note 4 \"ทูลร์ (þulr)\" (ไม่มี þ ลอยเดี่ยวเหลือในไฟล์) · prompt โซน 2 ครบ 59 ชิ้น · §10 เทียบรูปที่เจ้าของ gen แล้ว\n\n**ที่แก้เพิ่มรอบนี้**\n\n1. **หัวไฟล์ r2** — เขียนใหม่ทั้งบล็อก แยกรายการ Chris ที่แก้แล้วทีละข้อ + คำตัดสินเจ้าของ + คำตัดสินใหม่เรื่องโซน 3/4 · ชื่อไฟล์เปลี่ยนเป็น \"โซน 3-4 รอโครงจาก Minnie\"\n2. **เอ็นมะครบชุด** — §3.6 ขึ้นต้นด้วยคำสั่งเจ้าของชัด ๆ ว่าซามูไรห้ามใช้ + ระบุว …"
       }
     },
     {
@@ -301,7 +301,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby: wire zone 2 art folders",
+      "task": "Toby: feature batch for AVEGEE",
       "report": {
         "when": "20:33",
         "title": "อเวจี — สำนวนเจ้าอาวาส + ห้องประตูสวรรค์ไม่แสบตา",
