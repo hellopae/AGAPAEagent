@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T06:13:57.341Z",
+  "updatedAt": "2026-09-12T10:57:06.209Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,8 +43,8 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "done",
-      "task": "Minnie: merged zone 3 + zone 4",
+      "status": "working",
+      "task": "Minnie แก้การ์ดโซน 3-4",
       "report": {
         "when": "08:44",
         "title": "Minnie: merged zone 3 + zone 4",
@@ -122,8 +122,13 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "idle",
-      "task": ""
+      "status": "done",
+      "task": "Rae เขียนบทพูดผีโซนบูรพา",
+      "report": {
+        "when": "17:57",
+        "title": "Rae เขียนบทพูดผีโซนบูรพา",
+        "body": "เขียนครบสี่ตัวและแก้ไฟล์แล้ว\n\n**ไฟล์ที่แก้:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/data.js` (`MOB.kinds` สี่บรรทัดท้าย — ไม่ได้แตะอย่างอื่น)\n\n```js\n{ name:'กากิ',            img:'mob-gaki',     line:'\"คอเท่านี้ จะกินให้ทันท้องได้ยังไง\"' },\n{ name:'คาชะ',            img:'mob-kasha',    line:'\"ศพนี้ข้าจองไว้แล้ว ท่านมาทีหลัง\"' },\n{ name:'นุเคะคุบิ',        img:'mob-nukekubi', line:'\"หัวมาก่อน ตัวตามมาทีหลัง\"' },\n{ name:'ดวงไฟวิญญาณ',     img:'mob-hitodama', line:'\"วูบ...\" (มันไม่มีปาก มีแต่แสง)' },\n```\n\n**รายงาน:** `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-09-12-avegee-zone2-mob-lines.md`\n\nเหตุผลย่อ\n- **กากิ** — เขียนจากรูปร่างที่ Reese ยืนยัน [สูง] เท่านั้น (ท้องป่อง คอเล็ก) พึมพำกับตัวเอง · ไม่ทับ \"หิว... หิว...\" ของเปรตไทย และไม่ทับเปรตปากรูเข็ม\n …"
+      }
     },
     {
       "id": "vera",
@@ -301,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby: continue feature batch",
+      "task": "Toby แก้ตัวเลขงบรูป CONCEPT §18.3",
       "report": {
         "when": "20:33",
         "title": "อเวจี — สำนวนเจ้าอาวาส + ห้องประตูสวรรค์ไม่แสบตา",
