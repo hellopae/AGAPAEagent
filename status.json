@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T10:57:06.209Z",
+  "updatedAt": "2026-09-12T10:57:50.996Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese: fact-check zone 3-4 card",
+      "status": "working",
+      "task": "Reese fact-check บทผีโซนบูรพา",
       "report": {
         "when": "13:13",
         "title": "Reese: fact-check zone 3-4 card",
