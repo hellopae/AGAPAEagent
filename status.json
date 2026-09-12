@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T01:44:58.533Z",
+  "updatedAt": "2026-09-12T05:41:59.870Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,7 +70,7 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "working",
-      "task": "Reese: real cases zone 2-4",
+      "task": "Reese: fact-check zone 3-4 card",
       "report": {
         "when": "17:35",
         "title": "Reese: real case references zone 2-3",
@@ -301,7 +301,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby: feature batch for AVEGEE",
+      "task": "Toby: continue feature batch",
       "report": {
         "when": "20:33",
         "title": "อเวจี — สำนวนเจ้าอาวาส + ห้องประตูสวรรค์ไม่แสบตา",
