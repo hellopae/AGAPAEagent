@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-12T11:09:02.627Z",
+  "updatedAt": "2026-09-12T11:09:33.395Z",
   "entries": [
+    {
+      "id": "wl-260912-reese-97bn",
+      "datetime": "2026-09-12T11:09:33Z",
+      "displayDate": "12 ก.ย. 2569",
+      "displayTime": "18:09",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese fact-check บทผีโซนบูรพา",
+      "summary": "## ❌ VERDICT: FAIL — 2 blockers (1 อยู่ในโค้ดที่รันจริง)\n\nรายงานเต็ม: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-12-avegee-mob-lines-factcheck.md`\n\n### Blocker\n\n**B1 — บทนุเคะคุบิผิดตำนาน (ต้องแก้โค้ดทันที)**\n`src/data.js` บรรทัด 558 `\"หัวมาก่อน ตัวตามมาทีหลัง\"` — ตาม"
+    },
     {
       "id": "wl-260912-toby-8jkz",
       "datetime": "2026-09-12T11:09:02Z",
