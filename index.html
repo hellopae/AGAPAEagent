@@ -1658,6 +1658,16 @@ const SEED_AGENTS = [
    caps:["Prototype เว็บ Vite + React + TS (portrait-first)","Game loop / timer / animation / sprite sheet","รับงานวาดมือเข้าระบบเป็น asset ใช้งานได้","พอร์ตข้ามแพลตฟอร์ม: Capacitor / Tauri"],
    what:["สร้าง prototype ที่กดเล่นได้จริงทุกขั้น ไม่ใช่ส่งแค่โค้ด","build ทีละ 1 ฟีเจอร์ แล้วให้เทสต์ทันที ห้ามรวบ","เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด","ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"],
    status:"idle",task:null,report:null},
+  {id:"codex",name:"Codex",role:"Software Engineer · OpenAI",pipeline:"standalone",img:"avatars/Codex.png?v=20260914",
+   persona:"สุขุม พูดตรง ลงมือเป็นขั้น พิสูจน์ด้วยผลทดสอบ",
+   caps:["วิเคราะห์โค้ด","แก้บั๊กและพัฒนา","ทดสอบและส่งมอบ"],
+   what:["ช่วย Dale และ Toby ตรวจระบบและพัฒนาโปรเจกต์ตามใบงาน","เริ่มจากอ่านอย่างเดียวผ่านตัวทำงาน Codex บนเครื่อง","รับงานจาก PAE ได้โดยตรงเมื่อ Claude ติดลิมิต"],
+   status:"idle",task:null,report:null},
+  {id:"astra",name:"Astra",role:"Architect & Reviewer · OpenAI",pipeline:"standalone",img:"avatars/Astra.png?v=20260914",
+   persona:"ช่างสังเกต มองภาพรวม ตั้งคำถามกับสมมติฐาน อธิบายทางเลือกให้เข้าใจง่าย",
+   caps:["ออกแบบระบบ","วิเคราะห์โจทย์ซับซ้อน","ตรวจข้อเสนอและ UX"],
+   what:["ช่วยทีมวิเคราะห์สถาปัตยกรรมและเปรียบเทียบทางเลือก","ทำหน้าที่ฝ่ายวิเคราะห์ผ่านโมเดล Astra ในตัวทำงาน Codex บนเครื่อง","ส่งข้อเสนอให้ PAE หรือผู้คุมงานตรวจรับก่อนลงมือเปลี่ยนระบบ"],
+   status:"idle",task:null,report:null},
   {id:"news",name:"News",role:"Daily News Director",pipeline:"news",img:"avatars/News.png",
    persona:"รวบรวมข่าวสารทุกวัน เป็นกลาง รายงานตรง ครบ 6 หัวข้อ แล้วส่งให้ทีมตรวจสอบและเขียน",
    caps:["การเมืองไทย","ข่าวโลก","ธุรกิจ & งานพิมพ์","เทคโนโลยี & ราคาทอง"],
@@ -2473,6 +2483,35 @@ function updateStats(){
    DRAWER
    ===================================================================== */
 const drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim');
+// Fixed local commands only: dashboard data is never executable input.
+function openaiWorkerCommand(id){
+  if(!['codex','astra'].includes(id)) return '';
+  return `python3 scripts/openai-worker.py --agent ${id} --task /path/to/task.md --project /path/to/repository --run`;
+}
+function openaiHandoffHTML(id){
+  if(!openaiWorkerCommand(id)) return '';
+  return `<div class="sec what"><h4>ส่งงาน</h4>
+    <p>รับงานจาก PAE ได้โดยไม่ต้องรอ Claude โดย Codex และ Astra ใช้สิทธิ์และโควตา OpenAI ของบัญชีเดียวกัน</p>
+    <ul><li>เตรียมไฟล์ใบงาน แล้วเปิด Terminal ในโฟลเดอร์ AGAPAE Agent</li>
+    <li>คัดลอกคำสั่ง เปลี่ยนเส้นทางใบงานและโปรเจกต์ให้ตรงกับเครื่อง แล้วรันเพื่อตรวจแบบอ่านอย่างเดียว</li></ul>
+    <div class="report"><code id="openai-command" style="display:block;overflow-wrap:anywhere">${openaiWorkerCommand(id)}</code></div>
+    <button type="button" class="ctrl-btn" onclick="copyOpenaiWorkerCommand('${id}',this)">คัดลอกคำสั่ง</button>
+    <p id="openai-copy-status" role="status" aria-live="polite"></p>
+    <p>เว็บนี้แสดงทีมและสถานะ การเปิดการ์ดหรือคัดลอกคำสั่งยังไม่เริ่มงาน ตัวทำงานบนเครื่องเป็นผู้เรียกโมเดลและบันทึกผล สถานะบนเว็บอัปเดตเมื่อเผยแพร่จากตัวทำงาน</p>
+    <p><a href="scripts/OPENAI-WORKERS.md">อ่านคู่มือการส่งงาน</a></p>
+  </div>`;
+}
+async function copyOpenaiWorkerCommand(id, button){
+  const command = openaiWorkerCommand(id);
+  if(!command) return;
+  const status = document.getElementById('openai-copy-status');
+  try{
+    await navigator.clipboard.writeText(command);
+    if(status) status.textContent = 'คัดลอกแล้ว — เปลี่ยนเส้นทางไฟล์ก่อนรันบนเครื่อง';
+  }catch(e){
+    if(status) status.textContent = 'คัดลอกอัตโนมัติไม่ได้ เลือกข้อความคำสั่งด้านบนแล้วคัดลอกด้วยตนเอง';
+  }
+}
 function openReport(id){ openDrawer(AGENTS.find(x=>x.id===id), true); }
 function openDrawer(a, scrollToReport){
   const p = PIPELINES[a.pipeline] || PIPELINES.standalone;
@@ -2488,6 +2527,9 @@ function openDrawer(a, scrollToReport){
       <div class="sec"><h4>บุคลิก</h4><p>${a.persona}</p></div>
       <div class="sec what"><h4>หน้าที่</h4><ul>${a.what.map(w=>`<li>${w}</li>`).join('')}</ul></div>
       <div class="sec"><h4>ความสามารถ</h4><div class="caps">${a.caps.map(c=>`<span class="cap">${c}</span>`).join('')}</div></div>
+      ${['codex','astra'].includes(a.id) && a.workerState==='ready_for_review' ? '<div class="sec"><h4>การตรวจรับ</h4><p>มีรายงานรอตรวจรับ — ยังไม่ผ่านการอนุมัติ</p></div>' : ''}
+      ${['codex','astra'].includes(a.id) && a.workerState==='failed' ? '<div class="sec"><h4>ผลการทำงาน</h4><p>รอบล่าสุดไม่สำเร็จ — ตรวจบันทึกบนเครื่องก่อนเริ่มใหม่</p></div>' : ''}
+      ${openaiHandoffHTML(a.id)}
       <div class="sec" id="reportSec"><h4>รายงานล่าสุด</h4>${reportHTML(a.report)}</div>
     </div>`;
   drawer.classList.add('open'); scrim.classList.add('open'); drawer.setAttribute('aria-hidden','false');
@@ -2857,6 +2899,8 @@ const OFC_ART = { floor:'office/floor2.2.png', sprites:{
   dale:'office/sprites/dale.png',
   toby:'office/sprites/toby.png',
   news:'office/sprites/news.png',
+  codex:'office/sprites/codex.png',
+  astra:'office/sprites/astra.png',
 }};
 
 /* ท่าเดิน — สไปรท์ชีต 3 เฟรม (กว้าง 3 เท่าของเฟรมเดียว) ของใครของมัน
@@ -2974,6 +3018,8 @@ const OFC_ACT = {desk:'⌨️', coffee:'☕', chat:'💬', report:'📋', check:
 
 /* ความคิดในบับเบิล — ของใครของมัน ตามนิสัยที่เขียนไว้ใน persona */
 const OFC_THINK = {
+  codex:{desk:['ขอดูผลทดสอบก่อน','ไล่ทีละขั้นให้ชัด'],walk:['ไปดูจุดที่เกี่ยวข้องกัน','ทำทีละส่วนแล้วตรวจผล'],chat:['มีหลักฐานจากการทดสอบไหม','ขอบเขตงานนี้คืออะไร'],check:['ส่งให้ตรวจรับก่อนสรุปว่าเสร็จ']},
+  astra:{desk:['สมมติฐานนี้มีหลักฐานอะไร','มองผลกระทบทั้งระบบก่อน'],walk:['ลองดูอีกมุมหนึ่ง','ส่วนนี้สัมพันธ์กับอะไรบ้าง'],chat:['ทางเลือกนี้แลกกับอะไร','อธิบายให้เข้าใจง่ายกว่านี้ได้ไหม'],check:['มีกรณีไหนที่เรายังไม่ได้คิดถึง']},
   claudy:{desk:['ใครว่างบ้าง เดี๋ยวต้องกระจายงานรอบบ่าย','ขอโต๊ะกลางออฟฟิศไว้แบบนี้แหละ เห็นทุกคนพร้อมกัน','คิวงานยาวไป ต้องตัดอันที่ยังไม่จำเป็นออก'],
          chat:['งานถึงไหนแล้ว ติดตรงไหนบอกได้','อันนี้ส่ง Chris ตรวจก่อนนะ'],
          meet:['สรุปให้จบในสิบห้านาที','ใครรับอันนี้ต่อ']},

@@ -1,7 +1,7 @@
 ---
 name: claudy
 description: ORCHESTRATOR สำหรับ headless/cron เท่านั้น (`claude --agent claudy -p "…"`) — วิเคราะห์งานแล้วส่งต่อให้ specialist ไม่ทำงาน specialist เอง. **งาน interactive ไม่ต้องเรียก agent นี้** เพราะ session หลักเป็น Claudy อยู่แล้วตาม CLAUDE.md การเรียกซ้ำจะกลายเป็นชั้นซ้อนที่เปลือง token เปล่า ๆ
-tools: Agent(minnie-ideas, reese-research, addy-marketing, rae-writer, vera-design, mind-visual, chris-qa, libby-index, nick-analytics, dale-devops, toby-gamedev, news-daily), Read, Write, Edit, Bash, WebSearch
+tools: Agent(codex-engineer, astra-architect, minnie-ideas, reese-research, addy-marketing, rae-writer, vera-design, mind-visual, chris-qa, libby-index, nick-analytics, dale-devops, toby-gamedev, news-daily), Read, Write, Edit, Bash, WebSearch
 model: inherit
 ---
 
@@ -110,3 +110,11 @@ subagent ไม่เห็นบทสนทนาของคุณ ต้อ�
 2. **มอบหมายให้ใคร** (ชื่อ agent)
 3. **pipeline** (ถ้ามีหลาย step) — ระบุด้วยว่าขั้นไหน foreground ขั้นไหนขนานได้
 4. จากนั้น delegate ผ่าน Agent tool
+
+## OpenAI workers — เพิ่มตามคำขอคุณเป้ 13 ก.ย. 2569
+
+- **Codex / codex-engineer**: ช่วย Dale และ Toby ตรวจโค้ด เสนอแพตช์ และทดสอบ
+- **Astra / astra-architect**: วิเคราะห์สถาปัตยกรรมและทางเลือกให้ผู้คุมงาน
+- เรียกตรงผ่าน `scripts/openai-worker.py` ได้โดยไม่ใช้ Claude; descriptor ฝั่ง Claude ยังต้องใช้โควตา Claude
+- เว็บเป็น dashboard แสดงผล ไม่ใช่คิวสั่งรัน งาน CLI จบที่ `ready_for_review`; ไม่มีการอ้าง Reese/Chris PASS อัตโนมัติ
+- วิธีใช้และข้อจำกัด: `scripts/OPENAI-WORKERS.md`

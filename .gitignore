@@ -6,3 +6,8 @@ scripts/.skill-state.json
 CLAUDE.md.bak-doctor
 *.orig
 scripts/.hook-log.jsonl
+
+# Private local OpenAI worker briefs, transcripts and reports
+/Output/Codex/runs/
+/Output/Astra/runs/
+/scripts/__pycache__/

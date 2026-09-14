@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-12T11:17:19.628Z",
+  "updatedAt": "2026-09-14T08:09:44.563129Z",
   "entries": [
+    {
+      "id": "wl-260914-codex-setup",
+      "datetime": "2026-09-14T08:09:44.563129Z",
+      "displayDate": "14 ก.ย. 2569",
+      "displayTime": "15:09",
+      "agent": "codex",
+      "agentName": "Codex",
+      "agentImg": "avatars/Codex.png?v=20260914",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "เพิ่ม Codex และ Astra พร้อมรูปใหม่และตัวละคร Office",
+      "summary": "ดำเนินการโดย Codex: เพิ่มบุคลิก รูปที่คุณเป้จัดทำ และตัวทำงานบนเครื่องที่ไม่ต้องรอ Claude ผ่านการตรวจโค้ดและหน้าจอ เว็บแสดงสถานะและคัดลอกคำสั่ง ยังไม่ใช่คิวสั่งงานอัตโนมัติ"
+    },
     {
       "id": "wl-260912-rae-j72l",
       "datetime": "2026-09-12T11:17:19Z",

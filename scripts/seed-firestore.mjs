@@ -19,9 +19,13 @@ function fsVal(v) {
 }
 
 const { agents } = JSON.parse(readFileSync(FILE, "utf8"));
+const requested = process.argv.slice(2);
+const unknown = requested.filter(id => !agents.some(a => a.id === id));
+if (unknown.length) throw new Error(`Unknown agents: ${unknown.join(", ")}`);
 console.log(`Seeding ${agents.length} agents to Firestore…\n`);
 
 for (const [idx, agent] of agents.entries()) {
+  if (requested.length && !requested.includes(agent.id)) continue;
   const doc = { ...agent, sortOrder: idx };
   const url = `https://firestore.googleapis.com/v1/projects/${PROJECT}/databases/(default)/documents/agents/${agent.id}?key=${KEY}`;
   const res = await fetch(url, {
@@ -29,6 +33,7 @@ for (const [idx, agent] of agents.entries()) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ fields: Object.fromEntries(Object.entries(doc).map(([k, v]) => [k, fsVal(v)])) }),
   });
+  if (!res.ok) process.exitCode = 1;
   console.log(`${res.ok ? "✅" : `❌ ${res.status}`}  ${agent.id.padEnd(14)} ${agent.name}`);
 }
 console.log("\nDone — เปิด Firestore console เพื่อตรวจสอบ");

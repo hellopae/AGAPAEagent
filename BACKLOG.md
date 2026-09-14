@@ -292,3 +292,11 @@ _สร้าง 21 ส.ค. 2569 — ดู `Output/Addy/2026-08-21-addy-charte
 - Kittanate เพิ่มงานได้ตลอด — Claudy จัด priority ให้แล้วแจ้งกลับ
 - Claudy เพิ่มงานที่ค้นพบเองได้ใน P2/P3 แต่ P0/P1 ใหม่ต้องแจ้ง Kittanate
 - งานที่ block กันให้เขียนระบุ (เช่น "รอผล research ของ Reese") — อย่าเริ่มงานที่ input ยังไม่พร้อม
+
+## OpenAI workers — เพิ่มตามคำขอคุณเป้ 13 ก.ย. 2569
+
+- **Codex / codex-engineer**: ช่วย Dale และ Toby ตรวจโค้ด เสนอแพตช์ และทดสอบ
+- **Astra / astra-architect**: วิเคราะห์สถาปัตยกรรมและทางเลือกให้ผู้คุมงาน
+- เรียกตรงผ่าน `scripts/openai-worker.py` ได้โดยไม่ใช้ Claude; descriptor ฝั่ง Claude ยังต้องใช้โควตา Claude
+- เว็บเป็น dashboard แสดงผล ไม่ใช่คิวสั่งรัน งาน CLI จบที่ `ready_for_review`; ไม่มีการอ้าง Reese/Chris PASS อัตโนมัติ
+- วิธีใช้และข้อจำกัด: `scripts/OPENAI-WORKERS.md`

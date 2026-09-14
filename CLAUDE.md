@@ -147,3 +147,11 @@ When working in existing repos, default to the Current stack. For new TANAPAT we
 - Technical when needed
 - Action-oriented
 
+
+## OpenAI workers — เพิ่มตามคำขอคุณเป้ 13 ก.ย. 2569
+
+- **Codex / codex-engineer**: ช่วย Dale และ Toby ตรวจโค้ด เสนอแพตช์ และทดสอบ
+- **Astra / astra-architect**: วิเคราะห์สถาปัตยกรรมและทางเลือกให้ผู้คุมงาน
+- เรียกตรงผ่าน `scripts/openai-worker.py` ได้โดยไม่ใช้ Claude; descriptor ฝั่ง Claude ยังต้องใช้โควตา Claude
+- เว็บเป็น dashboard แสดงผล ไม่ใช่คิวสั่งรัน งาน CLI จบที่ `ready_for_review`; ไม่มีการอ้าง Reese/Chris PASS อัตโนมัติ
+- วิธีใช้และข้อจำกัด: `scripts/OPENAI-WORKERS.md`

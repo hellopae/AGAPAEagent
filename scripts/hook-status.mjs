@@ -23,6 +23,8 @@ const FS_KEY = "AIzaSyCtIZVYmibm4Rwb878iEdnxHjvpVcLfs2E";
 const mode = process.argv[2] === "done" ? "done" : "start";
 
 const MAP = {
+  "codex-engineer": "codex",
+  "astra-architect": "astra",
   "minnie-ideas":   "minnie",
   "reese-research": "reese",
   "rae-writer":     "rae",
@@ -49,6 +51,9 @@ try { ev = JSON.parse(raw || "{}"); } catch { process.exit(0); }
 const input = ev.tool_input || {};
 const id = MAP[ev.agent_type || input.subagent_type];
 if (!id) process.exit(0);
+// Claude wrapper completion is not external worker completion. Only the explicit
+// local runner publishes these two statuses; never auto-log/push raw wrapper output.
+if (id === "codex" || id === "astra") process.exit(0);
 
 // ---- update status.json ----
 let db;
