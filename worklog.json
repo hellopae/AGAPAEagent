@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-16T18:18:06.965Z",
+  "updatedAt": "2026-09-16T18:20:06.864Z",
   "entries": [
+    {
+      "id": "wl-260916-reese-eb81",
+      "datetime": "2026-09-16T18:20:06Z",
+      "displayDate": "17 ก.ย. 2569",
+      "displayTime": "01:20",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese re-checks 7 revised cases",
+      "summary": "## ผลตรวจรอบ 2 — FIX LIST (เฉพาะ 3 จุด)\n\nตรวจ 7 สำนวนที่ Rae แก้แล้วเทียบกับ FIX LIST เดิม ตอบคำถามเดียวตามใบงาน: ยังระบุคดีเดิมได้ไหม และย้ายไปตรงคดีจริงอื่นแทนไหม\n\n**ผ่านแล้ว (4/7):**\n- **A10** — เปลี่ยนธุรกิจ+กลไกซ่อนขาดทุนสำเร็จ ไม่ตรงโอลิมปัสอีก ไม่ชนคดีอื่น\n- **A11** — เปลี่ยนจาก motive เงินบำ"
+    },
     {
       "id": "wl-260916-chris-bqpi",
       "datetime": "2026-09-16T18:18:06Z",

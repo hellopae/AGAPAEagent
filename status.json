@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:18:06.965Z",
+  "updatedAt": "2026-09-16T18:20:06.864Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese re-checks 7 revised cases",
       "report": {
-        "when": "01:05",
-        "title": "Reese fact-checks zone 2 claims",
-        "body": "Fact-check complete. Verdict: **FIX LIST** (not PASS).\n\nFile written: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-asia-claims.md`\n\nSummary of findings:\n\n1. **Real names/places/years/orgs/numbers leaking** — ✅ PASS. Read all 80 claim lines (A1–A20); none contain literal real names, places, dates, companies, or specific real amounts.\n\n2. **Testimonies close enough to a real case/person to be identifiable** — ❌ FIX LIST, and broader than Rae's original worry (only A11). Confirmed via search:\n   - **High risk (plot matches one real case almost 1:1):** A11 (Sogen Kato, Japan 2010, hidden body for pension — [ABC News](https://www.abc.net.au/news/2010-08-27/mummified-mans-relatives-arrested-for-pension-fraud/960708)), A7 (Aum Shinrikyo sarin atta …"
+        "when": "01:20",
+        "title": "Reese re-checks 7 revised cases",
+        "body": "## ผลตรวจรอบ 2 — FIX LIST (เฉพาะ 3 จุด)\n\nตรวจ 7 สำนวนที่ Rae แก้แล้วเทียบกับ FIX LIST เดิม ตอบคำถามเดียวตามใบงาน: ยังระบุคดีเดิมได้ไหม และย้ายไปตรงคดีจริงอื่นแทนไหม\n\n**ผ่านแล้ว (4/7):**\n- **A10** — เปลี่ยนธุรกิจ+กลไกซ่อนขาดทุนสำเร็จ ไม่ตรงโอลิมปัสอีก ไม่ชนคดีอื่น\n- **A11** — เปลี่ยนจาก motive เงินบำนาญ (Sogen Kato) เป็นเรื่องมรดก/ทรัพย์สินทั่วไปแล้ว\n- **A15** — เปลี่ยนสาขาจากชีวภาพ/stem cell เป็นเกษตร ไม่พบคดีดาวรุ่งวิจัยเกษตรปลอมข้อมูลที่โด่งดังเทียบเท่ามาแทน\n- **A18** — ตัดจุดเด่นที่สุดของคดีโภปาล (\"หนีนอกประเทศ\") ออกแล้ว เหลือแค่โครงกว้างๆ ไม่ชี้คดีเดียว\n\n**ยังไม่ผ่าน (3/7) — ย้ายลายนิ้วมือไปชนคดีจริง \"อื่น\" แทน:**\n1. **A7** — เปลี่ยนจาก \"ปล่อยสารพิษ\" (ซาริน/โอมชินริเกียว) เป็น \"วางเพลิงเผาสถานที่ประชุมเพื่อเร่งคำทำนายวันสิ้นยุค\" ซึ่งตรงกับ **คดี Order of the Solar Temple (สวิส/แคนาดา 1 …"
       }
     },
     {
