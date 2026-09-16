@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:07:01.916Z",
+  "updatedAt": "2026-09-16T18:08:37.610Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae writes boss inspector lines",
+      "status": "working",
+      "task": "Rae de-fingerprints 7 cases",
       "report": {
         "when": "01:00",
         "title": "Rae writes boss inspector lines",
