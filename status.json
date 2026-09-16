@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T16:53:35.668Z",
+  "updatedAt": "2026-09-16T16:55:12.181Z",
   "agents": [
     {
       "id": "claudy",
@@ -281,9 +281,9 @@
       "status": "done",
       "task": "Token-saving work modes and Codex relay",
       "report": {
-        "when": "14:42",
-        "title": "เจอ quality gate + DoD gate ไม่มีผลบังคับมา 6 สัปดาห์",
-        "body": "hook ตัวแรกของ block ทำงาน ตัวที่ 2/3 ไม่ทำงาน — .gate-state.json ค้าง 29 ก.ค. และ .skill-state.json ไม่เคยเกิด ลอจิกไม่ผิด ปัญหาอยู่ที่การถูกเรียก · ไม่มี regression test เลย · routing ไม่ควรเปลี่ยนเป็น dynamic · 16 agent พอแล้ว"
+        "when": "23:55",
+        "title": "Token-saving work modes and Codex relay",
+        "body": "The token-saving system is in place and pushed. The mode is now `claude-only` until 2026-09-20 12:02 (Bangkok time), as Kittanate asked. Commit `42f1a183` is on `origin/main` and `git status` is clean.\n\n**Testing:** all 14 worker tests pass (the original 7 plus 7 new ones, all mocked). I also ran the worktree step with real git on a throwaway repo: it created branch `codex/test-run` and the saved diff showed both the edited file and a new one, while the main repo stayed clean on `main`. The hook passed `node --check` and a set of simulated events. Its first real `--write --run` will happen when we go back to `both`. I made no Codex model calls.\n\n**What changed:**\n1. **`work-mode.json`** holds `mode` (currently `claude-only`), `until`, `updated` and `note`. SOP-01 now has a STEP 0 telling C …"
       }
     },
     {

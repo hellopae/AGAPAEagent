@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-14T08:09:44.563129Z",
+  "updatedAt": "2026-09-16T16:55:12.181Z",
   "entries": [
+    {
+      "id": "wl-260916-dale-d452",
+      "datetime": "2026-09-16T16:55:12Z",
+      "displayDate": "16 ก.ย. 2569",
+      "displayTime": "23:55",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Token-saving work modes and Codex relay",
+      "summary": "The token-saving system is in place and pushed. The mode is now `claude-only` until 2026-09-20 12:02 (Bangkok time), as Kittanate asked. Commit `42f1a183` is on `origin/main` and `git status` is clean.\n\n**Testing:** all 14 worker tests pass (the original 7 plus 7 new ones, all mocked). I also ran th"
+    },
     {
       "id": "wl-260914-codex-setup",
       "datetime": "2026-09-14T08:09:44.563129Z",
