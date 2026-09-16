@@ -1,0 +1,6 @@
+{
+  "mode": "claude-only",
+  "until": "2026-09-20T12:02:00+07:00",
+  "updated": "2026-09-16",
+  "note": "ChatGPT weekly limit ใกล้หมด (เหลือ 1%) รีเซ็ต 20 ก.ย. 2569 12:02 น. — จนกว่าจะถึงตอนนั้น Dale/Toby เขียนโค้ด ห้ามเรียก Codex/Astra · โหมด: both = Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · claude-only = Dale/Toby เขียนเอง · codex-only = คุณเป้สั่ง Codex ตรง · สลับโดยบอก Claudy · SOP-01 STEP 0"
+}

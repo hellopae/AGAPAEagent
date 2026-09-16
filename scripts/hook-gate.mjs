@@ -48,14 +48,15 @@ const NAME = {
 };
 
 // output ของ agent เหล่านี้มี factual claims ได้ → ต้องผ่าน Reese ก่อน Chris (CLAUDE.md ข้อ 6)
-const FACTUAL = new Set(["codex", "astra", "minnie", "rae", "nick", "dale", "news", "toby", "addy"]);
+// งานโค้ด/สถาปัตยกรรม (Dale, Toby, Codex, Astra) ไม่อยู่ในนี้ — gate ของมันคือ code review (16 ก.ย. 2569)
+const FACTUAL = new Set(["minnie", "rae", "nick", "news", "addy"]);
 // งาน pure design/layout — ข้าม fact-check ได้ตาม SOP
 const VISUAL = new Set(["vera", "mind", "libby"]);
 // agent ที่ควรมีไฟล์ผลงานใน Output/<Name>/ (DoD ข้อ 1)
 const WRITES_OUTPUT = new Set(["codex", "astra", "minnie", "reese", "rae", "vera", "mind", "nick", "dale", "chris", "news", "toby", "addy"]);
 
 const MAX_BLOCKS = 3;     // กันลูป: block ได้มากสุด 3 ครั้งต่อ session
-const MAX_QA_ROUNDS = 3;  // SOP-01: แก้เกิน 3 รอบยังไม่ผ่าน = หยุด รายงาน Kittanate
+const MAX_QA_ROUNDS = 2;  // SOP-01: ตรวจรอบแรก + แก้ 1 รอบ ยังไม่ผ่าน = หยุด ให้ Claudy ตัดสิน/รายงาน Kittanate
 
 /* ---------- อ่าน event ---------- */
 let ev = {}, raw = "";
@@ -179,12 +180,16 @@ if (mode === "agent-done") {
     const fail = /❌\s*FAIL|\bFAIL\b/i.test(msg);
     const pass = /✅\s*PASS|\bPASS\b/i.test(msg);
     const round = (st.qa?.round || 0) + 1;
-    st.qa = { verdict: fail && !pass ? "FAIL" : pass ? "PASS" : "UNKNOWN", at: new Date().toISOString(), round };
-    if (st.qa.verdict === "FAIL") st.waived = false; // ต้องเข้า gate ใหม่ตั้งแต่ fact-check
+    // [factual] = Chris ชี้ว่าข้อผิดเป็นเรื่องข้อเท็จจริง → รอบแก้ต้องผ่าน Reese ใหม่ ไม่งั้นส่ง Chris ตรวจเฉพาะข้อที่แก้ได้เลย
+    const factual = /\[factual\]/i.test(msg);
+    st.qa = { verdict: fail && !pass ? "FAIL" : pass ? "PASS" : "UNKNOWN", at: new Date().toISOString(), round, factual };
+    if (st.qa.verdict === "FAIL" && factual) st.waived = false;
   }
 
   // agent ที่ output มี factual claims ได้ → ตั้งธงรอ fact-check
-  if (FACTUAL.has(id)) {
+  // รอบแก้หลัง Chris FAIL ที่ไม่ได้ติด [factual] → ไม่ตั้งธงใหม่ ส่ง Chris ตรวจ delta ได้เลย
+  const fixRound = st.qa?.verdict === "FAIL" && !st.qa.factual;
+  if (FACTUAL.has(id) && !fixRound) {
     // ชื่องานมาจาก status.json ที่ hook-status.mjs เขียนไว้ตอน start
     let task = "";
     try {
@@ -234,13 +239,14 @@ if (mode === "stop") {
   if (st.qa?.verdict === "FAIL") {
     if (st.qa.round >= MAX_QA_ROUNDS) {
       notes.push(
-        `Chris ตี FAIL ครบ ${st.qa.round} รอบแล้ว — SOP-01 บอกให้หยุดวนแล้วรายงาน Kittanate ` +
-        `พร้อมสรุปข้อติดขัด อย่าวนแก้ต่อ`
+        `Chris ตี FAIL ครบ ${st.qa.round} รอบแล้ว — SOP-01: ห้ามวนแก้ต่อ ` +
+        `Claudy ตัดสินเองหรือรายงาน Kittanate พร้อมสรุปข้อติดขัด`
       );
     } else {
       blockers.push(
-        `Chris QA verdict = ❌ FAIL (รอบที่ ${st.qa.round}) — ส่ง verdict ทั้งฉบับกลับให้ agent เจ้าของงานแก้ ` +
-        `ตั้งชื่อเวอร์ชันใหม่ -v${st.qa.round + 1} แล้วเข้า gate ใหม่ตั้งแต่ fact-check`
+        `Chris QA verdict = ❌ FAIL (รอบที่ ${st.qa.round}) — ส่ง FIX LIST กลับให้เจ้าของงานแก้ (ข้อเล็ก Claudy แก้เองได้) ` +
+        `ตั้งชื่อ -v${st.qa.round + 1} แล้วให้ Chris ตรวจเฉพาะข้อที่แก้ ` +
+        (st.qa.factual ? `— ติด [factual] ต้องผ่าน Reese [Fact-check] ก่อน` : `ไม่ต้องผ่าน Reese ใหม่`)
       );
     }
   }

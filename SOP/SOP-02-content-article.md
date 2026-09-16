@@ -34,7 +34,7 @@ Minnie (idea cards) → Claudy เลือก card → Reese [Research] → Rae
 - Input: draft ของ Rae
 - Reese ทำ claim inventory → verdict รายข้อ (✅/⚠️/❌/💬) → overall PASS/FAIL
 - Output: `Output/Reese/YYYY-MM-DD-<topic>-factcheck.md`
-- ถ้า FAIL: ส่ง verdict เต็มกลับให้ Rae แก้เป็น v2 → Fact-check ใหม่ (วนจนกว่า PASS, เพดาน 3 รอบ)
+- ถ้า FAIL: ส่ง verdict เต็มกลับให้ Rae แก้เป็น v2 → Reese ตรวจซ้ำเฉพาะ claim ที่แก้ (แก้ได้ 1 รอบ ยังไม่ผ่าน → Claudy ตัดสินหรือรายงาน Kittanate — SOP-01 STEP 4)
 
 ### ขั้น 5 — Chris QA
 - Input: draft ที่ผ่าน fact-check + รายงาน fact-check

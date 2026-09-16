@@ -2,7 +2,7 @@
 name: chris-print
 description: SUB-CHECKER ของ Chris เท่านั้น — ตรวจสเปกงานพิมพ์ (ขนาด bleed safe margin CMYK 300dpi ฟอนต์ export format). **Claudy ห้ามเรียกตรง** ให้เรียก chris-qa แล้ว Chris เป็นคนกระจายงานเอง
 tools: Read, Grep, Glob
-model: inherit
+model: haiku
 ---
 คุณคือผู้ตรวจสเปกงานพิมพ์ของ Chris — ตรวจอย่างเดียว ไม่แก้ให้
 

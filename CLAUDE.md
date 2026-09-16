@@ -42,6 +42,8 @@
 | analytics / ยอดขาย / metrics | **Nick** → `@nick-analytics` |
 | build / deploy / API / repo / ระบบ | **Dale** → `@dale-devops` |
 | ทำเกม / แอป interactive / prototype ที่กดเล่นได้ | **Toby** → `@toby-gamedev` |
+| เขียนโค้ดตามใบงาน — **เฉพาะโหมด `both`** | **Codex** → Bash `python3 scripts/openai-worker.py --agent codex --write --run` → Dale รีวิว diff |
+| ตัดสินใจสถาปัตยกรรมก่อนเขียนโค้ด — **เฉพาะโหมด `both`** | **Astra** → Bash `python3 scripts/openai-worker.py --agent astra --run` |
 | ข่าวรายวัน (09:00 ทุกวัน) | **Cloud routine** → News → Chris → Rae → email |
 
 ## ORCHESTRATION RULES
@@ -59,13 +61,12 @@
    - งานอิสระที่ไม่พึ่งกัน → ปล่อย background ขนานกันได้ เร็วกว่ามาก
 4. **ถ้าไม่มี agent ที่เหมาะ** ตอบว่า "ควรสร้าง Agent ใหม่สำหรับ [X]" อย่าลงมือทำเอง
 5. **ห้ามทำงาน specialist เอง** — เขียน copy, research, design, QA ล้วนเป็นหน้าที่ของแต่ละ agent
-6. **FACT-CHECK RULE (บังคับด้วยโค้ด ไม่ใช่ความจำ)** — ทุก output จากทุก Agent ที่มี factual claims ต้องผ่าน **Reese [Fact-check]** ก่อน Chris QA เสมอ
-   - Minnie's idea cards → Reese fact-check
-   - Rae's scripts/articles → Reese fact-check
-   - Nick's analytics reports → Reese fact-check
-   - Dale's technical docs → Reese fact-check
-   - Addy's campaign plans / market claims → Reese fact-check
-   - เฉพาะ output ที่ไม่มี factual claims (เช่น pure design/layout จาก Vera/Mind/Libby) จึงข้ามขั้นนี้ได้
+6. **FACT-CHECK RULE (บังคับด้วยโค้ด ไม่ใช่ความจำ) — gate ตามความเสี่ยง** (ปรับ 16 ก.ย. 2569)
+   - งานที่เผยแพร่/ขายได้ (บทความ template listing ข่าว) → **Reese [Fact-check]** → Chris เหมือนเดิม
+     — Minnie, Rae, Nick, Addy, News
+   - โค้ด/สถาปัตยกรรม/แผนภายใน (Dale, Toby, Codex, Astra) → **ไม่ผ่าน Reese** gate คือ code review
+     โดย Dale (หรือ Codex ในโหมด `both`)
+   - pure design/layout (Vera/Mind/Libby) → Chris อย่างเดียว · Chris เรียกเฉพาะ sub-checker ที่เกี่ยว (งานเว็บไม่ต้องใช้ chris-print)
    - ⚙️ **hook `scripts/hook-gate.mjs` บังคับข้อนี้จริง** — ถ้าเรียก `chris-qa` ทั้งที่ยังมีงานค้าง fact-check
      hook จะ **deny การเรียกทันที** ข้ามไม่ได้
    - ถ้างานนั้นเป็น pure design/layout จริงๆ ให้ใส่ `[skip-factcheck]` ใน prompt ของ Chris พร้อมเหตุผล
@@ -76,6 +77,19 @@
 8. **DoD GATE (บังคับด้วยโค้ด)** — ตอนจบเทิร์น hook `Stop` จะตรวจ Definition of Done ให้อัตโนมัติ
    ถ้ายังมี fact-check ค้าง / Chris ตี ❌ FAIL แล้วยังไม่แก้ / `git status` ไม่สะอาด → **จบเทิร์นไม่ได้**
    hook จะสั่งให้ทำต่อจนครบ (บล็อกได้มากสุด 3 ครั้ง แล้วบังคับให้รายงาน Kittanate ตามจริง — ห้ามบอกว่า "เสร็จแล้ว")
+9. **โหมดทำงาน — อ่าน `work-mode.json` ก่อน route งานโค้ดทุกครั้ง** (ประหยัดโควตา รายละเอียด SOP-01 STEP 0)
+   - `both` → Codex เขียนโค้ดบน branch `codex/<run_id>` → Dale รีวิว diff แล้ว merge หรือส่ง FIX LIST (Astra ช่วยตัดสินสถาปัตยกรรมก่อนได้)
+   - `claude-only` → Dale/Toby เขียนเองเหมือนเดิม ห้ามเรียก Codex
+   - `codex-only` → คุณเป้สั่ง Codex ตรง Claude ไม่เกี่ยว
+   - คุณเป้สลับด้วยการบอก เช่น "โหมด claude-only" → แก้ `work-mode.json` · Codex run จบ `rate_limited`
+     → สลับเป็น `claude-only` เองทันทีแล้วบอกคุณเป้
+   - เรียก Codex/Astra ผ่าน Bash `scripts/openai-worker.py` ตรง (โควตา OpenAI) **ไม่ใช่** wrapper `codex-engineer`/`astra-architect` (กินโควตา Claude)
+10. **ใบงานเป็นไฟล์ ไม่ถกกัน (plan-relay)** — Claudy (โมเดลแพง) วางแผนกับตรวจรับเท่านั้น งานยาวให้โมเดลถูกกว่าทำ
+   - 1 งาน = 1 ใบงาน `Output/Claudy/briefs/YYYY-MM-DD-slug.md`: บริบท / ขอบเขต / ขั้นตอน / ข้อห้าม / เกณฑ์รับงาน
+     agent อ่านใบงาน ไม่ได้รับประวัติแชท
+   - 1 ชิ้นงาน = เจ้าของคนเดียว · ผู้ตรวจตอบคำเดียว: **PASS** หรือ **FIX LIST** เรียงเลขตามเกณฑ์รับงาน · ข้อเล็กผู้ตรวจ/Claudy แก้เอง
+   - agent ไม่โต้แย้งกัน เห็นต่างส่งให้ Claudy ตัดสิน · แก้ได้ **1 รอบ** ตรวจซ้ำเฉพาะข้อที่แก้ ยังไม่ผ่าน → Claudy ตัดสินหรือรายงานคุณเป้ ไม่วน
+11. **บอกคุณเป้ `/clear` ระหว่างงานที่ไม่เกี่ยวกัน** — ประวัติแชทเก่ากินโควตาทุกเทิร์น งานต่อเนื่องอยู่ในใบงานกับ `Output/` แล้ว
 
 ## GAPS (ยังไม่มี agent file — สร้างตาม SOP-09 เมื่อ Kittanate อนุมัติเท่านั้น)
 
@@ -150,7 +164,7 @@ When working in existing repos, default to the Current stack. For new TANAPAT we
 
 ## OpenAI workers — เพิ่มตามคำขอคุณเป้ 13 ก.ย. 2569
 
-- **Codex / codex-engineer**: ช่วย Dale และ Toby ตรวจโค้ด เสนอแพตช์ และทดสอบ
+- **Codex / codex-engineer**: ช่วย Dale และ Toby ตรวจโค้ด เสนอแพตช์ และทดสอบ · โหมด `both` เขียนโค้ดเองได้ด้วย `--write` (worktree + branch `codex/<run_id>` ไม่ merge ไม่ push)
 - **Astra / astra-architect**: วิเคราะห์สถาปัตยกรรมและทางเลือกให้ผู้คุมงาน
 - เรียกตรงผ่าน `scripts/openai-worker.py` ได้โดยไม่ใช้ Claude; descriptor ฝั่ง Claude ยังต้องใช้โควตา Claude
 - เว็บเป็น dashboard แสดงผล ไม่ใช่คิวสั่งรัน งาน CLI จบที่ `ready_for_review`; ไม่มีการอ้าง Reese/Chris PASS อัตโนมัติ

@@ -2,7 +2,7 @@
 name: chris-thai
 description: SUB-CHECKER ของ Chris เท่านั้น — ตรวจภาษาไทยเชิงลึก (สะกด ไวยากรณ์ วรรคตอน ระดับภาษา สำนวนแปล). **Claudy ห้ามเรียกตรง** ให้เรียก chris-qa แล้ว Chris เป็นคนกระจายงานเอง
 tools: Read, Grep, Glob
-model: inherit
+model: sonnet
 ---
 คุณคือผู้ตรวจภาษาไทยของ Chris — ตรวจอย่างเดียว ไม่แก้ให้
 

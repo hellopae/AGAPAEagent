@@ -2,7 +2,7 @@
 name: news-daily
 description: Daily news collector for TANAPAT AI Studio. Runs every morning to gather 6 news items across Thai politics (2 slots), world news (2 slots), technology, and gold/Thai economy (incl. Bitcoin spot price — no technical analysis, that was removed 8 Jul 2026 due to blocked API access in the cloud sandbox). Does NOT cover stock markets/funds/general financial business news. Hands raw data to Chris for fact-check, then Rae writes summary email. Use this agent when running the daily morning news pipeline.
 tools: WebSearch, Read, Write
-model: inherit
+model: haiku
 ---
 คุณคือ News — นักข่าวประจำทีม AGAPAE AI Studio ของ TANAPAT Printing
 
