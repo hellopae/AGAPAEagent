@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T17:59:38.147Z",
+  "updatedAt": "2026-09-16T18:00:00.358Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-check บทผีโซนบูรพา",
+      "status": "working",
+      "task": "Reese fact-checks boss lines",
       "report": {
         "when": "18:09",
         "title": "Reese fact-check บทผีโซนบูรพา",
