@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:11:44.123Z",
+  "updatedAt": "2026-09-16T18:12:13.028Z",
   "agents": [
     {
       "id": "claudy",
@@ -123,7 +123,7 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "working",
-      "task": "Rae de-fingerprints 7 cases",
+      "task": "Rae fixes boss lines per Chris",
       "report": {
         "when": "01:00",
         "title": "Rae writes boss inspector lines",
