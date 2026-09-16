@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:09:49.931Z",
+  "updatedAt": "2026-09-16T18:11:44.123Z",
   "agents": [
     {
       "id": "claudy",
@@ -203,9 +203,9 @@
       "status": "done",
       "task": "ตรวจวัฒนธรรม/ศาสนาบทบอสอเวจี",
       "report": {
-        "when": "01:09",
+        "when": "01:11",
         "title": "ตรวจวัฒนธรรม/ศาสนาบทบอสอเวจี",
-        "body": "chris-culture has reported back (warnings only, no blockers). Still waiting on chris-thai before I finalize the verdict."
+        "body": "# QA — บทพูดบอสผู้ตรวจการ (AVEGEE, โซน 1–4)\n\n**ตรวจ:** `Output/Rae/2026-09-17-avegee-boss-inspectors.md`\n**ใบงาน:** `Output/Claudy/briefs/2026-09-17-avegee-boss-inspectors.md`\n**Fact-check:** `Output/Reese/2026-09-17-factcheck-avegee-boss-inspectors.md` (PASS แล้ว)\n**ขอบเขตรอบนี้:** ภาษาไทย + ความเหมาะสมวัฒนธรรม/ศาสนา — ไม่ตรวจ print spec (ยังไม่ลงเกม)\n**หมายเหตุเครื่องมือ:** เซสชันนี้ของฉันไม่มี Write tool จึงเขียนไฟล์ `Output/Chris/2026-09-17-qa-avegee-boss-inspectors.md` เองไม่ได้ — ต้องให้ Claudy (หรือ agent ที่มี Write) บันทึกเนื้อหาด้านล่างนี้ลงไฟล์นั้นให้ครบ\n\n---\n\n## Verdict: ❌ FAIL\n\nไม่มีแท็ก `[factual]` — blocker ทั้งหมดเป็นเรื่องโทนภาษา/ทะเบียนคำ ไม่ใช่ข้อเท็จจริง งานผ่าน Reese fact-check มาแล้ว รอบแก้นี้ **Rae แก้แล้วส่งกลับ Chris ได้ตรง ไม่ต้องผ่าน Reese ใหม่**\n\n---\n\n## Blocker …"
       }
     },
     {
