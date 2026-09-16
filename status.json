@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:26:08.505Z",
+  "updatedAt": "2026-09-16T18:26:18.429Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese re-checks 7 revised cases",
+      "status": "working",
+      "task": "Reese final check A7 A16 A20",
       "report": {
         "when": "01:20",
         "title": "Reese re-checks 7 revised cases",
