@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T16:55:12.181Z",
+  "updatedAt": "2026-09-16T17:28:00.805Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "idle",
-      "task": "Toby งาน UI อเวจี 4 ข้อ",
+      "status": "done",
+      "task": "Toby reviews AVEGEE updates",
       "report": {
-        "when": "18:09",
-        "title": "Toby แก้ตัวเลขงบรูป CONCEPT §18.3",
-        "body": "เสร็จแล้ว ครับ — วัดใหม่เอง รันเกมจริงยืนยัน แก้ 4 จุดใน `CONCEPT.md` แล้ว push\n\n## ตัวเลขใหม่ (วัดวันนี้ 12 ก.ย. ไม่ได้ก๊อปจากรายงานเดิม)\n\n**(ก) ที่ผู้เล่นโหลดจริงต่อเซสชัน** — Chrome headless + CDP นับ `encodedDataLength` ของทุก request รูป\n\n| เซสชัน | โหลด | รวม |\n|---|---|---|\n| โซนสุวรรณภูมิ (`th`) | 91 ไฟล์ราก | **15.74 MB** |\n| โซนบูรพา (`asia`) | 91 ราก + 33 `img/Asia/` | **22.13 MB** |\n| โซนบูรพา + เปิดห้องสถานีครบ | + `BG-*-asia.webp` 9 ใบ | **23.22 MB** |\n| โซนปัจฉิม (`west`) | 91 ราก + 4 `img/West/` | **16.58 MB** |\n\n**(ข) คลังที่ส่งขึ้นเว็บ (บนดิสก์)** — `img/` ราก 91 ไฟล์ 15.72 MB · `img/Asia/` 42 ไฟล์ 7.47 MB · `img/West/` 4 ไฟล์ 0.83 MB · **รวม 137 ไฟล์ 24.03 MB** (เฉลี่ย 0.175 MB/ไฟล์ ตรงกับที่ Reese คำนวณไว้เป๊ะ)\n\n**(ค) นอกงบ** — `img/raw/` 149 ไฟล์ **105.0 MB** (อยู่ใน g …"
+        "when": "00:28",
+        "title": "Toby reviews AVEGEE updates",
+        "body": "Pushed successfully. `status.json` remains modified locally (pre-existing, not authored by me) — it's owned by the automated status hook, not part of this task's deliverable.\n\n## สรุป\n\nตรวจ repo `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` แบบอ่านอย่างเดียว (ไม่แก้โค้ด ไม่ commit ใน AVEGEE — ยืนยันแล้วว่า `git status` ของ AVEGEE เหมือนก่อนเริ่มงานทุกประการ) เปิดเกมจริงด้วย Chrome headless ผ่าน DevTools Protocol คลิกทดสอบจริงที่ 390×844 และ 360×744\n\n**บั๊ก/จุดเสี่ยงระดับกลาง (1 ข้อ):** commit `7940df4` เปลี่ยนให้แพ้ฉากสู้ \"พ่อมาตรวจ\" (เกิดจากตัดสินคดีแย่ติดกัน 3 ครั้ง) กลายเป็น **Game Over เต็มรูปแบบ** ที่บังคับรีสตาร์ตทั้งโซน (หรือทั้งเกมถ้าอยู่โซน 1) จากเดิมที่แค่ลด HP แล้วเล่นต่อได้ — เรื่องนี้ไม่ถูกพูดถึงใน commit message และ CONCEPT.md §22.5 ก็ไม่ตรงกับโค้ดจริง (`src/game.js:1702-1 …"
       }
     },
     {
