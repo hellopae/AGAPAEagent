@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:20:06.864Z",
+  "updatedAt": "2026-09-16T18:21:03.523Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae fixes boss lines per Chris",
+      "status": "working",
+      "task": "Rae rewrites A7 A16 A20",
       "report": {
         "when": "01:16",
         "title": "Rae fixes boss lines per Chris",
