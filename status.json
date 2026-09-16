@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T17:28:00.805Z",
+  "updatedAt": "2026-09-16T17:54:04.294Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae เขียนบทพูดผีโซนบูรพา",
+      "status": "working",
+      "task": "Rae writes zone 2 claims",
       "report": {
         "when": "18:17",
         "title": "Rae เขียนบทพูดผีโซนบูรพา",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby reviews AVEGEE updates",
+      "status": "working",
+      "task": "Toby fixes AVEGEE batch",
       "report": {
         "when": "00:28",
         "title": "Toby reviews AVEGEE updates",
