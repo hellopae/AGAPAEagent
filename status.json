@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:03:32.293Z",
+  "updatedAt": "2026-09-16T18:05:16.884Z",
   "agents": [
     {
       "id": "claudy",
@@ -72,9 +72,9 @@
       "status": "done",
       "task": "Reese fact-checks zone 2 claims",
       "report": {
-        "when": "01:03",
+        "when": "01:05",
         "title": "Reese fact-checks zone 2 claims",
-        "body": "Fact-check complete. Verdict: **PASS**.\n\nSummary of checks against `Output/Rae/2026-09-17-avegee-boss-inspectors.md`:\n\n1. **Real names/places/events/orgs** — none leaked. All characters (ยมราชพี่ใหญ่, แม่ทัพตรวนบูรพา, อัศวินบัญชีปัจฉิม, จอมข้อมูลไซเบอร์) are fictional. Zone names สุวรรณภูมิ/บูรพา/ปัจฉิม are generic directional/mythological terms already established in the game's own `ZONES[]` data (cross-checked against `AVEGEE/src/data.js` lines ~1101-1119 — bossName values and \"zone 4 not yet in ZONES[]\" claim both verified accurate against the actual code).\n\n2. **Buddhist/Thai belief terms** — ยมราช/พญายม used correctly (matches real Thai belief: king of hell, judge of souls). One advisory note: \"ยมบาท\" is not a standard Buddhist/dictionary term (real terms are ยมทูต and ยมบาล/นิรยบาล); …"
+        "body": "Fact-check complete. Verdict: **FIX LIST** (not PASS).\n\nFile written: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-asia-claims.md`\n\nSummary of findings:\n\n1. **Real names/places/years/orgs/numbers leaking** — ✅ PASS. Read all 80 claim lines (A1–A20); none contain literal real names, places, dates, companies, or specific real amounts.\n\n2. **Testimonies close enough to a real case/person to be identifiable** — ❌ FIX LIST, and broader than Rae's original worry (only A11). Confirmed via search:\n   - **High risk (plot matches one real case almost 1:1):** A11 (Sogen Kato, Japan 2010, hidden body for pension — [ABC News](https://www.abc.net.au/news/2010-08-27/mummified-mans-relatives-arrested-for-pension-fraud/960708)), A7 (Aum Shinrikyo sarin atta …"
       }
     },
     {
