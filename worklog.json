@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-16T18:00:22.873Z",
+  "updatedAt": "2026-09-16T18:03:32.293Z",
   "entries": [
+    {
+      "id": "wl-260916-reese-szt1",
+      "datetime": "2026-09-16T18:03:32Z",
+      "displayDate": "17 ก.ย. 2569",
+      "displayTime": "01:03",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese fact-checks zone 2 claims",
+      "summary": "Fact-check complete. Verdict: **PASS**.\n\nSummary of checks against `Output/Rae/2026-09-17-avegee-boss-inspectors.md`:\n\n1. **Real names/places/events/orgs** — none leaked. All characters (ยมราชพี่ใหญ่, แม่ทัพตรวนบูรพา, อัศวินบัญชีปัจฉิม, จอมข้อมูลไซเบอร์) are fictional. Zone names สุวรรณภูมิ/บูรพา/ปั"
+    },
     {
       "id": "wl-260916-rae-oxnd",
       "datetime": "2026-09-16T18:00:22Z",

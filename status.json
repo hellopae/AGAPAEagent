@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:00:36.130Z",
+  "updatedAt": "2026-09-16T18:03:32.293Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese fact-checks zone 2 claims",
       "report": {
-        "when": "18:09",
-        "title": "Reese fact-check บทผีโซนบูรพา",
-        "body": "## ❌ VERDICT: FAIL — 2 blockers (1 อยู่ในโค้ดที่รันจริง)\n\nรายงานเต็ม: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-12-avegee-mob-lines-factcheck.md`\n\n### Blocker\n\n**B1 — บทนุเคะคุบิผิดตำนาน (ต้องแก้โค้ดทันที)**\n`src/data.js` บรรทัด 558 `\"หัวมาก่อน ตัวตามมาทีหลัง\"` — ตามตำนาน **ร่างขยับไม่ได้เลย**ระหว่างหัวออกไป และจุดอ่อนของมันคือ 「本体を移動すると元に戻らなくなることが弱点」 (ถ้าร่างถูกย้าย หัวกลับเข้าที่ไม่ได้ = ตาย) ja.wikipedia ろくろ首 · คำแก้ที่รักษามุก \"หัวมาเข้าคิวก่อน\" ไว้ครบและตรงตำนาน: **`\"หัวมาเข้าคิวก่อน ตัวนอนรออยู่บ้าน\"`** (31 ตัวอักษร)\n\n**B2 — ตัวเลขความยาวของ Rae ผิด และข้อสรุปพลิก**\nRae ว่า \"ของใหม่ยาวเท่ากันหรือสั้นกว่าของเดิม\" — นับจริงแล้ว **บทกากิ 33 ตัวอักษร เป็นบรรทัดที่ยาวที่สุดในลิสต์ทั้งหมด** (กระหังของเดิม 30 ไม่ใช่ 32 · ตานี 28 ไม่ใช่ 30) ต้องเปิดดูกล่องควา …"
+        "when": "01:03",
+        "title": "Reese fact-checks zone 2 claims",
+        "body": "Fact-check complete. Verdict: **PASS**.\n\nSummary of checks against `Output/Rae/2026-09-17-avegee-boss-inspectors.md`:\n\n1. **Real names/places/events/orgs** — none leaked. All characters (ยมราชพี่ใหญ่, แม่ทัพตรวนบูรพา, อัศวินบัญชีปัจฉิม, จอมข้อมูลไซเบอร์) are fictional. Zone names สุวรรณภูมิ/บูรพา/ปัจฉิม are generic directional/mythological terms already established in the game's own `ZONES[]` data (cross-checked against `AVEGEE/src/data.js` lines ~1101-1119 — bossName values and \"zone 4 not yet in ZONES[]\" claim both verified accurate against the actual code).\n\n2. **Buddhist/Thai belief terms** — ยมราช/พญายม used correctly (matches real Thai belief: king of hell, judge of souls). One advisory note: \"ยมบาท\" is not a standard Buddhist/dictionary term (real terms are ยมทูต and ยมบาล/นิรยบาล); …"
       }
     },
     {
