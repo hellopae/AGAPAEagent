@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:00:22.873Z",
+  "updatedAt": "2026-09-16T18:00:36.130Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,7 +70,7 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "working",
-      "task": "Reese fact-checks boss lines",
+      "task": "Reese fact-checks zone 2 claims",
       "report": {
         "when": "18:09",
         "title": "Reese fact-check บทผีโซนบูรพา",
