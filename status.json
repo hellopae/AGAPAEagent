@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:56:04.111Z",
+  "updatedAt": "2026-09-17T10:56:13.894Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese zone 1 real-case research",
+      "status": "working",
+      "task": "Reese verify Asia rewrite",
       "report": {
         "when": "17:50",
         "title": "Reese zone 1 real-case research",
