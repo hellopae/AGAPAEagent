@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T03:13:28.396Z",
+  "updatedAt": "2026-09-17T03:15:22.062Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby fixes AVEGEE batch",
+      "task": "AVEGEE art batch zone 2-4",
       "report": {
         "when": "00:28",
         "title": "Toby reviews AVEGEE updates",

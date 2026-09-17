@@ -7,6 +7,13 @@ description: ส่งผลงานเข้า Chris QA เป็น gate ส
 
 Gate สุดท้ายก่อนถึงมือ Kittanate/ลูกค้า — Chris ตรวจตาม `SOP/SOP-08-qa-standards.md`
 
+## STEP 0 — เช็ค `review-mode.json` ก่อนเสมอ (17 ก.ย. 2569)
+- `"mode": "build"` → **หยุด อย่า delegate Chris** (hook `scripts/hook-gate.mjs` จะ deny ทิ้งอยู่ดี = เสีย token ฟรี)
+  ระหว่างสร้างงานคุณเป้สั่งให้ใช้ผู้ตรวจคนเดียว (Reese) รอบเดียว · Chris ตรวจรวดเดียวตอนจะขาย/เผยแพร่
+  บอกคุณเป้ว่า "งานนี้พร้อมแล้ว รอตรวจตอน ship" แล้วจบ
+- `"mode": "ship"` → ทำตามขั้นตอนด้านล่างตามปกติ
+- คุณเป้เป็นคนสั่งสลับโหมด (เช่น "โหมดตรวจ ship" / "เตรียมขาย") — Claudy แก้ไฟล์ให้ ไม่สลับเอง
+
 ## Precondition (เช็คก่อน delegate)
 - งานมี factual claims → ต้องมีรายงาน fact-check ✅ PASS แนบ ถ้าไม่มีให้รัน `fact-check-gate` ก่อน
 - ไฟล์ผลงานอยู่ใน `Output/<Agent>/` เรียบร้อย
