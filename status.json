@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T11:01:24.163Z",
+  "updatedAt": "2026-09-17T11:02:48.997Z",
   "agents": [
     {
       "id": "claudy",
@@ -125,9 +125,9 @@
       "status": "done",
       "task": "Rae rewrite Asia cases",
       "report": {
-        "when": "17:56",
+        "when": "18:02",
         "title": "Rae rewrite Asia cases",
-        "body": "Report delivered to Claudy via SubagentHandback."
+        "body": "Report delivered to Claudy."
       }
     },
     {
