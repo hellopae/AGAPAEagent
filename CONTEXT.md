@@ -58,6 +58,11 @@ Founder / developer ที่ TANAPAT Printing (ธนะพัฒน์พร�
   เขียน payload ทั้งก้อนลง field `dataJson` (string) และเขียน `checkedAt` ทุกรอบแม้ไม่มีอะไรเปลี่ยน
 - **Firestore ตัวนี้อ่านด้วย API key ที่ฝังในหน้าเว็บสาธารณะ** — อะไรที่เขียนลงไปถือว่าเปิดเผยหมด
   routine `Email Check` จึงเขียนได้แค่ชื่อผู้ส่ง + เวลา ห้ามเขียนหัวข้อหรือเนื้อความ
+- **session ที่เปิดจาก `AGAPAE Agent/` มองไม่เห็นโฟลเดอร์พี่น้อง** (17 ก.ย. 2569) — เช่น repo เกม `Claude/AVEGEE`
+  Bash/Read ตอบ `Permission denied ... code: 13` / `EPERM` ทุกทาง แม้ตั้ง `dangerouslyDisableSandbox`
+  agent แก้เองไม่ได้ · ทางออก: คุณเป้พิมพ์ `/add-dir "/Users/agapae/Documents/Work PAE/Claude/AVEGEE"`
+  ใน session นี้ก่อน แล้วค่อยส่งใบงานให้ Toby (หรือเปิด session ใหม่ที่โฟลเดอร์ AVEGEE — แต่แบบนั้น hook
+  worklog/status จะไม่ทำงาน ตามข้อถัดไป) · **อย่าส่ง agent ไปลองซ้ำก่อนได้สิทธิ์ — เสีย token ฟรี**
 - **เปิด session จากโฟลเดอร์ `AGAPAE Agent/` เสมอ** — ถ้าเปิดจากที่อื่น `.claude/agents/` ไม่ถูกโหลด
   hook เลยไม่ทำงานเงียบ ๆ ทั้ง sprint (status/worklog/Firestore/auto-push ไม่ขยับเลย)
 - **`ls -a` / `ls -1` แบบไม่มี `-l` ทำให้คำสั่งค้างจนหมดเวลา** (ls ถูก alias เป็น eza) ใช้ `ls -la` หรือ `find` แทน

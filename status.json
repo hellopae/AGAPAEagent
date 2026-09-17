@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T03:16:42.866Z",
+  "updatedAt": "2026-09-17T03:17:17.140Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE art batch zone 2-4",
+      "status": "idle",
+      "task": null,
       "report": {
         "when": "10:16",
         "title": "AVEGEE art batch zone 2-4",
