@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:38:21.316Z",
+  "updatedAt": "2026-09-17T15:39:33.817Z",
   "agents": [
     {
       "id": "claudy",
@@ -125,9 +125,9 @@
       "status": "done",
       "task": "Rae expand interrogation lines",
       "report": {
-        "when": "22:38",
+        "when": "22:39",
         "title": "Rae expand interrogation lines",
-        "body": "Done — all 4 items from Reese's FIX LIST have been applied to `Output/Rae/2026-09-17-avegee-zone1-new-cases.md` and the report has been handed back to the coordinator."
+        "body": "Report delivered to caller via SubagentHandback."
       }
     },
     {
