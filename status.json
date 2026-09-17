@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:46:42.532Z",
+  "updatedAt": "2026-09-17T10:50:26.110Z",
   "agents": [
     {
       "id": "claudy",
@@ -72,9 +72,9 @@
       "status": "done",
       "task": "Reese zone 1 real-case research",
       "report": {
-        "when": "17:46",
+        "when": "17:50",
         "title": "Reese zone 1 real-case research",
-        "body": "Report delivered to Claudy via SubagentHandback."
+        "body": "Report delivered to caller via SubagentHandback."
       }
     },
     {
