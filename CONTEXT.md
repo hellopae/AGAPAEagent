@@ -60,9 +60,12 @@ Founder / developer ที่ TANAPAT Printing (ธนะพัฒน์พร�
   routine `Email Check` จึงเขียนได้แค่ชื่อผู้ส่ง + เวลา ห้ามเขียนหัวข้อหรือเนื้อความ
 - **session ที่เปิดจาก `AGAPAE Agent/` มองไม่เห็นโฟลเดอร์พี่น้อง** (17 ก.ย. 2569) — เช่น repo เกม `Claude/AVEGEE`
   Bash/Read ตอบ `Permission denied ... code: 13` / `EPERM` ทุกทาง แม้ตั้ง `dangerouslyDisableSandbox`
-  agent แก้เองไม่ได้ · ทางออก: คุณเป้พิมพ์ `/add-dir "/Users/agapae/Documents/Work PAE/Claude/AVEGEE"`
-  ใน session นี้ก่อน แล้วค่อยส่งใบงานให้ Toby (หรือเปิด session ใหม่ที่โฟลเดอร์ AVEGEE — แต่แบบนั้น hook
-  worklog/status จะไม่ทำงาน ตามข้อถัดไป) · **อย่าส่ง agent ไปลองซ้ำก่อนได้สิทธิ์ — เสีย token ฟรี**
+  **ไม่ใช่ sandbox ของ Claude และ `/add-dir` ไม่ช่วย** (ลองแล้ว 17 ก.ย. 2569) — เป็น macOS TCC:
+  โฟลเดอร์ `AGAPAE Agent` มี xattr `com.apple.macl` (Terminal เคยได้รับสิทธิ์) แต่ `AVEGEE` ไม่มี
+  อาการเฉพาะตัว: `stat`/`ls -ld` ตัวโฟลเดอร์ผ่าน แต่ **อ่านรายชื่อไฟล์ข้างใน = Operation not permitted**
+  แม้ปิด sandbox แล้วก็ตาม · ทางออก: **System Settings → Privacy & Security → Full Disk Access →
+  เปิดให้ Terminal → ปิด-เปิด Terminal ใหม่** แล้วเริ่ม session ใหม่จาก `AGAPAE Agent`
+  · **อย่าส่ง agent ไปลองซ้ำก่อนได้สิทธิ์ — เสีย token ฟรี (เคยเสียไป ~35k)**
 - **เปิด session จากโฟลเดอร์ `AGAPAE Agent/` เสมอ** — ถ้าเปิดจากที่อื่น `.claude/agents/` ไม่ถูกโหลด
   hook เลยไม่ทำงานเงียบ ๆ ทั้ง sprint (status/worklog/Firestore/auto-push ไม่ขยับเลย)
 - **`ls -a` / `ls -1` แบบไม่มี `-l` ทำให้คำสั่งค้างจนหมดเวลา** (ls ถูก alias เป็น eza) ใช้ `ls -la` หรือ `find` แทน
