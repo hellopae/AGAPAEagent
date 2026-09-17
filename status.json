@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:50:26.110Z",
+  "updatedAt": "2026-09-17T10:56:04.111Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,12 +122,12 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae rewrite Asia cases",
       "report": {
-        "when": "01:26",
-        "title": "Rae rewrites A7 A16 A20",
-        "body": "เขียนใหม่เสร็จแล้ว เฉพาะ A7, A16, A20 ตามกลไกที่ Claudy กำหนดท้ายใบงาน (ไม่เพิ่มกลไกนอกนั้น เช็คคำห้ามครบทั้ง 3 สำนวนแล้ว) แก่นศีลธรรมและน้ำหนักกรรมเดิมคงอยู่ ไฟล์เกมไม่ได้แตะ\n\nไฟล์ที่แก้:\n- `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-09-17-avegee-asia-defingerprint.md` (ตาราง A7/A16/A20 อัปเดตเป็นรอบ 2 + สรุปตรวจ + ส่งต่อ)\n- `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Rae/2026-09-17-avegee-asia-claims.md` (claims 4 ข้อของ A7, A16, A20)\n\nสรุปกลไกใหม่:\n- **A7**: ชวนสาวกขายบ้าน/ที่ดินมอบทรัพย์ให้คณะรอวันสิ้นยุค → คำทำนายไม่จริงก็หนีพร้อมทรัพย์ ทิ้งสาวกสิ้นเนื้อประดาตัว\n- **A16**: รับเงินแลกพาเข้าพบผู้มีอำนาจ + ฝากพวกพ้องเข้ารับตำแหน่งสำคัญ\n- **A20**: เอาเงินบริษัทสร้างคฤหาสน์/งานเลี้ยงตระกูล แล้วให้ลูกน้องรับผิดแทนเมื่อถูกตรวจพบ\n\nสำนวนอื่นไม่ได้แตะ  …"
+        "when": "17:56",
+        "title": "Rae rewrite Asia cases",
+        "body": "Report delivered to Claudy via SubagentHandback."
       }
     },
     {
