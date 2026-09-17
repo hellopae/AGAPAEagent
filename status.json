@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:41:06.157Z",
+  "updatedAt": "2026-09-17T16:41:22.086Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese check interrogation lines",
       "report": {
-        "when": "22:36",
-        "title": "Reese fact-check zone 1 cases",
-        "body": "Fact-check เสร็จแล้ว — ผล **FIX LIST** ส่งกลับให้ Claudy ผ่าน SubagentHandback เรียบร้อย พร้อมไฟล์เต็มที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-zone1-new-cases.md`"
+        "when": "23:41",
+        "title": "Reese check interrogation lines",
+        "body": "Fact-check เสร็จแล้ว ผลคือ **FIX LIST** (ไม่ PASS) ส่งรายงานเต็มกลับ Claudy ผ่าน SubagentHandback แล้ว\n\nไฟล์บันทึกผล: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-interrogation-lines.md`\n\nสรุปสั้น: จำนวนบรรทัด/token/ไวยากรณ์ผ่านหมด แต่พบ 6 จุดต้องแก้ — 2 จุดเป็นโครงประโยคซ้ำข้ามบาป (เสี่ยงให้ผู้เล่นจำแพทเทิร์นได้โดยไม่อ่านสำนวน) และ 4 จุดเป็นบรรทัด DENY ที่ผูกกับบริบทเฉพาะ (นายสั่ง/โรงงาน/ขายยา/มีคนตาย) ซึ่งไม่ตรงกับคดีจริงทุกคดีในบาปนั้นตาม `DEEDS` array ในไฟล์เกม"
       }
     },
     {
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby zone picker + boss images",
+      "status": "working",
+      "task": "Toby UI fixes + case integration",
       "report": {
         "when": "18:22",
         "title": "Toby zone picker + boss images",
