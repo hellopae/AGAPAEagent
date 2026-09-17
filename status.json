@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:33:03.359Z",
+  "updatedAt": "2026-09-17T10:39:04.769Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese final check A7 A16 A20",
+      "status": "working",
+      "task": "Reese zone 1 real-case research",
       "report": {
         "when": "01:31",
         "title": "Reese final check A7 A16 A20",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby AVEGEE art batch zone 2-4",
+      "status": "working",
+      "task": "Toby zone picker + boss images",
       "report": {
         "when": "14:50",
         "title": "Toby AVEGEE art batch zone 2-4",
