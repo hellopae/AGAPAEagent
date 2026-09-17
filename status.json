@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T16:50:16.777Z",
+  "updatedAt": "2026-09-17T16:50:21.193Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese check interrogation lines",
+      "status": "working",
+      "task": "Reese check dad hologram lines",
       "report": {
         "when": "23:41",
         "title": "Reese check interrogation lines",
