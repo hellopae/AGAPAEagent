@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:31:38.088Z",
+  "updatedAt": "2026-09-17T15:36:16.022Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,8 +43,8 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "done",
-      "task": "Minnie แก้การ์ดโซน 3-4",
+      "status": "working",
+      "task": "Minnie zone 4 chief options",
       "report": {
         "when": "18:03",
         "title": "Minnie แก้การ์ดโซน 3-4",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese fact-check zone 1 cases",
       "report": {
-        "when": "18:01",
-        "title": "Reese verify Asia rewrite",
-        "body": "Fact-check เสร็จแล้ว ส่งรายงานกลับผ่าน SubagentHandback เรียบร้อย — สรุปคือ **FIX LIST 1 ข้อ (A9 วัคซีน)** ข้อที่เหลือทั้งหมดผ่าน รายงานเต็มอยู่ที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-asia-rewrite.md`"
+        "when": "22:36",
+        "title": "Reese fact-check zone 1 cases",
+        "body": "Fact-check เสร็จแล้ว — ผล **FIX LIST** ส่งกลับให้ Claudy ผ่าน SubagentHandback เรียบร้อย พร้อมไฟล์เต็มที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-zone1-new-cases.md`"
       }
     },
     {
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind: finish zone 2 prompts",
+      "status": "working",
+      "task": "Mind zone 4 asset prompts",
       "report": {
         "when": "08:43",
         "title": "Mind: finish zone 2 prompts",
