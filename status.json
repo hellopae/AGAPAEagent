@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T07:50:42.786Z",
+  "updatedAt": "2026-09-17T10:33:03.359Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale code review AVEGEE batch",
       "report": {
-        "when": "23:55",
-        "title": "Token-saving work modes and Codex relay",
-        "body": "The token-saving system is in place and pushed. The mode is now `claude-only` until 2026-09-20 12:02 (Bangkok time), as Kittanate asked. Commit `42f1a183` is on `origin/main` and `git status` is clean.\n\n**Testing:** all 14 worker tests pass (the original 7 plus 7 new ones, all mocked). I also ran the worktree step with real git on a throwaway repo: it created branch `codex/test-run` and the saved diff showed both the edited file and a new one, while the main repo stayed clean on `main`. The hook passed `node --check` and a set of simulated events. Its first real `--write --run` will happen when we go back to `both`. I made no Codex model calls.\n\n**What changed:**\n1. **`work-mode.json`** holds `mode` (currently `claude-only`), `until`, `updated` and `note`. SOP-01 now has a STEP 0 telling C …"
+        "when": "17:33",
+        "title": "Dale code review AVEGEE batch",
+        "body": "Task complete — handed back to caller with PASS verdict, fix details, and file paths."
       }
     },
     {
