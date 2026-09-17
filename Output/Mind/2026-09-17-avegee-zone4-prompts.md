@@ -1,5 +1,10 @@
 # AVEGEE โซน 4 "นรกเครือข่าย" (CyberHell) — prompt ภาพที่ยังขาด
 
+> **✅ Claudy ตรวจไฟล์จริงแล้ว (17 ก.ย. 2569) — ใช้ข้อนี้แทนหมายเหตุ ⚠️ ด้านล่าง**
+> 1. **#12 `st-sala-cyberhell` = หอทะเบียนกรรม** (คีย์ `sala` ใน `src/data.js`) — ใบงานของ Claudy เขียนผิดว่าศาลาน้ำชา → **ใช้ prompt สำรอง (หอทะเบียนกรรม)** ไม่ใช่ prompt หลัก
+> 2. **#13 รูปหน้าบอสโซน 4** — โซน 3 มี `Boss Zone3-west-profile.png` จริง → ทำด้วย และตั้งชื่อ **`Boss Zone4-profile`** (วางใน `img/raw/CyberHell/` แล้ว pipeline จะต่อ `-cyberhell` ให้เอง) แทนชื่อ `hero-boss-cyberhell-profile`
+
+
 **จาก:** Mind · **ใบงาน:** `Output/Claudy/briefs/2026-09-17-avegee-zone4-asset-prompts.md`
 **ปลายทาง:** คุณเป้เอา prompt ไป gen เองด้วย Gemini แล้ววางไฟล์ลง `img/raw/CyberHell/` (หรือวางตรง `img/CyberHell/` แล้วให้ `scripts/prep-art.py` ย้ายให้เอง — ดู §22.3 ของ `CONCEPT.md`) จากนั้นรัน `python3 scripts/prep-art.py`
 
