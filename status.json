@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:39:33.817Z",
+  "updatedAt": "2026-09-17T15:39:52.613Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-check zone 1 cases",
+      "status": "working",
+      "task": "Reese check interrogation lines",
       "report": {
         "when": "22:36",
         "title": "Reese fact-check zone 1 cases",
