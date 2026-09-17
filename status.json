@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:36:16.022Z",
+  "updatedAt": "2026-09-17T15:38:17.397Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,12 +122,12 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae expand interrogation lines",
       "report": {
-        "when": "18:02",
-        "title": "Rae rewrite Asia cases",
-        "body": "Report delivered to Claudy."
+        "when": "22:38",
+        "title": "Rae expand interrogation lines",
+        "body": "Done — all 4 items from Reese's FIX LIST have been applied to `Output/Rae/2026-09-17-avegee-zone1-new-cases.md` and the report has been handed back to the coordinator."
       }
     },
     {

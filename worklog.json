@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-17T15:36:16.022Z",
+  "updatedAt": "2026-09-17T15:38:17.397Z",
   "entries": [
+    {
+      "id": "wl-260917-rae-220m",
+      "datetime": "2026-09-17T15:38:17Z",
+      "displayDate": "17 ก.ย. 2569",
+      "displayTime": "22:38",
+      "agent": "rae",
+      "agentName": "Rae",
+      "agentImg": "avatars/Rae.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "Rae expand interrogation lines",
+      "summary": "Done — all 4 items from Reese's FIX LIST have been applied to `Output/Rae/2026-09-17-avegee-zone1-new-cases.md` and the report has been handed back to the coordinator."
+    },
     {
       "id": "wl-260917-reese-zgd3",
       "datetime": "2026-09-17T15:36:16Z",
