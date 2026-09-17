@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T18:31:35.646Z",
+  "updatedAt": "2026-09-17T03:13:28.396Z",
   "agents": [
     {
       "id": "claudy",
@@ -200,8 +200,8 @@
         "ทดสอบคุณภาพพิมพ์ (สี/ขนาด/ความละเอียด)",
         "เทสต์การทำงานเว็บแอป"
       ],
-      "status": "working",
-      "task": "Chris QA zone 2 claims",
+      "status": "idle",
+      "task": null,
       "report": {
         "when": "01:18",
         "title": "Chris re-QA boss lines",

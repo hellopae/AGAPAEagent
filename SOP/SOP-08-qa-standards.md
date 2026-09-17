@@ -1,5 +1,11 @@
 # SOP-08 — QA Standards: เกณฑ์ตรวจของ Chris (และ Reese Fact-check) ฉบับเต็ม
 
+> ⚠️ **โหมดตรวจงาน (17 ก.ย. 2569)** — อ่าน `review-mode.json` ที่ root ก่อนเริ่มทุกครั้ง
+> - `build` = ระหว่างสร้างงาน ใช้ **ผู้ตรวจคนเดียว (Reese) ตรวจรอบเดียว** · Chris ปิดไว้ (hook `scripts/hook-gate.mjs` deny การเรียก `chris-qa`)
+>   FIX LIST ของ Reese → แก้ 1 รอบ → Claudy ตัดสินเอง ไม่วนส่งตรวจซ้ำ
+> - `ship` = ก่อนขาย/เผยแพร่ → ใช้เกณฑ์ทั้งหมดในไฟล์นี้ตามปกติ (Reese → Chris → sub-checker)
+> เหตุผล: ตรวจซ้ำซ้อนทำให้แก้ไปแก้มา งานช้า และเปลือง token
+
 > Chris ใช้ไฟล์นี้เป็น checklist หลัก | Claudy ใช้เช็คว่า verdict ของ Chris ครบถ้วนไหม
 > หลักการ: **Opinions pass. Unverified facts don't.**
 

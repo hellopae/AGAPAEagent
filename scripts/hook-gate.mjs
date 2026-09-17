@@ -58,6 +58,18 @@ const WRITES_OUTPUT = new Set(["codex", "astra", "minnie", "reese", "rae", "vera
 const MAX_BLOCKS = 3;     // กันลูป: block ได้มากสุด 3 ครั้งต่อ session
 const MAX_QA_ROUNDS = 2;  // SOP-01: ตรวจรอบแรก + แก้ 1 รอบ ยังไม่ผ่าน = หยุด ให้ Claudy ตัดสิน/รายงาน Kittanate
 
+/* ---------- โหมดตรวจงาน (review-mode.json) — คุณเป้สั่ง 17 ก.ย. 2569 ----------
+   build = ผู้ตรวจคนเดียว (Reese) ตรวจรอบเดียว · Chris ปิดไว้ ค่อยตรวจตอนจะขาย
+   ship  = เต็มระบบ Reese → Chris (ก่อนเผยแพร่/ขาย)                              */
+function reviewMode() {
+  try { return (JSON.parse(readFileSync(join(ROOT, "review-mode.json"), "utf8")).mode || "ship").toLowerCase(); }
+  catch { return "ship"; }
+}
+const REVIEW_MODE = reviewMode();
+const BUILD_MODE = REVIEW_MODE === "build";
+// จำนวนรอบ fact-check สูงสุดต่อ session — build: ตรวจรอบเดียว, ship: ตรวจ + ตรวจซ้ำหลังแก้ 1 รอบ
+const MAX_FACTCHECK_ROUNDS = BUILD_MODE ? 1 : 2;
+
 /* ---------- อ่าน event ---------- */
 let ev = {}, raw = "";
 try { raw = readFileSync(0, "utf8"); } catch { logHook("gate", mode, null); process.exit(0); }
@@ -78,6 +90,7 @@ function blankSession() {
     qa: null,             // { verdict: "PASS"|"FAIL", at, round }
     missingOutput: [],    // ชื่อ agent ที่ยังไม่เจอไฟล์ใน Output/<Name>/
     blocks: 0,
+    factCheckRounds: 0,   // นับว่า Reese ตรวจไปกี่รอบใน session นี้ (กันวนแก้ไม่จบ)
     waived: false,        // Kittanate/Claudy ขอข้ามด้วย [skip-factcheck]
   };
 }
@@ -137,6 +150,22 @@ if (mode === "pre") {
     process.exit(0);
   }
 
+  // โหมด build: ผู้ตรวจคนเดียว — ไม่เรียก Chris ระหว่างสร้างงาน (review-mode.json)
+  if (id === "chris" && BUILD_MODE) {
+    saveState(db, st);
+    out({
+      hookSpecificOutput: {
+        hookEventName: "PreToolUse",
+        permissionDecision: "deny",
+        permissionDecisionReason:
+          `⏸ โหมดตรวจงานตอนนี้ = build (ผู้ตรวจคนเดียว) — ยังไม่เรียก Chris\n\n` +
+          `คุณเป้สั่งไว้: ระหว่างสร้างงานให้ตรวจแค่คนเดียว (Reese) รอบเดียว ` +
+          `แล้วค่อยให้ Chris ตรวจรวดเดียวตอนจะขาย/เผยแพร่ — กันแก้ไปแก้มาและเปลือง token\n\n` +
+          `ถ้างานนี้กำลังจะขาย/เผยแพร่จริง ให้แก้ \`review-mode.json\` เป็น {"mode":"ship"} ก่อน แล้วค่อยเรียก Chris`,
+      },
+    });
+  }
+
   if (id === "chris" && st.pendingFactCheck && !st.waived) {
     const p = st.pendingFactCheck;
     saveState(db, st);
@@ -173,6 +202,7 @@ if (mode === "agent-done") {
   if (id === "reese" && /VERIFIED|UNVERIFIED|INCORRECT|fact[- ]?check|แฟกต์เช็ก|ตรวจสอบข้อเท็จจริง/i.test(msg)) {
     st.pendingFactCheck = null;
     st.factCheckedAt = new Date().toISOString();
+    st.factCheckRounds = (st.factCheckRounds || 0) + 1;
   }
 
   // Chris → เก็บ verdict
@@ -189,7 +219,9 @@ if (mode === "agent-done") {
   // agent ที่ output มี factual claims ได้ → ตั้งธงรอ fact-check
   // รอบแก้หลัง Chris FAIL ที่ไม่ได้ติด [factual] → ไม่ตั้งธงใหม่ ส่ง Chris ตรวจ delta ได้เลย
   const fixRound = st.qa?.verdict === "FAIL" && !st.qa.factual;
-  if (FACTUAL.has(id) && !fixRound) {
+  // ตรวจครบรอบที่กำหนดแล้ว → ไม่ตั้งธงให้ Reese ตรวจซ้ำอีก Claudy ตัดสินเอง (กันวนแก้)
+  const roundsUsed = (st.factCheckRounds || 0) >= MAX_FACTCHECK_ROUNDS;
+  if (FACTUAL.has(id) && !fixRound && !roundsUsed) {
     // ชื่องานมาจาก status.json ที่ hook-status.mjs เขียนไว้ตอน start
     let task = "";
     try {
@@ -235,8 +267,8 @@ if (mode === "stop") {
     );
   }
 
-  // 2) Chris ตี FAIL แล้วยังไม่ได้แก้จนผ่าน
-  if (st.qa?.verdict === "FAIL") {
+  // 2) Chris ตี FAIL แล้วยังไม่ได้แก้จนผ่าน (โหมด build ไม่เรียก Chris จึงไม่ตรวจข้อนี้)
+  if (!BUILD_MODE && st.qa?.verdict === "FAIL") {
     if (st.qa.round >= MAX_QA_ROUNDS) {
       notes.push(
         `Chris ตี FAIL ครบ ${st.qa.round} รอบแล้ว — SOP-01: ห้ามวนแก้ต่อ ` +
