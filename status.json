@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:46:06.750Z",
+  "updatedAt": "2026-09-17T10:46:42.532Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae rewrites A7 A16 A20",
+      "status": "working",
+      "task": "Rae rewrite Asia cases",
       "report": {
         "when": "01:26",
         "title": "Rae rewrites A7 A16 A20",
