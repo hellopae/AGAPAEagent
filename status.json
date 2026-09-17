@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T16:50:21.193Z",
+  "updatedAt": "2026-09-17T16:53:22.768Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese check dad hologram lines",
       "report": {
-        "when": "23:41",
-        "title": "Reese check interrogation lines",
-        "body": "Fact-check เสร็จแล้ว ผลคือ **FIX LIST** (ไม่ PASS) ส่งรายงานเต็มกลับ Claudy ผ่าน SubagentHandback แล้ว\n\nไฟล์บันทึกผล: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-interrogation-lines.md`\n\nสรุปสั้น: จำนวนบรรทัด/token/ไวยากรณ์ผ่านหมด แต่พบ 6 จุดต้องแก้ — 2 จุดเป็นโครงประโยคซ้ำข้ามบาป (เสี่ยงให้ผู้เล่นจำแพทเทิร์นได้โดยไม่อ่านสำนวน) และ 4 จุดเป็นบรรทัด DENY ที่ผูกกับบริบทเฉพาะ (นายสั่ง/โรงงาน/ขายยา/มีคนตาย) ซึ่งไม่ตรงกับคดีจริงทุกคดีในบาปนั้นตาม `DEEDS` array ในไฟล์เกม"
+        "when": "23:53",
+        "title": "Reese check dad hologram lines",
+        "body": "Fact-check เสร็จแล้ว ผลคือ **FIX LIST** (บันทึกที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-zone4-dad-hologram.md`) และส่งรายงานผ่าน SubagentHandback ให้ Claudy เรียบร้อย — ประเด็นหลักคือความยาวบทพูดของ `DAD_CYBER` ยาวกว่าต้นฉบับ `DAD` มาก (35%-130% แทบทุกช่อง) ขัดกับข้อกำหนด \"สั้น/terse\" ในใบงาน ส่วนกลไก ลำดับเหตุการณ์ การไม่มีชื่อแบรนด์จริง ไม่มีการล้อเลียนศาสนา ภาษาไทย และความถูกต้องของโค้ด JS ผ่านหมด"
       }
     },
     {

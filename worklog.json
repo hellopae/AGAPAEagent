@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-17T16:50:16.777Z",
+  "updatedAt": "2026-09-17T16:53:22.768Z",
   "entries": [
+    {
+      "id": "wl-260917-reese-qmds",
+      "datetime": "2026-09-17T16:53:22Z",
+      "displayDate": "17 ก.ย. 2569",
+      "displayTime": "23:53",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese check dad hologram lines",
+      "summary": "Fact-check เสร็จแล้ว ผลคือ **FIX LIST** (บันทึกที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-17-factcheck-avegee-zone4-dad-hologram.md`) และส่งรายงานผ่าน SubagentHandback ให้ Claudy เรียบร้อย — ประเด็นหลักคือความยาวบทพูดของ `DAD_CYBER` ยาวกว่าต้นฉบับ `DAD` มาก (35%-1"
+    },
     {
       "id": "wl-260917-rae-mmvd",
       "datetime": "2026-09-17T16:50:16Z",
