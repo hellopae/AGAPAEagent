@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T11:22:54.973Z",
+  "updatedAt": "2026-09-17T11:27:49.695Z",
   "agents": [
     {
       "id": "claudy",
@@ -123,7 +123,7 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "working",
-      "task": "Rae write zone 1 new cases",
+      "task": "Rae expand interrogation lines",
       "report": {
         "when": "18:02",
         "title": "Rae rewrite Asia cases",
