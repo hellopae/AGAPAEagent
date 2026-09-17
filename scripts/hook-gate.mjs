@@ -297,6 +297,8 @@ if (mode === "stop") {
   }
 
   // 4) ไฟล์ผลงานหาย — เตือน ไม่ block (เป็นการเดาจาก mtime)
+  // เช็คซ้ำตอนจบเทิร์น: ถ้า Claudy เขียนไฟล์ให้ทีหลังแล้ว ต้องไม่เตือนค้างทุกเทิร์น
+  st.missingOutput = (st.missingOutput || []).filter((n) => !hasRecentOutput(n));
   if (st.missingOutput.length) {
     notes.push(
       `ยังไม่เจอไฟล์ผลงานที่แก้ล่าสุดใน Output/ ของ: ${st.missingOutput.join(", ")} — ` +
