@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T11:06:18.172Z",
+  "updatedAt": "2026-09-18T11:50:00.468Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby menu right + paper texture",
       "report": {
-        "when": "12:54",
-        "title": "Toby UI fixes + case integration",
-        "body": "Trial/Battle UI implementation and Part H (zone 3/4 assets) are complete, tested, and pushed.\n\n**Key file paths:**\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/index.html` — CSS for both screens\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/ui.js` — `arena()` and `openTrial()` templates\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/scripts/prep-art.py` — `tex-*` pipeline branch + RENAME fix\n- `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-18-avegee-trial-ui.md` — full report\n\n**Notable finding worth surfacing:** Vera's spec numbers for `.hud-rec` (92px/76px mobile) were mathematically too small for real random-case content (only fit ~2 lines; actual cases routinely need 2-4 lines). Verified via a 50-case Playwright survey before and after adjustm …"
+        "when": "18:50",
+        "title": "Toby menu right + paper texture",
+        "body": "Report delivered to caller. Summary of what was completed in this session working in `/Users/agapae/Documents/Work PAE/Claude/AVEGEE`:\n\n- Moved the trial-screen 6-button menu bar to align above and match the width of `.hud-right` (the case panel), using CSS Grid areas instead of hardcoded widths — `src/ui.js`, `index.html`.\n- Fixed the invisible paper-texture bug on `.hud-rec` by correcting a `background-blend-mode:multiply` layering mistake (verified live with `getComputedStyle` that the image itself loaded fine, 200 status) — `index.html`.\n- Fixed the mis-named `BG-Sala-west.webp` → `BG-Tea-west.webp` tea-pavilion background and verified in-browser that the room now loads the correct file — `img/West/`.\n- Ran Khun Pae's CyberHell crew profile images (5, not 4 — found `crew-kan` was also  …"
       }
     },
     {
