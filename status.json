@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T12:08:41.945Z",
+  "updatedAt": "2026-09-18T12:10:21.270Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,11 +43,11 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Minnie station minigames",
       "report": {
-        "when": "22:38",
-        "title": "Minnie zone 4 chief options",
+        "when": "19:10",
+        "title": "Minnie station minigames",
         "body": "Report delivered to Claudy via SubagentHandback."
       }
     },
