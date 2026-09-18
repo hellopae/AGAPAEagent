@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T03:48:15.366Z",
+  "updatedAt": "2026-09-18T03:50:19.304Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,11 +174,11 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Mind paper texture prompt",
       "report": {
-        "when": "22:41",
-        "title": "Mind zone 4 asset prompts",
+        "when": "10:50",
+        "title": "Mind paper texture prompt",
         "body": "Report delivered to Claudy via SubagentHandback."
       }
     },
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review zone picker batch",
+      "status": "working",
+      "task": "Dale review batch A-G",
       "report": {
         "when": "22:40",
         "title": "Dale review zone picker batch",
