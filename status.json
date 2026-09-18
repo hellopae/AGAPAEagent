@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T05:54:35.757Z",
+  "updatedAt": "2026-09-18T11:06:18.172Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby UI fixes + case integration",
+      "status": "working",
+      "task": "Toby menu right + paper texture",
       "report": {
         "when": "12:54",
         "title": "Toby UI fixes + case integration",
