@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T12:08:38.079Z",
+  "updatedAt": "2026-09-18T12:08:41.945Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby menu right + paper texture",
+      "status": "working",
+      "task": "Toby fix batch 3",
       "report": {
         "when": "18:50",
         "title": "Toby menu right + paper texture",
