@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-18T05:16:48.795Z",
+  "updatedAt": "2026-09-18T05:54:26.317Z",
   "entries": [
+    {
+      "id": "wl-260918-toby-n2j2",
+      "datetime": "2026-09-18T05:54:26Z",
+      "displayDate": "18 ก.ย. 2569",
+      "displayTime": "12:54",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby UI fixes + case integration",
+      "summary": "Trial/Battle UI implementation and Part H (zone 3/4 assets) are complete, tested, and pushed.\n\n**Key file paths:**\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/index.html` — CSS for both screens\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/ui.js` — `arena()` and `openTrial()` templates"
+    },
     {
       "id": "wl-260918-dale-aom4",
       "datetime": "2026-09-18T05:16:48Z",
