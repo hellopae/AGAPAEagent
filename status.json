@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T05:54:26.317Z",
+  "updatedAt": "2026-09-18T05:54:35.757Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review batch A-G",
+      "status": "working",
+      "task": "Dale review trial UI batch",
       "report": {
         "when": "12:16",
         "title": "Dale review batch A-G",
