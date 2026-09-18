@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T03:43:58.453Z",
+  "updatedAt": "2026-09-18T03:48:15.366Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind zone 4 asset prompts",
+      "status": "working",
+      "task": "Mind paper texture prompt",
       "report": {
         "when": "22:41",
         "title": "Mind zone 4 asset prompts",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby UI fixes + case integration",
       "report": {
-        "when": "18:22",
-        "title": "Toby zone picker + boss images",
-        "body": "Task complete. Summary of what was delivered:\n\n**AVEGEE repo** (`/Users/agapae/Documents/Work PAE/Claude/AVEGEE`) — 4 commits pushed to `origin/main`: `a68fe28` (A), `32f9d63` (B), `b5fbacd` (C), `1b1f375` (D)\n\n**Report**: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-17-avegee-zone-picker-boss.md`\n\nKey files touched: `src/game.js`, `src/ui.js`, `index.html`, `scripts/prep-art.py`, plus processed art assets under `img/Asia/`, `img/West/`, `img/CyberHell/`, and `img/Zone1-4.webp`.\n\nAll work was verified with a real headless-browser (Playwright + Chromium), not just read through — including a real boss battle screen, the boss-arrival comic panel, the island zone-picker at both 390×844 and 360×640, and a direct call into `verdictCard()` proving the hidden/reveal ga …"
+        "when": "10:48",
+        "title": "Toby UI fixes + case integration",
+        "body": "Batch A–G is complete, pushed, and reported. Summary of what was delivered:\n\n**Repo:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE`, 9 commits (`285d59c..eb44cd5`), working tree clean.\n\nKey files touched:\n- `scripts/prep-art.py` — two root-cause pipeline fixes (Intro-Boss scene handling, BG- filename capitalization)\n- `src/ui.js`, `src/room.js`, `src/game.js`, `src/data.js` — heaven button (B), anti-repeat lines (F2), expanded interrogation lines (F1)\n- `src/cases.js`, `src/cases-asia.js` — 29 new/rewritten cases (E1/E2)\n- `index.html` — trial dialog min-width guard (C)\n- `img/West/*`, `img/Asia/*`, `img/CyberHell/*`, `img/manifest.json` — new station art + Intro-Boss fixes + 3 new West room backgrounds (A, D, G)\n\nFull report at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Out …"
       }
     },
     {

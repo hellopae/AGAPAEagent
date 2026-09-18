@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-18T03:43:58.453Z",
+  "updatedAt": "2026-09-18T03:48:15.366Z",
   "entries": [
+    {
+      "id": "wl-260918-toby-4sqv",
+      "datetime": "2026-09-18T03:48:15Z",
+      "displayDate": "18 ก.ย. 2569",
+      "displayTime": "10:48",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby UI fixes + case integration",
+      "summary": "Batch A–G is complete, pushed, and reported. Summary of what was delivered:\n\n**Repo:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE`, 9 commits (`285d59c..eb44cd5`), working tree clean.\n\nKey files touched:\n- `scripts/prep-art.py` — two root-cause pipeline fixes (Intro-Boss scene handling, BG- fil"
+    },
     {
       "id": "wl-260918-vera-zaif",
       "datetime": "2026-09-18T03:43:58Z",
