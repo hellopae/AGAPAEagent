@@ -1002,11 +1002,38 @@
   }
   .pp-flag.written{color:var(--done);border-color:var(--done)}
   .pp-flag.chosen{color:var(--gold);border-color:var(--gold)}
+  /* บทความวิทยาศาสตร์ — 10 หัวข้อ + ขั้นตอนผลิตวิดีโอ */
+  .sci-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:20px 0 14px}
+  .sci-kicker{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .sci-title{font-size:19px;font-weight:600;margin-top:3px}
+  .sci-meta{font-size:12px;color:var(--ink-faint);margin-top:4px}
+  .sci-status{flex:none;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ink-soft);border:1px solid var(--line-strong);border-radius:999px;padding:5px 9px;background:var(--paper-2)}
+  .sci-flow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+  .sci-step{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--ink-faint);border:1px solid var(--line);border-radius:999px;padding:4px 8px}
+  .sci-step.active{color:var(--ink);border-color:var(--gold);background:var(--paper-2)}
+  .sci-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .sci-card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+  .sci-card.selected{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+  .sci-card-title{display:flex;align-items:flex-start;gap:8px;font-size:14px;font-weight:600;line-height:1.45}
+  .sci-card-title input{margin-top:4px;accent-color:var(--gold)}
+  .sci-hook{margin:7px 0 0 22px;font-size:12.5px;line-height:1.6;color:var(--ink-soft)}
+  .sci-card details{margin:8px 0 0 22px}
+  .sci-card summary{font-size:11.5px;color:var(--gold);cursor:pointer}
+  .sci-card pre{white-space:pre-wrap;font:inherit;font-size:12px;color:var(--ink-soft);line-height:1.7;margin-top:7px}
+  .sci-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:14px 0 28px}
+  .sci-btn{border:1px solid var(--accent);border-radius:9px;background:var(--accent);color:var(--paper-2);font:600 12px inherit;padding:8px 12px;cursor:pointer}
+  .sci-btn:disabled{opacity:.42;cursor:not-allowed}
+  .sci-note,.sci-empty{font-size:12.5px;color:var(--ink-faint)}
+  .sci-production{display:grid;gap:0;margin-bottom:8px}
+  .sci-job{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:10px 0;font-size:13px;color:var(--ink-soft)}
+  .sci-job:first-child{border-top:none}
   @media(max-width:560px){
     .pp-log-item>summary{flex-wrap:wrap;gap:2px}
     .pp-log-item .pp-log-ind{width:100%}
     .pp-log-item .pp-caret{margin-left:8px}
     .pp-log-body{margin-left:0}
+    .sci-grid{grid-template-columns:1fr}
+    .sci-head{display:block}.sci-status{display:inline-block;margin-top:10px}
   }
   /* Manga widget */
   .w-manga{display:flex;flex-direction:column;gap:8px;min-height:0}
@@ -1359,6 +1386,9 @@
       <button class="view-tab" data-v="article" onclick="switchView('article')">
         บทความ <span class="tab-count" id="articleCount">0</span>
       </button>
+      <button class="view-tab" data-v="science" onclick="switchView('science')">
+        Science <span class="tab-count" id="scienceCount">0</span>
+      </button>
       <!-- แท็บ Pain Point ถอดออกจากหน้าจอ 5 ก.ย. 2569 ตามที่ Kittanate สั่ง —
            ข้อมูลยังอยู่ครบ (painpoint.json + Firestore agents/painpoint) และ view ยังอยู่ข้างล่าง
            เปิดกลับมาได้ด้วยการเอาคอมเมนต์ปุ่มนี้ออก -->
@@ -1489,6 +1519,21 @@
     <footer>
       <span class="mono" id="arModeTag">—</span>
       <span id="arModeMsg">ข้อมูลจากไฟล์ <span class="mono">article.json</span></span>
+    </footer>
+  </div>
+</div>
+
+<!-- ===== SCIENCE ARTICLE / VIDEO VIEW ===== -->
+<div id="scienceView" style="display:none">
+  <div class="wrap">
+    <section class="hero">
+      <div class="ey mono">Science · Script · Voice · Video</div>
+      <p>หัวข้อวิทยาศาสตร์ 10 เรื่องประจำสัปดาห์ · เลือก 3 เรื่องเพื่อทำเสียงและวิดีโอ</p>
+    </section>
+    <div id="scienceBody"><div class="muted" style="padding:20px 0">กำลังโหลด…</div></div>
+    <footer>
+      <span class="mono" id="scienceModeTag">—</span>
+      <span id="scienceModeMsg">ข้อมูลจาก <span class="mono">science-video.json</span> / Firestore</span>
     </footer>
   </div>
 </div>
@@ -2371,10 +2416,12 @@ function switchView(v) {
   document.getElementById('todoView').style.display = v === 'todo' ? '' : 'none';
   document.getElementById('painView').style.display = v === 'pain' ? '' : 'none';
   document.getElementById('articleView').style.display = v === 'article' ? '' : 'none';
+  document.getElementById('scienceView').style.display = v === 'science' ? '' : 'none';
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.v === v));
   if (v === 'finance') renderFinance();
   if (v === 'todo') renderTodo();
   if (v === 'article') renderArticle();
+  if (v === 'science') renderScienceArticle();
   // Pain Point ไม่มีแท็บแล้ว — โหลดตอนเปิดจริงเท่านั้น ไม่กิน request ตอน boot
   if (v === 'pain') { PAIN ? renderPain() : loadPain(); }
   /* ผังออฟฟิศวิ่ง rAF อยู่ — พักไว้ตอนไม่ได้ดู */
@@ -4314,6 +4361,113 @@ document.getElementById('ppLogToggle')?.addEventListener('click', () => {
 document.getElementById('ppLog')?.addEventListener('toggle', ppSyncToggle, true);
 
 /* =====================================================================
+   SCIENCE ARTICLE — 10 หัวข้อพร้อมบทพากย์ และสถานะผลิตเสียง/วิดีโอ
+   Firestore agents/science_video (dataJson) มาก่อน · science-video.json เป็น fallback
+   ===================================================================== */
+let SCIENCE = null;
+const SCI_CHOICES = new Set();
+const SCI_LABELS = {
+  awaiting_ideas:'รอสร้างหัวข้อ', ideas_ready:'มี 10 หัวข้อแล้ว', selected:'เลือก 3 หัวข้อแล้ว',
+  voice_ready:'เสียงพร้อม', video_ready:'วิดีโอพร้อม', review:'รอตรวจ', approved:'อนุมัติแล้ว',
+  scheduled:'ตั้งเวลาแล้ว', published:'เผยแพร่แล้ว', blocked:'ต้องดำเนินการ'
+};
+const SCI_FLOW = ['ideas_ready','selected','voice_ready','video_ready','review','approved','scheduled','published'];
+
+function updateScienceCount(){
+  const el = document.getElementById('scienceCount');
+  if(el) el.textContent = SCIENCE && Array.isArray(SCIENCE.items) ? SCIENCE.items.length : 0;
+}
+
+function updateScienceChoiceNote(message=''){
+  const note = document.getElementById('scienceChoiceNote');
+  const button = document.getElementById('scienceCopy');
+  if(note) note.textContent = message || `เลือกแล้ว ${SCI_CHOICES.size}/3`;
+  if(button) button.disabled = SCI_CHOICES.size !== 3;
+}
+
+function toggleScienceChoice(input){
+  const id = decodeURIComponent(input.dataset.id || '');
+  if(input.checked && SCI_CHOICES.size >= 3){
+    input.checked = false;
+    return updateScienceChoiceNote('เลือกได้ไม่เกิน 3 หัวข้อ');
+  }
+  input.checked ? SCI_CHOICES.add(id) : SCI_CHOICES.delete(id);
+  input.closest('.sci-card')?.classList.toggle('selected', input.checked);
+  updateScienceChoiceNote();
+}
+
+async function copyScienceChoices(){
+  if(!SCIENCE || SCI_CHOICES.size !== 3) return;
+  const selected = SCIENCE.items.filter(item => SCI_CHOICES.has(item.id));
+  const text = [`Science Video ${SCIENCE.week || ''}`, ...selected.map((item,i) => `${i+1}. ${item.id || ''} — ${item.title || ''}`)].join('\n');
+  try{
+    await navigator.clipboard.writeText(text);
+    updateScienceChoiceNote('คัดลอกแล้ว — ส่งรายการนี้ให้ Claude หรือ ChatGPT ได้เลย');
+  }catch(e){
+    updateScienceChoiceNote('คัดลอกอัตโนมัติไม่ได้ กรุณาลองใหม่จาก HTTPS');
+  }
+}
+
+function renderScienceArticle(){
+  const box = document.getElementById('scienceBody');
+  if(!box) return;
+  const items = SCIENCE && Array.isArray(SCIENCE.items) ? SCIENCE.items : [];
+  if(!items.length){
+    box.innerHTML = '<div class="pp-card"><div class="pp-ind">รอรอบประจำสัปดาห์</div><div class="pp-title">ยังไม่มีชุดหัวข้อวิทยาศาสตร์</div><div class="pp-row">Claude เริ่มสร้าง 10 หัวข้อทุกวันเสาร์ 08:00 และ ChatGPT ตรวจสำรองเวลา 08:15</div></div>';
+    return;
+  }
+  const rank = SCI_FLOW.indexOf(SCIENCE.status);
+  const cards = items.map((item,index) => {
+    const id = item.id || `science-${index+1}`;
+    const encoded = encodeURIComponent(id);
+    const checked = SCI_CHOICES.has(id);
+    return `<label class="sci-card${checked ? ' selected' : ''}">
+      <div class="sci-card-title"><input type="checkbox" class="science-choice" data-id="${TD_ESC(encoded)}"${checked ? ' checked' : ''}><span>${index+1}. ${TD_ESC(item.title || 'ยังไม่มีชื่อ')}</span></div>
+      ${item.hook ? `<div class="sci-hook">${TD_ESC(item.hook)}</div>` : ''}
+      ${item.script ? `<details><summary>อ่านบทพากย์</summary><pre>${TD_ESC(item.script)}</pre></details>` : ''}
+    </label>`;
+  }).join('');
+  const production = Array.isArray(SCIENCE.production) && SCIENCE.production.length
+    ? SCIENCE.production.map(job => `<div class="sci-job"><span>${TD_ESC(job.title || 'งานผลิต')}</span><span class="sci-status">${TD_ESC(SCI_LABELS[job.status] || job.status || '—')}</span></div>`).join('')
+    : '<div class="sci-empty">ยังไม่มีงานผลิต — เลือกหัวข้อให้ครบ 3 เรื่องก่อน</div>';
+  box.innerHTML = `<div class="sci-head"><div>
+      <div class="sci-kicker mono">${TD_ESC(SCIENCE.week || 'สัปดาห์นี้')} · ${TD_ESC(SCIENCE.source || 'AGAPAE')}</div>
+      <div class="sci-title">${TD_ESC(SCIENCE.title || 'Science Video Pipeline')}</div>
+      <div class="sci-meta">${TD_ESC(SCIENCE.displayDate || '')}${SCIENCE.updatedAt ? ` · อัปเดต ${TD_ESC(SCIENCE.updatedAt)}` : ''}</div>
+    </div><span class="sci-status">${TD_ESC(SCI_LABELS[SCIENCE.status] || SCIENCE.status || '—')}</span></div>
+    <div class="sci-flow">${SCI_FLOW.map((s,i) => `<span class="sci-step${i <= rank ? ' active' : ''}">${TD_ESC(SCI_LABELS[s])}</span>`).join('')}</div>
+    <div class="pp-today-head"><h3 class="pp-h">เลือก 3 หัวข้อจาก ${items.length} หัวข้อ</h3></div>
+    <div class="sci-grid">${cards}</div>
+    <div class="sci-actions"><button class="sci-btn" id="scienceCopy" type="button">คัดลอก 3 หัวข้อที่เลือก</button><span class="sci-note" id="scienceChoiceNote"></span></div>
+    <div class="pp-today-head"><h3 class="pp-h">สถานะการผลิต</h3></div>
+    <div class="sci-production">${production}</div>`;
+  box.querySelectorAll('.science-choice').forEach(input => input.addEventListener('change', () => toggleScienceChoice(input)));
+  document.getElementById('scienceCopy')?.addEventListener('click', copyScienceChoices);
+  updateScienceChoiceNote();
+}
+
+async function loadScienceArticle(){
+  try{
+    SCIENCE = await fsPayload('science_video');
+    if(!SCIENCE || !Array.isArray(SCIENCE.items)){
+      const res = await fetch('science-video.json?t=' + Date.now());
+      if(!res.ok) throw new Error(res.status);
+      SCIENCE = await res.json();
+    }
+    updateScienceCount();
+    if(currentView === 'science') renderScienceArticle();
+    const tag = document.getElementById('scienceModeTag'), msg = document.getElementById('scienceModeMsg');
+    if(tag){ tag.textContent = SCIENCE.items.length ? 'LIVE' : 'READY'; tag.style.color = SCIENCE.items.length ? 'var(--done)' : 'var(--gold)'; }
+    const chk = fsCheckedText(SCIENCE.checkedAt);
+    if(msg) msg.innerHTML = `อัปเดต ${TD_ESC(SCIENCE.updatedAt || 'รอข้อมูลรอบแรก')}${chk ? ' · ' + TD_ESC(chk) : ''}`;
+  }catch(e){
+    const tag = document.getElementById('scienceModeTag'), msg = document.getElementById('scienceModeMsg');
+    if(tag) tag.textContent = 'NO DATA';
+    if(msg) msg.textContent = 'อ่าน science-video.json ไม่ได้';
+  }
+}
+
+/* =====================================================================
    ARTICLE — คลังหัวข้อบทความความรู้งานพิมพ์ (routine เขียนสัปดาห์ละ 3 หัวข้อ)
    Firestore agents/article (dataJson) มาก่อน · article.json เป็น fallback
    เข้ามาแทนที่แท็บ Pain Point บนหน้าจอ 5 ก.ย. 2569 — โครงการ์ดใช้ CSS ชุด .pp-* ร่วมกัน
@@ -4482,8 +4636,11 @@ renderWorklog();   // worklog timeline (รวมอยู่ใน Console แ�
 loadWorklog();     // async load real worklog data
 loadTodo();        // To Do list (todo.json)
 loadArticle();     // หัวข้อบทความรายสัปดาห์ (article.json / Firestore agents/article)
+loadScienceArticle(); // หัวข้อวิทยาศาสตร์ 10 เรื่อง + production pipeline
                    /* Pain Point ไม่โหลดตอน boot แล้ว — ไม่มีแท็บบนหน้าจอ
                       โค้ดกับข้อมูลยังอยู่ครบ โหลดเมื่อ switchView('pain') เท่านั้น */
+const initialView = location.hash.slice(1);
+if(['console','widgets','article','science','finance','todo'].includes(initialView)) switchView(initialView);
 </script>
 
 <script src="games.js"></script>

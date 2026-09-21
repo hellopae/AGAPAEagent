@@ -11,3 +11,9 @@ scripts/.hook-log.jsonl
 /Output/Codex/runs/
 /Output/Astra/runs/
 /scripts/__pycache__/
+
+# Local-only production queue and OAuth material — never commit
+/.local/
+youtube-oauth*.json
+client_secret*.json
+*refresh-token*.json

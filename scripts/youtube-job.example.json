@@ -1,0 +1,14 @@
+{
+  "id": "science-2026-W39-01",
+  "status": "approved",
+  "approvedAt": "2026-09-21T08:00:00+07:00",
+  "approvedBy": "Kittanate",
+  "videoPath": "/absolute/path/to/final-video.mp4",
+  "title": "ชื่อคลิป",
+  "description": "คำอธิบายคลิป",
+  "tags": ["วิทยาศาสตร์", "ความรู้", "science"],
+  "categoryId": 28,
+  "defaultLanguage": "th",
+  "madeForKids": false,
+  "privacyStatus": "private"
+}

@@ -1,0 +1,102 @@
+# SOP-12 — Science Video Pipeline
+
+> Time zone ทุกจุด: `Asia/Bangkok` · ช่องเป็นเจ้าของโดย `agapaedesign@gmail.com`
+> เป้าหมาย: Claude เป็น primary, ChatGPT/Codex เป็น fallback, มี human gate ก่อนเสียเครดิตและก่อนเผยแพร่
+
+## 1. State และแหล่งข้อมูลร่วม
+
+- Dashboard อ่าน Firestore document `agents/science_video`.
+- Routine เขียน payload ทั้งก้อนใน field `dataJson` และเขียน `checkedAt` ทุกครั้ง.
+- `week` รูปแบบ `YYYY-Www` คือ idempotency key ระดับ batch.
+- `item.id` และ YouTube `job.id` ต้องไม่เปลี่ยนเมื่อทำงานเดิมต่อ.
+- Firestore/doc นี้ถือเป็นข้อมูลสาธารณะ: ห้ามใส่ OAuth, absolute path, draft ลับ หรือข้อมูลบัญชี.
+
+สถานะที่รองรับ:
+
+`awaiting_ideas → ideas_ready → selected → voice_ready → video_ready → review → approved → scheduled → published`
+
+ใช้ `blocked` เมื่อรอเครดิต, OAuth, ไฟล์ หรือการตัดสินใจจากคุณเป้.
+
+## 2. Weekly — สร้าง 10 หัวข้อ
+
+### Claude primary — เสาร์ 08:00
+
+สร้างหัวข้อวิทยาศาสตร์ใกล้ตัว 10 เรื่องที่ไม่ซ้ำกัน แต่ละเรื่องมี:
+
+- `id`, `title`, `hook`, `why`, `sources[]`
+- บทพากย์ภาษาไทย 45–75 วินาทีใน `script`
+- โครงภาพ 5–8 ช็อตใน `visualPlan[]`
+- ระดับความเสี่ยงข้อเท็จจริงและคำเตือนด้านความปลอดภัยเมื่อเกี่ยวข้อง
+
+ค้นและอ้างอิงแหล่งปฐมภูมิ/หน่วยงานวิทยาศาสตร์ ตรวจข้อเท็จจริงก่อนส่ง แล้วเขียน JSON schemaVersion 1 ผ่าน `scripts/push-science-video.mjs` โดย `source:"claude"`, `status:"ideas_ready"`.
+
+### ChatGPT fallback — เสาร์ 08:15
+
+1. รัน `node scripts/fetch-science-video.mjs`.
+2. ถ้า `week` เป็นสัปดาห์ปัจจุบัน, `status` ไม่ใช่ `blocked`, และมี `items` ครบ 10 ให้จบแบบเงียบ ๆ โดยไม่สร้างซ้ำ.
+3. ถ้ายังไม่มี batch ปัจจุบัน ให้สร้างและ fact-check ตามข้อกำหนดเดียวกับ Claude.
+4. เขียนไฟล์ชั่วคราวนอก Git แล้วส่งผ่าน `scripts/push-science-video.mjs` ด้วย `source:"chatgpt-fallback"`.
+5. ห้ามแก้ tracked files, ห้าม commit/push และห้ามสร้างวิดีโอในรอบนี้.
+
+## 3. Human selection และ production
+
+1. คุณเป้เลือก 3 หัวข้อในแท็บ Science Video; การเลือกเก็บใน browser ของเครื่องนั้นและคัดลอกส่งให้ Claude/ChatGPT.
+2. Agent อัปเดต `status:"selected"` และสร้าง production record 3 รายการ.
+3. เตรียมบท Botnoi แยก take และระบุจังหวะพัก. คุณเป้เป็นผู้ล็อกอิน/กดสร้างเสียงถ้า Botnoi ไม่มี API ที่อนุญาตไว้.
+4. ก่อนเรียก Higgsfield ทุกครั้ง:
+   - อ่าน balance และ estimate ปัจจุบัน.
+   - ถ้า `balance < estimated_cost + 20` ให้ตั้ง `blocked` และแจ้งคุณเป้ ห้ามส่ง generation.
+   - ถ้าพอจึงสร้างวิดีโอและบันทึกเฉพาะสถานะ/ลิงก์สาธารณะ ไม่ส่ง credential.
+5. ส่ง draft ให้คุณเป้ตรวจ. ต้องได้รับคำว่าอนุมัติหรือสถานะ `approved` ก่อนเข้า publish queue.
+
+## 4. YouTube OAuth — ทำครั้งแรก
+
+1. ล็อกอิน Google Cloud Console ด้วย `agapaedesign@gmail.com`.
+2. สร้าง/เลือก project เช่น `AGAPAE Science Video`.
+3. เปิดใช้ **YouTube Data API v3**.
+4. ตั้ง Google Auth Platform/OAuth consent:
+   - Audience: External (กรณี Gmail ส่วนตัว).
+   - เพิ่ม `agapaedesign@gmail.com` เป็น test user ระหว่างตั้งค่า.
+   - Scopes: `youtube.upload` และ `youtube.readonly` (readonly ใช้ตรวจ Channel ID ก่อนอัปโหลด).
+5. สร้าง OAuth Client แบบ **Desktop app** แล้วดาวน์โหลด JSON.
+6. รัน:
+
+   `node scripts/youtube-auth.mjs --client /absolute/path/client_secret.json`
+
+7. เปิด URL ที่สคริปต์แสดง เลือก `agapaedesign@gmail.com` และกดยินยอม.
+8. Token จะอยู่ที่ `~/Library/Application Support/AGAPAE/youtube-oauth.json` สิทธิ์ไฟล์ 600 และไม่อยู่ใน Git.
+
+หมายเหตุ: OAuth app สถานะ Testing ทำให้ consent/refresh token สำหรับ YouTube scopes หมดอายุใน 7 วัน. ก่อนเปิด routine ระยะยาวให้เปลี่ยน Publishing status เป็น In production; บัญชีอาจเห็นหน้าเตือน unverified app จนกว่าจะผ่าน verification.
+
+## 5. Publish queue และ uploader
+
+เก็บ job ส่วนตัวไว้ใน:
+
+`/Users/agapae/Documents/Work PAE/Claude/Science Animation/Publish Queue/jobs/`
+
+เริ่มจาก `scripts/youtube-job.example.json`. ทุก job ต้องมี:
+
+- `status:"approved"` หรือ `scheduled`
+- `approvedAt`, `approvedBy`, absolute `videoPath`
+- title, description, tags และ privacyStatus
+
+ตรวจโดยไม่อัปโหลด:
+
+`node scripts/youtube-upload.mjs --job /absolute/path/job.json`
+
+อัปโหลดจริงต้องใส่ `--execute`. ตัวอัปโหลดตรวจ Channel ID, บังคับ approval fields, เก็บ upload history ป้องกันซ้ำ และ default เป็น Private.
+
+## 6. Schedule เผยแพร่ — จันทร์/พุธ/ศุกร์ 08:00
+
+1. เรียง job ที่ approved และยังไม่มี history ตาม `approvedAt`.
+2. รัน dry-run ก่อนทุกครั้ง.
+3. ถ้า OAuth หาย/หมดอายุ, channel ไม่ตรง, queue ว่าง หรือ validation ไม่ผ่าน ให้หยุดและแจ้งคุณเป้.
+4. ถ้าผ่านจึงรัน `--execute` หนึ่ง jobต่อรอบเท่านั้น.
+5. อัปเดต public status เป็น `published` พร้อม YouTube video ID; ห้ามใส่ local path/token ใน Firestore.
+
+## 7. ขอบเขตความปลอดภัย
+
+- ห้ามแชร์ Google password, 2FA, OAuth JSON หรือ refresh token ผ่านแชท/Firestore/GitHub.
+- ห้ามให้ Claude และ ChatGPT เป็น publisher พร้อมกัน. Scheduled publisher มีเจ้าของเดียว; อีกตัวทำได้แค่ตรวจสถานะ.
+- ถ้า queue ว่างให้ข้าม ห้ามหาไฟล์อื่นมาอัปโหลดแทน.
+- การเปลี่ยนชื่อช่อง, ลบวิดีโอ, monetization และสิทธิ์ Manager อยู่นอก routine นี้.

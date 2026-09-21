@@ -9,6 +9,12 @@
 | `seed-firestore.mjs` | อัปโหลด status.json ขึ้น Firestore (ครั้งเดียวตอน setup) | คน |
 | `push-daily.mjs` | สรุปข่าวรายวัน → Firestore `agents/daily` | routine |
 | `push-limit.mjs` | % limit จริงจาก `oauth/usage` (fallback: ccusage) → `agents/claude_limit` | hook |
+| `push-science-video.mjs` | validate + ส่ง batch/สถานะ Science Video → Firestore `agents/science_video` | Claude/ChatGPT routine |
+| `fetch-science-video.mjs` | อ่าน batch Science Video ปัจจุบัน เพื่อตรวจ fallback/idempotency | routine |
+| `youtube-auth.mjs` | ทำ OAuth กับช่องเจ้าของโดยตรงและเก็บ token นอก Git | คนรันครั้งแรก |
+| `youtube-upload.mjs` | ตรวจ approved job และอัปโหลด YouTube แบบ resumable; ค่าเริ่มต้นเป็น dry-run | M/W/F publisher |
+
+รายละเอียด workflow และความปลอดภัยอยู่ที่ `SOP/SOP-12-science-video.md`.
 
 ---
 

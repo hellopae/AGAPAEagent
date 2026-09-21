@@ -69,6 +69,37 @@
     white-space:pre-wrap;font-family:inherit;font-size:13.5px;color:var(--ink-soft);
     margin-top:10px;line-height:1.7;
   }
+  .sv-head{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:18px}
+  .sv-kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .sv-title{font-size:19px;font-weight:700}
+  .sv-meta{font-size:12px;color:var(--ink-faint);margin-top:4px}
+  .sv-status{flex:0 0 auto;border:1px solid var(--line-strong);border-radius:999px;padding:6px 11px;font-size:11px;color:var(--ink-soft);background:var(--paper-2)}
+  .sv-flow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+  .sv-step{font-size:11px;color:var(--ink-faint);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
+  .sv-step.active{color:var(--ink);border-color:var(--gold);background:var(--paper-2)}
+  .sv-section{font-size:13px;font-weight:700;margin:20px 0 10px}
+  .sv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .sv-idea{display:block;border:1px solid var(--line);border-radius:11px;padding:14px;background:var(--paper-2);cursor:pointer}
+  .sv-idea:has(input:checked){border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+  .sv-idea input{margin-right:8px;accent-color:var(--gold)}
+  .sv-idea-title{font-size:14px;font-weight:600}
+  .sv-idea-hook{font-size:12.5px;color:var(--ink-soft);margin:7px 0 0 24px;line-height:1.65}
+  .sv-idea details{margin:9px 0 0 24px}
+  .sv-idea summary{font-size:12px;color:var(--gold);cursor:pointer}
+  .sv-idea pre{white-space:pre-wrap;font:inherit;font-size:12.5px;color:var(--ink-soft);margin-top:7px;line-height:1.7}
+  .sv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
+  .sv-button{appearance:none;border:1px solid var(--accent);border-radius:9px;background:var(--accent);color:var(--paper-2);font:600 12px inherit;padding:8px 12px;cursor:pointer}
+  .sv-button:disabled{opacity:.45;cursor:not-allowed}
+  .sv-choice-note{font-size:12px;color:var(--ink-faint)}
+  .sv-production{display:grid;gap:8px}
+  .sv-job{display:flex;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:10px 0}
+  .sv-job:first-child{border-top:none}
+  .sv-job-title{font-size:13.5px;color:var(--ink-soft)}
+  .sv-empty{font-size:13px;color:var(--ink-faint);padding:8px 0}
+  @media(max-width:640px){
+    .tabs{overflow-x:auto}.tabs .wrap{min-width:max-content}.tab{padding-inline:15px}
+    .sv-grid{grid-template-columns:1fr}.sv-head{display:block}.sv-status{display:inline-block;margin-top:10px}
+  }
 </style>
 </head>
 <body>
@@ -79,7 +110,7 @@
       <img class="press-mark" src="avatars/Logo-Agapae.jpg" alt="AGAPAE">
       <div>
         <h1>Routines</h1>
-        <div class="sub mono">Daily · Weekly · Monthly · Horoscope</div>
+        <div class="sub mono">Daily · Weekly · Monthly · Science Video · Horoscope</div>
       </div>
     </div>
     <a class="back" href="index.html">← Team Console</a>
@@ -91,6 +122,7 @@
     <button class="tab active" data-t="daily" onclick="switchTab('daily')">Daily</button>
     <button class="tab" data-t="weekly" onclick="switchTab('weekly')">Weekly</button>
     <button class="tab" data-t="monthly" onclick="switchTab('monthly')">Monthly</button>
+    <button class="tab" data-t="science" onclick="switchTab('science')">Science Video</button>
     <button class="tab" data-t="horoscope" onclick="switchTab('horoscope')">ดูดวง</button>
   </div>
 </div>
@@ -99,6 +131,7 @@
   <div class="panel active" id="p-daily"><div class="r-card" id="c-daily"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-weekly"><div class="r-card" id="c-weekly"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-monthly"><div class="r-card" id="c-monthly"><div class="empty">กำลังโหลด…</div></div></div>
+  <div class="panel" id="p-science"><div class="r-card" id="c-science"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-horoscope"><div class="r-card" id="c-horoscope"><div class="empty">กำลังโหลด…</div></div></div>
 </div>
 
@@ -123,6 +156,7 @@ const EMPTY_TEXT = {
   daily:  "ยังไม่มีสรุปข่าววันนี้ — Daily routine เขียนทุก 09:00",
   weekly: "ยังไม่มีสรุปประจำสัปดาห์ — Weekly routine จะเริ่มเขียนเร็ว ๆ นี้",
   monthly:"ยังไม่มีสรุปประจำเดือน — Monthly routine จะเริ่มเขียนเร็ว ๆ นี้",
+  science:"ยังไม่มีชุดหัวข้อ Science Video — Claude เริ่มทุกเสาร์ 08:00 และ ChatGPT ตรวจสำรอง 08:15",
   horoscope:"ยังไม่มีดวงวันนี้ — Horoscope routine เขียนทุกเช้า 07:13",
 };
 
@@ -153,12 +187,101 @@ function render(kind, d){
     ${d.updatedAt ? `<div class="r-stamp mono">อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}</div>` : ""}`;
 }
 
+const SV_LABELS = {
+  awaiting_ideas:"รอสร้างหัวข้อ", ideas_ready:"มี 10 หัวข้อแล้ว", selected:"เลือก 3 หัวข้อแล้ว",
+  voice_ready:"เสียงพร้อม", video_ready:"วิดีโอพร้อม", review:"รอตรวจ", approved:"อนุมัติแล้ว",
+  scheduled:"ตั้งเวลาแล้ว", published:"เผยแพร่แล้ว", blocked:"ต้องดำเนินการ",
+};
+const SV_FLOW = ["ideas_ready","selected","voice_ready","video_ready","review","approved","scheduled","published"];
+let scienceCurrent = null;
+
+function sciencePayload(d){
+  if(!d) return null;
+  if(typeof d.dataJson === "string"){
+    try{return JSON.parse(d.dataJson)}catch(err){console.warn("science_video dataJson",err)}
+  }
+  return d;
+}
+function scienceChoiceKey(week){return `agapae-science-choice:${week || "draft"}`}
+function scienceChoices(week){
+  try{return new Set(JSON.parse(localStorage.getItem(scienceChoiceKey(week)) || "[]"))}
+  catch{return new Set()}
+}
+function saveScienceChoices(week,set){localStorage.setItem(scienceChoiceKey(week),JSON.stringify([...set]))}
+
+function renderScience(input){
+  const d = sciencePayload(input);
+  scienceCurrent = d;
+  const box = document.getElementById("c-science");
+  if(!d || !Array.isArray(d.items) || !d.week){box.innerHTML=`<div class="empty">${EMPTY_TEXT.science}</div>`;return}
+  const choices = scienceChoices(d.week);
+  const rank = SV_FLOW.indexOf(d.status);
+  const ideas = d.items.map((item,index)=>{
+    const id = encodeURIComponent(item.id || `idea-${index+1}`);
+    const checked = choices.has(item.id) ? " checked" : "";
+    const script = item.script ? `<details><summary>อ่านบทพากย์</summary><pre>${esc(item.script)}</pre></details>` : "";
+    return `<label class="sv-idea">
+      <div class="sv-idea-title"><input type="checkbox" class="sv-choice" data-id="${id}"${checked}>${index+1}. ${esc(item.title || "ยังไม่มีชื่อ")}</div>
+      ${item.hook ? `<div class="sv-idea-hook">${esc(item.hook)}</div>` : ""}${script}
+    </label>`;
+  }).join("");
+  const production = Array.isArray(d.production) && d.production.length
+    ? d.production.map(job=>`<div class="sv-job"><div class="sv-job-title">${esc(job.title)}</div><span class="sv-status mono">${esc(SV_LABELS[job.status] || job.status || "-")}</span></div>`).join("")
+    : `<div class="sv-empty">ยังไม่มีงานผลิต — เลือกหัวข้อให้ครบ 3 เรื่องก่อน</div>`;
+  box.innerHTML=`
+    <div class="sv-head"><div><div class="sv-kicker mono">${esc(d.week)} · ${esc(d.source || "รอผู้สร้าง")}</div>
+      <div class="sv-title">${esc(d.title || "Science Video Pipeline")}</div>
+      <div class="sv-meta">${esc(d.displayDate || "")} ${d.updatedAt ? `· อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}` : ""}</div>
+    </div><span class="sv-status mono">${esc(SV_LABELS[d.status] || d.status)}</span></div>
+    <div class="sv-flow">${SV_FLOW.map((s,i)=>`<span class="sv-step ${i<=rank?"active":""}">${esc(SV_LABELS[s])}</span>`).join("")}</div>
+    <div class="sv-section">เลือก 3 หัวข้อจาก ${d.items.length} หัวข้อ</div>
+    <div class="sv-grid">${ideas}</div>
+    <div class="sv-actions"><button class="sv-button" id="sv-copy" type="button">คัดลอก 3 หัวข้อที่เลือก</button><span class="sv-choice-note" id="sv-note"></span></div>
+    <div class="sv-section">สถานะการผลิต</div><div class="sv-production">${production}</div>`;
+  box.querySelectorAll(".sv-choice").forEach(input=>input.addEventListener("change",()=>toggleScienceChoice(input)));
+  document.getElementById("sv-copy").addEventListener("click",copyScienceChoices);
+  updateScienceChoiceNote();
+}
+
+function toggleScienceChoice(input){
+  if(!scienceCurrent) return;
+  const id = decodeURIComponent(input.dataset.id);
+  const set = scienceChoices(scienceCurrent.week);
+  if(input.checked && set.size>=3){input.checked=false;return updateScienceChoiceNote("เลือกได้ไม่เกิน 3 หัวข้อ")}
+  input.checked ? set.add(id) : set.delete(id);
+  saveScienceChoices(scienceCurrent.week,set);
+  updateScienceChoiceNote();
+}
+function updateScienceChoiceNote(message=""){
+  if(!scienceCurrent) return;
+  const count = scienceChoices(scienceCurrent.week).size;
+  const note = document.getElementById("sv-note");
+  const button = document.getElementById("sv-copy");
+  if(note) note.textContent = message || `เลือกแล้ว ${count}/3 — การเลือกเก็บเฉพาะในเครื่องนี้`;
+  if(button) button.disabled = count!==3;
+}
+async function copyScienceChoices(){
+  const ids = scienceChoices(scienceCurrent.week);
+  const selected = scienceCurrent.items.filter(item=>ids.has(item.id));
+  const text = [`Science Video ${scienceCurrent.week}`, ...selected.map((item,i)=>`${i+1}. ${item.id} — ${item.title}`)].join("\n");
+  try{await navigator.clipboard.writeText(text);updateScienceChoiceNote("คัดลอกแล้ว — ส่งข้อความนี้ให้ Claude หรือ ChatGPT ได้เลย")}
+  catch{updateScienceChoiceNote("คัดลอกอัตโนมัติไม่ได้ กรุณาลองใหม่จาก HTTPS")}
+}
+
 for(const kind of ["daily","weekly","monthly","horoscope"]){
   firebase.firestore().collection("agents").doc(kind).onSnapshot(
     d=>render(kind, d.exists ? d.data() : null),
     err=>{console.warn("Firestore",kind,err); render(kind,null);}
   );
 }
+
+fetch("science-video.json").then(r=>r.ok?r.json():null).then(d=>{if(d?.week)renderScience(d)}).catch(()=>{});
+firebase.firestore().collection("agents").doc("science_video").onSnapshot(
+  d=>renderScience(d.exists ? d.data() : null),
+  err=>{console.warn("Firestore science_video",err);if(!scienceCurrent)renderScience(null);}
+);
+const initialTab = location.hash.slice(1);
+if(["daily","weekly","monthly","science","horoscope"].includes(initialTab)) switchTab(initialTab);
 </script>
 </body>
 </html>
