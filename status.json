@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T17:38:46.698Z",
+  "updatedAt": "2026-09-23T18:35:38.021Z",
   "agents": [
     {
       "id": "claudy",
@@ -175,10 +175,10 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "Mind paper texture prompt",
+      "task": "Mind: sitting sprite prompt",
       "report": {
-        "when": "10:50",
-        "title": "Mind paper texture prompt",
+        "when": "01:35",
+        "title": "Mind: sitting sprite prompt",
         "body": "Report delivered to Claudy via SubagentHandback."
       }
     },
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby fix batch 3",
+      "task": "Toby: AVEGEE fix batch 4",
       "report": {
         "when": "18:50",
         "title": "Toby menu right + paper texture",
