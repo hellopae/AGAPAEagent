@@ -30,13 +30,18 @@
 
 ค้นและอ้างอิงแหล่งปฐมภูมิ/หน่วยงานวิทยาศาสตร์ ตรวจข้อเท็จจริงก่อนส่ง แล้วเขียน JSON schemaVersion 1 ผ่าน `scripts/push-science-video.mjs` โดย `source:"claude"`, `status:"ideas_ready"`.
 
-### ChatGPT fallback — เสาร์ 08:15
+### ChatGPT/Codex fallback — เสาร์ 11:00
 
-1. รัน `node scripts/fetch-science-video.mjs`.
-2. ถ้า `week` เป็นสัปดาห์ปัจจุบัน, `status` ไม่ใช่ `blocked`, และมี `items` ครบ 10 ให้จบแบบเงียบ ๆ โดยไม่สร้างซ้ำ.
-3. ถ้ายังไม่มี batch ปัจจุบัน ให้สร้างและ fact-check ตามข้อกำหนดเดียวกับ Claude.
-4. เขียนไฟล์ชั่วคราวนอก Git แล้วส่งผ่าน `scripts/push-science-video.mjs` ด้วย `source:"chatgpt-fallback"`.
-5. ห้ามแก้ tracked files, ห้าม commit/push และห้ามสร้างวิดีโอในรอบนี้.
+1. อ่าน `routines/fallback/science.md` และรัน `node scripts/routine-freshness.mjs science` ก่อน.
+2. exit 0 จบเงียบ; exit 1 หยุดรายงาน; exit 10 เก็บ JSON snapshot และ updateTime เดิมแล้วทำต่อ.
+3. สร้าง/fact-check เฉพาะงานที่ขาด รักษา id/approval/production; มี production ค้างให้หยุด ไม่แทน batch.
+4. ส่ง JSON ชั่วคราวนอก Git ด้วย `node scripts/push-science-video.mjs <file> --expect-update-time <snapshot.updateTime>` และ `source:"codex-fallback"`.
+5. ถ้า snapshot เริ่มจาก 404 ใช้ `--expect-update-time missing` ซึ่งส่ง `currentDocument.exists=false`.
+6. ทุก PATCH มี optimistic precondition: updateTime ต้องตรงค่าที่อ่านตอนเริ่มงาน จึงป้องกัน Claude Try again เขียนเสร็จระหว่าง Codex ค้นคว้า. ถ้าไม่ส่ง flag สคริปต์ GET ก่อน PATCH แต่ไม่ครอบคลุมช่วงค้นคว้า จึงบังคับ flag สำหรับ fallback.
+7. HTTP 400/409/412 หรือ FAILED_PRECONDITION ให้ exit non-zero ห้าม retry/เปลี่ยน timestamp/เขียนทับ. `--dry-run` พิมพ์ URL/body ไม่ส่ง PATCH (อาจ GET หากไม่ได้ให้ snapshot).
+8. GET อ่านกลับตรวจ week, ids, script ก่อนรายงานผล. ห้ามแก้ tracked files, commit/push, สร้างเสียง/วิดีโอ หรืออัป YouTube ในรอบนี้.
+
+ดู registry และคู่มือตั้ง fallback ทั้งระบบที่ `routines/fallback.json` และ `routines/CODEX-SETUP.md`.
 
 ## 3. Human selection และ production
 

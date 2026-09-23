@@ -47,3 +47,13 @@ doc Firestore `agents/meetings` ไม่มีอะไรอ่านแล้
   **พร้อมเซ็ต `fiveHourPct`/`sevenDayPct` เป็น null** เพื่อไม่ให้หน้าเว็บยึดเลขค้าง
 
 ซอร์สแอปเก็บไว้ที่ `Output/Dale/2026-09-07-widget-source-archive.zip` · บันทึกเต็มที่ `Output/Dale/2026-09-07-widget-retire.md`
+
+## Routine fallback ทั้งระบบ
+
+Claude primary เวลาเดิม → Codex local fallback ตรวจความสดก่อนทำงาน ตาม [registry](../routines/fallback.json).
+[คู่มือตั้งในแอป Codex](../routines/CODEX-SETUP.md) มีข้อความสำหรับ 6 automation ใหม่และแก้ Science เป็นเสาร์ 11:00; publisher คง PAUSED.
+Prompt ทั้ง 7 อยู่ใน [routines/fallback/](../routines/fallback/) และใช้ snapshot precondition ทุกครั้งที่เขียน.
+
+- `node scripts/routine-freshness.mjs <key>` หรือ `--all`: GET เท่านั้น, stdout JSONL, exit 0 สด / 10 ค้าง / 1 error.
+- `node scripts/push-science-video.mjs <file> --expect-update-time <timestamp|missing> --dry-run`: ตรวจ request โดยไม่ PATCH.
+- `node --test scripts/test-routine-fallback.mjs`: ทดสอบ freshness/precondition ด้วย mock ไม่มีการเขียน Firestore จริง.

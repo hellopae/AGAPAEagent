@@ -1,0 +1,146 @@
+[
+  {
+    "key": "horoscope",
+    "name": "Daily Horoscope",
+    "claudeTriggerId": "trig_01B3dRc3N687UjJa9YMBb5K2",
+    "firestoreDoc": "agents/horoscope",
+    "cadence": "daily",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "07:13",
+      "days": "daily"
+    },
+    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=15;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [],
+    "freshness": {
+      "strategy": "thai-report",
+      "reason": "date ภาษาไทยของรายงาน + items ครบ 5 หมวด ไม่ใช้ updateTime"
+    },
+    "promptFile": "routines/fallback/horoscope.md"
+  },
+  {
+    "key": "todo",
+    "name": "To Do Sync (Todoist)",
+    "claudeTriggerId": "trig_01AWFpCrWew43Btwf5K8rhpy",
+    "firestoreDoc": "agents/todo",
+    "cadence": "daily",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "07:30",
+      "days": "daily"
+    },
+    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=30;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [
+      "Todoist"
+    ],
+    "freshness": {
+      "strategy": "todo",
+      "reason": "dataJson.updatedAt เป็น YYYY-MM-DD ของวัน sync พร้อม sections/items/count ที่สอดคล้องกัน; งานว่างเป็นผลสำเร็จได้"
+    },
+    "promptFile": "routines/fallback/todo.md"
+  },
+  {
+    "key": "email",
+    "name": "Email Check (Gmail)",
+    "claudeTriggerId": "trig_01QdmyBJCPUecpeJUZ96HfTV",
+    "firestoreDoc": "agents/email",
+    "cadence": "daily",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "08:00",
+      "days": "daily"
+    },
+    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=10;BYMINUTE=0;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [
+      "Gmail"
+    ],
+    "freshness": {
+      "strategy": "thai-report",
+      "reason": "date ภาษาไทย + items 1–6 บรรทัด + count; ไม่มีเมลก็มีบรรทัดแจ้งผล"
+    },
+    "promptFile": "routines/fallback/email.md"
+  },
+  {
+    "key": "manga",
+    "name": "Manga Sync",
+    "claudeTriggerId": "trig_01CQq3YFqqhEgH6kfmsMEbYz",
+    "firestoreDoc": "agents/manga",
+    "cadence": "daily",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "08:05",
+      "days": "daily"
+    },
+    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=10;BYMINUTE=5;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [],
+    "freshness": {
+      "strategy": "manga",
+      "reason": "ข้อยกเว้นจากต้นฉบับ: ไม่มีวันที่ตรวจใน dataJson และ updatedAt เปลี่ยนเฉพาะมีตอนใหม่ จึงใช้ checkedAt (เขียน atomically พร้อม dataJson ในขั้นสุดท้าย) ร่วมกับ series ครบ 3 เรื่องและ schema ถูกต้อง ไม่ใช้ document updateTime; สถานะบางส่วนไม่มี payload ครบไม่ถือว่าสด"
+    },
+    "promptFile": "routines/fallback/manga.md"
+  },
+  {
+    "key": "daily",
+    "name": "Daily News Digest",
+    "claudeTriggerId": "trig_011BiqveCPxhesQw45aMxGCJ",
+    "firestoreDoc": "agents/daily",
+    "cadence": "daily",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "09:00",
+      "days": "daily"
+    },
+    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=11;BYMINUTE=0;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [],
+    "freshness": {
+      "strategy": "thai-report",
+      "reason": "date ภาษาไทย + items 1–6 บรรทัดจากขั้นสุดท้าย ข่าวที่ไม่มีรวมเป็นบรรทัดได้; สถานะ news/chris/rae ไม่ถือว่าเสร็จ"
+    },
+    "promptFile": "routines/fallback/daily.md"
+  },
+  {
+    "key": "article",
+    "name": "Weekly Article Topics",
+    "claudeTriggerId": "trig_01W6suT3XdXaaArc62B1t9MQ",
+    "firestoreDoc": "agents/article",
+    "cadence": "weekly",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "08:15",
+      "days": "MO"
+    },
+    "codexRrule": "RRULE:FREQ=WEEKLY;BYDAY=MO;BYHOUR=10;BYMINUTE=15;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [],
+    "freshness": {
+      "strategy": "article",
+      "reason": "dataJson.entries มี 3 หัวข้อครบของ ISO week ปัจจุบัน (Asia/Bangkok) ไม่ใช้ updatedAt; คงสถานะที่คุณเป้เลือกภายหลังได้"
+    },
+    "promptFile": "routines/fallback/article.md"
+  },
+  {
+    "key": "science",
+    "name": "Science Video",
+    "claudeTriggerId": "trig_01TxX3pf1uqgAYk5KpMNYhuF",
+    "firestoreDoc": "agents/science_video",
+    "cadence": "weekly",
+    "claudeSchedule": {
+      "timezone": "Asia/Bangkok",
+      "time": "08:00",
+      "days": "SA"
+    },
+    "codexRrule": "RRULE:FREQ=WEEKLY;BYDAY=SA;BYHOUR=11;BYMINUTE=0;BYSECOND=0",
+    "timezone": "Asia/Bangkok",
+    "connectors": [],
+    "freshness": {
+      "strategy": "science",
+      "reason": "dataJson.week ตรง ISO week ปัจจุบัน, items 10 รายการพร้อมบทและแหล่งอ้างอิง, status เป็นขั้นที่มีงานแล้วและไม่ blocked; production ค้างให้ prompt หยุดรักษางาน ไม่ทับ batch"
+    },
+    "promptFile": "routines/fallback/science.md"
+  }
+]
