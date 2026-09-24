@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:00:02.428Z",
+  "updatedAt": "2026-09-24T13:10:37.299Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE batch8 food",
       "report": {
-        "when": "19:32",
-        "title": "AVEGEE fix batch7",
-        "body": "Task complete. Summary of what was delivered:\n\n**Repo:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE`, 4 commits pushed to `main` (`ba67aa0..9e9637c`), plus worklog committed/pushed to `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent`.\n\n- **A** (`9e9637c`): ตวาดข่มขู่ → คูลดาวน์เวลาจริง 2 นาที, ลูกไฟแยกกระสุนเป็น `g.fireAmmo` ของตัวเอง, กระจกวิเศษเฉลยสถานี+ความแรงตรง ๆ (ได้จากแผนที่สุ่ม + คุยกับกานต์ที่หอส่องกรรม), สะกดจิตซื้อจากบุญที่ประตูสวรรค์ 155 เบี้ยกรรม\n- **B** (`6b5cd1c`): ตัดปุ่มเพิ่มช่องรับ/ประหยัดฟืนออกจากแผงสถานี\n- **C** (`2cfe419`): แก้ทิศทางยมน้อย/ยมทูตให้หันขวาเข้าหาศัตรูในทุกท่า (ยืน/โจมตี/คัตซีน), ลดเวลาศัตรูตีสวนจาก 2000ms → 800ms\n- **D** (`acf9487`): เติม hint \"เดินเข้าไปยืนใกล้นิรา/บุญก่อน\" แก้บั๊กตรวจกรรมกับบุญที่ประตูสวรรค์ที่ดูเหมือนกดไม่ได้ (กลไกจริงทำงานถู …"
+        "when": "20:10",
+        "title": "AVEGEE batch8 food",
+        "body": "Report delivered. Summary of what was done:\n\n**Commits pushed to AVEGEE repo:**\n- `5fc0632` — feat(economy): fuel→food mechanic + all player-visible text (ข้อ A+B combined, with reasoning documented in the commit message for why they couldn't be cleanly split)\n- `a4005fa` — fix(save): old-save migration (ข้อ C)\n\n**Files touched:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/data.js`, `src/game.js`, `src/ui.js`\n\n**Report:** `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-24-avegee-batch8-food.md`\n\nEverything was verified by actually running it: `node --test` unit tests (4/4 pass), syntax checks on all touched files, custom Node smoke scripts exercising the new food economy, and a full real-browser pass with Playwright+Chromium at both 1440×900 and 390×844 — …"
       }
     },
     {
