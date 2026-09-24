@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T07:51:37.355Z",
+  "updatedAt": "2026-09-24T11:33:15.405Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE fix batch6",
+      "status": "working",
+      "task": "AVEGEE fix batch7",
       "report": {
         "when": "13:24",
         "title": "AVEGEE fix batch6",
