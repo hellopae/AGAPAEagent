@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T03:09:11.610Z",
+  "updatedAt": "2026-09-24T04:16:32.016Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
-      "task": "Toby: AVEGEE fix batch 4",
+      "status": "done",
+      "task": "AVEGEE fix batch5",
       "report": {
-        "when": "18:50",
-        "title": "Toby menu right + paper texture",
-        "body": "Report delivered to caller. Summary of what was completed in this session working in `/Users/agapae/Documents/Work PAE/Claude/AVEGEE`:\n\n- Moved the trial-screen 6-button menu bar to align above and match the width of `.hud-right` (the case panel), using CSS Grid areas instead of hardcoded widths — `src/ui.js`, `index.html`.\n- Fixed the invisible paper-texture bug on `.hud-rec` by correcting a `background-blend-mode:multiply` layering mistake (verified live with `getComputedStyle` that the image itself loaded fine, 200 status) — `index.html`.\n- Fixed the mis-named `BG-Sala-west.webp` → `BG-Tea-west.webp` tea-pavilion background and verified in-browser that the room now loads the correct file — `img/West/`.\n- Ran Khun Pae's CyberHell crew profile images (5, not 4 — found `crew-kan` was also  …"
+        "when": "11:16",
+        "title": "AVEGEE fix batch5",
+        "body": "Report delivered to caller."
       }
     },
     {
