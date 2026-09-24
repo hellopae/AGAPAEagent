@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-24T13:10:37.299Z",
+  "updatedAt": "2026-09-24T13:23:27.460Z",
   "entries": [
+    {
+      "id": "wl-260924-dale-bmg4",
+      "datetime": "2026-09-24T13:23:27Z",
+      "displayDate": "24 ก.ย. 2569",
+      "displayTime": "20:23",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Dale review AVEGEE batch8",
+      "summary": "Review complete — handed back to caller with PASS verdict for AVEGEE batch 8."
+    },
     {
       "id": "wl-260924-toby-v46r",
       "datetime": "2026-09-24T13:10:37Z",
