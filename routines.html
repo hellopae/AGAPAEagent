@@ -82,6 +82,7 @@
   .sv-idea pre{white-space:pre-wrap;font:inherit;font-size:12.5px;color:var(--ink-soft);margin-top:7px;line-height:1.7}
   .sv-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
   .sv-button{appearance:none;border:1px solid var(--accent);border-radius:9px;background:var(--accent);color:var(--paper-2);font:600 12px inherit;padding:8px 12px;cursor:pointer}
+  .sv-button{text-decoration:none;display:inline-block}
   .sv-button:disabled{opacity:.45;cursor:not-allowed}
   .sv-choice-note{font-size:12px;color:var(--ink-faint)}
   .sv-production{display:grid;gap:8px}
@@ -181,70 +182,17 @@ function sciencePayload(d){
   }
   return d;
 }
-function scienceChoiceKey(week){return `agapae-science-choice:${week || "draft"}`}
-function scienceChoices(week){
-  try{return new Set(JSON.parse(localStorage.getItem(scienceChoiceKey(week)) || "[]"))}
-  catch{return new Set()}
-}
-function saveScienceChoices(week,set){localStorage.setItem(scienceChoiceKey(week),JSON.stringify([...set]))}
-
 function renderScience(input){
-  const d = sciencePayload(input);
-  scienceCurrent = d;
-  const box = document.getElementById("c-science");
-  if(!d || !Array.isArray(d.items) || !d.week){box.innerHTML=`<div class="empty">${EMPTY_TEXT.science}</div>`;return}
-  const choices = scienceChoices(d.week);
-  const rank = SV_FLOW.indexOf(d.status);
-  const ideas = d.items.map((item,index)=>{
-    const id = encodeURIComponent(item.id || `idea-${index+1}`);
-    const checked = choices.has(item.id) ? " checked" : "";
-    const script = item.script ? `<details><summary>อ่านบทพากย์</summary><pre>${esc(item.script)}</pre></details>` : "";
-    return `<label class="sv-idea">
-      <div class="sv-idea-title"><input type="checkbox" class="sv-choice" data-id="${id}"${checked}>${index+1}. ${esc(item.title || "ยังไม่มีชื่อ")}</div>
-      ${item.hook ? `<div class="sv-idea-hook">${esc(item.hook)}</div>` : ""}${script}
-    </label>`;
-  }).join("");
-  const production = Array.isArray(d.production) && d.production.length
-    ? d.production.map(job=>`<div class="sv-job"><div class="sv-job-title">${esc(job.title)}</div><span class="sv-status mono">${esc(SV_LABELS[job.status] || job.status || "-")}</span></div>`).join("")
-    : `<div class="sv-empty">ยังไม่มีงานผลิต — เลือกหัวข้อให้ครบ 3 เรื่องก่อน</div>`;
-  box.innerHTML=`
-    <div class="sv-head"><div><div class="sv-kicker mono">${esc(d.week)} · ${esc(d.source || "รอผู้สร้าง")}</div>
-      <div class="sv-title">${esc(d.series === "Tora & the Gangz" ? "Tora & the Gangz — Story Pipeline" : d.title || "Tora & the Gangz — Story Pipeline")}</div>
-      <div class="sv-meta">${esc(d.displayDate || "")} ${d.updatedAt ? `· อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}` : ""}</div>
-    </div><span class="sv-status mono">${esc(SV_LABELS[d.status] || d.status)}</span></div>
-    <div class="sv-flow">${SV_FLOW.map((s,i)=>`<span class="sv-step ${i<=rank?"active":""}">${esc(SV_LABELS[s])}</span>`).join("")}</div>
-    <div class="sv-section">เลือก 3 หัวข้อจาก ${d.items.length} หัวข้อ</div>
-    <div class="sv-grid">${ideas}</div>
-    <div class="sv-actions"><button class="sv-button" id="sv-copy" type="button">คัดลอก 3 หัวข้อที่เลือก</button><span class="sv-choice-note" id="sv-note"></span></div>
-    <div class="sv-section">สถานะการผลิต</div><div class="sv-production">${production}</div>`;
-  box.querySelectorAll(".sv-choice").forEach(input=>input.addEventListener("change",()=>toggleScienceChoice(input)));
-  document.getElementById("sv-copy").addEventListener("click",copyScienceChoices);
-  updateScienceChoiceNote();
-}
-
-function toggleScienceChoice(input){
-  if(!scienceCurrent) return;
-  const id = decodeURIComponent(input.dataset.id);
-  const set = scienceChoices(scienceCurrent.week);
-  if(input.checked && set.size>=3){input.checked=false;return updateScienceChoiceNote("เลือกได้ไม่เกิน 3 หัวข้อ")}
-  input.checked ? set.add(id) : set.delete(id);
-  saveScienceChoices(scienceCurrent.week,set);
-  updateScienceChoiceNote();
-}
-function updateScienceChoiceNote(message=""){
-  if(!scienceCurrent) return;
-  const count = scienceChoices(scienceCurrent.week).size;
-  const note = document.getElementById("sv-note");
-  const button = document.getElementById("sv-copy");
-  if(note) note.textContent = message || `เลือกแล้ว ${count}/3 — การเลือกเก็บเฉพาะในเครื่องนี้`;
-  if(button) button.disabled = count!==3;
-}
-async function copyScienceChoices(){
-  const ids = scienceChoices(scienceCurrent.week);
-  const selected = scienceCurrent.items.filter(item=>ids.has(item.id));
-  const text = [`Tora & the Gangz ${scienceCurrent.week}`, ...selected.map((item,i)=>`${i+1}. ${item.id} — ${item.title}`)].join("\n");
-  try{await navigator.clipboard.writeText(text);updateScienceChoiceNote("คัดลอกแล้ว — ส่งข้อความนี้ให้ Claude หรือ ChatGPT ได้เลย")}
-  catch{updateScienceChoiceNote("คัดลอกอัตโนมัติไม่ได้ กรุณาลองใหม่จาก HTTPS")}
+  const d=sciencePayload(input);
+  scienceCurrent=d;
+  const box=document.getElementById("c-science");
+  if(!d||!Array.isArray(d.items)||!d.week){box.innerHTML='<div class="empty">ยังไม่มีชุดบท Tora & the Gangz</div>';return}
+  const active=Array.isArray(d.production)?d.production.filter(job=>job.status!=="published"):[];
+  const published=Array.isArray(d.production)?d.production.filter(job=>job.status==="published"):[];
+  box.innerHTML='<div class="sv-head"><div><div class="sv-kicker mono">'+esc(d.week)+' · '+esc(d.source||"Claude")+'</div><div class="sv-title">Tora & the Gangz — Story Pipeline</div><div class="sv-meta">10 บท → เลือก 3 พร้อมคอมเมนต์ → ทำ Animation → YouTube</div></div></div>'+
+    '<div class="sv-section">บทที่เสนอ '+d.items.length+' เรื่อง · กำลังผลิต '+active.length+' · เผยแพร่แล้ว '+published.length+'</div>'+
+    '<div class="sv-grid">'+d.items.map((item,i)=>'<div class="sv-idea"><div class="sv-idea-title">'+(i+1)+'. '+esc(item.title||"ยังไม่มีชื่อ")+'</div>'+ (item.hook?'<div class="sv-idea-hook">'+esc(item.hook)+'</div>':'')+'</div>').join('')+'</div>'+
+    '<div class="sv-actions"><a class="sv-button" href="index.html#science">เปิดหน้าเลือกบทและติดตามงาน ↗</a></div>';
 }
 
 for(const kind of ["daily","weekly","monthly"]){
