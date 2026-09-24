@@ -1,25 +1,5 @@
 [
   {
-    "key": "horoscope",
-    "name": "Daily Horoscope",
-    "claudeTriggerId": "trig_01B3dRc3N687UjJa9YMBb5K2",
-    "firestoreDoc": "agents/horoscope",
-    "cadence": "daily",
-    "claudeSchedule": {
-      "timezone": "Asia/Bangkok",
-      "time": "07:13",
-      "days": "daily"
-    },
-    "codexRrule": "RRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=15;BYSECOND=0",
-    "timezone": "Asia/Bangkok",
-    "connectors": [],
-    "freshness": {
-      "strategy": "thai-report",
-      "reason": "date ภาษาไทยของรายงาน + items ครบ 5 หมวด ไม่ใช้ updateTime"
-    },
-    "promptFile": "routines/fallback/horoscope.md"
-  },
-  {
     "key": "todo",
     "name": "To Do Sync (Todoist)",
     "claudeTriggerId": "trig_01AWFpCrWew43Btwf5K8rhpy",

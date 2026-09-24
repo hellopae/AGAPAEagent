@@ -1951,7 +1951,7 @@ function fsCheckedText(checkedAt){
 /* =========================================================================
    อ่าน routine ออกเสียง — พอร์ตมาจาก scripts/brief.mjs + scripts/speak.mjs
    ใช้ Web Speech API ของเบราว์เซอร์ ไม่ต้องมีเซิร์ฟเวอร์ ไม่มีค่าใช้จ่าย
-   routine = ราคา + อีเมล + งาน + ข่าว (ดวงกับมังงะไม่อยู่ใน routine เหมือนฝั่ง CLI)
+   routine = ราคา + อีเมล + งาน + ข่าว (มังงะไม่อยู่ใน routine เหมือนฝั่ง CLI)
    ========================================================================= */
 
 /* อ่าน doc จาก Firestore แบบดิบ (fsPayload ใช้ไม่ได้ เพราะ email/daily ไม่ได้เก็บใน dataJson) */
@@ -4725,7 +4725,7 @@ firebase.firestore().collection("agents").doc("finance").onSnapshot(d=>{
 </script>
 <dialog id="speakDlg" aria-labelledby="speakDlgTitle">
   <h3 id="speakDlgTitle">routine วันนี้</h3>
-  <div class="sub">ราคา · อีเมล · งาน · ข่าว — ดวงกับมังงะไม่อยู่ใน routine</div>
+  <div class="sub">ราคา · อีเมล · งาน · ข่าว — มังงะไม่อยู่ใน routine</div>
   <div id="speakText"></div>
   <div class="row">
     <button type="button" class="speak-btn" id="speakClose">ปิด</button>

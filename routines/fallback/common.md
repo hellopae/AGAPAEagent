@@ -1,4 +1,4 @@
-# ข้อตกลงร่วมสำหรับ fallback ทั้ง 7 ตัว
+# ข้อตกลงร่วมสำหรับ fallback ทั้ง 6 ตัว
 
 Claude primary รันก่อนตามเวลาเดิม; Codex ทำเฉพาะเมื่อ freshness exit 10
 ห้ามแก้ไฟล์ repo, commit/push/merge/deploy, hooks, status.json, worklog.json, work-mode.json, automation หรือ Claude cloud routine
@@ -27,7 +27,7 @@ freshness_exit=$?
 - เฉพาะ snapshot 404 ที่ยัง 404: article/manga ใช้ไฟล์ JSON ใน repo เป็นฐานได้; science สร้างฐานใหม่
 - parse fields.dataJson.stringValue เป็น payload; ห้ามใช้ข้อมูล malformed เป็นฐาน
 
-## การเขียนปลายทาง (email/todo/manga/article/daily/horoscope)
+## การเขียนปลายทาง (email/todo/manga/article/daily)
 
 เตรียม `RUN_DIR/fields.json` เป็น Firestore REST `{ "fields": { ... } }` ตาม schema ใน prompt
 ใช้ stringValue, integerValue (เลขฐานสิบแบบ string), arrayValue.values, mapValue.fields ตามชนิดจริง ห้ามเปลี่ยน dataJson จาก string เป็น map

@@ -55,13 +55,6 @@
   .r-items li:last-child{border-bottom:none}
   .r-items li::before{content:"▸";position:absolute;left:2px;color:var(--gold);font-size:12px}
   .r-stamp{margin-top:14px;font-size:11px;color:var(--ink-faint)}
-  /* แถบดวงกำเนิด — ค่าคงที่ แสดงเฉพาะแท็บดูดวง */
-  .r-natal{
-    display:flex;flex-wrap:wrap;gap:4px 10px;margin:-6px 0 14px;
-    font-size:11.5px;letter-spacing:.04em;color:var(--ink-faint);
-  }
-  .r-natal b{color:var(--gold);font-weight:600}
-  .r-natal .sep{opacity:.4}
   .empty{color:var(--ink-faint);font-size:14px;padding:8px 0}
   details.r-full{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
   details.r-full summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--gold)}
@@ -110,7 +103,7 @@
       <img class="press-mark" src="avatars/Logo-Agapae.jpg" alt="AGAPAE">
       <div>
         <h1>Routines</h1>
-        <div class="sub mono">Daily · Weekly · Monthly · Science Video · Horoscope</div>
+        <div class="sub mono">Daily · Weekly · Monthly · Science Video</div>
       </div>
     </div>
     <a class="back" href="index.html">← Team Console</a>
@@ -123,7 +116,6 @@
     <button class="tab" data-t="weekly" onclick="switchTab('weekly')">Weekly</button>
     <button class="tab" data-t="monthly" onclick="switchTab('monthly')">Monthly</button>
     <button class="tab" data-t="science" onclick="switchTab('science')">Science Video</button>
-    <button class="tab" data-t="horoscope" onclick="switchTab('horoscope')">ดูดวง</button>
   </div>
 </div>
 
@@ -132,7 +124,6 @@
   <div class="panel" id="p-weekly"><div class="r-card" id="c-weekly"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-monthly"><div class="r-card" id="c-monthly"><div class="empty">กำลังโหลด…</div></div></div>
   <div class="panel" id="p-science"><div class="r-card" id="c-science"><div class="empty">กำลังโหลด…</div></div></div>
-  <div class="panel" id="p-horoscope"><div class="r-card" id="c-horoscope"><div class="empty">กำลังโหลด…</div></div></div>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -157,31 +148,19 @@ const EMPTY_TEXT = {
   weekly: "ยังไม่มีสรุปประจำสัปดาห์ — Weekly routine จะเริ่มเขียนเร็ว ๆ นี้",
   monthly:"ยังไม่มีสรุปประจำเดือน — Monthly routine จะเริ่มเขียนเร็ว ๆ นี้",
   science:"ยังไม่มีชุดหัวข้อ Science Video — Claude เริ่มทุกเสาร์ 08:00 และ ChatGPT ตรวจสำรอง 08:15",
-  horoscope:"ยังไม่มีดวงวันนี้ — Horoscope routine เขียนทุกเช้า 07:13",
 };
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 
-/* ดวงกำเนิดของเป้ — ค่าคงที่ ไม่ได้อ่านจาก Firestore
-   เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ · ลัคนาคำนวณแบบนิรายนะ (ลาหิรี)
-   ฝั่งสากล/สายนะ ตกที่กันย์ 6°58′ — เว็บที่บอกไม่ตรงกันมักใช้คนละระบบหรือเวลาคลาด */
-const NATAL_HTML = `<div class="r-natal" title="เกิด อา. 29 ม.ค. 2527 20:12 น. กรุงเทพฯ · ระบบนิรายนะ (ลาหิรี) · ฝั่งสากล = กันย์ 6°58′">
-  <span>ลัคนา <b>สิงห์ 13°21′</b> (เจ้าเรือน = อาทิตย์)</span><span class="sep">·</span>
-  <span>ราศี <b>มกร</b></span><span class="sep">·</span>
-  <span>ปีนักษัตร <b>กุน</b></span>
-</div>`;
-
 function render(kind, d){
   const box = document.getElementById('c-'+kind);
-  const natal = kind === "horoscope" ? NATAL_HTML : "";
   if(!d || !Array.isArray(d.items) || !d.items.length){
-    box.innerHTML = `${natal}<div class="empty">${EMPTY_TEXT[kind]}</div>`;
+    box.innerHTML = `<div class="empty">${EMPTY_TEXT[kind]}</div>`;
     return;
   }
   box.innerHTML = `
     ${d.date ? `<div class="r-date mono">${esc(d.date)}</div>` : ""}
     <div class="r-title">${esc(d.title || "สรุป")}</div>
-    ${natal}
     <ul class="r-items">${d.items.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
     ${d.full ? `<details class="r-full"><summary>อ่านฉบับเต็ม</summary><pre>${esc(d.full)}</pre></details>` : ""}
     ${d.updatedAt ? `<div class="r-stamp mono">อัปเดต ${new Date(d.updatedAt).toLocaleString("th-TH",{dateStyle:"medium",timeStyle:"short"})}</div>` : ""}`;
@@ -268,7 +247,7 @@ async function copyScienceChoices(){
   catch{updateScienceChoiceNote("คัดลอกอัตโนมัติไม่ได้ กรุณาลองใหม่จาก HTTPS")}
 }
 
-for(const kind of ["daily","weekly","monthly","horoscope"]){
+for(const kind of ["daily","weekly","monthly"]){
   firebase.firestore().collection("agents").doc(kind).onSnapshot(
     d=>render(kind, d.exists ? d.data() : null),
     err=>{console.warn("Firestore",kind,err); render(kind,null);}
@@ -281,7 +260,7 @@ firebase.firestore().collection("agents").doc("science_video").onSnapshot(
   err=>{console.warn("Firestore science_video",err);if(!scienceCurrent)renderScience(null);}
 );
 const initialTab = location.hash.slice(1);
-if(["daily","weekly","monthly","science","horoscope"].includes(initialTab)) switchTab(initialTab);
+if(["daily","weekly","monthly","science"].includes(initialTab)) switchTab(initialTab);
 </script>
 </body>
 </html>

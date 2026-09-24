@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /* ประกอบ "สรุปเช้า" จากข้อมูลจริงใน Firestore (agents/*) ออกมาเป็นข้อความสำหรับอ่านออกเสียง
-   ใช้:  node brief.mjs                 → routine ประจำวัน = ราคา + อีเมล + งาน + ข่าว (ไม่มีดวง/มังงะ)
-         node brief.mjs --all           → ใส่ดวงกับมังงะเข้ามาด้วย
-         node brief.mjs --only ราคา     → เฉพาะบางหมวด (ดวง|อีเมล|งาน|ข่าว|มังงะ|ราคา)
+   ใช้:  node brief.mjs                 → routine ประจำวัน = ราคา + อีเมล + งาน + ข่าว (ไม่มีมังงะ)
+         node brief.mjs --all           → ใส่มังงะเข้ามาด้วย
+         node brief.mjs --only ราคา     → เฉพาะบางหมวด (อีเมล|งาน|ข่าว|มังงะ|ราคา)
          node brief.mjs | node speak.mjs
    หมวด "ราคา" ดึงสดจาก API ทุกครั้ง (Binance / ทองไทย / Fear&Greed) ไม่ผ่าน Firestore
    หมายเหตุ: พิมพ์ออก stdout อย่างเดียว ไม่เขียนไฟล์ ไม่แตะ Firestore */
@@ -17,7 +17,7 @@ const only = (() => {
   return i === -1 ? null : argv[i + 1];
 })();
 const all = argv.includes("--all");
-/* routine ประจำวันตัดดวงกับมังงะออก — สองอย่างนี้ขอฟังเองเมื่ออยากฟัง */
+/* routine ประจำวันตัดมังงะออก — ขอฟังเองเมื่ออยากฟัง */
 const ROUTINE = new Set(["ราคา", "อีเมล", "งาน", "ข่าว"]);
 
 /* แปลงค่า Firestore REST → ค่า JS ธรรมดา */
@@ -115,8 +115,7 @@ const push = (head, lines) => {
   out.push(head, ...clean, "");
 };
 
-const [horo, email, todo, daily, manga, price] = await Promise.all([
-  want("ดวง") ? doc("horoscope") : null,
+const [email, todo, daily, manga, price] = await Promise.all([
   want("อีเมล") ? doc("email") : null,
   want("งาน") ? doc("todo") : null,
   want("ข่าว") ? doc("daily") : null,
@@ -124,10 +123,8 @@ const [horo, email, todo, daily, manga, price] = await Promise.all([
   want("ราคา") ? prices(!only && !all) : null,
 ]);
 
-const stamp = horo?.date || email?.date || today;
+const stamp = email?.date || today;
 if (!only) out.push(`สวัสดีครับพี่เป้ วันนี้ ${stamp} routine วันนี้เป็นแบบนี้ครับ`, "");
-
-if (horo?.items?.length) push("ดวงวันนี้", horo.items);
 
 if (email) {
   const n = email.count ?? 0;

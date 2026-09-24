@@ -48,7 +48,7 @@ export function evaluate(routine, raw, now = new Date()) {
   let fresh = false;
   switch (routine.freshness.strategy) {
     case 'thai-report':
-      fresh = thaiDay(fields.date) === today && text(fields.title) && list(fields.items, routine.key === 'horoscope' ? 5 : 1, routine.key === 'horoscope' ? 5 : 6);
+      fresh = thaiDay(fields.date) === today && text(fields.title) && list(fields.items, 1, 6);
       if (routine.key === 'email') fresh &&= Number.isInteger(fields.count) && fields.count >= 0;
       break;
     case 'todo': {

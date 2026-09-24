@@ -14,7 +14,6 @@ const val = v => v === null ? { nullValue: null } : typeof v === 'string' ? { st
 const raw = fields => ({ updateTime: stamp, fields: val(fields).mapValue.fields });
 const science = { schemaVersion: 1, week: '2026-W39', status: 'ideas_ready', production: [], items: Array.from({ length: 10 }, (_, i) => ({ id: String(i), title: 'title', hook: 'hook', why: 'why', script: 'script', sources: ['https://example.org/paper'], visualPlan: ['1','2','3','4','5'] })) };
 const examples = {
-  horoscope: { title: 'รายงาน', date: 'พฤหัสบดี 24 ก.ย. 2569', items: ['1','2','3','4','5'] },
   email: { title: 'รายงาน', date: 'พฤหัสบดี 24 ก.ย. 2569', items: ['ยังไม่มีอีเมลใหม่'], count: 0 },
   daily: { title: 'รายงาน', date: 'พฤหัสบดี 24 ก.ย. 2569', items: ['ไม่มีข่าวใหม่ภายใน 48 ชม.'] },
   todo: { count: 0, dataJson: JSON.stringify({ updatedAt: '2026-09-24', sections: [{ id: 'inbox', name: 'Inbox' }], items: [] }) },
@@ -56,8 +55,8 @@ test('freshness CLI exits 0/10/1 and --all JSONL/error priority', () => {
   assert.equal(fresh.status, 0, fresh.stdout + fresh.stderr);
   assert.equal(cli('./routine-freshness.mjs', ['daily'], [{ status: 404 }]).status, 10);
   assert.equal(cli('./routine-freshness.mjs', ['daily'], [{ status: 500 }]).status, 1);
-  const all = cli('./routine-freshness.mjs', ['--all'], registry.map((_, i) => ({ status: i === 3 ? 403 : 404 })));
-  assert.equal(all.status, 1); assert.equal(all.stdout.trim().split('\n').length, 7);
+  const all = cli('./routine-freshness.mjs', ['--all'], registry.map((_, i) => ({ status: i === 2 ? 403 : 404 })));
+  assert.equal(all.status, 1); assert.equal(all.stdout.trim().split('\n').length, 6);
   assert.equal(cli('./routine-freshness.mjs', ['--all'], registry.map(() => ({ status: 404 }))).status, 10);
 });
 test('Science GET/precondition, caller snapshot, dry-run and no retry on conflicts', () => {
@@ -87,7 +86,7 @@ test('Science GET/precondition, caller snapshot, dry-run and no retry on conflic
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 test('registry and prompts have matching gates, schedules and privacy boundaries', () => {
-  assert.deepEqual(registry.map(r => r.key), ['horoscope','todo','email','manga','daily','article','science']);
+  assert.deepEqual(registry.map(r => r.key), ['todo','email','manga','daily','article','science']);
   for (const r of registry) {
     const prompt = readFileSync(new URL(`../${r.promptFile}`, import.meta.url), 'utf8');
     assert.ok(prompt.startsWith(`รัน \`node scripts/routine-freshness.mjs ${r.key}\``));

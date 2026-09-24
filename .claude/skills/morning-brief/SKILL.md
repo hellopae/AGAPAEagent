@@ -1,6 +1,6 @@
 ---
 name: morning-brief
-description: อ่าน routine ประจำวันออกเสียง — ราคาบิตคอยน์+ทอง อีเมลใหม่ งานที่ถึงกำหนด ข่าว ใช้เมื่อ Kittanate สั่ง "อ่าน routine วันนี้ให้ฟังหน่อย" "สรุปเช้า" "อ่านให้ฟัง" "พูดสรุป" หรือขอฟังเฉพาะหมวด (ดวง มังงะ ต้องขอเองถึงจะอ่าน)
+description: อ่าน routine ประจำวันออกเสียง — ราคาบิตคอยน์+ทอง อีเมลใหม่ งานที่ถึงกำหนด ข่าว ใช้เมื่อ Kittanate สั่ง "อ่าน routine วันนี้ให้ฟังหน่อย" "สรุปเช้า" "อ่านให้ฟัง" "พูดสรุป" หรือขอฟังเฉพาะหมวด (มังงะ ต้องขอเองถึงจะอ่าน)
 ---
 
 # Skill: morning-brief
@@ -17,15 +17,15 @@ node scripts/brief.mjs | node scripts/speak.mjs
 
 ```
 node scripts/brief.mjs                                   # ดูเป็นข้อความก่อน ไม่พูด
-node scripts/brief.mjs --all | node scripts/speak.mjs    # ใส่ดวง+มังงะเข้ามาด้วย
-node scripts/brief.mjs --only ดวง | node scripts/speak.mjs
+node scripts/brief.mjs --all | node scripts/speak.mjs    # ใส่มังงะเข้ามาด้วย
+node scripts/brief.mjs --only มังงะ | node scripts/speak.mjs
 node scripts/speak.mjs "ข้อความอะไรก็ได้"
 ```
 
 **routine ประจำวัน (ค่าเริ่มต้น) = `ราคา` + `อีเมล` + `งาน` + `ข่าว`**
-ดวงกับมังงะ **ไม่อยู่ใน routine** เพราะทำให้ยาวเกิน — ต้องสั่ง `--only ดวง` / `--only มังงะ` / `--all` ถึงจะอ่าน
+มังงะ **ไม่อยู่ใน routine** เพราะทำให้ยาวเกิน — ต้องสั่ง `--only มังงะ` / `--all` ถึงจะอ่าน
 
-หมวดที่ `--only` รับ: `ดวง` `อีเมล` `งาน` `ข่าว` `มังงะ` `ราคา`
+หมวดที่ `--only` รับ: `อีเมล` `งาน` `ข่าว` `มังงะ` `ราคา`
 
 `ราคา` = บิตคอยน์ (Binance) + ทองไทย — **ดึงสดทุกครั้ง** ไม่ใช้ค่าที่ routine แช่ไว้
 
@@ -66,7 +66,7 @@ flags ของ `speak.mjs`: `--rate 200` (เร็วขึ้น) · `--pitch
 
 | หมวด | มาจากไหน | สดแค่ไหน |
 |---|---|---|
-| ดวง ข่าว มังงะ | Firestore `agents/*` | เท่าที่ routine รันล่าสุด |
+| ข่าว มังงะ | Firestore `agents/*` | เท่าที่ routine รันล่าสุด |
 | อีเมล งาน | Firestore `agents/email` `agents/todo` | เท่าที่ routine รันล่าสุด (มักตี 1) |
 | ราคา | Binance / ทองไทย / Fear&Greed | สดทุกครั้งที่รัน |
 
