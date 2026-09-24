@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:10:37.299Z",
+  "updatedAt": "2026-09-24T13:10:45.888Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review AVEGEE batch7",
+      "status": "working",
+      "task": "Dale review AVEGEE batch8",
       "report": {
         "when": "20:00",
         "title": "Dale review AVEGEE batch7",
