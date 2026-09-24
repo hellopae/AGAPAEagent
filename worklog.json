@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-24T04:16:32.016Z",
+  "updatedAt": "2026-09-24T04:37:46.110Z",
   "entries": [
+    {
+      "id": "wl-260924-dale-jkzj",
+      "datetime": "2026-09-24T04:37:46Z",
+      "displayDate": "24 ก.ย. 2569",
+      "displayTime": "11:37",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Dale review AVEGEE batch5",
+      "summary": "Review complete — PASS delivered to Claudy via handback."
+    },
     {
       "id": "wl-260924-toby-s9w0",
       "datetime": "2026-09-24T04:16:32Z",
