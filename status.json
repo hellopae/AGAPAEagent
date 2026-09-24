@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T12:32:13.445Z",
+  "updatedAt": "2026-09-24T12:32:24.909Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review AVEGEE batch6",
+      "status": "working",
+      "task": "Dale review AVEGEE batch7",
       "report": {
         "when": "14:51",
         "title": "Dale review AVEGEE batch6",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE fix batch7",
+      "status": "working",
+      "task": "AVEGEE batch8 food",
       "report": {
         "when": "19:32",
         "title": "AVEGEE fix batch7",
