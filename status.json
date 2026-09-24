@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:10:45.888Z",
+  "updatedAt": "2026-09-24T13:11:25.053Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE batch8 food",
+      "status": "working",
+      "task": "AVEGEE batch9 minigames",
       "report": {
         "when": "20:10",
         "title": "AVEGEE batch8 food",
