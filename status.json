@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T05:27:24.587Z",
+  "updatedAt": "2026-09-24T06:24:55.097Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE fix batch6",
       "report": {
-        "when": "11:16",
-        "title": "AVEGEE fix batch5",
-        "body": "Report delivered to caller."
+        "when": "13:24",
+        "title": "AVEGEE fix batch6",
+        "body": "Report delivered. Summary of the work:\n\n**Files touched (AVEGEE repo):**\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/ui.js`\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/room.js`\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/index.html`\n- `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/command-wheel.css`\n\n**Report:** `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-24-avegee-fix-batch6.md`\n\nAll 5 commits (A–E) pushed to `main` on the AVEGEE repo, and the worklog committed/pushed to the AGAPAE Agent repo."
       }
     },
     {
