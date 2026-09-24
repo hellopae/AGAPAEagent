@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:23:27.460Z",
+  "updatedAt": "2026-09-24T13:50:25.307Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE batch9 minigames",
       "report": {
-        "when": "20:10",
-        "title": "AVEGEE batch8 food",
-        "body": "Report delivered. Summary of what was done:\n\n**Commits pushed to AVEGEE repo:**\n- `5fc0632` — feat(economy): fuel→food mechanic + all player-visible text (ข้อ A+B combined, with reasoning documented in the commit message for why they couldn't be cleanly split)\n- `a4005fa` — fix(save): old-save migration (ข้อ C)\n\n**Files touched:** `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/data.js`, `src/game.js`, `src/ui.js`\n\n**Report:** `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-24-avegee-batch8-food.md`\n\nEverything was verified by actually running it: `node --test` unit tests (4/4 pass), syntax checks on all touched files, custom Node smoke scripts exercising the new food economy, and a full real-browser pass with Playwright+Chromium at both 1440×900 and 390×844 — …"
+        "when": "20:50",
+        "title": "AVEGEE batch9 minigames",
+        "body": "Report delivered to Claudy."
       }
     },
     {
