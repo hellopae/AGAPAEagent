@@ -1024,6 +1024,16 @@
   .sci-btn{border:1px solid var(--accent);border-radius:9px;background:var(--accent);color:var(--paper-2);font:600 12px inherit;padding:8px 12px;cursor:pointer}
   .sci-btn:disabled{opacity:.42;cursor:not-allowed}
   .sci-note,.sci-empty{font-size:12.5px;color:var(--ink-faint)}
+  .sci-group{margin:22px 0;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--paper-2)}
+  .sci-group-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:13px}
+  .sci-group-head h3{margin:0;font-size:17px;line-height:1.6}.sci-group-head p{margin:0;font-size:12px;color:var(--ink-faint)}
+  .sci-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}
+  .sci-nav a{padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);text-decoration:none;font-size:12px;line-height:1.6}
+  .sci-nav b{display:block;color:var(--gold);font-size:16px}.sci-comment{display:block;margin:12px 0 0 22px;font-size:12px;color:var(--ink-soft)}
+  .sci-comment textarea{display:block;width:100%;min-height:64px;resize:vertical;margin-top:5px;padding:8px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;line-height:1.6}
+  .sci-picked{display:grid;gap:8px}.sci-picked-item{padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:var(--paper);font-size:13px}
+  .sci-picked-item strong{display:block}.sci-picked-item p{margin:4px 0 0;color:var(--ink-soft);white-space:pre-wrap}.sci-job a{color:var(--gold)}
+  @media(max-width:700px){.sci-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
   .sci-production{display:grid;gap:0;margin-bottom:8px}
   .sci-job{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:10px 0;font-size:13px;color:var(--ink-soft)}
   .sci-job:first-child{border-top:none}
@@ -1387,7 +1397,7 @@
         บทความ <span class="tab-count" id="articleCount">0</span>
       </button>
       <button class="view-tab" data-v="science" onclick="switchView('science')">
-        Science <span class="tab-count" id="scienceCount">0</span>
+        Tora <span class="tab-count" id="scienceCount">0</span>
       </button>
       <!-- แท็บ Pain Point ถอดออกจากหน้าจอ 5 ก.ย. 2569 ตามที่ Kittanate สั่ง —
            ข้อมูลยังอยู่ครบ (painpoint.json + Firestore agents/painpoint) และ view ยังอยู่ข้างล่าง
@@ -1527,8 +1537,8 @@
 <div id="scienceView" style="display:none">
   <div class="wrap">
     <section class="hero">
-      <div class="ey mono">Science · Script · Voice · Video</div>
-      <p>หัวข้อวิทยาศาสตร์ 10 เรื่องประจำสัปดาห์ · เลือก 3 เรื่องเพื่อทำเสียงและวิดีโอ</p>
+      <div class="ey mono">Tora & the Gangz · Story Pipeline</div>
+      <p>10 บทสั้นประจำสัปดาห์ · เลือก 3 เรื่องพร้อมคอมเมนต์ · ติดตามเสียง วิดีโอ และ YouTube</p>
     </section>
     <div id="scienceBody"><div class="muted" style="padding:20px 0">กำลังโหลด…</div></div>
     <footer>
@@ -4366,86 +4376,159 @@ document.getElementById('ppLog')?.addEventListener('toggle', ppSyncToggle, true)
    ===================================================================== */
 let SCIENCE = null;
 const SCI_CHOICES = new Set();
+let SCI_COMMENTS = {};
 const SCI_LABELS = {
-  awaiting_ideas:'รอสร้างหัวข้อ', ideas_ready:'มี 10 หัวข้อแล้ว', selected:'เลือก 3 หัวข้อแล้ว',
+  awaiting_ideas:'รอ 10 บท', ideas_ready:'มี 10 บทแล้ว', selected:'เลือก 3 บทแล้ว',
   voice_ready:'เสียงพร้อม', video_ready:'วิดีโอพร้อม', review:'รอตรวจ', approved:'อนุมัติแล้ว',
-  scheduled:'ตั้งเวลาแล้ว', published:'เผยแพร่แล้ว', blocked:'ต้องดำเนินการ'
+  scheduled:'ตั้งเวลาแล้ว', published:'เผยแพร่แล้ว', blocked:'ติดขัด'
 };
-const SCI_FLOW = ['ideas_ready','selected','voice_ready','video_ready','review','approved','scheduled','published'];
-
-function updateScienceCount(){
-  const el = document.getElementById('scienceCount');
-  if(el) el.textContent = SCIENCE && Array.isArray(SCIENCE.items) ? SCIENCE.items.length : 0;
+function sciEl(parent,tag,value,className){
+  const node=document.createElement(tag);
+  node.textContent=value || '';
+  if(className) node.className=className;
+  parent.append(node);
+  return node;
 }
-
-function updateScienceChoiceNote(message=''){
-  const note = document.getElementById('scienceChoiceNote');
-  const button = document.getElementById('scienceCopy');
-  if(note) note.textContent = message || `เลือกแล้ว ${SCI_CHOICES.size}/3`;
-  if(button) button.disabled = SCI_CHOICES.size !== 3;
-}
-
-function toggleScienceChoice(input){
-  const id = decodeURIComponent(input.dataset.id || '');
-  if(input.checked && SCI_CHOICES.size >= 3){
-    input.checked = false;
-    return updateScienceChoiceNote('เลือกได้ไม่เกิน 3 หัวข้อ');
-  }
-  input.checked ? SCI_CHOICES.add(id) : SCI_CHOICES.delete(id);
-  input.closest('.sci-card')?.classList.toggle('selected', input.checked);
-  updateScienceChoiceNote();
-}
-
-async function copyScienceChoices(){
-  if(!SCIENCE || SCI_CHOICES.size !== 3) return;
-  const selected = SCIENCE.items.filter(item => SCI_CHOICES.has(item.id));
-  const text = [`Science Video ${SCIENCE.week || ''}`, ...selected.map((item,i) => `${i+1}. ${item.id || ''} — ${item.title || ''}`)].join('\n');
+function sciKey(){return 'tora-gangz-review:'+(SCIENCE?.week||'draft')}
+function restoreScience(){
+  SCI_CHOICES.clear(); SCI_COMMENTS={};
+  if(!SCIENCE?.week || !Array.isArray(SCIENCE.items)) return;
   try{
-    await navigator.clipboard.writeText(text);
-    updateScienceChoiceNote('คัดลอกแล้ว — ส่งรายการนี้ให้ Claude หรือ ChatGPT ได้เลย');
-  }catch(e){
-    updateScienceChoiceNote('คัดลอกอัตโนมัติไม่ได้ กรุณาลองใหม่จาก HTTPS');
+    const saved=JSON.parse(localStorage.getItem(sciKey())||'{}');
+    for(const id of saved.selectedIds||[]) if(SCIENCE.items.some(item=>item.id===id)&&SCI_CHOICES.size<3) SCI_CHOICES.add(id);
+    if(saved.comments&&typeof saved.comments==='object') SCI_COMMENTS=saved.comments;
+  }catch(e){}
+}
+function saveScience(){
+  try{localStorage.setItem(sciKey(),JSON.stringify({selectedIds:[...SCI_CHOICES],comments:SCI_COMMENTS}))}catch(e){}
+}
+function sciSelection(){
+  const picked=SCIENCE.items.filter(item=>SCI_CHOICES.has(item.id));
+  return {series:'Tora & the Gangz',week:SCIENCE.week,selectedIds:picked.map(item=>item.id),selectedTitles:picked.map(item=>item.title),comments:Object.fromEntries(picked.map(item=>[item.id,SCI_COMMENTS[item.id]||''])),selectedAt:new Date().toISOString(),note:'รอคุณเป้ยืนยันและสั่งผลิต ไม่ใช่การอนุมัติอัป YouTube'};
+}
+function updateScienceCount(){
+  const el=document.getElementById('scienceCount');
+  if(el)el.textContent=SCIENCE&&Array.isArray(SCIENCE.items)?SCIENCE.items.length:0;
+}
+function updateScienceChoiceNote(message=''){
+  const note=document.getElementById('scienceChoiceNote');
+  const button=document.getElementById('scienceCopy');
+  if(note) note.textContent=message||'เลือกแล้ว '+SCI_CHOICES.size+'/3 · บันทึกในเบราว์เซอร์นี้';
+  if(button) button.disabled=SCI_CHOICES.size!==3;
+  const count=document.getElementById('scienceSelectedCount');
+  if(count)count.textContent=SCI_CHOICES.size+'/3';
+}
+function renderScienceSelected(){
+  const box=document.getElementById('scienceSelectedList');
+  if(!box)return;
+  box.replaceChildren();
+  const picked=SCIENCE.items.filter(item=>SCI_CHOICES.has(item.id));
+  if(!picked.length){sciEl(box,'div','ยังไม่ได้เลือกบทจาก 10 เรื่องด้านบน','sci-empty');return}
+  for(const item of picked){
+    const row=sciEl(box,'div','','sci-picked-item');
+    sciEl(row,'strong',item.title);
+    sciEl(row,'p',SCI_COMMENTS[item.id]?'ขอปรับ: '+SCI_COMMENTS[item.id]:'ยังไม่มีคอมเมนต์');
   }
 }
-
+function toggleScienceChoice(input){
+  const id=input.dataset.id;
+  if(input.checked&&SCI_CHOICES.size>=3){input.checked=false;updateScienceChoiceNote('เลือกได้ไม่เกิน 3 บท');return}
+  input.checked?SCI_CHOICES.add(id):SCI_CHOICES.delete(id);
+  input.closest('.sci-card')?.classList.toggle('selected',input.checked);
+  saveScience();updateScienceChoiceNote();renderScienceSelected();
+}
+async function copyScienceChoices(){
+  if(!SCIENCE||SCI_CHOICES.size!==3)return;
+  try{await navigator.clipboard.writeText(JSON.stringify(sciSelection(),null,2));updateScienceChoiceNote('คัดลอก 3 บทพร้อมคอมเมนต์แล้ว')}
+  catch(e){updateScienceChoiceNote('คัดลอกไม่ได้ กรุณาเปิดผ่าน HTTPS')}
+}
+function sciGroup(box,id,title,description){
+  const group=sciEl(box,'section','','sci-group');group.id=id;
+  const head=sciEl(group,'div','','sci-group-head');
+  sciEl(head,'h3',title);sciEl(head,'p',description);
+  return group;
+}
+function sciJob(container,job,published){
+  const row=sciEl(container,'div','','sci-job');
+  sciEl(row,'span',job.title||'งานผลิต');
+  if(published){
+    const id=job.youtubeVideoId||job.videoId;
+    const url=job.youtubeUrl||(id?'https://www.youtube.com/watch?v='+encodeURIComponent(id):'');
+    if(/^https:\/\/(www\.)?(youtube\.com|youtu\.be)\//.test(url)){
+      const a=sciEl(row,'a','ดูบน YouTube ↗');a.href=url;a.target='_blank';a.rel='noopener noreferrer';
+    }else sciEl(row,'span','เผยแพร่แล้ว · ยังไม่มีลิงก์','sci-status');
+  }else sciEl(row,'span',SCI_LABELS[job.status]||job.status||'กำลังทำ','sci-status');
+}
 function renderScienceArticle(){
-  const box = document.getElementById('scienceBody');
-  if(!box) return;
-  const items = SCIENCE && Array.isArray(SCIENCE.items) ? SCIENCE.items : [];
-  if(!items.length){
-    box.innerHTML = '<div class="pp-card"><div class="pp-ind">รอรอบประจำสัปดาห์</div><div class="pp-title">ยังไม่มีชุดหัวข้อวิทยาศาสตร์</div><div class="pp-row">Claude เริ่มสร้าง 10 หัวข้อทุกวันเสาร์ 08:00 และ ChatGPT ตรวจสำรองเวลา 08:15</div></div>';
-    return;
-  }
-  const rank = SCI_FLOW.indexOf(SCIENCE.status);
-  const cards = items.map((item,index) => {
-    const id = item.id || `science-${index+1}`;
-    const encoded = encodeURIComponent(id);
-    const checked = SCI_CHOICES.has(id);
-    return `<label class="sci-card${checked ? ' selected' : ''}">
-      <div class="sci-card-title"><input type="checkbox" class="science-choice" data-id="${TD_ESC(encoded)}"${checked ? ' checked' : ''}><span>${index+1}. ${TD_ESC(item.title || 'ยังไม่มีชื่อ')}</span></div>
-      ${item.hook ? `<div class="sci-hook">${TD_ESC(item.hook)}</div>` : ''}
-      ${item.script ? `<details><summary>อ่านบทพากย์</summary><pre>${TD_ESC(item.script)}</pre></details>` : ''}
-    </label>`;
-  }).join('');
-  const production = Array.isArray(SCIENCE.production) && SCIENCE.production.length
-    ? SCIENCE.production.map(job => `<div class="sci-job"><span>${TD_ESC(job.title || 'งานผลิต')}</span><span class="sci-status">${TD_ESC(SCI_LABELS[job.status] || job.status || '—')}</span></div>`).join('')
-    : '<div class="sci-empty">ยังไม่มีงานผลิต — เลือกหัวข้อให้ครบ 3 เรื่องก่อน</div>';
-  box.innerHTML = `<div class="sci-head"><div>
-      <div class="sci-kicker mono">${TD_ESC(SCIENCE.week || 'สัปดาห์นี้')} · ${TD_ESC(SCIENCE.source || 'AGAPAE')}</div>
-      <div class="sci-title">${TD_ESC(SCIENCE.title || 'Science Video Pipeline')}</div>
-      <div class="sci-meta">${TD_ESC(SCIENCE.displayDate || '')}${SCIENCE.updatedAt ? ` · อัปเดต ${TD_ESC(SCIENCE.updatedAt)}` : ''}</div>
-    </div><span class="sci-status">${TD_ESC(SCI_LABELS[SCIENCE.status] || SCIENCE.status || '—')}</span></div>
-    <div class="sci-flow">${SCI_FLOW.map((s,i) => `<span class="sci-step${i <= rank ? ' active' : ''}">${TD_ESC(SCI_LABELS[s])}</span>`).join('')}</div>
-    <div class="pp-today-head"><h3 class="pp-h">เลือก 3 หัวข้อจาก ${items.length} หัวข้อ</h3></div>
-    <div class="sci-grid">${cards}</div>
-    <div class="sci-actions"><button class="sci-btn" id="scienceCopy" type="button">คัดลอก 3 หัวข้อที่เลือก</button><span class="sci-note" id="scienceChoiceNote"></span></div>
-    <div class="pp-today-head"><h3 class="pp-h">สถานะการผลิต</h3></div>
-    <div class="sci-production">${production}</div>`;
-  box.querySelectorAll('.science-choice').forEach(input => input.addEventListener('change', () => toggleScienceChoice(input)));
-  document.getElementById('scienceCopy')?.addEventListener('click', copyScienceChoices);
-  updateScienceChoiceNote();
+  const box=document.getElementById('scienceBody');
+  if(!box)return;
+  box.replaceChildren();
+  const items=SCIENCE&&Array.isArray(SCIENCE.items)?SCIENCE.items:[];
+  if(!items.length){sciEl(box,'div','ยังไม่มีชุดบท Tora & the Gangz · Claude สร้าง 10 บททุกวันเสาร์ 08:00','sci-empty');return}
+  const head=sciEl(box,'div','','sci-head');
+  const left=sciEl(head,'div');
+  sciEl(left,'div',(SCIENCE.week||'สัปดาห์นี้')+' · '+(SCIENCE.source||'Claude'),'sci-kicker mono');
+  sciEl(left,'div','Tora & the Gangz — Story Pipeline','sci-title');
+  sciEl(left,'div',SCIENCE.updatedAt?'อัปเดต '+SCIENCE.updatedAt:'','sci-meta');
+  sciEl(head,'span',SCI_LABELS[SCIENCE.status]||SCIENCE.status||'—','sci-status');
+  const nav=sciEl(box,'nav','','sci-nav');
+  [['scienceIdeas','1','บท 10 เรื่อง'],['scienceSelected','2','บทที่เลือกแล้ว'],['scienceMaking','3','กำลังทำ Animation'],['sciencePublished','4','ขึ้น YouTube แล้ว']].forEach(([id,num,label])=>{const a=sciEl(nav,'a',num+'. '+label);a.href='#'+id});
+  const ideaGroup=sciGroup(box,'scienceIdeas','1. บท 10 เรื่องที่เสนอให้เลือก','เลือกได้ 3 เรื่อง · เขียนคอมเมนต์สิ่งที่อยากปรับใต้บท');
+  const grid=sciEl(ideaGroup,'div','','sci-grid');
+  items.forEach((item,index)=>{
+    const card=sciEl(grid,'article','','sci-card');
+    card.classList.toggle('selected',SCI_CHOICES.has(item.id));
+    const title=sciEl(card,'div','','sci-card-title');
+    const input=sciEl(title,'input');
+    input.type='checkbox';input.className='science-choice';input.dataset.id=item.id||'';input.checked=SCI_CHOICES.has(item.id);
+    input.setAttribute('aria-label','เลือก '+(item.title||'บทที่ '+(index+1)));
+    input.addEventListener('change',()=>toggleScienceChoice(input));
+    sciEl(title,'span',(index+1)+'. '+(item.title||'ยังไม่มีชื่อ'));
+    if(item.hook)sciEl(card,'p',item.hook,'sci-hook');
+    if(item.script){
+      const details=sciEl(card,'details');
+      sciEl(details,'summary','อ่านบทและแผนภาพ');
+      const script=typeof item.script==='string'?item.script:Object.entries(item.script).map(([key,value])=>key+': '+value).join('\n');
+      sciEl(details,'pre',script);
+      if(Array.isArray(item.visualPlan)){
+        const plan=item.visualPlan.map((shot,i)=>(i+1)+'. '+(typeof shot==='string'?shot:[shot.desc,shot.movement,shot.sound].filter(Boolean).join(' · '))).join('\n');
+        sciEl(details,'pre',plan);
+      }
+    }
+    const label=sciEl(card,'label','อยากให้ปรับอะไรในเรื่องนี้?','sci-comment');
+    const comment=sciEl(label,'textarea');
+    comment.placeholder='เช่น เปลี่ยนตอนจบ เพิ่มมุก หรือปรับฉาก';
+    comment.value=SCI_COMMENTS[item.id]||'';
+    comment.addEventListener('input',()=>{SCI_COMMENTS[item.id]=comment.value;saveScience();if(SCI_CHOICES.has(item.id))renderScienceSelected()});
+  });
+  const selected=sciGroup(box,'scienceSelected','2. บทที่เลือกแล้ว','รายการที่เลือกในเบราว์เซอร์นี้');
+  const picked=sciEl(selected,'div','','sci-picked');picked.id='scienceSelectedList';
+  const actions=sciEl(selected,'div','','sci-actions');
+  const copy=sciEl(actions,'button','คัดลอก 3 บทพร้อมคอมเมนต์','sci-btn');copy.id='scienceCopy';copy.type='button';copy.addEventListener('click',copyScienceChoices);
+  const note=sciEl(actions,'span','','sci-note');note.id='scienceChoiceNote';
+  const importLabel=sciEl(selected,'label','นำเข้าไฟล์ผลเลือกจากหน้า Tora: ','sci-note');
+  const importInput=sciEl(importLabel,'input');importInput.type='file';importInput.accept='.json,application/json';
+  importInput.addEventListener('change',async()=>{
+    const file=importInput.files?.[0];if(!file)return;
+    try{
+      const data=JSON.parse(await file.text());
+      if(data.series!=='Tora & the Gangz'||data.week!==SCIENCE.week||!Array.isArray(data.selectedIds)||data.selectedIds.length!==3||new Set(data.selectedIds).size!==3||!data.selectedIds.every(id=>SCIENCE.items.some(item=>item.id===id)))throw Error('ไฟล์ไม่ตรงกับ 10 บทของสัปดาห์นี้');
+      SCI_CHOICES.clear();data.selectedIds.forEach(id=>SCI_CHOICES.add(id));
+      SCI_COMMENTS=data.comments&&typeof data.comments==='object'?data.comments:{};
+      saveScience();renderScienceArticle();updateScienceChoiceNote('นำเข้า 3 บทพร้อมคอมเมนต์แล้ว');
+    }catch(e){updateScienceChoiceNote('นำเข้าไม่ได้: '+e.message)}
+  });
+  const making=sciGroup(box,'scienceMaking','3. Animation ที่กำลังทำอยู่','บทพากย์ · เสียง · วิดีโอ · รอตรวจ');
+  const published=sciGroup(box,'sciencePublished','4. วิดีโอที่ขึ้น YouTube แล้ว','แสดงเฉพาะรายการที่มีสถานะเผยแพร่');
+  const jobs=Array.isArray(SCIENCE.production)?SCIENCE.production:[];
+  const active=jobs.filter(job=>job.status!=='published');
+  const done=jobs.filter(job=>job.status==='published');
+  if(!active.length)sciEl(making,'div','ยังไม่มี Animation ที่เริ่มผลิต','sci-empty');
+  if(!done.length)sciEl(published,'div','ยังไม่มีวิดีโอที่เผยแพร่บน YouTube','sci-empty');
+  active.forEach(job=>sciJob(making,job,false));
+  done.forEach(job=>sciJob(published,job,true));
+  renderScienceSelected();updateScienceChoiceNote();
 }
-
 async function loadScienceArticle(){
   try{
     SCIENCE = await fsPayload('science_video');
@@ -4454,6 +4537,7 @@ async function loadScienceArticle(){
       if(!res.ok) throw new Error(res.status);
       SCIENCE = await res.json();
     }
+    restoreScience();
     updateScienceCount();
     if(currentView === 'science') renderScienceArticle();
     const tag = document.getElementById('scienceModeTag'), msg = document.getElementById('scienceModeMsg');
@@ -4636,7 +4720,7 @@ renderWorklog();   // worklog timeline (รวมอยู่ใน Console แ�
 loadWorklog();     // async load real worklog data
 loadTodo();        // To Do list (todo.json)
 loadArticle();     // หัวข้อบทความรายสัปดาห์ (article.json / Firestore agents/article)
-loadScienceArticle(); // หัวข้อวิทยาศาสตร์ 10 เรื่อง + production pipeline
+loadScienceArticle(); // Tora & the Gangz: 10 บท + production pipeline
                    /* Pain Point ไม่โหลดตอน boot แล้ว — ไม่มีแท็บบนหน้าจอ
                       โค้ดกับข้อมูลยังอยู่ครบ โหลดเมื่อ switchView('pain') เท่านั้น */
 const initialView = location.hash.slice(1);
