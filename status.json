@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T17:46:58.809Z",
+  "updatedAt": "2026-09-24T18:41:51.534Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE fix batch10",
       "report": {
-        "when": "21:28",
-        "title": "AVEGEE batch9 minigames",
-        "body": "Report delivered to Claudy."
+        "when": "01:41",
+        "title": "AVEGEE fix batch10",
+        "body": "Report delivered to Claudy with full details on root causes, guard balance numbers, commit hashes, and remaining gaps."
       }
     },
     {
