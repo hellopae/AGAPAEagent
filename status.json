@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T22:54:35.147Z",
+  "updatedAt": "2026-09-25T22:54:47.513Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby AVEGEE fix batch12",
+      "status": "working",
+      "task": "Toby AVEGEE batch13 combat hunger",
       "report": {
         "when": "04:48",
         "title": "Toby AVEGEE fix batch12",
