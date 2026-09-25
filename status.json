@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T05:37:00.115Z",
+  "updatedAt": "2026-09-25T08:05:06.589Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby AVEGEE fix batch11",
       "report": {
-        "when": "01:41",
-        "title": "AVEGEE fix batch10",
-        "body": "Report delivered to Claudy with full details on root causes, guard balance numbers, commit hashes, and remaining gaps."
+        "when": "15:05",
+        "title": "Toby AVEGEE fix batch11",
+        "body": "Task complete — all 8 items (A–H) from the batch-11 brief are implemented, tested with real Playwright browser sessions at both 1440px and 390×844, committed individually, and pushed. Full report saved at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-25-avegee-fix-batch11.md`."
       }
     },
     {
