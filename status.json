@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T09:15:19.542Z",
+  "updatedAt": "2026-09-26T09:26:40.568Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale swap cover and scene-asia art",
       "report": {
-        "when": "16:15",
-        "title": "Dale review AVEGEE batch14",
-        "body": "Review complete — PASS delivered to caller via handback.\n\nKey file paths for reference:\n- Review report: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/2026-09-26-avegee-batch14-review.md`\n- Code reviewed: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/src/frontier.js` (new), `src/ui.js`, `src/game.js`, `src/data.js`, `src/minigames/krata.js`, `src/minigames/sawan.js`, `tests/crew-names-west-cyberhell.test.mjs`"
+        "when": "16:26",
+        "title": "Dale swap cover and scene-asia art",
+        "body": "Task complete. Both commits (`7eacaa9` D1, `316e30e` D2) are pushed to the AVEGEE repo, all tests pass, Playwright-verified at 1440×900 and 390×844 with no new console errors, and the build note with before/after evidence is committed and pushed to the AGAPAE Agent repo."
       }
     },
     {
