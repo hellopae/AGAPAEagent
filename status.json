@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T02:39:52.731Z",
+  "updatedAt": "2026-09-26T07:49:00.310Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby AVEGEE batch14 frontier minigame",
+      "task": "Toby AVEGEE batch14 resume",
       "report": {
         "when": "09:26",
         "title": "Toby AVEGEE batch13 retry",
