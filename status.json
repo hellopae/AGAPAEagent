@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T07:49:00.310Z",
+  "updatedAt": "2026-09-26T08:52:12.482Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby AVEGEE batch14 resume",
       "report": {
-        "when": "09:26",
-        "title": "Toby AVEGEE batch13 retry",
-        "body": "Report delivered to the coordinator with commit hashes and a summary of the fix-round work."
+        "when": "15:52",
+        "title": "Toby AVEGEE batch14 resume",
+        "body": "Report delivered to Claudy. Summary of what was completed:\n\n- **AVEGEE repo** (`/Users/agapae/Documents/Work PAE/Claude/AVEGEE`): commits `c2567ec` (C — zone crew names), `48ae0df` (B — minigame clarity fix), `762eeea` (A — frontier walkable map) all pushed to `origin/main`. New file `src/frontier.js`; modified `src/data.js`, `src/ui.js`, `src/game.js`, `src/minigames/krata.js`, `src/minigames/sawan.js`, `index.html`, `tests/crew-names-west-cyberhell.test.mjs`.\n- **Report**: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-26-avegee-batch14-frontier-minigame.md`, committed as `db3eeb4` and pushed.\n- D1/D2 (cover2.png and scene-asia re-conversion) were attempted but blocked by the sandbox permission system, which denied any action touching those two specific files ( …"
       }
     },
     {
