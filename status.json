@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T08:52:12.854Z",
+  "updatedAt": "2026-09-28T08:56:53.265Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review Codex 16B UI",
+      "status": "working",
+      "task": "Dale finish video wiring + merge 16B",
       "report": {
         "when": "15:52",
         "title": "Dale review Codex 16B UI",
