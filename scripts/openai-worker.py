@@ -18,7 +18,12 @@ ROLES = {
 }
 
 # Codex CLI ไม่อยู่ใน PATH บนเครื่องนี้ แต่มากับแอป ChatGPT
-APP_CODEX = Path('/Applications/ChatGPT.app/Contents/Resources/codex')
+# [28 ก.ย. 2569] แอปรุ่นใหม่ย้ายไปอยู่ใน codex-cli/CodexCLI.app — ลองที่ใหม่ก่อน แล้วค่อยที่เดิม
+APP_CODEX_PATHS = [
+    Path('/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex'),
+    Path('/Applications/ChatGPT.app/Contents/Resources/codex'),
+]
+APP_CODEX = APP_CODEX_PATHS[0]
 # ข้อความที่แปลว่าติดลิมิต/โควตา — แยกจาก failed เพื่อให้ Claudy สลับไป claude-only
 LIMIT = re.compile(r'rate[ _-]?limit|usage[ _-]?limit|too many requests|\b429\b', re.I)
 
@@ -26,7 +31,7 @@ def find_codex():
     found = shutil.which('codex')
     if found:
         return found
-    return str(APP_CODEX) if APP_CODEX.is_file() else None
+    return next((str(p) for p in APP_CODEX_PATHS if p.is_file()), None)
 
 def command(codex, project, model, report, sandbox='read-only'):
     # model None = ไม่ส่ง --model ให้ ~/.codex/config.toml เป็นตัวกำหนด
