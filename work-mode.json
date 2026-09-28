@@ -1,5 +1,5 @@
 {
-  "mode": "both",
+  "mode": "claude-only",
   "updated": "2026-09-28",
-  "note": "คุณเป้แจ้ง 28 ก.ย. 2569: Codex รีเซ็ตลิมิตแล้ว สลับกลับ both — Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · โหมด: both = Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · claude-only = Dale/Toby เขียนเอง · codex-only = คุณเป้สั่ง Codex ตรง · สลับโดยบอก Claudy · SOP-01 STEP 0"
+  "note": "Codex ชน usage limit 28 ก.ย. 2569 13:36 (run 20260928T063619Z-e26b13bc) — แจ้งว่า try again at 3:06 PM · ระหว่างนี้ Dale/Toby เขียนเอง ห้ามเรียก Codex/Astra · หลังรีเซ็ตสลับกลับ both ได้เมื่อคุณเป้สั่ง · โหมด: both = Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · claude-only = Dale/Toby เขียนเอง · codex-only = คุณเป้สั่ง Codex ตรง · สลับโดยบอก Claudy · SOP-01 STEP 0"
 }
