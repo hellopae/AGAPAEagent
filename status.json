@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T09:20:58.054Z",
+  "updatedAt": "2026-09-28T10:52:25.697Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby finish Codex 16A partial",
       "report": {
-        "when": "13:04",
-        "title": "Toby AVEGEE batch15b map+stars",
-        "body": "Report delivered to Claudy."
+        "when": "17:52",
+        "title": "Toby finish Codex 16A partial",
+        "body": "Report delivered to the caller. Summary of what I did:\n\n- Committed Codex's in-progress checkpoint on `codex/20260928T083305Z-fbb41880`, merged `main` into it (resolved one conflict in `src/scene.js`), and verified all 5 items from the brief (frontier gate/merchant position, mirror map-lock, building repair flow, battle-win overlap fix, punish-cauldron positioning) were actually complete and working — tested live via Playwright-driven clicks in a real browser against the worktree's own dev server, not just unit tests.\n- `node --test tests/*.test.mjs` passes 49/49.\n- Nothing was merged/pushed to main, the worktree wasn't deleted, and the main `AVEGEE` checkout was never touched.\n- Full report at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-28-avegee-batch16a-fin …"
       }
     },
     {
