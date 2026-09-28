@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T12:41:10.702Z",
+  "updatedAt": "2026-09-28T19:09:47.353Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,11 +279,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Dale review+merge Codex 17",
+      "task": "Dale review+merge AVEGEE 18A",
       "report": {
-        "when": "19:41",
-        "title": "Dale review+merge Codex 17",
-        "body": "Handback delivered. Summary of what I did as Dale:\n\n- Reviewed Codex's batch17 diff in the worktree, ran the test suite (49/49 pass), then actually tested the game live using headless Chromium via Playwright (served the worktree on port 8791, tested 1440×810, 390×844, reduced-motion, and touch/mobile) since Codex's sandbox couldn't do browser testing.\n- Found and fixed a real CSS cascade bug: `.btn-gold:hover/:active/:disabled` lost its gold `background-image` because a generic `button:hover:not(:disabled)` rule won the cascade for that specific property — fixed in `/Users/agapae/Documents/Work PAE/Claude/AVEGEE/index.html` (~lines 1371-1376).\n- Verified all acceptance criteria (tap-to-enter music flow, court/trial button behavior, TH/EN text correctness, no leftover \"เดินวาระ\" instruction …"
+        "when": "02:09",
+        "title": "Dale review+merge AVEGEE 18A",
+        "body": "Done — batch18B reviewed, one real bug found and fixed during review, merged to main, pushed, and verified live."
       }
     },
     {
