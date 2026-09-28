@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T04:31:58.447Z",
+  "updatedAt": "2026-09-28T04:32:10.134Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review Codex batch15 diff",
+      "status": "working",
+      "task": "Dale review Toby + merge Codex",
       "report": {
         "when": "10:45",
         "title": "Dale review Codex batch15 diff",
