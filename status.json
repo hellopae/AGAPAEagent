@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T04:50:32.600Z",
+  "updatedAt": "2026-09-28T04:50:55.892Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby AVEGEE batch15 UI",
+      "status": "working",
+      "task": "Toby AVEGEE batch15b map+stars",
       "report": {
         "when": "11:31",
         "title": "Toby AVEGEE batch15 UI",
