@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T10:52:35.721Z",
+  "updatedAt": "2026-09-28T10:56:25.986Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale review+merge 16A",
       "report": {
-        "when": "16:20",
-        "title": "Dale finish video wiring + merge 16B",
-        "body": "Report delivered to caller."
+        "when": "17:56",
+        "title": "Dale review+merge 16A",
+        "body": "Report delivered to Claudy."
       }
     },
     {
