@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T08:56:53.265Z",
+  "updatedAt": "2026-09-28T09:20:32.886Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale finish video wiring + merge 16B",
       "report": {
-        "when": "15:52",
-        "title": "Dale review Codex 16B UI",
-        "body": "Review complete and handed back."
+        "when": "16:20",
+        "title": "Dale finish video wiring + merge 16B",
+        "body": "Report delivered to caller."
       }
     },
     {
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby AVEGEE batch15c scene size",
+      "task": "Toby finish Codex 16A partial",
       "report": {
         "when": "13:04",
         "title": "Toby AVEGEE batch15b map+stars",
