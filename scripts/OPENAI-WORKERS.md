@@ -2,7 +2,7 @@
 
 สองบทบาทบน OpenAI: Codex ช่วยตรวจโค้ดและทดสอบ; Astra ช่วยวิเคราะห์สถาปัตยกรรมและเหตุผล ตัวรันไม่ส่ง `--model` โดยค่าเริ่มต้น จึงใช้โมเดลจาก `~/.codex/config.toml` (ตอนนี้ `gpt-5.6-sol`; บังคับรุ่นอื่นได้ด้วย `--model`) ชื่อการ์ดจึงเป็นบทบาท ไม่ได้แปลว่าเป็นบัญชีหรือโควตาแยกกัน
 
-เรียกจากเครื่องที่ติดตั้ง Codex CLI และล็อกอินอยู่ ไม่จำเป็นต้องเปิด Claude. ตัวรันหา `codex` จาก PATH ก่อน ถ้าไม่เจอใช้ตัวที่มากับแอป `/Applications/ChatGPT.app/Contents/Resources/codex` (เครื่องนี้เป็นแบบหลัง) ไม่เจอทั้งคู่จะหยุดพร้อมข้อความบอกชัด:
+เรียกจากเครื่องที่ติดตั้ง Codex CLI และล็อกอินอยู่ ไม่จำเป็นต้องเปิด Claude. ตัวรันหา `codex` จาก PATH ก่อน ถ้าไม่เจอใช้ตัวที่มากับแอป `/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex` (แอปรุ่นตั้งแต่ ก.ย. 2569) แล้วค่อยที่เดิม `…/Resources/codex` (เครื่องนี้เป็นแบบในแอป) ไม่เจอทั้งคู่จะหยุดพร้อมข้อความบอกชัด:
 
 ```sh
 python3 scripts/openai-worker.py --agent codex --task /absolute/path/brief.md --project /absolute/path/project
