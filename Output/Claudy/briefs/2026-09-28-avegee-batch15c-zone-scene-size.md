@@ -1,6 +1,6 @@
 # ใบงาน: AVEGEE ชุด 15c — ขนาดฉากแยกตามโซน (แก้โซน 2-4 ถูกยืด)
 
-**เจ้าของ:** Toby (เดิม Codex — ติด usage limit 13:36 จึงสลับ claude-only) · commit+push ตรง main ทีละขั้น · **ผู้สั่ง:** Claudy · **ตรวจ+merge:** Dale
+**เจ้าของ:** Codex (`--write` บน branch `codex/<run_id>`) — รอบแรกติด usage limit 13:36 · Toby รับต่อแต่ถูกระบบหยุด (auto mode) ก่อนแก้อะไร → คิวกลับให้ Codex หลังรีเซ็ต · **ผู้สั่ง:** Claudy · **ตรวจ+merge:** Dale
 Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` (vanilla JS `src/`, เทสต์ `node --test tests/*.test.mjs`) · base = main ล่าสุด (`5055ed3`)
 
 ## ปัญหา
