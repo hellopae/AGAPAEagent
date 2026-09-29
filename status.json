@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T22:05:44.037Z",
+  "updatedAt": "2026-09-29T02:26:55.138Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind: sitting sprite prompt",
+      "status": "working",
+      "task": "Mind: write st-dab image prompt",
       "report": {
         "when": "01:35",
         "title": "Mind: sitting sprite prompt",
