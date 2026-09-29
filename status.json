@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T13:27:20.708Z",
+  "updatedAt": "2026-09-29T15:28:42.793Z",
   "agents": [
     {
       "id": "claudy",
@@ -175,11 +175,11 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "Mind: zone st-dab prompts",
+      "task": "AVEGEE event art prompts",
       "report": {
-        "when": "10:41",
-        "title": "Mind: zone st-dab prompts",
-        "body": "Handback delivered. Summary of what was produced:\n\n- **File written:** `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-09-29-avegee-st-dab-zones-prompt.md`\n- No files in the AVEGEE repo were modified, per the brief's constraint.\n- Source inventory was done first (approved Thai `img/raw/st-dab.png`, current `img/Asia/st-dab-asia.png`, `img/West/st-dab-west.png`, `img/CyberHell/st-dab-cyberhell.png`, the three new scene files, `manifest.json`, and `scripts/prep-art.py`) before writing any prompt — this surfaced that West and CyberHell aren't just \"flat,\" they've drifted off-concept entirely (fortress-with-stakes and server-tower-cluster respectively), which the deliverable calls out explicitly so Kittanate doesn't just re-run the old flat-row prompt.\n- Full three copy- …"
+        "when": "22:28",
+        "title": "AVEGEE event art prompts",
+        "body": "Mind: เขียน prompt ชุดภาพ event AVEGEE ครบ 12 ภาพแล้ว (ยังไม่ได้ gen และยังไม่ได้ตรวจกับภาพจริง)\n\nไฟล์: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-09-29-avegee-event-art-prompts.md`\n\nเรียงตามความด่วน คือ 1) ยักษ์ผู้คุมชายแดนโซน 1, 2) บอสโซน 4 ใหม่, 3) ภาพจำเป็นโซน 2–4 อีก 10 ชิ้น\n\nแต่ละภาพมี prompt EN แบบก๊อปทั้งก้อน (สไตล์ + subject + canvas โปร่งใส/ห้าม glow), คำอธิบายไทยสั้น, ชื่อไฟล์ปลายทางใน `img/raw/`, negative prompt และเช็กลิสต์หลัง gen ท้ายไฟล์มีตารางชื่อไฟล์ทั้ง 12 และขั้นตอนวางไฟล์\n\n**ชื่อไฟล์ปลายทาง**\n- โซน 1: `img/raw/boss-frontier-th.png` แทนของเก่า `Boss-frontier1.png` ซึ่งควรเปลี่ยนเป็น `_Boss-frontier1-old.png` เพราะขึ้นต้น `_` แล้วสคริปต์ไม่เอาเข้าเกม\n- โซน 4: `img/raw/CyberHell/Boss Zone4-cyberhell.png` (ชื่อเดิม)\n- โซน 2–4 ทั้ง 10 ชิ้นเป็นแบบ …"
       }
     },
     {
