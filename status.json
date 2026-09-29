@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T12:43:47.370Z",
+  "updatedAt": "2026-09-29T13:27:20.708Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Review+merge AVEGEE batch 26A",
       "report": {
-        "when": "18:29",
-        "title": "Review+merge AVEGEE batch 25",
-        "body": "**PASS.** I merged AVEGEE batch 25 to main as `b4a0f8b` and pushed it. I checked the deployed Pages site on https://hellopae.github.io/AVEGEE/ at both 1440×810 and 390×844.\n\n- **No power used:** no reveal marks or highlights on any of the three wheels, and the log still shows the sin-match bonus when the sentence completes (`+72` coins with `+17` bonus).\n- **Mirror:** the wheel highlights the right station, intensity and keeper. On the test case that was กระทะทองแดง, level 4 and กานต์ (he tied กานต์ 94 with บุญ 94, and the tie goes to the first in team order). The highlight survives closing and reopening the room, and a save then reload.\n- **Hypnosis:** the hidden deeds were all confessed, and only the station was highlighted, not the intensity or keeper.\n- **Next case:** no leftover revea …"
+        "when": "20:27",
+        "title": "Review+merge AVEGEE batch 26A",
+        "body": "ส่งรายงานให้ Claudy แล้ว: ผล **PASS** และ merge เข้า main เป็น `472ff6f` (push แล้ว Pages ยืนยันแล้ว).\n\nDale แก้เพิ่ม 4 จุดจากการตรวจในเบราว์เซอร์ก่อน merge:\n- เอฟเฟกต์โดนตีและตัวเลขดาเมจไม่ขึ้นในฉากหลายศัตรู.\n- ปุ่มท้าซ้ำมุมจอกดไม่ได้จริง.\n- ปุ่มเดียวกันทับปุ่มตั้งค่าบนจอกว้าง.\n- แถบ HP ต่อตัวไม่เห็น และชื่อไทยบนมือถือถูกตัดกลางคำ.\n\n`node --test tests/*.test.mjs` ผ่าน 94/94.\n\nที่ยังไม่ได้ตรวจ: ยมทูตช่วยในฉาก 3 ตัว (เซฟทดสอบไม่มียมทูตในทีม) และปุ่มสะกดจิต (กดแล้วไม่มีผล ยังไม่ได้สืบสาเหตุ).\n\nไฟล์ที่เกี่ยวข้องอยู่ใน `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/`:\n- 2026-09-29-avegee-batch26a-review.md\n- screenshots/2026-09-29-avegee-batch26a/"
       }
     },
     {
