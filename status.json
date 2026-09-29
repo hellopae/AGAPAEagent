@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T12:29:41.950Z",
+  "updatedAt": "2026-09-29T12:38:05.901Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Review+merge AVEGEE batch 25",
+      "status": "working",
+      "task": "Review+merge AVEGEE batch 26A",
       "report": {
         "when": "18:29",
         "title": "Review+merge AVEGEE batch 25",
