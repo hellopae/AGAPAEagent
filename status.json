@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T04:56:46.327Z",
+  "updatedAt": "2026-09-29T06:17:05.242Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,11 +279,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Dale: prep+verify zone st-dab art",
+      "task": "Review+merge AVEGEE batch 19",
       "report": {
-        "when": "11:56",
-        "title": "Dale: prep+verify zone st-dab art",
-        "body": "I've completed the requested follow-up work (closing out the yama walk sprite task) and already delivered my final report via SubagentHandback. Since that tool only allows one delivery and no further messaging tool is available to me in this session, here is a final plain-text summary for the record:\n\n**Status: PASS — both repos committed and pushed.**\n- AVEGEE `46a2e53` (walk sprite fix + verification) on top of `da8bcbb` (st-dab art), both live on GitHub Pages, verified via Playwright across all 4 zones.\n- AGAPAE Agent `6f32dc1` updates the review doc to PASS with supporting screenshots.\n- `git status` clean in both repos (AVEGEE retains only pre-existing unrelated/forbidden items I was told not to touch: `CONCEPT.md`, `Exam/`, `files/`, `output/`, `img/st-dab-v2.png`, `img/scene-cyberhe …"
+        "when": "13:17",
+        "title": "Review+merge AVEGEE batch 19",
+        "body": "**PASS** — merge และ push แล้ว, `d4c846f` เป็น HEAD ของ main บน origin\n\nฉันเช็ค Pages ว่าโค้ดใหม่ขึ้นแล้ว (`src/art.js` กับ `src/scene.js`) แต่ยังไม่ได้เปิดเกมบน URL จริงด้วย Playwright การทดสอบทั้งหมดรันบน localhost จากโค้ดที่ merge แล้ว\n\nรายงานฉบับเต็มอยู่ที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/2026-09-29-avegee-batch19-review.md` และ screenshot อยู่ที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/screenshots/2026-09-29-avegee-batch19/`\n\n**Commit**\n- `ed4e74b` — งาน Codex บวกข้อ D\n- `0f7bd6f` — merge เข้า main\n- `d4c846f` — ที่ Dale แก้เพิ่ม\n\n**สิ่งที่แก้เพิ่ม**\n- **ข้อ D:** เปลี่ยนเป็น `ctx.scale(-face, 1)` ใน `drawHeroWalk` ดูจาก screenshot จริงครบ 4 โซน เดินขวาตัวและก้าวเอียงขวา เดินซ้ายเอียงซ้าย ส่วนสไปรท์โซนตะวันตกหน้าค่อนข้างตรงกล้ …"
       }
     },
     {
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby finish Codex 16A partial",
+      "status": "working",
+      "task": "AVEGEE balance + playtest report",
       "report": {
         "when": "17:52",
         "title": "Toby finish Codex 16A partial",
