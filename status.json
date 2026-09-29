@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T06:17:05.242Z",
+  "updatedAt": "2026-09-29T06:31:19.066Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "AVEGEE balance + playtest report",
+      "task": "AVEGEE balance + playtest (retry)",
       "report": {
         "when": "17:52",
         "title": "Toby finish Codex 16A partial",
