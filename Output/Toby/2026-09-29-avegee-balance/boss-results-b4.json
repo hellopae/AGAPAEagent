@@ -1,0 +1,252 @@
+{
+ "bare (no coin, no crew, hp 60%, 3 fire)": [
+  {
+   "zone": "th",
+   "win": 0,
+   "turns": 3.8,
+   "cost": 0,
+   "heals": 0,
+   "bossHp": 200,
+   "bossAtk": [
+    14,
+    22
+   ]
+  },
+  {
+   "zone": "asia",
+   "win": 0,
+   "turns": 3.6,
+   "cost": 0,
+   "heals": 0,
+   "bossHp": 225,
+   "bossAtk": [
+    14,
+    24
+   ]
+  },
+  {
+   "zone": "west",
+   "win": 0,
+   "turns": 4,
+   "cost": 0,
+   "heals": 0,
+   "bossHp": 250,
+   "bossAtk": [
+    14,
+    26
+   ]
+  },
+  {
+   "zone": "cyberhell",
+   "win": 0,
+   "turns": 3.9,
+   "cost": 0,
+   "heals": 0,
+   "bossHp": 275,
+   "bossAtk": [
+    14,
+    28
+   ]
+  }
+ ],
+ "poor (coin 150, hp 60%)": [
+  {
+   "zone": "th",
+   "win": 19.8,
+   "turns": 10,
+   "cost": 135,
+   "heals": 3,
+   "bossHp": 200,
+   "bossAtk": [
+    14,
+    22
+   ]
+  },
+  {
+   "zone": "asia",
+   "win": 0.8,
+   "turns": 9.5,
+   "cost": 134,
+   "heals": 3,
+   "bossHp": 225,
+   "bossAtk": [
+    14,
+    24
+   ]
+  },
+  {
+   "zone": "west",
+   "win": 0,
+   "turns": 9.3,
+   "cost": 132,
+   "heals": 2.9,
+   "bossHp": 250,
+   "bossAtk": [
+    14,
+    26
+   ]
+  },
+  {
+   "zone": "cyberhell",
+   "win": 0,
+   "turns": 9.1,
+   "cost": 132,
+   "heals": 2.9,
+   "bossHp": 275,
+   "bossAtk": [
+    14,
+    28
+   ]
+  }
+ ],
+ "ok (coin 300, hp 100%, 2 crew)": [
+  {
+   "zone": "th",
+   "win": 100,
+   "turns": 7.5,
+   "cost": 66,
+   "heals": 1.5,
+   "bossHp": 200,
+   "bossAtk": [
+    14,
+    22
+   ]
+  },
+  {
+   "zone": "asia",
+   "win": 98,
+   "turns": 10.6,
+   "cost": 153,
+   "heals": 3.4,
+   "bossHp": 225,
+   "bossAtk": [
+    14,
+    24
+   ]
+  },
+  {
+   "zone": "west",
+   "win": 95.8,
+   "turns": 14.2,
+   "cost": 245,
+   "heals": 5.6,
+   "bossHp": 250,
+   "bossAtk": [
+    14,
+    26
+   ]
+  },
+  {
+   "zone": "cyberhell",
+   "win": 38.5,
+   "turns": 15.5,
+   "cost": 269,
+   "heals": 6.4,
+   "bossHp": 275,
+   "bossAtk": [
+    14,
+    28
+   ]
+  }
+ ],
+ "prepared (coin 500, hp 100%, 2 crew, guard, ice)": [
+  {
+   "zone": "th",
+   "win": 100,
+   "turns": 5.2,
+   "cost": 8,
+   "heals": 0.2,
+   "bossHp": 200,
+   "bossAtk": [
+    14,
+    22
+   ]
+  },
+  {
+   "zone": "asia",
+   "win": 100,
+   "turns": 7.4,
+   "cost": 61,
+   "heals": 1.4,
+   "bossHp": 225,
+   "bossAtk": [
+    14,
+    24
+   ]
+  },
+  {
+   "zone": "west",
+   "win": 100,
+   "turns": 7.9,
+   "cost": 87,
+   "heals": 1.9,
+   "bossHp": 250,
+   "bossAtk": [
+    14,
+    26
+   ]
+  },
+  {
+   "zone": "cyberhell",
+   "win": 94.5,
+   "turns": 10.4,
+   "cost": 158,
+   "heals": 3.5,
+   "bossHp": 275,
+   "bossAtk": [
+    14,
+    28
+   ]
+  }
+ ],
+ "rich (coin 1000, hp 100%, 2 crew, guard, ice)": [
+  {
+   "zone": "th",
+   "win": 100,
+   "turns": 5,
+   "cost": 2,
+   "heals": 0,
+   "bossHp": 200,
+   "bossAtk": [
+    14,
+    22
+   ]
+  },
+  {
+   "zone": "asia",
+   "win": 100,
+   "turns": 7.1,
+   "cost": 49,
+   "heals": 1.1,
+   "bossHp": 225,
+   "bossAtk": [
+    14,
+    24
+   ]
+  },
+  {
+   "zone": "west",
+   "win": 100,
+   "turns": 7.6,
+   "cost": 73,
+   "heals": 1.6,
+   "bossHp": 250,
+   "bossAtk": [
+    14,
+    26
+   ]
+  },
+  {
+   "zone": "cyberhell",
+   "win": 99.3,
+   "turns": 10.3,
+   "cost": 150,
+   "heals": 3.3,
+   "bossHp": 275,
+   "bossAtk": [
+    14,
+    28
+   ]
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{"t": 9.9, "kind": "start", "mobile": false}
+{"t": 11.4, "kind": "intro-done", "pages": 4, "wall": 11.4}
+{"t": 12.8, "kind": "modal", "title": "บทที่ 1 — อ่านสำนวนก่อนตัดสิน", "click": "รับทราบ", "buttons": ["รับทราบ"]}
+{"t": 13.5, "kind": "court-open", "wall": 13.5}
+{"t": 15.1, "kind": "trial-open", "case": 0, "q": 1, "waited": null}
+{"t": 24.5, "kind": "judge", "ok": true, "secs": 9.4}
+{"t": 25.3, "kind": "build-walk", "k": "dab", "ok": true}
+{"t": 30.2, "kind": "build-done", "k": "dab", "walk_secs": 4.9}
+{"t": 31.1, "kind": "trial-open", "case": 1, "q": 1, "waited": null}
+{"t": 40.6, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": null, "deserved": 5}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 1, "crewK": "taan", "free": 2, "build": false, "fire": 0}, {"k": "dab", "slots": 0, "crewK": null, "free": 0, "build": true, "fire": 0}], "crew": [{"k": "taan", "at": null, "esc": null, "buildK": "dab"}, {"k": "nira", "at": null, "esc": null, "buildK": null}], "paused": false, "log0": "🔨 ทัณฑ์มาถึงป่าดาบอสิปัตตะแล้ว — เริ่มลงมือก่อสร้าง", "chosen": {"st": "krata", "cr": "taan"}}
+{"t": 40.6, "kind": "judge", "ok": true, "secs": 9.5}
+{"t": 42.1, "kind": "trial-open", "case": 1, "q": 1, "waited": null}
+{"t": 51.6, "kind": "judge", "ok": true, "secs": 9.5}
+{"t": 52.3, "kind": "build-walk", "k": "ngiw", "ok": true}
+{"t": 59.4, "kind": "build-done", "k": "ngiw", "walk_secs": 7.1}
+{"t": 60.2, "kind": "trial-open", "case": 2, "q": 1, "waited": 8.0}
+{"t": 69.1, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": false, "deserved": 3}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "dab", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "ngiw", "slots": 0, "crewK": null, "free": 0, "build": true, "fire": 0}], "crew": [{"k": "taan", "at": null, "esc": null, "buildK": "ngiw"}, {"k": "nira", "at": null, "esc": null, "buildK": null}], "paused": false, "log0": "🔨 ทัณฑ์มาถึงดงต้นงิ้วแล้ว — เริ่มลงมือก่อสร้าง", "chosen": {"st": "dab", "cr": "taan"}}
+{"t": 69.1, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 70.6, "kind": "trial-open", "case": 2, "q": 1, "waited": null}
+{"t": 79.4, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 80.5, "kind": "modal", "title": "🎖️ เลื่อนขั้น", "click": "รับไว้", "buttons": ["รับไว้"]}
+{"t": 81.2, "kind": "build-walk", "k": "lan", "ok": true}
+{"t": 119.4, "kind": "build-modal-missing", "k": "lan", "txt": "【ญาติทำบุญอุทิศ】\n\nมีวิญญาณหนึ่งดวงในคิวได้ลดกรรมลงหนึ่งขั้น\n\nรับทราบ"}
+{"t": 120.2, "kind": "modal", "title": "【ญาติทำบุญอุทิศ】", "click": "รับทราบ", "buttons": ["รับทราบ"]}
+{"t": 121.0, "kind": "build-walk", "k": "lan", "ok": true}
+{"t": 123.5, "kind": "build-done", "k": "lan", "walk_secs": 2.6}
+{"t": 124.5, "kind": "trial-open", "case": 3, "q": 2, "waited": 43.4}
+{"t": 133.3, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 135.0, "kind": "state", "tick": 51, "paused": false, "court": true, "coin": 610, "food": 56, "order": 100, "karma": 0, "hp": 110, "lvl": 2, "greens": 4, "q": 1, "cases": 4, "zone": "th", "battle": false, "stations": "sala,krata,dab,ngiw,lan", "crew": "taan,nira", "mobs": 0}
+{"t": 140.4, "kind": "modal", "title": "ตรวจการ — ผ่าน", "click": "รับทราบ", "buttons": ["รับทราบ"]}
+{"t": 150.4, "kind": "chore", "what": "hire:dam"}
+{"t": 150.4, "kind": "state", "tick": 74, "paused": false, "court": true, "coin": 760, "food": 44, "order": 100, "karma": 0, "hp": 110, "lvl": 2, "greens": 4, "q": 3, "cases": 4, "zone": "th", "battle": false, "stations": "sala,krata,dab,ngiw,lan", "crew": "taan,nira", "mobs": 0}
+{"t": 151.8, "kind": "trial-open", "case": 4, "q": 3, "waited": null}
+{"t": 160.6, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 162.2, "kind": "trial-open", "case": 5, "q": 2, "waited": null}
+{"t": 171.0, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 180.0, "kind": "battle-over", "title": "⚔️ วิญญาณขัดขืน", "buttons": ["ลากเข้าสถานี"]}
+{"t": 182.5, "kind": "trial-open", "case": 5, "q": 2, "waited": null}
+{"t": 191.3, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 192.9, "kind": "trial-open", "case": 6, "q": 1, "waited": null}
+{"t": 202.4, "kind": "judge", "ok": true, "secs": 9.5}
+{"t": 214.0, "kind": "battle-over", "title": "⚔️ วิญญาณขัดขืน", "buttons": ["ลากเข้าสถานี"]}
+{"t": 216.5, "kind": "trial-open", "case": 6, "q": 1, "waited": null}
+{"t": 226.0, "kind": "judge", "ok": true, "secs": 9.5}
+{"t": 226.7, "kind": "build-walk", "k": "lokan", "ok": true}
+{"t": 230.1, "kind": "build-done", "k": "lokan", "walk_secs": 3.4}
+{"t": 230.4, "kind": "modal", "title": "【ญาติทำบุญอุทิศ】", "click": "รับทราบ", "buttons": ["รับทราบ"]}
+{"t": 232.1, "kind": "trial-open", "case": 7, "q": 1, "waited": 5.5}
+{"t": 240.9, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 255.7, "kind": "battle-over", "title": "⚔️ วิญญาณขัดขืน", "buttons": ["ลากเข้าสถานี"]}
+{"t": 258.1, "kind": "trial-open", "case": 7, "q": 1, "waited": null}
+{"t": 266.9, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 267.5, "kind": "build-walk", "k": "sawan", "ok": true}
+{"t": 270.8, "kind": "build-modal-missing", "k": "sawan", "txt": ""}
+{"t": 271.7, "kind": "mob-fab-click"}
+{"t": 273.3, "kind": "trial-open", "case": 8, "q": 1, "waited": 5.8}
+{"t": 282.1, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": false, "deserved": 5}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 1, "crewK": "taan", "free": 2, "build": false, "fire": 0}, {"k": "dab", "slots": 3, "crewK": "taan", "free": 0, "build": false, "fire": 0}, {"k": "ngiw", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 11.054559999999842}, {"k": "lan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "lokan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}], "crew": [{"k": "taan", "at": "krata", "esc": null, "buildK": null}, {"k": "nira", "at": null, "esc": null, "buildK": null}, {"k": "dam", "at": null, "esc": null, "buildK": null}], "paused": false, "log0": "📁 สำนวนมีชื่อเข้าคิว — หัวหน้าฝ่ายบัญชีบริษัท (หัวหน้าฝ่ายบัญชีที่เพื่อนร่วมงานนับถือ)", "chosen": {"st": "krata", "cr": "dam"}}
+{"t": 282.1, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 283.6, "kind": "trial-open", "case": 8, "q": 1, "waited": null}
+{"t": 292.4, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 293.0, "kind": "build-walk", "k": "sawan", "ok": true}
+{"t": 296.3, "kind": "build-modal-missing", "k": "sawan", "txt": ""}
+{"t": 297.2, "kind": "mob-fab-click"}
+{"t": 298.1, "kind": "mob-fab-click"}
+{"t": 299.1, "kind": "mob-fab-click"}
+{"t": 300.8, "kind": "trial-open", "case": 9, "q": 1, "waited": 7.8}
+{"t": 309.6, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": null, "deserved": 4}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "dab", "slots": 3, "crewK": "taan", "free": 0, "build": false, "fire": 0}, {"k": "ngiw", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 16.63678499999948}, {"k": "lan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "lokan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}], "crew": [{"k": "taan", "at": "krata", "esc": null, "buildK": null}, {"k": "nira", "at": null, "esc": null, "buildK": null}, {"k": "dam", "at": null, "esc": null, "buildK": null}], "paused": false, "log0": "วิญญาณเข้าคิว — หญิงวัยเกษียณ (สำนวน #011)", "chosen": {"st": "krata", "cr": "dam"}}
+{"t": 309.6, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 311.0, "kind": "trial-open", "case": 9, "q": 1, "waited": null}
+{"t": 319.8, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": null, "deserved": 4}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "dab", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "ngiw", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 17.232544999999526}, {"k": "lan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "lokan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}], "crew": [{"k": "taan", "at": "krata", "esc": null, "buildK": null}, {"k": "nira", "at": null, "esc": null, "buildK": null}, {"k": "dam", "at": null, "esc": null, "buildK": null}], "paused": true, "log0": "📜 ตรวจการรอบที่ 2 — ผ่าน (ระเบียบ 100 · คะแนนเฉลี่ย 86) +150 เบี้ย", "chosen": {"st": "dab", "cr": "dam"}}
+{"t": 319.8, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 320.6, "kind": "modal", "title": "ตรวจการ — ผ่าน", "click": "รับทราบ", "buttons": ["รับทราบ"]}
+{"t": 322.2, "kind": "trial-open", "case": 9, "q": 1, "waited": null}
+{"t": 331.0, "kind": "assign-fail-diag", "q0": {"resist": false, "beaten": null, "pure": null, "deserved": 4}, "stations": [{"k": "sala", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "krata", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "dab", "slots": 2, "crewK": "taan", "free": 1, "build": false, "fire": 0}, {"k": "ngiw", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 18.16748999999955}, {"k": "lan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}, {"k": "lokan", "slots": 0, "crewK": null, "free": 3, "build": false, "fire": 0}], "crew": [{"k": "taan", "at": "krata", "esc": null, "buildK": null}, {"k": "nira", "at": null, "esc": null, "buildK": null}, {"k": "dam", "at": null, "esc": null, "buildK": null}], "paused": false, "log0": "📜 ตรวจการรอบที่ 2 — ผ่าน (ระเบียบ 100 · คะแนนเฉลี่ย 86) +150 เบี้ย", "chosen": {"st": "dab", "cr": "dam"}}
+{"t": 331.0, "kind": "judge", "ok": true, "secs": 8.8}
+{"t": 331.6, "kind": "end", "tick": 123, "paused": false, "court": true, "coin": 975, "food": 20, "order": 100, "karma": 12, "hp": 66, "lvl": 2, "greens": 5, "q": 1, "cases": 9, "zone": "th", "battle": false, "stations": "sala,krata,dab,ngiw,lan,lokan", "crew": "taan,nira,dam", "mobs": 1, "waits": [8.0, 43.4, 5.5, 5.8, 7.8], "errors": [["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: net::ERR_CONNECTION_RESET"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"], ["error", "Failed to load resource: the server responded with a status of 404 (File not found)"]]}

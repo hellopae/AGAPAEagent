@@ -1,0 +1,13 @@
+?? Exam/Screenshot_20260926_135704_Genesis.jpg
+?? Exam/Screenshot_20260926_135718_Genesis.jpg
+?? Exam/Screenshot_20260926_135845_Genesis.jpg
+?? Exam/Screenshot_20260926_140224_Genesis.jpg
+?? Exam/Screenshot_20260926_141221_Genesis.jpg
+?? Exam/Screenshot_20260926_144420_Genesis.jpg
+?? Exam/Screenshot_20260927_011511_Genesis.jpg
+?? files/
+?? output/audio/
+?? output/higgsfield/home-embers-master.mp4
+?? output/higgsfield/intro-splash-master.mp4
+?? output/wallpapers/
+?? output/zone-scenes/
