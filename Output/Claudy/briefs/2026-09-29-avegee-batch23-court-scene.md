@@ -1,7 +1,7 @@
 # ใบงาน: AVEGEE ชุด 23 — ปุ่มศาลแบบใหม่ · ศาลาน้ำชาหันขวา · ยักษ์ไม่โดนประตูบัง · ยมในห้องสอบสวน
 
 **เจ้าของ:** Codex (`--write` บน branch `codex/<run_id>`) · **ผู้สั่ง:** Claudy · **ตรวจ+merge:** Dale
-Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` — **ฐานต้องเป็น main หลัง merge ชุด 21** · เทสต์ `node --test tests/*.test.mjs`
+Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` — **ฐาน: main `2bc6535` (มีชุด 21 แล้ว)** · เทสต์ `node --test tests/*.test.mjs`
 ที่มา: คุณเป้เล่นจริง 29 ก.ย. 2569 (ภาพ `~/Desktop/Screenshot 2569-09-29 at 15.55.32.png`, `~/Desktop/untitled folder 2/Screenshot 2569-09-29 at 04.35.12.png`, `…11.04.47.png`, `…04.34.05.png`)
 ชุด 22 (ตัวเลขสมดุล) อาจรันคู่ขนาน — ชุดนี้ **ไม่แตะตัวเลขสมดุลและ `judge()`**
 
