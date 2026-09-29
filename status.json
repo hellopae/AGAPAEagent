@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T12:38:05.901Z",
+  "updatedAt": "2026-09-29T12:43:47.370Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,12 +69,12 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Fact-check AVEGEE zone events",
       "report": {
-        "when": "08:16",
-        "title": "Reese fact-check AVEGEE crew names",
-        "body": "Fact-check complete. Verdict: **FIX LIST** (3 items — Oracle, Firewire, Benedikt). Full report saved at:\n\n- `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-26-avegee-crew-names-factcheck.md`\n\nReport already delivered to caller via handback."
+        "when": "19:43",
+        "title": "Fact-check AVEGEE zone events",
+        "body": "Verdict: FIX LIST. The report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-29-avegee-zone-events-factcheck.md`, and the Thotsakan recommendation is at the top of it.\n\nThe three main issues:\n\n1. **`Boss-frontier1.png` must not be called Thotsakan.**\n   - Traditional Thotsakan has 10 faces, 20 arms and a green body, and the top tier of his khon mask is a \"face of a god or Brahma\", not a hermit as Minnie guessed. The image has 1 face and 4 arms, holds Vishnu's chakra, conch and mace, and has green skin and a tall crown, so it reads as Phra Narai or Phra Ram drawn as a demon.\n   - I rate that risk high. The chakra is also half of the Chakri dynasty emblem.\n   - Safest is option (2) adjusted: rename him as an invented border guardian, remove the chakra and co …"
       }
     },
     {
