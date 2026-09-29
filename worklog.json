@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-09-29T11:02:32.693Z",
+  "updatedAt": "2026-09-29T11:29:28.442Z",
   "entries": [
+    {
+      "id": "wl-260929-dale-garg",
+      "datetime": "2026-09-29T11:29:28Z",
+      "displayDate": "29 ก.ย. 2569",
+      "displayTime": "18:29",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Review+merge AVEGEE batch 25",
+      "summary": "**PASS.** I merged AVEGEE batch 25 to main as `b4a0f8b` and pushed it. I checked the deployed Pages site on https://hellopae.github.io/AVEGEE/ at both 1440×810 and 390×844.\n\n- **No power used:** no reveal marks or highlights on any of the three wheels, and the log still shows the sin-match bonus whe"
+    },
     {
       "id": "wl-260929-dale-ho1i",
       "datetime": "2026-09-29T11:02:32Z",
