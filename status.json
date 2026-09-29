@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T10:01:46.327Z",
+  "updatedAt": "2026-09-29T11:02:32.693Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,11 +279,11 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "done",
-      "task": "Review+merge AVEGEE batches 22+23",
+      "task": "Review+merge AVEGEE batch 24 (B only)",
       "report": {
-        "when": "17:01",
-        "title": "Review+merge AVEGEE batches 22+23",
-        "body": "ชุด 22: PASS\nชุด 23: PASS\n\nmerge ทีละชุดโดยไม่มี conflict และ push แล้ว main ที่ push = `4c2dc24` (ก่อนงานนี้ = `2bc6535`) เปิดเกมบน https://hellopae.github.io/AVEGEE/ แล้ว โค้ดใหม่ขึ้นครบ ทั้ง 1440×810 และ 390×844 ไม่มี pageerror\n\n**Commit**\n- `a700c9d` ชุด 22 (Codex) แล้ว merge เป็น `39d16a0`\n- `39974c6` ชุด 23 (Codex) แล้ว merge เป็น `3bfb812`\n- `4c2dc24` ผมแก้เอง 1 จุด: ป้าย \"ตรงบาป +โบนัส\" เดิมถูกไอคอนสถานีแถวล่างของวงบังครึ่งข้อความบนเดสก์ท็อป ผมย้ายไปวางทับขอบล่างของไอคอนตัวเอง แก้เฉพาะ `command-wheel.css`\n- `node --test tests/*.test.mjs` ผ่านทุกขั้น (76 → 78 → 78) โปรเจกต์นี้ไม่มี `package.json` จึงไม่มี build step\n\n**Rollback**\n- ป้าย: `git revert 4c2dc24`\n- ชุด 23: `git revert -m 1 3bfb812`\n- ชุด 22: `git revert -m 1 39d16a0`\n- ถอยสองชุดให้ถอยชุด 23 ก่อน ห้าม force-push\n\n**ชุด 22 …"
+        "when": "18:02",
+        "title": "Review+merge AVEGEE batch 24 (B only)",
+        "body": "**PASS.** AVEGEE main is now `1d4e128`, pushed, and the Pages files match. Main was `4c2dc24` before. I merged item B only, and the full report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/2026-09-29-avegee-batch24-review.md`.\n\n- **Item A removed.** `src/ui.js` and `tests/balance22.test.mjs` are back to main's version, and I took the helper out of `game.js`. The badge behaves as it did in batches 22/23.\n- **`spawnMob` fix added.** It now picks only bottom-edge points that `findPath` connects to the guard post.\n  - Codex's `(150,675)` finding turned out to be a different problem (see the second bug below).\n  - So the spawn test does not fail without the fix. It is a safety net.\n- **Two extra bugs found in the browser** (1440×810), which Codex's node tests missed.  …"
       }
     },
     {
