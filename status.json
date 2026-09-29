@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T08:54:19.516Z",
+  "updatedAt": "2026-09-29T09:13:15.889Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Review+merge AVEGEE batch 21",
       "report": {
-        "when": "13:17",
-        "title": "Review+merge AVEGEE batch 19",
-        "body": "**PASS** — merge และ push แล้ว, `d4c846f` เป็น HEAD ของ main บน origin\n\nฉันเช็ค Pages ว่าโค้ดใหม่ขึ้นแล้ว (`src/art.js` กับ `src/scene.js`) แต่ยังไม่ได้เปิดเกมบน URL จริงด้วย Playwright การทดสอบทั้งหมดรันบน localhost จากโค้ดที่ merge แล้ว\n\nรายงานฉบับเต็มอยู่ที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/2026-09-29-avegee-batch19-review.md` และ screenshot อยู่ที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/screenshots/2026-09-29-avegee-batch19/`\n\n**Commit**\n- `ed4e74b` — งาน Codex บวกข้อ D\n- `0f7bd6f` — merge เข้า main\n- `d4c846f` — ที่ Dale แก้เพิ่ม\n\n**สิ่งที่แก้เพิ่ม**\n- **ข้อ D:** เปลี่ยนเป็น `ctx.scale(-face, 1)` ใน `drawHeroWalk` ดูจาก screenshot จริงครบ 4 โซน เดินขวาตัวและก้าวเอียงขวา เดินซ้ายเอียงซ้าย ส่วนสไปรท์โซนตะวันตกหน้าค่อนข้างตรงกล้ …"
+        "when": "16:13",
+        "title": "Review+merge AVEGEE batch 21",
+        "body": "**PASS**: I merged AVEGEE batch 21 and pushed it. Main is at `2bc6535`, with the Codex work plus my fixes in `d7d33c5`. Main was `d4c846f` before. Roll back with `git revert -m 1 2bc6535`.\n\nThe live site at https://hellopae.github.io/AVEGEE/ serves the new code. On the real URL at 390×844, the boss-prep fight button sits inside the screen (y 752–797 of 844).\n\nI checked the four criteria with Playwright at 1440×810 and 390×844, injecting saves with all tutorial steps marked taught:\n\n1. **NaN:** The `hammer` case at intensity 1–5 and repeated verdicts left coin, order, karma and scoreSum as normal numbers, and no HUD text showed \"NaN\". A save with null coin, order, karma and scoreSum loaded back to 900, 72, 0 and 0.\n2. **Silent warrant failure:**\n   - **Escorting keeper:** The station shows  …"
       }
     },
     {
