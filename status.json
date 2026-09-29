@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T02:26:55.138Z",
+  "updatedAt": "2026-09-29T02:29:48.808Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,11 +174,11 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Mind: write st-dab image prompt",
       "report": {
-        "when": "01:35",
-        "title": "Mind: sitting sprite prompt",
+        "when": "09:29",
+        "title": "Mind: write st-dab image prompt",
         "body": "Report delivered to Claudy via SubagentHandback."
       }
     },
