@@ -1,6 +1,11 @@
 # Dale review — AVEGEE: ยมทูตเดิน (hero walk sprite, Codex ของคุณเป้)
 
-**ผล: FIX LIST — ยังไม่ commit/push (ค้างข้อ 3 บางส่วน + ต้องขอสิทธิ์เพิ่ม)**
+**ผลล่าสุด (29 ก.ย. 2569 รอบ 2): PASS — commit + push แล้ว** ดูหัวข้อ "อัปเดตรอบ 2" ท้ายไฟล์
+รอบแรกด้านล่างคือ FIX LIST เดิมที่ค้างไว้ (เก็บไว้อ้างอิงว่าทำไมรอบแรกไม่ผ่าน)
+
+---
+
+**ผลรอบแรก: FIX LIST — ยังไม่ commit/push (ค้างข้อ 3 บางส่วน + ต้องขอสิทธิ์เพิ่ม)**
 
 - งานอยู่ที่: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` — **ตรงใน working tree ของ main ยังไม่ commit** (ตามที่ระบุมา)
 - ไฟล์ที่แก้: `src/art.js`, `src/scene.js`, `scripts/prep-art.py`, `img/manifest.json` + ภาพ untracked `img/hero-yama-walk.png`, `img/Asia/hero-yama-asia-walk.png`, `img/West/hero-yama-west-walk.png`, `img/CyberHell/hero-yama-cyberhell-walk.png`
@@ -42,3 +47,49 @@ Screenshot 4 เฟรมต่อกัน (`walk-1-start.png` → `walk-4-arri
 - ไม่ได้แตะ `CONCEPT.md`, `Exam/`, `files/`, `output/`, `img/scene-cyberhell.jpeg`, `img/st-dab-v2.png` ตามที่ห้ามไว้ (ทั้งหมดยังอยู่สถานะเดิมที่ค้างมาจากก่อนหน้านี้)
 - `img/manifest.json` มีการเปลี่ยนแปลงเพิ่มเติมจากตอนที่ Codex แก้ไว้เดิม (แค่รายชื่อไฟล์ที่ prep-art.py แสดง ไม่ใช่เนื้อหาที่ผิดจากที่ตั้งใจ) — ตรวจแล้วว่ายังตรงกับ diff เดิมที่รายงานมา (+4 รายการ `hero-yama*-walk.png`) ไม่มีอะไรเกิน
 - Repo ยังมี git status เดิมที่ยังไม่ commit (5 ไฟล์ tracked + untracked เดิม) — ตรงกับสถานะที่ 18F ทิ้งไว้ บวกกับการแก้ `scripts/prep-art.py` รอบนี้
+
+---
+
+## อัปเดตรอบ 2 (29 ก.ย. 2569) — PASS, commit + push แล้ว
+
+**ผล: PASS — commit `46a2e53` → `origin/main`**
+
+คุณเป้อนุมัติ "ทำได้เลย" — Claudy รัน `python3 scripts/prep-art.py asia-walk west-walk cyberhell-walk --all` นอกเซสชันนี้ให้ (ย่อ 3 ไฟล์ที่เหลือ) ก่อนส่งงานกลับมาให้ตรวจต่อ
+
+### ยืนยันข้อ 3 (ขนาดไฟล์) ที่เป็น FIX LIST เดียวจากรอบแรก — ผ่านแล้ว
+| ไฟล์ | ก่อน | หลัง |
+|---|---|---|
+| `img/hero-yama-walk.png` (ไทย) | 876KB | 112–115KB |
+| `img/Asia/hero-yama-asia-walk.png` | 1.1MB | 134KB |
+| `img/West/hero-yama-west-walk.png` | 1.3MB | 160KB |
+| `img/CyberHell/hero-yama-cyberhell-walk.png` | 1.1MB | 159KB |
+
+ทั้ง 4 ไฟล์ 768×256 ตรวจภาพด้วยตา (`spritesheet-{th,asia,west,cyberhell}.png` ใน screenshots) — 4 เฟรมคมชัด แยกกันชัดเจน ไม่มีสีเลือนข้ามเฟรม ชุดตรงกับโซน (ไทย/บูรพา/ปัจฉิม/ไซเบอร์)
+
+### ตรวจซ้ำทุกข้อในเกณฑ์รับงานด้วย Playwright จริง (ไม่ใช่แค่อ่านโค้ด)
+เปิดเกม 1440×810 ทั้ง 4 โซน (`th/asia/west/cyberhell`) ฉีดเซฟที่มีสถานีครบ + `taught` ครบทุกบท (กันโมดัลสอนเล่นบัง) เรียก `window.G.walkTo(x,y)` ตรง ๆ แล้วอ่านตำแหน่งจริง `window.G.player.{x,y,face}` **ก่อน**ถ่าย screenshot ทุกเฟรม (~70ms/เฟรม) เพื่อครอปภาพให้ตามตัวละครแม่นยำ:
+
+1. **เดินลื่น เท้าติดพื้น ขนาดไม่เปลี่ยน — ผ่าน** `th-walk-right-cycle.png`/`th-walk-left-cycle.png` (ครอปตามตำแหน่งจริงทีละเฟรม) แสดงวงแหวนเลือก (selection ring = พื้นที่ยืน) อยู่ตำแหน่งเดียวกับเท้าทุกเฟรม ขนาดตัวละครเท่ากันทุกเฟรม ไม่มีการกระโดด/สะดุด
+2. **หันซ้าย-ขวาถูก — ผ่าน** `walkTo(x+900,y)` → `face:1` (มองขวา), `walkTo(x-900,y)` → `face:-1` (มองซ้าย) สไปรท์กลับด้านถูกทิศทุกเฟรม (เทียบ `th-walk-right-cycle.png` vs `th-walk-left-cycle.png`)
+3. **ยมใส่ชุดของโซนนั้น — ผ่าน** `asia-walk-right-cycle.png` (ชุดกิโมโนอาซีย) · `west-walk-right-cycle.png` (ชุดไวกิ้งขนสัตว์) · `cyberhell-walk-right-cycle.png` (ชุดไซเบอร์เข้ม) — ทั้ง 3 โซนโหลดสไปรท์เดินของตัวเอง ไม่ใช่ของโซนไทย
+4. **สลับยืน↔เดินไม่กระโดด — ผ่าน** หยุดเดินแล้วถ่าย `th-idle-after-walk.png` — กลับเป็นท่ายืนถือคัมภีร์ปกติ ตำแหน่ง/ขนาดต่อเนื่องกับเฟรมเดินสุดท้าย ไม่มีการเปลี่ยนขนาด/กระตุก
+5. **ท่าฟาดยังใช้ `hero-yama-atk` แม้กำลังเดิน — ผ่าน** ตั้ง `g.swingUntil` พร้อมสั่ง `walkTo` พร้อมกัน (จำลองกดฟาดระหว่างเดิน) → `th-atk-pose-while-walking-flag.png` แสดงท่าฟาด (แขนเหวี่ยง) ไม่ใช่ท่าเดิน ยืนยันโค้ด `if (!swinging && walking && drawHeroWalk(...)) return;` ทำงานถูกต้องจริงในเบราว์เซอร์ ไม่ใช่แค่อ่านโค้ดเฉย ๆ
+6. **`node --test tests/*.test.mjs` — ผ่าน** 58/58 (รันซ้ำ 2 รอบ ครั้งแรกมีเทสต์ 1 ตัวไทม์เอาต์-เซนซิทีฟ `combat-power.test.mjs` ที่รู้จักอยู่แล้วว่าไม่เกี่ยวกับ diff ชุดนี้ — รันเดี่ยวผ่าน)
+7. ไม่มี error ใน `page.on('pageerror', ...)` ทั้ง 4 โซนระหว่างทดสอบทั้งหมด
+
+### Commit + push
+- แยก `manifest.json` เฉพาะ hunk รายการ `-walk.png` (4 บรรทัด: `hero-yama-walk.png`, `Asia/hero-yama-asia-walk.png`, `CyberHell/hero-yama-cyberhell-walk.png`, `West/hero-yama-west-walk.png`) ด้วยวิธีเดียวกับรอบ st-dab — รัน `make-manifest.py` เทียบ JSON กับ HEAD ยืนยันว่าของที่ต้อง insert มีแค่ 4 บรรทัดนี้ ส่วนที่เหลือ (ui icons, `scene-v2.png`, `st-dab-v2.png`, `Boss ZoneN-cutscene.jpeg`) เป็นงานค้างอื่นที่ไม่ใช่ของชุดนี้ ไม่ commit
+- Commit `46a2e53`: `src/art.js`, `src/scene.js`, `scripts/prep-art.py`, `img/hero-yama-walk.png`, `img/{Asia,West,CyberHell}/hero-yama-*-walk.png`, `img/manifest.json` (เฉพาะ 4 บรรทัด) — **ไม่แตะ** `CONCEPT.md`, `img/st-dab-v2.png`, `img/scene-cyberhell.jpeg`, `Exam/`, `files/`, `output/`
+- Push → `origin/main` สำเร็จ
+- ตรวจ Pages จริง: `img/manifest.json` มีรายการ `hero-yama-walk.png` ครบ, ไฟล์ทั้ง 4 ตอบ `200` ขนาดตรงกับที่ build เป๊ะ (`hero-yama-walk.png` 114,814B · `Asia` 133,906B · `West` 160,411B · `CyberHell` 159,077B) `last-modified` ขยับตามเวลา push
+
+### Rollback
+```
+cd "/Users/agapae/Documents/Work PAE/Claude/AVEGEE"
+git revert 46a2e53
+git push origin main
+```
+
+### หมายเหตุ
+- `CONCEPT.md` ยังมีงานแก้ไข "ตัดแนวคิดลงทัณฑ์เอง" ค้างอยู่ใน working tree เหมือนเดิม (ไม่เกี่ยวกับชุดนี้ ไม่ได้แตะ)
+- Screenshot ทั้งหมด (รอบ 1 + รอบ 2): `Output/Dale/screenshots/2026-09-29-avegee-yama-walk/`
