@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T03:30:55.758Z",
+  "updatedAt": "2026-09-29T03:34:57.119Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind: write st-dab image prompt",
+      "status": "working",
+      "task": "Mind: zone st-dab prompts",
       "report": {
         "when": "09:29",
         "title": "Mind: write st-dab image prompt",
