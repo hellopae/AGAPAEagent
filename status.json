@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T11:10:57.508Z",
+  "updatedAt": "2026-09-29T11:29:28.442Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,12 +278,12 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Review+merge AVEGEE batch 25",
       "report": {
-        "when": "18:02",
-        "title": "Review+merge AVEGEE batch 24 (B only)",
-        "body": "**PASS.** AVEGEE main is now `1d4e128`, pushed, and the Pages files match. Main was `4c2dc24` before. I merged item B only, and the full report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Dale/2026-09-29-avegee-batch24-review.md`.\n\n- **Item A removed.** `src/ui.js` and `tests/balance22.test.mjs` are back to main's version, and I took the helper out of `game.js`. The badge behaves as it did in batches 22/23.\n- **`spawnMob` fix added.** It now picks only bottom-edge points that `findPath` connects to the guard post.\n  - Codex's `(150,675)` finding turned out to be a different problem (see the second bug below).\n  - So the spawn test does not fail without the fix. It is a safety net.\n- **Two extra bugs found in the browser** (1440×810), which Codex's node tests missed.  …"
+        "when": "18:29",
+        "title": "Review+merge AVEGEE batch 25",
+        "body": "**PASS.** I merged AVEGEE batch 25 to main as `b4a0f8b` and pushed it. I checked the deployed Pages site on https://hellopae.github.io/AVEGEE/ at both 1440×810 and 390×844.\n\n- **No power used:** no reveal marks or highlights on any of the three wheels, and the log still shows the sin-match bonus when the sentence completes (`+72` coins with `+17` bonus).\n- **Mirror:** the wheel highlights the right station, intensity and keeper. On the test case that was กระทะทองแดง, level 4 and กานต์ (he tied กานต์ 94 with บุญ 94, and the tie goes to the first in team order). The highlight survives closing and reopening the room, and a save then reload.\n- **Hypnosis:** the hidden deeds were all confessed, and only the station was highlighted, not the intensity or keeper.\n- **Next case:** no leftover revea …"
       }
     },
     {
