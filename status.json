@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T06:31:19.066Z",
+  "updatedAt": "2026-09-29T08:15:26.120Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE balance + playtest (retry)",
       "report": {
-        "when": "17:52",
-        "title": "Toby finish Codex 16A partial",
-        "body": "Report delivered to the caller. Summary of what I did:\n\n- Committed Codex's in-progress checkpoint on `codex/20260928T083305Z-fbb41880`, merged `main` into it (resolved one conflict in `src/scene.js`), and verified all 5 items from the brief (frontier gate/merchant position, mirror map-lock, building repair flow, battle-win overlap fix, punish-cauldron positioning) were actually complete and working — tested live via Playwright-driven clicks in a real browser against the worktree's own dev server, not just unit tests.\n- `node --test tests/*.test.mjs` passes 49/49.\n- Nothing was merged/pushed to main, the worktree wasn't deleted, and the main `AVEGEE` checkout was never touched.\n- Full report at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-09-28-avegee-batch16a-fin …"
+        "when": "15:15",
+        "title": "AVEGEE balance + playtest (retry)",
+        "body": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไม่ได้รัน:**\n- **เบราว์เซอร์ได้แค่โซน 1 ถึงหน้าบอส:** ปุ่ม \"เข้าสู้\" ของบอสหลุดจอ บอทเลยค้าง ผลโซน 2–4 จึงมาจากการจำลอง headless อย่างเดียว\n- **จำลองไม่ครบ:** ไม่ได้จำลองด่านชายแดน และบอทไม่ใช้พลังกระจก/ตวาด/สะกดจิต ตะราง มินิเกม\n- **เวลาเดินคลาดได้ราว ±20%:** headless ไม่มีหน้ากากลาวา\n\n**3 ปัญหาใหญ่สุด**\n1. **เศรษฐกิจพังถาวร (NaN):** สำนวน `hammer` มีน้ำหนักรวม 0 ทำให้คะแนน เบี้ย และระเบียบเป็น NaN ตลอดเกม (`game.js:679-681`) เกิดในเกมจำลอง 5/30 (careful), 7/30 (perfect), 3/30 (sloppy) และเกิดเอ …"
       }
     },
     {
