@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T12:28:14.720Z",
+  "updatedAt": "2026-09-29T12:29:41.950Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-check AVEGEE crew names",
+      "status": "working",
+      "task": "Fact-check AVEGEE zone events",
       "report": {
         "when": "08:16",
         "title": "Reese fact-check AVEGEE crew names",
