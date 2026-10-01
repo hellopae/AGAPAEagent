@@ -10,9 +10,9 @@
       "agentName": "Dale",
       "agentImg": "avatars/Dale.png",
       "pipeline": "standalone",
-      "status": "done",
-      "title": "Review+merge AVEGEE batch 26B",
-      "summary": "ส่งรายงานให้ Claudy แล้ว: ผล **PASS** และ merge เข้า main เป็น `472ff6f` (push แล้ว Pages ยืนยันแล้ว).\n\nDale แก้เพิ่ม 4 จุดจากการตรวจในเบราว์เซอร์ก่อน merge:\n- เอฟเฟกต์โดนตีและตัวเลขดาเมจไม่ขึ้นในฉากหลายศัตรู.\n- ปุ่มท้าซ้ำมุมจอกดไม่ได้จริง.\n- ปุ่มเดียวกันทับปุ่มตั้งค่าบนจอกว้าง.\n- แถบ HP ต่อตัวไม่เห"
+      "status": "blocked",
+      "title": "BLOCKED: Review AVEGEE batch 26B (เข้า repo ไม่ได้)",
+      "summary": "ยังไม่ได้รีวิว/merge — session นี้ถูกจำกัดสิทธิ์ให้เข้าได้แค่ AGAPAE Agent/ เข้า repo AVEGEE และ .codex-worktrees ไม่ได้ (Operation not permitted) · ไม่มี commit/merge/push · รอคุณเป้เปิดสิทธิ์โฟลเดอร์แล้วค่อยทำใหม่"
     },
     {
       "id": "wl-260929-mind-zyne",
