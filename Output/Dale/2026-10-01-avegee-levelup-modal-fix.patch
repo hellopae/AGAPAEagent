@@ -1,0 +1,12 @@
+diff --git a/src/ui.js b/src/ui.js
+index 73b1f82..3a3cb6b 100644
+--- a/src/ui.js
++++ b/src/ui.js
+@@ -3590,6 +3590,7 @@ g.onChange = () => {
+     const p = g.pendingDadPunish; g.pendingDadPunish = null;
+     openDadPunish(p); return;
+   }
++  if (g.battle) return;   // TEMP-QA: รอฉากต่อสู้ปิดก่อนค่อยเด้งกล่องเลื่อนขั้น/โซน (endBattle เรียก onChange ซ้ำเอง)
+   if (!g.battle && g.bossPending && !dlg.open && !g.pendingVerdict && !g.pendingLevel && !g.pendingZone) {
+     const z = g.zoneDef();
+     const proceed = () => {

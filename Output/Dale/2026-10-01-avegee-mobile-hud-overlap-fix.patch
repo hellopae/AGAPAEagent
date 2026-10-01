@@ -1,0 +1,11 @@
+diff --git a/src/command-wheel.css b/src/command-wheel.css
+index 29ab4f7..2584393 100644
+--- a/src/command-wheel.css
++++ b/src/command-wheel.css
+@@ -265,3 +265,6 @@ dialog.help-modal[open]{box-sizing:border-box;width:min(78vw,1050px);max-width:1
+   .pause-head strong{font-size:21px}.pause-actions{gap:8px}.pause-actions button{width:90px;font-size:12px}
+   .pause-actions img{width:62px;height:62px}
+ }
++/* Dale QA 1 ต.ค. 2569 — บล็อก 700px ด้านบนดึงปุ่มเปิดศาล/พิจารณาคดีลงมา 1.5% ทับกฎ 18% ของ index.html
++   ทำให้ปุ่มหนังสือ/กระเป๋า/ย้ายโซน (hud-zone) ถูกปุ่มทองบังที่ 390px กดแผนที่โลกไม่ได้ — ยกกลับขึ้นเหนือแถวไอคอน */
++@media(max-width:520px){.map-controls{bottom:calc(env(safe-area-inset-bottom) + 18%)}}
