@@ -18,3 +18,6 @@ Prompt: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-0
 
 ## รายงาน
 ตาราง: ชื่อไฟล์ · พาธเต็ม · ขนาดพิกเซล · พื้นโปร่ง/ขาว · ผ่านเช็กลิสต์ไหม · ภาพที่ gen ไม่สำเร็จ + เหตุผล
+
+---
+**ยกเลิก 1 ต.ค. 2569:** ภาพทั้ง 12 ชิ้นอยู่ใน AVEGEE main แล้ว (`1ddad05` "Add twelve event character sprites") — ไม่ต้อง gen ซ้ำ
