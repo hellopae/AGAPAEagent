@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T06:08:40.665Z",
+  "updatedAt": "2026-10-01T06:11:18.817Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "blocked",
-      "task": "รอสิทธิ์เข้า AVEGEE — รีวิว 26B",
+      "status": "working",
+      "task": "AVEGEE browser playthrough QA",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
