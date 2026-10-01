@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Review+merge AVEGEE batch 26B",
+      "status": "blocked",
+      "task": "รอสิทธิ์เข้า AVEGEE — รีวิว 26B",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
