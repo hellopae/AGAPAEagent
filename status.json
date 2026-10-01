@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T06:56:55.231Z",
+  "updatedAt": "2026-10-01T07:02:26.706Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "AVEGEE browser playthrough QA",
+      "status": "working",
+      "task": "AVEGEE 27D map+items",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE balance + playtest (retry)",
+      "status": "working",
+      "task": "AVEGEE 27B battle (continue Codex)",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",

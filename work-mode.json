@@ -1,5 +1,5 @@
 {
-  "mode": "both",
-  "updated": "2026-09-28",
-  "note": "คุณเป้ 28 ก.ย. 2569 ~14:30: 'ระหว่างรอ codex reset ตามพวกนี้รอ' → ตั้งคิว Codex เริ่ม 15:10 (15c, 16B คู่ขนาน → 16A) · Codex ติดลิมิต 13:36 (try again 3:06 PM) · โหมด: both = Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · claude-only = Dale/Toby เขียนเอง · codex-only = คุณเป้สั่ง Codex ตรง · สลับโดยบอก Claudy · SOP-01 STEP 0"
+  "mode": "claude-only",
+  "updated": "2026-10-01",
+  "note": "1 ต.ค. 2569 14:01: Codex rate_limited ทั้ง 4 run ชุด 27 (try again 3:00 PM) → สลับ claude-only ตามกฎข้อ 9 · Toby/Dale ทำต่อใน worktree เดิม · คุณเป้ 28 ก.ย. 2569 ~14:30: 'ระหว่างรอ codex reset ตามพวกนี้รอ' → ตั้งคิว Codex เริ่ม 15:10 (15c, 16B คู่ขนาน → 16A) · Codex ติดลิมิต 13:36 (try again 3:06 PM) · โหมด: both = Codex เขียนบน branch codex/<run_id> แล้ว Dale รีวิว · claude-only = Dale/Toby เขียนเอง · codex-only = คุณเป้สั่ง Codex ตรง · สลับโดยบอก Claudy · SOP-01 STEP 0"
 }
