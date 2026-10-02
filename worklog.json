@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-02T07:13:02.143Z",
+  "updatedAt": "2026-10-02T07:17:14.140Z",
   "entries": [
+    {
+      "id": "wl-261002-reese-rh25",
+      "datetime": "2026-10-02T07:17:14Z",
+      "displayDate": "2 ต.ค. 2569",
+      "displayTime": "14:17",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese fact-check zone locations",
+      "summary": "Verdict: FIX LIST. The report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-29-avegee-zone-events-factcheck.md`, and the Thotsakan recommendation is at the top of it.\n\nThe three main issues:\n\n1. **`Boss-frontier1.png` must not be called Thotsakan.**\n   - Traditiona"
+    },
     {
       "id": "wl-261002-dale-m2m8",
       "datetime": "2026-10-02T07:13:02Z",
