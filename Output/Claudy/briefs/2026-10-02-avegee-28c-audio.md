@@ -1,6 +1,6 @@
 # ใบงาน 28C: AVEGEE — เสียงดนตรีแตกตอนเข้าฉากต่อสู้ + เสียง effect ท่าไม้ตาย
 
-Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = main หลังใบงาน 28-0 commit · เทสต์ `node --test tests/*.test.mjs`
+Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = AVEGEE main `f075d79` (หลัง 28-0) · เทสต์ `node --test tests/*.test.mjs`
 ที่มา: คุณเป้ 2 ต.ค. 2569 — "ตอนกดเข้าฉากต่อสู้ บางครั้งเหมือนเสียงดนตรีจะแตกๆ" · "เพิ่มเสียง effect เวลากดท่าไม้ตาย"
 **ทำใน worktree แยก:** `git -C <repo> worktree add ../.toby-worktrees/28c -b toby/28c main` (28A/28B ทำขนานกัน)
 

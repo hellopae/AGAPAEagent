@@ -1,6 +1,6 @@
 # ใบงาน 28A: AVEGEE — UI/ฉาก: ขยายภาพสถานี, กลับด้านโรงน้ำชา, ย้ายปุ่มฉากต่อสู้, ปุ่มซ่อมล้นจอ, ยมบาทไปชายแดนหลังศึก
 
-Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = main หลังใบงาน 28-0 commit · เทสต์ `node --test tests/*.test.mjs`
+Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = AVEGEE main `f075d79` (หลัง 28-0) · เทสต์ `node --test tests/*.test.mjs`
 ที่มา: คุณเป้ 2 ต.ค. 2569 · ภาพประกอบใน `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/assets/28/`
 **ทำใน worktree แยก:** `git -C <repo> worktree add ../.toby-worktrees/28a -b toby/28a main` แล้วแก้ในนั้น (Toby คนอื่นทำ 28B/28C ขนานกัน)
 
@@ -19,6 +19,11 @@ Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = main ห�
    → clamp ให้อยู่ในจอเสมอ (และย่อข้อความ/ตัดบรรทัดได้บนจอแคบ)
 5. **Event ปีศาจชายแดนฝ่าเข้ามา**: หลังสู้ชนะ ยมบาท(ตัวผู้เล่น) ต้องไปอยู่ที่ **แผนที่ชายแดน** (ไม่ใช่กลับลานศาล) ให้เข้ากับเนื้อเรื่อง
    ดูโค้ด frontier breach (`frontierBreachStatus`, `src/frontier.js`) + ทำงานร่วมกับเนื้อเรื่องใหม่จาก 28-0 ได้
+
+6. **(เพิ่มจาก Dale 28-0) ภาพท่าไม้ตายบอสใน zoneEvent 404 บน live** — `src/game.js` ~2655 fallback ไป `img/raw/...-cutscene.jpeg`
+   (gitignore) · `boss-frontier-th` เข้าเส้นทางนี้เมื่อ HP ≤ 50% → ชี้ไปภาพใน `img/` ที่มีอยู่ (`img/boss-frontier-th-cutscene.jpeg`,
+   `img/boss-tester-th-cutscene.jpeg`, `img/<Zone>/boss-*-<zone>-cutscene-<zone>.png` — ยัง untracked ต้อง commit เข้า branch) แก้เทสต์
+   `new-battle-abilities` ที่ assert path เดิม · ไม่มีโค้ดเกมอ้าง `img/raw/` เหลือ
 
 ## ข้อห้าม
 - ไม่เปลี่ยนสมดุลเกม (นั่นคือ 28B) · ไม่แตะเสียง (28C) · ไม่แตะ `img/raw/`, `Exam/`, `files/`, `output/`, `CONCEPT.md`
