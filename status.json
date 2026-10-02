@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T04:11:45.671Z",
+  "updatedAt": "2026-10-02T07:07:34.575Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,8 +43,8 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "done",
-      "task": "AVEGEE zone 2-4 event ideas",
+      "status": "working",
+      "task": "Minnie zone location ideas",
       "report": {
         "when": "19:28",
         "title": "AVEGEE zone 2-4 event ideas",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review builder-stuck fix",
+      "status": "working",
+      "task": "Dale 28-0 commit Codex story",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
