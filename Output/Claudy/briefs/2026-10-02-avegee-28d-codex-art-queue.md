@@ -10,7 +10,7 @@ Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = main ล�
 2. **งานค้างของ Codex app รอบก่อน** ใน `output/leaders/perspective-edits.json` (ยังไม่มีไฟล์ปลายทาง):
    `img/West/hero-boss-west-v2.png`, `img/story-cyberhell-02-v3.png`, `img/story-cyberhell-03-v4.png`, `img/CyberHell/hero-boss-cyberhell-v2.png`
    ทำตาม prompt เดิมในไฟล์นั้น แล้วสลับโค้ด/manifest ไปใช้เวอร์ชันใหม่ (ตรวจว่าเนื้อเรื่องยังเล่นได้)
-3. **ไอคอนน้ำมนต์** (ถ้า 28B รายงานว่ายังไม่มีไอคอน) — สไตล์เดียวกับไอคอนไอเท็มเดิม พื้นใส
+3. **ไอคอนน้ำมนต์ (ต้องทำ — 28B ยืนยัน)** `img/item-holywater.png` 512×512 พื้นใส 1 เฟรม มุมมองแบบ `item-tea.png`/`item-health.png` สื่อ MP โทนฟ้า-ขาว (ต่างจากหีบยาแดง/น้ำตาล) สไตล์พิกเซลเดิม · โค้ดอ้างไฟล์นี้อยู่แล้ว วางไฟล์แล้วใช้ได้ทันที + เพิ่มใน manifest
 
 ## ข้อห้าม
 - ภาพไม่อ้าง `img/raw/` จากโค้ด · ไม่แตะ `Exam/`, `files/`, `CONCEPT.md` · ไม่ merge/push
