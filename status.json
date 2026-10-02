@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:12:34.343Z",
+  "updatedAt": "2026-10-02T07:13:02.143Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale 28-0 commit Codex story",
       "report": {
         "when": "20:27",
