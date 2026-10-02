@@ -12,15 +12,16 @@
   (ปัจจุบัน krata=kong,mao · dab=kha,pak · lokan=akata · ngiw=kam · lan=bian)
 
 ## โซนสุวรรณภูมิ (th): ไตรภูมิ / ศิลปะวัดไทย
-### TH-1 หอไตรกลางน้ำ (Stilted Scripture Hall) — แทน `sala` · S–M
+### TH-1 หอทะเบียนกรรมกลางสระ (Stilted Registry Hall) — แทน `sala` · S–M
+- ⚠️ Reese: ชื่อในเกมใช้ "หอทะเบียนกรรม"/"เรือนทะเบียนกลางสระ" ห้ามใช้คำว่า "หอไตร" ในข้อความผู้เล่น · เก็บ "ทะเบียน/แฟ้ม" ไม่ใช่คัมภีร์ · พิจารณาถอดช่อฟ้า
 - แรงบันดาลใจ: หอไตรวัดไทย เรือนไม้ยกใต้ถุนสูงกลางสระกันปลวก (ลักษณะสถาปัตยกรรมทั่วไป ไม่อ้างวัดใด)
 - หน้าที่: หอทะเบียนกรรม กลไกเดิม · flavor "ข้าราชการนรกก็ต้องกันปลวกเหมือนกัน"
-- ภาพ: "Thai teak scripture library on tall stilts in a pond, red-orange tiered roof with chofa finials, small wooden bridge, dim lava glow reflected in water, pixel art 3/4 view, no text, no Buddha image, no monks"
+- ภาพ: "Thai teak scripture library on tall stilts in a pond, red-orange tiered roof, dim lava glow reflected in water, pixel art 3/4 view, no text, no Buddha image, no monks"
 ### TH-2 ศาลาท่าน้ำวิญญาณ (Riverside Landing Pavilion) — แทน `tea` · S
 - แรงบันดาลใจ: ศาลาท่าน้ำวัด/บ้านริมน้ำ เข้ากับแม่น้ำวิญญาณและท่าเรือในฉาก · flavor "รอเรือนานจนต้องมีที่นั่ง"
 - ภาพ: "Thai riverside landing pavilion (sala tha nam), open-sided wooden hall with gabled red roof on pier over dark river, hanging paper lanterns, wooden bench, pixel art, no text"
 ### TH-3 ซุ้มประตูโขงชั้นฟ้า (Khong Gate to the Heavens) — แทน `sawan` · S–M
-- แรงบันดาลใจ: ประตูโขงยอดซ้อนชั้น เป็นประตูสู่ดาวดึงส์ (คติไตรภูมิ ไม่มีรูปเคารพ) · เสริมแสงทองเมื่อส่งดวงขึ้น
+- แรงบันดาลใจ: ประตูโขงยอดซ้อนชั้น (จำลองซุ้มวิมานเทพ — ทรงล้านนาเป็นหลัก) · ⚠️ Reese: ห้ามเขียนในเกมว่าประตูโขงคือประตูสู่ดาวดึงส์ตามคติ · ใช้นาค/มกร ไม่ใช้ครุฑ · ไม่ลอกประตูวัด/วังจริง · เสริมแสงทองเมื่อส่งดวงขึ้น
 - ภาพ: "Thai ornate multi-tier gate (prathu khong) with spired roof, golden mythical naga-head finials, soft white-gold light spilling from the opening, pixel art, no text, no deity figures"
 - สำรอง: ลานกรวดน้ำอุทิศบุญ — เสี่ยงข้อห้าม "ห้ามล้อพิธีกรรม" ไม่แนะนำรอบแรก
 
@@ -32,18 +33,18 @@
 - แรงบันดาลใจ: เมิ่งโพ (孟婆) น้ำแกงลืมอดีตที่สะพานไน่เหอ (奈何橋) · flavor "ชาถ้วยนี้ลืมได้ทุกอย่าง ยกเว้นงานค้าง"
 - ภาพ: "Small Chinese tea stall at the foot of an arched stone bridge, old woman silhouette ladling soup from a large pot, red lanterns, green-blue cave glow, pixel art, no text"
 ### AS-3 ต้นไม้ชั่งอาภรณ์ (Garment-Weighing Tree, Datsue-ba) — แทน `krajok` · M (L ถ้าทำกลไกใบ้)
-- แรงบันดาลใจ: ดาตสึเอะบะ (奪衣婆) ริมแม่น้ำซันซุ แขวนเสื้อบนต้น 衣領樹 กิ่งหย่อนตามน้ำหนักบาป · กลไกใบ้กำกวม ไม่แทนกระจกที่ "จริงเสมอ"
-- ภาพ: "Gnarled pale tree beside a dim river, heavy kimono-like robes hanging, one branch sagging low, small hunched old-woman figure beside it, red torii glimpse, pixel art, no text"
+- แรงบันดาลใจ: ดาตสึเอะบะ (奪衣婆) ริมแม่น้ำซันซุ **ริบ**เสื้อวิญญาณ แล้วคู่หูชาย Ken'e-ō (懸衣翁) เป็นคน**แขวน**บนต้น 衣領樹 กิ่งหย่อนตามน้ำหนักบาป (แก้ตาม Reese) · เป็นคติญี่ปุ่นล้วน อย่ารวมภาพกับสิบพระยม/เมิ่งโพของจีน · กลไกใบ้กำกวม ไม่แทนกระจกที่ "จริงเสมอ"
+- ภาพ: "Gnarled pale tree beside a dim river, heavy kimono-like robes hanging, one branch sagging low, small hunched old-woman and old-man figures beside it, pixel art, no text"
 - เลี่ยง ไซโนะกาวาระ (賽の河原) เพราะเกี่ยวกับเด็กที่เสียชีวิต
 
 ## โซนปัจฉิม (west): Helheim / ยุโรปยุคกลาง / Dante
-### WE-1 หอบัญชีหลวง (Exchequer Counting House) — แทน `sala` · M
+### WE-1 หอบัญชีหลวงยุคกลาง (Exchequer Counting House) — แทน `sala` · M
 - แรงบันดาลใจ: Exchequer อังกฤษยุคกลาง ผ้าตารางหมากรุก + ไม้ทอลลี เข้ากับบอส "อัศวินบัญชีปัจฉิม" · flavor "ทุกกรรมมีไม้ทอลลีหักครึ่ง"
-- ภาพ: "Medieval stone counting hall, long table covered in black-and-white checkered cloth, brass scales, bundles of notched tally sticks, frost on windows, ice-blue palette, pixel art, no text"
+- ภาพ: "Medieval stone counting hall, long table covered in black cloth with chequered lines, brass scales, bundles of notched tally sticks, frost on windows, ice-blue palette, pixel art, no text"
 ### WE-2 ประตูสะพานรุ้งบิฟรอสต์ (Bifröst Gate, Heimdall's Horn) — แทน `sawan` · M (L แตรเตือน)
-- แรงบันดาลใจ: บิฟรอสต์ + แตร Gjallarhorn (ห้ามใช้ดีไซน์ Marvel) · กลไกเสนอ: แตรเตือนก่อนส่งคนบาปขึ้นสวรรค์ N ครั้ง/ช่วงคดี
+- แรงบันดาลใจ: บิฟรอสต์ + แตร Gjallarhorn (ห้ามใช้ดีไซน์ Marvel) · ⚠️ Reese: ในตำนานเป่าครั้งเดียวตอน Ragnarök — กลไกแตรเตือนต้องระบุว่าเป็นการ "ดัดแปลง" · กลไกเสนอ: แตรเตือนก่อนส่งคนบาปขึ้นสวรรค์ N ครั้ง/ช่วงคดี
 - ภาพ: "Glowing rainbow-light arched bridge-gate in an ice cave, tall Norse-style carved wooden posts, a large curved horn on a stand beside the gate, snowflakes, pixel art, no text, no Marvel-style character"
-### WE-3 โถงเอลยูนเนียร์ (Éljúðnir, Hel's Hall) — แทน `tea` · S–M
+### WE-3 โถงของเฮล (Éljúðnir) — ชื่อไทยทับศัพท์ไม่มีแหล่งยืนยัน คงวงเล็บไว้ — แทน `tea` · S–M
 - แรงบันดาลใจ: โถงของเฮล (Prose Edda/Gylfaginning) จาน "ความหิว" มีด "ความอดอยาก" · flavor "ยมทูตยิ่งพักยิ่งหิว"
 - ภาพ: "Long dim Norse hall of dark timber and frost, bare plate and knife on a table, thin bed with blanket, doorway with a raised threshold, cold blue light, pixel art, no text"
 - สำรอง: ทะเลสาบน้ำแข็ง Caina/Cocytus (Dante) แทน `lokan` — ต่างจากเดิมไม่มาก
@@ -59,6 +60,13 @@
 - แรงบันดาลใจ: CAPTCHA/2FA "พิสูจน์ว่าไม่ใช่บอท" · เสริม: คู่กับสำนวนบัญชีถูกขโมย/ภาพตัดต่อ (innocent)
 - ภาพ: "Glowing arched gateway made of circuit lines, a shield-and-checkmark hologram in the center, scan-line beams, violet-white light, pixel art, no text, no real UI logos"
 - สำรอง: ห้องกักกัน Sandbox แทน `tarang` (ข้อความล้วน S)
+
+## ผลตรวจ Reese (2 ต.ค. 2569) — FIX LIST 6 ข้อ แก้แล้วโดย Claudy (โหมด build ไม่ตรวจซ้ำ)
+- รายงาน: `Output/Reese/2026-10-02-factcheck-avegee-zone-locations.md`
+- ข้อ 6 ค้างตัดสินใจ: subtitle โซนบูรพา (CONCEPT §12.6) ระบุเกาหลี/อินเดีย แต่ข้อเสนอมีแค่จีน/ญี่ปุ่น → เพิ่มของเกาหลี/อินเดีย หรือแก้ subtitle
+- ห้ามเรียกแม่น้ำวิญญาณในเกมว่า "เวตรณี" (เวตรณีเป็นนรกบริวาร ไม่ใช่แม่น้ำที่วิญญาณข้าม)
+- CY: ตรวจภาพที่ได้จริงว่าไม่มีโลโก้/ไอคอนเลียนแบบซอฟต์แวร์จริง/เหรียญคริปโตจริง · ห้ามแสดงชื่อ "CyberHell" ในเกมไทย
+- ลำดับภาพ: สั่งได้ TH-1 (ตามเงื่อนไข), AS-1, WE-1, CY-1 · AS-3/WE-2/WE-3 ใช้ prompt ที่แก้แล้ว
 
 ## ตัวเลือกแนะนำ: "ชุดหอทะเบียน 4 โซน" (TH-1, AS-1, WE-1, CY-1)
 - `sala` อยู่มุมขวาบน ใหญ่ (bw=196) และเปิดบ่อยสุด → เห็นความต่างชัดทุกโซน
