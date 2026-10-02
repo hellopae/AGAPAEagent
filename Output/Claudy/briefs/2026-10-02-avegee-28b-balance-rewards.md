@@ -1,6 +1,6 @@
 # ใบงาน 28B: AVEGEE — บอส/ศัตรูเก่งขึ้นตามโซน, น้ำมนต์เติม MP, หน้าต่างรางวัลหลังชนะ
 
-Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = main หลังใบงาน 28-0 commit · เทสต์ `node --test tests/*.test.mjs`
+Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐาน = AVEGEE main `f075d79` (หลัง 28-0) · เทสต์ `node --test tests/*.test.mjs`
 ที่มา: คุณเป้ 2 ต.ค. 2569
 **ทำใน worktree แยก:** `git -C <repo> worktree add ../.toby-worktrees/28b -b toby/28b main` (28A/28C ทำขนานกัน)
 
