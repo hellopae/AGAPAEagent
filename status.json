@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:31:34.405Z",
+  "updatedAt": "2026-10-02T07:31:50.996Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale 28-0 commit Codex story",
+      "status": "working",
+      "task": "Dale hotfix soul battle + merge 28C",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
