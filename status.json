@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:17:14.140Z",
+  "updatedAt": "2026-10-02T07:31:34.405Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby 28C battle audio",
       "report": {
         "when": "15:15",
