@@ -1,4 +1,4 @@
-# AVEGEE 28A — รีวิว + merge (สถานะ: รีวิวผ่าน, merge ยังไม่ได้ทำ — ติดสิทธิ์ลบไฟล์ untracked)
+# AVEGEE 28A — รีวิว + merge (สถานะ: เสร็จ merge + push + live 200)
 
 ## ผลรีวิว (branch `toby/28a`, commits `b17e58b` + `998e3d4`, ฐาน `f075d79`)
 อ่าน diff ครบทุกไฟล์ + ดูภาพก่อน/หลัง — **PASS ทั้ง 7 ข้อ**
@@ -16,18 +16,17 @@
 บั๊ก `f.sp?.startsWith` ใน ui.js: diff ของ toby/28a ไม่แตะบรรทัดนั้น จึงไม่ควรชนกับ hotfix `5b14bb4`
 ยังไม่ได้ทำ: เติม manifest 8 ไฟล์, เทสต์บน main, push, เช็ค live 200 (ทำหลัง merge)
 
-## ติดอยู่ตรงไหน
-`git merge toby/28a --no-ff` ถูกปฏิเสธ: working tree หลักมีไฟล์ **untracked** 8 ไฟล์ชื่อตรงกับภาพ cutscene ที่ branch เพิ่ม
-(git ไม่ยอมเขียนทับ)
+## ผล merge (อัปเดตหลังคุณเป้อนุญาตย้ายไฟล์)
+- ย้าย (mv) ไฟล์ untracked 8 ไฟล์ที่ชน (เหมือน branch ทุกไบต์) ไปสำรองที่ `/Users/agapae/Documents/Work PAE/Claude/AVEGEE-untracked-backup/<path เดิม>` แล้ว merge
+- **Merge commit `91890d4`** (--no-ff, ไม่มี conflict, hotfix `5b14bb4` คงอยู่: `String(f.sp ?? '').startsWith`)
+- **`163eb92`**: เติม 8 รายการภาพ cutscene ลง `img/manifest.json` ด้วยมือ (th 2 ไฟล์ใน rest, โซนอื่น 6 ไฟล์ใน zones) · ตรวจแล้วทุกรายการใน manifest มีไฟล์จริง
+- push `25b86a9..163eb92` main
+- เทสต์บน main: `node --test tests/*.test.mjs` = **192/192 ผ่าน** (fail 0) · `node --check src/*.js` ผ่าน · `git diff --check` สะอาด
+- live (https://hellopae.github.io/AVEGEE/): ภาพ cutscene 8 ไฟล์ตอบ **200** ทั้งหมด (Pages deploy ใช้ ~2 นาที) · manifest live มีรายการใหม่
+- ไม่ได้ทดสอบบนมือถือจริง/ไม่ได้เล่นผ่านหน้า live ด้วยเบราว์เซอร์ (อาศัยภาพจาก Toby)
 
-- `img/Asia/boss-{frontier,tester}-asia-cutscene-asia.png`
-- `img/CyberHell/boss-{frontier,tester}-cyberhell-cutscene-cyberhell.png`
-- `img/West/boss-{frontier,tester}-west-cutscene-west.png`
-- `img/boss-{frontier,tester}-th-cutscene.jpeg`
+## วิธีตรวจ (Chris/คุณเป้)
+ตามหัวข้อ "Kittanate ลองกด" ในรายงาน Toby `Output/Toby/2026-10-02-avegee-28a.md`
 
-ตรวจแล้วด้วย `git hash-object`: **ทั้ง 8 ไฟล์เหมือน blob ใน `toby/28a` ทุกไบต์** (Toby คัดลอกจากไฟล์เหล่านี้)
-ผมพยายามลบ 8 ไฟล์นี้เพื่อให้ merge สร้างกลับมา แต่ระบบสิทธิ์ปฏิเสธ (ไฟล์ untracked ของคุณเป้) จึงหยุด ไม่ได้อ้อมด้วยวิธีอื่น · ยังไม่มีอะไรถูกแก้ใน repo
-
-## ทางไปต่อ (ต้องให้ Claudy/คุณเป้อนุญาต อย่างใดอย่างหนึ่ง)
-1. อนุญาตให้ลบ/ย้าย 8 ไฟล์นี้ (เหมือนกับ branch ทุกไบต์ — merge จะสร้างคืนให้เหมือนเดิม) แล้วผมทำ merge ต่อ, หรือ
-2. คุณเป้ลบ/ย้าย 8 ไฟล์นั้นเอง แล้วสั่งผมใหม่
+## Rollback
+`git revert -m 1 91890d4` แล้ว revert `163eb92` (ภาพ 8 ไฟล์สำรองอยู่ใน AVEGEE-untracked-backup ถ้าต้องการคืนเป็น untracked)
