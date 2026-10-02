@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:31:50.996Z",
+  "updatedAt": "2026-10-02T07:35:21.676Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale hotfix soul battle + merge 28C",
       "report": {
         "when": "20:27",
