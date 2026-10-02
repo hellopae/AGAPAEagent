@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T07:13:02.143Z",
+  "updatedAt": "2026-10-02T07:13:34.485Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "AVEGEE 27B battle (continue Codex)",
+      "task": "Toby 28C battle audio",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
