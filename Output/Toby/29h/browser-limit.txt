@@ -1,0 +1,3 @@
+Playwright Chromium launch attempted on 2026-10-03.
+Launch failed before page navigation: bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer: Permission denied (1100).
+No browser screenshot or DOM bounds were obtained. No visual QA conclusion is claimed.

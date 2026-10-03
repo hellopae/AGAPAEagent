@@ -1,0 +1,142 @@
+[
+  {
+    "file": "src/preload.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/sfx.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/game.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/ui.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/view3d.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/escort.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/cases.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/scene.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/zone-map.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/story.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/regional-spirits.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/zone-introductions.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/walk-direction.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/cases-asia.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/frontier.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/data.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/room.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/proximity.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/command-wheel.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/walk.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/soul-portraits.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/hero-walk-assets.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/frontier-navigation.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/battle-scale.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/crew-walk-assets.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/art.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "file": "src/i18n.js",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "command": "git diff --check",
+    "exit": 0,
+    "output": ""
+  }
+]

@@ -1,0 +1,16 @@
+(node:19346) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29H: every sin targets the plea that actually reveals the primary deed, rather than the first denial (6.671902ms)
+✔ 29H: all authored targets are proved by pressing the indicated issue (8.607753ms)
+✔ 29H: used target, no matching issue, pure souls and exhausted attempts do not consume roar (3.651017ms)
+✔ 29H: hypnosis renders the station on the wheel with no force/keeper reveal, even before construction (2.607064ms)
+✔ 29H: mirror renders station, force and keeper, and marks the primary issue before construction too (2.335503ms)
+✔ 29H: desktop advice bounds stay in the stage and viewport at both required sizes (CSS geometry) (0.238637ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.027836

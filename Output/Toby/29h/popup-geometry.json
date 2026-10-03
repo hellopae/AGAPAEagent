@@ -1,0 +1,30 @@
+[
+  {
+    "viewport": [
+      1280,
+      800
+    ],
+    "hintMaxBounds": {
+      "left": 249.0,
+      "right": 517.8,
+      "top": 63.55,
+      "bottom": 271.55
+    },
+    "rightPanelLeft": 737.69,
+    "method": "CSS geometry, not DOM measurement"
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "hintMaxBounds": {
+      "left": 280.12,
+      "right": 550.12,
+      "top": 112.08,
+      "bottom": 346.08
+    },
+    "rightPanelLeft": 829.9,
+    "method": "CSS geometry, not DOM measurement"
+  }
+]
