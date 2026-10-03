@@ -28,10 +28,10 @@ Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐานทุก bra
    |---|---|---|
    | 1 ไทย | `img/raw/hero-boss-profile.jpeg` (โปรไฟล์ มงกุฎทอง ผิวคล้ำ) · ตัวยืน/นั่ง = `img/hero-boss.png` ที่มีอยู่ | `img/zone-boss.png` (มงกุฎ เกราะดำแดง ถือหนังสือ+ดาบ) |
    | 2 บูรพา | `img/raw/Asia/hero-boss-asia.png` (หน้าแดงเคราดำ นั่งบัลลังก์ พื้นดำ) | `img/Asia/zone-boss-asia.png` (นักรบเกราะเขียวถือโซ่) |
-   | 3 ปัจฉิม | `img/West/hero-boss-west-v2.png` (ไวกิ้งเคราขาว มีกา) | `img/West/Boss Zone3-west.png` (เกราะดำเปลวฟ้า ถือลูกคิด+ม้วนคัมภีร์) |
-   | 4 ไซเบอร์ | `img/CyberHell/hero-boss-cyberhell-v2.png` (เขาแดง บัลลังก์คริสตัลม่วง) | `img/CyberHell/Boss Zone4-cyberhell.png` (ผิวดำ ชุดน้ำตาล ถือลูกคิด+หนังสือ) |
+   | 3 ปัจฉิม | `img/West/hero-boss-west-v2.png` (ไวกิ้งเคราขาว มีกา) | `img/West/zone-boss-west.png` = `Boss Zone3-west.png` (เกราะดำเปลวฟ้า ถือลูกคิด+ม้วนคัมภีร์) |
+   | 4 ไซเบอร์ | `img/CyberHell/hero-boss-cyberhell-v2.png` (เขาแดง บัลลังก์คริสตัลม่วง) | `img/CyberHell/zone-boss-cyberhell.png` = `Boss Zone4-cyberhell.png` (ผิวดำ ชุดน้ำตาล ถือลูกคิด+หนังสือ) |
 
-   - ปัญหาที่ Claudy เห็น: โค้ดเรียกบอสด้วยคีย์ `zone-boss` → resolve เป็น `zone-boss-<zone>.png` แต่โซน 3–4 ภาพที่คุณเป้ยืนยันคือ `Boss Zone3-west.png` / `Boss Zone4-cyberhell.png` (คนละไฟล์กับ `zone-boss-west.png` / `zone-boss-cyberhell.png` ที่มีอยู่) → เทียบภาพจริง ถ้าต่างให้ชี้ทุกจุดไปไฟล์ในตาราง (alias ใน `art.js` แบบเดียวกับ `hero-boss-*-v2` หรือ copy ทับ — เลือกแบบที่ไม่พังที่อื่น บอกในรายงาน) · โซน 2 มีทั้ง `Boss Zone2-asia.png` กับ `zone-boss-asia.png` → ใช้ `zone-boss-asia.png`
+   - โซน 3–4: คุณเป้ยืนยันว่า `zone-boss-west.png` = `Boss Zone3-west.png` และ `zone-boss-cyberhell.png` = `Boss Zone4-cyberhell.png` (ภาพเดียวกัน) → โค้ดคีย์ `zone-boss` ใช้ต่อได้ ไม่ต้อง alias · แค่ตรวจว่าโชว์ถูก (ถ้าไฟล์ไบต์ต่างกัน = รุ่นต่างกัน ให้รายงาน ไม่ต้องแก้) · โซน 2 มีทั้ง `Boss Zone2-asia.png` กับ `zone-boss-asia.png` → เกมต้องโชว์ `zone-boss-asia.png` (นักรบโซ่)
    - หัวหน้าโซน 2: ไฟล์ raw (พื้นดำ) กับ `img/Asia/hero-boss-asia.png` ที่ใช้อยู่อาจต่างกัน → ถ้าต่าง prep จาก raw ผ่าน `prep-art.py` (ลบพื้นดำ) แล้วแทน · หัวหน้าโซน 1: เทียบ `img/hero-boss-profile.png` กับ raw ถ้าต่าง prep ใหม่
    - ทุกจุดที่โชว์บอส (ฉากต่อสู้, ป้ายเตือนบอสมา `ui.js:1430`, เดินเข้าแผนที่ `scene.js:279`, `data.js:1607/1671`) = คอลัมน์ขวา · ทุกจุดที่โชว์หัวหน้า (เก้าอี้บนแท่น, หน้าลงทัณฑ์, โปรไฟล์ authority) = คอลัมน์กลาง
    - ภาพคัตซีนบอส (`*-cutscene.jpeg`) ไม่อยู่ในตาราง — ไม่ต้องแตะ แต่รายงานว่าคัตซีนแต่ละโซนเป็นคนเดียวกับบอสในตารางไหม
