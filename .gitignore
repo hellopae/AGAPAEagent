@@ -20,3 +20,5 @@ client_secret*.json
 
 # ภาพหน้าจอเกม AVEGEE ประกอบใบงาน (ยังไม่เปิดตัว) — เก็บในเครื่องเท่านั้น ลบเมื่อชุดงานเสร็จ (คุณเป้ 3 ต.ค. 2569)
 Output/Claudy/briefs/assets/29/
+Output/Toby/*-screens/
+Output/Dale/29m-shots/
