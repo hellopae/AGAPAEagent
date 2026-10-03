@@ -1,0 +1,9 @@
+sala: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+krata: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+dab: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+ngiw: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+lan: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+sawan: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+krajok: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+tarang: (1024, 549), manifest exactly once; no full black row/column; before sidebars ~289.5px each; after backing-store rounding <1px
+Manifest: 518 critical/rest/zone file references, missing 0. All 8 replaced paths already present exactly once; no manifest change needed.

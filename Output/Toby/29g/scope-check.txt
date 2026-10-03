@@ -1,0 +1,16 @@
+Base e1d2554; all data exports except ROOMS unchanged (functions compared by source).
+ROOMS zone 1/3/4 and Asia lokan/tea unchanged.
+Only Asia ROOM_EXITS added; all proximity functions and radius constants unchanged.
+Tracked changes limited to eight Asia BG files and two config files.
+Untracked files limited to report/evidence and tests/room-asia29g.test.mjs.
+No forbidden path modified; no commit/merge/push/deploy/hooks/metadata action.
+img/Asia/BG-Dab-asia.webp
+img/Asia/BG-Krajok-asia.webp
+img/Asia/BG-Krata-asia.webp
+img/Asia/BG-Lan-asia.webp
+img/Asia/BG-Ngiw-asia.webp
+img/Asia/BG-Sala-asia.webp
+img/Asia/BG-Sawan-asia.webp
+img/Asia/BG-Tarang-asia.webp
+src/data.js
+src/proximity.js

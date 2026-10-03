@@ -1,0 +1,3 @@
+Chromium headless launch: failed at bootstrap_check_in / MachPortRendezvousServer: Permission denied (1100).
+Connected browser createBrowserTab http://127.0.0.1:8769/: Browser Use rejected due to security policy. The user declined permission for this action. No alternate browser or indirect access attempted. Local server stopped.
+No browser gameplay verification or browser screenshots obtained. Evidence JPGs are offline asset/contain reproductions, not game screenshots.

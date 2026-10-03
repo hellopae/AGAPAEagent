@@ -1,0 +1,16 @@
+BG-Sala-asia: generated (1712, 919) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 9b2c0be047bd26b6c6ab11494925e9d9764d4692e7e1c63e4a4f3f6dbf3d7689
+BG-Krata-asia: generated (1714, 918) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 f724480c9f1fd8267af06c3191f037ea9ffd11b36e9352a0ea1c596430d75d70
+BG-Dab-asia: generated (1714, 918) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 ee6bc7b3b9310a1434a3ade325d68cc7fe75b023cac3ee3e1270ed0396a4c5b6
+BG-Ngiw-asia: generated (1714, 918) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 15d91c83eb2001c408e3a099ee97926a7f22b89bd511e9fee20bf45f602f014a
+BG-Lan-asia: generated (1713, 918) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 aa0b797b4d1abb67c850aa025978d4d7305859b61eb9f4a189b46a52d7e531ce
+BG-Sawan-asia: generated (1712, 919) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 08f203cd99c84f789f146d09ebd863ba98fa28b5985a1b757a171faa320e5d34
+BG-Krajok-asia: generated (1712, 919) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 f0a8a33f1648958233e744297fa905527ecce421a3ebbc2f1c68c991335d222d
+BG-Tarang-asia: generated (1713, 918) -> normalized 1913x1025 (nearest, full image)
+prep (1024, 549); reproducible bytes; sha256 d8799f78be4c1ba731bcd6bed5bd8b51645ab2c6bd141c6c90beee39836ea361

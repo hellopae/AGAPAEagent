@@ -1,0 +1,12 @@
+(node:19773) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29G: all eight manifest-selected Asia assets fill the real desktop renderer bounds (10.926405ms)
+✔ 29G: pointer/tick walks from spawn to work point and back to the exit staircase (14.579035ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 139.756633
