@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T10:01:19.144Z",
+  "updatedAt": "2026-10-03T10:51:35.640Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby 29C flow and scenes",
       "report": {
         "when": "15:15",
