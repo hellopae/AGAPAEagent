@@ -38,8 +38,12 @@ def command(codex, project, model, report, sandbox='read-only'):
     cmd = [codex, 'exec', '-C', str(project)] + (['--model', model] if model else [])
     return cmd + ['--sandbox', sandbox, '--ephemeral', '--json', '--output-last-message', str(report), '-']
 
+def git_bytes(*args):
+    # คืน bytes ดิบ — diff ที่มีไฟล์ไบนารี (ภาพ) ถอดเป็น UTF-8 ไม่ได้ (เคยทำ 29B พังด้วย UnicodeDecodeError)
+    return subprocess.run(['git', *args], capture_output=True, check=True).stdout
+
 def git(*args):
-    return subprocess.run(['git', *args], text=True, capture_output=True, check=True).stdout
+    return git_bytes(*args).decode('utf-8', errors='replace')
 
 def make_worktree(project, run_id):
     # แยก branch codex/<run_id> ไว้ข้าง repo — ไม่แตะ working tree หลัก ไม่ merge ไม่ push
@@ -54,7 +58,8 @@ def save_diff(tree, base, out):
     # stage ใน worktree เพื่อให้ไฟล์ใหม่ติดมาใน diff ด้วย (ไม่ commit)
     git('-C', tree, 'add', '-A')
     (out / 'diff-stat.txt').write_text(git('-C', tree, 'diff', '--cached', '--stat', base))
-    (out / 'diff.patch').write_text(git('-C', tree, 'diff', '--cached', base))
+    # --binary + เขียนเป็น bytes: patch ที่มีภาพต้อง git apply กลับได้ ไม่ใช่แค่ "Binary files differ"
+    (out / 'diff.patch').write_bytes(git_bytes('-C', tree, 'diff', '--cached', '--binary', base))
 
 def hit_limit(out):
     text = (out / 'stderr.log').read_text(errors='replace') if (out / 'stderr.log').is_file() else ''
@@ -158,7 +163,8 @@ def main(argv=None):
         try:
             save_diff(state['worktree'], state['base_commit'], out)
             state['diff'] = 'diff.patch'
-        except (OSError, subprocess.CalledProcessError) as exc:
+        except Exception as exc:
+            # save_diff พัง (เช่น ถอดรหัสไม่ได้ · git ล้ม) ห้ามทำให้ status.json ค้างที่ running — บันทึกเหตุแล้วปิดงานต่อ
             state['diff_error'] = type(exc).__name__
     save()
     if args.publish:
