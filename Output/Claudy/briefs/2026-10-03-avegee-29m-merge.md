@@ -22,7 +22,13 @@ Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐานทุก bra
    - `git()` ใช้ `text=True` → diff ที่มีไฟล์ไบนารีทำ `UnicodeDecodeError` → ใช้ `errors='replace'` หรือเก็บ patch เป็น bytes (`--binary`)
    - ถ้า save_diff พัง ต้องยังเขียน `status.json` ปิดงาน (ไม่ค้าง `running`)
    - เทสต์/รันแห้งให้เห็นว่าไม่พัง · commit แยกใน AGAPAE Agent
-8. ล้าง worktree/branch ชุด 29 ที่ merge แล้ว — **ถ้า permission ปฏิเสธ หยุด รายงานคำสั่งให้ Claudy ห้ามอ้อม**
+8. **ภาพบอสโซน 2 กับหัวหน้าโซน 2 ห้ามสลับกัน** (คุณเป้ยืนยัน 3 ต.ค. 2569 พร้อมภาพ) — ทำหลัง merge 29D (manifest ชนกัน)
+   - **บอสโซน 2 (ศัตรู)** = นักรบชุดเกราะเขียวถือโซ่ · ต้นฉบับ `img/raw/Asia/Boss Zone2-profile.jpeg`
+   - **หัวหน้าโซน 2 (ฝ่ายเรา นั่งเก้าอี้ ช่วยเราเหมือน "พ่อ" พญายมในโซน 1)** = หน้าแดงเคราดำ หมวกขุนนาง ถือคทาหน้าคน · ต้นฉบับ `img/raw/Asia/hero-boss-asia-profile.jpeg` (มีใน `img/Asia/hero-boss-asia-profile.png` แล้ว)
+   - ปัญหา: `ui.js:1394` (`openBossArrive`) ขอ `Boss Zone2-profile` แต่ไม่มีใน `img/`/manifest → ตกไปใช้ `Intro-Boss-Zone2` หรือ `hero-boss` (เสี่ยงโชว์หน้าหัวหน้าเราเป็นบอสศัตรู)
+   - แก้: เตรียมภาพจาก raw ผ่าน `scripts/prep-art.py` (หรือขั้นตอนเดียวกับ `img/West/Boss Zone3-west-profile.png`) → `img/Asia/Boss Zone2-asia-profile.png` + เพิ่ม manifest ด้วยมือ (ห้าม make-manifest) · เทียบกับ `img/raw/_stray-20261003/Asia/Boss Zone2-asia-profile.png` ถ้าเป็นภาพเดียวกันที่ prep แล้ว ใช้ตัวนั้นได้
+   - ไล่ทุกจุดที่โชว์บอสโซน 2 (คัตซีนมาถึง, ฉากต่อสู้, โปรไฟล์) → ต้องเป็นนักรบโซ่ · ทุกจุดที่โชว์หัวหน้าโซน 2 (`sp:'hero-boss'` ผ่าน `art.js` → `hero-boss-asia*`, แท่นตัดสิน, หน้าลงทัณฑ์) → ต้องเป็นหน้าแดง · เช็คโซน 3–4 แบบเดียวกัน · เพิ่มเทสต์: ภาพบอสโซนกับภาพหัวหน้าโซนเป็นคนละไฟล์ทุกโซน และไฟล์มีจริงใน manifest
+9. ล้าง worktree/branch ชุด 29 ที่ merge แล้ว — **ถ้า permission ปฏิเสธ หยุด รายงานคำสั่งให้ Claudy ห้ามอ้อม**
 
 ## ข้อห้าม
 - ห้ามรัน `scripts/make-manifest.py` (ดึงไฟล์ stray) — manifest ให้รวมจาก 29D ด้วยมือ
@@ -34,7 +40,8 @@ Repo: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE` · ฐานทุก bra
 2. ตารางเกณฑ์ของ 29A/B/C/D แต่ละข้อ: ผ่าน / แก้แล้ว / ไม่ผ่าน (ระบุ) — จากการตรวจในเบราว์เซอร์จริง
 3. พิกัดทางออก 29D ลง config แล้ว ปุ่มขึ้นตรงทางออกจริง
 4. openai-worker.py ไม่พังกับไฟล์ไบนารี
-5. รายการ worktree ที่ลบ/ค้าง
+5. บอสโซน 2 = นักรบโซ่ทุกจุด · หัวหน้าโซน 2 = หน้าแดงทุกจุด · โซน 3–4 ไม่สลับ (ภาพหน้าจอ + เทสต์)
+6. รายการ worktree ที่ลบ/ค้าง
 
 ## รายงาน
 `Output/Dale/2026-10-03-avegee-29m.md` — commit hash main, ตารางเกณฑ์, FIX LIST (ถ้ามี), สิ่งที่คุณเป้ควรลองเล่นเอง
