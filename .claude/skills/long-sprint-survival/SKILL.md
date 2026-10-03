@@ -35,6 +35,18 @@ git -C "<repo งาน>" status -sb | head -1   # push ขึ้นไปหร
 ```
 แล้วเปิด agent ใหม่ต่อจากจุดนั้น — เล่ารายการที่ยังค้างให้ครบใน prompt
 
+## Codex run ค้าง `running` (เน็ตหลุด / เครื่อง sleep)
+
+อาการ: `Output/Codex/runs/<id>/status.json` ค้าง `running` แต่ไม่มี process `openai-worker.py` แล้ว ·
+`stderr.log` มี `failed to lookup address` / `waiting for network` · `scripts/openai-worker.py` **ไม่มี resume**
+1. เช็กเน็ตก่อน: `curl -sS -o /dev/null -w "%{http_code}" https://chatgpt.com` (403 = ติดต่อได้)
+2. เก็บงานที่ค้างใน worktree ก่อนเปิดรอบใหม่ (worktree ค้างอยู่ที่ `../.codex-worktrees/<id>`)
+   - โค้ด: `git -C <wt> add -N <ไฟล์ใหม่>` แล้ว `git -C <wt> diff > Output/Claudy/briefs/partial-<งาน>/x.patch` (ไม่ `add -N` ไฟล์ใหม่จะหลุดจาก patch)
+   - ภาพ/ไฟล์ untracked: `cp` ออกมาตรง ๆ พร้อม `prompts.json` ถ้ามี
+3. ใบงานใหม่ = ใบเดิม + หัวข้อ "ต่อจากรอบที่หลุด" ชี้ path partial แบบเต็ม + สั่ง `git apply` ก่อน แล้วทำส่วนที่ขาด
+4. ลบ worktree เก่าด้วย `git worktree remove --force` อาจโดน auto-mode ปฏิเสธ → ปล่อยไว้ ไม่กระทบรอบใหม่ บอกคุณเป้ให้ลบเองด้วย `!`
+5. งานยาวกันเครื่องหลับ: `caffeinate -ims -t 21600` แบบ background (พับจอยังหลับอยู่)
+
 ## ข้อควรรู้
 
 - หลายตัวพร้อมกันเร่งลิมิตหมดเร็วขึ้น ถ้างานไม่รีบ ให้เรียงคิวแทนการยิงขนาน
