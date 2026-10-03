@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T09:44:16.460Z",
+  "updatedAt": "2026-10-03T09:50:54.558Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale 29-0 commit Codex app work",
+      "status": "working",
+      "task": "Dale move unused img to raw",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
