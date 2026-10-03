@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T15:12:23.165Z",
+  "updatedAt": "2026-10-03T16:38:27.438Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae names AVEGEE crew west/cyberhell",
+      "status": "working",
+      "task": "Rae polish AVEGEE Thai strings",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",

@@ -1,0 +1,122 @@
+[src/battle-scale.js] /** ความสูงตัวจริงของยมทูตเทียบยมบาทน้อย — 1 = เท่ากัน · ยมบาทน้อยเป็นตัวเอกยังต้องเด่นกว่าเล็กน้อย */
+[src/battle-scale.js] const MIN_FIT = 0.8;           // แถวแคบเกินจริง ๆ ยอมย่อได้ไม่เกินนี้ของเป้า (ไม่ทับยมบาทน้อยกับขอบจอ)
+[src/battle-scale.js] const boxes = new Map();       // src → { l, t, w, h } เศษส่วนของภาพ (0-1) · null = วัดไม่ได้
+[src/battle-scale.js] } catch { box = null; }                       // file:// หรือภาพข้ามโดเมน canvas อ่านไม่ได้ → ใช้ขนาดจาก CSS ตามเดิม
+[src/battle-scale.js] /** ภาพถูกวาดจริงตรงไหนในกล่อง <img> (object-fit: contain + object-position) — พิกัดจอ */
+[src/battle-scale.js] /** คำนวณแถวยมทูตจากตัวเลขล้วน (ไม่แตะ DOM) — แยกออกมาให้เทสต์ได้
+[src/battle-scale.js] *  hero = { visH, oLeft, base } ความสูงตัวจริง · ขอบซ้ายตัวจริง · เส้นเท้า (พิกัดเดียวกับ stageLeft)
+[src/battle-scale.js] *  crew = [{ box:{l,t,w,h}, aspect }] · คืน { items:[{boxW,boxH,left}], fit } (left = x ของกล่องภาพ) */
+[src/battle-scale.js] /** ปรับยมทูตทีมในฉากต่อสู้ — เรียกหลังวาดฉากทุกครั้ง (วัดภาพครั้งแรกอาจรอโหลดเล็กน้อย) */
+[src/battle-scale.js] const seq = stage._fitSeq = (stage._fitSeq || 0) + 1;   // ผลของรอบเก่าที่เสร็จทีหลังต้องไม่ทับรอบใหม่
+[src/battle-scale.js] const hero = stage.querySelector('.fig.you img:not(.fx)');  // .fx = เอฟเฟกต์โดนตีซ้อนอยู่ใน .fig เดียวกัน ไม่ใช่ตัวยมบาทน้อย
+[src/battle-scale.js] if (helperImg && helperBox) {       // ยมทูตที่กระโดดเข้าช่วยโจมตีก็ต้องสูงเท่ากัน
+[src/battle-scale.js] /** จัดภาพให้ส่วนที่ไม่โปร่งใส (box เป็นเศษส่วน 0-1 ของภาพ) พอดีฉาก cw×ch แบบ contain — คืนกรอบของ "ทั้งไฟล์" */
+[src/battle-scale.js] /** ปรับรูปคัตซีนที่เพิ่งใส่เข้า .action-cutscene — รอภาพโหลดแล้ววัด · วัดไม่ได้ (file://) ก็ปล่อยตาม CSS contain */
+[src/battle-scale.js] img.style.setProperty('inset', 'auto', 'important');          // ต้องมาก่อน left/top (inset เป็นตัวย่อที่ล้างค่าทั้งสี่ด้าน)
+[src/data.js] howTo:'ในห้องสอบสวน กดตวาดข่มขู่ แล้วกดสอบสวนข้อที่มี 💢', desc:'ชี้ข้อหลักฐานในสำนวนที่ควรกดสอบสวนแน่นอน · คูลดาวน์ 2 นาที' },
+[src/data.js] howTo:'ในห้องสอบสวน กดกระจกวิเศษเพื่อดูคำเฉลยบนวงคำสั่ง', desc:'เฉลยที่ไหน ความแรง และยมทูตที่เหมาะบนวงคำสั่ง — เห็นความจริงเสมอ ไม่มีทางถูกโกหก' },
+[src/data.js] howTo:'ในฉากต่อสู้ กดน้ำแข็งบนวงคำสั่ง ใช้ MP', desc:'แช่ความตื่นตระหนกไว้ชั่วครู่ — ในการต่อสู้ศัตรูหยุดหนึ่งตา' },
+[src/data.js] howTo:'ในห้องสอบสวนหรือฉากต่อสู้ กดสะกดจิตบนวงคำสั่ง ใช้ MP', desc:'สารภาพครบทุกเรื่องทันที 100% + เฉลยที่ไหนบนวงคำสั่ง — การรื้อใจคนเพิ่มกรรม · ซื้อ item ได้จากบุญที่ประตูสวรรค์เท่านั้น' },
+[src/data.js] desc:'ฟื้นบารมีของยมบาทน้อย', howTo:'เปิดกระเป๋า กดใช้เพื่อฟื้นบารมี หรือเลือกไอเท็มในฉากต่อสู้', fallback:'ของ', say:'บารมีฟื้นขึ้นมาอีกหน่อย' },
+[src/data.js] desc:'เผยสถานที่ ความแรง และผู้คุมที่เหมาะกับคดี', howTo:'ในห้องสอบสวน กดกระจกวิเศษ ของในกระเป๋าถูกใช้เมื่อพลังสำรองหมด', fallback:'ของ', say:'กระจกวิเศษพร้อมใช้อีกครั้ง' },
+[src/data.js] desc:'เติมพลังสำรองให้สะกดจิตเมื่อพลังปลดล็อกแล้ว', howTo:'เปิดกระเป๋า กดใช้เพื่อเติมพลังสะกดจิตเมื่อปลดล็อกแล้ว', fallback:'ของ', say:'วงสะกดจิตติดไฟขึ้นมาใหม่' },
+[src/data.js] desc:'เตรียมพลังน้ำแข็งสำหรับหยุดศัตรูในฉากต่อสู้', howTo:'เก็บหรือซื้อแล้วเติม MP ทันที ใช้น้ำแข็งในฉากต่อสู้เมื่อปลดล็อก', fallback:'ของ', say:'อักขระน้ำแข็งกลับมาส่องแสงอีกครั้ง' },
+[src/data.js] desc:'เตรียมลูกไฟสำหรับโจมตีศัตรูในฉากต่อสู้', howTo:'เก็บหรือซื้อแล้วเติม MP ทันที กดลูกไฟในฉากต่อสู้', fallback:'ของ', say:'ได้ลูกไฟมาอีกลูก' },
+[src/data.js] desc:'เพิ่มเสบียงและกำลังใจให้ทีมผ่านนิรา', howTo:'คุยกับนิราบนแผนที่ เลือกแจกเสบียงให้ทีม', fallback:'ของ', say:'ยมทูตอิ่มขึ้นอีกหน่อย ทำงานไวขึ้นได้อีกพัก' },
+[src/data.js] desc:'ฟื้นบารมีและ MP ของยมบาทน้อย', howTo:'เปิดกระเป๋า กดใช้เพื่อฟื้นบารมีและ MP หรือเลือกไอเท็มในฉากต่อสู้', fallback:'ของ', say:'ท่านนั่งลงจิบน้ำชาหนึ่งถ้วย บารมีฟื้นขึ้นมา' },
+[src/data.js] desc:'เติม MP ของยมบาทน้อย', howTo:'เปิดกระเป๋า กดใช้เพื่อเติม MP หรือใช้ที่จุดเตรียมศึก', fallback:'MP', say:'น้ำมนต์เย็นฉ่ำไหลลงคอ — พลัง MP ฟื้นขึ้นมา' },
+[src/data.js] desc:'ช่วยให้ลุกขึ้นสู้ต่ออัตโนมัติเมื่อบารมีหมดในศึก', howTo:'เก็บไว้ในกระเป๋า ระบบใช้ช่วยชีวิตเมื่อพ่ายแพ้', fallback:'ของ', say:'หัวใจสำรองช่วยให้ยืนขึ้นได้อีกครั้งเมื่อพ่ายแพ้' },
+[src/data.js] desc:'มอบให้บุญเพื่อลดกรรมของยมบาทน้อย', howTo:'ที่ประตูสวรรค์ คุยกับบุญแล้วเลือกมอบดอกบัวเพื่อลดกรรม', fallback:'🪷', say:'ท่านวางดอกบัวลงแล้วนิ่งไปพักหนึ่ง — กรรมในบัญชีเบาลงนิดหนึ่ง' },
+[src/data.js] bladeShard: { name:'เศษดาบปีศาจ', img:'item-demon-sword', h:42, glyph:'🗡️', material:true, sell:34,
+[src/data.js] desc:'วัตถุดิบจากสนามรบ ขายแลกเบี้ยกรรมได้', howTo:'คุยกับพ่อค้านรก เลือกขายในรายการสินค้า', fallback:'🗡️', say:'ของจากชายแดน — เก็บไว้ขายให้พ่อค้านรก' },
+[src/data.js] desc:'วัตถุดิบจากสนามรบ ขายแลกเบี้ยกรรมได้', howTo:'คุยกับพ่อค้านรก เลือกขายในรายการสินค้า', fallback:'ของ', say:'ของจากชายแดน — เก็บไว้ขายให้พ่อค้านรก' },
+[src/data.js] desc:'วัตถุดิบจากสนามรบ ขายแลกเบี้ยกรรมได้', howTo:'คุยกับพ่อค้านรก เลือกขายในรายการสินค้า', fallback:'ของ', say:'ของจากชายแดน — เก็บไว้ขายให้พ่อค้านรก' },
+[src/data.js] /** สถานที่ที่ "ส่งวิญญาณไปได้จริง" จากห้องสอบสวน — ต้องรับทัณฑ์ได้ (pow > 0) และมีทัณฑ์ที่ตรงกรรมหรือเป็นประตูสวรรค์
+[src/data.js] *  หอทะเบียนกรรมมี pow ไว้ให้มินิเกมเร่งงานเฉย ๆ ไม่มี tags ส่งวิญญาณไปแล้วไม่เกิดอะไร (ชุด 29C ข้อ 5: ตัดออกจากตัวเลือก) */
+[src/data.js] /** ชุด 29C — เข้าโซนใหม่ครั้งแรก ยมบาทกับนิราเดินออกมาจากประตูชายแดน (ซุ้มล่างสุดของสะพาน) ขึ้นสะพานไปแท่นตัดสิน
+[src/data.js] *  เดิมเกิดที่ขอบบนของแผนที่ (820,190) ซึ่งเป็นช่องแคบหลังตัวตะราง — นิราเดินออกไม่ได้ ค้างอยู่ตรงนั้น
+[src/data.js] *  ทุกโซนใช้พิกัดเดียวกัน (ผัง 1678×937 ร่วมกัน) · เทสต์ tests/zone-entry29c.test.mjs ตรวจว่าทุกจุดอยู่ในพื้นที่เดินได้ของทั้ง 4 โซน */
+[src/data.js] act:[0.510,0.654], // จุดนั่งพัก
+[src/data.js] item:[0.510,0.581], // ถ้วยบนพื้น
+[src/data.js] /** event "ปีศาจชายแดนบุก" — th.frontierBreach และ event ระลอกชายแดนของโซน 2–4 (team:'frontier')
+[src/data.js] *  ชุด 29C ข้อ 9: ผู้เล่นต้องเดินไปที่ชายแดนเองก่อน ถึงจะเปิดหน้าต่างเตรียมทีมและสู้ได้ (ไม่ตัดเข้าหน้าต่างทันที) */
+[src/escort.js] /** ยมทูตเดินนำหน้าวิญญาณกี่พิกเซลตามเส้นทาง (วิญญาณตามติด) */
+[src/escort.js] /** ความเร็วยมทูตเดินมารับ (พิกเซลต่อ ms) เท่ากับตอนยมทูตกลับจุดประจำใน game.js stepWorld */
+[src/escort.js] /** จุดที่ระยะ dist จากต้นเส้นทาง (ตามความยาวจริง) */
+[src/escort.js] /** ความคืบหน้า 0-1 ของวิญญาณบนเส้นทาง (หักช่วงรอยมทูตมารับออกแล้ว) */
+[src/escort.js] /** ตำแหน่งยมทูตที่กำลังนำวิญญาณ — มารับ (pickup) ก่อน แล้วเดินนำหน้าวิญญาณตามเส้นทางเดียวกัน
+[src/escort.js] *  คืน { x, y, phase:'pickup'|'lead', face } */
+[src/escort.js] /** วิญญาณ (หรือใคร) อยู่ตรงตำแหน่งเดียวกับตอนที่ไม่มียมทูต: ใช้ความคืบหน้าที่หักช่วงรอแล้ว */
+[src/game.js] return this.roarTarget(soul) ? '' : 'ไม่มีข้อหลักฐานที่สอบสวนได้เหลือแล้ว';
+[src/game.js] if (!z) return 'ไม่รู้จักชุดนี้';
+[src/game.js] return this.zone !== k ? `ใช้ได้เมื่อถึง${z.name}และซื้อชุดจากพ่อค้านรก` : 'ซื้อชุดจากพ่อค้านรกก่อน';
+[src/game.js] out.push({ kind:'confess', text:`💢 “ข้ายอมแล้ว… ถามเรื่องข้อ ${line.i + 1} เถิด” — กดสอบสวนข้อที่มี 💢` });
+[src/game.js] /** สถานีที่เลือกเป็น "สถานที่" ในห้องสอบสวนได้ (เฉพาะที่รับวิญญาณไปลงทัณฑ์/ส่งสวรรค์จริง — ดู isTrialDestination) */
+[src/game.js] /** ชุด 29C ข้อ 2 — วิญญาณที่รับทัณฑ์ครบไม่เดินเข้าตะรางเอง: ยมทูตที่คุมการลงทัณฑ์นำไปส่ง (ยมทูตนำ วิญญาณตามติด)
+[src/game.js] *  ยมทูตคนนั้นยังมีดวงอื่นให้คุมอยู่ / ไม่ว่าง / ไม่มี → ใช้ยมทูตที่ว่างและอยู่ใกล้จุดรับที่สุด
+[src/game.js] *  ไม่มีใครว่างเลย → วิญญาณเดินคนเดียวเหมือนเดิม · ท่านเอง (self) กับนิรา (reader) ไม่ถูกเรียกใช้
+[src/game.js] *  ตำแหน่งยมทูตขยับใน advanceAfterlife · ส่งเสร็จปล่อยตัว (releaseEscort) ให้ระบบเดินปกติพากลับไปทำงานเอง */
+[src/game.js] /** ส่งตัวเสร็จ (หรือเลิกกลางคัน) — คืนยมทูตให้ระบบเดินปกติ: ยืนที่ปลายทางแล้วเดินกลับจุดประจำเอง */
+[src/game.js] if (c && !c.self) {               // ยมทูตที่นำทางอยู่ — ตำแหน่งจริงตามเส้นทาง (ให้ตำแหน่งที่คลิกเลือก/ที่เซฟตรงกับที่เห็นบนจอ)
+[src/game.js] if (this.afterlifeWalks.some(w => w.escort?.k === c.k && w.soul.id === c.escort)) continue;   // 29C: กำลังนำวิญญาณไปตะราง — ตำแหน่งขยับใน advanceAfterlife
+[src/game.js] /** ชุด 29C ข้อ 9 — event ปีศาจชายแดนบุก 3 ช่วง: (1) หน้าต่างแจ้งเตือน (2) ผู้เล่นเดินไปชายแดนเอง (3) ถึงแล้วเปิดหน้าต่างเตรียมทีม
+[src/game.js] *  ไม่มีตัวจับเวลา — event รอได้ไม่จำกัด เดินไปถึงเมื่อไรก็ได้ · ช่วง (2) คือ "สถานะ pending + ผู้เล่นรับทราบแล้ว (eventMapClosed)"
+[src/game.js] *  ทั้งสองค่าเซฟอยู่แล้ว (status 'active' ที่ค้างจะกลับเป็น pending ตอนโหลด) จึงเซฟ/โหลดกลางทางแล้ว event ยังค้างถูกต้องโดยไม่ต้องมีฟิลด์ใหม่
+[src/game.js] *  คืน { key, ev } ของ event ที่ต้องไปชายแดน หรือ null */
+[src/game.js] /** ยมบาทถึงประตูชายแดนแล้วหรือยัง (ระยะเดียวกับปุ่ม "เข้าด่านชายแดน") */
+[src/i18n.js] 'room.heldTitle': 'ดวงวิญญาณที่ขังอยู่ในคุก {n} ดวง',
+[src/i18n.js] 'room.lotusNone': 'ไม่มีดอกบัว',
+[src/i18n.js] 'room.lotusNoKarma': 'ไม่มีกรรมให้ลด',
+[src/i18n.js] 'profile.power.roar': 'ชี้ข้อในสำนวนที่ควรสอบสวน · คูลดาวน์ 2 นาที',
+[src/i18n.js] 'trial.noDestinations': 'ยังไม่มีสถานที่ลงทัณฑ์ในโซนนี้ — ปิดห้องสอบสวน แล้วเดินไปที่ป้ายก่อสร้างบนแผนที่เพื่อสร้างสถานี หากตะรางมีที่ว่าง กด “ขังไว้ก่อน” ให้วิญญาณรอระหว่างก่อสร้างได้',
+[src/i18n.js] 'event.frontierBreach.march': 'ปีศาจชายแดนบุกเข้ามา! เดินทางไปป้องกันที่ชายแดน',
+[src/i18n.js] 'event.frontierBreach.ack': 'รับทราบ',
+[src/i18n.js] 'event.frontierBreach.marker': 'ปีศาจบุกที่ชายแดน',
+[src/proximity.js] bx:nira.x, by:nira.y - 96, label:'จัดทีมยมทูต' });
+[src/proximity.js] bx:merchant.x, by:merchant.y - 96, label:'ซื้อขาย' });
+[src/proximity.js] label:repair ? `เรียก${g.availableBuilder()?.name || 'ทัณฑ์'}มาซ่อม` : 'เข้าไป' });
+[src/room.js] const mirrorRoom = !!room.mirror;       // 29M: ภาพศาลาไทยใหม่ไม่ต้องกลับซ้ายขวาแล้ว (บันไดอยู่ล่างขวาในไฟล์)
+[src/room.js] /** ชุด 29C — จุดบนฉากเป็นเปอร์เซ็นต์ของ canvas (ไว้วางปุ่ม HTML ลอยเหนือตัวละคร)
+[src/room.js] *  u,v = สัดส่วน 0-1 ของภาพฉากเหมือน ROOMS · up = ยกขึ้นกี่ส่วนของด้านสั้นของกรอบ (CREW_H = เหนือหัวคน) */
+[src/scene.js] return soulWalkPosition(walk);          // ชุด 29C: หักช่วงที่วิญญาณยืนรอยมทูตมารับ (walk.delay) ออกให้แล้ว
+[src/story.js] bigFire:{ howTo:'ในฉากต่อสู้ กดลูกไฟ (แรงขึ้นอัตโนมัติ)บนวงคำสั่ง ใช้ MP', name:'ลูกไฟใหญ่', image:'img/fx-fireball-big.png', text:'พลังลูกไฟแรงขึ้น 20 หน่วย · ได้จากการชนะศึกชายแดนโซน 1 ครบ 2 ระลอกหลังคดี 8' },
+[src/story.js] flameCharge:{ howTo:'ในฉากต่อสู้ กดพุ่งชนเพลิงบนวงคำสั่ง ใช้ MP', name:'พุ่งชนเพลิง', image:'img/fx-flame-charge.png', text:`ห่อหุ้มตัวด้วยไฟแล้วพุ่งชนศัตรู · ใช้ MP ${BATTLE.mpCost.charge} · ความเสียหายเริ่มต้น 65 หน่วย` },
+[src/story.js] rage:{ howTo:'ในฉากต่อสู้ กดบ้าคลั่งบนวงคำสั่ง ใช้ MP', name:'พลังบ้าคลั่ง Rage', image:'img/fx-rage.png', text:`เพิ่มความเสียหาย 50% สำหรับการโจมตี 3 ครั้ง · พักพลัง 3 เทิร์นก่อนใช้ซ้ำ · ใช้ MP ${BATTLE.mpCost.rage} · นิราจะพักที่ศาลาน้ำชา 3 วาระ` },
+[src/story.js] ice:{ howTo:'ในฉากต่อสู้ กดน้ำแข็งบนวงคำสั่ง ใช้ MP', name:'ผนึกน้ำแข็ง', image:'img/fx-ice.png', text:`โจมตี 30 หน่วยและหยุดศัตรู 1 เทิร์น · ใช้ MP ${BATTLE.mpCost.ice}` },
+[src/story.js] windFan:{name:'พัดสายลม', image:'img/fx-fan-wind.png', text:'โจมตีศัตรูด้วยลม', howTo:'ในฉากต่อสู้ กดพัดสายลมบนวงคำสั่ง ใช้ MP'},
+[src/story.js] hypno:{name:'สะกดจิต', image:'img/fx-hypno.png', text:'ควบคุมศัตรูให้โจมตีตัวเอง', howTo:'ในฉากต่อสู้ กดสะกดจิตบนวงคำสั่ง ใช้ MP'},
+[src/story.js] valkyrieSpear:{name:'หอกวาลคีรี', image:'img/fx-valkyrie-spear.png', text:'โจมตีศัตรูด้วยหอก', howTo:'ในฉากต่อสู้ กดหอกวาลคีรีบนวงคำสั่ง ใช้ MP'},
+[src/story.js] cooldownClock:{name:'นาฬิกาย้อนเวลา', image:'img/fx-clock-reset.png', text:'คืนคูลดาวน์ให้ทีม', howTo:'ในฉากต่อสู้ กดนาฬิกาย้อนเวลาบนวงคำสั่ง ใช้ได้ครั้งเดียวต่อศึกและใช้ MP'},
+[src/ui.js] let breachPrepOffered = false;   // เปิดหน้าต่างเตรียมทีมที่ชายแดนให้รอบนี้แล้ว (ดู setInterval ด้านบน)
+[src/ui.js] ${c.k === 'nira' ? '<button class="gold" id="open-nira-office">📋 จ้างคน · จัดทีม</button>' : ''}`;
+[src/ui.js] if (ev.team === 'frontier') {              // ชุด 29C ข้อ 9 — ระลอกชายแดนของโซน 2–4: แจ้งเตือน → เดินไปชายแดนเอง → เตรียมทีม → สู้
+[src/ui.js] (จี้ได้ 2 ครั้งต่อคดี) · ใช้<b>ตวาดข่มขู่</b>เพื่อชี้ข้อหลักฐานที่ควรสอบสวน แล้วกดข้อที่มี 💢 · คูลดาวน์ 2 นาที</li>
+[src/ui.js] if (crewKey) fitCutsceneImage(cut, img);          // 29C ข้อ 8 — จัดตามส่วนที่มีภาพจริง (ไฟล์โซน 2–4 ครึ่งบนโปร่งใส)
+[src/ui.js] const dests   = g.trialDestinations();       // 29C: ไม่รวมหอทะเบียนกรรม (ส่งไปแล้วไม่มีอะไรเกิด)
+[src/ui.js] const why = noIssue || (locked ? `ล็อก · ต้องเป็น${LEVELS[p.lv - 1].name}ก่อน`
+[src/ui.js] ${c ? `<small>แรง ${c.raeng} · ระเบียบ ${c.rabiab}</small><small>ท่าสู้: ${crewAbility(c.k)} · คูลดาวน์ ${BATTLE.crewCd} วินาที</small>` : `<small>ค่าจ้าง ${def.hire} เบี้ย · ท่าสู้: ${crewAbility(def.k)}</small>`}
+[src/ui.js] ${c ? `<button data-party="${c.k}" class="sm" ${!on && party.length >= 2 ? 'disabled' : ''}>${on ? '✓ ทีมต่อสู้' : 'เข้าทีมสู้'}</button>`
+[src/ui.js] const d = ITEMS[k]; return `<article class="shop-card">${itemImg(k, 'class="shop-item-img"')}<span><b>${esc(d.name)} ×${n}</b><small>${d.sell} เบี้ยต่อชิ้น</small></span>
+[src/ui.js] return `<article class="shop-card">${itemImg(s.k, 'class="shop-item-img"')}<span><b>${esc(itemName(s.k))}${s.qty ? ` ×${s.qty}` : ''}</b><small>${lock ? `ปลดที่ขั้น ${LEVELS[s.lv - 1].name}` : `${s.cost} เบี้ยกรรม`}${d.mp && !d.hp ? ` · ${esc(t('item.mpGain'))} ${d.mp}` : ''}</small></span>
+[src/ui.js] const breachLoot = thBreach ? t('event.frontierBreach.win') : `รางวัล: ${bev?.reward?.coin || 0} เบี้ยกรรม + ของสนามรบ`;
+[src/ui.js] <header><small>${breach ? `Wave 1/${waveN}` : 'กิจกรรมต่อสู้ประจำโซน'}</small><h2>🏯 ${breach ? esc(breachTitle) : esc(FRONTIER.name)}</h2>
+[src/ui.js] <p>${breach ? esc(breachText) : `ผีและปีศาจกำลังรวมตัวหลังประตู จัดทีมยมทูตไม่เกิน ${FRONTIER.teamMax} คนแล้วต้านพวกมันเป็นระลอก`}</p></header>
+[src/ui.js] <div class="frontier-head"><span><b>${breach ? `Wave 1/${waveN}` : `ระลอกที่ ${wave}`}</b><small>${breach ? esc(g.zoneDef().name) : `${esc(g.zoneDef().name)} · ผ่านแล้ว ${state.clears || 0} ระลอก`}</small></span>
+[src/ui.js] <span class="frontier-loot">${breach ? esc(breachLoot) : 'รางวัล: เบี้ยกรรม + ของสนามรบ'}</span></div>
+[src/ui.js] <button class="gold" data-frontier-start ${chosen.length || fromWalk || (breach && !thBreach) ? '' : 'disabled'}>${breach ? esc(t('event.frontierBreach.start')) : fromWalk ? 'กลับไปเล่นชายแดน' : '⚔️ เริ่มป้องกันชายแดน'}</button></div>
+[src/ui.js] if (breach) {                               // ระลอกชายแดนของโซน 2–4 — ศึกเดียวกับที่เคยเริ่มจากหน้าต่างแจ้งเตือน
+[src/ui.js] : `<button class="sm" data-outfit="${z.k}" ${lock ? 'disabled' : ''}>${lock ? '🔒 ยังสวมไม่ได้' : 'สวม'}</button>`}
+[src/ui.js] /** ภาพชั่วคราวของไอเท็มที่ยังไม่มีไฟล์จริง ใช้ placeholder/glyph/fallback จากข้อมูลไอเท็ม
+[src/ui.js] /** <img> ของไอเท็ม — ไฟล์หายใช้ fallback ที่แสดงได้แทนรูปแตก */
+[src/ui.js] <span>${lock ? `🔒 ${esc(why)}` : here ? '✓ กำลังสวม' : 'เก็บอยู่ในกระเป๋า'}</span></span>
+[src/ui.js] : `<button class="sm" data-bag-outfit="${z.k}" ${lock ? 'disabled' : ''}>${lock ? '🔒 ยังสวมไม่ได้' : 'สวม'}</button>`}
+[src/ui.js] let drawerMode = null;                // 29C: หน้าต่างรายชื่อ/ตรวจกรรมไม่ขึ้นเองตอนเข้าห้อง — ขึ้นเมื่อกดปุ่มเท่านั้น
+[src/ui.js] const specs = k === 'tarang' ? [      // 29C: ปุ่มจัดการรายชื่อย้ายไปลอยบนหัวนิรา (npcTags) — กลางฉากไม่มีปุ่มแล้ว
+[src/ui.js] <button id="st-exit" class="st-exit" hidden>ออกไปแผนที่</button>
+[src/ui.js] : `<img src="${def.image || (def.glyph.startsWith('img/') ? def.glyph : k === 'mirror' ? 'img/item-mirror.png' : `img/fx-${k}.png`)}" alt="" style="width:96px;height:96px;object-fit:contain" onerror="this.onerror=null;this.src='${placeholderSrc('พลัง')}'">`;
+[src/ui.js] modal(`<h2>✨ ได้${kind === 'item' ? 'ไอเท็ม' : 'พลัง'}ใหม่ · ${esc(def.name)}</h2>
+[src/ui.js] ${icon}<p><b>ทำอะไร:</b> ${esc(def.desc || def.text || def.say)}</p>
+[src/ui.js] <p><b>วิธีใช้:</b> ${esc(def.howTo)}</p>
+[src/ui.js] <div class="row"><button class="gold" data-close>เข้าใจแล้ว</button></div>`, null, 'discovery');
+[src/walk.js] /** เลขรุ่นของผังเดิน — เพิ่มทุกครั้งที่ผังเปลี่ยนจริง (ภาพ mask เพิ่งโหลด · ย้ายโซน · รายการอาคารเปลี่ยน)
+[src/walk.js] *  game.js ใช้รู้ว่าเส้นทางที่คำนวณไว้ก่อนหน้า "เก่า" แล้ว (ชุด 29C: นิราเดินทะลุลาวาที่ mask ยังไม่โหลดจนติดขอบ) */
