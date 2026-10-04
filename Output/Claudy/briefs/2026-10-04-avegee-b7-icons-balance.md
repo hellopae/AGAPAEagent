@@ -3,7 +3,7 @@
 Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด (มี B6) · คำขอ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` (หัวข้อ "ไอคอนปุ่มใหม่") · แบบ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 5, ลำดับ 8
 
 ## ขอบเขต
-1. ไอคอน (ต้นฉบับที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/assets/30/b1.png..b4.png` — **ถ้าไม่มีไฟล์ หยุดข้อนี้แล้วรายงาน**): 900×1100 พื้นขาว → ตัดพื้นหลังเป็นโปร่งใส (เฉพาะขาวรอบนอก ไม่กินในภาพ) → webp ใน `img/ui/` · b1 = กลีบบน โจมตี (ดาบวงนาค) · b2 = กลีบขวา พลัง (ยมบาท) · b3 = กลีบล่าง ไอเท็ม (กระเป๋า) · b4 = กลีบขวา ไอเท็มของยมทูต · ยมบาทใช้ b1+b2+b3 · ยมทูต/Guard ใช้ b1+b4 · hit area ตรงรูปกลีบ · manifest ด้วยมือ + cache bump
+1. ไอคอน (ต้นฉบับที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/assets/30/b1.png..b4.png` — **ถ้าไม่มีไฟล์ หยุดข้อนี้แล้วรายงาน**): 900×1100 RGBA พื้นโปร่งใสแล้ว (ตรวจ alpha ก่อน ไม่ต้องตัดพื้นถ้าโปร่งใสอยู่แล้ว) → crop ส่วนว่างตามกรอบกลีบ → webp ใน `img/ui/` · b1 = กลีบบน โจมตี (ดาบวงนาค) · b2 = กลีบขวา พลัง (ยมบาท) · b3 = กลีบล่าง ไอเท็ม (กระเป๋า) · b4 = กลีบขวา ไอเท็มของยมทูต · ยมบาทใช้ b1+b2+b3 · ยมทูต/Guard ใช้ b1+b4 · hit area ตรงรูปกลีบ · manifest ด้วยมือ + cache bump
 2. ตรวจสมดุล: จำลองศึกทุกโซน + ศึกสุดท้าย ทีม 1/2/6 คน เทียบอัตราชนะกับก่อน B5 · ถ้าง่ายไป เพิ่มความยาก/จำนวนศัตรูได้ (คุณเป้อนุญาต) แต่ใส่ตัวเลขเป็นตารางใน `data.js` และอธิบายในรายงาน · เป้า: ศึกบอสโซน 1–3 ~80–95%, ศึกสุดท้าย ~70–90%
 
 ## เกณฑ์รับงาน
