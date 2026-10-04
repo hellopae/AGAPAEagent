@@ -1,0 +1,1532 @@
+[
+ {
+  "pauseOpen": true,
+  "paused": true,
+  "item": "pause in prep",
+  "vp": 1280
+ },
+ {
+  "pauseOpen": false,
+  "prepStillOpen": true,
+  "paused": true,
+  "item": "pause closed -> prep still there",
+  "vp": 1280
+ },
+ {
+  "pauseOpen": true,
+  "battleOpen": true,
+  "item": "pause in battle",
+  "vp": 1280
+ },
+ {
+  "pauseOpen": false,
+  "battleOpen": true,
+  "act": true,
+  "item": "pause closed -> battle intact",
+  "vp": 1280
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "asia",
+  "vp": 1280,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "asia",
+  "vp": 1280,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "west",
+  "vp": 1280,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "west",
+  "vp": 1280,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hero": 187.4,
+  "crew": [
+   {
+    "src": "crew-plerng.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "th",
+  "vp": 1280
+ },
+ {
+  "hero": 187.8,
+  "crew": [
+   {
+    "src": "crew-plerng-asia.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon-asia.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-asia-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-asia.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "hero": 187.1,
+  "crew": [
+   {
+    "src": "crew-plerng-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-guard-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "hero": 187.4,
+  "crew": [
+   {
+    "src": "crew-plerng-cyberhell.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-cyberhell.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-cyberhell-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-cyberhell.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "cyberhell",
+  "vp": 1280
+ },
+ {
+  "heroSrc": "img/hero-yama-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "th",
+  "vp": 1280
+ },
+ {
+  "heroSrc": "img/Asia/hero-yama-asia-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "asia",
+  "vp": 1280
+ },
+ {
+  "heroSrc": "img/West/hero-yama-west-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "west",
+  "vp": 1280
+ },
+ {
+  "heroSrc": "img/CyberHell/hero-yama-cyberhell-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "cyberhell",
+  "vp": 1280
+ },
+ {
+  "meterW": 53,
+  "txt": [
+   "100/100",
+   "40/40"
+  ],
+  "item": "5 mp",
+  "zone": "cyberhell",
+  "vp": 1280
+ },
+ {
+  "meterW": 53,
+  "txt": [
+   "100/100",
+   "72/72"
+  ],
+  "item": "5 mp",
+  "zone": "th",
+  "vp": 1280
+ },
+ {
+  "text": "รับรางวัล",
+  "btnCx": 665,
+  "btnCy": 385,
+  "dlgCx": 640,
+  "dlgCy": 400,
+  "item": "6 reward button wave8",
+  "vp": 1280
+ },
+ {
+  "text": "ฟังคำตัดสิน",
+  "hudImg": "img/West/hero-boss-west-profile.webp",
+  "item": "7 lose button + zone3 ruler profile",
+  "vp": 1280
+ },
+ {
+  "item": "8 heart icon",
+  "icons": [],
+  "vp": 1280
+ },
+ {
+  "healing": true,
+  "num": "+31",
+  "item": "9 boon glow",
+  "vp": 1280
+ },
+ {
+  "cut": [
+   1254,
+   774
+  ],
+  "img": [
+   1383,
+   773
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "west",
+  "k": "guard",
+  "vp": 1280
+ },
+ {
+  "cut": [
+   1254,
+   774
+  ],
+  "img": [
+   1383,
+   773
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "cyberhell",
+  "k": "crew:plerng",
+  "vp": 1280
+ },
+ {
+  "cut": [
+   1254,
+   774
+  ],
+  "img": [
+   1384,
+   773
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(-0.998495, 0, 0, 0.998495, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "asia",
+  "k": "crew:kan",
+  "vp": 1280
+ },
+ {
+  "pauseOpen": true,
+  "paused": true,
+  "item": "pause in prep",
+  "vp": 1440
+ },
+ {
+  "pauseOpen": false,
+  "prepStillOpen": true,
+  "paused": true,
+  "item": "pause closed -> prep still there",
+  "vp": 1440
+ },
+ {
+  "pauseOpen": true,
+  "battleOpen": true,
+  "item": "pause in battle",
+  "vp": 1440
+ },
+ {
+  "pauseOpen": false,
+  "battleOpen": true,
+  "act": true,
+  "item": "pause closed -> battle intact",
+  "vp": 1440
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "asia",
+  "vp": 1440,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "asia",
+  "vp": 1440,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 309,
+    "h": 187
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "west",
+  "vp": 1440,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "west",
+  "vp": 1440,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hero": 211.4,
+  "crew": [
+   {
+    "src": "crew-plerng.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "th",
+  "vp": 1440
+ },
+ {
+  "hero": 211.8,
+  "crew": [
+   {
+    "src": "crew-plerng-asia.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon-asia.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-asia-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-asia.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "hero": 211,
+  "crew": [
+   {
+    "src": "crew-plerng-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-guard-west.png",
+    "ratio": 0.96,
+    "facing": "native"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "hero": 211.4,
+  "crew": [
+   {
+    "src": "crew-plerng-cyberhell.png",
+    "ratio": 0.96,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-cyberhell.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-cyberhell-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-cyberhell.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "cyberhell",
+  "vp": 1440
+ },
+ {
+  "heroSrc": "img/hero-yama-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "th",
+  "vp": 1440
+ },
+ {
+  "heroSrc": "img/Asia/hero-yama-asia-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "asia",
+  "vp": 1440
+ },
+ {
+  "heroSrc": "img/West/hero-yama-west-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "west",
+  "vp": 1440
+ },
+ {
+  "heroSrc": "img/CyberHell/hero-yama-cyberhell-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "cyberhell",
+  "vp": 1440
+ },
+ {
+  "meterW": 60,
+  "txt": [
+   "100/100",
+   "40/40"
+  ],
+  "item": "5 mp",
+  "zone": "cyberhell",
+  "vp": 1440
+ },
+ {
+  "meterW": 60,
+  "txt": [
+   "100/100",
+   "72/72"
+  ],
+  "item": "5 mp",
+  "zone": "th",
+  "vp": 1440
+ },
+ {
+  "text": "รับรางวัล",
+  "btnCx": 748,
+  "btnCy": 433,
+  "dlgCx": 720,
+  "dlgCy": 450,
+  "item": "6 reward button wave8",
+  "vp": 1440
+ },
+ {
+  "text": "ฟังคำตัดสิน",
+  "hudImg": "img/West/hero-boss-west-profile.webp",
+  "item": "7 lose button + zone3 ruler profile",
+  "vp": 1440
+ },
+ {
+  "item": "8 heart icon",
+  "icons": [],
+  "vp": 1440
+ },
+ {
+  "healing": true,
+  "num": "+27",
+  "item": "9 boon glow",
+  "vp": 1440
+ },
+ {
+  "cut": [
+   1414,
+   874
+  ],
+  "img": [
+   1562,
+   873
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "west",
+  "k": "guard",
+  "vp": 1440
+ },
+ {
+  "cut": [
+   1414,
+   874
+  ],
+  "img": [
+   1562,
+   873
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "cyberhell",
+  "k": "crew:plerng",
+  "vp": 1440
+ },
+ {
+  "cut": [
+   1414,
+   874
+  ],
+  "img": [
+   1562,
+   873
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(-0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "asia",
+  "k": "crew:kan",
+  "vp": 1440
+ },
+ {
+  "pauseOpen": true,
+  "paused": true,
+  "item": "pause in prep",
+  "vp": 390
+ },
+ {
+  "pauseOpen": false,
+  "prepStillOpen": true,
+  "paused": true,
+  "item": "pause closed -> prep still there",
+  "vp": 390
+ },
+ {
+  "pauseOpen": true,
+  "battleOpen": true,
+  "item": "pause in battle",
+  "vp": 390
+ },
+ {
+  "pauseOpen": false,
+  "battleOpen": true,
+  "act": true,
+  "item": "pause closed -> battle intact",
+  "vp": 390
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 326,
+    "h": 117
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 326,
+    "h": 117
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "asia",
+  "vp": 390,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "asia",
+  "vp": 390,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hp": 60,
+  "hpMax": 100,
+  "mp": 10,
+  "health": 3,
+  "hw": 2,
+  "layerVisible": true,
+  "cards": [
+   {
+    "k": "merchant",
+    "dis": false,
+    "w": 326,
+    "h": 117
+   },
+   {
+    "k": "nira",
+    "dis": false,
+    "w": 326,
+    "h": 117
+   },
+   {
+    "k": "prepMed",
+    "dis": true,
+    "w": 122,
+    "h": 40
+   },
+   {
+    "k": "prepWater",
+    "dis": true,
+    "w": 132,
+    "h": 40
+   }
+  ],
+  "item": "prep state",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "dlgOpen": true,
+  "h2": "🧳 พ่อค้าควันทอง",
+  "item": "click [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=merchant]",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "dlgOpen": true,
+  "h2": "📋 โต๊ะนิรา — บุคลากรและทีมต่อสู้",
+  "item": "click [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "prepGo": true,
+  "layerVisible": true,
+  "battle": true,
+  "item": "after close [data-event-prep=nira]",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "item": "click [data-prep-med]",
+  "zone": "west",
+  "vp": 390,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×2"
+   ]
+  }
+ },
+ {
+  "item": "click [data-prep-water]",
+  "zone": "west",
+  "vp": 390,
+  "before": {
+   "hp": 60,
+   "mp": 10,
+   "health": 3,
+   "hw": 2
+  },
+  "after": {
+   "hp": 60,
+   "mp": 40,
+   "health": 3,
+   "hw": 1,
+   "chips": [
+    "กินหีบยา ×3",
+    "ดื่มน้ำมนต์ ×1"
+   ]
+  }
+ },
+ {
+  "hero": 79.5,
+  "crew": [
+   {
+    "src": "crew-plerng.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-v2.png",
+    "ratio": 0.96,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "th",
+  "vp": 390
+ },
+ {
+  "hero": 79.6,
+  "crew": [
+   {
+    "src": "crew-plerng-asia.png",
+    "ratio": 0.81,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-boon-asia.png",
+    "ratio": 0.81,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-asia-v2.png",
+    "ratio": 0.81,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-asia.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   },
+   {
+    "src": "mob-gaki-asia.png",
+    "facing": "mirrored"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "hero": 79.3,
+  "crew": [
+   {
+    "src": "crew-plerng-west.png",
+    "ratio": 0.83,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-west.png",
+    "ratio": 0.83,
+    "facing": "native"
+   },
+   {
+    "src": "crew-guard-west.png",
+    "ratio": 0.83,
+    "facing": "native"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   },
+   {
+    "src": "mob-skeleton-west.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "hero": 79.5,
+  "crew": [
+   {
+    "src": "crew-plerng-cyberhell.png",
+    "ratio": 0.94,
+    "facing": "native"
+   },
+   {
+    "src": "crew-boon-cyberhell.png",
+    "ratio": 0.94,
+    "facing": "mirrored"
+   },
+   {
+    "src": "crew-guard-cyberhell-v2.png",
+    "ratio": 0.94,
+    "facing": "mirrored"
+   }
+  ],
+  "foes": [
+   {
+    "src": "zone-boss-cyberhell.png",
+    "facing": "native"
+   }
+  ],
+  "item": "2/3 facing+size",
+  "zone": "cyberhell",
+  "vp": 390
+ },
+ {
+  "heroSrc": "img/hero-yama-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "th",
+  "vp": 390
+ },
+ {
+  "heroSrc": "img/Asia/hero-yama-asia-atk.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "asia",
+  "vp": 390
+ },
+ {
+  "heroSrc": "img/West/hero-yama-west-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "west",
+  "vp": 390
+ },
+ {
+  "heroSrc": "img/CyberHell/hero-yama-cyberhell-atk-R.png",
+  "fxInYou": true,
+  "fxInFoe": false,
+  "foeStruck": false,
+  "rageTurns": 3,
+  "item": "4 rage",
+  "zone": "cyberhell",
+  "vp": 390
+ },
+ {
+  "meterW": 53,
+  "txt": [
+   "100/100",
+   "40/40"
+  ],
+  "item": "5 mp",
+  "zone": "cyberhell",
+  "vp": 390
+ },
+ {
+  "meterW": 53,
+  "txt": [
+   "100/100",
+   "72/72"
+  ],
+  "item": "5 mp",
+  "zone": "th",
+  "vp": 390
+ },
+ {
+  "text": "รับรางวัล",
+  "btnCx": 202,
+  "btnCy": 406,
+  "dlgCx": 195,
+  "dlgCy": 422,
+  "item": "6 reward button wave8",
+  "vp": 390
+ },
+ {
+  "text": "ฟังคำตัดสิน",
+  "hudImg": "img/West/hero-boss-west-profile.webp",
+  "item": "7 lose button + zone3 ruler profile",
+  "vp": 390
+ },
+ {
+  "item": "8 heart icon",
+  "icons": [],
+  "vp": 390
+ },
+ {
+  "healing": true,
+  "num": "+32",
+  "item": "9 boon glow",
+  "vp": 390
+ },
+ {
+  "cut": [
+   364,
+   205
+  ],
+  "img": [
+   366,
+   204
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "west",
+  "k": "guard",
+  "vp": 390
+ },
+ {
+  "cut": [
+   364,
+   205
+  ],
+  "img": [
+   366,
+   204
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(0.998494, 0, 0, 0.998494, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "cyberhell",
+  "k": "crew:plerng",
+  "vp": 390
+ },
+ {
+  "cut": [
+   364,
+   205
+  ],
+  "img": [
+   366,
+   204
+  ],
+  "img_covers_frame": true,
+  "imgTransform": "matrix(-0.998332, 0, 0, 0.998332, 0, 0)",
+  "item": "10 crew cutscene",
+  "zone": "asia",
+  "k": "crew:kan",
+  "vp": 390
+ }
+]
