@@ -1,6 +1,6 @@
 # ใบงาน B5: AVEGEE — ยมทูต/Guard เป็นหน่วยรบ: เลือด = กำลังใจ, ศัตรูตีได้, ล้ม, พักฟื้นศาลาน้ำชา
 
-Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด (มี B1–B4 + B2b) · คำขอ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` · **แบบ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 2 (ศัตรูเลือกเป้า, ตัวเลข), 3 (ล้มและพักฟื้น), ลำดับ 6** · คำตัดสิน: ท้าย `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/2026-10-04-avegee-30-plan.md`
+Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = HEAD ที่ตัวรันให้ (= branch `b2b-merge` `86e31df` มี B1–B4 + B2b รวมแล้ว · Dale กำลัง push ขึ้น main) · คำขอ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` · **แบบ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 2 (ศัตรูเลือกเป้า, ตัวเลข), 3 (ล้มและพักฟื้น), ลำดับ 6** · คำตัดสิน: ท้าย `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/2026-10-04-avegee-30-plan.md`
 
 ## ขอบเขต (ตรรกะ + แสดงผลพื้นฐาน · ยังไม่ทำเมนูสั่งรายตัว = B6)
 1. โมดูล actor/recovery: HP ยมทูต/Guard ในศึก = กำลังใจ (Guard เก่าไม่มี morale → 100) · แถบเขียว HP บนการ์ดล่างทุกตัว + แถบส้ม CD
