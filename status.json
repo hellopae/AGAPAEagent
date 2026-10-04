@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T13:33:36.897Z",
+  "updatedAt": "2026-10-04T13:33:45.565Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale reviews 30D and 30F",
+      "status": "working",
+      "task": "Dale reviews B1 roster/migration",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
