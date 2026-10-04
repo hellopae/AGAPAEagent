@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T17:24:35.252Z",
+  "updatedAt": "2026-10-04T10:51:40.458Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review merge 29G",
+      "status": "working",
+      "task": "Dale review codex-app + 30C",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby 29C flow and scenes",
+      "task": "Toby resume 30A cutscene",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
