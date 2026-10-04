@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T12:21:04.785Z",
+  "updatedAt": "2026-10-04T12:42:07.595Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby builds 30D map fixes",
+      "task": "Toby resumes 30D items 5-7",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
