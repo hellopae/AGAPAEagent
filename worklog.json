@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-04T11:49:36.672Z",
+  "updatedAt": "2026-10-04T11:57:41.181Z",
   "entries": [
+    {
+      "id": "wl-261004-toby-nu7y",
+      "datetime": "2026-10-04T11:57:41Z",
+      "displayDate": "4 ต.ค. 2569",
+      "displayTime": "18:57",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby builds 30B battle fixes",
+      "summary": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไ"
+    },
     {
       "id": "wl-261004-dale-dgde",
       "datetime": "2026-10-04T11:49:36Z",
