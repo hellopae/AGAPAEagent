@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:57:41.181Z",
+  "updatedAt": "2026-10-04T11:58:06.450Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby builds 30B battle fixes",
+      "status": "working",
+      "task": "Toby builds 30D map fixes",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
