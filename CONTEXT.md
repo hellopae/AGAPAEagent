@@ -66,6 +66,12 @@ Founder / developer ที่ TANAPAT Printing (ธนะพัฒน์พร�
   แม้ปิด sandbox แล้วก็ตาม · ทางออก: **System Settings → Privacy & Security → Full Disk Access →
   เปิดให้ Terminal → ปิด-เปิด Terminal ใหม่** แล้วเริ่ม session ใหม่จาก `AGAPAE Agent`
   · **อย่าส่ง agent ไปลองซ้ำก่อนได้สิทธิ์ — เสีย token ฟรี (เคยเสียไป ~35k)**
+  · **ทางเลี่ยงที่ใช้ได้ทันที (4 ต.ค. 2569):** clone จาก GitHub ไปไว้ที่ `~/agapae-work/AVEGEE`
+    (home ไม่โดน TCC) แล้วให้ Dale/Toby/Codex worker ใช้ `--project /Users/agapae/agapae-work/AVEGEE`
+    (worktree ไปอยู่ `~/agapae-work/.codex-worktrees/`) · merge แล้ว push จาก clone ได้ตามปกติ
+    · Python/subprocess จาก session นี้ก็โดนบล็อกเหมือนกัน — worker เข้าโฟลเดอร์เดิมไม่ได้
+    · ไฟล์ที่ไม่อยู่ใน git (`img/raw/`, `files/`) ต้องขอคุณเป้คัดลอกมาไว้ใน `AGAPAE Agent/` ก่อน
+    · Codex app ของคุณเป้ทำงานในโฟลเดอร์เดิม → ต้อง `git pull` ก่อนเริ่มงาน และ push งานขึ้น branch ให้เรา merge
 - **เปิด session จากโฟลเดอร์ `AGAPAE Agent/` เสมอ** — ถ้าเปิดจากที่อื่น `.claude/agents/` ไม่ถูกโหลด
   hook เลยไม่ทำงานเงียบ ๆ ทั้ง sprint (status/worklog/Firestore/auto-push ไม่ขยับเลย)
 - **`ls -a` / `ls -1` แบบไม่มี `-l` ทำให้คำสั่งค้างจนหมดเวลา** (ls ถูก alias เป็น eza) ใช้ `ls -la` หรือ `find` แทน
