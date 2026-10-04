@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:25:24.965Z",
+  "updatedAt": "2026-10-04T11:28:08.139Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale converts rooms-wide to webp",
+      "status": "working",
+      "task": "Dale reviews and merges 30C",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
