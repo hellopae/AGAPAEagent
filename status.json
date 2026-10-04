@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T15:50:48.705Z",
+  "updatedAt": "2026-10-04T17:42:10.056Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,7 +279,7 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "working",
-      "task": "Dale integrates and reviews B2b",
+      "task": "Dale resumes B2b integration",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby resumes B2b final event",
+      "status": "working",
+      "task": "Toby builds B8 minigames",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
