@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:19:21.294Z",
+  "updatedAt": "2026-10-04T11:25:24.965Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale converts rooms-wide to webp",
       "report": {
         "when": "20:27",
