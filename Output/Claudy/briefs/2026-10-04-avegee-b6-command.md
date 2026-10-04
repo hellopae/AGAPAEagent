@@ -1,6 +1,6 @@
 # ใบงาน B6: AVEGEE — เมนูคำสั่งรายตัว: เลือกผู้ลงมือ → วงคำสั่ง → ท่าย่อย/เลือกเป้า/เลือกผู้รับไอเท็ม
 
-Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด (มี B5) · คำขอ + คำบรรยายภาพ Battle8-1/8-2: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` · **แบบ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 2 (กติกาคำสั่ง), 5 (command-wheel), ลำดับ 7**
+Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด `822ed51` (มี B5 + `TEAM_PRESSURE` สมดุล — ห้ามทำให้อัตราชนะหลุดกรอบ เทสต์สมดุลต้องผ่าน) · คำขอ + คำบรรยายภาพ Battle8-1/8-2: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` · **แบบ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 2 (กติกาคำสั่ง), 5 (command-wheel), ลำดับ 7**
 
 ## ขอบเขต
 1. คลิกการ์ดล่าง/ตัวละคร = **เลือกผู้ลงมือ** (ไม่สั่งโจมตีทันที — ui.js:2845 เดิม) · วงคำสั่งขึ้นรอบตัวผู้ลงมือ ตรงกลางเป็นหน้าผู้ลงมือ
