@@ -1,0 +1,17 @@
+# ใบงาน B5-R (Dale): รีวิว + ปรับสมดุล + merge Codex B5 (ยมทูตมีเลือด/ล้ม/พักฟื้น) — ทำหลัง B2b-R push แล้ว
+
+**Repo: `/Users/agapae/agapae-work/AVEGEE`** · ห้ามลองเข้า `Claude/AVEGEE` เดิม · ห้าม rebase/force push · ถ้าโดนบล็อกสิทธิ์ให้หยุดและรายงาน · commit ทีละขั้น
+- Codex run `20261004T175243Z-527f8767` · worktree `~/agapae-work/.codex-worktrees/20261004T175243Z-527f8767` · ฐาน `86e31df` (b2b-merge) · ไฟล์ staged ไม่ได้ commit (commit ให้ก่อน)
+- ใบงาน `Output/Claudy/briefs/2026-10-04-avegee-b5-crew-hp.md` · รายงาน Codex `<worktree>/output/Toby/2026-10-04-avegee-b5.md`
+- Codex: `actor-recovery.js` ใหม่ + แก้ game/data/roster/ui/room/scene/frontier/view3d/npc-stand · B5 10/10 · **ชุดเต็ม 407/409 — ล้ม 2 เพราะง่ายเกิน: cyber breach 86%→100%, final 82%→100% (เพดาน 90%)** · ยังไม่ได้ดูเบราว์เซอร์
+
+## ปรับสมดุล (Claudy อนุมัติ — คุณเป้อนุญาตเพิ่มความยาก/จำนวนศัตรู)
+- สาเหตุคาดว่า: ศัตรูกระจายตีไปยมทูต/Guard ยมบาทเลยรอด · ปรับด้วย **ตารางใน `data.js`** (เช่น ตัวคูณ HP/ดาเมจศัตรูเมื่อทีมมียมทูตลงสนาม, หรือ +ลูกน้อง) **ห้ามผ่อนเกณฑ์เทสต์** · เป้า: breach / final ~70–90%, บอสโซน 1–3 ~80–95% · ทีม 2 และทีม 6 ต้องอยู่ในกรอบทั้งคู่ · รายงานตัวเลขก่อน/หลังและค่าที่ตั้ง
+
+## ขั้นตอน
+1. commit · รวมกับ main ล่าสุด (หลัง B2b) ด้วย merge · เทสต์ทั้งหมดต้องผ่าน (หลังปรับสมดุล) + `node --check` + `git diff --check`
+2. เบราว์เซอร์ 1280/1440/390: แถบ HP เขียว + CD ส้มบนการ์ดทุกตัว · ศัตรูตียมทูต/Guard เห็นเอฟเฟกต์ตรงตัว · ยมทูตล้ม → หายจากศึกและแผนที่ → 60 วิ (เร่งเวลาด้วย harness ได้) กลับมากำลังใจ 50 · ยมบาทล้ม → ศาลาน้ำชา นอน → **นิราปลุก** → เล่นต่อ · reload ระหว่างพัก · ทีม 6 ศึกสุดท้าย · pause ไม่พัง
+3. ผ่าน → merge main + push + live · ไม่ผ่าน → FIX LIST · ลบ worktree หลัง merge
+
+## รายงาน
+`Output/Dale/2026-10-05-avegee-b5-review.md` · PASS/FIX LIST + commit + roll back + ตารางสมดุลก่อน/หลัง + ภาพนิราปลุก/ยมทูตล้ม (JPEG ย่อ `Output/Dale/b5-shots/`)
