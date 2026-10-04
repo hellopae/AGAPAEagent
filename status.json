@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T19:49:24.382Z",
+  "updatedAt": "2026-10-04T19:50:20.788Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale reviews and rebalances B5",
+      "status": "working",
+      "task": "Dale reviews B8 minigames",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
