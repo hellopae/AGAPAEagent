@@ -1,6 +1,6 @@
 # ใบงาน B7: AVEGEE — ไอคอนวงคำสั่งใหม่ b1–b4 + ตรวจสมดุลระบบต่อสู้ใหม่
 
-Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด (มี B6) · คำขอ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` (หัวข้อ "ไอคอนปุ่มใหม่") · แบบ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 5, ลำดับ 8
+Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด `b71e16e` (มี B6 — วงใช้ภาพกลีบเดิมผ่าน clip-path · Dale เปลี่ยนจากแบบ Codex แล้ว ดู `Output/Dale/2026-10-05-avegee-b6-review.md`) · คำขอ: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Kittanate-source/2026-10-04-avegee-battle-v2-requests.md` (หัวข้อ "ไอคอนปุ่มใหม่") · แบบ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Astra/2026-10-04-avegee-30g0b-battle-design.md` หัวข้อ 5, ลำดับ 8
 
 ## ขอบเขต
 1. ไอคอน (ต้นฉบับที่ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/assets/30/b1.png..b4.png` — **ถ้าไม่มีไฟล์ หยุดข้อนี้แล้วรายงาน**): 900×1100 RGBA พื้นโปร่งใสแล้ว (ตรวจ alpha ก่อน ไม่ต้องตัดพื้นถ้าโปร่งใสอยู่แล้ว) → crop ส่วนว่างตามกรอบกลีบ → webp ใน `img/ui/` · b1 = กลีบบน โจมตี (ดาบวงนาค) · b2 = กลีบขวา พลัง (ยมบาท) · b3 = กลีบล่าง ไอเท็ม (กระเป๋า) · b4 = กลีบขวา ไอเท็มของยมทูต · ยมบาทใช้ b1+b2+b3 · ยมทูต/Guard ใช้ b1+b4 · hit area ตรงรูปกลีบ · manifest ด้วยมือ + cache bump
@@ -17,3 +17,8 @@ Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด 
 ## เกณฑ์ร่วม
 - `node --test tests/*.test.mjs` ผ่านหมด · `node --check src/*.js` · `git diff --check`
 - รายงาน `output/Toby/2026-10-04-avegee-<ใบ>.md` ในโฟลเดอร์ worktree: ทำอะไร/ไม่ได้ทำ, ไฟล์:บรรทัด, ตรวจเบราว์เซอร์ได้หรือไม่
+
+## หมายเหตุจาก B6-R
+- วงปัจจุบันใช้ภาพกลีบเต็มผืนเดิม + clip-path (ย่อภาพ 900×1100 เป็นไอคอนเล็กไม่ได้ — เคยเป็นจุด) → b1–b4 ก็เป็นภาพกลีบเต็มผืนขนาดเดียวกัน ใช้วิธีเดียวกับวงเดิม แทนภาพกลีบ
+- **b4 = กลีบไอเท็มของยมทูต/Guard อยู่ด้านขวา** (ตอนนี้ใช้กลีบไอเท็มเดิมด้านล่าง) → วงยมทูต/Guard = b1 บน + b4 ขวา ตามภาพ Battle8-1
+- มือถือ 390 ตัวละครบนฉากซ้อนกัน กดโดนข้างๆ ได้ — ถ้าแก้ได้ไม่ยาก ให้ hit area ตัวละครเล็กลง/ให้การ์ดล่างเป็นทางหลัก
