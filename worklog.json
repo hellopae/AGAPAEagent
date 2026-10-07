@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-04T21:44:52.206Z",
+  "updatedAt": "2026-10-07T17:12:53.775Z",
   "entries": [
+    {
+      "id": "wl-261007-dale-8r9s",
+      "datetime": "2026-10-07T17:12:53Z",
+      "displayDate": "8 ต.ค. 2569",
+      "displayTime": "00:12",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Dale reviews and merges R1",
+      "summary": "ส่งรายงานให้ Claudy แล้ว: ผล **PASS** และ merge เข้า main เป็น `472ff6f` (push แล้ว Pages ยืนยันแล้ว).\n\nDale แก้เพิ่ม 4 จุดจากการตรวจในเบราว์เซอร์ก่อน merge:\n- เอฟเฟกต์โดนตีและตัวเลขดาเมจไม่ขึ้นในฉากหลายศัตรู.\n- ปุ่มท้าซ้ำมุมจอกดไม่ได้จริง.\n- ปุ่มเดียวกันทับปุ่มตั้งค่าบนจอกว้าง.\n- แถบ HP ต่อตัวไม่เห"
+    },
     {
       "id": "wl-261004-dale-mynj",
       "datetime": "2026-10-04T21:44:52Z",
