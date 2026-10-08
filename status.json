@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T05:52:01.027Z",
+  "updatedAt": "2026-10-08T05:54:59.357Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,7 +174,7 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Mind: ending-03 father scene prompts",
       "report": {
         "when": "22:28",
