@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-08T04:41:30.956Z",
+  "updatedAt": "2026-10-08T04:44:05.429Z",
   "entries": [
+    {
+      "id": "wl-261008-reese-xn06",
+      "datetime": "2026-10-08T04:44:05Z",
+      "displayDate": "8 ต.ค. 2569",
+      "displayTime": "11:44",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese fact-check Minnie Kling picks",
+      "summary": "Verdict: FIX LIST. The report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-29-avegee-zone-events-factcheck.md`, and the Thotsakan recommendation is at the top of it.\n\nThe three main issues:\n\n1. **`Boss-frontier1.png` must not be called Thotsakan.**\n   - Traditiona"
+    },
     {
       "id": "wl-261008-minnie-ubta",
       "datetime": "2026-10-08T04:41:30Z",

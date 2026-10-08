@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T04:41:30.956Z",
+  "updatedAt": "2026-10-08T04:44:05.429Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,7 +70,7 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Reese check Rae TH strings",
+      "task": "Reese fact-check Minnie Kling picks",
       "report": {
         "when": "19:43",
         "title": "Fact-check AVEGEE zone events",
