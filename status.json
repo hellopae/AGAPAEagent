@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T04:38:59.811Z",
+  "updatedAt": "2026-10-08T04:41:30.956Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,7 +43,7 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Minnie: pick Kling animation scenes",
       "report": {
         "when": "19:28",
