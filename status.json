@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T01:00:08.360Z",
+  "updatedAt": "2026-10-08T01:02:02.006Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale fixes monk/deva cases",
       "report": {
         "when": "20:27",
