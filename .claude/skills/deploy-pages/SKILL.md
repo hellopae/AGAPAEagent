@@ -25,6 +25,7 @@ description: Deploy โปรเจกต์ขึ้น GitHub Pages พร้�
 3. Asset โหลดแต่หน้ายังขาว → JS error ใน console (มักเป็น env/config ที่ production ไม่มี)
 4. แก้แล้ว push แล้ว "ยังเหมือนเดิม" → hard refresh / cache bust (`?v=2`) ก่อนสรุปว่ายังพัง
 5. ทุกอย่างถูกแต่ stall นาน → เช็ค `.nojekyll` ยังอยู่ไหม
+6. push แล้วแต่ **ไม่มี build ใหม่เลย** (repo แบบ legacy `build_type: legacy`) → เช็ค `gh api repos/<owner>/<repo>/pages/builds/latest -q '.status+" "+.commit[0:7]'` ถ้า commit ล่าสุดไม่ใช่ที่ push → สั่ง `gh api -X POST repos/<owner>/<repo>/pages/builds` แล้วรอจน `built <sha>` · เจอจริงกับ AVEGEE 8 ต.ค. 2569 (ค้าง 1 วัน push หลายรอบไม่ build) · ห้ามบอก "ขึ้นเว็บแล้ว" จนกว่า curl ไฟล์ใหม่ได้ 200
 
 ## หลัง deploy สำเร็จ
 
