@@ -33,6 +33,9 @@
 - ถ้า Kling ขยับแถบดำ ให้ครอปแถบออกก่อนอัปโหลดแล้วค่อยแก้อัตราส่วน ตรวจสเปกอัตราส่วนของ Kling เองก่อน
 - ภาพที่มีตัวละครถูกล่ามโซน (ending-01, cyberhell-02) **อาจโดนตัวกรองเนื้อหา** ไฟล์ `docs/yama-intro-animation-higgsfield-2026-10-08.json` บันทึกว่า PDF หน้า 9 โดนติดธง nsfw ทั้งที่เป็นตัวละครแต่งกายปกติ ไม่ทราบนโยบาย Kling ให้ลองคลิปที่เสี่ยงน้อยก่อน และห้ามพยายามเลี่ยงตัวกรอง
 - ภาพที่มีตัวละครหลายตัวเล็กๆ (ending-02) ให้ขยับเฉพาะฉากหลังกับกล้อง อย่าสั่งให้ตัวละครเดิน
+- **ความยาว:** Kling 3.0 ตั้งได้ 3–15 วินาที รุ่นเก่าเลือกได้แค่ 5 หรือ 10 วินาที ถ้าใช้รุ่นเก่า ให้เปลี่ยน 8 วินาทีของอันดับ 1 เป็น 10 (หรือ 5) และ 6 วินาทีเป็น 5
+- **บรรทัด Negative:** วางในช่อง negative prompt ถ้าหน้าจอมี ถ้าไม่มีให้ต่อท้าย prompt หลัก (เอกสาร Kling 3.0 ให้เขียนรวมใน prompt เดียว)
+- อัตราส่วนภาพต้นทาง 16:9 ถึง 2.35:1 อยู่ในช่วงที่ Kling 3.0 รับ (1:2.5 ถึง 2.5:1) และรองรับการใส่ภาพเริ่มต้นอย่างเดียว · ตรวจโดย Reese 8 ต.ค. 2569 จาก kling.ai/quickstart และ kling.ai/document-api
 
 ### อันดับ 1 · ฉากจบ: ผู้ปกครองทั้งสี่โซน
 - **จังหวะ:** ภาพสุดท้ายของเกม (`ending` panel 2 ใน `src/story.js`) ยมบาทน้อยนั่งบัลลังก์มองสี่โซน
@@ -63,7 +66,7 @@ Negative: text, logos, new characters, blood, the inspector standing up or attac
 - **ความยาวแนะนำ:** 5–6 วินาที
 - **Prompt:**
 ```
-16:9 pixel-art game cutscene. Keep the exact composition, characters and style of the reference image. A radiant Thai celestial guardian with large white-blue wings, gold crown and white-gold armor holds a spear in his left hand and extends his right palm toward the small red demon at the left. Motion: the wings flutter gently and spread slightly wider, golden god-rays pulse softly, golden cloth ribbons and sparkles around the ghostly monk at the upper right drift and flow sideways, red petals and embers float through the air, lava glows in the background. The small red demon with a gold crown holding a red book takes a tiny step back and looks up in surprise. Slow camera push-in toward the celestial guardian. Preserve every face, crown, costume and the spear in his hand.
+16:9 pixel-art game cutscene. Keep the exact composition, characters and style of the reference image. A radiant Thai celestial guardian with large white-blue wings, gold crown and white-gold armor holds a spear in his right hand and extends his open left palm toward the ghostly monk on the right side. Motion: the wings flutter gently and spread slightly wider, golden god-rays pulse softly, golden cloth ribbons and sparkles around the ghostly monk at the upper right drift and flow sideways, red petals and embers float through the air, lava glows in the background. The small red demon with a gold crown holding a red book takes a tiny step back and looks up in surprise. Slow camera push-in toward the celestial guardian. Preserve every face, crown, costume and the spear in his hand.
 Negative: text, logos, extra characters, 3D render, realistic style, fast motion, camera shake, scene cut, morphing faces, changing the armor design.
 ```
 
@@ -107,4 +110,4 @@ Negative: text, logos, new characters, blood, an attack animation, 3D render, re
 - งานนี้ไม่ได้แก้ไฟล์ใดใน AVEGEE อ่านอย่างเดียว
 - การเอาวิดีโอไปแทนภาพนิ่งในเกม (story panel ใช้ `<img>` + CSS ครอปแถบดำ) ต้องมีงานโค้ดแยก ส่งต่อ Dale/Codex ตอนมีคลิปจริง
 - ยังไม่ตรวจข้อกำหนดอัตราส่วน/ความยาวสูงสุด/ตัวกรองเนื้อหาของ Kling (นอกขอบเขต)
-- Claudy ตัดสิน: ไม่ส่ง Reese เพราะเป็นไอเดียภายใน ไม่มีข้ออ้างข้อเท็จจริงนอก repo (path ภาพตรวจด้วย Glob แล้ว)
+- Reese [Fact-check] 8 ต.ค. 2569: path ภาพ 10 ไฟล์และข้ออ้างเรื่องโค้ดถูกหมด · แก้ 2 ข้อแล้ว (ข้างมือในอันดับ 3, หมายเหตุรุ่น Kling)
