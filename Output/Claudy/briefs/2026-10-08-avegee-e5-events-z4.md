@@ -20,3 +20,13 @@
 ## เกณฑ์รับงาน
 1. เทสต์ `tests/e5-events-z4.test.mjs`: ลำดับ a→e ครบ cutscene ไม่ซ้ำ/ไม่ข้าม · กำลังเสริมเป็นคนละ sprite · หน้าต่างเตรียมตัว 3 ทางพาไปถูกที่ · save เก่าทุก phase ไม่ค้าง
 2. ภาพตรวจใน browser → `output/Codex/e5-preview/` · เทสต์เดิมผ่าน · รายงาน `output/Codex/2026-10-08-avegee-e5.md`
+
+## ระบบกลางจาก E3 (Dale สรุป 8 ต.ค.) — ใช้ต่อ ห้ามเขียนใหม่ซ้ำ
+- `src/deva-map.js`: ลงทะเบียน `DEVA_MAP[zone] = { key, prerequisite, x, y }` · `devaMapActors(g, now)` คืน actor `id deva:<zone>`, `art`, `enabled`, `label`
+- state ใน save: `g.devaVisits[zone] = { phase: descending|intro|waiting|fighting, battle? }`
+- `mapInteractions` / `hitActor` / `standPoints` ใช้ kind `devaEncounter` · `openDevaEncounter(key)` ใน `ui.js` เช็กระยะแล้วเปิด event alert
+- `finishDevaDescent` / `completeDevaArrival` เป็นท่าของโซน 2 เท่านั้น → โซนนี้เขียน choreography ของตัวเอง (เช่น วิ่งเข้ามาจากล่าง/ยืนหน้าบัลลังก์) โดยใช้ phase เดิม
+- `src/breach-approach.js`: actor แสดงผลช่วงเดินเข้าหาบอสชายแดน
+- **กฎ key ภาพ (บั๊กที่ Dale เจอใน E3):** th = `boss-tester-th`, โซนอื่น = `boss-tester` (`artUrl` ต่อ suffix โซนให้เอง) **ห้ามใส่** `boss-tester-<zone>` / `boss-frontier-<zone>` เอง — ไม่งั้นได้ path 404 หรืออีโมจิแทนภาพ
+- effect ไฟของ E3 (`src/scene.js`) เคยเป็นแถบลูกไฟบังตึก — effect ใหม่ (สายฟ้า/วาร์ป) ต้องไม่บังตัวอาคาร/ตัวละครหลัก
+- ตรวจ browser: Playwright chromium เปิดได้ในเครื่อง (Dale ใช้ได้) — ถ้า Codex เปิดไม่ได้ ระบุในรายงาน Dale จะตรวจแทน

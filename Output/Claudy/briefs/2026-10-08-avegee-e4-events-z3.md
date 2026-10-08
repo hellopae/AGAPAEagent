@@ -16,3 +16,13 @@
 ## เกณฑ์รับงาน
 1. เทสต์ `tests/e4-events-z3.test.mjs`: เปิดโซนมีแค่ Taan+พ่อค้า+ปีศาจ 3 → ศึก yama+Taan → สร้างได้ · หลังคดี 3 วิญญาณหยุด → ชนะแวมไพรแล้วขยับ · หลังคดี 7 cutscene+บท → เทวดายืนรอ → ศึก → spear · save เก่าไม่พัง
 2. ภาพตรวจใน browser → `output/Codex/e4-preview/` · เทสต์เดิมผ่าน · รายงาน `output/Codex/2026-10-08-avegee-e4.md`
+
+## ระบบกลางจาก E3 (Dale สรุป 8 ต.ค.) — ใช้ต่อ ห้ามเขียนใหม่ซ้ำ
+- `src/deva-map.js`: ลงทะเบียน `DEVA_MAP[zone] = { key, prerequisite, x, y }` · `devaMapActors(g, now)` คืน actor `id deva:<zone>`, `art`, `enabled`, `label`
+- state ใน save: `g.devaVisits[zone] = { phase: descending|intro|waiting|fighting, battle? }`
+- `mapInteractions` / `hitActor` / `standPoints` ใช้ kind `devaEncounter` · `openDevaEncounter(key)` ใน `ui.js` เช็กระยะแล้วเปิด event alert
+- `finishDevaDescent` / `completeDevaArrival` เป็นท่าของโซน 2 เท่านั้น → โซนนี้เขียน choreography ของตัวเอง (เช่น วิ่งเข้ามาจากล่าง/ยืนหน้าบัลลังก์) โดยใช้ phase เดิม
+- `src/breach-approach.js`: actor แสดงผลช่วงเดินเข้าหาบอสชายแดน
+- **กฎ key ภาพ (บั๊กที่ Dale เจอใน E3):** th = `boss-tester-th`, โซนอื่น = `boss-tester` (`artUrl` ต่อ suffix โซนให้เอง) **ห้ามใส่** `boss-tester-<zone>` / `boss-frontier-<zone>` เอง — ไม่งั้นได้ path 404 หรืออีโมจิแทนภาพ
+- effect ไฟของ E3 (`src/scene.js`) เคยเป็นแถบลูกไฟบังตึก — effect ใหม่ (สายฟ้า/วาร์ป) ต้องไม่บังตัวอาคาร/ตัวละครหลัก
+- ตรวจ browser: Playwright chromium เปิดได้ในเครื่อง (Dale ใช้ได้) — ถ้า Codex เปิดไม่ได้ ระบุในรายงาน Dale จะตรวจแทน
