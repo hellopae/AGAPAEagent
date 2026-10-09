@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T16:40:22.582Z",
+  "updatedAt": "2026-10-09T16:55:51.007Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale merge G1+G3b to AVEGEE",
       "report": {
         "when": "20:27",
