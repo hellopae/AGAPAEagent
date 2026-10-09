@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:05:45.398Z",
+  "updatedAt": "2026-10-09T17:17:48.884Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale merge G2 intro/cover art",
+      "status": "working",
+      "task": "Dale H1 preload speed",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby G4 items/balance/cooldown",
+      "task": "Toby H2 collision/camera/UI fixes",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
