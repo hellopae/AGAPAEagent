@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T06:39:55.115Z",
+  "updatedAt": "2026-10-09T07:00:21.462Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby builds B8 minigames",
+      "status": "working",
+      "task": "Toby F1 fix Yama walk stutter",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
