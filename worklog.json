@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-09T17:35:19.092Z",
+  "updatedAt": "2026-10-09T17:37:32.347Z",
   "entries": [
+    {
+      "id": "wl-261009-mind-05h8",
+      "datetime": "2026-10-09T17:37:32Z",
+      "displayDate": "10 ต.ค. 2569",
+      "displayTime": "00:37",
+      "agent": "mind",
+      "agentName": "Mind",
+      "agentImg": "avatars/Mind.png",
+      "pipeline": "design",
+      "status": "done",
+      "title": "Mind rewrite cover video prompt",
+      "summary": "Mind: เขียน prompt ชุดภาพ event AVEGEE ครบ 12 ภาพแล้ว (ยังไม่ได้ gen และยังไม่ได้ตรวจกับภาพจริง)\n\nไฟล์: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-09-29-avegee-event-art-prompts.md`\n\nเรียงตามความด่วน คือ 1) ยักษ์ผู้คุมชายแดนโซน 1, 2) บอสโซน 4 ใหม่, 3) ภาพจำเป็นโซน 2–4 อีก"
+    },
     {
       "id": "wl-261009-mind-xanq",
       "datetime": "2026-10-09T17:35:19Z",
