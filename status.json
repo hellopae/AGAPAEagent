@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:17:48.884Z",
+  "updatedAt": "2026-10-09T17:35:19.092Z",
   "agents": [
     {
       "id": "claudy",
@@ -175,7 +175,7 @@
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
       "status": "done",
-      "task": "Mind: ending-03 father scene prompts",
+      "task": "Mind rewrite cover video prompt",
       "report": {
         "when": "22:28",
         "title": "AVEGEE event art prompts",
@@ -279,7 +279,7 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "working",
-      "task": "Dale H1 preload speed",
+      "task": "Dale merge G2b cover-v5",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
