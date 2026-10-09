@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T11:37:17.334Z",
+  "updatedAt": "2026-10-09T12:11:39.753Z",
   "agents": [
     {
       "id": "claudy",
@@ -43,8 +43,8 @@
         "แปลงไอเดียดิบเป็น Idea Card ที่มีโครงสร้าง",
         "ส่งต่อให้ Reese ทำวิจัย"
       ],
-      "status": "done",
-      "task": "Minnie: pick Kling animation scenes",
+      "status": "working",
+      "task": "Minnie frontier weapons ideas",
       "report": {
         "when": "19:28",
         "title": "AVEGEE zone 2-4 event ideas",
