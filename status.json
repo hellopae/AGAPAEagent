@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:44:08.544Z",
+  "updatedAt": "2026-10-09T17:45:55.896Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale playtest+merge H3/H4",
       "report": {
         "when": "20:27",
