@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:49:36.358Z",
+  "updatedAt": "2026-10-09T17:59:13.159Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby H2 collision/camera/UI fixes",
       "report": {
         "when": "15:15",
