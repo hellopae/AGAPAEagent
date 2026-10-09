@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T12:17:59.170Z",
+  "updatedAt": "2026-10-09T12:19:38.100Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-check Minnie Kling picks",
+      "status": "working",
+      "task": "Reese fact-check frontier weapons",
       "report": {
         "when": "19:43",
         "title": "Fact-check AVEGEE zone events",
