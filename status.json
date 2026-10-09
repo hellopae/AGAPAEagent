@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T15:10:37.550Z",
+  "updatedAt": "2026-10-09T15:36:21.008Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby continue G1 items/guard rest",
       "report": {
         "when": "15:15",
