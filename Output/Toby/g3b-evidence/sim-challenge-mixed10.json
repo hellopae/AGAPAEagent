@@ -1,0 +1,78 @@
+{
+ "bot": "mixed (10% plain attack)",
+ "runs": 400,
+ "challenge": [
+  {
+   "zone": "th",
+   "weapon": null,
+   "runs": 400,
+   "firstAttemptWin": 39.8,
+   "clearedWithin3Attempts": 93,
+   "resumeFromCheckpointWin": 66.4,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:1 6:0 7:8 8:24 9:121 10:196",
+   "meanActionsFirstAttempt": 28.1
+  },
+  {
+   "zone": "asia",
+   "weapon": "fang",
+   "runs": 400,
+   "firstAttemptWin": 37.5,
+   "clearedWithin3Attempts": 85.8,
+   "resumeFromCheckpointWin": 53,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:1 6:0 7:2 8:27 9:85 10:305",
+   "meanActionsFirstAttempt": 33.2
+  },
+  {
+   "zone": "west",
+   "weapon": "chain",
+   "runs": 400,
+   "firstAttemptWin": 39.8,
+   "clearedWithin3Attempts": 90.3,
+   "resumeFromCheckpointWin": 59.6,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:0 6:0 7:0 8:12 9:62 10:304",
+   "meanActionsFirstAttempt": 36.1
+  },
+  {
+   "zone": "cyberhell",
+   "weapon": "cane",
+   "runs": 400,
+   "firstAttemptWin": 68.3,
+   "clearedWithin3Attempts": 100,
+   "resumeFromCheckpointWin": 96.9,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:0 6:0 7:1 8:2 9:40 10:88",
+   "meanActionsFirstAttempt": 61.9
+  }
+ ],
+ "challengeNoWeapon": [
+  {
+   "zone": "asia",
+   "weapon": null,
+   "runs": 400,
+   "firstAttemptWin": 40.3,
+   "clearedWithin3Attempts": 86.5,
+   "resumeFromCheckpointWin": 53.6,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:0 6:0 7:3 8:24 9:102 10:270",
+   "meanActionsFirstAttempt": 33.3
+  },
+  {
+   "zone": "west",
+   "weapon": null,
+   "runs": 400,
+   "firstAttemptWin": 24.3,
+   "clearedWithin3Attempts": 86,
+   "resumeFromCheckpointWin": 57.3,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:0 6:0 7:2 8:18 9:78 10:389",
+   "meanActionsFirstAttempt": 36.4
+  },
+  {
+   "zone": "cyberhell",
+   "weapon": null,
+   "runs": 400,
+   "firstAttemptWin": 0,
+   "clearedWithin3Attempts": 98,
+   "resumeFromCheckpointWin": 84.5,
+   "failAtWave": "1:0 2:0 3:0 4:0 5:0 6:0 7:8 8:147 9:251 10:66",
+   "meanActionsFirstAttempt": 54.5
+  }
+ ]
+}

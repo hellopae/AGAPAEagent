@@ -1,0 +1,90 @@
+{
+ "bot": "mixed (25% plain attack)",
+ "runs": 800,
+ "weapons": [
+  {
+   "weapon": "fang",
+   "encounter": "th borderBoss",
+   "noWeapon": 91.9,
+   "withWeapon": 93,
+   "delta": 1.1
+  },
+  {
+   "weapon": "fang",
+   "encounter": "asia rageBreach",
+   "noWeapon": 100,
+   "withWeapon": 99.9,
+   "delta": -0.1
+  },
+  {
+   "weapon": "fang",
+   "encounter": "asia zoneBoss",
+   "noWeapon": 100,
+   "withWeapon": 100,
+   "delta": 0
+  },
+  {
+   "weapon": "chain",
+   "encounter": "asia zoneBoss",
+   "noWeapon": 100,
+   "withWeapon": 100,
+   "delta": 0
+  },
+  {
+   "weapon": "chain",
+   "encounter": "west vampireBreach",
+   "noWeapon": 86.4,
+   "withWeapon": 90.9,
+   "delta": 4.5
+  },
+  {
+   "weapon": "chain",
+   "encounter": "west devaTest",
+   "noWeapon": 100,
+   "withWeapon": 100,
+   "delta": 0
+  },
+  {
+   "weapon": "chain",
+   "encounter": "west zoneBoss",
+   "noWeapon": 93.3,
+   "withWeapon": 95,
+   "delta": 1.7
+  },
+  {
+   "weapon": "cane",
+   "encounter": "west zoneBoss",
+   "noWeapon": 93.3,
+   "withWeapon": 95.6,
+   "delta": 2.3
+  },
+  {
+   "weapon": "cane",
+   "encounter": "cyber rescue",
+   "noWeapon": 100,
+   "withWeapon": 100,
+   "delta": 0
+  },
+  {
+   "weapon": "cane",
+   "encounter": "cyber breach",
+   "noWeapon": 50.5,
+   "withWeapon": 73,
+   "delta": 22.5
+  },
+  {
+   "weapon": "trojan",
+   "encounter": "cyber final minion:1",
+   "noWeapon": 100,
+   "withWeapon": 100,
+   "delta": 0
+  },
+  {
+   "weapon": "trojan",
+   "encounter": "cyber final boss",
+   "noWeapon": 66.5,
+   "withWeapon": 91,
+   "delta": 24.5
+  }
+ ]
+}
