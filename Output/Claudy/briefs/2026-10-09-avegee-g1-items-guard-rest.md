@@ -43,3 +43,11 @@ Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด 
 3. Guard HP ต่ำ → ปุ่มพักศาลา → หยุดงาน เดินเล่นในศาลา ~60 วิ แถบเวลา → HP เต็ม กลับทำงาน · save/load กลางการพักได้
 4. `node --test tests/*.test.mjs` ผ่าน + เพิ่ม `tests/g1-items-guard-rest.test.mjs` · `node --check src/*.js`
 5. รายงาน: ทำอะไร/ไฟล์/ตัวเลข/วิธีทดสอบ
+
+---
+## ต่องาน (Toby) — 9 ต.ค. 2569 22:10
+Codex run `20261009T150157Z-7cb03085` ติด rate limit กลางทาง งานค้างยังไม่ commit อยู่ใน worktree
+`/Users/agapae/agapae-work/.codex-worktrees/20261009T150157Z-7cb03085` (branch `codex/20261009T150157Z-7cb03085`, แก้ 14 ไฟล์ + เทสต์ใหม่ `tests/g1-items-guard-rest.test.mjs`)
+**Toby ทำต่อใน worktree นั้นเลย**: อ่าน diff ว่าทำถึงไหน ตรวจว่าถูกตามใบงาน แก้/ทำส่วนที่เหลือให้ครบเกณฑ์รับงาน เล่นจริงใน Chrome แล้ว commit บน branch นั้น (ไม่ merge ไม่ push)
+ระวัง: Codex แก้เทสต์สมดุลเดิมหลายไฟล์ (`balance22`, `balance28b`, `b3-progression`, `b6-command`, `acquisitions29a`) — ตรวจว่าแก้ตามพฤติกรรมที่ตั้งใจเปลี่ยนจริง ไม่ได้หลวม assert
+รายงาน: `AGAPAE Agent/Output/Toby/2026-10-09-avegee-g1.md`
