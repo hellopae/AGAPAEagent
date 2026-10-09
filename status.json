@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T15:01:57.652Z",
+  "updatedAt": "2026-10-09T15:02:58.799Z",
   "agents": [
     {
       "id": "claudy",
@@ -72,9 +72,9 @@
       "status": "done",
       "task": "Reese fact-check frontier weapons",
       "report": {
-        "when": "19:43",
-        "title": "Fact-check AVEGEE zone events",
-        "body": "Verdict: FIX LIST. The report is at `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Reese/2026-09-29-avegee-zone-events-factcheck.md`, and the Thotsakan recommendation is at the top of it.\n\nThe three main issues:\n\n1. **`Boss-frontier1.png` must not be called Thotsakan.**\n   - Traditional Thotsakan has 10 faces, 20 arms and a green body, and the top tier of his khon mask is a \"face of a god or Brahma\", not a hermit as Minnie guessed. The image has 1 face and 4 arms, holds Vishnu's chakra, conch and mace, and has green skin and a tall crown, so it reads as Phra Narai or Phra Ram drawn as a demon.\n   - I rate that risk high. The chakra is also half of the Chakri dynasty emblem.\n   - Safest is option (2) adjusted: rename him as an invented border guardian, remove the chakra and co …"
+        "when": "22:02",
+        "title": "Reese fact-check frontier weapons",
+        "body": "Fact-check: FIX LIST (VERIFIED/UNVERIFIED ตามรายงาน Output/Reese/2026-10-09-avegee-frontier-weapons-factcheck.md)\n\nผมยังไม่ได้เปิดหัวข้อ 9 ของการ์ด Minnie จึงยืนยันไม่ได้ว่า Claudy ใส่ข้อแก้ครบและถูกต้องหรือไม่ ส่วนท้ายของข้อความที่ขอ (\"Claudy ใส่ข้อแก้ลงหัวข้อ 9 ของการ์ด Minnie แล้ว\") เป็นคำบอกของ Claudy ไม่ใช่ผลที่ผมตรวจ ผมเลยไม่ใส่ไว้ในบรรทัดข้างบน\n\nข้อที่ต้องมีในหัวข้อ 9 เพื่อให้ครบตามรายงาน:\n- ข้อ 1-2 ต้องเข้า prompt วาดโซน 1\n- ข้อ 3-8 เป็นการแก้ถ้อยคำ\n- ข้อ 21 (ชื่อวาลดริก) และข้อ 23 (ชื่ออาวุธชนชื่อเดิมใน repo) ยังตรวจไม่ครบ ต้องค้นต่อ"
       }
     },
     {
