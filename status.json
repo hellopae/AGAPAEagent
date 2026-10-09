@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T12:24:59.766Z",
+  "updatedAt": "2026-10-09T15:01:57.652Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby F1 fix Yama walk stutter",
+      "status": "working",
+      "task": "Toby G3b frontier challenge event",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
