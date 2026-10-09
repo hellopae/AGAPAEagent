@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T16:55:51.007Z",
+  "updatedAt": "2026-10-09T16:56:35.448Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale merge G1+G3b to AVEGEE",
+      "status": "working",
+      "task": "Dale merge G2 intro/cover art",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby continue G1 items/guard rest",
+      "status": "working",
+      "task": "Toby G4 items/balance/cooldown",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
