@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T07:12:13.323Z",
+  "updatedAt": "2026-10-09T07:33:45.635Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby F1 fix Yama walk stutter",
       "report": {
         "when": "15:15",
