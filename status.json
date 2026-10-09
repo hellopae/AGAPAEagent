@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T17:37:32.347Z",
+  "updatedAt": "2026-10-09T17:44:08.544Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,7 +279,7 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "working",
-      "task": "Dale merge G2b cover-v5",
+      "task": "Dale playtest+merge H3/H4",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
