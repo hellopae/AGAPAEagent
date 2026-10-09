@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-09T17:45:55.896Z",
+  "updatedAt": "2026-10-09T17:49:36.358Z",
   "entries": [
+    {
+      "id": "wl-261009-dale-fo4o",
+      "datetime": "2026-10-09T17:49:36Z",
+      "displayDate": "10 ต.ค. 2569",
+      "displayTime": "00:49",
+      "agent": "dale",
+      "agentName": "Dale",
+      "agentImg": "avatars/Dale.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Dale H5a cover video join",
+      "summary": "ส่งรายงานให้ Claudy แล้ว: ผล **PASS** และ merge เข้า main เป็น `472ff6f` (push แล้ว Pages ยืนยันแล้ว).\n\nDale แก้เพิ่ม 4 จุดจากการตรวจในเบราว์เซอร์ก่อน merge:\n- เอฟเฟกต์โดนตีและตัวเลขดาเมจไม่ขึ้นในฉากหลายศัตรู.\n- ปุ่มท้าซ้ำมุมจอกดไม่ได้จริง.\n- ปุ่มเดียวกันทับปุ่มตั้งค่าบนจอกว้าง.\n- แถบ HP ต่อตัวไม่เห"
+    },
     {
       "id": "wl-261009-dale-ay0p",
       "datetime": "2026-10-09T17:45:55Z",
