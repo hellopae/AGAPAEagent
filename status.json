@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T16:39:12.515Z",
+  "updatedAt": "2026-10-10T16:39:35.804Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale: AVEGEE intro v3 + cover-v4",
+      "status": "working",
+      "task": "Dale: review+merge toby/i1a",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
