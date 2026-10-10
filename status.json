@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T16:40:28.281Z",
+  "updatedAt": "2026-10-10T16:55:55.014Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale: review+merge toby/i1a",
       "report": {
         "when": "20:27",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby-B: AVEGEE battle fixes I1-B",
+      "status": "working",
+      "task": "Toby: visible home cover fx",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
