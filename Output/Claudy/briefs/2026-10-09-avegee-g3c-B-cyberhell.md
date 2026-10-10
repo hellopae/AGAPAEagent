@@ -1,6 +1,6 @@
 # ใบงาน G3c (Codex image): AVEGEE — วาดอาวุธรางวัลชายแดน: คัตซีน 4 + ไอคอน 4 + สไปรท์ฟันอาวุธใหม่
 
-Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด
+Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด (origin/main ≥ 9d04ffa)
 แบบงานวาดที่เคยสำเร็จ: F4 (`img/yama-sword-v4/`) และ 30F — ใช้ `prep()` ใน `scripts/prep-art.py` (ห้ามรัน main ที่เรียก make-manifest) · ลง manifest/preload ด้วยมือ
 
 ## ข้อมูลออกแบบ (แหล่งความจริง)
