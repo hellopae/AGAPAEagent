@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-10T16:39:12.515Z",
+  "updatedAt": "2026-10-10T16:40:28.281Z",
   "entries": [
+    {
+      "id": "wl-261010-toby-em4c",
+      "datetime": "2026-10-10T16:40:28Z",
+      "displayDate": "10 ต.ค. 2569",
+      "displayTime": "23:40",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby-B: AVEGEE battle fixes I1-B",
+      "summary": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไ"
+    },
     {
       "id": "wl-261010-toby-cznq",
       "datetime": "2026-10-10T16:39:12Z",
