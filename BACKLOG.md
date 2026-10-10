@@ -246,6 +246,7 @@
   **เริ่มเมื่อ Kittanate สั่งเท่านั้น** ตอนนี้แค่เตรียม checklist การตั้งโปรเจกต์ไว้
 
 ## 🎮 Toby (Game & Interactive App) — agent ใหม่ เปิดใช้ 14 ส.ค. 2569
+- [ ] P2 (phase มือถือ — คุณเป้สั่ง 10 ต.ค. 2569 "ตอนนี้เน้นบนคอมก่อน"): AVEGEE จอแนวตั้ง 390px ฉากต่อสู้ ยมทูตตัวซ้ายสุดถูกตัดขอบจอ (x≈-7) — เจอใน I1-B (`Output/Toby/2026-10-10-avegee-i1b.md`)
 
 โจทย์เต็ม: `Output/Kittanate-source/2026-08-14-cat-in-room-brief.md`
 โฟลเดอร์โปรเจกต์: `/Users/agapae/Documents/Work PAE/Claude/Cat in Room`
