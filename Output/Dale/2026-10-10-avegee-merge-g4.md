@@ -1,13 +1,17 @@
 # AVEGEE — รวม G4 (ค้าง รอ Claudy) + G3c-B สไปรท์ฟัน fang/chain · 10 ต.ค. 2569
 
-## G4: **ยังไม่ push — บล็อกด้วยเทสต์ G5 balance ล้ม** (รอ Claudy ตัดสิน)
-- รวมเสร็จแล้วบน branch local `dale/merge-g4` (commit `5e5ec14`, แตกจาก main `9f54605`) · main/origin ไม่มี G4
-- ทำแล้ว: merge `toby/g4` (ชน `src/i18n.js` ที่เดียว แก้โดยเก็บคีย์ g5.* + `Rice Ball` ของ Toby) · `WEAPONS.cane.atk` .25 → .20 ตาม Claudy · แก้ `tests/g4-items-balance.test.mjs` ตามเลข +20% · cache-bust ui.js ต่อท้าย `-g4` · `node --check` ผ่าน
-- ผลเทสต์: 632 ข้อ ผ่าน 631 · **ล้ม 1:** `G5 balance: level 3 on both trainees increases each story encounter by at most 10 percentage points` → `cyber breach: +15.5 percentage points` (baseline 52% → 67.5% ที่ระดับควบคุมไฟ 3 ทั้งสองคน) · ฉากอื่นทุกฉาก delta 0
-- สาเหตุ: G4 เพิ่ม atk ศัตรู cyber breach ×1.5 ทำให้ฉากนี้เป็น "หน้าผา" (ไม่ใช่ 100% อีกแล้ว) พอลูกไฟแรงขึ้น +15% อัตราชนะจึงขยับเกิน 10 จุด · G5 วัดบอทกล่องยาปกติ ไม่ใช่ขนาดใหญ่
-- **ต้องให้ Claudy เลือก 1 ข้อ:** (ก) ผ่อนเกณฑ์ G5 สำหรับ cyber breach เป็น ≤16 จุด เพราะฉากนี้ตั้งใจให้ 70–90% และเป็นการลงทุนฝึก 3 ระดับ × 2 คน · (ข) ลดเพดานระดับควบคุมไฟ (เช่น +3%/ระดับ = +9%) · (ค) ปรับ atk cyber breach ลงเล็กน้อย
-- พอตัดสิน: แก้ 1 จุด (ข้อ ก = `output/Codex/g5/balance.mjs` บรรทัด `row.delta <= 10`) แล้ว `git checkout main && git merge dale/merge-g4` → เทสต์ → push (ทำได้ภายในไม่กี่นาที)
-- ยังไม่ได้เล่น Chrome ของ G4 (ร้านโซน 2 / ชื่อไอเท็ม / ปุ่มพักศาลา / คูลดาวน์อาวุธ) — จะเล่นหลัง merge จริง
+## G4: **PASS — push แล้ว `8175171`** (Claudy เลือกข้อ ข)
+- merge `toby/g4` (ชน i18n ที่เดียว) + `WEAPONS.cane.atk` .25 → .20 ตาม Claudy + cache-bust ui.js ต่อท้าย `-g4` (ชน index.html กับ H5a แก้โดยเก็บทั้ง `-h5a-g4`)
+- **ควบคุมไฟ G5: +5% → +3% ต่อระดับ (สูงสุด +9%)** — ค่าคงที่ `FIRE_BONUS_PER_LEVEL = .03` ใน `src/krata-control.js` · แก้ข้อความ TH+EN (`g5.trainTip`, `g5.max`) และเทสต์ G5 (0/3/6/9%, ลูกไฟ 40 → 41/42/44 ปัดตามสูตร) · วัดซ้ำ benchmark 200 รอบ: **cyber breach 52% → 52% (เพิ่ม 0 จุด)** ทุกฉากเพิ่ม 0 จึงไม่ต้องลดเป็น 2% · ตัวเลขสุดท้ายคือ **+3% ต่อระดับ**
+- เทสต์: `node --check src/*.js` ผ่าน · `node --test tests/*.test.mjs` **635/635**
+- Pages: build `8175171` · ui.js `?v=...-h5a-g4`
+- เล่นจริง Chrome บน Pages (https://hellopae.github.io/AVEGEE/):
+  - กระเป๋า: น้ำชา / ข้าวปั้น / น้ำมนต์ / กล่องยา / กล่องยาขนาดใหญ่ / น้ำมนต์ขวดใหญ่ ชื่อเดียวทุกโซน
+  - ร้านค้า (merchantStock): ไทยไม่มีของใหญ่ · บูรพา กล่องยาใหญ่ 125 / น้ำมนต์ใหญ่ 100 · ปัจฉิม 155/115 · เครือข่าย 170/135
+  - ยมทูตไม่ใช่ Guard (ทัณฑ์) HP 23: โต๊ะนิรา มีปุ่ม "ไปพักที่ศาลาน้ำชา" (ปิดพร้อมเหตุผล "ต้องสร้างศาลาน้ำชาให้เสร็จก่อน" ระหว่างศาลายังสร้าง) → เมื่อศาลาเสร็จกดได้ → teaRest phase travel เดินไปศาลา
+  - คูลดาวน์อาวุธในศึก (ดาบไม้เท้า): พร้อมใช้ → ดูดเลือด → พัก 3 → 2 → 1 → พร้อม ตรงสเปก มีป้ายบนจอ + ตัวเลข ไม่มี exception
+- ไม่ได้เล่น: ศึกจริงใช้กล่องยาขนาดใหญ่ผ่านวงคำสั่ง · ภาษา EN ผ่านจอ · มือถือจริง
+- ย้อนกลับ: `git revert -m 1 8175171` (merge commit) แล้ว push
 
 ## G3c-B: **PASS** — push แล้ว `8e63139` (merge เหนือ origin `24b3a7d` H5a)
 - เพิ่มเฉพาะภาพ: `img/yama-sword-weapons/hero-yama-{th,asia,west,cyberhell}-sword-{fang,chain}.webp` (8 ไฟล์ 5120×640 RGBA ตรงสเปกแผ่น 8 เฟรม) + รายการ `img/manifest.json` / `img/preload-catalog.json` · ไม่เอา `output/` · ไม่รัน make-manifest
