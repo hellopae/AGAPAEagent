@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T15:26:45.343Z",
+  "updatedAt": "2026-10-10T16:39:12.515Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby-B: AVEGEE battle fixes I1-B",
       "report": {
         "when": "15:15",
