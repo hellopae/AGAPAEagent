@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T15:05:02.001Z",
+  "updatedAt": "2026-10-10T15:26:15.670Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale: AVEGEE intro v3 + cover-v4",
       "report": {
         "when": "20:27",
