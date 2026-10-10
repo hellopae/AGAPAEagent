@@ -1,0 +1,64 @@
+===== th
+ -- idle
+     ['hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)']
+ -- sword
+     ('hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)', True, 'lunge')
+     ('hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'lunge')
+     ('hero-yama-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- fire
+     ('hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-atk.png', 'matrix(1, 0, 0, 1, 0, 0)', False, 'lunge atk')
+     ('hero-yama-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- rage+after
+     ('hero-yama.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-atk.png', 'matrix(1, 0, 0, 1, 0, 0)', False, 'atk raging')
+     ('hero-yama-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+===== asia
+ -- idle
+     ['hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)']
+ -- sword
+     ('hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)', True, 'lunge')
+     ('hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'lunge')
+     ('hero-yama-asia-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- fire
+     ('hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-asia-atk.png', 'matrix(1, 0, 0, 1, 0, 0)', False, 'lunge atk')
+     ('hero-yama-asia-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- rage+after
+     ('hero-yama-asia.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-asia-atk.png', 'matrix(1, 0, 0, 1, 0, 0)', False, 'atk raging')
+     ('hero-yama-asia-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+===== west
+ -- idle
+     ['hero-yama-west.png', 'none']
+ -- sword
+     ('hero-yama-west.png', 'none', False, '')
+     ('hero-yama-west.png', 'none', True, 'lunge')
+     ('hero-yama-west.png', 'none', False, 'lunge')
+     ('hero-yama-west-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- fire
+     ('hero-yama-west.png', 'none', False, '')
+     ('hero-yama-west.png', 'none', False, 'lunge')
+     ('hero-yama-west-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- rage+after
+     ('hero-yama-west.png', 'none', False, '')
+     ('hero-yama-west-atk-R.png', 'none', False, 'atk raging')
+     ('hero-yama-west-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+===== cyberhell
+ -- idle
+     ['hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)']
+ -- sword
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', True, 'lunge')
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'lunge')
+     ('hero-yama-cyberhell-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- fire
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'lunge')
+     ('hero-yama-cyberhell-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')
+ -- rage+after
+     ('hero-yama-cyberhell.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, '')
+     ('hero-yama-cyberhell-atk-R.png', 'matrix(1, 0, 0, 1, 0, 0)', False, 'atk raging')
+     ('hero-yama-cyberhell-cry.png', 'matrix(-1, 0, 0, 1, 0, 0)', False, 'struck')

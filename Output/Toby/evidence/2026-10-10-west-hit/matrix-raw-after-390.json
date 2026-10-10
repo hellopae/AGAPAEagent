@@ -1,0 +1,298 @@
+{
+ "th": {
+  "idle": [
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)"
+   ]
+  ],
+  "sword": [
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    true,
+    "lunge"
+   ],
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "fire": [
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-atk.png",
+    "matrix(1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge atk"
+   ],
+   [
+    "hero-yama-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "rage+after": [
+   [
+    "hero-yama.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-atk.png",
+    "matrix(1, 0, 0, 1, 0, 0)",
+    false,
+    "atk raging"
+   ],
+   [
+    "hero-yama-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ]
+ },
+ "asia": {
+  "idle": [
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)"
+   ]
+  ],
+  "sword": [
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    true,
+    "lunge"
+   ],
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-asia-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "fire": [
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-asia-atk.png",
+    "matrix(1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge atk"
+   ],
+   [
+    "hero-yama-asia-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "rage+after": [
+   [
+    "hero-yama-asia.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-asia-atk.png",
+    "matrix(1, 0, 0, 1, 0, 0)",
+    false,
+    "atk raging"
+   ],
+   [
+    "hero-yama-asia-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ]
+ },
+ "west": {
+  "idle": [
+   [
+    "hero-yama-west.png",
+    "none"
+   ]
+  ],
+  "sword": [
+   [
+    "hero-yama-west.png",
+    "none",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-west.png",
+    "none",
+    true,
+    "lunge"
+   ],
+   [
+    "hero-yama-west.png",
+    "none",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-west-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "fire": [
+   [
+    "hero-yama-west.png",
+    "none",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-west.png",
+    "none",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-west-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "rage+after": [
+   [
+    "hero-yama-west.png",
+    "none",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-west-atk-R.png",
+    "none",
+    false,
+    "atk raging"
+   ],
+   [
+    "hero-yama-west-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ]
+ },
+ "cyberhell": {
+  "idle": [
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)"
+   ]
+  ],
+  "sword": [
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    true,
+    "lunge"
+   ],
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-cyberhell-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "fire": [
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "lunge"
+   ],
+   [
+    "hero-yama-cyberhell-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ],
+  "rage+after": [
+   [
+    "hero-yama-cyberhell.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    ""
+   ],
+   [
+    "hero-yama-cyberhell-atk-R.png",
+    "matrix(1, 0, 0, 1, 0, 0)",
+    false,
+    "atk raging"
+   ],
+   [
+    "hero-yama-cyberhell-cry.png",
+    "matrix(-1, 0, 0, 1, 0, 0)",
+    false,
+    "struck"
+   ]
+  ]
+ }
+}

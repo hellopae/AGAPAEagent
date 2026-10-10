@@ -1,0 +1,174 @@
+{
+ "th": {
+  "idle": {
+   "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+   "src": "img/hero-yama.png"
+  },
+  "seq": [
+   {
+    "t": 38,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama.png",
+    "cv": false,
+    "cls": ""
+   },
+   {
+    "t": 628,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama.png",
+    "cv": true,
+    "cls": "lunge"
+   },
+   {
+    "t": 1166,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama.png",
+    "cv": false,
+    "cls": "lunge"
+   },
+   {
+    "t": 2836,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cry.png",
+    "cv": false,
+    "cls": "struck"
+   },
+   {
+    "t": 3652,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama.png",
+    "cv": false,
+    "cls": ""
+   }
+  ]
+ },
+ "asia": {
+  "idle": {
+   "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+   "src": "img/Asia/hero-yama-asia.png"
+  },
+  "seq": [
+   {
+    "t": 34,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-asia.png",
+    "cv": false,
+    "cls": ""
+   },
+   {
+    "t": 617,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-asia.png",
+    "cv": true,
+    "cls": "lunge"
+   },
+   {
+    "t": 1169,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-asia.png",
+    "cv": false,
+    "cls": "lunge"
+   },
+   {
+    "t": 2870,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-asia-cry.png",
+    "cv": false,
+    "cls": "struck"
+   },
+   {
+    "t": 3634,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-asia.png",
+    "cv": false,
+    "cls": ""
+   }
+  ]
+ },
+ "west": {
+  "idle": {
+   "tr": "none",
+   "src": "img/West/hero-yama-west.png"
+  },
+  "seq": [
+   {
+    "t": 31,
+    "tr": "none",
+    "src": "hero-yama-west.png",
+    "cv": false,
+    "cls": ""
+   },
+   {
+    "t": 615,
+    "tr": "none",
+    "src": "hero-yama-west.png",
+    "cv": true,
+    "cls": "lunge"
+   },
+   {
+    "t": 1136,
+    "tr": "none",
+    "src": "hero-yama-west.png",
+    "cv": false,
+    "cls": "lunge"
+   },
+   {
+    "t": 2822,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-west-cry.png",
+    "cv": false,
+    "cls": "struck"
+   },
+   {
+    "t": 3613,
+    "tr": "none",
+    "src": "hero-yama-west.png",
+    "cv": false,
+    "cls": ""
+   }
+  ]
+ },
+ "cyberhell": {
+  "idle": {
+   "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+   "src": "img/CyberHell/hero-yama-cyberhell.png"
+  },
+  "seq": [
+   {
+    "t": 52,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cyberhell.png",
+    "cv": false,
+    "cls": ""
+   },
+   {
+    "t": 607,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cyberhell.png",
+    "cv": true,
+    "cls": "lunge"
+   },
+   {
+    "t": 1182,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cyberhell.png",
+    "cv": false,
+    "cls": "lunge"
+   },
+   {
+    "t": 2834,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cyberhell-cry.png",
+    "cv": false,
+    "cls": "struck"
+   },
+   {
+    "t": 3637,
+    "tr": "matrix(-1, 0, 0, 1, 0, 0)",
+    "src": "hero-yama-cyberhell.png",
+    "cv": false,
+    "cls": ""
+   }
+  ]
+ }
+}
