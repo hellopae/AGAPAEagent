@@ -1,0 +1,65 @@
+{
+ "1300x720": {
+  "info": {
+   "rect": [
+    0,
+    0,
+    1300,
+    720
+   ],
+   "pe": "none",
+   "btnTopIsBtn": true,
+   "canvasPx": [
+    688,
+    384
+   ]
+  },
+  "fpsNormal": {
+   "fps": 59.84142023635137,
+   "maxGapMs": 33.299999999995634
+  },
+  "fps4": {
+   "fps": 33.29854380994983,
+   "maxGapMs": 200
+  },
+  "errs": [
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ]
+ },
+ "390x844": {
+  "info": {
+   "rect": [
+    0,
+    0,
+    390,
+    844
+   ],
+   "pe": "none",
+   "btnTopIsBtn": true,
+   "canvasPx": [
+    688,
+    384
+   ]
+  },
+  "fpsNormal": {
+   "fps": 60.141744859253386,
+   "maxGapMs": 16.80000000000291
+  },
+  "fps4": {
+   "fps": 44.142953338171345,
+   "maxGapMs": 150
+  },
+  "errs": [
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()",
+   "Failed to load resource: the server responded with a status of 404 ()"
+  ]
+ }
+}
