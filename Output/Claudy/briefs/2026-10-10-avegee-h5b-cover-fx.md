@@ -25,3 +25,8 @@ Repo: `/Users/agapae/agapae-work/AVEGEE` · ฐาน = main ล่าสุด 
 1. เฟรมตัวอย่าง 3 เวลา + mask overlay ใน `output/Codex/h5b/` · พิกเซลเอฟเฟกต์นอก mask = 0
 2. `node --check src/*.js` + `node --test tests/*.test.mjs` ผ่าน + `tests/h5b-cover-fx.test.mjs`
 3. รายงาน: ทำอะไร/ไฟล์/ต้นทุน · ระบุว่ายังไม่ได้ทดสอบใน Chrome
+
+---
+## จุดต่อจาก H5a (Dale รวมเข้า main แล้ว `24b3a7d`) — สำหรับรอบรีวิว/merge
+- วาง `<canvas>` ใน `#title` หลัง `#cover-vfx` และก่อน `.scrim`
+- เริ่มเอฟเฟกต์เมื่อได้ event `avegee:cover-settled` บน `document` หรือคลาส `.cover-settled` บน `#title` (ยิงครั้งเดียวตอนวิดีโอจบ/ข้าม/ล้มเหลว/reduced-motion)
