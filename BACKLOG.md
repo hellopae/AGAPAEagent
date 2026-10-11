@@ -237,6 +237,7 @@
 - [ ] P3: รายงานยอดขาย Etsy/Gumroad เดือนแรกหลังเปิดขาย
 
 ## 🔧 Dale (DevOps) — agent ใหม่ เพิ่งเปิดใช้
+- [ ] P3 (รอเกม AVEGEE เสร็จ — คุณเป้สั่ง 11 ต.ค. 2569 "รอเกมเสร็จจริงก่อนค่อย up จะได้ไม่ต้องอัปหลายรอบ ใช้ git ไปก่อน"): อัป AVEGEE ขึ้น itch.io (บัญชี avegee มีแล้ว) — ชุดเกมฉบับย่อใต้เพดาน HTML5, Visibility Restricted ก่อน, ตั้ง butler, ติ๊กเนื้อหา 18+ · คุณเป้ล็อกอิน/กดเผยแพร่เอง
 
 - [x] P1 (งานทดสอบ agent): **Repo health check** ✅ 6 ก.ค. 2569 — ผ่าน 5/5 (.nojekyll, hook
   ไม่ crash, Pages โหลด 200, avatars ครบ 11, remote/hooks ถูกต้อง) + เพิ่ม card Dale ที่ขาดใน
