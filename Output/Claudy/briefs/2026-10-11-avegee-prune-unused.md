@@ -28,3 +28,7 @@
    รายการต้นฉบับ non-runtime, ขนาด `Exam/` `docs/` ให้คุณเป้ตัดสิน, เพดาน itch.io ที่ตรวจได้
 2. `node --test tests/*.test.mjs` ผ่านหมด (แก้เทสต์ที่อ้างไฟล์ที่ลบเฉพาะกรณีเทสต์นั้นล็อกไฟล์เก่าที่เลิกใช้แล้วจริง)
 3. สคริปต์สแกนอยู่ใน `scripts/` ใช้ซ้ำได้
+
+## หมายเหตุสำหรับ Dale (ตอน merge) — เพิ่ม 11 ต.ค.
+คุณเป้ย้าย `Exam/` (ภาพอ้างอิง) และ `files/` (1.5 GB, ไม่เคย commit) ออกไปไว้ที่ `/Users/agapae/Documents/Work PAE/Claude/AVEGEE-reference/` แล้ว
+→ ตอน merge งานนี้ให้ `git rm -r Exam` ออกจาก main ด้วย (≈39 MB, 12 ไฟล์ เกมไม่ได้ใช้) · ไฟล์ยังอยู่ครบที่ AVEGEE-reference
