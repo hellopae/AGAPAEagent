@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:44:20.401Z",
+  "updatedAt": "2026-10-11T01:50:28.514Z",
   "agents": [
     {
       "id": "claudy",
@@ -279,7 +279,7 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "working",
-      "task": "Dale: merge toby/cover-fx",
+      "task": "Dale: merge toby/west-hit",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
