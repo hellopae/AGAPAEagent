@@ -50,3 +50,6 @@ node --test tests/*.test.mjs            # 720 pass / 0 fail
 - ตะเกียงของ th วางตำแหน่งโดยประมาณจากภาพ (ตรวจด้วยตา 10 จุด ไม่ได้วัดพิกเซลต่อจุดเหมือน asia) — Kittanate ช่วยดูว่า glow ตรงตะเกียงจริงไหม
 - ไม่ได้แตะโซน west/cyberhell, ฉากในเกมอื่น, วิญญาณบนสะพาน, ลำดับอินโทร
 - ยังไม่ได้ทดสอบบน Safari/iOS จริง (ใช้แค่ canvas 2D มาตรฐาน ไม่ใช้ ctx.filter) · เครื่องที่ไม่มี GPU canvas จะช้ากว่าที่วัด (หมายเหตุด้านบน)
+
+## ผลรีวิว Dale (11 ต.ค. 2569)
+PASS — merge `b787da2` เข้า main + push แล้ว, Pages built · ลบ worktree/branch cover-fx แล้ว · ลบไฟล์ภาพ/วิดีโอหลักฐานหลัง merge (เหลือเฉพาะ .md/.json)

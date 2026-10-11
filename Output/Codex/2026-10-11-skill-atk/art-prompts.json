@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "references": {
+    "pose": "img/hero-yama-atk.png",
+    "comparison": "img/Asia/hero-yama-asia-atk.png",
+    "west": ["img/West/hero-yama-west-atk-R.png", "img/West/hero-yama-west.png"],
+    "cyberhell": ["img/CyberHell/hero-yama-cyberhell-atk-R.png", "img/CyberHell/hero-yama-cyberhell.png"]
+  },
+  "initial_prompt_specs": {
+    "shared": "512x512 RGBA genuinely transparent background. Image 1 is exact pose, pixel style, scale and foot placement reference. Costume and face from regional atk-R and standing references. Facing RIGHT: rear fist raised behind head, other arm stretched toward screen right with casting fingers, spread feet grounded on the same baseline. No sword, fireball or text. Chunky pixel outlines, limited palette, square pixel clusters. Full figure almost whole canvas height, feet baseline y=504, central body x=256, transparent margins, nothing clipped.",
+    "west": "Red-skinned chibi Yama: bronze horned helmet, green tunic with gold/red trim, fur shoulder cape, belt pouches, brown fur-trimmed boots.",
+    "cyberhell": "Red-skinned chibi Yama: charcoal purple futuristic officer outfit, angular dark peaked cap with bronze emblem, shoulder armor, long coat tails, dark pants and shoes. Both arms present, including raised rear fist."
+  },
+  "final_edit_prompts": {
+    "west": "Precise-object-edit of image 1, final game sprite. KEEP its Western horned bronze helmet, green tunic, fur cape, facial identity, pixel art, pose with rear fist raised and other hand extending RIGHT, and same head and body scale. Match image 2's exact framing: all visible subject should fit x=91 through x=420 on a 512x512 transparent canvas; top at y=2, sole baseline y=511. Narrow/shorten the flowing left fur cape so it stays within x=91, and draw legs/boots in reference 2's stance (left foot x100..143, right foot x307..365). Keep the extended casting hand within x=420. Only adjust cape flow, foot stance and arm reach to match reference margins. No flame, no sword, no background, no text. Full body remains ~510px high; do not make the character smaller. Authentic square pixel clusters, no antialias smoothing. Produce only the edited Western sprite with genuine transparent background.",
+    "cyberhell": "Precise-object-edit of image 1, final game sprite. KEEP its CyberHell dark purple officer cap with bronze emblem, charcoal/purple coat and armor, facial identity, pixel art, pose with rear fist raised and other hand extending RIGHT, and same head and body scale. Match image 2's exact framing: all visible subject should fit x=91 through x=420 on a 512x512 transparent canvas; top at y=2, sole baseline y=511. Shorten the flowing left coat tails so they stay within x=91, and draw legs/shoes in reference 2's stance (left foot x100..143, right foot x307..365). Keep the extended casting hand within x=420. Only adjust coat tail flow, foot stance and arm reach to match reference margins. No flame, no sword, no background, no text. Full body remains ~510px high; do not make the character smaller. Authentic square pixel clusters, no antialias smoothing. Produce only the edited CyberHell sprite with genuine transparent background."
+  }
+}
