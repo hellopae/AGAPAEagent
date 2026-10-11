@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T01:50:28.514Z",
+  "updatedAt": "2026-10-11T02:10:11.668Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale: merge toby/west-hit",
       "report": {
         "when": "20:27",
