@@ -1,0 +1,114 @@
+[
+  {
+    "stage": "before",
+    "zone": "th",
+    "floorCorridorDiameter": 18.8,
+    "heroWidth": 34.63529411764706,
+    "required": 69.27058823529411,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "before",
+    "zone": "asia",
+    "floorCorridorDiameter": 11.9,
+    "heroWidth": 37.41538461538461,
+    "required": 74.83076923076922,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "before",
+    "zone": "west",
+    "floorCorridorDiameter": 9.9,
+    "heroWidth": 42.26534653465347,
+    "required": 84.53069306930693,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "before",
+    "zone": "cyberhell",
+    "floorCorridorDiameter": 23.9,
+    "heroWidth": 38.13597359735973,
+    "required": 76.27194719471946,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "after",
+    "zone": "th",
+    "floorCorridorDiameter": 50.9,
+    "heroWidth": 34.63529411764706,
+    "required": 69.27058823529411,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "after",
+    "zone": "asia",
+    "floorCorridorDiameter": 45.9,
+    "heroWidth": 37.41538461538461,
+    "required": 74.83076923076922,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "after",
+    "zone": "west",
+    "floorCorridorDiameter": 44.4,
+    "heroWidth": 42.26534653465347,
+    "required": 84.53069306930693,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  },
+  {
+    "stage": "after",
+    "zone": "cyberhell",
+    "floorCorridorDiameter": 58.2,
+    "heroWidth": 38.13597359735973,
+    "required": 76.27194719471946,
+    "roi": [
+      1340,
+      500,
+      1450,
+      640
+    ],
+    "method": "largest connected inscribed-disk diameter, 1px floor grid, service holes excluded; no NPCs (upper bound)"
+  }
+]

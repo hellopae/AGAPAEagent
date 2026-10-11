@@ -1,0 +1,11 @@
+file:///Users/agapae/agapae-work/.codex-worktrees/20261011T091552Z-42cb60c8/src/i18n.js:10
+if (typeof document !== 'undefined') document.documentElement.lang = lang === 'en' ? 'en' : 'th';
+                                                                   ^
+
+TypeError: Cannot set properties of undefined (setting 'lang')
+    at file:///Users/agapae/agapae-work/.codex-worktrees/20261011T091552Z-42cb60c8/src/i18n.js:10:68
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at async node:internal/modules/esm/loader:650:26
+    at async file:///Users/agapae/agapae-work/.codex-worktrees/20261011T091552Z-42cb60c8/scripts/check-image-archive.mjs:15:20
+
+Node.js v26.7.0

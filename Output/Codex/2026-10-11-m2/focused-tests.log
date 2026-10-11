@@ -1,0 +1,84 @@
+(node:20453) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30F: CyberHell translations move hits and worker/service points together and restore on every branch change (4.709405ms)
+✔ 30F: selected story image is 16:9; both regional sprites have alpha, accurate manifest bounds and sizes (240.731645ms)
+✔ 30F: real alpha footprints and lava mask allow paths to every station with all buildings present; old saves restore (2539.168855ms)
+✔ 30F review: new Rage image is full-bleed, so the old letterbox crop is gone from cutscene-presentation (2.135736ms)
+✔ themed sprites keep every zone station reachable with the original terrain mask (5936.731118ms)
+(node:20454) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Arrival matrix: 160 walked, 0 recovered at timeout
+✔ all stations in all four zones: both builders arrive for build and repair among other buildings (15133.99544ms)
+✔ blocked definition point plus mob: build and repair reach a walkable visible work point (596.812376ms)
+✔ disconnected route recovers after 30 active seconds, preserving elapsed time on reload and pause (1368.650303ms)
+✔ escort suspends arrival, then releases the worker; battle help keeps the job owner (49.587308ms)
+✔ two builds approach concurrently and retain each owner and build-work render state (555.072302ms)
+✔ M2: Thai lan worker reaches the land site without bounded recovery (53.168518ms)
+✔ E1: one final flip table toggles exactly the eight requested rendered orientations (5.186729ms)
+✔ E1: CyberHell tower moves right, scales 1.3, updates service/hit, and restores outside zone 4 (1.825081ms)
+(node:20456) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ M2: every zone has an exact door route from both spawns; 1px stepTo samples stay on terrain and outside blocks (3658.257429ms)
+✖ M2: map-v5 dimensions shrink 20%, preserve the base, scale H2 bands, and follow the roof button (340.726323ms)
+(node:20457) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ทุกโซนใช้ผังและพิกัดเดียวกัน และประตูย้ายโซนทำงาน (87.678331ms)
+✔ ภาพจริงกันธารโซน 2–4 และให้เดินข้ามสะพานถึงจุดงาน (844.860265ms)
+✔ ยักษ์เดินกลับจุดเฝ้าจากท่าเรือและขอบล่างในทุกโซน แล้วหยุดนิ่ง (2351.37861ms)
+✔ spawnMob เลือกเฉพาะจุดขอบล่างที่ findPath เชื่อมถึงจุดเฝ้า ทุกโซน (2608.512064ms)
+✔ ยักษ์ปราบปีศาจจากท่าเรือขวาแล้วกลับจุดเฝ้าในโซนไทยและบูรพา (243.342411ms)
+✔ ยักษ์ snap จุดแวะขณะไล่ปีศาจที่เฟรม 16ms แล้วเดินถึงเป้าหมาย (79.385888ms)
+✔ เซฟผังเก่าโซน 2–4 ย้ายผู้เล่น ของตก ยมทูต และยักษ์ครั้งเดียว (12.130248ms)
+✔ เซฟที่ยักษ์ยืนจุดเฝ้าเก่าย้ายมาจุดใหม่ทุกโซน (1.833418ms)
+✔ skill atk: new sprites decode as 512x512 RGBA with transparent corners (180.159194ms)
+✔ skill atk: manifest, catalog and preload tier cover all four outfits (14.877044ms)
+✔ skill atk: real artUrl and heroAtk select the outfit pose and face right during a non-sword skill (23.762454ms)
+✔ skill atk: cache versions retain their previous tokens and append skillatk (6.20947ms)
+✔ west-hit: ท่าโดนตี (cry) หันขวาทุกชุด รวมชุดปัจฉิม — cry ทุกชุดวาดหันซ้าย ต้องถูกพลิก (ไม่ใช่ face-native) (2.919781ms)
+✔ west-hit: ท่ายืนและท่า atk/rage หันขวาทุกชุด (ท่ายืน+ท่าฟาด มี/ไม่มี .atk ตามที่ ui.js ใช้จริง) (0.658686ms)
+✔ west-hit: สกิลที่ยังไม่มีท่า atk ของชุดนั้น (ถอยไปโชว์ท่ายืน) ห้ามได้ .atk — ไม่งั้นโซน 4 หันซ้าย (0.387879ms)
+✔ west-hit: arena() — ท่าโดนตีไม่เคยได้ .atk และส่ง standing ให้ figYouAtkClass · CSS ยังผูก .atk กับการยกเลิกพลิกเท่านั้น (7.663077ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 29
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18040.276911
+
+✖ failing tests:
+
+test at tests/m2-map-access.test.mjs:7:1
+✖ M2: every zone has an exact door route from both spawns; 1px stepTo samples stay on terrain and outside blocks (3658.257429ms)
+  AssertionError [ERR_ASSERTION]: th/sala: no slide/recovery
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/20261011T091922Z-d0a3707a/tests/m2-map-access.test.mjs:21:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/m2-map-access.test.mjs:29:1
+✖ M2: map-v5 dimensions shrink 20%, preserve the base, scale H2 bands, and follow the roof button (340.726323ms)
+  AssertionError [ERR_ASSERTION]: th/sala: band
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/20261011T091922Z-d0a3707a/tests/m2-map-access.test.mjs:43:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

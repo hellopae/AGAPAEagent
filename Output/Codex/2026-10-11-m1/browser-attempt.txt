@@ -1,0 +1,4 @@
+2026-10-11 M1 browser verification
+Local Playwright launches of Chrome and Chromium headless shell exited with SIGABRT in the restricted shell. No screenshot or performance evidence was produced.
+The connected browser rejected http://127.0.0.1:8765 with: "The user declined permission for this action." No alternate browser access was attempted after that rejection.
+The local verification server was stopped.

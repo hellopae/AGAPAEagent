@@ -1,0 +1,6 @@
+Resolver selections unchanged: 7968
+Moved files retain SHA-256: 25
+Deleted files absent: 59
+Catalog/manifest entries point to existing assets: 1241
+Changed Python scripts parse successfully; no image export/conversion scripts executed
+Physical runtime after: {'files': 812, 'bytes': 524922458}

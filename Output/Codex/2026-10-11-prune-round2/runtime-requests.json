@@ -1,0 +1,10 @@
+{
+  "status": "unavailable",
+  "reason": "Playwright headless Chromium/Chrome could not launch (SIGABRT/EPERM); see browser-attempt.log",
+  "routesCompleted": [],
+  "requestCount": null,
+  "imgRequestCount": null,
+  "audioRequestCount": null,
+  "deletedIntersectionCount": null,
+  "requests": null
+}
