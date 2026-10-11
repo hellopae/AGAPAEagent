@@ -1,0 +1,2 @@
+GIF: (1600, 900), 50 frames, 5000 ms
+Canvas engine capture; no Home UI/browser RAF.

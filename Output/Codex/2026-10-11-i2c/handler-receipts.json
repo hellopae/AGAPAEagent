@@ -1,0 +1,227 @@
+[
+  {
+    "surface": "event-alert",
+    "action": "before",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 0,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 7,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "event-alert",
+    "action": "click tea",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "event-alert",
+    "action": "click health",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "event-alert",
+    "action": "click holyWater",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 4
+      }
+    }
+  },
+  {
+    "surface": "event-alert",
+    "action": "click fill",
+    "state": {
+      "hp": 140,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 2,
+        "holyWater": 4
+      }
+    }
+  },
+  {
+    "surface": "boss-prep",
+    "action": "before",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 0,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 7,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "boss-prep",
+    "action": "click tea",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "boss-prep",
+    "action": "click health",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "boss-prep",
+    "action": "click holyWater",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 4
+      }
+    }
+  },
+  {
+    "surface": "boss-prep",
+    "action": "click fill",
+    "state": {
+      "hp": 140,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 2,
+        "holyWater": 4
+      }
+    }
+  },
+  {
+    "surface": "frontier-rest",
+    "action": "before",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 0,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 7,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "frontier-rest",
+    "action": "click tea",
+    "state": {
+      "hp": 10,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 4,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "frontier-rest",
+    "action": "click health",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 22,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 5
+      }
+    }
+  },
+  {
+    "surface": "frontier-rest",
+    "action": "click holyWater",
+    "state": {
+      "hp": 101,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 3,
+        "holyWater": 4
+      }
+    }
+  },
+  {
+    "surface": "frontier-rest",
+    "action": "click fill",
+    "state": {
+      "hp": 140,
+      "hpMax": 140,
+      "mp": 69,
+      "mpMax": 72,
+      "inventory": {
+        "tea": 6,
+        "health": 2,
+        "holyWater": 4
+      }
+    }
+  }
+]

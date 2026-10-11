@@ -1,0 +1,13 @@
+{
+  "backend": "@napi-rs/canvas (Skia), not browser RAF",
+  "layers": {
+    "river": true,
+    "fall": true,
+    "flames": 7,
+    "volcano": true,
+    "soul": true
+  },
+  "median": 242.51310699999885,
+  "p95": 251.44362900000124,
+  "mean": 242.45840314999987
+}
