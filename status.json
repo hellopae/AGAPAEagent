@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T11:33:53.018Z",
+  "updatedAt": "2026-10-14T17:35:43.262Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby: west hit pose flip",
+      "status": "working",
+      "task": "Toby: capture AVEGEE shore shots",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
