@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T18:09:53.448Z",
+  "updatedAt": "2026-10-14T18:10:16.046Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind rewrite cover video prompt",
+      "status": "working",
+      "task": "Mind: ART-02C report + prompts",
       "report": {
         "when": "22:28",
         "title": "AVEGEE event art prompts",
