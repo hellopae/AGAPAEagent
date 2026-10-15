@@ -7,11 +7,13 @@
 | K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | Dale PASS (stack a30b7e9 รวม L4a/L4b) → **รอคุณเป้ push** |
 | L1 แผนที่ไม่ลอย: มาสก์เคลียร์พื้น + เงา + ย่อตัวละคร | Toby | `2026-10-15-avegee-l1-map-depth.md` | — | Toby เสร็จ `toby/l1-depth` b278303 (+นิราบนแท่น) → รอ Dale |
 | L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | `2026-10-15-avegee-l1b-map-clear.md` | L1 ขั้น 1 (มาสก์เสร็จ 14:19) | Codex rate_limited ถึง 23:55 → รันใหม่ 23:57 |
-| L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | กำลังรัน |
+| L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | Toby เสร็จ `toby/l2-ui` fe1e9ad → รอ Dale |
 | L3 ปุ่มยมทูตพักศาลาน้ำชา + สะกดจิตเป็นรางวัลบอสชายแดนโซน 3 | Toby | `2026-10-15-avegee-l3-crew-rest-hypno.md` | — | Toby เสร็จ `toby/l3-crew-hypno` 7023140 (ริบสะกดจิตเซฟเก่าตามคุณเป้) → รอ Dale (หลัง K1e/L4) |
 | L4a ดาบหน้าแท่น ป่าดาบอสิปัตตะ | Codex | `2026-10-15-avegee-l4a-asipatta-swords.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
 | L4b ไอคอนชุดประจำโซน ร้านพ่อค้า | Codex | `2026-10-15-avegee-l4b-outfit-icons.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
 | L5 ศัตรูระหว่างทางขยายชายแดน/ย้ายโซน เดินเข้าหา→ตัดเข้าศึกเอง | Toby | `2026-10-15-avegee-l5-auto-encounter.md` | ใช้หนีจาก L2 | กำลังรัน |
+| L2b ไอคอนโล่ป้องกัน `img/ui/icon-defend-shield.png` 128×128 | Codex | (เขียนเมื่อ Codex ว่าง) | L2 merge | รอ (ตอนนี้ใช้โล่วาดด้วยโค้ด) |
+| L2c ตรวจข้อความไทยใหม่ (หน้าต่างหนี/ตั้งรับ/เหตุผลหนีไม่ได้) | Rae | (สั้น) | L2 merge | รอ |
 | ART-02C ตรวจชายฝั่ง/ท่าเรือ บนแผนที่ใหม่ | Toby→Mind | (เขียนใหม่) | L1+L1b merge | พัก (คุณเป้ให้ทำหลังแผนที่เสร็จ) |
 
 ลำดับ merge (Dale): K1e → L1 → L1b → L2 → L3 → L4a → L4b (ใครเสร็จก่อนเข้าก่อนได้ ถ้าไม่ชนไฟล์) · ชนกันที่ cache-bust/`index.html` ให้ rebase
