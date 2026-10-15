@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T07:15:55.530Z",
+  "updatedAt": "2026-10-15T07:53:52.494Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale reviews and merges K5",
+      "status": "working",
+      "task": "Dale merges K1e, L4a, L4b",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby L3 crew rest + hypnosis",
       "report": {
         "when": "15:15",
@@ -386,4 +386,3 @@
     }
   ]
 }
-
