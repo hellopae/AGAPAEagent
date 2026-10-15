@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T16:00:13.933Z",
+  "updatedAt": "2026-10-15T16:10:11.609Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby L5 auto encounter",
       "report": {
         "when": "15:15",
