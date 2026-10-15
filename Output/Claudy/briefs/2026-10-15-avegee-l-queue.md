@@ -4,8 +4,8 @@
 
 | งาน | เจ้าของ | ใบงาน | ขึ้นกับ | สถานะ |
 |---|---|---|---|---|
-| K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | Codex เสร็จ → Dale รีวิว (`k1e-review`) |
-| L1 แผนที่ไม่ลอย: มาสก์เคลียร์พื้น + เงา + ย่อตัวละคร | Toby | `2026-10-15-avegee-l1-map-depth.md` | — | กำลังรัน |
+| K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | Dale PASS (stack a30b7e9 รวม L4a/L4b) → **รอคุณเป้ push** |
+| L1 แผนที่ไม่ลอย: มาสก์เคลียร์พื้น + เงา + ย่อตัวละคร | Toby | `2026-10-15-avegee-l1-map-depth.md` | — | Toby เสร็จ `toby/l1-depth` b278303 (+นิราบนแท่น) → รอ Dale |
 | L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | `2026-10-15-avegee-l1b-map-clear.md` | L1 ขั้น 1 (มาสก์เสร็จ 14:19) | Codex rate_limited ถึง 23:55 → รันใหม่ 23:57 |
 | L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | กำลังรัน |
 | L3 ปุ่มยมทูตพักศาลาน้ำชา + สะกดจิตเป็นรางวัลบอสชายแดนโซน 3 | Toby | `2026-10-15-avegee-l3-crew-rest-hypno.md` | — | Toby เสร็จ `toby/l3-crew-hypno` 7023140 (ริบสะกดจิตเซฟเก่าตามคุณเป้) → รอ Dale (หลัง K1e/L4) |
@@ -20,3 +20,5 @@
 **15 ต.ค. 14:45** Codex rate_limited ถึง 18:21 → claude-only · L1b รอ Codex
 
 **15 ต.ค. 22:45** Claude limit reset 22:40 · Codex app push animation ยม (acc9c43) + แสงนรกโซน 1/เสาไฟไทย/แสงคบไฟ (69ed45e, 8f82178 — แตะ town-lighting/scenery/terrain/layout) → ทุกสายต้อง rebase บน 8f82178 · K1e คบไฟอาจซ้ำกับเสาไฟไทยของ Codex — Dale ตัดสินจากภาพ
+
+**15 ต.ค. ~23:30** push AVEGEE main ถูก classifier ปฏิเสธ → คุณเป้ต้อง push `a30b7e9` เอง · เทสต์บน main 8f82178 แดง 10 ข้อจากงาน Codex app → โน้ต `2026-10-15-avegee-codex-app-test-failures.md` ให้ Codex app ตรวจ

@@ -1,0 +1,1689 @@
+(node:17210) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30A: every story page puts caption and controls after the image; navigation finishes once (29.366618ms)
+✔ 30A: back navigation retains the separate caption (0.903622ms)
+✔ 30A: zones 2–4 choose real arrival scenes even with a loaded boss profile; zone 1 keeps resolver behavior (3.647981ms)
+✔ 30A: opening intro and both regional arrival pages keep text below the frame (6.992088ms)
+✔ 30A: crop geometry removes letterbox rows without horizontal cropping in the story frame (95.306411ms)
+✔ 30A: crop updates cached, newly loaded and fallback images; thumbnail stays square (1.288579ms)
+✔ 30A: ending popup uses a clipped cover thumbnail, with crop preparation (2.757477ms)
+✔ 30A: only the two requested action sources opt out of mirroring; runtime adds right-facing class (5.67345ms)
+(node:17213) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30B-2: spriteKey ตัด path/นามสกุล/-v2/query (4.790742ms)
+✔ 30B-2: ทีมโซน 3 หันขวามาแล้ว; เทอร์โบโซน 4 ต้องพลิกตามภาพจริง J1 (1.777675ms)
+✔ 30B-2: ศัตรูที่วาดหันขวา (กากิ) ถูกพลิก ตัวอื่นแสดงตามต้นฉบับ (0.961677ms)
+✔ 30B-2: mirrorBox สลับขอบซ้ายตามการพลิก และพลิกซ้ำคืนค่าเดิม (3.162801ms)
+✔ 30B-4: ท่า Rage ของทุกชุดชี้ไฟล์ที่มีจริง (โซน 3-4 ใช้ atk-R ที่หันขวา) (1.853934ms)
+✔ 30B-4: Rage ยังเพิ่มดาเมจ 3 ครั้งเหมือนเดิม และตัวมันเองไม่ทำดาเมจ (89.371628ms)
+✔ 30B-4: ui.js — Rage แสดงฝั่งเรา ไม่ขึ้นที่ศัตรู และไม่ทำให้ศัตรูสะดุ้ง (5.44638ms)
+✔ 30B-5: regenMp เติมเป็นจำนวนเต็ม ไม่เกิน mpMax และเก็บเศษข้ามเฟรม (1.003425ms)
+✔ 30B-5: เซฟเก่าที่ MP เป็นทศนิยมโหลดแล้วเป็นจำนวนเต็ม + ui ปัดตัวเลขทุกจุด (95.918023ms)
+✔ 30B-6/7: ปุ่ม "รับรางวัล" / "ฟังคำตัดสิน" มี TH+EN และไม่มีข้อความเก่าเหลือ (6.448819ms)
+✔ 30B-7: โปรไฟล์หัวหน้าโซน 3 ต่อโค้ดไว้ มีไฟล์เมื่อไหร่ใช้เมื่อนั้น ไม่มีก็ใช้ภาพเดิม (29.832322ms)
+✔ 30B-8: หัวใจสำรองไม่ใช้ภาพกล่องยาแล้ว (ชี้ item-heart + glyph ❤️) และยังชุบชีวิตเหมือนเดิม (0.777492ms)
+✔ 30B-9: โค้ดเรืองแสงเติมบารมีของบุญ — เฉพาะ crew:boon, 0.6–1 วิ, เคารพ reduced-motion (14.606978ms)
+✔ 30B-9: บุญเติมบารมีจริงตามเดิม (ตัวเลขสมดุลไม่ถูกแตะ) (5.586943ms)
+✔ 30B-10: คัตซีนยมทูต เต็มกรอบเมื่อจอกว้าง · แถบดำหายไป · จอแนวตั้งถอยไป contain ไม่ตัดหน้าตัวละคร (0.803529ms)
+(node:17214) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ pause is idempotent and restores map after one resume (23.624735ms)
+✔ pause is idempotent and restores battle after one resume (31.382019ms)
+✔ pause is idempotent and restores popup after one resume (7.429738ms)
+✔ pause is idempotent and restores cutscene after one resume (4.35227ms)
+✔ stale native close event cannot consume new dialog close handler (16.101177ms)
+✔ all new zones clear previous bridge and walk commands; first souls are new (682.121358ms)
+✔ delayed returns stay in original zone, including legacy saves (89.106019ms)
+✔ a soul actually punished in its branch can still return (349.652295ms)
+✔ voice fraud uses existing kong category and generates contradictory claim (4.797608ms)
+(node:17217) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 1. น้ำสองข้างสะพาน/เกาะหน้าประตูชายแดนเหยียบไม่ได้ · สะพาน เกาะ ประตู จุดเฝ้ายักษ์ยังเดินได้ (16.848661ms)
+✔ 1. คลิกในน้ำข้างประตู → ไปยืนบนเกาะที่ใกล้ที่สุด ไม่ลงน้ำ (146.470237ms)
+✔ 2. กล่องอาคารที่ส่งเข้า setBlocks กันเดินทับทั้งหลัง แต่ช่องประจำของผู้คุม (holes) ยังเดินเข้าถึงได้ (133.115933ms)
+✔ 2. วงรอบตัวละครที่ยืนอยู่: เส้นทางของยมบาทอ้อมวง · ก้าวทับไม่ได้ · ตัวละครอื่น (ไม่ avoid) ไม่เห็นวง (242.407058ms)
+✔ 2. ยมบาทที่ถูกยมทูตเดินมายืนทับ ออกจากวงได้ทุกทิศ (ไม่ติดค้าง) (23.333942ms)
+✔ 2. standPoints รวมทุกตัวที่ยืนบนแผนที่: ยมทูต พ่อค้า ยักษ์ บอสที่ท่าเรือ ผู้ท้าทายที่รอ · ข้ามตัวที่ถูกพาไปกับวิญญาณ (6.139973ms)
+✔ 2. ฉากชายแดน: เส้นทางอ้อมศัตรูที่ยืนอยู่ · คลิกบนตัวศัตรู → ไปจุดใกล้ที่สุดนอกวง (5364.651737ms)
+✔ 3. ปุ่มของอาคารอยู่บนหลังคา (F2 ข้อ 8: ลงมา 27% ของความสูงตัวอาคาร) ไม่ขึ้นกับ bw · x = กึ่งกลางตัวอาคาร · รูปยังไม่มา = สูตรเดิม (5.692901ms)
+✔ 3. mapInteractions ส่งตำแหน่งปุ่มของสถานีผ่าน stationButtonPos (ไม่มีภาพใน node → สูตรเดิม anchor center) (4.387231ms)
+✔ 4. ฉากชายแดน: ไม่มีแถบกลับโซนถาวร เหลือปุ่ม #frw-gate ปุ่มเดียว สีทอง (token --gold) และปุ่มโผล่เฉพาะตอนเข้าใกล้ทางออก (21.570283ms)
+✔ 5. ป้ายอีเวนต์ชายแดนโซน 2-4 เลือกรูปบอสปีศาจท้ายระลอก · อีเวนต์ kind ใช้รูป mob ของ kind นั้น ไม่ตกไป spirit7 (4.455588ms)
+✔ 6. ความสูงตัวจริงของยมทูตทุกตัวทุกโซน (ท่าเดิน) อยู่ใน ±15% ของกันและกัน · ซิสอ็อปโซน 4 ไม่เตี้ยกว่าเพื่อน (1.176316ms)
+✔ 6. ท่ายืน: ขยายเฉพาะทัณฑ์โซน 4 (ทุกท่า) ให้ 0.871 × fit ≈ 1 · โซนอื่น/ตัวอื่นไม่เปลี่ยน (0.691239ms)
+✔ E1 supersedes 30D orientations; zone round trips restore geometry (14.440553ms)
+(node:17218) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30E: regional prison row stays on the landing, separated from Nira and the guard at both requested sizes (43.180335ms)
+✔ 30E: long Thai/English names fit without splitting combining marks; short names stay intact (151.517119ms)
+✔ 30E: real manifest resolves every popup to its own zone image and anchors, including fallback (82.306281ms)
+✔ 30E: renderer uses bounded nameplates for both occupied and waiting prison slots (1020.506398ms)
+✔ 30E: all new popup strings are present in Thai and English (2.468041ms)
+(node:17219) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30F: CyberHell translations move hits and worker/service points together and restore on every branch change (51.330024ms)
+✔ 30F: selected story image is 16:9; selected regional map sprites have alpha and are registered (1176.070865ms)
+✔ 30F: real alpha footprints and lava mask allow paths to every station with all buildings present; old saves restore (9483.480338ms)
+✔ 30F review: new Rage image is full-bleed, so the old letterbox crop is gone from cutscene-presentation (35.736278ms)
+✔ themed sprites keep every zone station reachable with its terrain or town street layout (24181.284468ms)
+(node:17221) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ roar points to an unexamined evidence claim in every authored case, without RNG (46.395692ms)
+✔ discovery queue covers pickups, shops, levels, abilities and survives save; legacy saves seed owned items (126.316972ms)
+✔ discovery modal waits for reward and existing dialogs, shows one entry, and acknowledges only on close (36.166924ms)
+✔ all item icons have files or usable error fallback; sword shares the helper and lotus name has no duplicated emoji (18.742535ms)
+✔ outfit cards use the same ownership rule as equipping, show a visible lock reason and enable owned outfits (11.370248ms)
+✔ ordinary close dispatch preserves reward and level priority before explanations (9.951819ms)
+✔ roar handles generated cases and exhausted interrogation attempts without inventing evidence (293.660272ms)
+(node:17223) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ นิราตรวจหลังครบวาระ แล้วบุญแยกเกิดใหม่กับขึ้นสวรรค์ (561.285039ms)
+✔ คนไม่เข็ดกลับคิว และผลตรวจไม่สุ่มซ้ำ (114.102947ms)
+✔ ประตูสวรรค์ปฏิเสธคนที่ส่งผิด และตะรางรอสร้างประตูให้เสร็จ (140.900136ms)
+✔ ครบวาระทัณฑ์เข้าตะราง ส่วนดวงบริสุทธิ์รอบุญที่ประตู (480.917087ms)
+✔ เดินตามทางจากสถานีไปตะราง แล้วตะรางไปประตู ก่อนเปลี่ยนรายชื่อ (659.695438ms)
+✔ เส้นทางคำนวณจากตำแหน่งสถานีปัจจุบันทุกโซน (968.853627ms)
+✔ เซฟระหว่างเดินแล้วโหลดส่งถึงปลายทางหนึ่งครั้ง; เซฟเก่ายังโหลดได้ (297.124147ms)
+✔ ไมเกรตเซฟเก่า: bossArriveSeen ที่ติดธงมาก่อนแพตช์ต้องรีเซ็ตเฉพาะโซนที่ยังไม่ชนะบอส (32.312534ms)
+(node:17225) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ice deals immediate damage to all living foes and suppresses exactly one counter turn (93.347203ms)
+✔ wind damages every foe once, charges MP once, and does not freeze them (5.904037ms)
+✔ hypnosis makes every foe attack a different foe in the same enemy phase (30.439163ms)
+✔ area kills finish battle; hypnosis handles simultaneous kills and a single survivor (32.722985ms)
+(node:17226) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 28D revisions and MP icon exist and are preloaded by their consumers (5.384148ms)
+✔ ruler lookup selects v2 in both zones, with an old-manifest fallback (113.547641ms)
+✔ prep-art preserves story letterboxing, revision names and real asset formats (1440.859313ms)
+✔ zone bundle covers rooms, intro and chosen outfit without downloading every branch (35.321167ms)
+✔ bounded concurrency, retries, failed URLs retried on next run, successes reused (32.674042ms)
+✔ image gate waits for decoding and rejects missing/stalled images (10.438674ms)
+✔ zone transition pauses before opening arrival and repeated change events do not duplicate loading (14.838574ms)
+✔ image cache name follows catalog version and older avegee-images caches are deleted (3.365024ms)
+✔ เข้า-ออกฉากต่อสู้ซ้ำ 10 ครั้ง: 1 AudioContext, <audio> ต่อเพลงตัวเดียว, ไม่สลับ src, ไม่ซ้อนเกินสองเพลง, ผลรวมไม่เกิน bgm (32.924304ms)
+✔ crossfade มี fade จริง: ไม่มีขั้นความดังกระโดดเกินหนึ่งก้าวของ ticker (3.914605ms)
+✔ สลับรัวในมิลลิวินาทีเดียวกัน 40 ครั้ง: ไม่ซ้อน ไม่เกิน bgm ไม่ขว้าง RangeError (1.933312ms)
+✔ ค่า bgm เสียหายใน localStorage (เกิน 1 / NaN) ไม่ทำให้พัง (35.175287ms)
+✔ ปิดเสียง (AUDIO.on=false): เพลงความดัง 0 ทุก element (0.532683ms)
+✔ ทุกท่าไม้ตายในฉากต่อสู้และพลังในวงไต่สวนมีเสียงของตัวเองที่มีจริงในตาราง (1.190077ms)
+✔ เสียงใหม่ทุกเสียงดังขึ้นจริง สั้นไม่เกิน ~1 วิ และผลรวมชั้นที่ซ้อนกันไม่เกิน 0.8 (ไม่กลบเพลง/ไม่ล้น) (17.236888ms)
+✔ ปิดเสียง effect แล้วเงียบ: AUDIO.on=false หรือสไลเดอร์ sfx=0 ไม่สร้างโหนดเสียงเลย (3.414725ms)
+✔ preloading downloads whole music once, reuses track, and does not autoplay (5.227264ms)
+(node:17231) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B1 IDs are unique across all kinds/zones; Nira has one global identity (60.374293ms)
+✔ B1 actual v3 branch topology loads all owned actors and preserves every value (131.085742ms)
+✔ B1 migration is idempotent including zero morale, entry snapshots and invalid team keys (144.993323ms)
+✔ B1 dormant actors share roster state; moveZone round trip preserves stats and ownership (138.870074ms)
+✔ B1 backup precedes migration, remains unchanged on repeat, and failed backup stops restore (32.930804ms)
+✔ B1 new hires and guards get IDs immediately; normal party remains limited to two (3.709985ms)
+✔ B1 migration supplies missing hunger, keeps guard morale/training/CD and supports v2 (78.45668ms)
+(node:17232) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B2 Nira selects six IDs across zones, duplicate kinds, no truncation; Guard is separate (199.79637ms)
+✔ B2 zero morale, resting and locked branches cannot join; removal remains possible (65.866484ms)
+✔ B2 map rests apply ID team edits and keep six into the next encounter (77.608847ms)
+✔ B2 normal fights and frontier retain two local helpers despite final selection (31.622536ms)
+✔ B2 helper morale, cooldown and trained damage belong to the source ID after battle/save (86.420577ms)
+✔ B2 art uses source zone for both standee/profile and keeps default lookup (103.764981ms)
+✔ B2 returning to a repair branch keeps its original builder even when sv aliases actor (77.031215ms)
+(node:17233) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ four minion waves pay coin and an item exactly once; wave 4 reward precedes cutscene then map (334.452562ms)
+✔ fixed ruler order, individual persisted wins, boss gate, ending only after boss (153.395201ms)
+✔ defeat and reload retry the same ruler without clearing earlier victories (33.715174ms)
+✔ active encounter round trips turn, targets, foes, HP, status and one-use flags (13.169554ms)
+✔ confusion victory also records a single receipt (4.025361ms)
+✔ map preparation remains accessible between every fight and management is suspended (950.476612ms)
+✔ legacy migration is idempotent and keeps the closest explicit Wave x/8 progress without retroactive loot (27.115748ms)
+✔ failed storage blocks acknowledgement and the next encounter; retry does not double pay (5.210614ms)
+✔ map boss stands with the zone-boss standee art, not the battle-only sprite key (38.960539ms)
+✔ B3 battle helper buttons, cooldown title and final-team cards pass the actor object to crewAbility (30.335127ms)
+(node:17249) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B3 zone tables and actual damage/heal match the displayed ability at every training level (530.973735ms)
+✔ B3 paid discipline/intelligence/mercy upgrades do not add attack; strength does (3.674167ms)
+✔ B3 training follows roster IDs and home zone, with shared Yama/Nira and EXP-derived caps (29.19856ms)
+✔ B3 Yama training scales only normal attack, before critical, leaving MP powers unchanged (24.359723ms)
+✔ B3 Kan scales enemy self damage but player hypnosis resets the source multiplier (11.333859ms)
+✔ B3 medicine price/effect table and all three use paths agree for every zone item (308.950497ms)
+✔ B3 medicines retain old-zone effects, cap gains, and do not consume when full or preparation is closed (4.7156ms)
+✔ B3 legacy upLv migration keeps active/dormant crew and Guard bonuses across repeated save/load (54.91671ms)
+✔ B3 all eight training stations are declared without wiring training into minigames (3.467687ms)
+✔ B3 Nira order and active registry recovery use shared training; construction and recovery disable it (18.382011ms)
+(node:17250) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ I2-C: both surfaces share icon markup; empty base items and owned higher tiers remain visible (31.060989ms)
+✔ I2-C: bag clicks consume once, fill caps HP using existing item rates, and exhausted/full actions do nothing (70.797679ms)
+✔ I2-C: prep clicks consume once, fill caps HP using existing item rates, and exhausted/full actions do nothing (17.882031ms)
+✔ I2-C: fill stops when HP supplies run out; higher-tier HP supplies still work (6.701457ms)
+✔ I2-C: frontier rest uses the same handlers; entering the next wave prevents further preparation use (32.872437ms)
+✔ I2-C: no inventory disables all three icons and the fill action (6.263835ms)
+(node:17254) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B4 EXP thresholds, caps, zone IDs and global hero identity (45.042672ms)
+✔ B4 lan rewards only the selected trainee; station speed remains unchanged (6.352026ms)
+✔ B4 cancel, interruption, wrong ID and duplicate callbacks cannot reward (107.27045ms)
+✔ B4 successful result only pays once and survives JSON save/load (23.090444ms)
+✔ B4 Guard shares lan/lokan cooldown and two attempts per 100 ticks (6.338672ms)
+✔ B4 no quota before start; unavailable station/actor, pause, and storage failure block start (5.161351ms)
+✔ B4 failed result save rolls back and retry pays exactly once (70.673603ms)
+✔ B4 sword affects actual normal battle attack only; MP abilities/items unchanged (81.849108ms)
+✔ B4 selected helper damage uses its progression, not another branch (12.399723ms)
+✔ B4 original station acceleration still works independently (2.665292ms)
+✔ B4 stone mechanics shared, sword note timing, fire clock finishes at 30 seconds (8.165035ms)
+✔ B4 cancellation input never changes sword/fire score or heat (0.717892ms)
+✔ B4 host freezes timers/input on pause/hidden, abandons and cancels frame/listeners (5.224178ms)
+✔ B4 paused fire host preserves heat and stops exactly once after 30 active seconds (11.190332ms)
+✔ B4 actual helper combat reads only selected actor progression including Guard (27.586218ms)
+✔ B4 finished sessions feed the real B3 power: hero normal attack and selected ally stats rise (7.123432ms)
+✔ B4 in-progress session survives snapshot (needed to report the result) and is cleared on load (10.283706ms)
+(node:17258) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weights are exactly Guard 3 / Yama 2 / each crew 1; recovery cannot be targeted (17.765852ms)
+✔ actual counters hit crew and Guard, down excludes actions; crew disappears until recovery, guard retains 1 map HP (181.271105ms)
+✔ crew recovers after 60 real seconds including reload; fallen guard retains 1 HP without regeneration (73.089039ms)
+✔ Yama loss stages persist through return, sleep, Nira wake; spare heart precedes loss (52.67229ms)
+✔ six final actors retain distinct HP and CD; cooldown stops paused/hidden and survives reload (68.094076ms)
+✔ down worker stops station progress and movement; last special action still resolves at zero morale (220.0778ms)
+(node:17259) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ selection/cancel do not spend turns; selected actor attacks and duplicate confirmation is locked (116.124ms)
+✔ items reach chosen crew/Guard/Yama; full and MP-ineligible recipients cost nothing (30.470784ms)
+✔ Boon heals chosen friend; special cooldown blocks repetition, ordinary crew attack is removed (5.421469ms)
+✔ one successful command schedules exactly one enemy counter (71.777431ms)
+✔ data-driven petals carry actor identity; court retains old four segments and warrant (3.594395ms)
+✔ actor ownership is rechecked; down recipient and actor cannot execute (14.470212ms)
+✔ Kan applies hypnosis to the selected enemy (6.336596ms)
+✔ final battle exposes eight actors and dispatches to the selected cross-zone twin (79.077888ms)
+(node:17260) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B7 uses top/right/bottom Yama petals and top/right crew or Guard petals (4.888415ms)
+✔ B7 petal files are registered manually in the manifest (5.500633ms)
+(node:17264) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B8 krajok: every level is solvable (brute-force solver), starts unsolved, and the planted solution works (889.685ms)
+✔ B8 krajok: solving needs the 2 s hold; moving away resets it; score by solve time (4.078213ms)
+✔ B8 krajok: rotate snaps to 15°, wraps, ignores bad input, cancel/strings do nothing (15.857739ms)
+✔ B8 krajok: host runs the real mirror UI, freezes on pause/hidden, abandons and cleans up (35.150257ms)
+✔ B8 krajok: host reports one result when solved (planted answer, real UI path) (3.696267ms)
+✔ B8 krajok → kan: EXP reaches only the selected Kan; cancel, wrong id, repeat give nothing (47.552815ms)
+✔ B8 sawan: 8 breaths fit exactly in 32 s and perfect timing scores 100 (63.353878ms)
+✔ B8 sawan: tolerance edges, accuracy-based score, 6 of 8 needed (57.28771ms)
+✔ B8 sawan: stray presses, repeats, cancel and unreleased holds never score (3.555289ms)
+✔ B8 sawan: host buttons, pause freezes and cancels the hold, abandon cleans up (17.345339ms)
+✔ B8 sawan: host plays a perfect session through pointer events and reports once (17.446614ms)
+✔ B8 sawan → boon: EXP reaches only the selected Boon; cancel gives nothing; heal follows the real progression (6.189941ms)
+✔ B8 sala: every board is solvable by adjacent swaps, starts unsorted, 3–6 swaps, numbers/categories valid (132.222298ms)
+✔ B8 sala: engine rules — select, deselect, reselect, non-adjacent, swaps counted, 2 sets then done, perfect = 100 (1.819096ms)
+✔ B8 sala: wasted swaps lower the score (5% each, floor 70% of a set); partial/unsolved never completes (2.613996ms)
+✔ B8 sala: host UI — buttons ≥6, pause blocks taps, solve through real clicks reports once (3.218587ms)
+✔ B8 sala → nira: EXP reaches global Nira from any zone, nobody else; order/regeneration follow her level (4.562605ms)
+✔ B8 ngiw: schedule — 12 slots in 30 s, 6 thorn slots, thorn never on the mark, no repeated mark cell (13.633224ms)
+✔ B8 ngiw: perfect run = 12 cuts, score 100; 8 cuts completes; 7 does not; thorns cost half a mark (44.572955ms)
+✔ B8 ngiw: only the visible spot counts — late, early, duplicate, wrong slot/kind and pause-cancel taps do nothing (38.679155ms)
+✔ B8 ngiw: host — spots are real ≥ buttons, pointer + click both work once, pause blocks, abandon cleans up (34.274746ms)
+✔ Sword schools share Yama progress, cooldown and quota without increasing Dam or station speed (8.716845ms)
+✔ B8 all 8 training stations are playable: registry, kinds, seconds, trainee kinds and mobile-safe durations (90.514991ms)
+✔ B8 every new game: closing mid-play leaves no frame/listener behind and an old save loads without B8 data (34.611961ms)
+(node:17265) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ approved balance constants (6.615711ms)
+✔ every dossier deserves 1–5 terms and Thai level-five share falls (2.279689ms)
+✔ over by two costs 56 ked points (33.376141ms)
+✔ matching primary sin pays a separate bonus of about 30 percent (4.332937ms)
+✔ case completion pays the total once and names the bonus in the log (781.464737ms)
+✔ hammer and healer earn fairness for their actual positive sin (3.569553ms)
+✔ pending saved cases adopt the simple rule while assigned sentences retain their verdict (68.598349ms)
+(node:17270) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ FOE_SCALE: โซน 1 = ค่าเดิม · โซน 2 < 3 < 4 ทั้ง HP และ ATK ของศัตรูทั่วไป (ชุด 28E: อีเวนต์คูณ HP แล้ว) (9.82997ms)
+✔ ศัตรูที่สร้างจริงใช้ตัวคูณโซน: ผีบนแผนที่ · ชายแดน · วิญญาณขัดขืน โซน 2 < 3 < 4 (111.02926ms)
+✔ บอสทุกตัว HP มากกว่าเดิม · ศัตรูธรรมดาในอีเวนต์ HP ตามตัวคูณโซน (38.248151ms)
+✔ G1 recovery items: prepared parties still win events/bosses; breach benchmark remains winnable (2695.756951ms)
+✔ G1 recovery items: legacy eight-wave benchmark retains preparation sensitivity (1730.506667ms)
+✔ น้ำมนต์: พ่อค้านรกขาย · ราคา/ปริมาณสมเหตุสมผลเทียบหีบยา · ใช้เติม MP ได้จริงจากกระเป๋า (3.666339ms)
+✔ น้ำมนต์: ดื่มผ่านกระเป๋าบนแผนที่ระหว่างศึกสุดท้ายและเตรียมศึกบอส แต่ไม่ใช่กลางศึก (36.529335ms)
+✔ สรุปรางวัล: ชนะผีบนแผนที่ → เบี้ยกรรม · EXP · ของที่ตก ตรงกับที่ได้จริง (3.431192ms)
+✔ สรุปรางวัล: แพ้ไม่มี · วิญญาณขัดขืนในห้องไต่สวนไม่เด้ง · บอสที่ปลดพลังใหม่มีพลังในสรุป และคิวเรื่องราวพลังเดิมยังอยู่ (ui เรียงต่อกัน) (23.802994ms)
+✔ สรุปรางวัล: ศึกหลายระลอกสรุปครั้งเดียวตอนจบศึก · ของจากรางวัลอีเวนต์ (หัวใจสำรอง) อยู่ในสรุป (5.721087ms)
+✔ ข้อความหน้าต่างรางวัล/น้ำมนต์/ชื่อพลังมีทั้งไทยและอังกฤษ (2.92765ms)
+✔ น้ำมนต์ดื่มได้กลางศึกทุกประเภท: ผีบนแผนที่ · ชายแดน · อีเวนต์หลายระลอก · บอสโซน · ศึกสุดท้าย · วิญญาณขัดขืน (55.914153ms)
+✔ น้ำมนต์ในวงคำสั่งต่อสู้: มีใน BATTLE.items · ไม่มีอีโมจิ · ค่า MP อ่านจาก ITEMS ที่เดียว (2.348791ms)
+✔ วิญญาณขัดขืนบนแท่นไต่สวน: ชนะแล้วไม่มีสรุปรางวัล และไม่เด้งหน้าต่างรางวัล (คงเดิมตามคุณเป้ 28E) (11.98647ms)
+(node:17271) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ราคาห่อเสบียงลดครึ่งทั้งร้านและแท็บก่อสร้าง (8.700868ms)
+✔ ครบ KPI หรือบอสสาขาเก่ายังไม่จบเกมก่อนศึกสุดท้าย รวมเซฟ v3 ที่เคยติดฉากจบ (64.078387ms)
+✔ ท่าไม้ตายออกครั้งแรกหลังเลือดต่ำกว่าครึ่ง แล้วเว้นอย่างน้อย 4 เทิร์น (0.825625ms)
+✔ ทีมยมบาทน้อย ทัณฑ์ เพลิง ใช้ MP และยาจากกระเป๋าชนะบอสทั้ง 4 โซน (118.465862ms)
+✔ ยมบาทเริ่มที่ประตูบน และเปิดหน้าจัดทีมแล้วเซสชันชายแดนคงศัตรูเดิม (0.906683ms)
+✔ ผู้สร้างอยู่ข้างไซต์จนงานเสร็จ และเซฟเดิมที่ทำ buildK หายกู้กลับได้ (269.000349ms)
+(node:17272) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ กระจกในกระเป๋าไม่ถูกใช้บนแผนที่ แต่พลังในห้องสอบสวนยังทำงาน (28.091553ms)
+✔ อาคารถูกเผาอยู่รอซ่อม และทัณฑ์ติดงานหรือมีเปรตสั่งซ่อมไม่ได้ (26.804471ms)
+✔ ทัณฑ์เดินถึงก่อนเริ่มซ่อม เซฟ/โหลดระหว่างรอและระหว่างซ่อม แล้วกลับจุดประจำ (868.375653ms)
+(node:17273) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ปีศาจบนแผนที่ไม่เสียเลือดหรือกระสุนจากการฟาด/ขว้างหรือเดินถึง (507.751547ms)
+✔ ยักษ์ทวารบาลยังปราบปีศาจบนแผนที่ได้ (10.560214ms)
+✔ เซฟเก่าทิ้งปีศาจชนิดที่ถอดออกและเลื่อน index ชนิดอื่นเพียงครั้งเดียว (49.639203ms)
+✔ ทุกโซนคิวอยู่แนวสะพานและท่าเรือกับจุดคุยบอสเดินถึงได้ (626.366005ms)
+✔ CyberHell มีสิทธิ์เปิดหลังชนะบอสโซน 3 และเดินเรือกลับได้เมื่อค้นพบท่าแล้ว โดยไม่ต้องรอระดับ 5 (103.381471ms)
+(node:17274) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closed court finishes punishment and afterlife walk without advancing punitive clocks (820.095525ms)
+✔ an escort already dispatched keeps delivering souls while court is closed (524.581857ms)
+✔ closed court admits a returning case without spawning a new soul (6.091291ms)
+✔ hired guard crosses the city waterfront route and defeats a mob without player combat (2130.412976ms)
+✔ without guard player combat remains available and mobs spawn on reachable lower shore in every zone (705.441196ms)
+✔ older saves without court status restore with an open court (41.935094ms)
+(node:17331) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 27C: เรียกยมทูตช่วยในฉากสู้ได้ตั้งแต่เลเวล 1 และหน้าต่างเลื่อนขั้นไม่มีข้อเรียกยมทูต (74.720321ms)
+✔ 27C: ตวาดข่มขู่ใช้ไอคอนเขี้ยวและไม่มี cutscene ลูกไฟ (19.15357ms)
+✔ 27C: บทสอนไม่อ้างแถบแดง และไม่อ้าง emoji ⏭️/🔒 ที่เปลี่ยนเป็นไอคอนใหม่ (0.682984ms)
+✔ 27C: frontierBreach โซน 1 มี 2 ระลอก และข้อความไทย/อังกฤษไม่บอกว่า 3 (1.65743ms)
+✔ 27C: key i18n ใหม่มีทั้งไทยและอังกฤษ (11.537401ms)
+✔ Thai map fights select biome at the encounter location (5.974591ms)
+✔ route encounters use forest while other realms keep their own art (12.524909ms)
+✔ normal party feet form a diagonal with room to step toward foes (4.921959ms)
+✔ eight-member party has two distinct diagonal files and stable back-to-front slots (0.720358ms)
+✔ มีภาพยมทูต/ยักษ์ให้ตรวจครบทุกโซน (42.862226ms)
+✔ ทุกโซน ทุกยมทูต (รวมยักษ์ทวารบาล): ความสูงตัวจริงใกล้เคียงยมบาทน้อยในขนาดจอเดสก์ท็อปและมือถือ (2100.480654ms)
+✔ ภาพยมทูตที่กรอบตัวจริงเตี้ย/แคบต่างกัน ได้ความสูงตัวจริงเท่ากันหมด (ไม่ใช่ความสูงกล่องภาพ) (0.700762ms)
+✔ คัตซีนยมทูต/ยักษ์ทวารบาลทุกใบทุกโซน: ส่วนที่มีภาพจริงอยู่ในฉากครบและเต็มอย่างน้อยหนึ่งแกน (3474.469117ms)
+✔ menu anchor excludes transparent pixels and follows the displayed mirrored sprite (7.723576ms)
+(node:17362) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ each living ally and enemy gets a distinct turn; commands cannot bypass the active unit (60.395841ms)
+✔ dead foes drop out and every remaining enemy acts once per round (7.128455ms)
+✔ defense lasts through enemy turns, reduces damage and expires on actor next action (4.674524ms)
+✔ queue survives JSON save shape and a new wave starts a fresh round (23.217678ms)
+✔ queued hypnosis redirects each enemy on its own turn, and burns tick only on that enemy turn (80.583696ms)
+✔ retreat cannot skip a dungeon checkpoint or bypass a story boss (25.55004ms)
+(node:17366) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ battle HUD labels exist in Thai and English (3.172693ms)
+✔ frontier breach wave count comes from event data, not a hardcoded 3 (27.104474ms)
+✔ หัวหน้ากับบอสของทุกโซนเป็นคนละไฟล์ ไฟล์มีจริงและอยู่ใน manifest (35.369259ms)
+✔ บอสโซน 2-4 ที่ใช้ในเกม = Boss Zone<N> ที่คุณเป้ยืนยัน (ภาพเดียวกัน) (7.121367ms)
+✔ ภาพ "บอสมาถึง" โซน 2-4 เป็นภาพบอส ไม่ใช่หัวหน้า (profile ของบอสโซน 2 ต้องมี ไม่ตกไปใช้ฉากรวม) (0.863445ms)
+✔ ทุกจุดในโค้ดเรียกหัวหน้าด้วยคีย์ hero-boss และบอสด้วย zone-boss (ไม่สลับกัน) (69.532733ms)
+(node:17374) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ เข้าบอส — แฟ้มหลักฐานเป็นโบนัสอัตโนมัติถ้าภารกิจสาขาสำเร็จ ไม่ต้องกดปุ่มเลือก (51.156793ms)
+✔ ไม่มี b.prepUsed / โหมด crew/power เดิมอีกต่อไป — prepareBoss() ถูกถอดออกแล้ว (10.953335ms)
+✔ กินหีบยาเติมบารมีระหว่างเตรียมศึก — ใช้ของจากกระเป๋าจริง กินซ้ำได้หลายครั้งถ้ามีของพอ (5.731601ms)
+✔ ไม่มีหีบยา หรือบารมีเต็มแล้ว — กินไม่ได้ คืน false (5.791467ms)
+✔ กดเข้าสู้แล้ว กินหีบยาเพิ่มไม่ได้ (พ้นช่วงเตรียมศึกแล้ว) (3.377271ms)
+✔ พ่อค้านรกขายของฟื้นฟูและเสบียง ไม่ขายพลังโจมตี (5.803792ms)
+(node:17375) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Zone 1 finale triggers even on a lethal hit, injures the hero and awards flame charge once (127.235415ms)
+✔ Zone 2 finale saves Nira, unlocks Rage and allows a visit during three turns of rest (22.760981ms)
+✔ Zone 3 wins grant ice and queue its two story panels (39.808549ms)
+✔ Rage requires 60 active seconds and three boosted attacks before reuse (9.204044ms)
+✔ old saves keep earned powers and derive the revised milestone rewards (7.210918ms)
+(node:17376) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ event ชายแดนบุก: แจ้งเตือน → รับทราบ → ต้องเดินไปถึงชายแดน → สู้ → จบ (state machine) (8953.547544ms)
+✔ ระลอกชายแดนของโซน 2–4: ใช้ flow เดียวกัน · ไม่มีปีศาจ event บนแผนที่ · ทีมที่เลือกที่ชายแดนถูกใช้ในศึก (1640.81588ms)
+✔ เซฟเก่าที่มีปีศาจ event ชายแดนค้างบนแผนที่ ถูกเก็บทิ้ง (781.103772ms)
+(node:17381) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ clock is a reusable item, works with zero MP, persists unlock and cannot be consumed from map bag (107.002401ms)
+✔ clock cannot refresh between ordinary event waves (8.374523ms)
+✔ finale clock shared by all minions, then all four rulers, then final boss, including save/load (275.305622ms)
+✔ handbook worked example agrees with actual punishment calculation (0.520359ms)
+(node:17382) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ตารางค่าพลัง B — ทัณฑ์/เพลิง/ดำ/ยักษ์ ดาเมจตรงเป๊ะ ไม่สุ่ม (109.886787ms)
+✔ คูลดาวน์ B5 — ยมทูตและยักษ์ 120 วิ ของเวลาศึก (4.534699ms)
+✔ ลูกไฟ 40 คงที่ · น้ำแข็ง 30 + ศัตรูข้าม 1 ตา — ไม่สุ่มอีกต่อไป (69.247475ms)
+✔ บุญเติมบารมี 50 (ไม่เกินเพดาน) — ค่าฐานตรงตาราง B (3.794304ms)
+✔ กานต์สะกดจิต — เทิร์นถัดไปของศัตรู มึน ฟาดใส่ตัวเองแทนยมบาทน้อย (8.408725ms)
+✔ ระบบฝึก "แรง" (upgradeCrew) ยังเพิ่มดาเมจต่อยอดบนฐานใหม่ได้ตามเดิม (5.225109ms)
+✔ สะกดจิตฆ่าศัตรูตายพอดี — ประกาศชนะทันทีในคอลเดียวกัน ไม่ต้องรอกดโจมตีอีกครั้ง (5.637267ms)
+(node:17386) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Arrival matrix: 160 walked, 0 recovered at timeout
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from PIL import Image; import sys; im=Image.open(sys.argv[1]).convert("RGBA"); sys.stdout.buffer.write(im.resize((int(sys.argv[2]),int(sys.argv[3])), Image.Resampling.BILINEAR).tobytes())
+                                                                                                                      ~~~^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+✔ all stations in all four zones: both builders arrive for build and repair among other buildings (89046.079279ms)
+✔ blocked definition point plus mob: build and repair reach a walkable visible work point (106904.25284ms)
+✔ disconnected route recovers after 30 active seconds, preserving elapsed time on reload and pause (1825.634589ms)
+✔ escort suspends arrival, then releases the worker; battle help keeps the job owner (67.657584ms)
+✖ two builds approach concurrently and retain each owner and build-work render state (917.984321ms)
+✔ Thai city quarry is reachable from the civic square before bounded recovery (258.110738ms)
+✔ construction poses resolve to all eight zone-specific transparent PNG assets (10.700945ms)
+(node:17391) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ dam builds while taan is on duty, escorting, or building; busy crew cannot take another job (72.061603ms)
+✔ two simultaneous builds preserve their owners on reload and release each worker independently (213.578396ms)
+✔ dam repairs independently while taan builds, keeping ownership through walking, reload and completion (698.729418ms)
+✔ repair never interrupts an escort and still requires enemies to be cleared (2.883038ms)
+✔ loading a dam-owned repair does not assign taan to the same site (18.034628ms)
+✔ two repair jobs keep separate owners when leaving and returning to a branch (224.842796ms)
+✔ a builder stopped 45 units from lan approaches instead of roaming forever, with a mob present (639.152419ms)
+(node:17392) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ crewName() คืนชื่อ west/cyberhell ตามตารางที่คุณเป้อนุมัติ (5.142114ms)
+✔ crewName() โซนไทย (th) ยังใช้ชื่อเดิม ไม่หลุดไปใช้ชื่อ west/cyberhell (22.04747ms)
+✔ g.crew[].name อัปเดตเป็นชื่อโซน west/cyberhell จริงตอนจ้างใหม่ในโซนนั้น (ไม่ใช่แค่ crewName เฉย ๆ) (288.567433ms)
+(node:17396) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all 28 native PNG sheets exist and every crop stays inside its image (128.568392ms)
+✔ all seven crew walk assets resolve the current zone before manifest loads (3.196556ms)
+✔ four crop frames retain the foot anchor, mirror right-facing art and use distance phase (46.183577ms)
+✔ crew and Guard movement advances only with displacement, preserves direction and stops at rest (0.959168ms)
+✔ escort travel reads its actual timeline position without changing game coordinates (2.165137ms)
+✔ all cutscene and story assets preserve proportions and keep visible content inside varied viewports (7.469907ms)
+✔ cutscene CSS cannot crop or zoom beyond the frame; every battle cutscene uses fitted layout (8.332827ms)
+(node:17401) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ mirrors unlock only after beating zone-one tester and preserve the reward through save/restore (94.784423ms)
+✔ young conscript and graduate keep young identities in courtroom, battle and old saves (36.25325ms)
+✔ boss pier edges have return paths and a delayed frame cannot overshoot a waypoint (2122.384164ms)
+(node:17402) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the zone-one border boss waits for deva and frontier events (90.185371ms)
+✔ a failed deva test can be retried, and an active save restarts the test (83.543942ms)
+✔ case five schedules deva after prison; case eight schedules frontier after deva (36.229139ms)
+✔ a pre-event save already at the boss keeps its old access; a new save does not (20.718307ms)
+(node:17415) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 300 seeded boards have no initial matches, always have a legal swap, and are reproducible (1486.043919ms)
+✔ only adjacent matching swaps count as moves; invalid and no-match swaps preserve state (4.831048ms)
+✔ crossing and long runs count once per connected category, with no wrapped row matches (1.622527ms)
+✔ cascades expose each matched frame, count groups rather than books, and preserve gravity order (24.125638ms)
+✔ blue can be matched despite its zero goal and winning requires the other three categories (899.04341ms)
+✔ dead boards and impossible color distributions recover to a stable playable board (137.349349ms)
+✔ sala win awards order once, caps at 100, persists cooldown, does not award speed (40.111346ms)
+✔ sala floor reaches entrance and document desk while excluding furniture and side walls (38.936268ms)
+✔ failed reward save leaves order and cooldown unchanged and permits retry (25.029887ms)
+✔ every named route checkpoint has its own shipped environment (14.241101ms)
+✔ arrival keeps the final gate backdrop and malformed/legacy routes safely fall back (0.587208ms)
+✔ Nira stays visible beside Yama even when both enter at progress zero (3.960891ms)
+✔ corridor click routing stays on its finite connected path at every point (27.971108ms)
+✔ clicks beyond an uncleared checkpoint stop at the current route gate (0.566339ms)
+✔ checkpoint battle requires real persisted position at the CURRENT checkpoint (2.521632ms)
+✔ exit requires all victories AND physical exit proximity (1.185717ms)
+✔ E1: one final flip table toggles exactly the eight requested rendered orientations (21.685136ms)
+✔ E1: CyberHell tower moves right, scales 1.3 versus regional art, updates service/hit, and restores every branch (45.991329ms)
+(node:17431) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: runtime start, NPC feet, top gate and bottom spawn connect (306.108591ms)
+✔ th: sampled runtime enemy destinations connect from the spawn stairs (9327.373029ms)
+✔ th: source-mask discrepancy remains below 3% (9.713151ms)
+✔ asia: runtime start, NPC feet, top gate and bottom spawn connect (545.181282ms)
+✔ asia: sampled runtime enemy destinations connect from the spawn stairs (20195.506918ms)
+✔ asia: source-mask discrepancy remains below 3% (1.543165ms)
+✔ west: runtime start, NPC feet, top gate and bottom spawn connect (281.218615ms)
+✔ west: sampled runtime enemy destinations connect from the spawn stairs (15525.011123ms)
+✔ west: source-mask discrepancy remains below 3% (0.808829ms)
+✔ cyberhell: runtime start, NPC feet, top gate and bottom spawn connect (85.825263ms)
+✔ cyberhell: sampled runtime enemy destinations connect from the spawn stairs (6571.132872ms)
+✔ cyberhell: source-mask discrepancy remains below 3% (0.894321ms)
+(node:17436) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case five monk → praise → test → mirror once (1081.464916ms)
+✔ case five monk → warning → test → mirror once (207.448331ms)
+✔ Asia: two kills → saved descent → intro → deva defeats third → waiting actor → test → disappears (105.043488ms)
+✔ legacy active fire restarts safely, cleared fire waits, completed tester never repeats (67.2097ms)
+✔ breaches keep thresholds, waves, bosses and saved marching state (39.57168ms)
+✔ area damage and self-hit still leave the third spirit to the deva (6.742318ms)
+✔ case five cannot be deferred or replaced; old case-four saves receive the monk (15.850966ms)
+✔ breach actors stand on navigable ground with a reachable boss; UI waits for approach (755.529593ms)
+✔ both deva intro images preload only in their zones and cache version changed (2.838798ms)
+✔ temple beggar deity stays separate from the abbot and old saves load (1294.963807ms)
+✔ legacy case-five monk is refreshed as the innocent temple beggar without changing soul id (2.999276ms)
+(node:17443) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ arrival: only rescue actors/interactions; yama + Taan; unchanged stats/reward; building unlocks (384.075798ms)
+✔ case 3 freezes all walkers and management until vampire win; thaw resumes elapsed position (211.549594ms)
+✔ vampire approach uses zone art and existing intro; two minion waves, hypnotized party wave, then vampire reward (6.02641ms)
+✔ case 7: run from bottom → saved intro with five bilingual lines → move right → wait → fight → spear once (160.979643ms)
+✔ old cleared rescue save is never replayed; interrupted deva battle retries on map (121.720852ms)
+✔ west intro preloads in west only; new cache token and rescue proximity UI are wired (35.417588ms)
+✔ frozen transit deadlines resume from same point and vampire loss leaves spirits frozen (68.334477ms)
+✔ deva defeat returns to waiting actor and permits another challenge without replaying intro (67.028458ms)
+(node:17444) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ E5 a→e: warp before approach/preparation, four waves, reinforcement map, control, four rulers, duel and ending exactly once (337.386818ms)
+✔ E5 rescue: deva at throne, saved three-line bilingual intro, unchanged foes/reward, loss retry and captives released on win (39.750038ms)
+✔ E5 cyber breach uses walk-to-boss before existing intro; four waves and spare heart unchanged (16.358158ms)
+✔ E5 three preparation destinations produce reachable paths to merchant, Nira and existing tea pavilion/fallback (733.158035ms)
+✔ E5 every legacy final phase normalizes to a resumable map, reward, story or ending without changing ledger (338.87015ms)
+✔ E5 interrupted presentation reloads each cutscene and map/preparation without repeating rewards (156.952913ms)
+✔ E5 runtime intro is preloaded only in CyberHell, cache bumped, canvas lightning stops with release (1.593704ms)
+✔ E5 old nonempty rewards acknowledge once; serialized battles resume; seen reinforcement saves cannot lock the gate (99.289855ms)
+✔ E5 restore outside Zone 4 must queue Lumen intro on later arrival, and preserve cleared rescue on return (240.011478ms)
+(node:17445) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ map names and bubble share one size; all name drawing sites use mapName (22.187813ms)
+✔ crew names and Nira recovery use dialogue size in all four map zones (111.918456ms)
+✔ final wave, reinforcement, ruler and warp boss names use the same map style (87.156466ms)
+✔ interaction tags and deva skill prompt retain their original sizes (0.900537ms)
+(node:17458) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ending plays panorama then father acceptance, using shipped media and posters (7.242449ms)
+✔ ending video navigation pauses outgoing clips, keeps manual completion, and falls back on failure (3.453662ms)
+✔ only the post-zone4 ending uses video; boss and deva stories have shipped stills (1.957917ms)
+(node:17465) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ยมทูตที่คุมการลงทัณฑ์นำวิญญาณไปตะราง วิญญาณตามติด ส่งเสร็จแล้วปล่อยให้เดินกลับเอง (5607.21101ms)
+✔ ยมทูตผู้คุมยังมีดวงอื่นในสถานี → ใช้ยมทูตว่างที่ใกล้จุดรับที่สุด · ผู้คุมไม่ถูกดึงไป (807.494648ms)
+✔ ไม่มียมทูตว่างเลย → วิญญาณเดินเข้าตะรางเองเหมือนเดิม (827.903472ms)
+✔ ย้ายโซน / เซฟ-โหลดระหว่างนำทาง ไม่ทิ้งยมทูตค้างสถานะ escort และวิญญาณไม่หาย (995.763939ms)
+(node:17471) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Zone 1 case 10 boss with two demons awards flame charge and opens Zone 2 (59.828314ms)
+✔ Zone 2 fire, deva, and three waves unlock wind fan and reserve Rage for the zone boss (27.422588ms)
+✔ Zone 3 blocks building until hypnotized spirits are freed, then awards hypnosis and spear (11.207973ms)
+✔ Zone 4 rescue releases Taan, clock, and four-wave heart reward; loss retries from wave one (7.861707ms)
+(node:17478) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ speed is hero-heights/second whatever the frame length (4.857075ms)
+✔ long frames are consumed in small slices, never clamped to 50ms (2.288113ms)
+✔ walk phase follows distance in hero heights and matches the art.js frame counter (1.213025ms)
+✔ room: same distance walked at 60fps, 12fps and 4fps; speed = 2.5 hero heights/s (75.102679ms)
+✔ frontier: speed and walk frames independent of frame rate; background resampled once; always walk frames while moving (193.698555ms)
+✔ frontier: scene image is resampled once, then blitted from a cached canvas every frame (32.112603ms)
+(node:17479) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 1. ไม่มีปุ่มฝึกตัวละครในการ์ดห้องแล้ว แต่จุดฝึกบนพื้น → openTraining ยังอยู่ (ระบบฝึกเบื้องหลังไม่ถูกลบ) (11.880483ms)
+✔ 2. ท่ายืนของยมบาททั้ง 4 ชุดไม่ถูกพลิกจนหันซ้าย: ภาพที่วาดหันขวา (บูรพา/ปัจฉิม/นรกเครือข่าย) ขึ้นทะเบียนไม่พลิก · ภาพโซน 1 วาดหันซ้าย → พลิก (10.867434ms)
+✔ 2. corrected sword atlases draw actual frames 0–7 for every outfit; timing remains 580ms (20.331956ms)
+✔ 3. ข้อความ "เพื่อลดกรรม" / "to reduce karma" มี TH+EN และถูกวางใต้ปุ่มมอบดอกบัว (แสดงทุกขนาดจอ) (20.910592ms)
+✔ 3. ป้ายชื่อวิญญาณใต้ตัว (soulLabel) เล็กกว่าเดิม U*0.025 และใช้ในห้องประตูสวรรค์/สถานีลงทัณฑ์ (3.37457ms)
+✔ 4. หนังสือคู่มือ: หน้านาฬิกาย้อนเวลามีรูปไอเท็ม และการ์ดยมทูตทุกคนมีรูปประจำตัวที่มีไฟล์จริง (6.460213ms)
+✔ 5. กระทะทองแดงทั้ง 4 โซนมีพิกัดปากกระทะ 3 ใบเรียงซ้าย→ขวาในกรอบภาพ และ potLayout อ่านโซนจากชื่อไฟล์ฉาก (1.15296ms)
+✔ 5. drawPotSoul: วาดไฟหลังตัว → ตัววิญญาณ (ตัดในปากกระทะ) → แสงกองไฟ ด้วย canvas ล้วน ไม่แตะรูป และเรียกวาดตัววิญญาณเดิมหนึ่งครั้งต่อกระทะ (2.74129ms)
+✔ 6. เสียงท่าไม้ตาย: ชาร์จสั้น → ระเบิด/กระแทก รวม ~1.0–1.5 วิ ผลรวมความดังตอนกระแทกไม่เกิน 0.8 (42.855445ms)
+✔ 6. เคารพปุ่มปิดเสียง (สวิตช์รวม และ สวิตช์เสียงเอฟเฟกต์) · มี hook เสียงพากย์: เติมหนึ่งบรรทัดใน VOICE_LINES แล้วเล่นตามหลังจังหวะกระแทก (2125.403597ms)
+✔ 6. ui.js ใช้เสียงใหม่เฉพาะท่าไม้ตายที่ขึ้นคัตซีนจริง ที่ทั้งฉากต่อสู้และวงไต่สวน · ท่าอื่นใช้เสียงสั้นเดิม (4.241592ms)
+✔ 7. ไอคอนปิดเสียงอยู่ใน img/ui และลง manifest + preload catalog ด้วยมือ (5.860993ms)
+✔ 7. สวิตช์เสียงเพลง/เอฟเฟกต์แยกกัน: เซฟเก่าไม่มีคีย์ = เปิด · ปิดเพลง = ความดังเพลงเป็น 0 · ปิดเอฟเฟกต์ = sfx() เงียบ แต่เพลงยังดัง (4.08941ms)
+✔ 8. ปุ่ม "เข้าไป" เลื่อนลงจากยอดแหลมมาอยู่บนหลังคา (27% ของความสูงอาคาร) และไม่ใช้ class anchor-top (2.59422ms)
+✖ ไม่แตะ walk*/room walking และมินิเกมกระจก (ใบ F1/F3) · เวอร์ชัน cache-bust ขยับแล้ว (7.865412ms)
+(node:17480) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case ten runs four minion fights, four fixed rulers, then final boss with map rests (189.367998ms)
+(node:17491) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case eight waits for deva test before frontier breach (56.444227ms)
+✔ two waves keep one battle, heal at transition, and reward after both (34.299608ms)
+✔ loss leaves one authority and retry starts at wave one; active save restores pending (46.144918ms)
+✔ cleared deva save at case eight schedules the breach on load (28.287311ms)
+✔ frontier crew and hired guard use the existing combat powers (4.539257ms)
+✔ battle hypnosis makes the target strike itself, unlike ice stun (6.399989ms)
+✔ a confused foe dying to its own counter queues the next wave (4.313648ms)
+✔ th: bottom entrance reaches top gate without crossing obstacles (417.152561ms)
+✔ asia: bottom entrance reaches top gate without crossing obstacles (436.742201ms)
+✔ west: bottom entrance reaches top gate without crossing obstacles (452.701043ms)
+✔ cyberhell: bottom entrance reaches top gate without crossing obstacles (468.100686ms)
+✔ Thai annotated fences and tower block walking; clicks route around the tower (149.475563ms)
+✔ Zone-specific water, buildings and machinery block movement and destination clicks (50.322181ms)
+✔ approved cyber frontier mask blocks structures and connects side floor, gate and stairs (62.991752ms)
+(node:17499) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G1 all four item families restore only the specified resource, round and cap by maximum (74.40286ms)
+✔ G1 rice balls and medicine feed/heal real crew and Guard at Nira; hunger and stock remain correct (32.716652ms)
+✔ G1 battle recipient commands heal crew/Guard, also feed hunger, never give MP to crew (41.395661ms)
+✔ G1 Guard rest requires built pavilion, HP below full and available actor (403.795869ms)
+✔ G1 travel, save/load, 120-second rest, inactivity, full HP and original post survive real serialization (324.950385ms)
+✔ G1 old saves load without rest fields; offline completion and dormant branch rest remain valid (235.13128ms)
+✔ G1 translated controls, bag targets, HP/progress widgets and animated pavilion use real shared state (47.141574ms)
+✔ new-game and menu intro navigation render all five shipped G2 panels (34.46715ms)
+✔ cover selects the v4 art before fallbacks and no cover video layer exists (85.325412ms)
+(node:17504) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ตารางประลอง: ทุกโซนมี 10 wave · wave 10 = บอสชายแดนตัวเดียว · ศัตรูเป็นของโซนนั้น · จุดพัก wave 5 (38.236512ms)
+✔ ตัวเลขสมดุลของอีเวนต์เนื้อเรื่องเดิมไม่ถูกแตะ (เพิ่มแค่รายการท้ายสุดของแต่ละโซน) (2.210585ms)
+✔ refreshZoneEvents ไม่เปิดการประลองเป็นอีเวนต์เนื้อเรื่อง และไม่ขวางประตูบอสโซน (25.86256ms)
+✔ ชื่ออาวุธ 4 ชื่อไม่ชนชื่อเดิมในเกม และไม่ใช้คำต้องห้าม (Dracula) (45.827865ms)
+✔ บทพูดบอส 4 สถานการณ์ × 4 โซน มีทั้งไทยและอังกฤษ (talk/invite/lose/win) (3.322832ms)
+✔ รายชื่อไฟล์ภาพที่ต้องวาด: 16 สไปรท์ฟัน (4 อาวุธ × 4 ชุด) + 4 ไอคอน + 4 คัตซีน ชื่อไม่ซ้ำ (0.736687ms)
+✔ ต้องชนะบอสชายแดนในเนื้อเรื่องก่อน: ก่อนหน้านั้นไม่เริ่ม ไม่ยืนที่ประตู · หลังนั้นเริ่มได้ (31.183781ms)
+✔ บอสประลองย้ายออกจากแผนที่โซนทั้ง 4 และคุยได้จากตำแหน่งผู้เล่นในฉากชายแดนเท่านั้น (26.100823ms)
+✔ รอบแรก: 10 wave → จุดพัก wave 5 บันทึก → แพ้ wave 7 → กลับมาเริ่ม wave 6 → ชนะครบได้อาวุธ (113.606558ms)
+✔ ประลองซ้ำหลังได้อาวุธ: ไม่ได้อาวุธซ้ำ · เบี้ยกรรมครึ่งหนึ่ง + วัตถุดิบชายแดน · ไม่มี EXP/คัตซีนซ้ำ (13.960488ms)
+✔ แพ้ตอนประลองซ้ำ: อาวุธไม่หาย · ไม่เสียความคืบหน้า (4.695898ms)
+✔ สวม/ถอดอาวุธ: สวมได้เฉพาะที่มี · ทีละเล่ม · ถอดแล้วกลับดาบเดิม (7.356445ms)
+✔ ไม่ถืออาวุธ = ฟาดปกติเท่าเดิมทุกประการ (ลำดับสุ่มเท่าเดิม) (31.285728ms)
+✔ ดาบเขี้ยวทัณฑสูร: ฟาดแรงขึ้น +20% · ติดไฟ 15% = 5% ของ HP สูงสุด ต่อเทิร์น 2 เทิร์น (เพดาน 8) · ไม่ลวกในตาที่เพิ่งติด (105.456749ms)
+✔ ไฟลวกฆ่าศัตรูที่ไม่ใช่เป้าได้ และเลือกเป้าใหม่ไม่ค้างที่ตัวที่ตายแล้ว (39.716625ms)
+✔ ดาบโซ่ขาดอากุระ: +25% และคริ +7 จุด% (ฟาดเดียวกันที่ r=0.22 คริเฉพาะเมื่อถือ) (26.604894ms)
+✔ ดาบไม้เท้าราตรี: ดูดเลือด 8% ของดาเมจจริง เพดาน 4 ต่อครั้ง ไม่เกินบารมีสูงสุด (42.095973ms)
+✔ ดาบท้องม้าโทรจัน: +30% · ฟันซ้ำ 10% ด้วยแรง 50% ของครั้งแรก · ไม่ซ้อนตัวเอง (24.553864ms)
+✔ อาวุธมีผลเฉพาะฟาดปกติ: ลูกไฟ/พุ่งชนเพลิง/ผนึกน้ำแข็ง ไม่ผ่านอาวุธ (58.006198ms)
+✔ เพดานรวมเมื่อซ้อนคริ + rage: ไม่เกิน 130% ของฟาดสูงสุดที่ไม่ถืออาวุธ (ในสภาพ rage เดียวกัน) (34.169311ms)
+✔ คัตซีน/ไอคอน/สไปรท์: ไม่มีไฟล์ = ใช้ดาบเดิมของชุด ไม่ error (fallback) (2.285794ms)
+✔ เซฟ/โหลด: อาวุธ ความคืบหน้าจุดพัก ชัยชนะ — โหลดซ้ำแล้วเหมือนเดิม (97.403149ms)
+✔ เซฟเก่า (ก่อน G3b) โหลดได้ · ค่าแปลกถูกกรอง · อาวุธที่สวมต้องมีจริง (72.875603ms)
+✔ ศึกประลองไม่ปนกับระบบเดิม: ไม่ตั้ง pending/active ให้อีเวนต์เนื้อเรื่อง และไม่เปลี่ยนสถานะบอสโซน (26.9359ms)
+✔ จุดยืนส่วนล่างทั้ง 4: เดินไปคุยถึง และบอสไม่ขวางแนวเดินจากบันไดล่างถึงประตูบน (2758.760395ms)
+(node:17508) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G4 item ids: zone variants are gone; every zone shelf sells the same four ids (5.938964ms)
+✔ G4 names: Thai and English names are identical across zones (4 names), from one source (57.142386ms)
+✔ G4 old saves: zone-variant ids merge into the new items, counts add up, nothing lost (inventory, map drops, codex) (126.590312ms)
+✔ G4 Large items: restore 100%, zone 2+ shelf only, ~1.8x price (2.056748ms)
+✔ G4 Large items: buy in zone 2+, refused in the Thai zone, usable by Yama / reaper / Guard / in battle (114.557663ms)
+✔ G4 tea rest for a regular reaper: needs pavilion + HP < 50 + standing; travel, 60 s rest, save/load, full HP, back to post (839.58386ms)
+✔ G4 tea rest: Guard keeps working through the same method (restGuard alias) and the dialog lists regular reapers too (123.415021ms)
+✔ G4 enemy atk: cyber breach and the final-line waves hit harder than before G4 (1.0807ms)
+✔ G4 weapon cooldown: drain triggers, then rests 3 turns, strike bonus never stops; new battle starts ready (42.6956ms)
+✔ G4 weapon cooldown: nothing happens (and nothing is rolled) while resting, for burn / crit / replay (12.84679ms)
+✔ G4 weapon cooldown is shown on screen: HUD badge + attack button, TH and EN text, effect line mentions it (6.687555ms)
+(node:17512) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G5 walk: bright courtyard and carpet; blocks pot plinth, rail, stairs, jars and right stove (12 points) (33.6026ms)
+✔ G5 real room movement and flare draw at 844×390 and 390×844 (232.50552ms)
+✔ G5 stoke: 20% remaining on every active pot, miss unchanged, 20s cooldown, no MP, empty/pending blocked (11.121134ms)
+✔ G5 training: both trainees, 5 hits +1, 3 misses no loss, individual 5-minute cooldown and cap 3 (72.084701ms)
+✔ G5 fire damage in actual battles follows 0/3/6/9% for Yama and Plerng, normal attacks unchanged (59.832045ms)
+✔ G5 save/load preserves levels and real-time cooldowns, old saves default to zero (50.428032ms)
+✔ G5 new texts have TH+EN; all artwork registered and prompts retained (2.244502ms)
+✔ G5 balance: level 3 on both trainees increases each story encounter by at most 10 percentage points (30174.864997ms)
+✔ G5 QTE host: waits for walking, uses timing windows, stops after outcome, retries untouched circles and cleans animation (25.036088ms)
+✔ H1: three tiers partition the full zone bundle exactly (nothing dropped, nothing duplicated) (230.99384ms)
+✔ H1: critical tier holds the first-screen art and is far smaller than the whole zone (77.74848ms)
+✔ H1: intro panels gate only the first run; panel 1 is always ready; zone arrival gates the zone introduction (4.050378ms)
+✔ H1: loading screen rotates several TH+EN notes and only one preload instance owns the gate (2.972528ms)
+(node:17520) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ H2: every zone — points inside the painted building body (above the ground strip) cannot be walked, for at least 3 buildings per zone (27563.999376ms)
+✔ H2: the ground strip is still blocked and the whole silhouette is covered (roof, wall and base rows are contiguous) (14.798651ms)
+✔ H2: the service door of every building stays walkable and reachable on every zone; free ground beside buildings stays open (3288.057459ms)
+✔ H2: a player standing where a newly built body appears is moved out of it (13.518612ms)
+(node:17524) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ H2-3: tea pavilion seat and bed sit on the cushion / mattress and stay within reach of the walkable floor in all 4 zones (7.221212ms)
+✔ H2-4: sala "sort documents" button moved up (1.368349ms)
+✔ H2-5: frontier win button keeps its own class (not the bottom .pad) (4.557346ms)
+✔ H2-6: Yama moves left in portrait and the portrait wheel rules stay (2.662606ms)
+✔ H2-7: asia and cyberhell standing art is mirrored like zone 1 so it faces right after the slash; west stays native (1.676089ms)
+✔ H2-2: town zoom/follow control retains the smooth frontier formula (130ms) (6.392753ms)
+✔ H2-3: standing up from the cushion puts Yama back inside the walkable floor in every zone (manual and MP-full stand-up) (124.558193ms)
+✔ H3 spatial masks include painted channels and exclude orange buildings and paths (7.018569ms)
+✔ H3 bounded tracks contain flow, bubbles, sparks, edge pulse, falls and mist with changing frames (127.847687ms)
+✔ reduced motion skips mask allocation and all H3 drawing (3.311381ms)
+✔ mask readback and allocation are cached; both surfaces composite before scaling to scene size (136.749524ms)
+✔ ground effects remain below depth sorted buildings and actors in existing scene renderer (1.352803ms)
+✔ strict sampling rejects an entire cell when even one painted pixel is a rock (4.857597ms)
+✔ map fx visibility floors: zones 1-2 must stay at least as lively as the generic zone 3-4 path (west/cyberhell) (0.627318ms)
+✔ lava glints run down the channel and drop, sideways along the pool and river (0.455609ms)
+✔ lantern glow is additive, flickers between frames, and is skipped for zones without a lamp list or without a sprite (1.902036ms)
+(node:17533) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ archive cards expose portrait, name, stars, score, deserved/given, verdict and escaped deed summary (32.910864ms)
+✔ real-room mirror beam, slider, drag and reward at viewport 844x390 (simulated DOM) (94.495202ms)
+✔ real-room mirror beam, slider, drag and reward at viewport 390x844 (simulated DOM) (53.777722ms)
+✔ mirror stand blocks real pointer movement, becomes walkable when removed, and can be approached (260.654573ms)
+✔ scan, rebirth, sky and floating −N draw on canvas; departures fade and sky rises (17.13128ms)
+✔ new rainbow asset exists, is background-only, replaces every rendered gold book, and UI strings have TH+EN (70.660205ms)
+✔ gate sound companions create distinct soft WebAudio tones and obey mute (42.533665ms)
+✔ ledger keeps card identity and complete deeds after closed-case history rolls off and saving (91.852807ms)
+✔ splash ships intro-opening-v3.mp4: faststart H.264, 1300x708, ~19 s, <= 6 MB (23.738923ms)
+✔ still cover is cover-v4 everywhere (css note, probe order, critical preload) and cover-v5 is not the cover (3.770642ms)
+✔ home-intro-v5 (front-facing Yama) is no longer referenced, and there is no #cover-vfx video layer (3.01729ms)
+✔ sequence: plays to the end (ended -> slow dissolve), skip / error / reduced motion / 25 s timeout all reach the cover (2.541192ms)
+✔ runtime: hideSplash/revealTitle/settleCover behave (ended slow, skip fast, only once, reduced motion immediate) (3.956257ms)
+✔ end-of-video handoff: cover art starts at the video scale (k) and eases back to 1 during the dissolve (2.640217ms)
+✔ fx layer stays between the still art and scrim, crops with the art, cannot intercept buttons (no cover video layer any more) (13.796579ms)
+✔ masks are background assets, manually registered in both manifests (50.724032ms)
+✔ mask helpers: lava is split into river and falls, dilation grows, blobs are labelled, anchors skip the keep-out box (253.661331ms)
+✔ timing helpers: flow cross-fade is seamless, flicker and pulse stay irregular and in range, canvas size is capped (13.148447ms)
+✔ visibility floors: nobody tones the effect back down to the H5b-v1 whisper (alpha<=.17, pulse<=.047) (0.939459ms)
+✔ engine builds river, falls, flames, volcano and soul cut-out from the masks, and a frame uses additive light at visible strength (722.967178ms)
+✔ torch warp samples a masked flame texture; the wide dais keeps its original cover source (529.31056ms)
+✔ frames 0.5s apart differ (the scene really moves) and nothing is added after the soul cut-out (1312.429913ms)
+✔ mobile uses fewer particles than desktop but keeps the same layers; off-screen layers are culled in portrait (1905.06099ms)
+✔ empty or off-screen masks build no layers and draw nothing without throwing (530.220393ms)
+✔ settle starts once, exits cancel RAF, resume fades again, reduced motion and hidden tab stop (644.54733ms)
+✔ exit during async mask load and mask failure cannot start a background loop (29.245742ms)
+✔ hidden and unsettled covers are inactive (0.701304ms)
+✖ fx loads the v4 masks and the h5b module cache-busts with the intro-v3-coverfx suffix (7.321385ms)
+✔ shipped v4 masks are 688x384 binary alpha, never cover the characters or throne (945.240293ms)
+✔ four directions follow actual displacement and retain facing when stopped (6.798648ms)
+✔ all 64 frames exist inside RGBA PNG sheets registered in the manifest (14.177285ms)
+✔ outfit overrides branch and every direction selects its own row without mirroring (12.762247ms)
+(node:17543) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ยมทูตเริ่มอิ่มเต็ม (hunger 100) ตอนสร้างเกมใหม่ (44.833213ms)
+✔ ป้อนข้าวปั้น — หักเสบียงกองกลาง 1 ห่อ เพิ่มแถบหิวของคนนั้นจริง (15.221262ms)
+✔ ป้อนข้าวปั้น ไม่เกิน 100 (เพดาน) (4.749873ms)
+✔ เสบียงกองกลางหมด — ป้อนข้าวปั้นไม่ได้ คืน false (3.795436ms)
+✔ นิรา (reader) กินไม่ได้ ป้อนไม่ได้ — เธอไม่ใช่ยมทูตสายทำงาน (54.749505ms)
+✔ ยมทูตที่กำลังทำงานจริง หิวลดลงทุกวาระ ไม่ทำงาน (ว่าง) หิวไม่ลด (12.437262ms)
+✔ เซฟเก่าก่อนชุด 13 (ไม่มี hunger ในตัวยมทูตเลย) โหลดได้ไม่พัง — ได้ค่าเริ่มต้น 100 (110.164067ms)
+✔ หมดแถบหิว (0) ทำงานช้าลงจริง (hungerPenalty) เทียบกับตอนอิ่ม (10.884384ms)
+(node:17547) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ I1-A lotus lowers only little Yama karma (8 per lotus, floor 0) and never touches gate souls (84.815726ms)
+✔ I1-A lotus line shows little Yama karma, not the gate total, and needs the heaven gate (14.292092ms)
+✔ I1-A sky = soft additive gold light (gradients, sparkles, petals); rebirth = rotating ring that condenses into an orb and flies to the centre gate (7.994325ms)
+✔ I1-A reduced motion: departure is a plain fade, no light drawn, shorter, soul stays put (4.726726ms)
+(node:17554) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ I1-A mirror stand is drawn in the room canvas, depth-sorted against Yama by feet y (93.49847ms)
+✔ I1-A depth key: every spot in front of the stand foot is drawn over it, every spot behind is drawn under it (36.321834ms)
+th: width 0.24 -> 0.1763 (x0.735), linear size lying/standing 1.36 -> 1.00
+asia: width 0.24 -> 0.1984 (x0.827), linear size lying/standing 1.21 -> 1.00
+west: width 0.24 -> 0.1711 (x0.713), linear size lying/standing 1.40 -> 1.00
+cyberhell: width 0.24 -> 0.1841 (x0.767), linear size lying/standing 1.30 -> 1.00
+✖ I1-A adjusting panel switches Yama to the atk pose facing the mirror; closing returns the standing pose (138.056152ms)
+✔ I1-A mirror DOM: stand no longer painted in DOM (only drag area), close button no longer closes the whole room (8.674475ms)
+✔ I1-A lying sprite is scaled so its silhouette area equals the standing one, measured from real pixels, all four outfits (9877.420532ms)
+✔ I1-A room.js sizes the lying sprite from pixels and wakes Yama on the floor (room.wake), not on the bed (1.180107ms)
+✔ I1-A wake point is on the floor in front of the bed, inside the walkable area and within bed reach, every zone (0.830054ms)
+✔ I1-A after waking, Yama stands at the wake point and can walk immediately (25.306046ms)
+✖ I1-A cache-bust: -i1a is appended (existing suffixes kept) on every changed file that carries a version query (8.179837ms)
+(node:17555) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ I1-B-1: ชื่อ/ข้อความการ์ดดาบเดิม ตรงตามคุณเป้ (ไทย) และมีฉบับอังกฤษ (16.643184ms)
+✔ I1-B-1: ไอคอนเป็นไฟล์ดาบจริง 512×512 และการ์ดใช้ไอคอนนั้น (ไม่ใช่รูปยมฯ) (114.396443ms)
+✔ I1-B-1: "พลังโจมตี N" คำนวณสดจาก stat จริง — เปลี่ยนตามเลเวล/ชุดโซน/การฝึก ไม่ hardcode (35.737696ms)
+✔ I1-B-2: วงอยู่ขวาของตัวที่ถึงตา ไม่ทับตัวละคร ไม่ล้นจอ — desktop1440 (3.320232ms)
+✔ I1-B-2: วงอยู่ขวาของตัวที่ถึงตา ไม่ทับตัวละคร ไม่ล้นจอ — landscape844 (31.713548ms)
+✔ I1-B-2: วงอยู่ขวาของตัวที่ถึงตา ไม่ทับตัวละคร ไม่ล้นจอ — portrait390 (0.708101ms)
+✔ I1-B-2: วงอยู่ขวาของตัวที่ถึงตา ไม่ทับตัวละคร ไม่ล้นจอ — portrait360 (0.5793ms)
+✔ I1-B-2: ตัวละครคนซ้ายถึงตา — วงอยู่ขวาบนของตัวนั้น และก้นวงไม่ลงมาทับหัวเพื่อนข้างขวา (0.550171ms)
+✔ I1-B-2: ยักษ์/ยมทูตที่อยู่ซ้ายสุดถึงตา — วงอยู่ขวาบน ไม่ตกลงไปอยู่ใต้ตัวละคร ไม่ทับใคร (0.759155ms)
+✔ I1-B-2: ui.js ใช้ placeWheel ทุกขนาดจอ (ไม่จำกัดเฉพาะ ≥701px) และตามเมื่อปรับขนาดจอ (4.480592ms)
+✔ I1-B-4: ปุ่มเก็บไอเท็มที่ตกอยู่ ~78% ของปุ่มหลักเดิม และอยู่กลางด้านล่าง ไม่ใช่กลางฉาก (11.384685ms)
+✔ I1-B-4: ปุ่มเก็บไอเท็มไม่ทับการ์ดและอยู่ในฉาก — desktop1440 (1.959004ms)
+✔ I1-B-4: ปุ่มเก็บไอเท็มไม่ทับการ์ดและอยู่ในฉาก — landscape844 (1.097412ms)
+✔ I1-B-4: ปุ่มเก็บไอเท็มไม่ทับการ์ดและอยู่ในฉาก — portrait390 (0.348463ms)
+✔ I1-B-4: ปุ่มเก็บไอเท็มไม่ทับการ์ดและอยู่ในฉาก — portrait360 (0.372993ms)
+✔ battle selection uses visible battlefield bounds and one roster for sprites and portraits (5.98959ms)
+✔ battle wheel stays six pixels upper-right of each visible actor in a four-person row (1.434388ms)
+✔ I1-B-5: ไม่มีปุ่มข้อความ Mute — ปุ่มด่วนใช้รูป icon-sound / icon-sound-close ไม่ใช้อีโมจิ (79.904908ms)
+✔ I1-B-5: ปุ่มด่วน + ไอคอนในหน้าตั้งค่า + AUDIO สถานะตรงกัน (ไม่มีกรณีปิดรวมแต่ไอคอนเปิด) (10.538571ms)
+(node:17568) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ I1-B-3: ฟันดาบธรรมดาไม่ใส่ .atk (ไม่ยกเลิกการพลิกท่ายืน) — ท่ายืนหันขวาทุกชุด ทั้งก่อน/ระหว่าง/หลังแอนิเมชันดาบ (7.090525ms)
+✔ I1-B-3: กันถอยกลับ — ถ้ายัง .atk ตอนฟันดาบ ชุดโซน 1/2/4 จะหันซ้าย (นี่คืออาการเดิมที่คุณเป้เห็น) (14.999751ms)
+✔ I1-B-3: ท่าฟาด/ท่าชาร์จที่วาดหันขวามาแต่ต้น (ไม่ใช่ฟันดาบ) ยังได้ .atk เหมือนเดิม (0.881422ms)
+✔ I1-B-3: arena() ใช้ figYouAtkClass กับ fx จริง และ CSS ที่ตัดการพลิกยังผูกกับ .atk เท่านั้น (11.237228ms)
+✔ I1-B-3: แผ่นดาบทุกชุด (ดาบเดิมและดาบโซน) ใช้เฟรมที่หันขวา — ไม่มีตารางซ่อมทิศเหลือ (3.722134ms)
+(node:17573) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: walk to replay boss shows talk button and starts existing challenge (446.931631ms)
+✔ th: invasion boss uses lower position and talk label, without a duplicate replay boss (75.174481ms)
+✔ asia: walk to replay boss shows talk button and starts existing challenge (629.570751ms)
+✔ asia: invasion boss uses lower position and talk label, without a duplicate replay boss (4.958314ms)
+✔ west: walk to replay boss shows talk button and starts existing challenge (593.452883ms)
+✔ west: invasion boss uses lower position and talk label, without a duplicate replay boss (5.096416ms)
+✔ cyberhell: walk to replay boss shows talk button and starts existing challenge (449.607735ms)
+✔ cyberhell: invasion boss uses lower position and talk label, without a duplicate replay boss (5.939248ms)
+(node:17574) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ J1 fire: rejects reuse without cost; ready exactly after 12 active seconds (107.386104ms)
+✔ J1 windFan: rejects reuse without cost; ready exactly after 18 active seconds (16.110058ms)
+✔ J1 ice: rejects reuse without cost; ready exactly after 16 active seconds (3.72508ms)
+✔ J1 hypno: rejects reuse without cost; ready exactly after 24 active seconds (10.852847ms)
+✔ J1 flameCharge: rejects reuse without cost; ready exactly after 28 active seconds (6.8422ms)
+✔ J1 valkyrieSpear: rejects reuse without cost; ready exactly after 40 active seconds (5.636909ms)
+✔ J1 rage: rejects reuse without cost; ready exactly after 60 active seconds (6.185101ms)
+✔ J1 cooldown clock shares pause/hidden rules with team, resets powers; sword has no cooldown (9.09287ms)
+✔ J1 Rage targets only Yama, does no enemy damage, consumes three boosted strikes (17.629675ms)
+✔ J1 rage assets expect J2 filenames and retain real charge pose fallback (5.660314ms)
+✔ J1 direction audit: every standing team sprite renders right using independent image audit (4.401214ms)
+✔ J1 court distance reused at 1600x900; ally wheel above without overlaps (1.955446ms)
+✔ J1 court distance reused at 1280x720; ally wheel above without overlaps (0.521626ms)
+✔ J1 power menu removes inherited oval shadows, compacts rows, shows and updates cooldown numbers (20.233177ms)
+✔ J1 reference numbers are derived from the final court CSS, not an arbitrary battle gap (3.384687ms)
+(node:17584) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ J3 bag rejects other recipients; Nira food restores hunger only and medicine HP only (95.408275ms)
+✔ J3 fallen guard stays out of current battle, returns to map/reload at HP 1 without auto healing (134.470192ms)
+✔ J3 guard travels on map, rests exactly 120 s across saves, resumes original post and automatic combat slot (523.579439ms)
+✔ J3 UI exposes per actor bag-stock controls and current zone guard, without old bag or Nira bulk controls (6.711354ms)
+(node:17585) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ J4 real dossier renderers use numeric colours for merits, karma and relief, including blood donation (5.349071ms)
+✔ J4 mirror only blocks its foot, with reachable front and back depth ordering (6.10361ms)
+✔ J4 gate souls shift onto raised platforms and training is removed only there (170.647569ms)
+✔ J4 prison escort keeps soul until walking completes, rejects duplicate and transfers exactly once (221.135326ms)
+✔ J4 prison controls have no proximity gate and handbook renders all chapters together (1.994387ms)
+✔ J4 both prison outcomes carry Dam along the map route, arriving only after the walk (636.896446ms)
+✔ the 20 painted chunks exist and tile the whole 3840x2560 world without gaps (13.09728ms)
+✔ chunk pixel sizes match the world scale (1.28 painted px per unit) and the preview is the whole map (1606.460036ms)
+✔ old tile terrain and removed scenery art are no longer preloaded; the preview is (3.880587ms)
+✔ the heavy 4915x3277 master is not committed (0.596416ms)
+✔ K2 interactive rows keep a stationary hit area through pointerdown and click (18.810814ms)
+✔ K2 normal formation compresses both diagonal axes to 60–65% and advances group (12.964361ms)
+✖ K2 changed entry URLs match, including review imports (16.319167ms)
+✔ K2 pointerdown captures primary input, leaves activation to one native click (4.586007ms)
+✔ K2 review: hint box cannot swallow enemy clicks and flyout names are not width-capped (1.692291ms)
+✔ per-frame scenery drawing never assigns ctx.filter (tints are baked once per image and biome) (3.461825ms)
+✔ scenery and its shadows skip props outside the camera rectangle (0.636427ms)
+✔ K1d terrain: painted chunks are lazy, culled to the camera, and nothing is repainted per frame (0.742639ms)
+✔ K5 flyout stays beside its tab when nothing is in the way (22.360103ms)
+✔ K5 flyout never lands on an enemy HP bar: it moves below the enemy row (5.288258ms)
+✔ K5 flyout opens to the other side when the near side is blocked and moving costs more (0.736243ms)
+✔ K5 a covered enemy costs more than covering an ally or the talk box (4.528954ms)
+✔ K5 a tall flyout is shortened (it scrolls) instead of running off the stage (1.579384ms)
+✔ K5 candidates outside the stage or with no usable height are skipped (0.874455ms)
+✔ K5 safety margin: a box that only touches the padded enemy rect still counts as a hit (0.815804ms)
+✖ K5 wiring: ui.js measures enemies, hint strip is thin, cache-bust is -k5 in both entry pages (27.971898ms)
+(node:17630) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ M1: camera edges and pointer round trips at both zoom levels, with letterboxing (51.991684ms)
+✔ M1: backing follows viewport and capped DPR; redraw does not resize; smoothing stays high (3.72941ms)
+✔ M1: UI camera keeps DOM anchors and pointers aligned through town follow zoom and overview (237.776402ms)
+✔ M1: downscaled sprites are resampled once per device size, then blitted from the cache (3.359111ms)
+(node:17631) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ M2: every zone has an exact door route from both spawns; 1px stepTo movement stays on terrain
+  ✔ th/sala from 1922,1078 (872.104616ms)
+  ✔ th/sala from 1917,2200 (117.969362ms)
+  ✔ th/krata from 1922,1078 (417.5459ms)
+  ✔ th/krata from 1917,2200 (121.42667ms)
+  ✔ th/dab from 1922,1078 (80.189911ms)
+  ✔ th/dab from 1917,2200 (94.496573ms)
+  ✔ th/lokan from 1922,1078 (63.124339ms)
+  ✔ th/lokan from 1917,2200 (172.263046ms)
+  ✔ th/ngiw from 1922,1078 (123.196762ms)
+  ✔ th/ngiw from 1917,2200 (83.411561ms)
+  ✔ th/lan from 1922,1078 (39.497149ms)
+  ✔ th/lan from 1917,2200 (56.655686ms)
+  ✔ th/tea from 1922,1078 (18.480467ms)
+  ✔ th/tea from 1917,2200 (58.505235ms)
+  ✔ th/tarang from 1922,1078 (29.070694ms)
+  ✔ th/tarang from 1917,2200 (46.679736ms)
+  ✔ th/krajok from 1922,1078 (150.104315ms)
+  ✔ th/krajok from 1917,2200 (110.948513ms)
+  ✔ th/sawan from 1922,1078 (28.72752ms)
+  ✔ th/sawan from 1917,2200 (44.972623ms)
+  ✔ th/frontier from 1922,1078 (25.555349ms)
+  ✔ th/frontier from 1917,2200 (0.406167ms)
+  ✔ asia/sala from 880,455 (487.505042ms)
+  ✔ asia/sala from 835,840 (59.809912ms)
+  ✔ asia/krata from 880,455 (13.545671ms)
+  ✔ asia/krata from 835,840 (20.842235ms)
+  ✔ asia/dab from 880,455 (20.358585ms)
+  ✔ asia/dab from 835,840 (27.965215ms)
+  ✔ asia/lokan from 880,455 (23.946925ms)
+  ✔ asia/lokan from 835,840 (35.747666ms)
+  ✔ asia/ngiw from 880,455 (24.999786ms)
+  ✔ asia/ngiw from 835,840 (15.706978ms)
+  ✔ asia/lan from 880,455 (9.386025ms)
+  ✔ asia/lan from 835,840 (6.435574ms)
+  ✔ asia/tea from 880,455 (22.116009ms)
+  ✔ asia/tea from 835,840 (5.299133ms)
+  ✔ asia/tarang from 880,455 (2.480784ms)
+  ✔ asia/tarang from 835,840 (6.473449ms)
+  ✔ asia/krajok from 880,455 (14.733074ms)
+  ✔ asia/krajok from 835,840 (20.153193ms)
+  ✔ asia/sawan from 880,455 (3.075487ms)
+  ✔ asia/sawan from 835,840 (5.249572ms)
+  ✔ asia/frontier from 880,455 (6.892357ms)
+  ✔ asia/frontier from 835,840 (0.44923ms)
+  ✔ west/sala from 880,455 (211.954343ms)
+  ✔ west/sala from 835,840 (64.863206ms)
+  ✔ west/krata from 880,455 (15.043731ms)
+  ✔ west/krata from 835,840 (33.548131ms)
+  ✔ west/dab from 880,455 (43.019065ms)
+  ✔ west/dab from 835,840 (35.664811ms)
+  ✔ west/lokan from 880,455 (25.312006ms)
+  ✔ west/lokan from 835,840 (26.194354ms)
+  ✔ west/ngiw from 880,455 (21.195746ms)
+  ✔ west/ngiw from 835,840 (27.76133ms)
+  ✔ west/lan from 880,455 (19.176027ms)
+  ✔ west/lan from 835,840 (7.58992ms)
+  ✔ west/tea from 880,455 (31.001828ms)
+  ✔ west/tea from 835,840 (10.12192ms)
+  ✔ west/tarang from 880,455 (5.154091ms)
+  ✔ west/tarang from 835,840 (7.014616ms)
+  ✔ west/krajok from 880,455 (23.873235ms)
+  ✔ west/krajok from 835,840 (19.773812ms)
+  ✔ west/sawan from 880,455 (4.074286ms)
+  ✔ west/sawan from 835,840 (7.471708ms)
+  ✔ west/frontier from 880,455 (11.861484ms)
+  ✔ west/frontier from 835,840 (0.792469ms)
+  ✔ cyberhell/sala from 880,455 (109.632087ms)
+  ✔ cyberhell/sala from 835,840 (36.400156ms)
+  ✔ cyberhell/krata from 880,455 (4.052628ms)
+  ✔ cyberhell/krata from 835,840 (5.197569ms)
+  ✔ cyberhell/dab from 880,455 (3.223454ms)
+  ✔ cyberhell/dab from 835,840 (4.588139ms)
+  ✔ cyberhell/lokan from 880,455 (3.539154ms)
+  ✔ cyberhell/lokan from 835,840 (5.626788ms)
+  ✔ cyberhell/ngiw from 880,455 (5.636073ms)
+  ✔ cyberhell/ngiw from 835,840 (7.632265ms)
+  ✔ cyberhell/lan from 880,455 (3.785671ms)
+  ✔ cyberhell/lan from 835,840 (3.468924ms)
+  ✔ cyberhell/tea from 880,455 (13.175271ms)
+  ✔ cyberhell/tea from 835,840 (4.521483ms)
+  ✔ cyberhell/tarang from 880,455 (1.107166ms)
+  ✔ cyberhell/tarang from 835,840 (2.909836ms)
+  ✔ cyberhell/krajok from 880,455 (8.173684ms)
+  ✔ cyberhell/krajok from 835,840 (9.30307ms)
+  ✔ cyberhell/sawan from 880,455 (1.719553ms)
+  ✔ cyberhell/sawan from 835,840 (2.518846ms)
+  ✔ cyberhell/frontier from 880,455 (4.805996ms)
+  ✔ cyberhell/frontier from 835,840 (0.45244ms)
+✔ M2: every zone has an exact door route from both spawns; 1px stepTo movement stays on terrain (40208.401882ms)
+✔ M2: map-v5 preserves bases and roof buttons; regional shrink bands do not leak into the new town (4232.29959ms)
+✔ map masks select lava and water, avoiding snow, bridges and red ground (9.104796ms)
+✔ all four zone effects move deterministically, stay bounded, and use small particle budgets (14.618248ms)
+✔ sky renders different frames and reduced motion avoids all drawing and mask work (3.948481ms)
+(node:17642) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ inventory filters only known carried items and separates recovery from trade goods (6.911573ms)
+✔ weapon comparison distinguishes additive attack bonus from different special effects (0.692908ms)
+✔ menu arrows wrap and Home/End move both selected section and focus (1.271302ms)
+✔ busy battle command dock keeps every tab disabled until the command completes (16.580287ms)
+(node:17646) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ชนะมินิเกม — speedLv +1 ไม่หักเบี้ยกรรม และตั้งคูลดาวน์ (42.458588ms)
+✔ แพ้มินิเกม — ไม่ได้ขั้น แต่ยังติดคูลดาวน์เหมือนชนะ (กันเล่นรัว) (3.782472ms)
+✔ คูลดาวน์หมดอายุตามวาระ (g.tick) — เล่นซ้ำได้เมื่อถึงเวลา (11.757806ms)
+✔ คูลดาวน์ยาวขึ้นตามขั้นที่ทำได้แล้ว (mgCooldownStep) (4.62815ms)
+✔ เพดานขั้น UPGRADES.max — ชนะซ้ำไม่ทะลุ และ mgReady เป็นเท็จเมื่อเต็มขั้น (14.94225ms)
+✔ ต้องเลื่อนขั้นยมบาทถึงระดับที่กำหนดก่อนเล่นขั้นสูง (mgLevelNeed) (3.408449ms)
+✔ สถานีที่ไม่รับวิญญาณ (pow=0 เช่นศาลาน้ำชา) ไม่มีมินิเกมเร่งการทำงาน (4.648039ms)
+✔ เซฟ/โหลด: mgCd และ speedLv รอดผ่าน snapshot -> restore (65.34262ms)
+✔ เซฟเก่าที่มี speed 4 โหลดด้วยความเร็วปกติ โดยคง speedLv สถานี (14.260221ms)
+(node:17647) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ painted apparatus aligns at the measured centres and its integer angle is playable (3.979694ms)
+✔ every successful painted-board aim calibrates to the existing reward model (21.163333ms)
+✔ mirror reserves only base clearance and ejects existing overlapping feet (2.883214ms)
+✔ F3 transparent sprite files are included in shared manifest/preload (42.23506ms)
+(node:17652) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ disciplinary counters use the current head and preserve punishment recovery in every zone (139.466673ms)
+✔ all frontier intros have localized dialogue and deployed artwork; head attacks are separate from possessed rulers (6.152165ms)
+(node:17664) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new powers require their event unlock and enough MP (80.720197ms)
+✔ wind fan damages every foe and allows the ordinary counter (9.334118ms)
+✔ Rage boosts exactly three damaging actions (25.510879ms)
+✔ Valkyrie spear is a strong MP attack (3.949938ms)
+✔ clock resets helper cooldowns once per battle (12.928237ms)
+✔ event hypnosis can be used before the old level gate (4.682903ms)
+✔ event boss stronger counter exposes its cutscene metadata (20.100506ms)
+✔ spare heart revives Yama once when a counterattack would defeat him (3.911283ms)
+(node:17665) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all named cases score and pay finite amounts at every station and intensity (133.892663ms)
+✔ zero-weight hammer verdict keeps HUD economy finite through assignment and completion (2547.343162ms)
+✔ a damaged save restores finite economy values from NaN and JSON null (35.064144ms)
+✔ nonfinite verdict rewards cannot poison economy values (9.746212ms)
+✔ one keeper can accept three souls while the first escort is still travelling (418.867712ms)
+✔ keeper assigned elsewhere reports its station and builder cannot be reassigned (3.820401ms)
+✔ all four visual powers ship four outfits, selected independently from the zone (7.742548ms)
+✔ successful interrogation powers show fitted cutscenes, including roar (11.981099ms)
+(node:17667) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary combat owns HP in one foe and keeps the old result (98.749795ms)
+✔ ordinary encounters keep one foe; Zone 2 boss arrives with two demons (55.858437ms)
+✔ case three schedules prison break once and active restore becomes pending (114.037177ms)
+✔ three foes take selected damage, counter in order, and win only when all fall (13.079061ms)
+✔ loss applies the event penalty and allows a fresh retry (5.422743ms)
+✔ ice hits every foe, spends its stun on the counter turn, then the next counter is normal (9.448746ms)
+(node:17680) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ combat powers spend MP, tea restores MP, and the values survive a save (92.116368ms)
+✔ EXP from cases and battles raises HP and MP caps without green verdict gating (7.287466ms)
+✔ zone outfit stays locked until purchased in that zone and survives a save (38.001815ms)
+✔ defeating a branch boss opens the next zone even before its old rank gate (3.717395ms)
+✔ merchant gifts need delivery to Nira and Boon before they take effect (4.21708ms)
+(node:17684) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ nearest action uses one inclusive radius, disappears out of range and handles ties (3.606985ms)
+✔ every room/zone gets a reachable entrance exit; config overrides distance (17.663052ms)
+✔ repair targets cover zones, call actual builder and preserve special station actions (63.955652ms)
+✔ old saved crew training survives load (13.124435ms)
+✔ all three map actions share the radius and follow moving Nira (4.189584ms)
+✔ prune-missing preserves curated tiers, zone names, walking metadata and order; repeated runs are stable (1262.82969ms)
+✔ every semantic soul portrait resolves to a registered regional asset (27.14947ms)
+✔ regional welcome and all six crew powers ship with their PNG assets (15.35354ms)
+✔ case-aware keys resolve to the matching image in every zone, including legacy Thai saves (67.057816ms)
+✔ semantic portraits retain a valid path even if the async manifest cannot load (59.023453ms)
+(node:17692) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29G: all eight manifest-selected Asia assets fill the real desktop renderer bounds (63.308798ms)
+✔ 29G: pointer/tick walks from spawn to work point and back to the exit staircase (239.470214ms)
+✔ 29F: all seven room lookups select the regional asset after manifest loads (64.340827ms)
+✔ 29F: every crew cutscene consumer points to one existing regional JPEG (4.632468ms)
+✔ 29F: real room dimensions preserve reference ratios; all 18 cutscenes are opaque 1375x768 (2590.095342ms)
+(node:17713) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ทุกห้องมี ui4: crop ตรงสัดส่วนกรอบแบบ · พื้นที่เดิน · ปุ่มครบ (3.765531ms)
+✔ ยมบาทเริ่มและจุดลงมือของทุกห้องอยู่ในพื้นที่เดินได้ (ไม่งั้นเดินไปกดไม่ถึง) (9.902317ms)
+✔ หนึ่งเฟรมเดินข้ามแถบห้ามเดินที่คั่นระหว่างจุดเริ่มและปลายไม่ได้ (0.570535ms)
+✔ ข้อความของห้องมีทั้งไทยและอังกฤษ และตัวเลขความจุไม่ถูกฝังในข้อความ (48.866047ms)
+(node:17715) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ S6: interlude video stops when the host <dialog> closes (overlay root is a div) (4.685005ms)
+✔ S6: finishing the interlude removes the dialog close listener (3.536731ms)
+✔ S5: krajok/sala labels and sala tip have TH and EN text, no raw Thai literals in the specs (3.44795ms)
+✔ camera smoothing keeps the world in bounds at every edge, including resize (8.630829ms)
+✔ camera movement is independent of frame rate and reduced motion snaps to target (2.788261ms)
+✔ camera offsets round-trip pointer coordinates and floating button positions (0.585899ms)
+✔ frontier weather is bounded and reduced motion keeps only static light (3.855961ms)
+(node:17730) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ zone1 uses its large city and zone2–4 retain shared legacy geometry when traveling (429.235587ms)
+✔ ภาพจริงกันธารโซน 2–4 และให้เดินข้ามสะพานถึงจุดงาน (2207.689097ms)
+✔ ยักษ์เดินกลับจุดเฝ้าจากท่าเรือและขอบล่างในทุกโซน แล้วหยุดนิ่ง (17045.009087ms)
+✔ spawnMob เลือกเฉพาะจุดขอบล่างที่ findPath เชื่อมถึงจุดเฝ้า ทุกโซน (19039.830714ms)
+✔ ยักษ์ปราบปีศาจจากท่าเรือขวาแล้วกลับจุดเฝ้าในโซนไทยและบูรพา (1118.595813ms)
+✔ ยักษ์ snap จุดแวะขณะไล่ปีศาจที่เฟรม 16ms แล้วเดินถึงเป้าหมาย (562.270694ms)
+✔ เซฟผังเก่าโซน 2–4 ย้ายผู้เล่น ของตก ยมทูต และยักษ์ครั้งเดียว (41.31225ms)
+✔ เซฟที่ยักษ์ยืนจุดเฝ้าเก่าย้ายมาจุดใหม่ทุกโซน (7.383238ms)
+✔ skill atk: new sprites decode as 512x512 RGBA with transparent corners (498.173153ms)
+✔ skill atk: manifest, catalog and preload tier cover all four outfits (39.739442ms)
+✔ skill atk: real artUrl and heroAtk select the outfit pose and face right during a non-sword skill (52.34057ms)
+✖ skill atk: release cache retains facing tokens and shares one preload module URL (21.847721ms)
+(node:17739) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ศึกวิญญาณใช้รูปตามคดี และ HUD ยังรองรับ sp ตัวเลขจากเซฟเก่า (50.302993ms)
+✔ ui.js ไม่เรียก string method บน sp ตรง ๆ (sp เป็นได้ทั้งตัวเลขและสตริง) (9.469353ms)
+(node:17740) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case identity overrides numbered sprite and preserves profession and sex (17.298083ms)
+✔ large male business roles get their body archetype without changing guilt or younger/female identity (3.91382ms)
+✔ Thai and other branches resolve canonical roles consistently after restyling (2.297653ms)
+✔ legacy save reconciliation covers queue, stations, jail, walkers, closed cases and other branches (2.012275ms)
+✔ game spawn, restore, returned cases and soul battles keep semantic portraits (73.118729ms)
+✔ explicitly elderly women select elder art before adult profession roles in every branch (1.727918ms)
+✔ Thai legacy numbers cannot override sex, age or the case profession (0.72146ms)
+(node:17741) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all story and deva panels exist in the project and preload manifest (10.856907ms)
+✔ four opening waves use existing CyberHell minions and assets (81.423835ms)
+✔ reinforcements follow wave four rewards; independent ruler fights preserve the roster (30.832561ms)
+✔ all four rulers have separate identities and final combat assets (1.49259ms)
+(node:17758) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ rhythm matches lane and press window; spam and expired notes count once (8.075848ms)
+✔ both schools can be won across 100 seeds, end once, and never reward after completion (934.398675ms)
+✔ slices use complete swept segment, not only endpoint; each log counts once (22.592948ms)
+✔ idle play loses; malformed inputs and pause cancellation cannot create hits (4.446902ms)
+✔ both sword hosts freeze inputs/time while paused or hidden and remove frames/listeners on close (14.067535ms)
+(node:17762) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ red warnings escalate per regional authority, persist, and end in cauldron/tea recovery (224.482774ms)
+✔ every regional boss ultimate hits Yama, both companions and Guard; ordinary counter hits one (32.036963ms)
+✔ zone-one event boss uses its own cutscene rather than frontier artwork (2.883341ms)
+✔ confession stays tied to temple-land/drug claim and does not reveal unrelated supplement fraud (2.535956ms)
+✔ five intensity colors map consistently; mitigating deeds subtract from the sentence (7.674546ms)
+✔ procedural claims keep both visible and hidden deeds interrogatable without changing subjects (9.185424ms)
+✔ special cooldown remains locked until exactly two minutes of battle time (20.47317ms)
+(node:17769) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ bed purchases are per zone, charged once and require a completed tea pavilion (85.124903ms)
+✔ losses queue recovery without ending the game; recovery survives saving and restores full HP (151.823661ms)
+✔ tea backgrounds fill desktop and portrait canvases without distorting their aspect ratio (3.616548ms)
+✔ tea restores only MP; sleep gradually restores HP without blackout and wakes fully recovered (96.592091ms)
+(node:17773) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all four zones resolve complete exterior, arena and frontier sets shipped in preload (9.527443ms)
+✔ simple sentence ignores other guilt weights and fake merit, and clamps to levels one to five (1.215636ms)
+✔ pending cases update across saved zones without changing handed-down punishments (66.73707ms)
+✔ large city has connected avenues, yards and waterfront entrances (223.543305ms)
+✔ housing, river outside the frontier island and world edges cannot be crossed (1.077489ms)
+✔ lava retains luminous orange while stone is dark and readable (3.858097ms)
+(node:17808) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ only zone1 opens in town follow view; other branches retain overview and zoom (14.777886ms)
+✔ town action preserves NPC/event priority, construction access, and frontier reach (39.869195ms)
+✔ minimap reads current construction status without changing world or saves (13.180004ms)
+(node:17809) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ zone1 town plaza reaches every entrance with initial buildings (3904.188095ms)
+✔ zone1 town plaza reaches every entrance with all buildings built (7054.914675ms)
+✔ decorations have unique ids, art or a placeholder height, and a small solid root (14.8468ms)
+✔ placeholders are only the three drawings still to be made (2.749601ms)
+✔ houses: only the ground floor blocks (0.804695ms)
+✔ walk mask covers a sensible share of the world and blocks the soul river and lava (16.227959ms)
+✔ rooted props leave service doors, crew, dais and queue anchors accessible (2.669713ms)
+✔ camera world rectangle stays inside the map at edges, with a true full-map overview (13.914831ms)
+✔ residential facade occlusion sorts by its ground base (0.695248ms)
+✔ decorative roots occupy closed scenery ground, leaving civic center walkable (1.481008ms)
+✔ near scenery travels faster and distant scenery slower than the clamped camera (23.464283ms)
+✔ new game starts in the large city with city station and NPC anchors (233.576286ms)
+✔ old city save preserves progress and migrates positions only once (42.140058ms)
+✔ travel restores legacy branch geometry and returns to the city without moving other zones (250.225297ms)
+✔ loading an old save in another branch migrates its stored city without relocating the active branch (85.563816ms)
+✔ city routes reach every plot, built doorway, merchant and frontier through walkable ground (2037.470946ms)
+✔ city exploration retains previous-boss gates for zone travel (2.882671ms)
+(node:17818) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ หอทะเบียนกรรมไม่ใช่สถานที่ที่เลือกส่งวิญญาณได้ · ส่งไม่ได้ด้วย (41.347706ms)
+✔ ทุกโซน: ตัวเลือกสถานที่ทุกตัวมีอยู่จริงในโซนนั้น มีฉากห้อง และส่งไปแล้วทำงานได้ (2821.498345ms)
+(node:17819) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ no power keeps the case answer hidden while the same station still earns its bonus (41.601812ms)
+✔ mirror reveals the bonus station, deserved intensity and highest scoring assignable keeper for this case (41.886437ms)
+✔ mirror names the strongest keeper and why they cannot take the case when all are busy (4.395188ms)
+✔ an occupied matching station recommends only its assigned keeper (5.055837ms)
+✔ hypnosis confesses every hidden deed and reveals only the matching station (11.933214ms)
+✔ mirror gives a pure soul the heaven gate and zero punishment (20.680483ms)
+(node:17833) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29H: every sin targets the plea that actually reveals the primary deed, rather than the first denial (91.839953ms)
+✔ 29H: all authored targets are proved by pressing the indicated issue (155.503758ms)
+✔ 29H: used target, no matching issue, pure souls and exhausted attempts do not consume roar (71.957165ms)
+✔ 29H: hypnosis renders the station on the wheel with no force/keeper reveal, even before construction (17.142242ms)
+✔ 29H: mirror renders station, force and keeper, and marks the primary issue before construction too (20.959005ms)
+✔ 29H: desktop advice bounds stay in the stage and viewport at both required sizes (CSS geometry) (0.762503ms)
+(node:17838) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ town main avenue and zone2–4 main bridges can be crossed in both directions (2336.129205ms)
+✔ town lava bridge polyline and zone2–4 western bridges remain wide and traversable (1075.818668ms)
+✔ ruler throne follows the new city platform and original branch chairs (29.555733ms)
+✔ ตะรางรอวาระมีตั้งแต่เกมใหม่ทุกโซน ไม่ต้องซื้อ และสร้างซ้ำไม่ได้ (434.832001ms)
+✔ เซฟเก่าที่ไม่มีตะรางและมีของวางบนแผนที่ → ได้ตะราง + ของเข้ากระเป๋า (99.822008ms)
+✔ ไม่มีของโผล่บนแผนที่ แม้ MP หมดและมีเปรตบุก (241.532967ms)
+✔ ปราบเปรตบนแผนที่ → ได้ของ 1 ชิ้นจากรายการ เข้ากระเป๋าตรง ๆ พร้อมแจ้งชื่อ (380.150964ms)
+✔ ชนะฉากต่อสู้กับเปรต/วิญญาณขัดขืน → ได้ของ 1 ชิ้น · แพ้ไม่ได้ (42.070149ms)
+✔ ศึกบอส/เทวดา/อีเวนต์ทุกตัวในเกม ให้ EXP จริงและไม่ได้ winLoot (712.088032ms)
+✔ บอสโซน (zoneBoss) ได้ EXP 100 ไม่ได้ winLoot (37.044113ms)
+✔ ชายแดน: ชนะกิจกรรมอิสระได้ winLoot เพิ่ม 1 ชิ้นจากตาราง 6 อย่าง (13.028187ms)
+✔ ชายแดน: ศึก event หลายระลอกได้ winLoot ครั้งเดียวต่อศึก (th breach + โซน 2–4) (272.684379ms)
+✔ ดอกบัวมีขายที่พ่อค้านรกอยู่แล้ว (65 เบี้ย) และซื้อได้ (11.582991ms)
+✔ พญายมโผล่บนเก้าอี้ — ยมบาทที่ยืนทับถอยไปข้างแท่น ไม่ทับกัน และถอยครั้งเดียวต่อการปรากฏ (4154.034201ms)
+(node:17842) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing a prison alert leaves a clickable raider that burns buildings and survives restore (778.925001ms)
+✔ closed wave alerts restore their raiders in each zone (70.965971ms)
+✔ deva and waiting boss are clickable on the right bridge (2.868934ms)
+✔ a dismissed branch boss stays pending through restore and can be challenged from its alert (14.31032ms)
+✔ west and CyberHell wave mobs use local rosters and preserve encounter stats (14.481868ms)
+✔ event preparation merchant stays locked until the CyberHell rescue is cleared (4.989035ms)
+(node:17849) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ประตูสวรรค์ ดงต้นงิ้ว หอส่องกรรม ถูกขยายและกรอบคลิกใหญ่ตามภาพ (28A ข้อ 1) (3.720151ms)
+✔ E1 supersedes 28A: tea mirrors only in west (11.556724ms)
+✔ โซนบูรพาไม่มีคำโปรยประเทศ โซนอื่นยังมี (28A ข้อ 7) (239.355033ms)
+✔ ชนะศึกปีศาจฝ่าชายแดนแล้วไปแผนที่ชายแดน; แพ้/ศึกอื่นไม่ไป (28A ข้อ 5) (79.849656ms)
+✔ ภาพ cutscene ท่าไม้ตายบอส/เทวดาอยู่ใน img/ ที่ commit จริง ทุกโซน (28A ข้อ 6) (83.395923ms)
+(node:17866) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29E: fresh zone shows TH/EN next steps; build and manual jail hold are real actions (305.797222ms)
+✔ 29E: event alert has one close action, no pause/X; close dismisses and start still works (43.346585ms)
+(node:17879) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ adjacent coarse cells cannot shortcut the narrow closed root between two open sides (202.725907ms)
+✔ west-hit: ท่าโดนตี (cry) หันขวาทุกชุด รวมชุดปัจฉิม — cry ทุกชุดวาดหันซ้าย ต้องถูกพลิก (ไม่ใช่ face-native) (14.259474ms)
+✔ west-hit: ท่ายืนและท่า atk/rage หันขวาทุกชุด (ท่ายืน+ท่าฟาด มี/ไม่มี .atk ตามที่ ui.js ใช้จริง) (2.074317ms)
+✔ west-hit: สกิลที่ยังไม่มีท่า atk ของชุดนั้น (ถอยไปโชว์ท่ายืน) ห้ามได้ .atk — ไม่งั้นโซน 4 หันซ้าย (0.948244ms)
+✖ west-hit: arena() — ท่าโดนตีไม่เคยได้ .atk และส่ง standing ให้ figYouAtkClass · CSS ยังผูก .atk กับการยกเลิกพลิกเท่านั้น (14.788299ms)
+(node:17907) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all 36 regional rooms draw their new background and allow service, training and exit travel (1945.103701ms)
+✔ all outfits use the shipped 8-frame walk with the existing full stride and fixed feet root (13.996481ms)
+✔ stopped hero blinks using new poses without changing scale or anchor (1.380174ms)
+✔ sword idle uses six poses and all zone exports are preloaded (3.807617ms)
+(node:17915) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all four outfits have shipped transparent atlases and consistent frame anchors (13.030181ms)
+✔ corrected v4 outfits are registered in both manifest and regional preload catalog (2.770173ms)
+✔ slash follows the lunge and stops on recovery, never wraps back into another strike (0.921682ms)
+✔ only Yama ordinary attack uses sword, including while rage is active (0.79496ms)
+✔ canvas crops the selected frame and keeps the feet fixed when facing either way (8.360232ms)
+✔ sword training accepts each note once and exposes the next note (2.101781ms)
+(node:17923) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ จุดเกิด/ปลายทางตอนเข้าโซน และจุดสำคัญของทุกโซน อยู่ในพื้นที่เดินได้และเดินถึงกัน (5007.173944ms)
+✔ เข้าโซน 2–4 ครั้งแรก: ยมบาทกับนิราออกจากประตูชายแดน ถึงแท่นและจุดประจำ ไม่ติดกลางทาง (1161.231938ms)
+(node:17933) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ arrival introductions name the friendly ruler, separate from hostile inspectors (7.154539ms)
+✔ every crew power resolves the current branch JPEG; Thai keeps its existing JPEG (26.707917ms)
+✔ followers remain on the same bridge even at corners and catch up at the destination (1.64195ms)
+✔ completed regional introductions survive saves; older saves leave new introductions available (151.926281ms)
+✔ แผนที่มีทางเดินเชื่อมทุกคู่โซนและกลับทางเดิมได้ (26.232576ms)
+(node:17948) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ physical border, checkpoint and city exit guards are enforced by game methods (51.144402ms)
+✔ real dungeon victories unlock arrival then dock interaction, keeping local cities on boat return (360.91083ms)
+✔ dungeon encounter cleanup leaves ordinary city mobs intact and saves checkpoint position (38.841707ms)
+✔ boss victory opens only adjacent dungeon and cannot skip straight into next city (26.611033ms)
+✔ loss retries current checkpoint; unrelated and duplicate battle results do not advance (0.859595ms)
+✔ first arrival requires route completion, then separate harbour activation unlocks boat return (3.790827ms)
+✔ restore preserves cleared checkpoints but resets in-flight combat for a safe retry (1.219269ms)
+✔ legacy migration preserves actually visited towns without unlocking boss-only destinations (0.709812ms)
+✔ invalid saved route indices/evidence and unknown ports cannot unlock travel (0.660936ms)
+✔ busy states prevent travel, dock activation, leaving and new encounters (0.646815ms)
+✔ each subsequent boss gates its own route and full route chain visits all cities (0.864091ms)
+(node:17958) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ hypnosis enemies match selected party and Guard; freed allies return before vampire (530.095266ms)
+✔ mirror reflection follows angle and charges only with unlocked mirror, room, correct aim and cooldown (9.3089ms)
+✔ HP increases during sleep without a blackout; western standing art faces right (2.226883ms)
+✔ ready queue identifies only missing assets, including after a failed download (3.633589ms)
+ℹ tests 943
+ℹ suites 0
+ℹ pass 933
+ℹ fail 10
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 204545.114429
+
+✖ failing tests:
+
+test at tests/construction-arrival.test.mjs:186:1
+✖ two builds approach concurrently and retain each owner and build-work render state (917.984321ms)
+  Error: Command failed: python3 -c from PIL import Image; import sys; im=Image.open(sys.argv[1]).convert("RGBA"); sys.stdout.buffer.write(im.resize((int(sys.argv[2]),int(sys.argv[3])), Image.Resampling.BILINEAR).tobytes()) /Users/agapae/agapae-work/AVEGEE/img/map-zone1/v2/zone1-terrain-v2-preview.webp undefined undefined
+  Traceback (most recent call last):
+    File "<string>", line 1, in <module>
+      from PIL import Image; import sys; im=Image.open(sys.argv[1]).convert("RGBA"); sys.stdout.buffer.write(im.resize((int(sys.argv[2]),int(sys.argv[3])), Image.Resampling.BILINEAR).tobytes())
+                                                                                                                        ~~~^^^^^^^^^^^^^
+  ValueError: invalid literal for int() with base 10: 'undefined'
+  
+      at genericNodeError (node:internal/errors:999:15)
+      at wrappedFn (node:internal/errors:544:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at Proxy.getImageData (file:///Users/agapae/agapae-work/AVEGEE/tests/construction-arrival.test.mjs:34:45)
+      at layers (file:///Users/agapae/agapae-work/AVEGEE/src/town-lighting.js?v=fire-v2:23:18)
+      at drawHellTerrain (file:///Users/agapae/agapae-work/AVEGEE/src/town-lighting.js?v=fire-v2:34:13)
+      at drawTownTerrain (file:///Users/agapae/agapae-work/AVEGEE/src/town-terrain.js?v=k1d:85:7)
+      at render (file:///Users/agapae/agapae-work/AVEGEE/src/scene.js:211:5)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/construction-arrival.test.mjs:203:3) {
+    status: 1,
+    signal: null,
+    output: [ null, <Buffer >, <Buffer 54 72 61 63 65 62 61 63 6b 20 28 6d 6f 73 74 20 72 65 63 65 6e 74 20 63 61 6c 6c 20 6c 61 73 74 29 3a 0a 20 20 46 69 6c 65 20 22 3c 73 74 72 69 6e 67 ... 415 more bytes> ],
+    pid: 20110,
+    stdout: <Buffer >,
+    stderr: <Buffer 54 72 61 63 65 62 61 63 6b 20 28 6d 6f 73 74 20 72 65 63 65 6e 74 20 63 61 6c 6c 20 6c 61 73 74 29 3a 0a 20 20 46 69 6c 65 20 22 3c 73 74 72 69 6e 67 ... 415 more bytes>
+  }
+
+test at tests/f2-ui.test.mjs:216:1
+✖ ไม่แตะ walk*/room walking และมินิเกมกระจก (ใบ F1/F3) · เวอร์ชัน cache-bust ขยับแล้ว (7.865412ms)
+  AssertionError [ERR_ASSERTION]: UI module keeps a dated cache version after the facing fix
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/f2-ui.test.mjs:220:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/h5b-cover-fx.test.mjs:171:1
+✖ fx loads the v4 masks and the h5b module cache-busts with the intro-v3-coverfx suffix (7.321385ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /src\/ui\.js\?v=20261009[^"]*-zoom-intro-v3(-[a-z0-9]+)*"/. Input:
+  
+  '<!doctype html>\n' +
+    '<html lang="th">\n' +
+    '<head>\n' +
+    '<meta charset="utf-8">\n' +
+    '<meta name="avegee-build" content="20261015-layered-battle9-r2">\n' +
+    '<meta name="viewport" content="width=device-width,initial-scale=1">\n' +
+    '<title>อเวจี — นรกโซนสุวรรณภูมิ</title>\n' +
+    '<meta name="description" content="เกมบริหารนรกโซนไทย — ยมบาทมือใหม่ที่ต้องพิพากษาให้ตรงกรรม">\n' +
+    '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+    '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Trirong:wght@600;700&display=swap" rel="stylesheet">\n' +
+    '<style>\n' +
+    '/* ---------- token: ธีมมืด ตั้งชื่อตาม DESIGN.md ---------- */\n' +
+    ':root{\n' +
+    '  --background:#140a0e;      --foreground:#f2e6dd;\n' +
+    '  --card:#1e1015;            --card-foreground:#f2e6dd;\n' +
+    '  --muted:#2a171d;           --muted-foreground:#b09a92;\n' +
+    '  --secondary:#33202a;       --secondary-foreground:#f2e6dd;\n' +
+    '  --accent:#3d2029;          --accent-foreground:#ffd9b0;\n' +
+    '  --primary:#c2381f;         --primary-foreground:#fff4ee;\n' +
+    '  --gold:#d4a355;            --gold-foreground:#1a0d10;\n' +
+    '  --success:#4a9d6a;         --warning:#e0a132;  --destructive:#e04a2f;\n' +
+    '  --border:#3a222a;          --input:#54353f;    --ring:#d4a355;\n' +
+    '  /* หน้าสอบสวน+ต่อสู้ธีมใหม่ 18 ก.ย. 2569 (สเปก Vera) — ม่วงเข้มที่ --accent เดิมไม่พอชัด */\n' +
+    '  --hell-purple-1:#241129;   /* ม่วงเข้มเกือบดำ — พื้นหลังกรอบ/แถบเมนู */\n' +
+    '  --hell-purple-2:#4a1f3d;   /* ม่วงอมแดง — จุดไล่สีสว่างขึ้นของการ์ด/ปุ่ม */\n' +
+    '\n' +
+    '  --radius:0.75rem; --radius-sm:calc(var(--radius)*.5); --radius-md:calc(var(--radius)*.75);\n' +
+    '  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.5rem;\n' +
+    '  --font-sans:"IBM Plex Sans Thai","Noto Sans Thai",-apple-system,sans-serif;\n' +
+    '  --font-display:"Trirong",Georgia,serif;\n' +
+    '  --text-xs:.8125rem; --text-sm:.9375rem; --text-base:1rem;\n' +
+    '  --leading-body:1.7;\n' +
+    '}\n' +
+    '*{box-sizing:border-box}\n' +
+    'html,body{margin:0;height:100%}\n' +
+    'body{\n' +
+    '  background:radial-gradient(1200px 700px at 50% -10%,#2a1016 0%,var(--background) 60%);\n' +
+    '  color:var(--foreground); font-family:var(--font-sans); font-size:var(--text-base);\n' +
+    '  -webkit-font-smoothing:antialiased;\n' +
+    '}\n' +
+    '/* ---------- ข้อ D ชุด 15 — .wrap เป็นเปลือกเกมเต็มจอ (แทนหน้าเว็บเลื่อนแบบเดิม) ----------\n' +
+    '   เคารพ safe-area (รอยบาก/แถบโฮมมือถือ) ตามกติกา portrait-first */\n' +
+    '.wrap{position:fixed;inset:0;display:flex;flex-direction:column;\n' +
+    '  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);\n' +
+    '  background:#0b0508;overflow:hidden}\n' +
+    '\n' +
+    '/* ---------- แถบทรัพยากรเดิม (เหลือไว้ให้ header ใน legacy-drawer ใช้) ---------- */\n' +
+    'header{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}\n' +
+    '#ava{object-fit:cover;object-position:center top;\n' +
+    '  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px}\n' +
+    'h1{font-family:var(--font-display);font-size:1.5rem;margin:0;color:var(--gold);letter-spacing:.5px}\n' +
+    'h1 small{display:block;font-family:var(--font-sans);font-size:var(--text-xs);color:var(--muted-foreground);font-weight:400;letter-spacing:0}\n' +
+    '/* ปุ่มระบบย้ายขึ้นมาบนหัวเรื่อง 8 ก.ย. 2569 — เดิมอยู่ใต้ฉาก ต้องเลื่อนหาทุกครั้ง */\n' +
+    '.sysbtn{display:flex;gap:5px;flex-wrap:wrap;width:100%;justify-content:flex-end}\n' +
+    '.sysbtn button{padding:5px 10px;min-height:0;font-size:var(--text-xs)}\n' +
+    '@media(max-width:820px){.sysbtn{justify-content:flex-start}.sysbtn button{flex:1 1 auto}}\n' +
+    '.chip{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);\n' +
+    '  padding:6px 10px;font-size:var(--text-sm);display:flex;gap:6px;align-items:center;white-space:nowrap}\n' +
+    '.chip b{font-variant-numeric:tabular-nums}\n' +
+    '.bar{width:70px;height:6px;background:var(--muted);border-radius:99px;overflow:hidden}\n' +
+    '.bar i{display:block;height:100%;background:var(--gold)}\n' +
+    '.bar.karma i{background:var(--destructive)}\n' +
+    '.bar.hp i{background:var(--success)}\n' +
+    '\n' +
+    '/* ข้อ D ชุด 13 คุณเป้ 26 ก.ย. 2569 — แถบหิว + ปุ่มป้อนข้าวปั้น ใช้ร่วมกัน 3 จุด (ดู hungerWidget ใน ui.js) */\n' +
+    '.hunger-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}\n' +
+    '.hunger-line small{white-space:nowrap}\n' +
+    '.hunger-line .rest-name{flex-basis:100%;font-size:13px}\n' +
+    '\n' +
+    '/* ---------- เลย์เอาต์หลัก ----------\n' +
+    '   ฉากกินเต็มความกว้าง แผงควบคุมกับบันทึกอยู่ใต้ฉาก\n' +
+    '   (เดิมแผงอยู่ข้าง ๆ ทำให้ฉากเหลือความกว้างไม่ถึงสองในสาม) */\n' +
+    '.below{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}\n' +
+    '@media(max-width:900px){.below{grid-template-columns:1fr}}\n' +
+    '/* ---------- ข้อ D ชุด 15 — .stage เต็มพื้นที่ที่เหลือของจอ (ไม่มีกรอบ/แถบข้อความรอบนอกแบบเดิม)\n' +
+    '   .scene-box ล็อกอัตราส่วน 1527:704 อยู่ข้างใน จัดกลางด้วย flex — เกิด letterbox บน/ล่างหรือซ้าย/ขวา\n' +
+    '   แทนการครอป (ยังไม่ทำ D.1 ส่วนภาพ/พิกัดใหม่รอบนี้ — ดูรายงาน Toby ว่าทำไม) */\n' +
+    '.stage{flex:1;min-height:0;position:relative;overflow:hidden;\n' +
+    '  background:#0b0508;display:flex;align-items:center;justify-content:center}\n' +
+    '/* ขนาดจริง (px) ตั้งโดย fitSceneBox() ใน ui.js ผ่าน ResizeObserver — CSS aspect-ratio ล้วนๆ\n' +
+    '   ผสมกับ flex-centering มีเคสมุมขอบที่ clamp ผิดแกน (max-width ตัดแล้ว height ไม่รีเคลียร์ตาม)\n' +
+    '   ใช้ JS วัดจริงชัวร์กว่า กัน #ov/canvas เพี้ยนตำแหน่งซึ่งกระทบการคลิกทั้งเกม */\n' +
+    '.scene-box{position:relative}\n' +
+    '.scene-box canvas{position:absolute;inset:0;width:100%;height:100%}\n' +
+    '\n' +
+    '/* ป้ายบอกว่าวาระหยุดเดินอยู่ — ของเดิมรู้ได้จากตัวหนังสือบนปุ่มใต้ฉากเท่านั้น\n' +
+    '   ผู้เล่นเลยนั่งรอทัณฑ์ที่ค้าง 0% อยู่นานโดยไม่รู้ว่าเกมพักอยู่ (เจ้าของเจอ 8 ก.ย. 2569) */\n' +
+    '.stage.resting::after{content:"⏸ พักอยู่ — กด \\201Cเปิดศาล\\201D ให้เวลาเดินต่อ";\n' +
+    '  position:absolute;left:50%;bottom:calc(var(--space-4) + 64px);transform:translateX(-50%);z-index:8;\n' +
+    '  background:rgba(12,6,9,.9);border:1px solid var(--gold);color:var(--gold);\n' +
+    '  border-radius:99px;padding:7px 16px;font-size:var(--text-sm);white-space:nowrap;\n' +
+    '  backdrop-filter:blur(3px);box-shadow:0 4px 18px rgba(0,0,0,.6);\n' +
+    '  animation:restpulse 2.4s ease-in-out infinite;pointer-events:none}\n' +
+    '@keyframes restpulse{0%,100%{opacity:.72}50%{opacity:1}}\n' +
+    '@media(max-width:820px){.stage.resting::after{font-size:var(--text-xs);padding:5px 11px}}\n' +
+    '\n' +
+    '/* ---------- ชั้นซ้อนบนฉาก: บับเบิลคำพูด + เมนูพลัง ----------\n' +
+    '   ทุกตำแหน่งคิดเป็น % ของภาพฉาก จึงเลื่อนตามขนาดจอเองโดยไม่ต้องคำนวณใหม่ */\n' +
+    '#ov{position:absolute;inset:0;pointer-events:none;font-size:var(--text-xs)}\n' +
+    '#ov>*{position:absolute}\n' +
+    '\n' +
+    '/* หมุดเหนือหัวตัวละคร — เอาเมาส์ไปชี้ถึงจะกางบับเบิลออกมา\n' +
+    '   (บับเบิลกางค้างไว้ตลอดบังฉากจนมองไม่เห็นแผนที่) */\n' +
+    '.mark{transform:translate(-50%,-100%);pointer-events:auto;cursor:help}\n' +
+    '.mark .pin{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;\n' +
+    '  font-size:14px;background:rgba(24,11,17,.92);border:1.5px solid var(--gold);\n' +
+    '  box-shadow:0 2px 8px rgba(0,0,0,.6);animation:pin 2.2s ease-in-out infinite}\n' +
+    '.mark.soul .pin{border-color:#7fb2e0} .mark.boss .pin{border-color:var(--primary)}\n' +
+    '@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n' +
+    '.mark .bub{display:none;position:absolute;bottom:34px;left:50%;transform:translateX(-50%)}\n' +
+    '.mark.aL .bub{left:-8px;transform:none}\n' +
+    '.mark.aR .bub{left:auto;right:-8px;transform:none}\n' +
+    '.mark:hover .bub,.mark.show .bub{display:block}\n' +
+    '.mark:hover{z-index:9}\n' +
+    '\n' +
+    '.bub{width:min(32vw,340px);background:rgba(24,11,17,.96);\n' +
+    '  border:1px solid var(--border);border-radius:var(--radius-md);padding:8px 11px;\n' +
+    '  line-height:1.6;box-shadow:var(--shadow-lg)}\n' +
+    ".bub:after{content:'';position:absolute;bottom:-8px;left:50%;margin-left:-8px;\n" +
+    '  border:8px solid transparent;border-top-color:rgba(24,11,17,.96);border-bottom:0}\n' +
+    '.mark.aL .bub:after{left:20px;margin:0} .mark.aR .bub:after{left:auto;right:20px;margin:0}\n' +
+    '.bub .who{color:var(--gold);font-weight:600;display:block;margin-bottom:3px}\n' +
+    '.bub.soul{background:rgba(18,26,38,.95);border-color:#33455c}\n' +
+    '.bub.soul:after{border-top-color:rgba(18,26,38,.95)}\n' +
+    '.bub.boss{background:rgba(38,12,10,.96);border-color:var(--primary);width:min(34vw,400px)}\n' +
+    '.bub.boss:after{border-top-color:rgba(38,12,10,.96)}\n' +
+    '.bub .line{color:var(--muted-foreground);padding:1px 0}\n' +
+    '.bub .line.truth{color:var(--gold)} .bub .line.confess{color:var(--warning)}\n' +
+    '.bub .line.false{color:var(--destructive)}\n' +
+    '\n' +
+    '/* ---------- แถบบัญชาการเหนือฉาก ----------\n' +
+    '   เดิมแผงนี้ลอยทับกลางฉากจนมองแผนที่ไม่เห็น ย้ายมาอยู่เหนือฉากเป็นแถบเต็มความกว้าง */\n' +
+    '/* ---------- แถบโค้ช: สอนทีละเรื่อง ----------\n' +
+    '   เดิมมีแต่โมดัล "วิธีเล่น" ที่เทสิบสามข้อพร้อมกัน เจ้าของบอกว่าดูยากไป (7 ก.ย. 2569) */\n' +
+    '/* ย้ายมาอยู่ล่างสุดของหน้า 8 ก.ย. 2569 — เดิมอยู่ใต้หัวเรื่อง\n' +
+    '   ทุกครั้งที่มีบทใหม่ มันดันแถบบัญชาการกับฉากเลื่อนลงไปทั้งแผง จนคลิกผิดที่ */\n' +
+    '.coach{background:linear-gradient(90deg,var(--accent),var(--card));\n' +
+    '  border:1px solid var(--gold);border-left-width:4px;border-radius:var(--radius);\n' +
+    '  padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-3);align-items:flex-start;\n' +
+    '  margin-top:auto}\n' +
+    '.coach .txt{min-width:0;flex:1}\n' +
+    '.coach b{color:var(--gold);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:2px}\n' +
+    '.coach p{margin:0;font-size:var(--text-sm);line-height:var(--leading-body)}\n' +
+    '.coach .tip{margin-top:6px;font-size:var(--text-xs);color:var(--accent-foreground)}\n' +
+    '.coach .step{font-size:var(--text-xs);color:var(--muted-foreground);white-space:nowrap}\n' +
+    '.coach button{flex-shrink:0}\n' +
+    '\n' +
+    '/* ชิปทรัพยากรกดได้ทุกอัน — กดแล้วบอกว่าแถบนั้นมีไว้ทำอะไร หมดแล้วเกิดอะไร */\n' +
+    '.chip.tap{cursor:pointer;border-color:var(--input)}\n' +
+    '.chip.tap:hover{border-color:var(--gold)}\n' +
+    ".chip.tap::after{content:'?';font-size:10px;color:var(--muted-foreground);margin-left:2px}\n" +
+    '\n' +
+    '/* ---------- แผงไต่สวน (Phase 2) ----------\n' +
+    '   คำให้การเป็นปุ่มกดได้ · จี้ถูกบรรทัดที่ขัดกับสำนวน = ได้ความจริงฟรี */\n' +
+    '.quiz .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}\n' +
+    '.quiz .press{font-size:var(--text-xs);color:var(--gold);white-space:nowrap}\n' +
+    '.quiz .press b{font-variant-numeric:tabular-nums}\n' +
+    '.say{display:block;width:100%;text-align:left;background:var(--muted);border:1px solid var(--border);\n' +
+    '  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:7px;font-size:var(--t'... 159175 more characters
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/h5b-cover-fx.test.mjs:177:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `<!doctype html>\n<html lang="th">\n<head>\n<meta charset="utf-8">\n<meta name="avegee-build" content="20261015-layered-battle9-r2">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>อเวจี — นรกโซนสุวรรณภูมิ</title>\n<meta name="description" content="เกมบริหารนรกโซนไทย — ยมบาทมือใหม่ที่ต้องพิพากษาให้ตรงกรรม">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Trirong:wght@600;700&display=swap" rel="stylesheet">\n<style>\n/* ---------- token: ธีมมืด ตั้งชื่อตาม DESIGN.md ---------- */\n:root{\n  --background:#140a0e;      --foreground:#f2e6dd;\n  --card:#1e1015;            --card-foreground:#f2e6dd;\n  --muted:#2a171d;           --muted-foreground:#b09a92;\n  --secondary:#33202a;       --secondary-foreground:#f2e6dd;\n  --accent:#3d2029;          --accent-foreground:#ffd9b0;\n  --primary:#c2381f;         --primary-foreground:#fff4ee;\n  --gold:#d4a355;            --gold-foreground:#1a0d10;\n  --success:#4a9d6a;         --warning:#e0a132;  --destructive:#e04a2f;\n  --border:#3a222a;          --input:#54353f;    --ring:#d4a355;\n  /* หน้าสอบสวน+ต่อสู้ธีมใหม่ 18 ก.ย. 2569 (สเปก Vera) — ม่วงเข้มที่ --accent เดิมไม่พอชัด */\n  --hell-purple-1:#241129;   /* ม่วงเข้มเกือบดำ — พื้นหลังกรอบ/แถบเมนู */\n  --hell-purple-2:#4a1f3d;   /* ม่วงอมแดง — จุดไล่สีสว่างขึ้นของการ์ด/ปุ่ม */\n\n  --radius:0.75rem; --radius-sm:calc(var(--radius)*.5); --radius-md:calc(var(--radius)*.75);\n  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.5rem;\n  --font-sans:"IBM Plex Sans Thai","Noto Sans Thai",-apple-system,sans-serif;\n  --font-display:"Trirong",Georgia,serif;\n  --text-xs:.8125rem; --text-sm:.9375rem; --text-base:1rem;\n  --leading-body:1.7;\n}\n*{box-sizing:border-box}\nhtml,body{margin:0;height:100%}\nbody{\n  background:radial-gradient(1200px 700px at 50% -10%,#2a1016 0%,var(--background) 60%);\n  color:var(--foreground); font-family:var(--font-sans); font-size:var(--text-base);\n  -webkit-font-smoothing:antialiased;\n}\n/* ---------- ข้อ D ชุด 15 — .wrap เป็นเปลือกเกมเต็มจอ (แทนหน้าเว็บเลื่อนแบบเดิม) ----------\n   เคารพ safe-area (รอยบาก/แถบโฮมมือถือ) ตามกติกา portrait-first */\n.wrap{position:fixed;inset:0;display:flex;flex-direction:column;\n  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);\n  background:#0b0508;overflow:hidden}\n\n/* ---------- แถบทรัพยากรเดิม (เหลือไว้ให้ header ใน legacy-drawer ใช้) ---------- */\nheader{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}\n#ava{object-fit:cover;object-position:center top;\n  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px}\nh1{font-family:var(--font-display);font-size:1.5rem;margin:0;color:var(--gold);letter-spacing:.5px}\nh1 small{display:block;font-family:var(--font-sans);font-size:var(--text-xs);color:var(--muted-foreground);font-weight:400;letter-spacing:0}\n/* ปุ่มระบบย้ายขึ้นมาบนหัวเรื่อง 8 ก.ย. 2569 — เดิมอยู่ใต้ฉาก ต้องเลื่อนหาทุกครั้ง */\n.sysbtn{display:flex;gap:5px;flex-wrap:wrap;width:100%;justify-content:flex-end}\n.sysbtn button{padding:5px 10px;min-height:0;font-size:var(--text-xs)}\n@media(max-width:820px){.sysbtn{justify-content:flex-start}.sysbtn button{flex:1 1 auto}}\n.chip{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);\n  padding:6px 10px;font-size:var(--text-sm);display:flex;gap:6px;align-items:center;white-space:nowrap}\n.chip b{font-variant-numeric:tabular-nums}\n.bar{width:70px;height:6px;background:var(--muted);border-radius:99px;overflow:hidden}\n.bar i{display:block;height:100%;background:var(--gold)}\n.bar.karma i{background:var(--destructive)}\n.bar.hp i{background:var(--success)}\n\n/* ข้อ D ชุด 13 คุณเป้ 26 ก.ย. 2569 — แถบหิว + ปุ่มป้อนข้าวปั้น ใช้ร่วมกัน 3 จุด (ดู hungerWidget ใน ui.js) */\n.hunger-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}\n.hunger-line small{white-space:nowrap}\n.hunger-line .rest-name{flex-basis:100%;font-size:13px}\n\n/* ---------- เลย์เอาต์หลัก ----------\n   ฉากกินเต็มความกว้าง แผงควบคุมกับบันทึกอยู่ใต้ฉาก\n   (เดิมแผงอยู่ข้าง ๆ ทำให้ฉากเหลือความกว้างไม่ถึงสองในสาม) */\n.below{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}\n@media(max-width:900px){.below{grid-template-columns:1fr}}\n/* ---------- ข้อ D ชุด 15 — .stage เต็มพื้นที่ที่เหลือของจอ (ไม่มีกรอบ/แถบข้อความรอบนอกแบบเดิม)\n   .scene-box ล็อกอัตราส่วน 1527:704 อยู่ข้างใน จัดกลางด้วย flex — เกิด letterbox บน/ล่างหรือซ้าย/ขวา\n   แทนการครอป (ยังไม่ทำ D.1 ส่วนภาพ/พิกัดใหม่รอบนี้ — ดูรายงาน Toby ว่าทำไม) */\n.stage{flex:1;min-height:0;position:relative;overflow:hidden;\n  background:#0b0508;display:flex;align-items:center;justify-content:center}\n/* ขนาดจริง (px) ตั้งโดย fitSceneBox() ใน ui.js ผ่าน ResizeObserver — CSS aspect-ratio ล้วนๆ\n   ผสมกับ flex-centering มีเคสมุมขอบที่ clamp ผิดแกน (max-width ตัดแล้ว height ไม่รีเคลียร์ตาม)\n   ใช้ JS วัดจริงชัวร์กว่า กัน #ov/canvas เพี้ยนตำแหน่งซึ่งกระทบการคลิกทั้งเกม */\n.scene-box{position:relative}\n.scene-box canvas{position:absolute;inset:0;width:100%;height:100%}\n\n/* ป้ายบอกว่าวาระหยุดเดินอยู่ — ของเดิมรู้ได้จากตัวหนังสือบนปุ่มใต้ฉากเท่านั้น\n   ผู้เล่นเลยนั่งรอทัณฑ์ที่ค้าง 0% อยู่นานโดยไม่รู้ว่าเกมพักอยู่ (เจ้าของเจอ 8 ก.ย. 2569) */\n.stage.resting::after{content:"⏸ พักอยู่ — กด \\201Cเปิดศาล\\201D ให้เวลาเดินต่อ";\n  position:absolute;left:50%;bottom:calc(var(--space-4) + 64px);transform:translateX(-50%);z-index:8;\n  background:rgba(12,6,9,.9);border:1px solid var(--gold);color:var(--gold);\n  border-radius:99px;padding:7px 16px;font-size:var(--text-sm);white-space:nowrap;\n  backdrop-filter:blur(3px);box-shadow:0 4px 18px rgba(0,0,0,.6);\n  animation:restpulse 2.4s ease-in-out infinite;pointer-events:none}\n@keyframes restpulse{0%,100%{opacity:.72}50%{opacity:1}}\n@media(max-width:820px){.stage.resting::after{font-size:var(--text-xs);padding:5px 11px}}\n\n/* ---------- ชั้นซ้อนบนฉาก: บับเบิลคำพูด + เมนูพลัง ----------\n   ทุกตำแหน่งคิดเป็น % ของภาพฉาก จึงเลื่อนตามขนาดจอเองโดยไม่ต้องคำนวณใหม่ */\n#ov{position:absolute;inset:0;pointer-events:none;font-size:var(--text-xs)}\n#ov>*{position:absolute}\n\n/* หมุดเหนือหัวตัวละคร — เอาเมาส์ไปชี้ถึงจะกางบับเบิลออกมา\n   (บับเบิลกางค้างไว้ตลอดบังฉากจนมองไม่เห็นแผนที่) */\n.mark{transform:translate(-50%,-100%);pointer-events:auto;cursor:help}\n.mark .pin{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;\n  font-size:14px;background:rgba(24,11,17,.92);border:1.5px solid var(--gold);\n  box-shadow:0 2px 8px rgba(0,0,0,.6);animation:pin 2.2s ease-in-out infinite}\n.mark.soul .pin{border-color:#7fb2e0} .mark.boss .pin{border-color:var(--primary)}\n@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n.mark .bub{display:none;position:absolute;bottom:34px;left:50%;transform:translateX(-50%)}\n.mark.aL .bub{left:-8px;transform:none}\n.mark.aR .bub{left:auto;right:-8px;transform:none}\n.mark:hover .bub,.mark.show .bub{display:block}\n.mark:hover{z-index:9}\n\n.bub{width:min(32vw,340px);background:rgba(24,11,17,.96);\n  border:1px solid var(--border);border-radius:var(--radius-md);padding:8px 11px;\n  line-height:1.6;box-shadow:var(--shadow-lg)}\n.bub:after{content:'';position:absolute;bottom:-8px;left:50%;margin-left:-8px;\n  border:8px solid transparent;border-top-color:rgba(24,11,17,.96);border-bottom:0}\n.mark.aL .bub:after{left:20px;margin:0} .mark.aR .bub:after{left:auto;right:20px;margin:0}\n.bub .who{color:var(--gold);font-weight:600;display:block;margin-bottom:3px}\n.bub.soul{background:rgba(18,26,38,.95);border-color:#33455c}\n.bub.soul:after{border-top-color:rgba(18,26,38,.95)}\n.bub.boss{background:rgba(38,12,10,.96);border-color:var(--primary);width:min(34vw,400px)}\n.bub.boss:after{border-top-color:rgba(38,12,10,.96)}\n.bub .line{color:var(--muted-foreground);padding:1px 0}\n.bub .line.truth{color:var(--gold)} .bub .line.confess{color:var(--warning)}\n.bub .line.false{color:var(--destructive)}\n\n/* ---------- แถบบัญชาการเหนือฉาก ----------\n   เดิมแผงนี้ลอยทับกลางฉากจนมองแผนที่ไม่เห็น ย้ายมาอยู่เหนือฉากเป็นแถบเต็มความกว้าง */\n/* ---------- แถบโค้ช: สอนทีละเรื่อง ----------\n   เดิมมีแต่โมดัล "วิธีเล่น" ที่เทสิบสามข้อพร้อมกัน เจ้าของบอกว่าดูยากไป (7 ก.ย. 2569) */\n/* ย้ายมาอยู่ล่างสุดของหน้า 8 ก.ย. 2569 — เดิมอยู่ใต้หัวเรื่อง\n   ทุกครั้งที่มีบทใหม่ มันดันแถบบัญชาการกับฉากเลื่อนลงไปทั้งแผง จนคลิกผิดที่ */\n.coach{background:linear-gradient(90deg,var(--accent),var(--card));\n  border:1px solid var(--gold);border-left-width:4px;border-radius:var(--radius);\n  padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-3);align-items:flex-start;\n  margin-top:auto}\n.coach .txt{min-width:0;flex:1}\n.coach b{color:var(--gold);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:2px}\n.coach p{margin:0;font-size:var(--text-sm);line-height:var(--leading-body)}\n.coach .tip{margin-top:6px;font-size:var(--text-xs);color:var(--accent-foreground)}\n.coach .step{font-size:var(--text-xs);color:var(--muted-foreground);white-space:nowrap}\n.coach button{flex-shrink:0}\n\n/* ชิปทรัพยากรกดได้ทุกอัน — กดแล้วบอกว่าแถบนั้นมีไว้ทำอะไร หมดแล้วเกิดอะไร */\n.chip.tap{cursor:pointer;border-color:var(--input)}\n.chip.tap:hover{border-color:var(--gold)}\n.chip.tap::after{content:'?';font-size:10px;color:var(--muted-foreground);margin-left:2px}\n\n/* ---------- แผงไต่สวน (Phase 2) ----------\n   คำให้การเป็นปุ่มกดได้ · จี้ถูกบรรทัดที่ขัดกับสำนวน = ได้ความจริงฟรี */\n.quiz .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}\n.quiz .press{font-size:var(--text-xs);color:var(--gold);white-space:nowrap}\n.quiz .press b{font-variant-numeric:tabular-nums}\n.say{display:block;width:100%;text-align:left;background:var(--muted);border:1px solid var(--border);\n  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:7px;font-size:var(--t`... 159175 more characters,
+    expected: /src\/ui\.js\?v=20261009[^"]*-zoom-intro-v3(-[a-z0-9]+)*"/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/i1a-scenes.test.mjs:34:1
+✖ I1-A mirror stand is drawn in the room canvas, depth-sorted against Yama by feet y (93.49847ms)
+  AssertionError [ERR_ASSERTION]: Yama in front of the stand is drawn on top of base and pane — never covered
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/i1a-scenes.test.mjs:40:9)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/i1a-scenes.test.mjs:54:1
+✖ I1-A adjusting panel switches Yama to the atk pose facing the mirror; closing returns the standing pose (138.056152ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(closed.some(u=>/hero-yama/.test(u)))
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/i1a-scenes.test.mjs:59:56)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/i1a-scenes.test.mjs:127:1
+✖ I1-A cache-bust: -i1a is appended (existing suffixes kept) on every changed file that carries a version query (8.179837ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /src\/ui\.js\?v=20261009-f2-merge-[^"]*-h4-h2-zoom-intro-v3(-[a-z0-9]+)*-i1a(-[a-z0-9]+)*"/. Input:
+  
+  '<!doctype html>\n' +
+    '<html lang="th">\n' +
+    '<head>\n' +
+    '<meta charset="utf-8">\n' +
+    '<meta name="avegee-build" content="20261015-layered-battle9-r2">\n' +
+    '<meta name="viewport" content="width=device-width,initial-scale=1">\n' +
+    '<title>อเวจี — นรกโซนสุวรรณภูมิ</title>\n' +
+    '<meta name="description" content="เกมบริหารนรกโซนไทย — ยมบาทมือใหม่ที่ต้องพิพากษาให้ตรงกรรม">\n' +
+    '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+    '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Trirong:wght@600;700&display=swap" rel="stylesheet">\n' +
+    '<style>\n' +
+    '/* ---------- token: ธีมมืด ตั้งชื่อตาม DESIGN.md ---------- */\n' +
+    ':root{\n' +
+    '  --background:#140a0e;      --foreground:#f2e6dd;\n' +
+    '  --card:#1e1015;            --card-foreground:#f2e6dd;\n' +
+    '  --muted:#2a171d;           --muted-foreground:#b09a92;\n' +
+    '  --secondary:#33202a;       --secondary-foreground:#f2e6dd;\n' +
+    '  --accent:#3d2029;          --accent-foreground:#ffd9b0;\n' +
+    '  --primary:#c2381f;         --primary-foreground:#fff4ee;\n' +
+    '  --gold:#d4a355;            --gold-foreground:#1a0d10;\n' +
+    '  --success:#4a9d6a;         --warning:#e0a132;  --destructive:#e04a2f;\n' +
+    '  --border:#3a222a;          --input:#54353f;    --ring:#d4a355;\n' +
+    '  /* หน้าสอบสวน+ต่อสู้ธีมใหม่ 18 ก.ย. 2569 (สเปก Vera) — ม่วงเข้มที่ --accent เดิมไม่พอชัด */\n' +
+    '  --hell-purple-1:#241129;   /* ม่วงเข้มเกือบดำ — พื้นหลังกรอบ/แถบเมนู */\n' +
+    '  --hell-purple-2:#4a1f3d;   /* ม่วงอมแดง — จุดไล่สีสว่างขึ้นของการ์ด/ปุ่ม */\n' +
+    '\n' +
+    '  --radius:0.75rem; --radius-sm:calc(var(--radius)*.5); --radius-md:calc(var(--radius)*.75);\n' +
+    '  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.5rem;\n' +
+    '  --font-sans:"IBM Plex Sans Thai","Noto Sans Thai",-apple-system,sans-serif;\n' +
+    '  --font-display:"Trirong",Georgia,serif;\n' +
+    '  --text-xs:.8125rem; --text-sm:.9375rem; --text-base:1rem;\n' +
+    '  --leading-body:1.7;\n' +
+    '}\n' +
+    '*{box-sizing:border-box}\n' +
+    'html,body{margin:0;height:100%}\n' +
+    'body{\n' +
+    '  background:radial-gradient(1200px 700px at 50% -10%,#2a1016 0%,var(--background) 60%);\n' +
+    '  color:var(--foreground); font-family:var(--font-sans); font-size:var(--text-base);\n' +
+    '  -webkit-font-smoothing:antialiased;\n' +
+    '}\n' +
+    '/* ---------- ข้อ D ชุด 15 — .wrap เป็นเปลือกเกมเต็มจอ (แทนหน้าเว็บเลื่อนแบบเดิม) ----------\n' +
+    '   เคารพ safe-area (รอยบาก/แถบโฮมมือถือ) ตามกติกา portrait-first */\n' +
+    '.wrap{position:fixed;inset:0;display:flex;flex-direction:column;\n' +
+    '  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);\n' +
+    '  background:#0b0508;overflow:hidden}\n' +
+    '\n' +
+    '/* ---------- แถบทรัพยากรเดิม (เหลือไว้ให้ header ใน legacy-drawer ใช้) ---------- */\n' +
+    'header{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}\n' +
+    '#ava{object-fit:cover;object-position:center top;\n' +
+    '  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px}\n' +
+    'h1{font-family:var(--font-display);font-size:1.5rem;margin:0;color:var(--gold);letter-spacing:.5px}\n' +
+    'h1 small{display:block;font-family:var(--font-sans);font-size:var(--text-xs);color:var(--muted-foreground);font-weight:400;letter-spacing:0}\n' +
+    '/* ปุ่มระบบย้ายขึ้นมาบนหัวเรื่อง 8 ก.ย. 2569 — เดิมอยู่ใต้ฉาก ต้องเลื่อนหาทุกครั้ง */\n' +
+    '.sysbtn{display:flex;gap:5px;flex-wrap:wrap;width:100%;justify-content:flex-end}\n' +
+    '.sysbtn button{padding:5px 10px;min-height:0;font-size:var(--text-xs)}\n' +
+    '@media(max-width:820px){.sysbtn{justify-content:flex-start}.sysbtn button{flex:1 1 auto}}\n' +
+    '.chip{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);\n' +
+    '  padding:6px 10px;font-size:var(--text-sm);display:flex;gap:6px;align-items:center;white-space:nowrap}\n' +
+    '.chip b{font-variant-numeric:tabular-nums}\n' +
+    '.bar{width:70px;height:6px;background:var(--muted);border-radius:99px;overflow:hidden}\n' +
+    '.bar i{display:block;height:100%;background:var(--gold)}\n' +
+    '.bar.karma i{background:var(--destructive)}\n' +
+    '.bar.hp i{background:var(--success)}\n' +
+    '\n' +
+    '/* ข้อ D ชุด 13 คุณเป้ 26 ก.ย. 2569 — แถบหิว + ปุ่มป้อนข้าวปั้น ใช้ร่วมกัน 3 จุด (ดู hungerWidget ใน ui.js) */\n' +
+    '.hunger-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}\n' +
+    '.hunger-line small{white-space:nowrap}\n' +
+    '.hunger-line .rest-name{flex-basis:100%;font-size:13px}\n' +
+    '\n' +
+    '/* ---------- เลย์เอาต์หลัก ----------\n' +
+    '   ฉากกินเต็มความกว้าง แผงควบคุมกับบันทึกอยู่ใต้ฉาก\n' +
+    '   (เดิมแผงอยู่ข้าง ๆ ทำให้ฉากเหลือความกว้างไม่ถึงสองในสาม) */\n' +
+    '.below{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}\n' +
+    '@media(max-width:900px){.below{grid-template-columns:1fr}}\n' +
+    '/* ---------- ข้อ D ชุด 15 — .stage เต็มพื้นที่ที่เหลือของจอ (ไม่มีกรอบ/แถบข้อความรอบนอกแบบเดิม)\n' +
+    '   .scene-box ล็อกอัตราส่วน 1527:704 อยู่ข้างใน จัดกลางด้วย flex — เกิด letterbox บน/ล่างหรือซ้าย/ขวา\n' +
+    '   แทนการครอป (ยังไม่ทำ D.1 ส่วนภาพ/พิกัดใหม่รอบนี้ — ดูรายงาน Toby ว่าทำไม) */\n' +
+    '.stage{flex:1;min-height:0;position:relative;overflow:hidden;\n' +
+    '  background:#0b0508;display:flex;align-items:center;justify-content:center}\n' +
+    '/* ขนาดจริง (px) ตั้งโดย fitSceneBox() ใน ui.js ผ่าน ResizeObserver — CSS aspect-ratio ล้วนๆ\n' +
+    '   ผสมกับ flex-centering มีเคสมุมขอบที่ clamp ผิดแกน (max-width ตัดแล้ว height ไม่รีเคลียร์ตาม)\n' +
+    '   ใช้ JS วัดจริงชัวร์กว่า กัน #ov/canvas เพี้ยนตำแหน่งซึ่งกระทบการคลิกทั้งเกม */\n' +
+    '.scene-box{position:relative}\n' +
+    '.scene-box canvas{position:absolute;inset:0;width:100%;height:100%}\n' +
+    '\n' +
+    '/* ป้ายบอกว่าวาระหยุดเดินอยู่ — ของเดิมรู้ได้จากตัวหนังสือบนปุ่มใต้ฉากเท่านั้น\n' +
+    '   ผู้เล่นเลยนั่งรอทัณฑ์ที่ค้าง 0% อยู่นานโดยไม่รู้ว่าเกมพักอยู่ (เจ้าของเจอ 8 ก.ย. 2569) */\n' +
+    '.stage.resting::after{content:"⏸ พักอยู่ — กด \\201Cเปิดศาล\\201D ให้เวลาเดินต่อ";\n' +
+    '  position:absolute;left:50%;bottom:calc(var(--space-4) + 64px);transform:translateX(-50%);z-index:8;\n' +
+    '  background:rgba(12,6,9,.9);border:1px solid var(--gold);color:var(--gold);\n' +
+    '  border-radius:99px;padding:7px 16px;font-size:var(--text-sm);white-space:nowrap;\n' +
+    '  backdrop-filter:blur(3px);box-shadow:0 4px 18px rgba(0,0,0,.6);\n' +
+    '  animation:restpulse 2.4s ease-in-out infinite;pointer-events:none}\n' +
+    '@keyframes restpulse{0%,100%{opacity:.72}50%{opacity:1}}\n' +
+    '@media(max-width:820px){.stage.resting::after{font-size:var(--text-xs);padding:5px 11px}}\n' +
+    '\n' +
+    '/* ---------- ชั้นซ้อนบนฉาก: บับเบิลคำพูด + เมนูพลัง ----------\n' +
+    '   ทุกตำแหน่งคิดเป็น % ของภาพฉาก จึงเลื่อนตามขนาดจอเองโดยไม่ต้องคำนวณใหม่ */\n' +
+    '#ov{position:absolute;inset:0;pointer-events:none;font-size:var(--text-xs)}\n' +
+    '#ov>*{position:absolute}\n' +
+    '\n' +
+    '/* หมุดเหนือหัวตัวละคร — เอาเมาส์ไปชี้ถึงจะกางบับเบิลออกมา\n' +
+    '   (บับเบิลกางค้างไว้ตลอดบังฉากจนมองไม่เห็นแผนที่) */\n' +
+    '.mark{transform:translate(-50%,-100%);pointer-events:auto;cursor:help}\n' +
+    '.mark .pin{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;\n' +
+    '  font-size:14px;background:rgba(24,11,17,.92);border:1.5px solid var(--gold);\n' +
+    '  box-shadow:0 2px 8px rgba(0,0,0,.6);animation:pin 2.2s ease-in-out infinite}\n' +
+    '.mark.soul .pin{border-color:#7fb2e0} .mark.boss .pin{border-color:var(--primary)}\n' +
+    '@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n' +
+    '.mark .bub{display:none;position:absolute;bottom:34px;left:50%;transform:translateX(-50%)}\n' +
+    '.mark.aL .bub{left:-8px;transform:none}\n' +
+    '.mark.aR .bub{left:auto;right:-8px;transform:none}\n' +
+    '.mark:hover .bub,.mark.show .bub{display:block}\n' +
+    '.mark:hover{z-index:9}\n' +
+    '\n' +
+    '.bub{width:min(32vw,340px);background:rgba(24,11,17,.96);\n' +
+    '  border:1px solid var(--border);border-radius:var(--radius-md);padding:8px 11px;\n' +
+    '  line-height:1.6;box-shadow:var(--shadow-lg)}\n' +
+    ".bub:after{content:'';position:absolute;bottom:-8px;left:50%;margin-left:-8px;\n" +
+    '  border:8px solid transparent;border-top-color:rgba(24,11,17,.96);border-bottom:0}\n' +
+    '.mark.aL .bub:after{left:20px;margin:0} .mark.aR .bub:after{left:auto;right:20px;margin:0}\n' +
+    '.bub .who{color:var(--gold);font-weight:600;display:block;margin-bottom:3px}\n' +
+    '.bub.soul{background:rgba(18,26,38,.95);border-color:#33455c}\n' +
+    '.bub.soul:after{border-top-color:rgba(18,26,38,.95)}\n' +
+    '.bub.boss{background:rgba(38,12,10,.96);border-color:var(--primary);width:min(34vw,400px)}\n' +
+    '.bub.boss:after{border-top-color:rgba(38,12,10,.96)}\n' +
+    '.bub .line{color:var(--muted-foreground);padding:1px 0}\n' +
+    '.bub .line.truth{color:var(--gold)} .bub .line.confess{color:var(--warning)}\n' +
+    '.bub .line.false{color:var(--destructive)}\n' +
+    '\n' +
+    '/* ---------- แถบบัญชาการเหนือฉาก ----------\n' +
+    '   เดิมแผงนี้ลอยทับกลางฉากจนมองแผนที่ไม่เห็น ย้ายมาอยู่เหนือฉากเป็นแถบเต็มความกว้าง */\n' +
+    '/* ---------- แถบโค้ช: สอนทีละเรื่อง ----------\n' +
+    '   เดิมมีแต่โมดัล "วิธีเล่น" ที่เทสิบสามข้อพร้อมกัน เจ้าของบอกว่าดูยากไป (7 ก.ย. 2569) */\n' +
+    '/* ย้ายมาอยู่ล่างสุดของหน้า 8 ก.ย. 2569 — เดิมอยู่ใต้หัวเรื่อง\n' +
+    '   ทุกครั้งที่มีบทใหม่ มันดันแถบบัญชาการกับฉากเลื่อนลงไปทั้งแผง จนคลิกผิดที่ */\n' +
+    '.coach{background:linear-gradient(90deg,var(--accent),var(--card));\n' +
+    '  border:1px solid var(--gold);border-left-width:4px;border-radius:var(--radius);\n' +
+    '  padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-3);align-items:flex-start;\n' +
+    '  margin-top:auto}\n' +
+    '.coach .txt{min-width:0;flex:1}\n' +
+    '.coach b{color:var(--gold);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:2px}\n' +
+    '.coach p{margin:0;font-size:var(--text-sm);line-height:var(--leading-body)}\n' +
+    '.coach .tip{margin-top:6px;font-size:var(--text-xs);color:var(--accent-foreground)}\n' +
+    '.coach .step{font-size:var(--text-xs);color:var(--muted-foreground);white-space:nowrap}\n' +
+    '.coach button{flex-shrink:0}\n' +
+    '\n' +
+    '/* ชิปทรัพยากรกดได้ทุกอัน — กดแล้วบอกว่าแถบนั้นมีไว้ทำอะไร หมดแล้วเกิดอะไร */\n' +
+    '.chip.tap{cursor:pointer;border-color:var(--input)}\n' +
+    '.chip.tap:hover{border-color:var(--gold)}\n' +
+    ".chip.tap::after{content:'?';font-size:10px;color:var(--muted-foreground);margin-left:2px}\n" +
+    '\n' +
+    '/* ---------- แผงไต่สวน (Phase 2) ----------\n' +
+    '   คำให้การเป็นปุ่มกดได้ · จี้ถูกบรรทัดที่ขัดกับสำนวน = ได้ความจริงฟรี */\n' +
+    '.quiz .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}\n' +
+    '.quiz .press{font-size:var(--text-xs);color:var(--gold);white-space:nowrap}\n' +
+    '.quiz .press b{font-variant-numeric:tabular-nums}\n' +
+    '.say{display:block;width:100%;text-align:left;background:var(--muted);border:1px solid var(--border);\n' +
+    '  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:7px;font-size:var(--t'... 159175 more characters
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/i1a-scenes.test.mjs:130:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `<!doctype html>\n<html lang="th">\n<head>\n<meta charset="utf-8">\n<meta name="avegee-build" content="20261015-layered-battle9-r2">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>อเวจี — นรกโซนสุวรรณภูมิ</title>\n<meta name="description" content="เกมบริหารนรกโซนไทย — ยมบาทมือใหม่ที่ต้องพิพากษาให้ตรงกรรม">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Trirong:wght@600;700&display=swap" rel="stylesheet">\n<style>\n/* ---------- token: ธีมมืด ตั้งชื่อตาม DESIGN.md ---------- */\n:root{\n  --background:#140a0e;      --foreground:#f2e6dd;\n  --card:#1e1015;            --card-foreground:#f2e6dd;\n  --muted:#2a171d;           --muted-foreground:#b09a92;\n  --secondary:#33202a;       --secondary-foreground:#f2e6dd;\n  --accent:#3d2029;          --accent-foreground:#ffd9b0;\n  --primary:#c2381f;         --primary-foreground:#fff4ee;\n  --gold:#d4a355;            --gold-foreground:#1a0d10;\n  --success:#4a9d6a;         --warning:#e0a132;  --destructive:#e04a2f;\n  --border:#3a222a;          --input:#54353f;    --ring:#d4a355;\n  /* หน้าสอบสวน+ต่อสู้ธีมใหม่ 18 ก.ย. 2569 (สเปก Vera) — ม่วงเข้มที่ --accent เดิมไม่พอชัด */\n  --hell-purple-1:#241129;   /* ม่วงเข้มเกือบดำ — พื้นหลังกรอบ/แถบเมนู */\n  --hell-purple-2:#4a1f3d;   /* ม่วงอมแดง — จุดไล่สีสว่างขึ้นของการ์ด/ปุ่ม */\n\n  --radius:0.75rem; --radius-sm:calc(var(--radius)*.5); --radius-md:calc(var(--radius)*.75);\n  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.5rem;\n  --font-sans:"IBM Plex Sans Thai","Noto Sans Thai",-apple-system,sans-serif;\n  --font-display:"Trirong",Georgia,serif;\n  --text-xs:.8125rem; --text-sm:.9375rem; --text-base:1rem;\n  --leading-body:1.7;\n}\n*{box-sizing:border-box}\nhtml,body{margin:0;height:100%}\nbody{\n  background:radial-gradient(1200px 700px at 50% -10%,#2a1016 0%,var(--background) 60%);\n  color:var(--foreground); font-family:var(--font-sans); font-size:var(--text-base);\n  -webkit-font-smoothing:antialiased;\n}\n/* ---------- ข้อ D ชุด 15 — .wrap เป็นเปลือกเกมเต็มจอ (แทนหน้าเว็บเลื่อนแบบเดิม) ----------\n   เคารพ safe-area (รอยบาก/แถบโฮมมือถือ) ตามกติกา portrait-first */\n.wrap{position:fixed;inset:0;display:flex;flex-direction:column;\n  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);\n  background:#0b0508;overflow:hidden}\n\n/* ---------- แถบทรัพยากรเดิม (เหลือไว้ให้ header ใน legacy-drawer ใช้) ---------- */\nheader{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}\n#ava{object-fit:cover;object-position:center top;\n  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px}\nh1{font-family:var(--font-display);font-size:1.5rem;margin:0;color:var(--gold);letter-spacing:.5px}\nh1 small{display:block;font-family:var(--font-sans);font-size:var(--text-xs);color:var(--muted-foreground);font-weight:400;letter-spacing:0}\n/* ปุ่มระบบย้ายขึ้นมาบนหัวเรื่อง 8 ก.ย. 2569 — เดิมอยู่ใต้ฉาก ต้องเลื่อนหาทุกครั้ง */\n.sysbtn{display:flex;gap:5px;flex-wrap:wrap;width:100%;justify-content:flex-end}\n.sysbtn button{padding:5px 10px;min-height:0;font-size:var(--text-xs)}\n@media(max-width:820px){.sysbtn{justify-content:flex-start}.sysbtn button{flex:1 1 auto}}\n.chip{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);\n  padding:6px 10px;font-size:var(--text-sm);display:flex;gap:6px;align-items:center;white-space:nowrap}\n.chip b{font-variant-numeric:tabular-nums}\n.bar{width:70px;height:6px;background:var(--muted);border-radius:99px;overflow:hidden}\n.bar i{display:block;height:100%;background:var(--gold)}\n.bar.karma i{background:var(--destructive)}\n.bar.hp i{background:var(--success)}\n\n/* ข้อ D ชุด 13 คุณเป้ 26 ก.ย. 2569 — แถบหิว + ปุ่มป้อนข้าวปั้น ใช้ร่วมกัน 3 จุด (ดู hungerWidget ใน ui.js) */\n.hunger-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}\n.hunger-line small{white-space:nowrap}\n.hunger-line .rest-name{flex-basis:100%;font-size:13px}\n\n/* ---------- เลย์เอาต์หลัก ----------\n   ฉากกินเต็มความกว้าง แผงควบคุมกับบันทึกอยู่ใต้ฉาก\n   (เดิมแผงอยู่ข้าง ๆ ทำให้ฉากเหลือความกว้างไม่ถึงสองในสาม) */\n.below{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}\n@media(max-width:900px){.below{grid-template-columns:1fr}}\n/* ---------- ข้อ D ชุด 15 — .stage เต็มพื้นที่ที่เหลือของจอ (ไม่มีกรอบ/แถบข้อความรอบนอกแบบเดิม)\n   .scene-box ล็อกอัตราส่วน 1527:704 อยู่ข้างใน จัดกลางด้วย flex — เกิด letterbox บน/ล่างหรือซ้าย/ขวา\n   แทนการครอป (ยังไม่ทำ D.1 ส่วนภาพ/พิกัดใหม่รอบนี้ — ดูรายงาน Toby ว่าทำไม) */\n.stage{flex:1;min-height:0;position:relative;overflow:hidden;\n  background:#0b0508;display:flex;align-items:center;justify-content:center}\n/* ขนาดจริง (px) ตั้งโดย fitSceneBox() ใน ui.js ผ่าน ResizeObserver — CSS aspect-ratio ล้วนๆ\n   ผสมกับ flex-centering มีเคสมุมขอบที่ clamp ผิดแกน (max-width ตัดแล้ว height ไม่รีเคลียร์ตาม)\n   ใช้ JS วัดจริงชัวร์กว่า กัน #ov/canvas เพี้ยนตำแหน่งซึ่งกระทบการคลิกทั้งเกม */\n.scene-box{position:relative}\n.scene-box canvas{position:absolute;inset:0;width:100%;height:100%}\n\n/* ป้ายบอกว่าวาระหยุดเดินอยู่ — ของเดิมรู้ได้จากตัวหนังสือบนปุ่มใต้ฉากเท่านั้น\n   ผู้เล่นเลยนั่งรอทัณฑ์ที่ค้าง 0% อยู่นานโดยไม่รู้ว่าเกมพักอยู่ (เจ้าของเจอ 8 ก.ย. 2569) */\n.stage.resting::after{content:"⏸ พักอยู่ — กด \\201Cเปิดศาล\\201D ให้เวลาเดินต่อ";\n  position:absolute;left:50%;bottom:calc(var(--space-4) + 64px);transform:translateX(-50%);z-index:8;\n  background:rgba(12,6,9,.9);border:1px solid var(--gold);color:var(--gold);\n  border-radius:99px;padding:7px 16px;font-size:var(--text-sm);white-space:nowrap;\n  backdrop-filter:blur(3px);box-shadow:0 4px 18px rgba(0,0,0,.6);\n  animation:restpulse 2.4s ease-in-out infinite;pointer-events:none}\n@keyframes restpulse{0%,100%{opacity:.72}50%{opacity:1}}\n@media(max-width:820px){.stage.resting::after{font-size:var(--text-xs);padding:5px 11px}}\n\n/* ---------- ชั้นซ้อนบนฉาก: บับเบิลคำพูด + เมนูพลัง ----------\n   ทุกตำแหน่งคิดเป็น % ของภาพฉาก จึงเลื่อนตามขนาดจอเองโดยไม่ต้องคำนวณใหม่ */\n#ov{position:absolute;inset:0;pointer-events:none;font-size:var(--text-xs)}\n#ov>*{position:absolute}\n\n/* หมุดเหนือหัวตัวละคร — เอาเมาส์ไปชี้ถึงจะกางบับเบิลออกมา\n   (บับเบิลกางค้างไว้ตลอดบังฉากจนมองไม่เห็นแผนที่) */\n.mark{transform:translate(-50%,-100%);pointer-events:auto;cursor:help}\n.mark .pin{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;\n  font-size:14px;background:rgba(24,11,17,.92);border:1.5px solid var(--gold);\n  box-shadow:0 2px 8px rgba(0,0,0,.6);animation:pin 2.2s ease-in-out infinite}\n.mark.soul .pin{border-color:#7fb2e0} .mark.boss .pin{border-color:var(--primary)}\n@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n.mark .bub{display:none;position:absolute;bottom:34px;left:50%;transform:translateX(-50%)}\n.mark.aL .bub{left:-8px;transform:none}\n.mark.aR .bub{left:auto;right:-8px;transform:none}\n.mark:hover .bub,.mark.show .bub{display:block}\n.mark:hover{z-index:9}\n\n.bub{width:min(32vw,340px);background:rgba(24,11,17,.96);\n  border:1px solid var(--border);border-radius:var(--radius-md);padding:8px 11px;\n  line-height:1.6;box-shadow:var(--shadow-lg)}\n.bub:after{content:'';position:absolute;bottom:-8px;left:50%;margin-left:-8px;\n  border:8px solid transparent;border-top-color:rgba(24,11,17,.96);border-bottom:0}\n.mark.aL .bub:after{left:20px;margin:0} .mark.aR .bub:after{left:auto;right:20px;margin:0}\n.bub .who{color:var(--gold);font-weight:600;display:block;margin-bottom:3px}\n.bub.soul{background:rgba(18,26,38,.95);border-color:#33455c}\n.bub.soul:after{border-top-color:rgba(18,26,38,.95)}\n.bub.boss{background:rgba(38,12,10,.96);border-color:var(--primary);width:min(34vw,400px)}\n.bub.boss:after{border-top-color:rgba(38,12,10,.96)}\n.bub .line{color:var(--muted-foreground);padding:1px 0}\n.bub .line.truth{color:var(--gold)} .bub .line.confess{color:var(--warning)}\n.bub .line.false{color:var(--destructive)}\n\n/* ---------- แถบบัญชาการเหนือฉาก ----------\n   เดิมแผงนี้ลอยทับกลางฉากจนมองแผนที่ไม่เห็น ย้ายมาอยู่เหนือฉากเป็นแถบเต็มความกว้าง */\n/* ---------- แถบโค้ช: สอนทีละเรื่อง ----------\n   เดิมมีแต่โมดัล "วิธีเล่น" ที่เทสิบสามข้อพร้อมกัน เจ้าของบอกว่าดูยากไป (7 ก.ย. 2569) */\n/* ย้ายมาอยู่ล่างสุดของหน้า 8 ก.ย. 2569 — เดิมอยู่ใต้หัวเรื่อง\n   ทุกครั้งที่มีบทใหม่ มันดันแถบบัญชาการกับฉากเลื่อนลงไปทั้งแผง จนคลิกผิดที่ */\n.coach{background:linear-gradient(90deg,var(--accent),var(--card));\n  border:1px solid var(--gold);border-left-width:4px;border-radius:var(--radius);\n  padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-3);align-items:flex-start;\n  margin-top:auto}\n.coach .txt{min-width:0;flex:1}\n.coach b{color:var(--gold);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:2px}\n.coach p{margin:0;font-size:var(--text-sm);line-height:var(--leading-body)}\n.coach .tip{margin-top:6px;font-size:var(--text-xs);color:var(--accent-foreground)}\n.coach .step{font-size:var(--text-xs);color:var(--muted-foreground);white-space:nowrap}\n.coach button{flex-shrink:0}\n\n/* ชิปทรัพยากรกดได้ทุกอัน — กดแล้วบอกว่าแถบนั้นมีไว้ทำอะไร หมดแล้วเกิดอะไร */\n.chip.tap{cursor:pointer;border-color:var(--input)}\n.chip.tap:hover{border-color:var(--gold)}\n.chip.tap::after{content:'?';font-size:10px;color:var(--muted-foreground);margin-left:2px}\n\n/* ---------- แผงไต่สวน (Phase 2) ----------\n   คำให้การเป็นปุ่มกดได้ · จี้ถูกบรรทัดที่ขัดกับสำนวน = ได้ความจริงฟรี */\n.quiz .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}\n.quiz .press{font-size:var(--text-xs);color:var(--gold);white-space:nowrap}\n.quiz .press b{font-variant-numeric:tabular-nums}\n.say{display:block;width:100%;text-align:left;background:var(--muted);border:1px solid var(--border);\n  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:7px;font-size:var(--t`... 159175 more characters,
+    expected: /src\/ui\.js\?v=20261009-f2-merge-[^"]*-h4-h2-zoom-intro-v3(-[a-z0-9]+)*-i1a(-[a-z0-9]+)*"/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/k2-menu.test.mjs:24:1
+✖ K2 changed entry URLs match, including review imports (16.319167ms)
+  AssertionError [ERR_ASSERTION]: ui.js
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/k2-menu.test.mjs:29:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'yama-live-20261015-main',
+    expected: /-k2b?$|-k3m$|-k4$|-k1d$|-k5$/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/k5-battle-layout.test.mjs:42:1
+✖ K5 wiring: ui.js measures enemies, hint strip is thin, cache-bust is -k5 in both entry pages (27.971898ms)
+  AssertionError [ERR_ASSERTION]: index.html
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/k5-battle-layout.test.mjs:52:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: `<!doctype html>\n<html lang="th">\n<head>\n<meta charset="utf-8">\n<meta name="avegee-build" content="20261015-layered-battle9-r2">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>อเวจี — นรกโซนสุวรรณภูมิ</title>\n<meta name="description" content="เกมบริหารนรกโซนไทย — ยมบาทมือใหม่ที่ต้องพิพากษาให้ตรงกรรม">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Trirong:wght@600;700&display=swap" rel="stylesheet">\n<style>\n/* ---------- token: ธีมมืด ตั้งชื่อตาม DESIGN.md ---------- */\n:root{\n  --background:#140a0e;      --foreground:#f2e6dd;\n  --card:#1e1015;            --card-foreground:#f2e6dd;\n  --muted:#2a171d;           --muted-foreground:#b09a92;\n  --secondary:#33202a;       --secondary-foreground:#f2e6dd;\n  --accent:#3d2029;          --accent-foreground:#ffd9b0;\n  --primary:#c2381f;         --primary-foreground:#fff4ee;\n  --gold:#d4a355;            --gold-foreground:#1a0d10;\n  --success:#4a9d6a;         --warning:#e0a132;  --destructive:#e04a2f;\n  --border:#3a222a;          --input:#54353f;    --ring:#d4a355;\n  /* หน้าสอบสวน+ต่อสู้ธีมใหม่ 18 ก.ย. 2569 (สเปก Vera) — ม่วงเข้มที่ --accent เดิมไม่พอชัด */\n  --hell-purple-1:#241129;   /* ม่วงเข้มเกือบดำ — พื้นหลังกรอบ/แถบเมนู */\n  --hell-purple-2:#4a1f3d;   /* ม่วงอมแดง — จุดไล่สีสว่างขึ้นของการ์ด/ปุ่ม */\n\n  --radius:0.75rem; --radius-sm:calc(var(--radius)*.5); --radius-md:calc(var(--radius)*.75);\n  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.5rem;\n  --font-sans:"IBM Plex Sans Thai","Noto Sans Thai",-apple-system,sans-serif;\n  --font-display:"Trirong",Georgia,serif;\n  --text-xs:.8125rem; --text-sm:.9375rem; --text-base:1rem;\n  --leading-body:1.7;\n}\n*{box-sizing:border-box}\nhtml,body{margin:0;height:100%}\nbody{\n  background:radial-gradient(1200px 700px at 50% -10%,#2a1016 0%,var(--background) 60%);\n  color:var(--foreground); font-family:var(--font-sans); font-size:var(--text-base);\n  -webkit-font-smoothing:antialiased;\n}\n/* ---------- ข้อ D ชุด 15 — .wrap เป็นเปลือกเกมเต็มจอ (แทนหน้าเว็บเลื่อนแบบเดิม) ----------\n   เคารพ safe-area (รอยบาก/แถบโฮมมือถือ) ตามกติกา portrait-first */\n.wrap{position:fixed;inset:0;display:flex;flex-direction:column;\n  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);\n  background:#0b0508;overflow:hidden}\n\n/* ---------- แถบทรัพยากรเดิม (เหลือไว้ให้ header ใน legacy-drawer ใช้) ---------- */\nheader{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}\n#ava{object-fit:cover;object-position:center top;\n  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px}\nh1{font-family:var(--font-display);font-size:1.5rem;margin:0;color:var(--gold);letter-spacing:.5px}\nh1 small{display:block;font-family:var(--font-sans);font-size:var(--text-xs);color:var(--muted-foreground);font-weight:400;letter-spacing:0}\n/* ปุ่มระบบย้ายขึ้นมาบนหัวเรื่อง 8 ก.ย. 2569 — เดิมอยู่ใต้ฉาก ต้องเลื่อนหาทุกครั้ง */\n.sysbtn{display:flex;gap:5px;flex-wrap:wrap;width:100%;justify-content:flex-end}\n.sysbtn button{padding:5px 10px;min-height:0;font-size:var(--text-xs)}\n@media(max-width:820px){.sysbtn{justify-content:flex-start}.sysbtn button{flex:1 1 auto}}\n.chip{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);\n  padding:6px 10px;font-size:var(--text-sm);display:flex;gap:6px;align-items:center;white-space:nowrap}\n.chip b{font-variant-numeric:tabular-nums}\n.bar{width:70px;height:6px;background:var(--muted);border-radius:99px;overflow:hidden}\n.bar i{display:block;height:100%;background:var(--gold)}\n.bar.karma i{background:var(--destructive)}\n.bar.hp i{background:var(--success)}\n\n/* ข้อ D ชุด 13 คุณเป้ 26 ก.ย. 2569 — แถบหิว + ปุ่มป้อนข้าวปั้น ใช้ร่วมกัน 3 จุด (ดู hungerWidget ใน ui.js) */\n.hunger-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px}\n.hunger-line small{white-space:nowrap}\n.hunger-line .rest-name{flex-basis:100%;font-size:13px}\n\n/* ---------- เลย์เอาต์หลัก ----------\n   ฉากกินเต็มความกว้าง แผงควบคุมกับบันทึกอยู่ใต้ฉาก\n   (เดิมแผงอยู่ข้าง ๆ ทำให้ฉากเหลือความกว้างไม่ถึงสองในสาม) */\n.below{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}\n@media(max-width:900px){.below{grid-template-columns:1fr}}\n/* ---------- ข้อ D ชุด 15 — .stage เต็มพื้นที่ที่เหลือของจอ (ไม่มีกรอบ/แถบข้อความรอบนอกแบบเดิม)\n   .scene-box ล็อกอัตราส่วน 1527:704 อยู่ข้างใน จัดกลางด้วย flex — เกิด letterbox บน/ล่างหรือซ้าย/ขวา\n   แทนการครอป (ยังไม่ทำ D.1 ส่วนภาพ/พิกัดใหม่รอบนี้ — ดูรายงาน Toby ว่าทำไม) */\n.stage{flex:1;min-height:0;position:relative;overflow:hidden;\n  background:#0b0508;display:flex;align-items:center;justify-content:center}\n/* ขนาดจริง (px) ตั้งโดย fitSceneBox() ใน ui.js ผ่าน ResizeObserver — CSS aspect-ratio ล้วนๆ\n   ผสมกับ flex-centering มีเคสมุมขอบที่ clamp ผิดแกน (max-width ตัดแล้ว height ไม่รีเคลียร์ตาม)\n   ใช้ JS วัดจริงชัวร์กว่า กัน #ov/canvas เพี้ยนตำแหน่งซึ่งกระทบการคลิกทั้งเกม */\n.scene-box{position:relative}\n.scene-box canvas{position:absolute;inset:0;width:100%;height:100%}\n\n/* ป้ายบอกว่าวาระหยุดเดินอยู่ — ของเดิมรู้ได้จากตัวหนังสือบนปุ่มใต้ฉากเท่านั้น\n   ผู้เล่นเลยนั่งรอทัณฑ์ที่ค้าง 0% อยู่นานโดยไม่รู้ว่าเกมพักอยู่ (เจ้าของเจอ 8 ก.ย. 2569) */\n.stage.resting::after{content:"⏸ พักอยู่ — กด \\201Cเปิดศาล\\201D ให้เวลาเดินต่อ";\n  position:absolute;left:50%;bottom:calc(var(--space-4) + 64px);transform:translateX(-50%);z-index:8;\n  background:rgba(12,6,9,.9);border:1px solid var(--gold);color:var(--gold);\n  border-radius:99px;padding:7px 16px;font-size:var(--text-sm);white-space:nowrap;\n  backdrop-filter:blur(3px);box-shadow:0 4px 18px rgba(0,0,0,.6);\n  animation:restpulse 2.4s ease-in-out infinite;pointer-events:none}\n@keyframes restpulse{0%,100%{opacity:.72}50%{opacity:1}}\n@media(max-width:820px){.stage.resting::after{font-size:var(--text-xs);padding:5px 11px}}\n\n/* ---------- ชั้นซ้อนบนฉาก: บับเบิลคำพูด + เมนูพลัง ----------\n   ทุกตำแหน่งคิดเป็น % ของภาพฉาก จึงเลื่อนตามขนาดจอเองโดยไม่ต้องคำนวณใหม่ */\n#ov{position:absolute;inset:0;pointer-events:none;font-size:var(--text-xs)}\n#ov>*{position:absolute}\n\n/* หมุดเหนือหัวตัวละคร — เอาเมาส์ไปชี้ถึงจะกางบับเบิลออกมา\n   (บับเบิลกางค้างไว้ตลอดบังฉากจนมองไม่เห็นแผนที่) */\n.mark{transform:translate(-50%,-100%);pointer-events:auto;cursor:help}\n.mark .pin{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;\n  font-size:14px;background:rgba(24,11,17,.92);border:1.5px solid var(--gold);\n  box-shadow:0 2px 8px rgba(0,0,0,.6);animation:pin 2.2s ease-in-out infinite}\n.mark.soul .pin{border-color:#7fb2e0} .mark.boss .pin{border-color:var(--primary)}\n@keyframes pin{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n.mark .bub{display:none;position:absolute;bottom:34px;left:50%;transform:translateX(-50%)}\n.mark.aL .bub{left:-8px;transform:none}\n.mark.aR .bub{left:auto;right:-8px;transform:none}\n.mark:hover .bub,.mark.show .bub{display:block}\n.mark:hover{z-index:9}\n\n.bub{width:min(32vw,340px);background:rgba(24,11,17,.96);\n  border:1px solid var(--border);border-radius:var(--radius-md);padding:8px 11px;\n  line-height:1.6;box-shadow:var(--shadow-lg)}\n.bub:after{content:'';position:absolute;bottom:-8px;left:50%;margin-left:-8px;\n  border:8px solid transparent;border-top-color:rgba(24,11,17,.96);border-bottom:0}\n.mark.aL .bub:after{left:20px;margin:0} .mark.aR .bub:after{left:auto;right:20px;margin:0}\n.bub .who{color:var(--gold);font-weight:600;display:block;margin-bottom:3px}\n.bub.soul{background:rgba(18,26,38,.95);border-color:#33455c}\n.bub.soul:after{border-top-color:rgba(18,26,38,.95)}\n.bub.boss{background:rgba(38,12,10,.96);border-color:var(--primary);width:min(34vw,400px)}\n.bub.boss:after{border-top-color:rgba(38,12,10,.96)}\n.bub .line{color:var(--muted-foreground);padding:1px 0}\n.bub .line.truth{color:var(--gold)} .bub .line.confess{color:var(--warning)}\n.bub .line.false{color:var(--destructive)}\n\n/* ---------- แถบบัญชาการเหนือฉาก ----------\n   เดิมแผงนี้ลอยทับกลางฉากจนมองแผนที่ไม่เห็น ย้ายมาอยู่เหนือฉากเป็นแถบเต็มความกว้าง */\n/* ---------- แถบโค้ช: สอนทีละเรื่อง ----------\n   เดิมมีแต่โมดัล "วิธีเล่น" ที่เทสิบสามข้อพร้อมกัน เจ้าของบอกว่าดูยากไป (7 ก.ย. 2569) */\n/* ย้ายมาอยู่ล่างสุดของหน้า 8 ก.ย. 2569 — เดิมอยู่ใต้หัวเรื่อง\n   ทุกครั้งที่มีบทใหม่ มันดันแถบบัญชาการกับฉากเลื่อนลงไปทั้งแผง จนคลิกผิดที่ */\n.coach{background:linear-gradient(90deg,var(--accent),var(--card));\n  border:1px solid var(--gold);border-left-width:4px;border-radius:var(--radius);\n  padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-3);align-items:flex-start;\n  margin-top:auto}\n.coach .txt{min-width:0;flex:1}\n.coach b{color:var(--gold);font-family:var(--font-display);font-size:1.05rem;display:block;margin-bottom:2px}\n.coach p{margin:0;font-size:var(--text-sm);line-height:var(--leading-body)}\n.coach .tip{margin-top:6px;font-size:var(--text-xs);color:var(--accent-foreground)}\n.coach .step{font-size:var(--text-xs);color:var(--muted-foreground);white-space:nowrap}\n.coach button{flex-shrink:0}\n\n/* ชิปทรัพยากรกดได้ทุกอัน — กดแล้วบอกว่าแถบนั้นมีไว้ทำอะไร หมดแล้วเกิดอะไร */\n.chip.tap{cursor:pointer;border-color:var(--input)}\n.chip.tap:hover{border-color:var(--gold)}\n.chip.tap::after{content:'?';font-size:10px;color:var(--muted-foreground);margin-left:2px}\n\n/* ---------- แผงไต่สวน (Phase 2) ----------\n   คำให้การเป็นปุ่มกดได้ · จี้ถูกบรรทัดที่ขัดกับสำนวน = ได้ความจริงฟรี */\n.quiz .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}\n.quiz .press{font-size:var(--text-xs);color:var(--gold);white-space:nowrap}\n.quiz .press b{font-variant-numeric:tabular-nums}\n.say{display:block;width:100%;text-align:left;background:var(--muted);border:1px solid var(--border);\n  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:7px;font-size:var(--t`... 159175 more characters,
+    expected: /src\/ui\.js\?v=[^"']*-k5/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/skill-atk.test.mjs:80:1
+✖ skill atk: release cache retains facing tokens and shares one preload module URL (21.847721ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(uiVersion?.includes('mapfx-westhit-skillatk-minigame-review-20261011'))
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/skill-atk.test.mjs:85:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/west-hit-facing.test.mjs:49:1
+✖ west-hit: arena() — ท่าโดนตีไม่เคยได้ .atk และส่ง standing ให้ figYouAtkClass · CSS ยังผูก .atk กับการยกเลิกพลิกเท่านั้น (14.788299ms)
+  AssertionError [ERR_ASSERTION]: release retains facing and skill sprite cache tokens
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/tests/west-hit-facing.test.mjs:60:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
