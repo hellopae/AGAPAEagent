@@ -12,7 +12,7 @@
 | L4a ดาบหน้าแท่น ป่าดาบอสิปัตตะ | Codex | `2026-10-15-avegee-l4a-asipatta-swords.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
 | L4b ไอคอนชุดประจำโซน ร้านพ่อค้า | Codex | `2026-10-15-avegee-l4b-outfit-icons.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
 | L5 ศัตรูระหว่างทางขยายชายแดน/ย้ายโซน เดินเข้าหา→ตัดเข้าศึกเอง | Toby | `2026-10-15-avegee-l5-auto-encounter.md` | ใช้หนีจาก L2 | Toby เสร็จ `toby/l5-encounter` 9dccf0f → Dale `l-merge-2` (หลัง L2) |
-| L2b ไอคอนโล่ป้องกัน `img/ui/icon-defend-shield.png` 128×128 | Codex | (เขียนเมื่อ Codex ว่าง) | L2 merge | รอ (ตอนนี้ใช้โล่วาดด้วยโค้ด) |
+| L2b ไอคอนโล่ป้องกัน + ❗ ศัตรูเห็น | Codex | `2026-10-15-avegee-l2b-ui-icons.md` | L2/L5 merge | กำลังรัน (23:58) |
 | L2c ตรวจข้อความไทยใหม่ (หน้าต่างหนี/ตั้งรับ/เหตุผลหนีไม่ได้) | Rae | (สั้น) | L2 merge | รอ |
 | ART-02C ตรวจชายฝั่ง/ท่าเรือ บนแผนที่ใหม่ | Toby→Mind | (เขียนใหม่) | L1+L1b merge | พัก (คุณเป้ให้ทำหลังแผนที่เสร็จ) |
 

@@ -1,0 +1,246 @@
+{
+ "map_idle_zoom5": {
+  "frames": 485,
+  "secs": 8.1,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 1,
+  "canvas_px_created_M": 0.02,
+  "calls": {
+   "drawImage": 43475,
+   "fill": 27844,
+   "stroke": 3888,
+   "fillRect": 27102,
+   "createRadialGradient": 486
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 213,
+  "decoded_img_MB": 637,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 572,
+  "secs": 10.04,
+  "fps_avg": 57,
+  "fps_min_1s": 44.7,
+  "ft_avg": 17.54,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 33.4,
+  "ft_max": 233.3,
+  "frames_over_33": 6,
+  "long_tasks": 4,
+  "long_ms": 491,
+  "long_max": 238,
+  "canvases_created": 13,
+  "canvas_px_created_M": 1.11,
+  "calls": {
+   "drawImage": 52625,
+   "fill": 34711,
+   "stroke": 5636,
+   "fillRect": 29918,
+   "createRadialGradient": 573,
+   "getImageData": 2,
+   "putImageData": 4
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 217,
+  "decoded_img_MB": 668,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_1_idle": {
+  "frames": 269,
+  "secs": 5.02,
+  "fps_avg": 53.6,
+  "fps_min_1s": 16.4,
+  "ft_avg": 18.65,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 100,
+  "ft_max": 200,
+  "frames_over_33": 5,
+  "long_tasks": 6,
+  "long_ms": 780,
+  "long_max": 192,
+  "canvases_created": 144,
+  "canvas_px_created_M": 4.18,
+  "calls": {
+   "drawImage": 76839,
+   "fill": 32119,
+   "stroke": 2436,
+   "fillRect": 36686,
+   "createRadialGradient": 270,
+   "getImageData": 8,
+   "putImageData": 16
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 225,
+  "decoded_img_MB": 681,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_3.5_idle": {
+  "frames": 305,
+  "secs": 5.09,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 6,
+  "canvas_px_created_M": 0.1,
+  "calls": {
+   "drawImage": 34068,
+   "fill": 20408,
+   "stroke": 2530,
+   "fillRect": 14604,
+   "createRadialGradient": 306
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 225,
+  "decoded_img_MB": 681,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_5_idle": {
+  "frames": 304,
+  "secs": 5.08,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 7,
+  "canvas_px_created_M": 0.16,
+  "calls": {
+   "drawImage": 29690,
+   "fill": 18310,
+   "stroke": 2573,
+   "fillRect": 14569,
+   "createRadialGradient": 305
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 225,
+  "decoded_img_MB": 681,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_6.5_idle": {
+  "frames": 303,
+  "secs": 5.08,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 3,
+  "canvas_px_created_M": 0.09,
+  "calls": {
+   "drawImage": 22515,
+   "fill": 16833,
+   "stroke": 2657,
+   "fillRect": 12091,
+   "createRadialGradient": 304
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 225,
+  "decoded_img_MB": 681,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_6.5_walk": {
+  "frames": 480,
+  "secs": 8.09,
+  "fps_avg": 59.5,
+  "fps_min_1s": 58,
+  "ft_avg": 16.81,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 50,
+  "frames_over_33": 2,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 5,
+  "canvas_px_created_M": 0.46,
+  "calls": {
+   "drawImage": 40841,
+   "fill": 27225,
+   "stroke": 4492,
+   "fillRect": 26557,
+   "createRadialGradient": 481
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 226,
+  "decoded_img_MB": 687,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1440,
+   900,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
