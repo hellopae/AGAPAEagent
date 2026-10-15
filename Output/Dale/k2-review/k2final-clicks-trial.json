@@ -1,0 +1,108 @@
+{
+ "panels_rapid": {
+  "stats": {
+   "power": {
+    "open_miss": 0,
+    "option_miss": 1,
+    "close_miss": 1,
+    "n": 10,
+    "why": [
+     {
+      "i": 0,
+      "nopt": 1,
+      "pre": [
+       "null"
+      ],
+      "had": false,
+      "post": [
+       null,
+       null,
+       null
+      ]
+     }
+    ],
+    "no_options": 9
+   },
+   "where": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10
+   },
+   "keeper": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10
+   },
+   "force": {
+    "open_miss": 0,
+    "option_miss": 1,
+    "close_miss": 0,
+    "n": 10,
+    "why": [
+     {
+      "i": 0,
+      "nopt": 5,
+      "pre": [
+       "null",
+       "null",
+       "null",
+       "null",
+       "null"
+      ],
+      "had": false,
+      "post": [
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     }
+    ]
+   }
+  },
+  "clicks": 111,
+  "pointerdown_without_click": {
+   "total": 109,
+   "lost": 0
+  }
+ },
+ "panels_anim": {
+  "stats": {
+   "power": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10,
+    "no_options": 10
+   },
+   "where": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10
+   },
+   "keeper": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10
+   },
+   "force": {
+    "open_miss": 0,
+    "option_miss": 0,
+    "close_miss": 0,
+    "n": 10
+   }
+  },
+  "clicks": 110,
+  "pointerdown_without_click": {
+   "total": 110,
+   "lost": 0
+  }
+ },
+ "warrant_ready": true,
+ "errs": []
+}

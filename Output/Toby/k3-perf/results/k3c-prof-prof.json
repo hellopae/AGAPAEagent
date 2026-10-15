@@ -1,0 +1,1170 @@
+{
+ "map_idle_zoom5": {
+  "frames": 484,
+  "secs": 8.27,
+  "fps_avg": 58.7,
+  "fps_min_1s": 52.9,
+  "ft_avg": 17.04,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 133.3,
+  "frames_over_33": 2,
+  "long_tasks": 1,
+  "long_ms": 136,
+  "long_max": 136,
+  "canvases_created": 3,
+  "canvas_px_created_M": 0.07,
+  "calls": {
+   "drawImage": 36143,
+   "fill": 19770,
+   "stroke": 4268,
+   "fillRect": 19299,
+   "createRadialGradient": 485
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 8161.066,
+   "top": [
+    [
+     "(idle)",
+     5877.5,
+     72.0
+    ],
+    [
+     "(program)",
+     748.3,
+     9.2
+    ],
+    [
+     "getBoundingClientRect",
+     241.4,
+     3.0
+    ],
+    [
+     "drawImage",
+     229.4,
+     2.8
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     100.5,
+     1.2
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     57.7,
+     0.7
+    ],
+    [
+     "updateTownHud ui.js:1299",
+     40.9,
+     0.5
+    ],
+    [
+     "(garbage collector)",
+     40.9,
+     0.5
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     36.9,
+     0.5
+    ],
+    [
+     "getTransform",
+     34.7,
+     0.4
+    ],
+    [
+     "render scene.js:202",
+     29.5,
+     0.4
+    ],
+    [
+     "save",
+     27.2,
+     0.3
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     26.7,
+     0.3
+    ],
+    [
+     "canWalk walk.js:267",
+     25.4,
+     0.3
+    ],
+    [
+     "(anon) town-layout.js:172",
+     24.4,
+     0.3
+    ],
+    [
+     "frame ui.js:300",
+     23.4,
+     0.3
+    ],
+    [
+     "load art.js:112",
+     23.0,
+     0.3
+    ],
+    [
+     "plain scene.js:76",
+     22.5,
+     0.3
+    ]
+   ]
+  }
+ },
+ "map_walk_10s": {
+  "frames": 594,
+  "secs": 10.24,
+  "fps_avg": 58.1,
+  "fps_min_1s": 48,
+  "ft_avg": 17.2,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 33.3,
+  "ft_max": 133.3,
+  "frames_over_33": 5,
+  "long_tasks": 2,
+  "long_ms": 193,
+  "long_max": 127,
+  "canvases_created": 122,
+  "canvas_px_created_M": 29.64,
+  "calls": {
+   "drawImage": 46361,
+   "fill": 26256,
+   "stroke": 7236,
+   "fillRect": 32202,
+   "createRadialGradient": 595,
+   "createLinearGradient": 218,
+   "clip": 109
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 10128.669,
+   "top": [
+    [
+     "(idle)",
+     6526.3,
+     64.4
+    ],
+    [
+     "(program)",
+     994.4,
+     9.8
+    ],
+    [
+     "fillRect",
+     827.0,
+     8.2
+    ],
+    [
+     "drawImage",
+     479.4,
+     4.7
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     143.3,
+     1.4
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     74.7,
+     0.7
+    ],
+    [
+     "(garbage collector)",
+     52.5,
+     0.5
+    ],
+    [
+     "drawTownGround town-map.js:57",
+     45.9,
+     0.5
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     43.9,
+     0.4
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     42.3,
+     0.4
+    ],
+    [
+     "getTransform",
+     42.2,
+     0.4
+    ],
+    [
+     "render scene.js:202",
+     41.6,
+     0.4
+    ],
+    [
+     "load art.js:112",
+     32.6,
+     0.3
+    ],
+    [
+     "plain scene.js:76",
+     30.6,
+     0.3
+    ],
+    [
+     "frame ui.js:300",
+     28.2,
+     0.3
+    ],
+    [
+     "restore",
+     26.8,
+     0.3
+    ],
+    [
+     "artUrl art.js:79",
+     25.8,
+     0.3
+    ],
+    [
+     "save",
+     21.4,
+     0.2
+    ]
+   ]
+  }
+ },
+ "map_zoom_1_idle": {
+  "frames": 310,
+  "secs": 5.22,
+  "fps_avg": 59.4,
+  "fps_min_1s": 1,
+  "ft_avg": 16.83,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 50,
+  "frames_over_33": 1,
+  "long_tasks": 1,
+  "long_ms": 960,
+  "long_max": 960,
+  "canvases_created": 178,
+  "canvas_px_created_M": 3.9,
+  "calls": {
+   "drawImage": 91746,
+   "fill": 45767,
+   "stroke": 3421,
+   "fillRect": 12368,
+   "createRadialGradient": 311
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 5135.478,
+   "top": [
+    [
+     "(idle)",
+     3106.6,
+     60.5
+    ],
+    [
+     "(program)",
+     607.4,
+     11.8
+    ],
+    [
+     "drawImage",
+     395.2,
+     7.7
+    ],
+    [
+     "save",
+     130.9,
+     2.5
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     78.7,
+     1.5
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     71.9,
+     1.4
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     42.4,
+     0.8
+    ],
+    [
+     "(garbage collector)",
+     40.7,
+     0.8
+    ],
+    [
+     "render scene.js:202",
+     37.9,
+     0.7
+    ],
+    [
+     "getTransform",
+     36.6,
+     0.7
+    ],
+    [
+     "fill",
+     34.4,
+     0.7
+    ],
+    [
+     "restore",
+     31.5,
+     0.6
+    ],
+    [
+     "plain scene.js:76",
+     28.8,
+     0.6
+    ],
+    [
+     "load art.js:112",
+     22.5,
+     0.4
+    ],
+    [
+     "sprite town-scenery.js:58",
+     21.3,
+     0.4
+    ],
+    [
+     "(anon) town-scenery.js:113",
+     21.0,
+     0.4
+    ],
+    [
+     "ellipse",
+     19.6,
+     0.4
+    ],
+    [
+     "frame ui.js:300",
+     18.6,
+     0.4
+    ]
+   ]
+  }
+ },
+ "map_zoom_3.5_idle": {
+  "frames": 309,
+  "secs": 5.19,
+  "fps_avg": 59.8,
+  "fps_min_1s": 58.9,
+  "ft_avg": 16.72,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 33.4,
+  "frames_over_33": 1,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 7,
+  "canvas_px_created_M": 0.17,
+  "calls": {
+   "drawImage": 42717,
+   "fill": 17460,
+   "stroke": 2920,
+   "fillRect": 12330,
+   "createRadialGradient": 310
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 5121.226,
+   "top": [
+    [
+     "(idle)",
+     3450.7,
+     67.4
+    ],
+    [
+     "(program)",
+     625.8,
+     12.2
+    ],
+    [
+     "drawImage",
+     331.9,
+     6.5
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     64.8,
+     1.3
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     42.1,
+     0.8
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     40.6,
+     0.8
+    ],
+    [
+     "load art.js:112",
+     27.4,
+     0.5
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     26.4,
+     0.5
+    ],
+    [
+     "save",
+     24.3,
+     0.5
+    ],
+    [
+     "getTransform",
+     23.0,
+     0.4
+    ],
+    [
+     "render scene.js:202",
+     21.8,
+     0.4
+    ],
+    [
+     "updateTrialBtn ui.js:1172",
+     20.7,
+     0.4
+    ],
+    [
+     "(garbage collector)",
+     17.9,
+     0.3
+    ],
+    [
+     "plain scene.js:76",
+     16.4,
+     0.3
+    ],
+    [
+     "followMarks ui.js:1102",
+     16.0,
+     0.3
+    ],
+    [
+     "artUrl art.js:79",
+     11.7,
+     0.2
+    ],
+    [
+     "fill",
+     11.3,
+     0.2
+    ],
+    [
+     "drawTownGround town-map.js:57",
+     11.2,
+     0.2
+    ]
+   ]
+  }
+ },
+ "map_zoom_5_idle": {
+  "frames": 306,
+  "secs": 5.12,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 5,
+  "canvas_px_created_M": 0.1,
+  "calls": {
+   "drawImage": 24683,
+   "fill": 12943,
+   "stroke": 2456,
+   "fillRect": 12205,
+   "createRadialGradient": 307
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 5045.522,
+   "top": [
+    [
+     "(idle)",
+     3751.3,
+     74.3
+    ],
+    [
+     "(program)",
+     552.6,
+     11.0
+    ],
+    [
+     "drawImage",
+     185.5,
+     3.7
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     64.5,
+     1.3
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     36.3,
+     0.7
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     25.6,
+     0.5
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     25.1,
+     0.5
+    ],
+    [
+     "(garbage collector)",
+     19.3,
+     0.4
+    ],
+    [
+     "drawTownGround town-map.js:57",
+     18.9,
+     0.4
+    ],
+    [
+     "load art.js:112",
+     18.5,
+     0.4
+    ],
+    [
+     "save",
+     16.7,
+     0.3
+    ],
+    [
+     "render scene.js:202",
+     15.8,
+     0.3
+    ],
+    [
+     "getTransform",
+     14.5,
+     0.3
+    ],
+    [
+     "followMarks ui.js:1102",
+     14.2,
+     0.3
+    ],
+    [
+     "plain scene.js:76",
+     12.3,
+     0.2
+    ],
+    [
+     "updateTrialBtn ui.js:1172",
+     11.8,
+     0.2
+    ],
+    [
+     "querySelector",
+     9.2,
+     0.2
+    ],
+    [
+     "mapReviewArt map-art-v5.js:9",
+     8.4,
+     0.2
+    ]
+   ]
+  }
+ },
+ "map_zoom_6.5_idle": {
+  "frames": 291,
+  "secs": 5.36,
+  "fps_avg": 54.4,
+  "fps_min_1s": 27.3,
+  "ft_avg": 18.38,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 66.6,
+  "ft_max": 150,
+  "frames_over_33": 9,
+  "long_tasks": 2,
+  "long_ms": 1553,
+  "long_max": 1405,
+  "canvases_created": 60,
+  "canvas_px_created_M": 17.6,
+  "calls": {
+   "drawImage": 19377,
+   "createLinearGradient": 26,
+   "fillRect": 12682,
+   "fill": 12231,
+   "stroke": 2659,
+   "clip": 13,
+   "createRadialGradient": 292
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 5068.341,
+   "top": [
+    [
+     "(idle)",
+     3636.7,
+     71.8
+    ],
+    [
+     "(program)",
+     487.9,
+     9.6
+    ],
+    [
+     "drawImage",
+     239.1,
+     4.7
+    ],
+    [
+     "fillRect",
+     163.5,
+     3.2
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     64.7,
+     1.3
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     43.5,
+     0.9
+    ],
+    [
+     "save",
+     26.6,
+     0.5
+    ],
+    [
+     "load art.js:112",
+     20.8,
+     0.4
+    ],
+    [
+     "drawTownGround town-map.js:57",
+     19.0,
+     0.4
+    ],
+    [
+     "getTransform",
+     18.5,
+     0.4
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     18.4,
+     0.4
+    ],
+    [
+     "render scene.js:202",
+     17.4,
+     0.3
+    ],
+    [
+     "(garbage collector)",
+     16.5,
+     0.3
+    ],
+    [
+     "plain scene.js:76",
+     12.1,
+     0.2
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     12.0,
+     0.2
+    ],
+    [
+     "updateTrialBtn ui.js:1172",
+     11.1,
+     0.2
+    ],
+    [
+     "ellipse",
+     10.2,
+     0.2
+    ],
+    [
+     "followMarks ui.js:1102",
+     8.7,
+     0.2
+    ]
+   ]
+  }
+ },
+ "map_zoom_6.5_walk": {
+  "frames": 357,
+  "secs": 8.33,
+  "fps_avg": 43.3,
+  "fps_min_1s": 28.4,
+  "ft_avg": 23.11,
+  "ft_p50": 16.7,
+  "ft_p95": 50,
+  "ft_p99": 83.3,
+  "ft_max": 116.6,
+  "frames_over_33": 54,
+  "long_tasks": 4,
+  "long_ms": 312,
+  "long_max": 82,
+  "canvases_created": 79,
+  "canvas_px_created_M": 76.03,
+  "calls": {
+   "drawImage": 23193,
+   "fill": 15527,
+   "stroke": 4362,
+   "fillRect": 20034,
+   "createRadialGradient": 358,
+   "createLinearGradient": 144,
+   "clip": 72
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 219,
+  "decoded_img_MB": 682,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 8166.902,
+   "top": [
+    [
+     "(idle)",
+     4585.3,
+     56.1
+    ],
+    [
+     "fillRect",
+     1042.7,
+     12.8
+    ],
+    [
+     "(program)",
+     916.9,
+     11.2
+    ],
+    [
+     "drawImage",
+     453.3,
+     5.6
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     150.0,
+     1.8
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     71.3,
+     0.9
+    ],
+    [
+     "(garbage collector)",
+     53.4,
+     0.7
+    ],
+    [
+     "render scene.js:202",
+     41.7,
+     0.5
+    ],
+    [
+     "drawTownGround town-map.js:57",
+     37.7,
+     0.5
+    ],
+    [
+     "restore",
+     37.0,
+     0.5
+    ],
+    [
+     "save",
+     34.0,
+     0.4
+    ],
+    [
+     "load art.js:112",
+     33.0,
+     0.4
+    ],
+    [
+     "townInRect town-layout.js:175",
+     32.6,
+     0.4
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     28.3,
+     0.3
+    ],
+    [
+     "artUrl art.js:79",
+     25.5,
+     0.3
+    ],
+    [
+     "(anon) town-layout.js:172",
+     24.8,
+     0.3
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     22.7,
+     0.3
+    ],
+    [
+     "getTransform",
+     22.3,
+     0.3
+    ]
+   ]
+  }
+ },
+ "battle_idle": {
+  "frames": 492,
+  "secs": 8.25,
+  "fps_avg": 59.8,
+  "fps_min_1s": 57.8,
+  "ft_avg": 16.73,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 50.1,
+  "frames_over_33": 1,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 142157,
+   "fill": 73630,
+   "stroke": 5423,
+   "fillRect": 18734,
+   "createRadialGradient": 493
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 221,
+  "decoded_img_MB": 700,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 8115.425,
+   "top": [
+    [
+     "(idle)",
+     3327.3,
+     41.0
+    ],
+    [
+     "(program)",
+     1622.5,
+     20.0
+    ],
+    [
+     "drawImage",
+     957.8,
+     11.8
+    ],
+    [
+     "save",
+     331.0,
+     4.1
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     172.8,
+     2.1
+    ],
+    [
+     "getTransform",
+     114.2,
+     1.4
+    ],
+    [
+     "(garbage collector)",
+     103.2,
+     1.3
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     99.1,
+     1.2
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     97.4,
+     1.2
+    ],
+    [
+     "render scene.js:202",
+     86.5,
+     1.1
+    ],
+    [
+     "fill",
+     72.2,
+     0.9
+    ],
+    [
+     "load art.js:112",
+     71.3,
+     0.9
+    ],
+    [
+     "plain scene.js:76",
+     68.0,
+     0.8
+    ],
+    [
+     "restore",
+     53.1,
+     0.7
+    ],
+    [
+     "sprite town-scenery.js:58",
+     50.3,
+     0.6
+    ],
+    [
+     "ellipse",
+     41.6,
+     0.5
+    ],
+    [
+     "(anon) town-scenery.js:113",
+     40.9,
+     0.5
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     40.3,
+     0.5
+    ]
+   ]
+  }
+ },
+ "trial_open": true,
+ "trial_idle": {
+  "frames": 495,
+  "secs": 8.33,
+  "fps_avg": 59.6,
+  "fps_min_1s": 57.8,
+  "ft_avg": 16.77,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 49.9,
+  "frames_over_33": 2,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 148885,
+   "fill": 81969,
+   "stroke": 4558,
+   "fillRect": 18736,
+   "createRadialGradient": 496
+  },
+  "heap_MB": 14.5,
+  "decoded_imgs": 227,
+  "decoded_img_MB": 716,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ],
+  "profile": {
+   "total_ms": 8118.544,
+   "top": [
+    [
+     "(idle)",
+     2815.7,
+     34.7
+    ],
+    [
+     "(program)",
+     1817.2,
+     22.4
+    ],
+    [
+     "drawImage",
+     1112.4,
+     13.7
+    ],
+    [
+     "save",
+     252.8,
+     3.1
+    ],
+    [
+     "ctx.drawImage scene.js:80",
+     197.9,
+     2.4
+    ],
+    [
+     "updateMapCamera ui.js:170",
+     144.8,
+     1.8
+    ],
+    [
+     "(garbage collector)",
+     111.9,
+     1.4
+    ],
+    [
+     "getTransform",
+     110.1,
+     1.4
+    ],
+    [
+     "onScreen town-scenery.js:46",
+     101.1,
+     1.2
+    ],
+    [
+     "render scene.js:202",
+     97.6,
+     1.2
+    ],
+    [
+     "fill",
+     95.9,
+     1.2
+    ],
+    [
+     "plain scene.js:76",
+     80.1,
+     1.0
+    ],
+    [
+     "restore",
+     65.7,
+     0.8
+    ],
+    [
+     "load art.js:112",
+     57.6,
+     0.7
+    ],
+    [
+     "ellipse",
+     57.5,
+     0.7
+    ],
+    [
+     "drawTownTerrain town-terrain.js:74",
+     54.4,
+     0.7
+    ],
+    [
+     "sprite town-scenery.js:58",
+     49.4,
+     0.6
+    ],
+    [
+     "artUrl art.js:79",
+     47.5,
+     0.6
+    ]
+   ]
+  }
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1440,
+   900,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

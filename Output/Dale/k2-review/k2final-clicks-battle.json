@@ -1,0 +1,210 @@
+{
+ "menu_rapid": {
+  "clicks": 50,
+  "state_miss": {
+   "attack": 0,
+   "power_open": 0,
+   "power_close": 0,
+   "item_open": 0,
+   "item_close": 0
+  },
+  "pointerdown_without_click": {
+   "total": 5,
+   "lost": 0
+  }
+ },
+ "menu_anim": {
+  "clicks": 50,
+  "state_miss": {
+   "attack": 0,
+   "power_open": 0,
+   "power_close": 0,
+   "item_open": 0,
+   "item_close": 0
+  },
+  "pointerdown_without_click": {
+   "total": 5,
+   "lost": 0
+  }
+ },
+ "flow_power_rapid": {
+  "rows": [
+   {
+    "open": 5,
+    "choice": true,
+    "cmd": 5,
+    "uses": 1
+   },
+   {
+    "open": 193,
+    "choice": true,
+    "cmd": 191,
+    "uses": 1
+   },
+   {
+    "open": 247,
+    "choice": true,
+    "cmd": 237,
+    "uses": 1
+   },
+   {
+    "open": 131,
+    "choice": true,
+    "cmd": 133,
+    "uses": 1
+   },
+   {
+    "open": 106,
+    "choice": true,
+    "cmd": 105,
+    "uses": 1
+   },
+   {
+    "open": 124,
+    "choice": true,
+    "cmd": 137,
+    "uses": 1
+   },
+   {
+    "open": 170,
+    "choice": true,
+    "cmd": 155,
+    "uses": 1
+   },
+   {
+    "open": 219,
+    "choice": true,
+    "cmd": 180,
+    "uses": 1
+   },
+   {
+    "open": 193,
+    "choice": true,
+    "cmd": 194,
+    "uses": 1
+   },
+   {
+    "open": 170,
+    "choice": true,
+    "cmd": 173,
+    "uses": 1
+   }
+  ],
+  "uses_eq_1": 10,
+  "pointerdown_without_click": {
+   "total": 57,
+   "lost": 0
+  }
+ },
+ "flow_power_anim": {
+  "rows": [
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": false,
+    "cmd": null,
+    "uses": 0,
+    "dump": "{\"a\":\"you\",\"cmd\":null,\"open\":\"power\",\"busy\":false,\"menu\":true}"
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": false,
+    "cmd": null,
+    "uses": 0,
+    "dump": "{\"a\":\"you\",\"cmd\":null,\"open\":\"power\",\"busy\":false,\"menu\":true}"
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   },
+   {
+    "open": null,
+    "choice": false,
+    "cmd": null,
+    "uses": 0,
+    "dump": "{\"a\":\"you\",\"cmd\":null,\"open\":\"power\",\"busy\":false,\"menu\":true}"
+   },
+   {
+    "open": null,
+    "choice": true,
+    "cmd": null,
+    "uses": 1
+   }
+  ],
+  "uses_eq_1": 7,
+  "pointerdown_without_click": {
+   "total": 48,
+   "lost": 0
+  }
+ },
+ "attack_foe_rapid": {
+  "uses_per_try": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "uses_eq_1": 10,
+  "pointerdown_without_click": {
+   "total": 33,
+   "lost": 0
+  }
+ },
+ "attack_foe_anim": {
+  "uses_per_try": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "uses_eq_1": 10,
+  "pointerdown_without_click": {
+   "total": 20,
+   "lost": 0
+  }
+ },
+ "errs": []
+}
