@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | Codex เสร็จ → Dale รีวิว (`k1e-review`) |
 | L1 แผนที่ไม่ลอย: มาสก์เคลียร์พื้น + เงา + ย่อตัวละคร | Toby | `2026-10-15-avegee-l1-map-depth.md` | — | กำลังรัน |
-| L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | (เขียนเมื่อได้มาสก์จาก L1) | L1 ขั้น 1 | รอ |
+| L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | `2026-10-15-avegee-l1b-map-clear.md` | L1 ขั้น 1 (มาสก์เสร็จ 14:19) | กำลังรัน (22:45) |
 | L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | กำลังรัน |
 | L3 ปุ่มยมทูตพักศาลาน้ำชา + สะกดจิตเป็นรางวัลบอสชายแดนโซน 3 | Toby | `2026-10-15-avegee-l3-crew-rest-hypno.md` | — | Toby เสร็จ `toby/l3-crew-hypno` 7023140 (ริบสะกดจิตเซฟเก่าตามคุณเป้) → รอ Dale (หลัง K1e/L4) |
 | L4a ดาบหน้าแท่น ป่าดาบอสิปัตตะ | Codex | `2026-10-15-avegee-l4a-asipatta-swords.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
@@ -17,3 +17,5 @@
 ถ้า Codex `rate_limited` → `work-mode.json` = claude-only แล้วงานวาดรอ, งานโค้ดของ Codex (การเสียบภาพ) ให้ Toby ทำแทน
 
 **15 ต.ค. 14:45** Codex rate_limited ถึง 18:21 → claude-only · L1b รอ Codex
+
+**15 ต.ค. 22:45** Claude limit reset 22:40 · Codex app push animation ยม (acc9c43) + แสงนรกโซน 1/เสาไฟไทย/แสงคบไฟ (69ed45e, 8f82178 — แตะ town-lighting/scenery/terrain/layout) → ทุกสายต้อง rebase บน 8f82178 · K1e คบไฟอาจซ้ำกับเสาไฟไทยของ Codex — Dale ตัดสินจากภาพ
