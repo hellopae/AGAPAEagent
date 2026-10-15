@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T04:18:08.292Z",
+  "updatedAt": "2026-10-15T04:26:59.810Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale merges K3 perf fix",
       "report": {
         "when": "20:27",
