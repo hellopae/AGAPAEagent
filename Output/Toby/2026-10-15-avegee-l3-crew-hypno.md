@@ -17,12 +17,11 @@ repo `/Users/agapae/agapae-work/AVEGEE` · worktree `/Users/agapae/agapae-work/.
 - **แก้:** `powerLocked()` ของ hypno = `!abilities.hypno` (ไม่ผูกเลเวล) · `abilities.hypno` ถูกตั้งตอนชนะ event `westVampireBreach` (บอสชายแดนโซน 3 · แวมไพร์) ครั้งแรก — reward `{ability:'hypno'}` มีอยู่ในข้อมูลแล้ว ไม่ต้องเพิ่ม · ปุ่มต่อสู้เดิมเช็ค `abilities.hypno` อยู่แล้ว
 - popup: ใช้ `power:hypno` ตัวเดิม ("ได้พลังใหม่ · สะกดจิต" ข้อความอธิบายสอบสวน+ต่อสู้) และ **ข้าม `ability:hypno`** เพื่อไม่ให้เด้งซ้ำสองครั้งตอนชนะบอส
 - ลบคำว่า "ซื้อจากบุญ/ซื้อวงสะกดจิต/บุญยังขาย" ใน `data.js` (desc ของ POWERS.hypno, desc/use ของ sawan, คอมเมนต์ BOON_SHOP/MERCHANT/POWERS) · ข้อความล็อกในแท็บ "พลัง" และวงคำสั่งสอบสวนเปลี่ยนเป็น "ล็อก · ชนะบอสชายแดนโซน 3 ก่อน" สำหรับ hypno
-- **เซฟเก่า (คงไว้ ไม่ริบ):** เพิ่ม marker `hypnoGateL3` ในเซฟ เซฟที่ไม่มี marker และ (level ≥ 4 หรือมี item hypno หรือเคยเห็น popup สะกดจิต) จะได้ `abilities.hypno = true` ตอนโหลด · เซฟใหม่ (มี marker) ไม่ได้จากเลเวล เซฟเก่า lv<4 ต้องไปชนะบอสเอง
-  - ข้อสังเกต: ผู้เล่นเซฟเก่าที่ lv4+ แต่ยังไม่เคยไปโซน 3 จะยังมีสะกดจิต (ตั้งใจ "ไม่ริบของผู้เล่น") ตัวคุณเป้เองถ้าเซฟเป็น lv4+ จะยังเห็นสะกดจิตจนกว่าจะเริ่มเซฟใหม่ — ถ้าอยากให้ริบ บอก Claudy แล้วตัดเงื่อนไขนี้ออก (1 บรรทัดใน `restore()`)
+- **เซฟเก่า (ริบตามคุณเป้เลือก):** ตัดกติกา "คงไว้" ออกแล้ว (ไม่มี marker/grandfather) · `restore()` ให้ `abilities.hypno` เฉพาะเซฟที่ชนะแวมไพร์โซน 3 แล้ว (flag ใน abilities ของเซฟ หรือ event `westVampireBreach` = cleared) เซฟ lv4+ ที่ยังไม่ชนะจะถูกล็อกสะกดจิต และล้างสถานะ "เคยเห็น popup สะกดจิต" ทิ้งเพื่อให้ popup เด้งตอนชนะบอสจริง
   - `g.buyBoon` + `BOON_SHOP` ยังเป็น dead code (stock ว่าง) ไม่ได้ลบเพื่อไม่ขยายขอบเขต
 
 ## ไฟล์ที่แตะ
-- `src/game.js` — `restActor` (HP<100), `powerLocked` (hypno), `syncDiscoveries` (ข้าม ability:hypno), `restore` (grandfather), snapshot marker `hypnoGateL3`
+- `src/game.js` — `restActor` (HP<100), `powerLocked` (hypno), `syncDiscoveries` (ข้าม ability:hypno), `restore` (ริบสะกดจิตจากเซฟที่ยังไม่ชนะบอส + ล้าง popup ที่เคยเห็น)
 - `src/ui.js` — `guardRestWidget` (ปุ่ม+เหตุผล), ข้อความล็อกสะกดจิต 2 จุด, cache-bust import `game.js?v=...-l3`
 - `src/data.js` — ข้อความสะกดจิต/ประตูสวรรค์/คอมเมนต์ · `src/i18n.js` — key `g1.full/inBattle/down/inTeam` th+en
 - `index.html`, `output/game-review/index.html` — cache-bust `ui.js?v=...-r1-k5-l3`
