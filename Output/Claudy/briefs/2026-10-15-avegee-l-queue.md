@@ -9,9 +9,11 @@
 | L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | (เขียนเมื่อได้มาสก์จาก L1) | L1 ขั้น 1 | รอ |
 | L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | กำลังรัน |
 | L3 ปุ่มยมทูตพักศาลาน้ำชา + สะกดจิตเป็นรางวัลบอสชายแดนโซน 3 | Toby | `2026-10-15-avegee-l3-crew-rest-hypno.md` | — | กำลังรัน |
-| L4a ดาบหน้าแท่น ป่าดาบอสิปัตตะ | Codex | `2026-10-15-avegee-l4a-asipatta-swords.md` | — | กำลังรัน |
-| L4b ไอคอนชุดประจำโซน ร้านพ่อค้า | Codex | `2026-10-15-avegee-l4b-outfit-icons.md` | — | กำลังรัน |
+| L4a ดาบหน้าแท่น ป่าดาบอสิปัตตะ | Codex | `2026-10-15-avegee-l4a-asipatta-swords.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
+| L4b ไอคอนชุดประจำโซน ร้านพ่อค้า | Codex | `2026-10-15-avegee-l4b-outfit-icons.md` | — | วาดเสร็จ (rate_limited กลางทาง) → Dale เก็บงาน (`l4-review`) |
 | ART-02C ตรวจชายฝั่ง/ท่าเรือ บนแผนที่ใหม่ | Toby→Mind | (เขียนใหม่) | L1+L1b merge | พัก (คุณเป้ให้ทำหลังแผนที่เสร็จ) |
 
 ลำดับ merge (Dale): K1e → L1 → L1b → L2 → L3 → L4a → L4b (ใครเสร็จก่อนเข้าก่อนได้ ถ้าไม่ชนไฟล์) · ชนกันที่ cache-bust/`index.html` ให้ rebase
 ถ้า Codex `rate_limited` → `work-mode.json` = claude-only แล้วงานวาดรอ, งานโค้ดของ Codex (การเสียบภาพ) ให้ Toby ทำแทน
+
+**15 ต.ค. 14:45** Codex rate_limited ถึง 18:21 → claude-only · L1b รอ Codex
