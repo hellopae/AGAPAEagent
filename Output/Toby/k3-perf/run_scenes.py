@@ -54,6 +54,8 @@ with sync_playwright() as p:
           g.hire('dam');g.hire('kan');g.hire('boon');if(!g.taught.includes('trial-calculation'))g.taught.push('trial-calculation');
           for(const k of ['krata','lokan','dab'])if(!g.has(k)){const def=STATIONS.find(d=>d.k===k);g.stations.push({...g.stations[0],def,build:0,buildWait:false,slots:[],crewK:null});}
           if(!g.queue.length)g.spawnSoul();}""")
+        pg.evaluate("G.battle=null;G.over=null;document.querySelectorAll('dialog[open]').forEach(d=>d.close())"); settle(pg,1500)
+        res['trial_btn']=pg.evaluate("(()=>{const b=document.getElementById('hud-trial');return [b.disabled,b.hidden,b.textContent.trim(),G.queue.length,!!G.battle,G.paused]})()")
         pg.evaluate("document.getElementById('hud-trial').click()"); settle(pg,2500)
         ok=pg.evaluate("!!document.querySelector('dialog[open] .trial-hud')")
         res['trial_open']=ok

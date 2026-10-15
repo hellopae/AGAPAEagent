@@ -1,0 +1,53 @@
+{
+ "trial_btn": [
+  false,
+  false,
+  "เริ่มพิจารณาคดี",
+  1,
+  false,
+  false
+ ],
+ "trial_open": true,
+ "trial_idle": {
+  "frames": 482,
+  "secs": 8.05,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 35727,
+   "fill": 26366,
+   "stroke": 3001,
+   "fillRect": 18246,
+   "createRadialGradient": 483
+  },
+  "heap_MB": 10.7,
+  "decoded_imgs": 227,
+  "decoded_img_MB": 709,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1440,
+   900,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

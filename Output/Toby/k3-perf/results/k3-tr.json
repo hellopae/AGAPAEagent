@@ -1,0 +1,124 @@
+{
+ "battle_idle": {
+  "frames": 484,
+  "secs": 8.09,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 33465,
+   "fill": 20370,
+   "stroke": 3880,
+   "fillRect": 18430,
+   "createRadialGradient": 485
+  },
+  "heap_MB": 11.3,
+  "decoded_imgs": 220,
+  "decoded_img_MB": 694,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 475,
+  "secs": 8.05,
+  "fps_avg": 59.1,
+  "fps_min_1s": 52.4,
+  "ft_avg": 16.91,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 116.7,
+  "frames_over_33": 1,
+  "long_tasks": 1,
+  "long_ms": 54,
+  "long_max": 54,
+  "canvases_created": 2,
+  "canvas_px_created_M": 2.07,
+  "calls": {
+   "drawImage": 33306,
+   "fill": 20422,
+   "stroke": 3808,
+   "fillRect": 18088,
+   "createRadialGradient": 476,
+   "getImageData": 1
+  },
+  "heap_MB": 11.3,
+  "decoded_imgs": 221,
+  "decoded_img_MB": 695,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "battle_action_hp": [
+  363,
+  180
+ ],
+ "trial_btn": [
+  false,
+  false,
+  "เริ่มพิจารณาคดี",
+  1,
+  false,
+  false
+ ],
+ "trial_open": true,
+ "trial_idle": {
+  "frames": 482,
+  "secs": 8.05,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 36516,
+   "fill": 28081,
+   "stroke": 2981,
+   "fillRect": 18246,
+   "createRadialGradient": 483
+  },
+  "heap_MB": 11.3,
+  "decoded_imgs": 229,
+  "decoded_img_MB": 723,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1440,
+   900,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
