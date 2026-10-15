@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T07:11:04.278Z",
+  "updatedAt": "2026-10-15T07:15:55.530Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby K5 battle overlap fix",
+      "status": "working",
+      "task": "Toby L3 crew rest + hypnosis",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
@@ -386,3 +386,4 @@
     }
   ]
 }
+
