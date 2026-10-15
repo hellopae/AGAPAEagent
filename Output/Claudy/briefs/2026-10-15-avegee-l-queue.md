@@ -4,7 +4,7 @@
 
 | งาน | เจ้าของ | ใบงาน | ขึ้นกับ | สถานะ |
 |---|---|---|---|---|
-| K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | Dale PASS (stack a30b7e9 รวม L4a/L4b) → **รอคุณเป้ push** |
+| K1e ของตกแต่ง 5 ชิ้น (ปาล์ม โคม คบ ต้นแดง ต้นหิมะ) | Codex | `2026-10-15-avegee-k1e-town-props-art.md` | — | ✅ ขึ้น main `a30b7e9` (คุณเป้ push 23:24) |
 | L1 แผนที่ไม่ลอย: มาสก์เคลียร์พื้น + เงา + ย่อตัวละคร | Toby | `2026-10-15-avegee-l1-map-depth.md` | — | Toby เสร็จ `toby/l1-depth` b278303 (+นิราบนแท่น) → รอ Dale |
 | L1b เคลียร์พื้นใต้ของที่วาง (inpaint แผนที่ละเอียด) | Codex | `2026-10-15-avegee-l1b-map-clear.md` | L1 ขั้น 1 (มาสก์เสร็จ 14:19) | Codex rate_limited ถึง 23:55 → รันใหม่ 23:57 |
 | L2 ต่อสู้ ป้องกัน/หนี/ตำแหน่ง + สอบสวน รูปที่เลือก/ขาว/พลังเวท + pause | Toby | `2026-10-15-avegee-l2-battle-trial-pause.md` | — | Toby เสร็จ `toby/l2-ui` fe1e9ad → รอ Dale |
@@ -24,3 +24,5 @@
 **15 ต.ค. 22:45** Claude limit reset 22:40 · Codex app push animation ยม (acc9c43) + แสงนรกโซน 1/เสาไฟไทย/แสงคบไฟ (69ed45e, 8f82178 — แตะ town-lighting/scenery/terrain/layout) → ทุกสายต้อง rebase บน 8f82178 · K1e คบไฟอาจซ้ำกับเสาไฟไทยของ Codex — Dale ตัดสินจากภาพ
 
 **15 ต.ค. ~23:30** push AVEGEE main ถูก classifier ปฏิเสธ → คุณเป้ต้อง push `a30b7e9` เอง · เทสต์บน main 8f82178 แดง 10 ข้อจากงาน Codex app → โน้ต `2026-10-15-avegee-codex-app-test-failures.md` ให้ Codex app ตรวจ
+
+**15 ต.ค. 23:25** คุณเป้ push a30b7e9 · Dale เริ่ม L-merge-1 (L3 → L1) · L2 รอ Toby เพิ่ม (ตัดกล่องเลือกเป้าหมายไอเท็ม + เอฟเฟกต์เติมเลือด) แล้วค่อย merge L2 → L5 · ตัวเฝ้า L1b เปลี่ยนให้ตอบเฉพาะ commit ของ Codex app (ไม่ใช่ K*/L*)
