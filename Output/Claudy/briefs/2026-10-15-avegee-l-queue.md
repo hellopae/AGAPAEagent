@@ -26,3 +26,5 @@
 **15 ต.ค. ~23:30** push AVEGEE main ถูก classifier ปฏิเสธ → คุณเป้ต้อง push `a30b7e9` เอง · เทสต์บน main 8f82178 แดง 10 ข้อจากงาน Codex app → โน้ต `2026-10-15-avegee-codex-app-test-failures.md` ให้ Codex app ตรวจ
 
 **15 ต.ค. 23:25** คุณเป้ push a30b7e9 · Dale เริ่ม L-merge-1 (L3 → L1) · L2 รอ Toby เพิ่ม (ตัดกล่องเลือกเป้าหมายไอเท็ม + เอฟเฟกต์เติมเลือด) แล้วค่อย merge L2 → L5 · ตัวเฝ้า L1b เปลี่ยนให้ตอบเฉพาะ commit ของ Codex app (ไม่ใช่ K*/L*)
+
+**16 ต.ค. 00:05** Claude ใกล้ลิมิต → codex-only · ส่งต่อ Codex app ผ่าน AVEGEE `docs/claude-handoff-2026-10-16.md` (L5 merge, แสงโซน 1, L1b, L2b, เทสต์แดง) · ตัวเฝ้า L1b หยุดแล้ว (Codex app ทำเอง)
