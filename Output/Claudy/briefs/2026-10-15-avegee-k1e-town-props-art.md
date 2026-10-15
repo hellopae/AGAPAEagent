@@ -6,7 +6,7 @@
 - ภาพอ้างอิง (`/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/assets/2026-10-15-avegee-k/`):
   `k1-placement-Kittanate.jpg` (คุณเป้วางของ: ปาล์ม+ไทรข้างบันไดกลาง, ขีดเหลือง=โคมทองรอบประตูสวรรค์, ขีดแดง=คบไฟรอบลานกระทะ, ต้นแดงฝั่งลาวา, ต้นขาวข้างประตูน้ำแข็ง) · `k1d-placement-vs-game.jpg` (เกมตอนนี้)
 - สไตล์/มุมต้องเหมือน `img/theme-v4/town-tree-th-v1.webp` (ไทรเดิม 1199×1312) และอาคารเมือง — เปิดดูไฟล์นั้นก่อน
-- repo `/Users/agapae/agapae-work/AVEGEE` (worktree ของ run นี้) · Codex app กำลังทำ animation ยมอยู่ใน clone อื่น — ไม่เกี่ยวกับใบนี้
+- repo `/Users/agapae/agapae-work/AVEGEE` (worktree ของ run นี้ ฐาน main `99ec562` มี K1d+K5 แล้ว) · animation ยมของ Codex app อยู่ใน clone อื่น — ไม่เกี่ยวกับใบนี้
 
 ## งาน
 วาด 5 ไฟล์ พื้นโปร่งใส (RGBA มุมโปร่ง) มองเฉียงจากบน ~30° แสงอุ่นจากซ้ายบน โคน/ฐานอยู่กึ่งกลางล่างของภาพ เห็นโคนชัด ไม่มีเงาพื้นติดมา (เกมวาดเงาเอง):
