@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T05:49:47.551Z",
+  "updatedAt": "2026-10-15T06:05:18.161Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale reviews and merges K1d",
       "report": {
         "when": "20:27",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby K1d map integration",
+      "status": "working",
+      "task": "Toby K5 battle overlap fix",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
