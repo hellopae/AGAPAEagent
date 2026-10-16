@@ -19,7 +19,7 @@
 
 ## 1. ลำดับความสำคัญ
 
-- **P0 (ต้องมีรอบแรก — สูตรครบ 6 อย่างที่คุณเป้ขอ):** ข้อ 2.1 (ฟัน) · 2.2 (ลูกไฟ) · 2.3 (น้ำแข็ง) · 2.4 (ลม) · 2.5 (สะกดจิต) · 2.6 (หอก) · 2.7 (กระบอง) · 2.8 (เติมเลือด) + 2.0 ของส่วนกลาง
+- **P0 (ต้องมีรอบแรก — ครบทุกท่าที่คุณเป้ขอ):** ข้อ 2.1 (ฟัน) · 2.2 (ลูกไฟ) · 2.3 (น้ำแข็ง) · 2.4 (ลม) · 2.5 (สะกดจิต) · 2.6 (หอก) · 2.7 (กระบอง) · 2.8 (เติมเลือด) + 2.0 ของส่วนกลาง
 - **P1:** 2.9 (กรงเล็บศัตรู) · 2.10 (บ้าคลั่ง/นาฬิกา/กระจก)
 
 ## 2. รายการไฟล์
@@ -174,4 +174,4 @@
 ตัดได้โดยเกมยังสวย (โค้ดมีของสำรอง): `fx-hypno-eye`, `fx-heal-flower`, `fx-club-crack`, `fx-wind-column`, `fx-fire-flame-b/c`, `fx-ice-crystal-c`, `fx-spear-feathers`, `fx-slash-arc-crimson/cyan`, `fx-slash-impact-ember`, `fx-heal-aura-blue` + `fx-heal-ring-floor-blue`, ชุด P1 ทั้งหมด
 **ห้ามตัด:** `fx-common-*` ทั้งหมด · `fx-slash-arc-white` · `fx-slash-impact-white` · `fx-fire-orb` · `fx-fire-comet-trail` · `fx-fire-explosion` · `fx-ice-crystal-a/b` · `fx-ice-crystal-cluster` · `fx-wind-blade` · `fx-wind-vortex` · `fx-hypno-circle` · `fx-hypno-spiral` · `fx-spear-lance` · `fx-club-shockwave` · `fx-club-rocks` · `fx-heal-aura-green` · `fx-heal-ring-floor`
 
-รวม: 61 ไฟล์ (P0 ≈ 51, P1 ≈ 10) — นับ atlas เป็น 1 ไฟล์
+รวม: 62 ไฟล์ (P0 = 56, P1 = 6) — นับ atlas เป็น 1 ไฟล์
