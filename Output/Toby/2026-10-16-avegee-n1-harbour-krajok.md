@@ -1,6 +1,6 @@
 # AVEGEE N1 — ท่าเรือ (ขอบเดิน / ปุ่ม Fast Travel / ป้ายบอส) + หอส่องกรรม (จุดฝึก / กระจก)
 
-repo `/Users/agapae/agapae-work/AVEGEE` · worktree `../.toby-worktrees/n1` · branch `toby/n1-harbour-krajok` (จากเมน `19d1afe`) · Dale รีวิว diff
+repo `/Users/agapae/agapae-work/AVEGEE` · worktree `../.toby-worktrees/n1` · branch `toby/n1-harbour-krajok` commit `3ffce03` (จากเมน `19d1afe`) · เทสต์ทั้งชุด 1004/1004 ผ่าน (เดิม 997 + ใหม่ 7) · Dale รีวิว diff
 ภาพหลักฐาน: `/tmp/n1/evidence/` (ก่อน/หลัง ทุกข้อ ที่ 1678x937 และ 390x844)
 
 ## สิ่งที่ build
