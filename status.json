@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:23:23.177Z",
+  "updatedAt": "2026-10-16T07:25:58.150Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby N4 flowing water/lava",
       "report": {
         "when": "15:15",

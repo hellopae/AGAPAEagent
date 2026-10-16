@@ -1,0 +1,211 @@
+{
+ "map_idle_zoom5": {
+  "frames": 278,
+  "secs": 8.15,
+  "fps_avg": 34.6,
+  "fps_min_1s": 19,
+  "ft_avg": 28.9,
+  "ft_p50": 16.7,
+  "ft_p95": 83.3,
+  "ft_p99": 133.3,
+  "ft_max": 216.7,
+  "frames_over_33": 64,
+  "long_tasks": 14,
+  "long_ms": 1206,
+  "long_max": 143,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 44699,
+   "stroke": 60550,
+   "fillRect": 16082,
+   "fill": 13926,
+   "createRadialGradient": 279
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 222,
+  "decoded_img_MB": 653,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_1_idle": {
+  "frames": 7,
+  "secs": 5.59,
+  "fps_avg": 1.5,
+  "fps_min_1s": 0,
+  "ft_avg": 649.96,
+  "ft_p50": 66.6,
+  "ft_p95": 2199.8,
+  "ft_p99": 2199.8,
+  "ft_max": 2199.8,
+  "frames_over_33": 6,
+  "long_tasks": 4,
+  "long_ms": 15981,
+  "long_max": 11625,
+  "canvases_created": 201,
+  "canvas_px_created_M": 4.4,
+  "calls": {
+   "drawImage": 4253,
+   "fillRect": 1156,
+   "stroke": 1736,
+   "fill": 2003,
+   "createRadialGradient": 8,
+   "getImageData": 4,
+   "putImageData": 8
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 228,
+  "decoded_img_MB": 675,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_3.5_idle": {
+  "frames": 142,
+  "secs": 5.09,
+  "fps_avg": 28,
+  "fps_min_1s": 21,
+  "ft_avg": 35.68,
+  "ft_p50": 16.7,
+  "ft_p95": 133.4,
+  "ft_p99": 166.6,
+  "ft_max": 166.7,
+  "frames_over_33": 36,
+  "long_tasks": 12,
+  "long_ms": 1374,
+  "long_max": 179,
+  "canvases_created": 13,
+  "canvas_px_created_M": 0.28,
+  "calls": {
+   "drawImage": 28529,
+   "stroke": 31203,
+   "fillRect": 9438,
+   "fill": 8359,
+   "createRadialGradient": 143
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 231,
+  "decoded_img_MB": 677,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_5_idle": {
+  "frames": 165,
+  "secs": 5.07,
+  "fps_avg": 32.9,
+  "fps_min_1s": 25.4,
+  "ft_avg": 30.4,
+  "ft_p50": 16.7,
+  "ft_p95": 83.3,
+  "ft_p99": 133.4,
+  "ft_max": 166.6,
+  "frames_over_33": 29,
+  "long_tasks": 10,
+  "long_ms": 835,
+  "long_max": 139,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 26570,
+   "stroke": 36053,
+   "fillRect": 9581,
+   "fill": 8345,
+   "createRadialGradient": 166
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 231,
+  "decoded_img_MB": 677,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_6.5_idle": {
+  "frames": 136,
+  "secs": 5.1,
+  "fps_avg": 26.9,
+  "fps_min_1s": 19,
+  "ft_avg": 37.13,
+  "ft_p50": 16.7,
+  "ft_p95": 133.3,
+  "ft_p99": 166.7,
+  "ft_max": 166.7,
+  "frames_over_33": 29,
+  "long_tasks": 26,
+  "long_ms": 2427,
+  "long_max": 160,
+  "canvases_created": 13,
+  "canvas_px_created_M": 0.52,
+  "calls": {
+   "drawImage": 18895,
+   "stroke": 29855,
+   "fillRect": 6879,
+   "fill": 4546,
+   "createRadialGradient": 137
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 231,
+  "decoded_img_MB": 677,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "map_zoom_6.5_walk": {
+  "frames": 161,
+  "secs": 8.12,
+  "fps_avg": 20,
+  "fps_min_1s": 8,
+  "ft_avg": 49.9,
+  "ft_p50": 16.7,
+  "ft_p95": 150,
+  "ft_p99": 449.9,
+  "ft_max": 649.9,
+  "frames_over_33": 50,
+  "long_tasks": 38,
+  "long_ms": 4215,
+  "long_max": 454,
+  "canvases_created": 3,
+  "canvas_px_created_M": 0.33,
+  "calls": {
+   "drawImage": 22489,
+   "stroke": 35374,
+   "fillRect": 8845,
+   "fill": 6151,
+   "createRadialGradient": 162
+  },
+  "heap_MB": 15.4,
+  "decoded_imgs": 232,
+  "decoded_img_MB": 696,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2040x1275",
+   "240x160",
+   "2880x1800"
+  ]
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1440,
+   900,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
