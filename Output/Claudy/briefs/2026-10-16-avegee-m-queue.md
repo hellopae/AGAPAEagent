@@ -6,7 +6,9 @@
 |---|---|---|---|---|
 | M1 กล้องซูมเข้า-ออก/สั่น/มืดฉากหลัง (ต่อสู้+สอบสวน) | Toby | `2026-10-16-avegee-m1-battle-camera.md` | — | กำลังรัน |
 | M2 เอนจินเอฟเฟกต์ + สูตรทุกท่า + สเปกอาร์ต | Toby | `2026-10-16-avegee-m2-battle-fx.md` | API กล้องจาก M1 | กำลังรัน |
-| M3 วาด texture เอฟเฟกต์ `img/fx/*` | Codex | (เขียนจากสเปก M2 ข้อ 1) | สเปก M2 · Codex ว่างจาก handoff | รอ |
+| M3 วาด texture เอฟเฟกต์ `img/fx/*` + ไอคอนโล่ | Codex | `2026-10-16-avegee-m3{a,b}-fx-art.md` (สเปก `Output/Toby/2026-10-16-avegee-m2-art-spec.md`) | — | กำลังรัน 2 run (14:10) |
 | M-merge | Dale | (เขียนเมื่อ M1/M2 เสร็จ) | M1, M2 (M3 สลับภาพทีหลังได้) | รอ |
 
 ชุด L ที่ค้าง (Codex app ตาม `docs/claude-handoff-2026-10-16.md`): แสงโซน 1, L1b, L2b, เทสต์แดง 6
+
+**16 ต.ค. 14:05** Claude reset · Codex app ปิด handoff ครบ (main `19d1afe`: แผนที่ v4 เคลียร์พื้น, แสง, ❗, เทสต์ 996/996; `be307b5` animation ท่าต่อสู้ 4 โซน) · resume Toby M1/M2 + แจ้ง rebase บน 19d1afe

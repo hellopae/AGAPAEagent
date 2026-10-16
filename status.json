@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T17:04:47.063Z",
+  "updatedAt": "2026-10-16T02:33:31.229Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby L5 auto encounter",
+      "status": "working",
+      "task": "Toby M2 battle FX engine",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
