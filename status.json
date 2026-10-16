@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:14:15.573Z",
+  "updatedAt": "2026-10-16T07:23:23.177Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae polish AVEGEE Thai strings",
+      "status": "working",
+      "task": "Rae N3 merit text audit",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby M2 battle FX engine",
+      "status": "working",
+      "task": "Toby N4 flowing water/lava",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
