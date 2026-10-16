@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:29:50.519Z",
+  "updatedAt": "2026-10-16T07:38:30.927Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby N3b apply merit text",
+      "task": "Toby M5 cut-in effects",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
