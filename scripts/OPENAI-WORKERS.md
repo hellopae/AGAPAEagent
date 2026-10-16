@@ -19,10 +19,15 @@ python3 scripts/openai-worker.py --agent codex --task Output/Claudy/briefs/YYYY-
 
 - สร้าง git worktree ที่ `<โฟลเดอร์แม่ของ repo>/.codex-worktrees/<run_id>` บน branch ใหม่ `codex/<run_id>` จาก HEAD ปัจจุบัน แล้วรัน `--sandbox workspace-write` ในนั้น (จำกัด 30 นาที)
 - จบแล้วเก็บ `diff-stat.txt` + `diff.patch` (เทียบ base commit รวมไฟล์ใหม่) ลงโฟลเดอร์ run และบันทึก `branch` / `worktree` / `base_commit` ใน `status.json`
-- ไม่ commit ไม่ merge ไม่ push ไม่แตะ working tree หลัก — **Dale เป็นคนตัดสิน**:
-  - PASS: `git -C <worktree> commit -am "..."` (หรือ `git apply diff.patch` ใน repo หลัก) → merge → `npm run build`/เทสต์ → push ตามปกติ
+- **wrapper เป็นคน commit + push branch ให้ Codex** (16 ต.ค. 2569) — Codex รันใน sandbox ที่เขียน `.git` ของ repo หลักไม่ได้ (ทำ commit/สร้าง branch เองไม่ได้ โดยการออกแบบ ไม่ขยาย sandbox) prompt จึงสั่งให้ Codex ไม่รัน git commit/push/merge และไม่สร้าง worktree/clone/branch เอง (เคยไปสร้างใน `/private/tmp` แล้วงานหลุด):
+  - หลัง Codex จบ **ทุกสถานะที่มีไฟล์เปลี่ยน** (`ready_for_review` / `rate_limited` / `failed`) wrapper ทำ `git add -A` → `git commit` (`Codex <run_id>: <หัวข้อใบงาน> [<status>]` + trailer `Co-Authored-By: Codex`) → `git push -u origin codex/<run_id>`
+  - push เฉพาะ branch `codex/*` ของ run นั้น **ไม่ push main ไม่ force** · ถ้า Codex ย้าย/เปลี่ยนชื่อ branch เอง wrapper ดึงกลับมาที่ `codex/<run_id>` ก่อน commit
+  - `status.json` เพิ่ม `commit`, `pushed` (true/false), `push_error` (ถ้ามี) — push ล้มเหลว (ไม่มี network/สิทธิ์) ไม่ทำให้ run ล้ม งานยัง commit อยู่ใน worktree
+  - `diff.patch` / `diff-stat.txt` เก็บเหมือนเดิม
+- **Dale เป็นคนตัดสิน** — ไม่ merge ไม่ push main ไม่แตะ working tree หลักโดยอัตโนมัติ:
+  - PASS: merge branch `codex/<run_id>` (ดึงจาก origin หรือ worktree) → `npm run build`/เทสต์ → push main ตามกติกา `docs/git-push-protocol.md` ใน repo AVEGEE (fetch → rebase → เทสต์ 0 แดง → push ไม่ force)
   - FIX LIST: ข้อเล็กแก้เองใน worktree · ข้อใหญ่เขียนใบงาน -v2 รัน Codex อีก 1 รอบเท่านั้น
-  - เสร็จแล้วล้าง: `git worktree remove <worktree>` และ `git branch -D codex/<run_id>`
+  - เสร็จแล้วล้าง: `git worktree remove <worktree>` · `git branch -D codex/<run_id>` · `git push origin --delete codex/<run_id>`
 
 ## โหมดทำงาน (`work-mode.json` ที่ root)
 

@@ -61,6 +61,51 @@ def save_diff(tree, base, out):
     # --binary + เขียนเป็น bytes: patch ที่มีภาพต้อง git apply กลับได้ ไม่ใช่แค่ "Binary files differ"
     (out / 'diff.patch').write_bytes(git_bytes('-C', tree, 'diff', '--cached', '--binary', base))
 
+def run_git(tree, *args, timeout=120):
+    # ไม่ raise — ให้ผู้เรียกอ่าน returncode/stderr เอง (push ล้มเหลวต้องไม่ทำให้ run ล้ม)
+    return subprocess.run(['git', '-C', tree, *args], capture_output=True, text=True, errors='replace', timeout=timeout)
+
+def brief_title(task):
+    # หัวข้อบรรทัดแรกของใบงาน (ตัด # และจำกัดความยาวให้ commit subject อ่านง่าย)
+    for line in task.read_text(errors='replace').splitlines():
+        line = line.strip().lstrip('#').strip()
+        if line:
+            return line[:72]
+    return 'untitled'
+
+def commit_and_push(state, title):
+    """wrapper เป็นคน commit + push branch codex/<run_id> แทน Codex (sandbox ของ Codex เขียน .git ไม่ได้)
+    push เฉพาะ branch ของ run นี้ — ไม่ push main ไม่ force. ล้มเหลวแค่บันทึกใน state ไม่ทำให้ run ล้ม"""
+    tree, branch = state['worktree'], state['branch']
+    state['pushed'] = False
+    if not branch.startswith('codex/'):
+        state['push_error'] = 'refused: branch is not codex/*'
+        return
+    # Codex อาจ switch/ตั้งชื่อ branch เอง หรืออยู่ detached — ดึงกลับมาที่ branch ของ run (คงไฟล์ที่แก้ไว้)
+    head = run_git(tree, 'symbolic-ref', '--short', '-q', 'HEAD').stdout.strip()
+    if head != branch:
+        moved = run_git(tree, 'switch', '-C', branch)
+        if moved.returncode:
+            state['push_error'] = 'switch: ' + moved.stderr.strip()[-300:]
+            return
+    run_git(tree, 'add', '-A')
+    if run_git(tree, 'diff', '--cached', '--quiet').returncode:
+        msg = 'Codex %s: %s [%s]\n\nCo-Authored-By: Codex <noreply@openai.com>\n' % (state['run_id'], title, state['status'])
+        done = run_git(tree, 'commit', '-m', msg)
+        if done.returncode:
+            state['push_error'] = 'commit: ' + (done.stderr or done.stdout).strip()[-300:]
+            return
+    sha = run_git(tree, 'rev-parse', 'HEAD').stdout.strip()
+    state['commit'] = sha
+    if sha == state['base_commit']:
+        state['push_error'] = 'no changes to push'
+        return
+    pushed = run_git(tree, 'push', '-u', 'origin', branch)
+    if pushed.returncode:
+        state['push_error'] = 'push: ' + pushed.stderr.strip()[-300:]
+    else:
+        state['pushed'] = True
+
 def hit_limit(out):
     text = (out / 'stderr.log').read_text(errors='replace') if (out / 'stderr.log').is_file() else ''
     if (out / 'events.jsonl').is_file():
@@ -110,8 +155,10 @@ def main(argv=None):
     sandbox = 'workspace-write' if args.write else 'read-only'
     codex = find_codex()
     if args.write:
-        rules = ('Write task on an isolated git worktree and branch. Edit only what the brief needs. Do not commit, merge, push, deploy, '
-                 'edit hooks, status.json or worklog.json, call other agents, or claim QA passed. '
+        rules = ('Write task on an isolated git worktree and branch. Edit only what the brief needs. '
+                 'Work only inside the working directory you were given: do not create another worktree, clone, or branch, and do not switch or rename the branch. '
+                 'Do not run git commit/push/merge yourself (git metadata is read-only in your sandbox) - the wrapper commits and pushes your branch after you finish. '
+                 'Never push or modify main. Do not deploy, edit hooks, status.json or worklog.json, call other agents, or claim QA passed. '
                  'End with changed files, tests run, and a self-check against each acceptance criterion.')
     else:
         rules = ('Read-only task. Do not edit files, call other agents, publish, or claim QA passed. '
@@ -166,6 +213,11 @@ def main(argv=None):
         except Exception as exc:
             # save_diff พัง (เช่น ถอดรหัสไม่ได้ · git ล้ม) ห้ามทำให้ status.json ค้างที่ running — บันทึกเหตุแล้วปิดงานต่อ
             state['diff_error'] = type(exc).__name__
+        # commit + push branch ของ run (ทุกสถานะ — งานที่ rate_limited/failed ก็ไม่ควรค้างเป็นไฟล์ไม่ commit)
+        try:
+            commit_and_push(state, brief_title(args.task))
+        except Exception as exc:
+            state.update(pushed=False, push_error=type(exc).__name__)
     save()
     if args.publish:
         try:
