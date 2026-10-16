@@ -19,7 +19,7 @@
 | งาน | เจ้าของ | ใบงาน | สถานะ |
 |---|---|---|---|
 | N1 ท่าเรือ (เดินเลยขอบ/ปุ่ม Fast Travel/ป้ายบอส) + ห้องหอส่องกรรม (จุดฝึก/กระจก) | Toby | `2026-10-16-avegee-n1-harbour-krajok.md` | กำลังรัน |
-| N2 sprite ท่าโจมตียมทูตรั่วขอบ + ยมสอบสวนยืนนิ่ง | Toby | `2026-10-16-avegee-n2-sprite-bleed-trial-idle.md` | กำลังรัน |
+| N2 sprite ท่าโจมตียมทูตรั่วขอบ + ยมสอบสวนยืนนิ่ง | Toby | `2026-10-16-avegee-n2-sprite-bleed-trial-idle.md` | Toby เสร็จ `toby/n2-sprite-idle` b8512a9 (1001/0) → รอ Dale · ⚠️ 203/448 เฟรมตัวละครถูกตัดขอบ ต้อง export atlas ใหม่ช่อง 512 (Codex app — สเปก `docs/n2-sprite-bleed.md`, `docs/n2-clipped-frames.json`) |
 | N3 ตรวจข้อความข้อบรรเทา 🪷 ทุกคดี | Rae | `2026-10-16-avegee-n3-merit-audit.md` | ✅ 75 ข้อ ไม่ผ่าน 10 (`Output/Rae/2026-10-16-avegee-merit-audit.md`) |
 | N3b ข้อความ 🪷 ใหม่ 10 ข้อ + บุญสุ่มไม่ตรงเพศ | Toby | `2026-10-16-avegee-n3b-merit-apply.md` | Toby เสร็จ `toby/n3b-merit` 2cbe3e1 (1002/0) → รอ Dale หลัง M-merge |
 | N4 ลาวา/แม่น้ำ/น้ำตกไหล | Toby | `2026-10-16-avegee-n4-flowing-water-lava.md` | กำลังรัน |
