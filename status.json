@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:28:54.030Z",
+  "updatedAt": "2026-10-16T07:29:50.519Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby N4 flowing water/lava",
+      "status": "working",
+      "task": "Toby N3b apply merit text",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
