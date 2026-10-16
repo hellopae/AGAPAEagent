@@ -13,3 +13,11 @@
 ชุด L ที่ค้าง (Codex app ตาม `docs/claude-handoff-2026-10-16.md`): แสงโซน 1, L1b, L2b, เทสต์แดง 6
 
 **16 ต.ค. 14:05** Claude reset · Codex app ปิด handoff ครบ (main `19d1afe`: แผนที่ v4 เคลียร์พื้น, แสง, ❗, เทสต์ 996/996; `be307b5` animation ท่าต่อสู้ 4 โซน) · resume Toby M1/M2 + แจ้ง rebase บน 19d1afe
+
+## ชุด N (16 ต.ค. ~14:30 คำสั่งคุณเป้ ภาพ 7–10 + ลาวาไหล)
+| งาน | เจ้าของ | ใบงาน | สถานะ |
+|---|---|---|---|
+| N1 ท่าเรือ (เดินเลยขอบ/ปุ่ม Fast Travel/ป้ายบอส) + ห้องหอส่องกรรม (จุดฝึก/กระจก) | Toby | `2026-10-16-avegee-n1-harbour-krajok.md` | กำลังรัน |
+| N2 sprite ท่าโจมตียมทูตรั่วขอบ + ยมสอบสวนยืนนิ่ง | Toby | `2026-10-16-avegee-n2-sprite-bleed-trial-idle.md` | กำลังรัน |
+| N3 ตรวจข้อความข้อบรรเทา 🪷 ทุกคดี | Rae | `2026-10-16-avegee-n3-merit-audit.md` | กำลังรัน → Toby/Dale ใส่ตามตาราง |
+| N4 ลาวา/แม่น้ำ/น้ำตกไหล | Toby | `2026-10-16-avegee-n4-flowing-water-lava.md` | กำลังรัน |
