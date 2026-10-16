@@ -8,6 +8,7 @@
 | M2 เอนจินเอฟเฟกต์ + สูตรทุกท่า + สเปกอาร์ต | Toby | `2026-10-16-avegee-m2-battle-fx.md` | API กล้องจาก M1 | Toby เสร็จ `toby/m2-fx` 75c2771 (22 สูตร, เทสต์ 1013/0) → รอ M1 แล้ว Dale |
 | M3 วาด texture เอฟเฟกต์ `img/fx/*` + ไอคอนโล่ | Codex | `2026-10-16-avegee-m3{a,b}-fx-art.md` (สเปก `Output/Toby/2026-10-16-avegee-m2-art-spec.md`) | — | A 33 ไฟล์ + B 24 ไฟล์ เสร็จ (backup `agapae-work/backup/avegee-m3-fx/`) · ⚠️ `fx-hypno-circle` มีดาวหกแฉก (สัญลักษณ์ศาสนายิว) → วาดใหม่เป็นยันต์/ลายไทย (M3c) |
 | M4 มือถือ 390px: เมนูคำสั่งบังศัตรู/กดศัตรูไม่ได้ · หัวเมนูยักษ์ทวารบาลว่าง | Toby | (ถัดไป) | M-merge | รอ |
+| M5 ภาพคั่นท่าพิเศษ คงไว้ + เคลื่อนไหว/อลังการขึ้น | Toby | `2026-10-16-avegee-m5-cutin-fx.md` | M-merge | กำลังรัน (ออกแบบระหว่างรอ merge) |
 | M-merge | Dale | `2026-10-16-avegee-m-merge.md` (กำลังรัน) | M1, M2 (M3 สลับภาพทีหลังได้) | รอ |
 
 ชุด L ที่ค้าง (Codex app ตาม `docs/claude-handoff-2026-10-16.md`): แสงโซน 1, L1b, L2b, เทสต์แดง 6
