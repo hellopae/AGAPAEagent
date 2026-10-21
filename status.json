@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T17:05:54.287Z",
+  "updatedAt": "2026-10-21T17:12:00.623Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-check frontier weapons",
+      "status": "working",
+      "task": "Reese P2b chanting merit check",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
@@ -148,8 +148,8 @@
         "ดีไซน์รองรับมือถือ",
         "วาง grid + bleed + margin"
       ],
-      "status": "done",
-      "task": "Vera trial and battle UI layout",
+      "status": "working",
+      "task": "Vera P4 UX spec",
       "report": {
         "when": "10:43",
         "title": "Vera trial and battle UI layout",
@@ -174,8 +174,8 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "done",
-      "task": "Mind: ART-02C report + prompts",
+      "status": "working",
+      "task": "Mind art queue for Codex",
       "report": {
         "when": "22:28",
         "title": "AVEGEE event art prompts",
