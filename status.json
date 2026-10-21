@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T17:17:36.467Z",
+  "updatedAt": "2026-10-21T17:18:49.619Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae N3 merit text audit",
+      "status": "working",
+      "task": "Rae P2 interrogation copy",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale fixes git push flow",
+      "status": "working",
+      "task": "Dale review and merge O1",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
