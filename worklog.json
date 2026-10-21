@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-16T12:51:19.025Z",
+  "updatedAt": "2026-10-21T17:05:54.287Z",
   "entries": [
+    {
+      "id": "wl-261021-toby-5oxc",
+      "datetime": "2026-10-21T17:05:54Z",
+      "displayDate": "22 ต.ค. 2569",
+      "displayTime": "00:05",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby O2 battle visual audit",
+      "summary": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไ"
+    },
     {
       "id": "wl-261016-toby-v14m",
       "datetime": "2026-10-16T12:51:19Z",
