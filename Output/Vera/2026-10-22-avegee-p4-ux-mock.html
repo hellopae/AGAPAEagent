@@ -1,0 +1,206 @@
+<title>AVEGEE P4 UX Mock</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: ศิลปบอร์ดสี่ชิ้นวางเรียงบนพื้นมืด — ใบวินิจฉัย 1280x720 · มือถือ 390x844 ×2 · ไอคอนพลังบนการ์ดจ้าง · แผนที่คุยตัวละคร
+   โทนตามเกม AVEGEE (พลัมเข้ม + ทอง) ไม่ใช้ token ของ TANAPAT */
+:root{
+  --ink:#120a0e; --panel:#27171f; --panel2:#1d1016; --line:#5b4230; --gold:#d4a355; --gold2:#f3d9a4;
+  --text:#f2e6dd; --mute:#b09a92; --ok:#7fc98f; --bad:#ef7777; --warn:#e9b448; --info:#7fb6e8; --need:#ff9ec1;
+  --font:"IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--text);font:14px/1.6 var(--font);padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:20px;margin:0 0 4px} h2{font-size:16px;margin:32px 0 8px;color:var(--gold)} p.note{color:var(--mute);margin:0 0 12px;max-width:70ch}
+.row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.scroll{overflow-x:auto;max-width:100%;padding-bottom:8px}
+.frame{background:var(--panel2);border:2px solid var(--gold);border-radius:10px;position:relative;overflow:hidden;flex:none}
+.d{width:1280px;height:720px;display:grid;grid-template-rows:56px 1fr 64px;background:radial-gradient(ellipse at 20% 30%,#3a2230,#160d13 70%)}
+.m{width:390px;height:844px;display:flex;flex-direction:column;background:linear-gradient(#2c1a24,#160d13)}
+.bar{display:flex;align-items:center;gap:12px;padding:0 20px;border-bottom:1px solid var(--line);background:#1a0f15}
+.bar b{font-size:17px}.bar .sp{flex:1}
+.btn{border:1px solid var(--line);background:#2f1d27;color:var(--text);border-radius:8px;padding:8px 14px;font:600 14px var(--font);min-height:44px}
+.btn.gold{background:linear-gradient(#e6bb73,#c58f3f);color:#2a1208;border-color:#f3d9a4}
+.btn.warn{background:#6b2a2a;border-color:#ef7777}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:12px;color:var(--gold2);background:#2a171d}
+.chip.ok{border-color:var(--ok);color:var(--ok)}.chip.bad{border-color:var(--bad);color:var(--bad)}
+.body{display:grid;grid-template-columns:340px 1fr 390px;gap:0;min-height:0}
+.col{padding:16px 20px;overflow:hidden;min-width:0}
+.col+.col{border-left:1px solid #3d2a22}
+.portrait{height:330px;display:grid;place-items:end center;background:radial-gradient(ellipse at 50% 85%,rgba(212,163,85,.35),transparent 60%)}
+.portrait img{height:320px;width:auto;image-rendering:pixelated;filter:drop-shadow(0 8px 14px #000)}
+.plate{text-align:center;margin-top:6px}.plate b{font-size:18px;display:block}.plate span{color:var(--mute);font-size:12px}
+.status{margin-top:12px;border-radius:10px;padding:10px 12px;text-align:center;font-weight:700;border:2px solid}
+.status small{display:block;font-weight:400;color:var(--text);opacity:.85;font-size:12px}
+.status.ok{border-color:var(--ok);background:rgba(127,201,143,.12);color:var(--ok)}
+.status.bad{border-color:var(--bad);background:rgba(239,119,119,.12);color:var(--bad)}
+.sec{font-size:12px;letter-spacing:.06em;color:var(--gold);margin:14px 0 6px;border-bottom:1px solid #3d2a22;padding-bottom:3px}
+.sec:first-child{margin-top:0}
+.deed{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:6px;background:#2a171d;margin-bottom:6px;font-size:13px}
+.deed.hid{border:1px dashed var(--warn)}
+.tag{font-size:11px;padding:1px 8px;border-radius:5px;white-space:nowrap}
+.pips{display:flex;gap:3px}.pips i{width:9px;height:14px;border-radius:2px;background:#4a352c}.pips i.on{background:var(--bad)}.pips i.neg{background:var(--warn)}
+.kv{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:3px 0}.kv b{color:var(--gold2)}
+.face{font-size:13px;color:var(--gold2);margin:0 0 8px}
+.meter{margin:0 0 12px}.meter .h{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);margin-bottom:3px}.meter .h b{color:var(--text);font-size:13px}
+.track{height:14px;border-radius:7px;background:#3a2830;position:relative;overflow:visible}
+.track>i{display:block;height:100%;border-radius:7px}
+.track .th{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--gold2)}
+.track .th::after{content:attr(data-l);position:absolute;top:18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--gold2);white-space:nowrap}
+.need{outline:1px dashed var(--need);outline-offset:3px;border-radius:6px}
+.need::before{content:"ต้องเพิ่ม field";position:absolute;right:0;top:-9px;font-size:10px;color:var(--need);background:var(--panel2);padding:0 4px;z-index:2}
+.rel{position:relative}
+.stack{display:flex;height:22px;border-radius:6px;overflow:hidden;font-size:11px;font-weight:700;color:#1a0f15}
+.stack span{display:grid;place-items:center;min-width:0}
+.big{display:flex;align-items:baseline;gap:8px}.big b{font-size:44px;line-height:1;color:var(--gold2)}
+.foot{display:flex;align-items:center;gap:12px;padding:0 20px;border-top:1px solid var(--line);background:#1a0f15}
+.foot .sp{flex:1}
+.nav{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:#2f1d27;color:var(--text);font-size:18px}
+/* mobile */
+.m .head{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:12px 16px;align-items:end;background:radial-gradient(ellipse at 20% 90%,rgba(212,163,85,.3),transparent 60%)}
+.m .head img{height:150px;width:auto;image-rendering:pixelated;justify-self:center}
+.m .scrollbody{flex:1;overflow:hidden;padding:0 16px 8px}
+details{border:1px solid #3d2a22;border-radius:8px;margin-bottom:8px;background:#22141b}
+summary{padding:10px 12px;min-height:44px;display:flex;align-items:center;font-weight:600;color:var(--gold2)}
+details>div{padding:4px 12px 10px}
+.m .cta{padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:#1a0f15;display:flex;gap:8px}
+.m .cta .btn{flex:1}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini .meter{margin:0}
+/* power badge */
+.card{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center;background:#2a171d;border:1px solid var(--line);border-radius:10px;padding:10px;width:560px;max-width:100%;margin-bottom:10px}
+.pf{position:relative;width:96px;height:96px}
+.pf img.face{width:96px;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--gold)}
+.pb{position:absolute;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:18px;border:2px solid #1a0f15;box-shadow:0 2px 4px #000;cursor:pointer}
+.pb.a{right:-8px;bottom:-8px;background:#e8a23a}.pb.b{left:-6px;bottom:-6px;width:26px;height:26px;font-size:13px;background:#5e8f7a}
+.pb::after{content:"";position:absolute;inset:-5px}
+.pb.todo{outline:2px dashed var(--need);outline-offset:2px}
+.sheet{width:360px;background:#22141b;border:2px solid var(--gold);border-radius:12px;padding:16px;max-width:100%}
+.sheet h3{margin:0 0 2px;font-size:17px}.sheet .big-ic{width:64px;height:64px;border-radius:50%;background:#c0562b;display:grid;place-items:center;font-size:32px;float:left;margin-right:12px}
+.legend{font-size:12px;color:var(--mute)}
+/* map */
+.map{position:relative;width:840px;height:469px;background:url("file:///Users/agapae/agapae-work/AVEGEE/img/scene-v2-opt.png") center/cover;border:2px solid var(--gold);border-radius:10px;overflow:hidden;flex:none}
+.map img.s{position:absolute;height:84px;transform:translate(-50%,-100%);image-rendering:pixelated}
+.map .nm{position:absolute;transform:translate(-50%,0);font-size:11px;font-weight:600;text-shadow:0 0 4px #000,0 0 4px #000;color:#ffe1c3}
+.talk{position:absolute;transform:translate(-50%,-100%);min-height:44px;padding:6px 14px;border-radius:99px;background:linear-gradient(#e6bb73,#c58f3f);color:#2a1208;font:700 13px var(--font);border:2px solid #f3d9a4;box-shadow:0 3px 8px #000a}
+.bub{position:absolute;transform:translate(-50%,-100%);width:250px;background:rgba(20,9,14,.94);border:1.5px solid rgba(212,163,85,.7);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.6}
+.bub .who{display:block;color:var(--gold);font-size:11px;font-weight:700}
+.bub .nx{display:block;text-align:right;color:var(--gold2);font-size:11px;margin-top:2px}
+.bub .var{color:var(--gold2);background:#3a2830;border-radius:4px;padding:0 3px}
+table{border-collapse:collapse;font-size:12px}td,th{border:1px solid #3d2a22;padding:4px 8px;text-align:left}th{color:var(--gold)}
+</style>
+
+<h1>AVEGEE P4 UX Mock</h1>
+<p class="note">Wireframe fidelity สูงของ 3 ส่วนในสเปก <code>2026-10-22-avegee-p4-ux-spec.md</code> ใช้รูปจริงจาก <code>/Users/agapae/agapae-work/AVEGEE/img/</code> (เปิดไฟล์ในเครื่อง) · กรอบประสีชมพู = field ที่ยังไม่มีใน state ต้องเพิ่ม · ตัวเลขทุกตัวคำนวณจากสูตรจริงใน <code>game.js</code> / <code>h4-location-ui.js</code></p>
+
+<h2>1A · ใบวินิจฉัยวิญญาณ 1280×720 — พลทหารเกณฑ์หนุ่ม (ประตูสวรรค์ · บุญตรวจแล้ว กรรมเหลือ 0)</h2>
+<div class="scroll"><div class="frame d">
+  <div class="bar"><b>ใบวินิจฉัยวิญญาณ</b><span class="chip">🕊️ ประตูสวรรค์</span><span class="chip">#014 · สำนวนมีชื่อ</span><span class="sp"></span>
+    <button class="nav" aria-label="ก่อนหน้า">‹</button><span style="color:var(--mute)">2 / 3</span><button class="nav" aria-label="ถัดไป">›</button><button class="nav" aria-label="ปิด">✕</button></div>
+  <div class="body">
+    <div class="col">
+      <div class="portrait"><img src="file:///Users/agapae/agapae-work/AVEGEE/img/soul-recruit.png" alt="พลทหารเกณฑ์หนุ่ม"></div>
+      <div class="plate"><b>พลทหารเกณฑ์หนุ่ม</b><span>พลทหารเกณฑ์ปีที่สอง · ชาย</span></div>
+      <div class="status ok">พร้อมไปสวรรค์<small>กรรมเหลือ 0 · รางวัลจากพ่อ 60 เบี้ยกรรม</small></div>
+    </div>
+    <div class="col">
+      <div class="sec">ทำอะไรมา</div>
+      <p class="face">สำนวนเขียนไว้บรรทัดเดียว — ก่อเหตุยิงในค่ายทหาร เพื่อนร่วมหมวดตายเก้าคน</p>
+      <div class="deed"><span class="tag" style="background:#c0392b22;color:#e8776a">ฆ่า/ทำร้าย</span><span>ยิงเพื่อนร่วมหมวดในค่ายตายเก้าคน แล้วยิงตัวเองตาม</span><span class="pips" title="น้ำหนัก 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="deed hid"><span class="tag" style="background:#c0392b22;color:#e8776a">ฆ่า/ทำร้าย</span><span>ทั้งเก้าคนคือชุดที่ซ่อมเขาทุกคืนมาสองปี ทั้งทรมาน ทั้งไถ่เงินที่แม่ส่งมา<br><small style="color:var(--warn)">เรื่องที่สำนวนไม่ได้เขียน · บรรเทาโทษ</small></span><span class="pips" title="น้ำหนัก −2"><i class="neg"></i><i class="neg"></i></span></div>
+      <div class="sec">บุญที่นับให้</div>
+      <div class="deed"><span>🪷</span><span>ร้องเรียนขึ้นไปตามระบบสิบเอ็ดครั้ง ไม่มีใครรับเรื่องสักครั้ง</span><b style="color:var(--gold2)">−1</b></div>
+      <div class="sec">คำตัดสินของท่าน</div>
+      <div class="kv"><span>ส่งไปที่</span><b>กระทะทองแดง · ผู้คุม ทัณฑ์</b></div>
+      <div class="kv"><span>วาระที่ให้ / ที่สมควร</span><b>2 เบา · 2 เบา — พอดีกรรม</b></div>
+      <div class="kv"><span>คะแนน</span><b>100 · ★★★★★ · พ่อว่าตรงกรรม</b></div>
+      <div class="sec">เขาพูดตอนมาถึง</div>
+      <p class="face" style="color:var(--text)">“ผมขอโทษแม่ผมครับ ผมขอโทษแค่คนเดียวนั้นแหละ”</p>
+    </div>
+    <div class="col">
+      <div class="sec">กรรมที่ก่อ 5 หน่วย ถูกหักลบอย่างไร</div>
+      <div class="meter"><div class="stack"><span style="flex:2;background:var(--warn)">บรรเทา 2</span><span style="flex:1;background:var(--gold)">บุญ 1</span><span style="flex:2;background:var(--info)">ทัณฑ์ 2</span><span style="flex:0 0 0;background:var(--bad)"></span></div>
+        <div class="h" style="margin-top:4px"><span>ก่อ 5 − บรรเทา 2 − บุญ 1 − ทัณฑ์ 2</span><b>เหลือ 0</b></div></div>
+      <div class="meter"><div class="h"><span>โทษที่ได้รับ (วาระ)</span><b>2 / 5 · ครบ 100%</b></div>
+        <div class="pips" style="gap:6px;margin-bottom:6px"><i style="width:34px;height:12px;background:var(--info)"></i><i style="width:34px;height:12px;background:var(--info)"></i><i style="width:34px;height:12px"></i><i style="width:34px;height:12px"></i><i style="width:34px;height:12px"></i><span style="font-size:11px;color:var(--gold2)">▲ สมควร 2</span></div>
+        <div class="track"><i style="width:100%;background:var(--info)"></i></div></div>
+      <div class="meter"><div class="h"><span>ความเข็ด (ทัณฑ์ตรงกรรม)</span><b>100</b></div><div class="track"><i style="width:100%;background:var(--ok)"></i></div></div>
+      <div class="meter rel need"><div class="h"><span>ความสำนึก (นิราตรวจแล้ว)</span><b>82 / 100 ✓</b></div><div class="track"><i style="width:82%;background:var(--ok)"></i><span class="th" style="left:60%" data-l="เกณฑ์ 60"></span></div><div style="height:12px"></div></div>
+      <div class="sec">กรรมคงเหลือ</div>
+      <div class="big"><b>0</b><span style="color:var(--mute)">หน่วย → ขึ้นสวรรค์</span></div>
+      <div class="meter" style="margin-top:8px"><div class="track"><i style="width:100%;background:var(--ok)"></i></div><div class="h" style="margin-top:3px"><span>ชำระแล้ว 5 จาก 5</span><span>ดอกบัวช่วยลด 0</span></div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="legend">ปุ่มนี้เรียกฟังก์ชันเดิม <code>resolveGate()</code> · วิญญาณเดินออกประตู</span><span class="sp"></span><button class="btn">ปิด</button><button class="btn gold">🕊️ ส่งขึ้นสวรรค์ · รางวัล 60</button></div>
+</div></div>
+
+<h2>1B · มือถือ 390×844 — สองสถานะ</h2>
+<p class="note">ซ้าย: นักการเมืองใหญ่ที่ตะราง นิราตรวจแล้วยังไม่เข็ด (ได้วาระ 3 จากที่สมควร 5) → ส่งกลับคิว · ขวา: สถานะเดียวกับ 1A ย่อเป็นอะคอร์เดียน ปุ่มหลักตรึงล่าง ปัดซ้ายขวาเปลี่ยนดวง</p>
+<div class="row">
+<div class="frame m">
+  <div class="bar" style="height:48px;padding:0 12px"><b style="font-size:15px">ใบวินิจฉัย · ตะราง</b><span class="sp"></span><button class="nav" aria-label="ปิด">✕</button></div>
+  <div class="head"><img src="file:///Users/agapae/agapae-work/AVEGEE/img/soul-pol.png" alt="นักการเมืองใหญ่"><div><b style="font-size:17px">นักการเมืองใหญ่</b><div style="color:var(--mute);font-size:12px">อดีตนายกรัฐมนตรี · #021</div>
+    <div class="status bad" style="margin-top:8px;padding:6px 8px">ยังไม่เข็ด · ส่งกลับคิว<small>สมควร 5 ให้ 3 · เบาไป 2</small></div></div></div>
+  <div class="scrollbody">
+    <details open><summary>ทำอะไรมา · 3 ข้อ</summary><div>
+      <p class="face">ภาพลักษณ์นักบุญ สร้างวัดไว้ทั่วประเทศ ๓๘ วัด</p>
+      <div class="deed"><span class="tag" style="background:#d4a01722;color:#d4a017">ฉ้อโกง</span><span>ผ่องงบแผ่นดินเข้าบริษัทเครือญาติ</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="deed"><span class="tag" style="background:#7f8c8d22;color:#9aa6a7">เบียดเบียน</span><span>แก้กฎหมายขายที่ดินชายฝั่ง</span><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div></div></details>
+    <details open><summary>ตัวชี้วัด</summary><div class="mini">
+      <div class="meter"><div class="h"><span>ความเข็ด</span><b>48</b></div><div class="track"><i style="width:48%;background:var(--warn)"></i></div></div>
+      <div class="meter rel need"><div class="h"><span>ความสำนึก</span><b>41</b></div><div class="track"><i style="width:41%;background:var(--bad)"></i><span class="th" style="left:60%" data-l="60"></span></div></div>
+      <div class="meter" style="grid-column:1/3;margin-top:10px"><div class="h"><span>โทษ 3 / 5 · สมควร 5</span><b>กรรมเหลือ 10</b></div><div class="track"><i style="width:60%;background:var(--info)"></i></div></div></div></details>
+    <details><summary>บุญและคำตัดสิน</summary><div>…</div></details>
+  </div>
+  <div class="cta"><button class="btn warn">↩️ ส่งกลับคิว</button></div>
+</div>
+<div class="frame m">
+  <div class="bar" style="height:48px;padding:0 12px"><b style="font-size:15px">ใบวินิจฉัย · ประตูสวรรค์</b><span class="sp"></span><button class="nav" aria-label="ปิด">✕</button></div>
+  <div class="head"><img src="file:///Users/agapae/agapae-work/AVEGEE/img/soul-recruit.png" alt="พลทหาร"><div><b style="font-size:17px">พลทหารเกณฑ์หนุ่ม</b><div style="color:var(--mute);font-size:12px">พลทหารเกณฑ์ปีที่สอง · #014</div>
+    <div class="status ok" style="margin-top:8px;padding:6px 8px">พร้อมไปสวรรค์<small>กรรมเหลือ 0</small></div></div></div>
+  <div class="scrollbody">
+    <details open><summary>กรรมที่ก่อ 5 → เหลือ 0</summary><div><div class="stack"><span style="flex:2;background:var(--warn)">บรรเทา 2</span><span style="flex:1;background:var(--gold)">บุญ 1</span><span style="flex:2;background:var(--info)">ทัณฑ์ 2</span></div></div></details>
+    <details open><summary>ตัวชี้วัด</summary><div class="mini"><div class="meter"><div class="h"><span>ความเข็ด</span><b>100</b></div><div class="track"><i style="width:100%;background:var(--ok)"></i></div></div>
+      <div class="meter rel need"><div class="h"><span>ความสำนึก</span><b>82 ✓</b></div><div class="track"><i style="width:82%;background:var(--ok)"></i><span class="th" style="left:60%" data-l="60"></span></div></div></div></details>
+    <details><summary>ทำอะไรมา · 2 ข้อ</summary><div>…</div></details>
+    <details><summary>บุญและคำตัดสิน</summary><div>…</div></details>
+  </div>
+  <div class="cta"><button class="btn gold">🕊️ ส่งขึ้นสวรรค์ · +60</button></div>
+</div>
+</div>
+
+<h2>2 · ไอคอนพลังบนรูปโปรไฟล์ยมทูต (หน้าจ้าง/จัดทีม = openNiraOffice)</h2>
+<p class="note">ป้ายกลมมุมล่างขวา = ท่าสู้ (หลัก) · ป้ายเล็กมุมล่างซ้าย = หน้าที่คุมงาน (รอง) · แตะป้ายเปิดแผ่นรายละเอียด · ป้ายขอบประสีชมพู = ยังไม่มีไฟล์ไอคอน ใช้ emoji ชั่วคราวจนกว่า Codex ส่งภาพ</p>
+<div class="row">
+<div>
+  <div class="card"><div class="pf"><img class="face" src="file:///Users/agapae/agapae-work/AVEGEE/img/crew-plerng-profile.png" alt=""><span class="pb a todo" role="button" tabindex="0" aria-label="ลูกไฟ">🔥</span><span class="pb b todo" role="button" tabindex="0" aria-label="ปราบความดื้อ">⛓</span></div>
+    <div><b>เพลิง</b> <span class="legend">— เร่งไฟและงานที่ต้องเร็ว</span><div class="legend">ท่าสู้: ปล่อยไฟ 40 · คูลดาวน์ 120 วินาที</div><div class="legend">หน้าที่: ปราบความดื้อ · ใช้เสบียงเพิ่ม 2</div></div><button class="btn gold">จ้าง 180</button></div>
+  <div class="card"><div class="pf"><img class="face" src="file:///Users/agapae/agapae-work/AVEGEE/img/crew-kan-profile.png" alt=""><span class="pb a todo" role="button" tabindex="0" aria-label="สะกดจิต">🌀</span><span class="pb b todo" role="button" tabindex="0" aria-label="เปิดความจริง">👁</span></div>
+    <div><b>กานต์</b> <span class="legend">— อ่านสำนวนหาช่องโหว่</span><div class="legend">ท่าสู้: สะกดจิต · มึน 1 เทิร์น</div><div class="legend">หน้าที่: เปิดความจริง 1 ประเด็น</div></div><button class="btn gold">จ้าง 260</button></div>
+  <p class="legend">ป้าย 34px (เดสก์ท็อป) / 30px (มือถือ) · พื้นที่แตะขยายเป็น 44px ด้วย ::after</p>
+</div>
+<div class="sheet"><div class="big-ic">🔥</div><h3>ปล่อยไฟ</h3><div class="legend">ท่าสู้ของ เพลิง</div><div style="clear:both;height:8px"></div>
+  <div class="kv"><span>ผล</span><b>ดาเมจ 40 (+2 ต่อขั้นฝึกแรง)</b></div>
+  <div class="kv"><span>คูลดาวน์</span><b>120 วินาที (เวลาสนามรบ)</b></div>
+  <div class="kv"><span>ค่าใช้จ่าย</span><b>กำลังใจ −6</b></div>
+  <div class="sec">หน้าที่คุมงาน · ปราบความดื้อ</div>
+  <p style="margin:0;font-size:13px">คุมวิญญาณต่อต้านโดยไม่เสียเวลาขัดขืน ถ้าตัดสินถูกจะเข็ด แต่ไม่รับรองว่าสำนึก<br><span style="color:var(--warn)">ภาระ: เสบียงเพิ่ม 2 ห่อต่อหมาย</span></p>
+  <div style="display:flex;gap:8px;margin-top:12px"><button class="btn" style="flex:1">ปิด</button><button class="btn gold" style="flex:1">จ้าง 180</button></div></div>
+</div>
+
+<h2>3 · กดคุยตัวละครบนแผนที่</h2>
+<p class="note">ภาพพื้นเป็นฉากเดิม scene-v2-opt (ใช้แสดงตำแหน่งเท่านั้น — โซน 1 จริงเป็นแผนที่เมือง 3840×2560 กฎเดียวกัน) · ปุ่ม 💬 ปรากฏเมื่อยืนในระยะ 70 และไม่มีปุ่มสถานี/นิรา/พ่อค้าชิดกว่า · ตัวแปรในบทเน้นสีทอง</p>
+<div class="map">
+  <img class="s" style="left:420px;top:330px" src="file:///Users/agapae/agapae-work/AVEGEE/img/crew-taan.png" alt=""><span class="nm" style="left:420px;top:334px">ทัณฑ์</span>
+  <img class="s" style="left:520px;top:395px" src="file:///Users/agapae/agapae-work/AVEGEE/img/hero-yama.png" alt=""><span class="nm" style="left:520px;top:399px">ยามา</span>
+  <button class="talk" style="left:420px;top:222px">💬 คุยกับทัณฑ์</button>
+  <div class="bub" style="left:420px;top:176px"><span class="who">ทัณฑ์</span>กระทะใบนี้คุม <span class="var">พลทหารเกณฑ์หนุ่ม</span> อยู่ <span class="var">62%</span> แล้ว ท่านอย่าสั่งเพิ่มเกินวาระนะ<span class="nx">ถัดไป ›  1/3</span></div>
+  <img class="s" style="left:640px;top:345px;height:70px" src="file:///Users/agapae/agapae-work/AVEGEE/img/soul-pol.png" alt=""><span class="nm" style="left:640px;top:349px;color:#cfe4ff">นักการเมืองใหญ่</span>
+  <div class="bub" style="left:640px;top:236px;width:210px"><span class="who">ผู้รอคิว · คิวที่ <span class="var">3</span></span>ผมรอมา <span class="var">38</span> วาระแล้วครับ ท่านจะให้ยืนตรงนี้อีกนานไหม</div>
+</div>
+<div class="scroll" style="margin-top:16px"><table><tr><th>ขั้นตอนการกด</th><th>ผล</th></tr>
+<tr><td>แตะตัวละครไกล (&gt;100)</td><td>เดินเข้าหา แล้วเปิดบับเบิลอัตโนมัติเมื่อถึง · ถ้าผู้เล่นกดเดินเอง/แตะที่อื่น ยกเลิก</td></tr>
+<tr><td>แตะตัวละครใกล้ (≤100)</td><td>เปิดบับเบิลทันที · แตะที่บับเบิลหรือปุ่มถัดไปเพื่อเปลี่ยนบท · ครบ 3 บทหรือเดินห่าง &gt;140 ปิดเอง</td></tr>
+<tr><td>แตะพื้นโล่ง</td><td>เดินตามเดิม ไม่ชนกัน เพราะ hitActor ตรวจตัวละครก่อนพื้นอยู่แล้ว</td></tr>
+<tr><td>ปุ่ม E (โซน 1)</td><td>ใช้ปุ่มคุยเมื่อไม่มีสถานี/นิรา/พ่อค้าชิดกว่า</td></tr></table></div>
