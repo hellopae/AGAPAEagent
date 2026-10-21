@@ -19,6 +19,8 @@ git show origin/main:docs/claude-update-<YYYY-MM-DD>.md                      # �
 โน้ตที่ Codex มักทิ้งไว้: `docs/claude-update-*.md` (สรุปงาน), `docs/claude-handoff-*.md` (ใบงานฝาก Claude),
 `docs/ui-work-coordination-*.md` (ใครถือไฟล์ไหน — **อ่านก่อนรับงาน**), `output/coordination/claude-task-*.md`
 commit message ที่มีคำว่า "note for Claude" = มีโน้ต
+ตั้งแต่ 19 ต.ค. Codex ทิ้งโน้ตใน `docs/handoffs/YYYYMMDD-*.md` ด้วย (status-audit, reset-continuation — รายการค้างละเอียดอยู่ในนี้)
+และโน้ตหลักอาจถูกต่อหัวไฟล์หลายรอบ — อ่านทั้งไฟล์ อัปเดตล่าสุดอยู่ **บนสุด** ไม่ใช่ท้าย
 
 ## 2. ดึงเข้า clone ของเรา — เฉพาะตอน tree สะอาด
 `git status --porcelain` ว่าง → `git pull --ff-only` · ไม่ว่าง → หยุด ถามคุณเป้
@@ -34,8 +36,17 @@ for f in $(git show --name-only --format= <commit> -- src index.html); do chk <c
 → `git grep -n -F '<ชิ้นสำคัญของบรรทัด>' HEAD -- src` ยืนยันทีละจุด · ไฟล์ทั้งไฟล์หาย → `git show --name-status --format= <commit> -- <file>` ดูว่าตั้งใจลบ (D) หรือไม่
 ทำทั้ง commit งานของ Codex **และ** commit ฝั่ง main ที่ถูก merge เข้ามา
 
+สาขา WIP ของ Claude (`toby/*`, `codex/<run_id>`) ที่ `git merge-base --is-ancestor <branch> HEAD` ตอบว่า **ไม่อยู่ใน main**
+ไม่ได้แปลว่างานหาย — Codex มักรับช่วงแบบ "takeover" (เขียนรวมใหม่ / cherry-pick) → รัน `chk` กับ commit ของสาขานั้นแทน
+แล้วตัดบรรทัดดีบัก (`TMPDEBUG`, `globalThis.__*`) ที่ไม่ควรขึ้นอยู่แล้ว · ฟีเจอร์ที่ทำต่างวิธี ให้เช็กผลลัพธ์ เช่น ค่าที่ไม่มีใครกำหนดแล้ว = ไม่ถูกวาด
+
 ## 4. เทสต์
-`node --test tests/*.test.mjs` (ไม่ใช่ `tests/`) รัน background ~2–3 นาที เทียบจำนวนกับที่ Codex อ้างในโน้ต
+`node --test tests/*.test.mjs` (ไม่ใช่ `tests/`) รัน background ~4 นาที (1,221 ข้อ ณ 21 ต.ค.) เทียบจำนวนกับที่ Codex อ้างในโน้ต
+**อย่า pipe เข้า `tail`** — error ยาวของข้อที่ timeout ดันบรรทัดสรุปหลุด และ exit code ที่เห็นเป็นของ tail
+เขียนลงไฟล์แล้ว grep สรุป (reporter เป็น spec: บรรทัดขึ้นต้น `ℹ` ไม่ใช่ `# ` แบบ TAP):
+```bash
+node --test tests/*.test.mjs > "$TMPDIR/t.log" 2>&1; echo "exit=$?"; grep -E 'ℹ (tests|pass|fail|cancelled)' "$TMPDIR/t.log"; grep '✖' "$TMPDIR/t.log" | head
+```
 
 ## 5. แยกงานว่าชน Codex ไหม
 - **ไม่ชน**: อ่าน/เทสต์ใน clone ของเรา · เขียนในโฟลเดอร์ output ที่ใบงาน Codex กำหนดให้ Claude (เช่น `output/claude-2d-art/`) โดยไม่ commit/push
@@ -43,3 +54,5 @@ for f in $(git show --name-only --format= <commit> -- src index.html); do chk <c
 - Codex ชนลิมิตไม่ได้แปลว่าว่าง — เช็ก `ps -o pcpu,etime -p $(pgrep -f 'Codex (Service)')`
 - ใบงาน Codex มักบังคับ "ตอบรับพร้อมรายชื่อไฟล์ก่อนเริ่ม" → ทำเก็บไว้ local ได้ แต่ให้คุณเป้แจ้ง Codex ก่อนเชื่อมเข้าเกม
 - Claude ไม่มี imagegen → งานภาพส่งเป็นรายงาน + prompt ให้ Codex วาด
+- คุณเป้บอก "ให้ Codex หยุดแล้ว รอรับงานวาด" → Claude ถือโค้ดทั้งหมด ไม่ต้องรอ coordination doc · สลับ `work-mode.json` เป็น `claude-only`
+  แล้วแตกงานเป็นใบงาน Toby คู่ขนานใน `git worktree` แยก (ห้าม checkout สลับ branch ใน clone หลัก) → Dale รีวิว + merge + push
