@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T12:18:35.055Z",
+  "updatedAt": "2026-10-22T12:28:18.265Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby resumes P5b art insert",
       "report": {
         "when": "15:15",

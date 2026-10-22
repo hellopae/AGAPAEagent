@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-22T12:18:35.055Z",
+  "updatedAt": "2026-10-22T12:28:18.265Z",
   "entries": [
+    {
+      "id": "wl-261022-toby-ojq1",
+      "datetime": "2026-10-22T12:28:18Z",
+      "displayDate": "22 ต.ค. 2569",
+      "displayTime": "19:28",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby resumes P5b art insert",
+      "summary": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไ"
+    },
     {
       "id": "wl-261022-rae-c1pr",
       "datetime": "2026-10-22T12:18:35Z",
