@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T06:16:57.253Z",
+  "updatedAt": "2026-10-22T06:17:43.971Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby P3 verdict cutscene",
+      "status": "working",
+      "task": "Toby P5b insert Codex art",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
