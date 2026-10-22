@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T17:26:23.292Z",
+  "updatedAt": "2026-10-22T01:35:04.518Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae P2 interrogation copy",
+      "status": "working",
+      "task": "Rae P4 talk lines 174",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
