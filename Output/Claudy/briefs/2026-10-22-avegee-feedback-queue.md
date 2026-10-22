@@ -60,3 +60,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **P8 Reese delta = PASS** (F1–F7 VERIFIED ทุกบล็อก) · รอ Toby `toby/p8-copy` → Dale merge · บันทึกให้ Dale: hook-gate อาจนับรอบ Reese ไม่ขึ้นเมื่อผลส่งกลับแบบ hand-back (ตั้งธง fact-check ซ้ำหลัง Rae แก้รอบแรก)
 - **คุณเป้ 23 ต.ค.:** ตอนจบ "กรรม <25 = ทายาทบัลลังก์" จำไม่ได้ → **ตัดออก** (data.js ~526 + TUTOR.karma ~1289) ส่ง Toby รวมใน P8 · **Codex reset ตามกำหนด 27 ต.ค. 2569** (อาจแจก reset ก่อน) — คิววาดรอจนคุณเป้แจ้ง
 - **P8 Toby เสร็จ** `toby/p8-copy` `829f12d` (1,325/0) · ตัดตอนจบ <25 แล้ว · Dale merge อยู่ · **รอคุณเป้/Vera:** กล่อง explainBar "บารมี" (U8) เข้าไม่ถึงเพราะ HUD ไม่มีชิป `data-ex="hp"` แล้ว — เปิดชิปคืนไหม · dead code `talkKan()` + i18n `room.nearKan/kanWait` (เก็บกวาดรอบหน้า)
+- **ขึ้นเว็บแล้ว:** P8 `c1cd99f` (เทสต์ 1,325/0, Pages run 39823450251) · 404 เดิม (bgm .ogg ×3, hero-yama-side.png) ไม่ใช่ regression · ค้าง: ชิปบารมี HUD (รอคุณเป้) · ดูแถบโค้ช TUTOR.fight ที่ 360px · ลบ worktree p8 ได้
