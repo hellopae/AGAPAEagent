@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T12:28:18.265Z",
+  "updatedAt": "2026-10-22T12:28:45.405Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale hotfix deva on branch only",
       "report": {
         "when": "20:27",
