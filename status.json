@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T06:15:05.520Z",
+  "updatedAt": "2026-10-22T06:16:57.253Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review and merge P2",
+      "status": "working",
+      "task": "Dale review and merge P1",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby P6 cauldron and fireball",
+      "task": "Toby P3 verdict cutscene",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
