@@ -43,3 +43,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **19:20:** P7 Reese = FIX LIST 5 ข้อ → Rae แก้รอบเดียว (Claudy ตัดสินเอง ไม่ตรวจซ้ำ) → Toby ใส่ข้อความหลัง P3 merge (ชน `ui.js`) + ตัด `ระเบียบ ${r.rab}` ใน verdictCard()
 - **P8 (เปิดใหม่ จาก Reese):** ข้อความคู่มือล้าสมัยที่ยังไม่มีใครตรวจ — `TUTOR.fight` "เดินไปเก็บกล่องยา"/"เก็บบนแผนที่", "ห้าดาวครบห้าครั้ง = เลื่อนขั้น" (checkLevel ใช้ exp), explainBar "ตะรางขยายให้แล้ว" (queueCap คงที่ 8), `g5.hit/miss*` "เตรียมลูกไฟถัดไป" ตอนครั้งสุดท้าย, ปุ่มสร้าง ui.js ~590 ฮาร์ดโค้ด "Lv." · ข้อความ EN ให้ Chris ตรวจตอนโหมด ship
 - **19:10:** resume Toby P3 + P5b (ค้างใน worktree ตั้งแต่ ~13:30) · Dale hotfix deva ทำบน branch — **รอคุณเป้อนุมัติ merge/ขึ้นเว็บ** (auto mode ปฏิเสธ production deploy)
+- **19:35:** P7 Rae แก้ครบ 5/5 → Claudy รับงาน (CHECK metta ปิด: ไม่อยู่ในสูตรกรรม) → ใบงาน `2026-10-22-avegee-p7-apply.md` (Toby เริ่มหลัง P3 merge)
