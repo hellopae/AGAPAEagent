@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-22T13:40:38.714Z",
+  "updatedAt": "2026-10-22T13:52:58.158Z",
   "entries": [
+    {
+      "id": "wl-261022-toby-pfe7",
+      "datetime": "2026-10-22T13:52:58Z",
+      "displayDate": "22 ต.ค. 2569",
+      "displayTime": "20:52",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby fixes worker scale P5c",
+      "summary": "ส่งรายงานให้ Claudy แล้ว และ `git status` ของ AVEGEE เหมือนก่อนเริ่มทุกบรรทัด\n\n**สิ่งที่รันจริง:** จำลอง headless ด้วยโมดูลเกมจริง 4 ชนิดผู้เล่น × 30 seed, Monte-Carlo ตัดสินคดีและบอส, และเล่นในเบราว์เซอร์ 3 รอบ (เดสก์ท็อป 1440×810 สองรอบ, มือถือ 390×844 หนึ่งรอบ) พร้อม probe เฉพาะจุด\n\n**ส่วนที่ยังไ"
+    },
     {
       "id": "wl-261022-dale-9ku3",
       "datetime": "2026-10-22T13:40:38Z",
