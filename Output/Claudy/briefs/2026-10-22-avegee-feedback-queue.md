@@ -54,3 +54,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **P7-apply เสร็จบน branch** `toby/p7-apply` `9c6ca76` (1,314/0) · Claudy รับ Lv.→"🔒 ขั้น N" (ui.js ปุ่มสร้าง + town-map.js) — EN ของ 2 จุดนี้ยังไม่มี → รวม P8 · **P8 เพิ่ม:** TUTOR T1/T2/T3 (`hp`/`order`/`stuck`), `clockGuide` เทียบ story.js/final-event.js, EN ป้ายล็อก · Dale merge P5c → P7
 - **คุณเป้ 22 ต.ค.:** "ทำงานที่เหลือต่อได้" → เริ่ม P8 (ใบงาน `2026-10-22-avegee-p8-copy-leftovers.md`) Rae → Reese → Toby → Dale
 - **ขึ้นเว็บแล้ว:** P5c `58a6231` · P7 `b22c81b` (เทสต์ 1,318/0) · P8 อ่านจาก main `b22c81b` ได้แล้ว
+- **P8 Rae เสร็จ** (7/8 ข้อ แก้ + เจอข้อความเรื่องจบเกม/TUTOR.pret/heaven ล้าสมัยเพิ่ม) · **Claudy ตัดสินข้อ A:** คง `tag !== 'bad'` ใน applyVerdict — คะแนน <50 ไประบบแดง (ตำหนิ P3 → พ่อลงมา) อยู่แล้ว ลูกไฟเหลือเฉพาะ heaven ผิด/cruel ไม่ลงโทษซ้ำ · ส่ง Reese (8 CHECK)
