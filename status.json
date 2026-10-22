@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T01:39:15.729Z",
+  "updatedAt": "2026-10-22T01:41:32.176Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,7 +122,7 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae P4 talk lines 174",
       "report": {
         "when": "08:10",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby O2 battle visual audit",
+      "status": "working",
+      "task": "Toby P2 interrogation",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
