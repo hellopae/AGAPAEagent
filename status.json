@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T13:24:44.614Z",
+  "updatedAt": "2026-10-22T13:40:38.714Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale merges hotfix, P3, P5b and deploys",
       "report": {
         "when": "20:27",
