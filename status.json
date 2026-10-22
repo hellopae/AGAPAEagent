@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T12:08:36.321Z",
+  "updatedAt": "2026-10-22T12:12:50.505Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese fact-checks trailer script",
+      "status": "working",
+      "task": "Reese fact-checks P7 copy audit",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
@@ -174,7 +174,7 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Mind writes Higgsfield prompts",
       "report": {
         "when": "22:28",
@@ -279,7 +279,7 @@
         "ดูแล repo, build, API integrations"
       ],
       "status": "working",
-      "task": "Dale hotfix deva case vs heaven",
+      "task": "Dale hotfix deva on branch only",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby P5b insert Codex art",
+      "task": "Toby resumes P5b art insert",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
