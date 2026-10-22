@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T06:35:18.529Z",
+  "updatedAt": "2026-10-22T06:36:08.227Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese check P3 chief lines",
+      "status": "working",
+      "task": "Reese check P7 copy audit",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale review and merge P1",
+      "status": "working",
+      "task": "Dale hotfix deva case vs heaven",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
