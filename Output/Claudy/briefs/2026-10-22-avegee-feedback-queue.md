@@ -48,3 +48,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **Hotfix deva เสร็จบน branch** `dale/hotfix-deva-heaven` `72e3da0` (1,289/0, บั๊กยืนยันจริง) · รอคุณเป้อนุมัติขึ้นเว็บ · ผลข้างเคียง: ด่านเทวดา/frontier/บอสโซน 1 ต้องรอประตูสวรรค์ (ขั้น 3) · merge: ชน P5b ที่ cache-bust `index.html` (ง่าย) · P3 สะอาด
 - **P3 เสร็จบน branch** `toby/p3-verdict-cutscene` `b147caa` (1,295/0, rebase บน f777602) · ภาพชม/ตำหนิโซน 2–4 รอ Codex (เปลี่ยน path ที่ `VERDICT_ART`) · **ลำดับ merge เสนอ:** hotfix → P3 (อาจชน `applyVerdict`) → P5b (ชน cache-bust index.html) → แล้วเริ่ม P7-apply · ทั้งหมดรอคุณเป้อนุมัติขึ้นเว็บ
 - **คุณเป้ 22 ต.ค.:** trailer ใช้ชื่อ "ยามา" (ยมบาทน้อย = ตำแหน่ง) · **อนุมัติขึ้นเว็บ** → Dale merge hotfix → P3 → P5b
+- **คุณเป้ 22 ต.ค.:** คนงานเตี้ย → Toby แก้ในโค้ดเลย (ใบงาน P5c) · บอสโซน 1 มาช้าหลังประตูสวรรค์ = รับได้ · หลัง Dale merge: Toby P7-apply + P5c ขนานกัน (คนละไฟล์)
