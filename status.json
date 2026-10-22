@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T17:00:07.980Z",
+  "updatedAt": "2026-10-22T17:00:28.419Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby fixes worker scale P5c",
+      "status": "working",
+      "task": "Toby applies P8 copy",
       "report": {
         "when": "15:15",
         "title": "AVEGEE balance + playtest (retry)",
