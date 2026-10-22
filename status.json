@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T12:17:13.080Z",
+  "updatedAt": "2026-10-22T12:18:35.055Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,7 +122,7 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae fixes P7 per Reese list",
       "report": {
         "when": "08:10",
