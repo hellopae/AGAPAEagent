@@ -53,3 +53,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **P5c เสร็จบน branch** `toby/p5c-worker-scale` `3e54b43` (1,313/0) · รอ P7 แล้ว Dale merge รอบเดียว · ข้อสังเกต: แถว 7/8 ท่าย่อหัวใหญ่ ~10% · แถว 0–2 (v1) เท้าไม่กลาง อาจกระตุก 3–8px ตอนสลับแถว — ดูในเกมก่อนค่อยตัดสิน
 - **P7-apply เสร็จบน branch** `toby/p7-apply` `9c6ca76` (1,314/0) · Claudy รับ Lv.→"🔒 ขั้น N" (ui.js ปุ่มสร้าง + town-map.js) — EN ของ 2 จุดนี้ยังไม่มี → รวม P8 · **P8 เพิ่ม:** TUTOR T1/T2/T3 (`hp`/`order`/`stuck`), `clockGuide` เทียบ story.js/final-event.js, EN ป้ายล็อก · Dale merge P5c → P7
 - **คุณเป้ 22 ต.ค.:** "ทำงานที่เหลือต่อได้" → เริ่ม P8 (ใบงาน `2026-10-22-avegee-p8-copy-leftovers.md`) Rae → Reese → Toby → Dale
+- **ขึ้นเว็บแล้ว:** P5c `58a6231` · P7 `b22c81b` (เทสต์ 1,318/0) · P8 อ่านจาก main `b22c81b` ได้แล้ว
