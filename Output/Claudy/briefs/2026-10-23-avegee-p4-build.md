@@ -21,6 +21,7 @@
 6. ข้อเล็กที่รวมมาใน P4:
    - `game.js` `kanClueWhy` ยังมี "ต้องใช้ MP" + log "MP −" → "พลังเวท"
    - `src/ui.js` ~4815–4823 keydown Space เรียก `tryFight()` ระหว่างมินิเกมเปิด → เพิ่มเงื่อนไข `minigameQuit`
+   - (คุณเป้ 23 ต.ค. เลือก A) หน้าโปรไฟล์ยามา แถวบารมี เพิ่มปุ่ม "?" → `explainBar('hp')` · ห้ามแก้ HUD
    - dead code `game.js talkKan()` + i18n `room.nearKan`/`room.kanWait` — ถ้าระบบคุยใหม่ไม่ใช้ ลบได้
 
 ## ขั้นตอน
