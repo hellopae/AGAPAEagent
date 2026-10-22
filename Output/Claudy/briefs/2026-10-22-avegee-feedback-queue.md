@@ -45,3 +45,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **19:10:** resume Toby P3 + P5b (ค้างใน worktree ตั้งแต่ ~13:30) · Dale hotfix deva ทำบน branch — **รอคุณเป้อนุมัติ merge/ขึ้นเว็บ** (auto mode ปฏิเสธ production deploy)
 - **19:35:** P7 Rae แก้ครบ 5/5 → Claudy รับงาน (CHECK metta ปิด: ไม่อยู่ในสูตรกรรม) → ใบงาน `2026-10-22-avegee-p7-apply.md` (Toby เริ่มหลัง P3 merge)
 - **P5b เสร็จบน branch** `toby/p5b-art-insert` `9b8b665` (1,269/0, ตามหลัง main 5 commit — Dale rebase ตอน merge) · รอคุณเป้อนุมัติขึ้นเว็บ · ค้าง: คนงาน v2 แถว 3–11 เตี้ยกว่า v1 5–11% + จุดเท้า x แถว 6/8/10 ไม่กลาง → ทางเลือก ชดเชยสเกลในโค้ด (Toby) หรือวาดใหม่ (Codex — รอ reset) · หลักฐานวิดีโอ `/tmp/p5b/`
+- **Hotfix deva เสร็จบน branch** `dale/hotfix-deva-heaven` `72e3da0` (1,289/0, บั๊กยืนยันจริง) · รอคุณเป้อนุมัติขึ้นเว็บ · ผลข้างเคียง: ด่านเทวดา/frontier/บอสโซน 1 ต้องรอประตูสวรรค์ (ขั้น 3) · merge: ชน P5b ที่ cache-bust `index.html` (ง่าย) · P3 สะอาด
