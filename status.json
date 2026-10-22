@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T05:52:15.119Z",
+  "updatedAt": "2026-10-22T06:15:05.520Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby P6 cauldron and fireball",
       "report": {
         "when": "15:15",
