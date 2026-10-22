@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T11:53:15.954Z",
+  "updatedAt": "2026-10-22T11:54:25.221Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,7 +70,7 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "working",
-      "task": "Reese check P7 copy audit",
+      "task": "Reese fact-checks trailer script",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
@@ -148,8 +148,8 @@
         "ดีไซน์รองรับมือถือ",
         "วาง grid + bleed + margin"
       ],
-      "status": "done",
-      "task": "Vera P4 UX spec",
+      "status": "working",
+      "task": "Vera builds trailer shot list",
       "report": {
         "when": "10:43",
         "title": "Vera trial and battle UI layout",
