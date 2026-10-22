@@ -30,3 +30,5 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
   คิววาดที่รอ: คนงานโซน asia/west/cyberhell (สเปก Mind §4) · หัวหน้าโซน 2–4 (Mind §5.2) · art-requests จาก O2 (ถ้ามี)
 - รันอยู่: Toby O2 (ต่อหลัง limit), Toby P5, Rae P4-lines, Reese ตรวจ P2-copy → แล้ว Toby P2
 - **P7 (ใหม่, จาก Reese):** คู่มือ `sentencing-guide.js` บทเดิมล้าสมัยหลายจุด — บท 4 "ระเบียบงาน 17%" vs `judge()` (0.50 สถานที่ + 0.33 ความพอดีโทษ), บท 1/3 โบนัสปัญญา ≥7 (+6) และเมตตาลดกรรม ไม่พบใน `judge()` → Rae ตรวจคู่มือทั้งเล่มเทียบโค้ด → Reese → Toby (หลัง P2)
+- O2 เสร็จ (1,240/0) → Dale merge · **คิววาดรอ Codex reset เพิ่ม** (จาก `Output/Toby/2026-10-21-avegee-o2-codex-art-requests.md`): นิรา 4 แผ่นส่งออกใหม่ขอบโปร่ง ≥8px หันขวา (ด่วนสุด) · ม้าทรอยโซน 4 f6/f7 · 203 เฟรมที่ถูกตัด (N2)
+- **Shado (รอคุณเป้ยืนยัน):** fx 6 key ที่ยังไม่มีไฟล์ (claw-triple, impact-red, dark-orb, aura-rage, clock-ring, mirror-glint — วางทับชื่อเดิมได้เลย) · เอฟเฟกต์ท่าหมู่ตามอาวุธบอส (ลม/น้ำแข็ง/หอก/สะกดจิต) = ฟีเจอร์ใหม่
