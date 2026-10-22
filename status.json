@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T05:49:18.562Z",
+  "updatedAt": "2026-10-22T05:49:36.669Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese check P4 talk lines",
+      "status": "working",
+      "task": "Reese check P3 chief lines",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
