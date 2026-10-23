@@ -100,3 +100,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **Codex rate_limited (try again 22:26)** — Z2-ART (ได้ 9 ไฟล์ v3: sala/tea/judgment/lamp/torch/บ้าน 4), B1 (โค้ดพุ่งฟันมีแล้ว ยังไม่ครบเทสต์/README), Z3-GROUND (พื้นโซน 3 ต่อครบ 20 ชิ้น + preview แล้ว ขาด README/QA) · ใบงานต่อ `*-cont.md` ×3 · `Output/Claudy/run-cont-2230.sh` รันอัตโนมัติ 22:30 (log `Output/Claudy/cont-*.log`)
 - ชุด mask โซน 3 ให้คุณเป้: `/Users/agapae/agapae-work/mask-for-kittanate/west/` (mask โซน 2 วางทับพื้นโซน 3 พอดีเพราะผังเดียวกัน)
 - **19:55 คุณเป้:** อาคารคงตำแหน่งโซน 1 (ก้อนแดงไม่เกี่ยวกับอาคาร) · ฉากจบเลือกข้อ **1, 3, 4** (ไม่เอายอดดาเมจรวม) → ใบงาน `2026-10-23-avegee-b3-result-screen.md` (เริ่มหลัง B1 merge) · คุณเป้สั่ง "วางแผนงานให้ claude รอ reset" → **codex-only** · handoff AVEGEE `docs/handoffs/claude-handoff-2026-10-23.md`
+- คุณเป้ยืนยัน: ต้นขาว = ซากุระ, ฟ้าอมเขียว = หลิว ✓
