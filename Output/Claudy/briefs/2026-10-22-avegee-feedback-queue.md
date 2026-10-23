@@ -88,3 +88,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **13:15** Q5 + S2b เสร็จ · Claudy ดู mask-overlay ผืน Q5: ผังตรง ไม่มีท่าเกิน → รับพื้น · M3b (Codex `20261023T061529Z-392dd4a6`) เสียบพื้นใหม่ + บ้าน บนงาน M3
 - **ขึ้นเว็บแล้ว: M3 แผนที่โซน 2 ใหม่** `c408a00` (Claudy merge ทาง A — เอาเฉพาะ src/img/tests/index ไม่เอา output/; เทสต์ 1,390/0) · ตรวจ Playwright ในเครื่อง 390/1280: เข้าโซน asia ได้ ไม่มี pageerror (`/Users/agapae/agapae-work/evidence/m3/`) · ชุด mask จริงอยู่ `/Users/agapae/agapae-work/mask-for-kittanate/asia/` รอคุณเป้วาด · ถัดไป: ชายแดน 2–3 (Mind สเปก → Codex)
 - **13:40** Codex วาดชายแดน 2–3 (`…063931Z`) + 3–4 (`…063935Z`) ขนาน (สเปกจาก M0 §4.3 ตรง ไม่ผ่าน Mind เพื่อประหยัด Claude)
+- **13:41 Codex rate_limited** (f23/f34 ไม่มี diff, try again 5:12 PM) → ตั้งรันใหม่อัตโนมัติ 17:15
