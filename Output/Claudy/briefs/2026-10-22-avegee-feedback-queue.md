@@ -83,3 +83,4 @@ Codex app รับเฉพาะงานวาด (Mind เขียนสเ
 - **12:31:** Q2 (NE) + Q3 (SW) + S2 + S3 เสร็จ · Q4 (SE) `20261023T053110Z-6564139c` เริ่มแล้ว → จากนั้น Toby M3 เสียบโซน 2
 - **คุณเป้ 23 ต.ค. ~12:45: Claude weekly เหลือ 9%** → work-mode `both` · Claude จัดงาน/ตรวจ/merge (ทาง A) · Codex ทำโค้ด+วาด · M3 (เสียบโซน 2) เปลี่ยนเป็น Codex `--write` รันอัตโนมัติหลัง Q4 เสร็จ
 - **คิวหลังงานแผนที่ (คุณเป้ 23 ต.ค. 12:38):** จัดระเบียบไฟล์ AVEGEE — มีหลายโฟลเดอร์ซ้ำ (`Documents/Work PAE/Claude/AVEGEE` + `release-battle/systems/town/worktree-20261019` ข้างใน, `AVEGEE-backup`, `AVEGEE-untracked-backup`, `AVEGEE-reference`, `agapae-work/AVEGEE` + worktrees) · ตรวจว่าอะไรใช้/ไม่ใช้ · ภาพซ้ำ/ไม่ได้ใช้ใน repo ลบได้ (คุณเป้อนุญาต) · ลบทั้งโฟลเดอร์ clone/backup → แสดงรายการให้คุณเป้ยืนยันก่อน (อาจมีงาน Codex app ค้าง)
+  - คุณเป้ย้ำ: ตรวจ+จัดระเบียบเสร็จแล้ว **รายงานก่อน** ว่าโฟลเดอร์ไหนใช้/ไม่ใช้ → คุณเป้ confirm แล้วค่อยลบ
