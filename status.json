@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T00:55:17.349Z",
+  "updatedAt": "2026-10-23T01:06:16.291Z",
   "agents": [
     {
       "id": "claudy",
@@ -174,7 +174,7 @@
         "คุมความสม่ำเสมอของแบรนด์",
         "ส่งไฟล์ดีไซน์พร้อมผลิต"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Mind writes zone 2 map art spec",
       "report": {
         "when": "22:28",
