@@ -1,0 +1,52 @@
+{
+  "navigation_cell_world_units": 8,
+  "side_margin_world_units": 3,
+  "edge_sampling_world_units": 4,
+  "reachable_cells": 28586,
+  "total_floor_cells": 28586,
+  "routes": [
+    {
+      "point": "entry",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "entry circular plaza",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "central stair",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "central plaza",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "left top bridge",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "left middle bridge",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "upper middle stair",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "upper right bridge",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "right descending stair",
+      "reachable_from_entry": true
+    },
+    {
+      "point": "right lower bridge",
+      "reachable_from_entry": true
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "scope": "owner floor only, using production clearLine rule; station/prop/NPC collisions and runtime integration still pending"
+}

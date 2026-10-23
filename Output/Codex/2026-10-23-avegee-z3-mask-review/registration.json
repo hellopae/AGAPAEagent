@@ -1,0 +1,56 @@
+{
+  "source": "/Users/agapae/Documents/Work PAE/Claude/AVEGEE-reference/files/UI New map/Map-Zone3-2.jpg",
+  "source_sha256": "ee60d92e5b36433ff1785af20042247676d8e0cb0024a7ac4847385c3d573d5a",
+  "source_size": [
+    2500,
+    1667
+  ],
+  "preview": "/Users/agapae/agapae-work/.codex-worktrees/20261023T121107Z-194b7613/img/map-zone3/v1/zone3-terrain-v1-preview.webp",
+  "preview_sha256": "8f0df67cdd7d258b842e29a37773c4737e485f8127d5c31306291c9f340a9c24",
+  "preview_size": [
+    1536,
+    1024
+  ],
+  "registration": "SIFT, ratio .72, full affine RANSAC 3px",
+  "matches": 286,
+  "inliers": 272,
+  "inlier_median_error_reference_px": 0.1552111804485321,
+  "inlier_p95_error_reference_px": 0.7089645266532898,
+  "preview_to_reference": [
+    [
+      1.6277903787387924,
+      -9.7350180362962e-05,
+      0.5693116661648173
+    ],
+    [
+      -3.895461368606993e-05,
+      1.6279640078679092,
+      0.8755455519232186
+    ]
+  ],
+  "red_threshold": "R-max(G,B)>55 and R>130",
+  "morphology": "none",
+  "grid": [
+    480,
+    320
+  ],
+  "walkable_cell_coverage_threshold": 0.68,
+  "removed_island_cells": 3,
+  "walkable_cells": 28586,
+  "components": [
+    {
+      "cells": 28586,
+      "bounds": [
+        26,
+        36,
+        440,
+        284
+      ],
+      "center": [
+        242.8554887007626,
+        149.46232421465052
+      ]
+    }
+  ],
+  "activation": "not activated; prepared data only"
+}
