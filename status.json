@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T00:40:09.587Z",
+  "updatedAt": "2026-10-23T00:45:10.562Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "working",
-      "task": "Toby inserts Codex art P9",
+      "task": "Toby surveys map system M0",
       "report": {
         "when": "05:17",
         "title": "Toby builds AVEGEE P4",
