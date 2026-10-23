@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T02:59:39.483Z",
+  "updatedAt": "2026-10-23T04:30:14.091Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby builds M2 map base",
       "report": {
         "when": "05:17",
