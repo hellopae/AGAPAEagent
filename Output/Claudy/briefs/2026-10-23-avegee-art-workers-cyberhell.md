@@ -1,0 +1,20 @@
+# ใบงานวาด ART-workers-cyberhell: AVEGEE — animation คนงานโซน cyberhell · เจ้าของ Codex (วาดภาพเท่านั้น)
+
+## บริบท
+- คุณเป้อนุญาต 22 ต.ค. 2569 ให้ Claude สั่ง Codex วาดภาพ · คุณเป้แจ้ง 23 ต.ค. ว่า Codex reset แล้ว · Claude ไม่มี imagegen · โค้ดเป็นงานของ Claude (Toby) — **ห้ามแก้โค้ด**
+- **ทำงานใน working directory ปัจจุบันของคุณ (git worktree ของ AVEGEE) เท่านั้น** — ห้ามเขียนลง clone หลัก ห้ามสร้าง worktree/branch/clone เอง ห้าม git commit/push (wrapper ทำให้)
+- สเปกเต็ม (อ่านทั้งไฟล์ แต่ทำเฉพาะชิ้นนี้): `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Mind/2026-10-22-avegee-art-queue-codex.md` — **§4 ชิ้นที่ 3 — โซน `cyberhell` แถว 0–11** + §1 (asset inventory) + §8 (pre-flight) · สคริปต์ §8 ที่ `cd /Users/agapae/agapae-work/AVEGEE` ให้รันใน working directory ปัจจุบันแทน
+- คุณเป้ดูโซน th แล้ว (`img/workers/worker-th-sheet-v2.webp` อยู่ในเกมแล้ว) → ขยายไปโซนนี้ · ใช้ v2 ของ th เป็นต้นแบบ "ท่า/จังหวะ" ของแต่ละแถว แต่ตัวละครต้องเป็นของโซน `cyberhell` ตาม v1 ของโซนนี้ (`img/workers/worker-cyberhell-sheet-v1.webp` 1280×1280) — ล็อกหน้า ชุด สีตามรายการ "ตัวละครต่อโซน" ใน §4
+- **บทเรียนจาก th:** v2 แถว 3–11 ตัวเตี้ยกว่า v1 5–11% และจุดเท้า x แถว 6/8/10 ไม่กลาง → Toby ต้องชดเชยในโค้ด · รอบนี้ **ต้องวัด v1 แถว 0 ของโซน cyberhell (alpha bbox) แล้วล็อกความสูงตัวยืนตรงและจุดเท้า (x≈160±6, ฝ่าเท้าติดขอบล่าง) ให้ทุกแถวตรง v1** ใช้สเกลเดียวทั้งชีต
+
+## งาน
+1. pre-flight §8 + วัด v1 โซน cyberhell บันทึกตัวเลข
+2. วาดตาม prompt §4 (แทน `[ZONE BLOCK]` ด้วยตัวละครโซน cyberhell, ทีละ 2 แถว) → `img/workers/worker-cyberhell-sheet-v2.webp` 1280×3840 (ช่อง 320×320 × 4 คอลัมน์ × 12 แถว) — แถว 0–2 คัดลอกจาก v1 ของโซนนี้, แถว 3–11 วาดใหม่
+3. ตรวจเอง: ความสูงตัวยืนแต่ละแถวต่างจาก v1 ไม่เกิน ±3% (ท่าย่อยกเว้น) · จุดเท้า x 160±6 · ไม่ล้ำช่อง ≥ 6px · ตารางตัวเลขต่อแถวใน README · GIF ต่อแถว (160 ms)
+4. เขียน `output/art-queue-2026-10-23/workers-cyberhell.md`: ไฟล์ที่สร้าง + ขนาดจริง (วัดด้วย PIL) + prompt ที่ใช้จริง + จุดที่ต่างจากสเปกพร้อมเหตุผล + คอนแทคชีต/ภาพเปรียบเทียบก่อน-หลังใน `output/art-queue-2026-10-23/workers-cyberhell/`
+
+## ข้อห้าม
+ห้ามแก้ `src/`, `index.html`, `tests/`, catalog/manifest · **ห้ามเขียนทับไฟล์ภาพเดิม** (สร้างไฟล์ชื่อใหม่ตามที่กำหนด) · ห้ามบอกว่า "ผ่าน" เอง (Toby ตรวจตอนเสียบ)
+
+## เกณฑ์รับงาน
+ไฟล์ปลายทางครบ ขนาดตรง · README ชิ้นนี้ครบ · ไม่มีไฟล์อื่นนอก `img/` ปลายทางและ `output/art-queue-2026-10-23/` เปลี่ยน

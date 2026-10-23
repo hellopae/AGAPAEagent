@@ -1,0 +1,19 @@
+# ใบงานวาด ART-nira-west-cyberhell: AVEGEE — นิรา แผ่นต่อสู้ ส่งออกใหม่ (โซน west, cyberhell) · เจ้าของ Codex (วาดภาพเท่านั้น)
+
+## บริบท
+- คุณเป้อนุญาต 22 ต.ค. 2569 ให้ Claude สั่ง Codex วาดภาพ · คุณเป้แจ้ง 23 ต.ค. ว่า Codex reset แล้ว · Claude ไม่มี imagegen · โค้ดเป็นงานของ Claude (Toby) — **ห้ามแก้โค้ด**
+- **ทำงานใน working directory ปัจจุบันของคุณ (git worktree ของ AVEGEE) เท่านั้น** — ห้ามเขียนลง clone หลัก ห้ามสร้าง worktree/branch/clone เอง ห้าม git commit/push (wrapper ทำให้)
+- สเปก: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-10-21-avegee-o2-codex-art-requests.md` — **§1 นิรา** (ปัญหาที่เห็น + prompt EN) + กฎร่วมทุกชิ้นหัวไฟล์ · **ทำเฉพาะโซน west และ cyberhell** (อีก 2 โซนมี run แยก — ต้องย่อสเกลเท่ากัน: ใช้ตัวคูณสเกลเดียวทุกโซน ถ้าต้องย่อให้ย่อ 6% ตามสเปก)
+- ต้นแบบ: `img/nira-combat/nira-<zone>-sheet-v1.webp` (1280×1280 กริด 4×4 ช่อง 320 · แถว idle/attack/hurt/heal)
+
+## งาน
+1. วัด v1 ของแต่ละโซน (alpha bbox ต่อช่อง, เส้นฐานเท้า, จุดที่แตะขอบ) บันทึกก่อนวาด
+2. วาด/ส่งออกใหม่ตาม prompt §1 → `img/nira-combat/nira-west-sheet-v2.webp` และ `img/nira-combat/nira-cyberhell-sheet-v2.webp` 1280×1280 RGBA · ทุกท่าในช่อง ขอบโปร่ง ≥ 8px ทุกด้าน · เท้าบนเส้นฐานเดียวกันทุกช่อง (24px เหนือขอบล่าง) · attack f6 ปลายลำแสงจบในช่อง · heal ออร่าไม่ถูกตัด · **ทุกแถวหันขวา** · ชุด/สีผมของโซนไม่เปลี่ยน
+3. ตรวจเอง: สแกน alpha ทุกช่องว่าไม่แตะขอบ 8px · ไม่มีเศษข้ามช่อง · ทำ GIF ต่อแถว (120 ms) + คอนแทคชีต v1 vs v2
+4. เขียน `output/art-queue-2026-10-23/nira-west-cyberhell.md`: ไฟล์ที่สร้าง + ขนาดจริง (วัดด้วย PIL) + prompt ที่ใช้จริง + จุดที่ต่างจากสเปกพร้อมเหตุผล + คอนแทคชีต/ภาพเปรียบเทียบก่อน-หลังใน `output/art-queue-2026-10-23/nira-west-cyberhell/` · ระบุชัดว่า "ทุกแถวหันขวาแล้ว → Toby ต้องเอาการพลิก idle/hurt ในโค้ดออก"
+
+## ข้อห้าม
+ห้ามแก้ `src/`, `index.html`, `tests/`, catalog/manifest · **ห้ามเขียนทับไฟล์ภาพเดิม** (สร้างไฟล์ชื่อใหม่ตามที่กำหนด) · ห้ามบอกว่า "ผ่าน" เอง (Toby ตรวจตอนเสียบ)
+
+## เกณฑ์รับงาน
+ไฟล์ปลายทางครบ ขนาดตรง · README ชิ้นนี้ครบ · ไม่มีไฟล์อื่นนอก `img/` ปลายทางและ `output/art-queue-2026-10-23/` เปลี่ยน
