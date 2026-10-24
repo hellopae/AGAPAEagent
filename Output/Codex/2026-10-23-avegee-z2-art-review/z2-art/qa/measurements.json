@@ -1,0 +1,314 @@
+[
+  {
+    "key": "judgment",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha_bbox": [
+      4,
+      299,
+      1055,
+      1008
+    ],
+    "base": [
+      755.0,
+      1006
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 1140921,
+    "partial_alpha_pixels": 430259,
+    "original_unchanged": true
+  },
+  {
+    "key": "house-front-one",
+    "size": [
+      1402,
+      1122
+    ],
+    "alpha_bbox": [
+      4,
+      368,
+      1402,
+      1122
+    ],
+    "base": [
+      698.0,
+      1121
+    ],
+    "base_delta": [
+      -0.5,
+      0
+    ],
+    "transparent_pixels": 682189,
+    "partial_alpha_pixels": 890013,
+    "original_unchanged": true
+  },
+  {
+    "key": "house-right-one",
+    "size": [
+      1438,
+      1094
+    ],
+    "alpha_bbox": [
+      9,
+      452,
+      866,
+      1078
+    ],
+    "base": [
+      421.0,
+      1077
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 1251407,
+    "partial_alpha_pixels": 320423,
+    "original_unchanged": true
+  },
+  {
+    "key": "house-left-two",
+    "size": [
+      1036,
+      1518
+    ],
+    "alpha_bbox": [
+      570,
+      830,
+      1036,
+      1518
+    ],
+    "base": [
+      783.5,
+      1517
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 1344976,
+    "partial_alpha_pixels": 226511,
+    "original_unchanged": true
+  },
+  {
+    "key": "house-right-two",
+    "size": [
+      1036,
+      1518
+    ],
+    "alpha_bbox": [
+      3,
+      580,
+      616,
+      1501
+    ],
+    "base": [
+      375.0,
+      1499
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 1156442,
+    "partial_alpha_pixels": 415296,
+    "original_unchanged": true
+  },
+  {
+    "key": "lamp",
+    "size": [
+      512,
+      1112
+    ],
+    "alpha_bbox": [
+      56,
+      6,
+      457,
+      1108
+    ],
+    "base": [
+      256.0,
+      1106
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 408240,
+    "partial_alpha_pixels": 159999,
+    "original_unchanged": true
+  },
+  {
+    "key": "torch",
+    "size": [
+      240,
+      419
+    ],
+    "alpha_bbox": [
+      42,
+      112,
+      207,
+      419
+    ],
+    "base": [
+      130.0,
+      418
+    ],
+    "base_delta": [
+      0.5,
+      0
+    ],
+    "transparent_pixels": 76996,
+    "partial_alpha_pixels": 22852,
+    "original_unchanged": true
+  },
+  {
+    "key": "sala",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_bbox": [
+      16,
+      500,
+      969,
+      1212
+    ],
+    "base": [
+      820.5,
+      1211
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 1127045,
+    "partial_alpha_pixels": 444277,
+    "original_unchanged": true
+  },
+  {
+    "key": "tea",
+    "size": [
+      365,
+      375
+    ],
+    "alpha_bbox": [
+      4,
+      58,
+      323,
+      366
+    ],
+    "base": [
+      196.0,
+      365
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 71057,
+    "partial_alpha_pixels": 64680,
+    "original_unchanged": true
+  },
+  {
+    "key": "sawan",
+    "size": [
+      1240,
+      1249
+    ],
+    "alpha_bbox": [
+      32,
+      73,
+      1235,
+      1242
+    ],
+    "base": [
+      627.0,
+      1240
+    ],
+    "base_delta": [
+      0.5,
+      0
+    ],
+    "transparent_pixels": 562444,
+    "partial_alpha_pixels": 985646,
+    "original_unchanged": true
+  },
+  {
+    "key": "krajok",
+    "size": [
+      1187,
+      1216
+    ],
+    "alpha_bbox": [
+      12,
+      409,
+      836,
+      1214
+    ],
+    "base": [
+      650.0,
+      1212
+    ],
+    "base_delta": [
+      -0.5,
+      0
+    ],
+    "transparent_pixels": 1003043,
+    "partial_alpha_pixels": 439064,
+    "original_unchanged": true
+  },
+  {
+    "key": "sakura",
+    "size": [
+      1199,
+      1312
+    ],
+    "alpha_bbox": [
+      12,
+      481,
+      887,
+      1287
+    ],
+    "base": [
+      592.0,
+      1285
+    ],
+    "base_delta": [
+      0.5,
+      0
+    ],
+    "transparent_pixels": 1154855,
+    "partial_alpha_pixels": 417895,
+    "original_unchanged": true
+  },
+  {
+    "key": "willow",
+    "size": [
+      1199,
+      1312
+    ],
+    "alpha_bbox": [
+      15,
+      119,
+      1068,
+      1287
+    ],
+    "base": [
+      591.5,
+      1285
+    ],
+    "base_delta": [
+      0.0,
+      0
+    ],
+    "transparent_pixels": 671628,
+    "partial_alpha_pixels": 901450,
+    "original_unchanged": true
+  }
+]

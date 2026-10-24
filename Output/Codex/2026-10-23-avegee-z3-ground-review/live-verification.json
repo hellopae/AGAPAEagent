@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "path": "img/map-zone3/v1/r1-c1.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r1-c2.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r1-c3.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r1-c4.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r1-c5.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r2-c1.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r2-c2.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r2-c3.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r2-c4.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r2-c5.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r3-c1.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r3-c2.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r3-c3.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r3-c4.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r3-c5.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r4-c1.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r4-c2.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r4-c3.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r4-c4.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/r4-c5.webp",
+      "status": 200
+    },
+    {
+      "path": "img/map-zone3/v1/zone3-terrain-v1-preview.webp",
+      "status": 200
+    }
+  ],
+  "west_enabled_false": true
+}

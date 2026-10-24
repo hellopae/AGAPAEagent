@@ -1,0 +1,22 @@
+(node:4660) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B3 receipt view combines duplicate drops without modifying a paid receipt (2.407846ms)
+✔ B3 display reaches the exact totals within 800ms and announces only once (0.69919ms)
+✔ B3 deadline finishes without animation frames and is cancelled with the dialog (0.300994ms)
+✔ B3 skip finishes once; reduced motion and zero totals do not queue frames (0.289829ms)
+✔ B3 cancellation and receipt identity prevent writes from an old animation (0.273098ms)
+✔ B3 target and status presentation follows live state, deaths and replacement waves (0.324616ms)
+✔ B3 only special moves get a name; ordinary attacks and consumables stay ordinary (0.173658ms)
+✔ B3 real paid mob receipt: opening, skipping, repeated clicking and closing never grant again (13.835519ms)
+✔ B3 close during counting cancels pending frames and cannot clear a replacement receipt (0.969561ms)
+✔ B3 guide and final receipts retain titles, descriptions and exactly one acknowledgement (1.743368ms)
+✔ B3 empty and long loot receipts preserve static quantities and do not invent EXP rows (1.581871ms)
+✔ B3 new UI keys resolve in both languages, including status labels and special names (1.257908ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 276.48066

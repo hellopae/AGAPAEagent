@@ -1,0 +1,19 @@
+ img/map-v5/st-krajok-asia-v3.webp              | Bin 0 -> 1215448 bytes
+ img/map-v5/st-sala-asia-v3.webp                | Bin 0 -> 1310984 bytes
+ img/map-v5/st-sawan-asia-v3.webp               | Bin 0 -> 1907768 bytes
+ img/map-zone2/torch-pillar-v3.webp             | Bin 0 -> 66082 bytes
+ img/preload-catalog.json                       |  15 ++++++++++++++-
+ img/theme-v4/st-tea-asia-v3.webp               | Bin 0 -> 154390 bytes
+ img/theme-v4/town-judgment-asia-v3.webp        | Bin 0 -> 1226642 bytes
+ img/theme-v4/town-lamp-asia-v3.webp            | Bin 0 -> 304812 bytes
+ img/theme-v4/town-tree-sakura-asia-v1.webp     | Bin 0 -> 1370660 bytes
+ img/theme-v4/town-tree-willow-asia-v1.webp     | Bin 0 -> 2112824 bytes
+ img/town-district/house-front-one-asia-v3.webp | Bin 0 -> 1709300 bytes
+ img/town-district/house-left-two-asia-v3.webp  | Bin 0 -> 841548 bytes
+ img/town-district/house-right-one-asia-v3.webp | Bin 0 -> 949020 bytes
+ img/town-district/house-right-two-asia-v3.webp | Bin 0 -> 1144616 bytes
+ index.html                                     |   8 ++++----
+ src/preload.js                                 |   2 +-
+ src/zone-skin.js                               |  22 +++++++++++-----------
+ tests/m2-zone-skin.test.mjs                    |  14 +++++++-------
+ 18 files changed, 37 insertions(+), 24 deletions(-)

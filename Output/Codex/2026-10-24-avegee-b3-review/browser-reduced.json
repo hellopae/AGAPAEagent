@@ -1,0 +1,4272 @@
+{
+  "kind": "reduced",
+  "reduced": true,
+  "resourcesUnchanged": true,
+  "receiptCleared": true,
+  "skipProbe": null,
+  "deadlineProbe": {
+    "at": 2590,
+    "coin": "+40",
+    "exp": "+20",
+    "button": "ไปต่อ"
+  },
+  "samples": [
+    {
+      "at": 10,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 302,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 327,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 385,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 1022,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2587,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2595,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2608,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2623,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2638,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2658,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2672,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2706,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2723,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2740,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2757,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2773,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2789,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2804,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2823,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2839,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2858,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2871,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2888,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2906,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2928,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2937,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2957,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2974,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 2990,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3007,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3025,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3038,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3058,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3072,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3107,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3124,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3140,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3158,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3196,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3205,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3225,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3238,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3258,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3271,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3288,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3305,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3321,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3338,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3373,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3390,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3406,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3423,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3440,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3457,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3473,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3489,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3506,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3523,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3540,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3556,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3574,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3588,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3604,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3623,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3639,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3658,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3672,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3690,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3706,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3721,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3740,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3758,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3773,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3789,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3806,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3821,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3838,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3857,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3871,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3890,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3907,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3925,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3939,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3956,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3973,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 3989,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4006,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4023,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4039,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4056,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4072,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4105,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4121,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4137,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4157,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4192,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4207,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4222,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4237,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4256,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4270,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4291,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4308,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4324,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4340,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4358,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4373,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4391,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4407,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4424,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4441,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4459,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4471,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4491,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4506,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4523,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4538,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4557,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4573,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4590,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4606,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4624,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4639,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4658,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4671,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4707,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4724,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4740,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4757,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4774,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4789,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4807,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4823,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4840,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4857,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4871,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4891,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4907,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4928,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4938,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4955,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4974,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 4991,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5007,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5022,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5039,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5057,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5071,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5088,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5104,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5121,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5139,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5156,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5191,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5205,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5223,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5239,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5256,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5272,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5289,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5305,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5321,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5337,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5370,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5389,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5406,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5423,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5438,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5457,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5471,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5491,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5505,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5521,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5541,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5567,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5572,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5589,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5605,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5621,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5638,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5657,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5672,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5705,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5721,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5737,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5756,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5772,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5789,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5805,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5823,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5840,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5857,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5870,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5891,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5906,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5928,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5937,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5956,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5972,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 5990,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6005,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6024,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6038,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6054,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6070,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6107,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6122,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6140,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6157,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6198,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6205,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6225,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6239,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6257,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6272,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6289,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6307,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6324,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6339,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6357,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6371,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6391,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6408,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6424,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6440,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6459,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6471,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6491,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6506,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6522,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6539,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6556,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6574,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6590,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6607,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6623,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6640,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6657,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6671,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6708,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6724,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6741,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6757,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6772,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6791,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6807,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6822,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6841,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6858,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6871,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6887,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6907,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6926,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6937,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6956,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6973,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 6989,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7006,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7023,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7039,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7056,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7071,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7106,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7122,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7139,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7158,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7193,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7205,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7220,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7238,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7258,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7274,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7290,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7306,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7324,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7339,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7355,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7371,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7390,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7408,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7421,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7439,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7458,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7470,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7489,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7505,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7522,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7538,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7556,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7572,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7589,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7605,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7623,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7638,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7656,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7671,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7705,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7721,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7738,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7756,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7771,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7789,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7807,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7824,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7839,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7856,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7870,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7890,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7907,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7929,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7937,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7957,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7972,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 7990,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8007,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8023,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8039,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8057,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8073,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8090,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8106,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8123,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8140,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8155,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8193,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8206,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8222,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8239,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8257,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8270,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8288,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8307,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8324,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8340,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8373,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8391,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8407,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8423,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8440,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8457,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8473,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8491,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8505,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8523,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8540,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8557,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8574,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8588,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8606,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8624,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8639,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8658,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8671,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8687,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8704,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8721,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8739,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8755,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8772,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8788,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8804,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8822,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8839,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8855,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8872,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8889,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8905,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8927,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8939,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8956,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8972,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 8989,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9005,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9022,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9038,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9056,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9073,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9105,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9122,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9139,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9157,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9174,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9190,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9204,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9221,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9237,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9254,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9272,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9289,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9305,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9323,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9337,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9372,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9389,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9405,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9422,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9438,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9456,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9471,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9488,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9504,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9522,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9539,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9555,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9572,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9588,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9606,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9622,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9639,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9657,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9672,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9706,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9724,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9739,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9758,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9771,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9790,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9807,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9824,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9840,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9855,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9870,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9891,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9906,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9927,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9938,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9957,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9970,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 9989,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10007,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10022,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10040,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10057,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10073,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10091,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10106,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10123,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10138,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10157,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10173,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10196,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10206,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10224,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10240,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10256,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10272,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10289,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10307,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10323,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10340,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10357,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10373,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10391,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10407,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10423,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10442,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10458,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10471,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10487,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10505,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10521,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10539,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10556,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10573,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10589,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10606,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10621,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10639,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10655,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10673,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10689,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10706,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10722,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10739,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10756,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10771,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10788,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10804,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10823,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10838,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10864,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10871,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10898,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10905,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10921,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10937,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10958,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10972,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 10988,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11005,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11021,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11037,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11057,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11071,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11087,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11104,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11122,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11139,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11158,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11171,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11191,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11205,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11222,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11239,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11256,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11272,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11289,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11305,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11322,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11339,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11372,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11390,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11407,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11422,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11438,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11455,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11470,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11488,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11508,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11522,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11548,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11558,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11573,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11590,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11605,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11623,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11640,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11657,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11674,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11691,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11708,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11722,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11740,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11757,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11773,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11791,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11808,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11822,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11840,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11858,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11870,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11893,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11907,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11926,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11939,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11957,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11975,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 11990,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12007,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12023,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12039,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12057,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12073,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12089,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12107,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12123,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12139,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12156,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12175,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12191,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12204,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12224,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12240,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12256,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12271,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12288,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12305,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12322,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12339,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12356,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12371,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12387,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12404,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12421,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12438,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12454,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12470,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12489,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12507,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12524,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12542,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12558,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12572,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12589,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    },
+    {
+      "at": 12606,
+      "open": true,
+      "coin": "+40",
+      "exp": "+20",
+      "button": "ไปต่อ"
+    }
+  ],
+  "errors": []
+}

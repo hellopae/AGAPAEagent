@@ -1,0 +1,16 @@
+[
+  {
+    "hpTop": 347.86407470703125,
+    "id": "foe-1",
+    "statusBottom": 209.38438415527344,
+    "statusOverlapsHp": false,
+    "statusText": "แช่แข็ง 1 เทิร์นติดไฟ 3 เทิร์น"
+  },
+  {
+    "hpTop": 347.86407470703125,
+    "id": "foe-2",
+    "statusBottom": 188.484375,
+    "statusOverlapsHp": false,
+    "statusText": "สับสน 2 เทิร์น"
+  }
+]

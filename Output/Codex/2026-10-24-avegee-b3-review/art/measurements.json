@@ -1,0 +1,32 @@
+[
+  {
+    "key": "banner",
+    "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-bd82e6fe-bd61-4b0d-837a-f12b736ef4f2.png",
+    "canvas": [
+      1024,
+      256
+    ],
+    "crop_transparent_padding": [
+      5,
+      70,
+      2167,
+      641
+    ],
+    "transparent_pixels": 188191,
+    "max_alpha": 255,
+    "center_720x128_alpha_max": 1,
+    "center_nontransparent_pixels": 5708,
+    "revision": "enlarged the central opening; invisible alpha noise at most 1/255 remains"
+  },
+  {
+    "key": "glow",
+    "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-94d2aa05-2e20-4d75-b972-bd5c06a204af.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "crop_transparent_padding": null,
+    "transparent_pixels": 31958,
+    "max_alpha": 251
+  }
+]

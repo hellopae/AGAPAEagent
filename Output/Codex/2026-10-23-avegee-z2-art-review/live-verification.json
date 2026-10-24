@@ -1,0 +1,70 @@
+{
+  "assets": [
+    {
+      "path": "img/theme-v4/town-judgment-asia-v3.webp",
+      "status": 200,
+      "length": "1226642"
+    },
+    {
+      "path": "img/town-district/house-front-one-asia-v3.webp",
+      "status": 200,
+      "length": "1709300"
+    },
+    {
+      "path": "img/town-district/house-right-one-asia-v3.webp",
+      "status": 200,
+      "length": "949020"
+    },
+    {
+      "path": "img/town-district/house-left-two-asia-v3.webp",
+      "status": 200,
+      "length": "841548"
+    },
+    {
+      "path": "img/town-district/house-right-two-asia-v3.webp",
+      "status": 200,
+      "length": "1144616"
+    },
+    {
+      "path": "img/theme-v4/town-lamp-asia-v3.webp",
+      "status": 200,
+      "length": "304812"
+    },
+    {
+      "path": "img/map-zone2/torch-pillar-v3.webp",
+      "status": 200,
+      "length": "66082"
+    },
+    {
+      "path": "img/map-v5/st-sala-asia-v3.webp",
+      "status": 200,
+      "length": "1310984"
+    },
+    {
+      "path": "img/theme-v4/st-tea-asia-v3.webp",
+      "status": 200,
+      "length": "154390"
+    },
+    {
+      "path": "img/map-v5/st-sawan-asia-v3.webp",
+      "status": 200,
+      "length": "1907768"
+    },
+    {
+      "path": "img/map-v5/st-krajok-asia-v3.webp",
+      "status": 200,
+      "length": "1215448"
+    },
+    {
+      "path": "img/theme-v4/town-tree-sakura-asia-v1.webp",
+      "status": 200,
+      "length": "1370660"
+    },
+    {
+      "path": "img/theme-v4/town-tree-willow-asia-v1.webp",
+      "status": 200,
+      "length": "2112824"
+    }
+  ],
+  "catalog_contains_all": true
+}

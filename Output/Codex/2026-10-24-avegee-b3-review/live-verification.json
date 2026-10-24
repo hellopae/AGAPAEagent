@@ -1,0 +1,39 @@
+{
+  "commit": "2ff80e135df74bbd972fecab81a96403f51664cf",
+  "pages": {
+    "status": "built",
+    "commit": "2ff80e135df74bbd972fecab81a96403f51664cf"
+  },
+  "checks": [
+    {
+      "path": "src/battle-result.js",
+      "status": 200,
+      "bytes": 3270,
+      "b3": null
+    },
+    {
+      "path": "src/battle-result.css",
+      "status": 200,
+      "bytes": 4837,
+      "b3": null
+    },
+    {
+      "path": "img/ui/result-banner-v1.webp",
+      "status": 200,
+      "bytes": 175954,
+      "b3": null
+    },
+    {
+      "path": "img/ui/result-glow-v1.webp",
+      "status": 200,
+      "bytes": 321220,
+      "b3": null
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 219827,
+      "b3": true
+    }
+  ]
+}
