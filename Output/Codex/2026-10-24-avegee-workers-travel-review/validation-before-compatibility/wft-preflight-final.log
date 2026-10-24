@@ -1,0 +1,96 @@
+(node:12955) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ยมทูตที่คุมการลงทัณฑ์นำวิญญาณไปตะราง วิญญาณตามติด ส่งเสร็จแล้วปล่อยให้เดินกลับเอง (2474.682343ms)
+✔ ยมทูตผู้คุมยังมีดวงอื่นในสถานี → ใช้ยมทูตว่างที่ใกล้จุดรับที่สุด · ผู้คุมไม่ถูกดึงไป (258.492533ms)
+✔ ไม่มียมทูตว่างเลย → วิญญาณเดินเข้าตะรางเองเหมือนเดิม (190.271698ms)
+✔ ย้ายโซน / เซฟ-โหลดระหว่างนำทาง ไม่ทิ้งยมทูตค้างสถานะ escort และวิญญาณไม่หาย (314.072529ms)
+
+lines over 60 chars after fill (worst case, long names): 1
+TALK_LINES.crew.dam.supervise[0] (62) ลุงมี มั่นคง อยู่ที่กระทะทองแดงนะครับ ผมแค่ยืนดู ไม่ได้ยืนหลับ
+(node:12956) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ who can be talked to: crew (not Nira), guard, workers, queue ranks 2+ and walking souls — not the head of the queue (9.875093ms)
+✔ crew states: first line once (and saved), then hungry / tired / escort / build / supervise / idle with real values (16.219151ms)
+✔ workers: group follows the real job/reason, gather lines follow the material (N2), no leftover tokens (1.581578ms)
+✔ queue + walking souls: group follows wait/back/queue length/destination; pronouns filled; monks skip the "back again" lines (N7) (2.061379ms)
+✔ Nira / merchant greetings come from Rae lines and need real state (1.716612ms)
+✔ TALK = ATMOSPHERE ONLY (D8): talking never changes any resource, state or the verdict inputs (4.920402ms)
+✔ lines: every one of Rae's 174 original lines and 2 canteen delivery lines fills with no leftover token, Thai-only voice words are resolved, and length stays readable (2.93816ms)
+✔ proximity: talk interactions sit above the head, use the 70 reach; click hit-test: workers are clickable and the NEAREST figure wins (3.867976ms)
+✔ wiring: ui.js uses 💬 for far taps (walks then opens), cancels on own movement, never pauses the game for talk (5.45811ms)
+(node:12957) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: real border-challenge victory resumes through trial, escort, punishment and returned NPC (402.273182ms)
+✔ asia: real border-challenge victory resumes through trial, escort, punishment and returned NPC (278.170882ms)
+✔ west: real border-challenge victory resumes through trial, escort, punishment and returned NPC (221.820009ms)
+✔ cyberhell: real border-challenge victory resumes through trial, escort, punishment and returned NPC (76.386442ms)
+✔ th: actual ruler victory unlocks guide only after court, then pays money/outfit once (223.94449ms)
+✔ asia: actual ruler victory unlocks guide only after court, then pays money/outfit once (56.627909ms)
+✔ west: actual ruler victory unlocks guide only after court, then pays money/outfit once (62.714134ms)
+✔ th: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (1671.013809ms)
+✔ asia: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (1435.606714ms)
+✔ west: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (985.172006ms)
+✔ cyberhell: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (225.073284ms)
+✔ full final gauntlet ends in ending01, forced-mirror ordinary court, actual punishment, then ending02 exactly once (66.512063ms)
+(node:12959) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: both regional gatherers physically collect and sell distinct materials with real wages (373.63675ms)
+✔ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3882.652242ms)
+✔ th: workers build and repair before Taan inspection; jobs remain exclusive (6852.310296ms)
+✔ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (167.679907ms)
+✔ asia: both regional gatherers physically collect and sell distinct materials with real wages (316.374797ms)
+✔ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3721.364103ms)
+✔ asia: workers build and repair before Taan inspection; jobs remain exclusive (6711.409254ms)
+✔ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (231.522701ms)
+✔ west: both regional gatherers physically collect and sell distinct materials with real wages (233.585039ms)
+✔ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3003.858183ms)
+✔ west: workers build and repair before Taan inspection; jobs remain exclusive (6124.451156ms)
+✔ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (205.332995ms)
+✔ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (73.39255ms)
+✔ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (355.855041ms)
+✔ cyberhell: workers build and repair before Taan inspection; jobs remain exclusive (238.334137ms)
+✔ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (40.229044ms)
+(node:12967) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (10.290934ms)
+✔ workers build without Taan and cannot open the building before physical inspection (296.847898ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (183.208926ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.181108ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.409105ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.676083ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.137566ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (159.030753ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (155.371711ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (1.988196ms)
+✖ a keeper collects successive judged souls one journey at a time and a cook can leave for an assigned case (188.941132ms)
+ℹ tests 52
+ℹ suites 0
+ℹ pass 51
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33285.06784
+
+✖ failing tests:
+
+test at tests/workers-canteen-travel.test.mjs:68:1
+✖ a keeper collects successive judged souls one journey at a time and a cook can leave for an assigned case (188.941132ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers-canteen-travel.test.mjs:70:76)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

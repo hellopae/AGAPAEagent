@@ -1,0 +1,1 @@
+Superseded diagnostic results only, not acceptance. Initial full run06c2685:1443 tests/18 failures; legacy no-worker courier behavior, release URL/cache pins and2new talk lines. Fixed onb27fdd0. Structured result and targeted logs retained; the initial full regular log was overwritten when the final run started. Cite validation-final only after its passed=true result is present.

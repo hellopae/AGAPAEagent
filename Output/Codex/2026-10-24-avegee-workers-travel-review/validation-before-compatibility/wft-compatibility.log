@@ -1,0 +1,147 @@
+(node:12620) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ยมทูตที่คุมการลงทัณฑ์นำวิญญาณไปตะราง วิญญาณตามติด ส่งเสร็จแล้วปล่อยให้เดินกลับเอง (1852.426002ms)
+✔ ยมทูตผู้คุมยังมีดวงอื่นในสถานี → ใช้ยมทูตว่างที่ใกล้จุดรับที่สุด · ผู้คุมไม่ถูกดึงไป (256.526191ms)
+✔ ไม่มียมทูตว่างเลย → วิญญาณเดินเข้าตะรางเองเหมือนเดิม (188.92915ms)
+✔ ย้ายโซน / เซฟ-โหลดระหว่างนำทาง ไม่ทิ้งยมทูตค้างสถานะ escort และวิญญาณไม่หาย (305.550597ms)
+(node:12621) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ final docket renders the normal illustrated interrogation arena with bound sprite and four command panels (15.803836ms)
+✔ mandatory mirror reveals selectable answers without auto-selecting or spending the ordinary inventory (47.46066ms)
+✔ saved partially selected final court resumes its revealed answers without queue or coin changes (11.40694ms)
+✔ docket names are escaped and the final UI does not mount for ordinary court cases (1.687669ms)
+✔ bound boss asset is shipped and all entry aliases resolve the new court and shared trial styles (15.362572ms)
+✔ Zone 1 skin resolves to exactly the files the hard-coded keys used to (3.46072ms)
+✔ Zone 1 station art: facade v2 only for the four listed stations, same box limits (0.493553ms)
+✔ disabled zones retain the old map system, no skin, no town (2.078204ms)
+✔ switching a skin on is data: `use` lists the finished groups, the rest falls back to Zone 1 (0.954099ms)
+✔ syncSceneZone puts a skin-enabled zone on the 3840x2560 city, same station sites as Zone 1, then restores (32.364221ms)
+✔ town layout per zone: overrides apply in place and Zone 1 comes back exactly (55.632836ms)
+✔ undrawn zones inherit Zone 1; Asia and west owner masks disable patches (43.036417ms)
+✔ light emitters: Zone 1 fire reader unchanged; ice / cyan / violet need their hue range (0.537971ms)
+✔ index.html: M2 modules are pinned in the import map and the touched ones carry the m2 cache-bust token (4.600653ms)
+(node:12623) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ O2 I: a piece on a cell left edge that continues the previous cell right edge is erased (1.673847ms)
+✔ O2 I: pieces that do not continue the neighbour, and clean sheets, are left alone (0.231109ms)
+✔ O2 B: Nira attack/heal rows opt out of the ally mirror; on a v1 sheet idle/hurt rows keep it (drawn facing left) — P9: v2 sheets face right in every row (0.44204ms)
+✔ O2 B: Yama own slash / flame charge sets the formation attack key (forward lunge) (2.195513ms)
+✔ O2 A/E: hurt poses wait for a covering cutscene card; Nira hurt row takes the same hold (1.434275ms)
+✔ O2 D: on a narrow stage the command column may sit under the squad at the left edge (1.803413ms)
+✔ O2 J: cutscene card is a clean rectangle and the push-in never scales below 1 (1.190104ms)
+✔ O2 K: Yama overlay canvases use a device-resolution backing store (0.400815ms)
+✔ O2: touched modules carry the -o2 cache-bust suffix (1.502349ms)
+(node:12624) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ praise only on five stars; the in-between and low stars are not praised (14.058505ms)
+✔ rebuke exactly where DAD.redsToCome counts red (score < 50), not by star count (6.290924ms)
+✔ rebuke tier follows the red streak 1 -> 2 -> 3, and a green verdict resets it (4.616122ms)
+✔ tier 1 drops the silent-look line that would contradict the rebuke; tiers 2 and 3 keep the original warning (4.684434ms)
+✔ rebuke scene shows the same stars the verdict got (30 points = 1 star, not 0) (2.454059ms)
+✔ a middle verdict on a soul without an id neither builds a scene nor throws (0.960161ms)
+✔ praise reports the reward the game already granted and changes no numbers (1.568433ms)
+✔ reward line is hidden when there is no reward text (0.209254ms)
+✔ save then load while the scene is pending: same scene, nothing granted again (13.89135ms)
+✔ queued: scene opens before the red warning / Yama fight and never over another dialog; skippable (2.125434ms)
+✔ lines: variables are filled, never leak braces, and unmet variables fall back to a plain line (0.814168ms)
+✔ art slots exist for every zone and kind (P9: all four zones have their own Codex praise/scold pair) (1.860262ms)
+✔ star badge is anchored: the .score badge scales around its own anchor and quiet verdicts skip it (2.790459ms)
+✔ small items: kan clue text says พลังเวท, not MP; cache-bust suffixes (1.683986ms)
+(node:12626) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ who can be talked to: crew (not Nira), guard, workers, queue ranks 2+ and walking souls — not the head of the queue (8.845398ms)
+✔ crew states: first line once (and saved), then hungry / tired / escort / build / supervise / idle with real values (14.011781ms)
+✔ workers: group follows the real job/reason, gather lines follow the material (N2), no leftover tokens (2.550772ms)
+✔ queue + walking souls: group follows wait/back/queue length/destination; pronouns filled; monks skip the "back again" lines (N7) (2.745114ms)
+✔ Nira / merchant greetings come from Rae lines and need real state (1.324813ms)
+✔ TALK = ATMOSPHERE ONLY (D8): talking never changes any resource, state or the verdict inputs (4.012351ms)
+✖ lines: every one of Rae's 174 original lines and 2 canteen delivery lines fills with no leftover token, Thai-only voice words are resolved, and length stays readable (4.023007ms)
+✔ proximity: talk interactions sit above the head, use the 70 reach; click hit-test: workers are clickable and the NEAREST figure wins (3.695692ms)
+✔ wiring: ui.js uses 💬 for far taps (walks then opens), cancels on own movement, never pauses the game for talk (3.101956ms)
+(node:12627) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P5b boss zone 3: cane cutscene points at the v2 art, other zones unchanged, file is 1375x768 (4.04469ms)
+✔ P5b pier: r3-c3 repair registered once, box covers the pier plus feather, file is a full 1024 chunk (2.792411ms)
+✔ P5b walk mask is untouched: pier floor strip still walkable, water beside it not (4.491622ms)
+✔ P5b worker sheet v2: 1280x3840, v1 stays for every zone and for thumbnails (P9: all four zones now have a v2 entry) (5.056189ms)
+✔ P5b worker rows follow what the worker is doing (v2) and stay the old 4-row logic on v1 (0.605016ms)
+✔ P5b drawWorker reads the 12-row v2 sheet by row and the 4-row v1 sheet for a zone without v2 (P9: only an unknown zone falls back now) (0.674125ms)
+(node:12629) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P6 cauldron: painted flames behind AND in front of the soul, sweat drawn, red tint via source-atop (never ctx.filter) (4.175384ms)
+✔ P6 cauldron: red flash pulses over time; reduced-motion = constant tint, static flames/sweat/embers (3.284077ms)
+✔ P6 cauldron: wired into the room, no per-frame ctx.filter, assets present, cache-bust suffixes (3.410081ms)
+✔ P6 minigame: every input counts a hit inside the green window (mouse, touch, portrait tap, tap anywhere, Space/Enter without focus) (18.479814ms)
+✔ P6 minigame: a press never vanishes — wait period gives feedback without a miss, the button is never disabled (1.901064ms)
+✔ P6 minigame: Space keydown + the keyup click it spawns count once; Close button keys are ignored; non-primary mouse buttons ignored (1.985211ms)
+✔ P6 minigame: judged at the moment of the press (event time), not the last painted frame; early/late is reported (3.123896ms)
+✔ P6 minigame: reward/difficulty numbers unchanged (window ±0.12 radius, 5 hits / 3 misses, 650 ms retry) (0.705269ms)
+✔ P6 minigame: cleanup — stop() removes every listener and pending flash timer (1.420099ms)
+(node:12630) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P8 TUTOR.fight hint numbers match BATTLE (mp cost, lose hp, lose order) and no map-pickup claim (2.95585ms)
+✔ P8 stale claims are gone from TUTOR / explainBar / openHelp / meThought (4.625827ms)
+✔ P8 ending text removed per owner decision (no "ทายาทบัลลังก์" / "ต่ำกว่า 25") (4.241821ms)
+✔ P8 krajok copy has no Kan and matches the mirror minigame (TH + EN) (0.540903ms)
+✔ P8 g5 final-attempt messages exist in TH and EN; krata-qte picks them via state.done (2.016771ms)
+✔ P8 lock badges go through i18n (rank in EN) (2.383325ms)
+✔ P8 index.html cache-bust carries -p8 on every touched file (1.78139ms)
+✔ P9 Nira: all four zones draw the v2 sheet (1280x1280, 4x4); v1 files stay on disk untouched (7.943483ms)
+✔ P9 Nira: v2 faces right in every pose so nothing is mirrored by the squad; a v1 sheet keeps the old rule (0.744141ms)
+✔ P9 cache-bust: nira-combat.js ends -p9 (0.364606ms)
+✔ P9 workers: asia/west/cyberhell draw the 12-row v2 sheet (1280x3840); th unchanged; v1 files stay (8.823938ms)
+✔ P9 workers: upright rows end within 2 % of the zone own v1 standing height; crouch/lean rows 6-8 are deliberately not scaled (0.558718ms)
+✔ P9 drawWorker: asia/west/cyberhell read v2 rows by what the worker does (repair=8, carry shards=11) and apply their scale about the foot baseline (1.153937ms)
+✔ P9 cache-bust: workers.js ends -p9 (0.466055ms)
+✔ P9 Trojan horse: cyberhell boss-frontier atlas reads the v2 file (same geometry, only attack f6/f7 redrawn), v1 stays; every other zone untouched (4.139285ms)
+✔ P9 manifest fetch carries a new cache key in all three readers, so returning players do not keep the old atlas path (3.718719ms)
+✔ P9 verdict scene: every zone draws its own praise/scold pair (1672x941 PNG); the scene kind `blame` points at the `scold` file; no placeholder left (19.597697ms)
+(node:12632) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: real border-challenge victory resumes through trial, escort, punishment and returned NPC (375.241541ms)
+✔ asia: real border-challenge victory resumes through trial, escort, punishment and returned NPC (244.440844ms)
+✔ west: real border-challenge victory resumes through trial, escort, punishment and returned NPC (210.850706ms)
+✔ cyberhell: real border-challenge victory resumes through trial, escort, punishment and returned NPC (74.095258ms)
+✔ th: actual ruler victory unlocks guide only after court, then pays money/outfit once (219.739875ms)
+✔ asia: actual ruler victory unlocks guide only after court, then pays money/outfit once (56.152333ms)
+✔ west: actual ruler victory unlocks guide only after court, then pays money/outfit once (67.895538ms)
+✔ th: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (2233.3423ms)
+✔ asia: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (1239.587594ms)
+✔ west: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (878.010091ms)
+✔ cyberhell: Kan opens mitigation, Boon completes an actual assignment and report survives acknowledgement/reload (205.654867ms)
+✔ full final gauntlet ends in ending01, forced-mirror ordinary court, actual punishment, then ending02 exactly once (54.071631ms)
+✔ skill atk: new sprites decode as 512x512 RGBA with transparent corners (182.961701ms)
+✔ skill atk: manifest, catalog and preload tier cover all four outfits (16.524054ms)
+✔ skill atk: real artUrl and heroAtk select the outfit pose and face right during a non-sword skill (21.199932ms)
+✔ skill atk: release imports share the preload owner and use a versioned image catalog (14.935999ms)
+ℹ tests 98
+ℹ suites 0
+ℹ pass 97
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7317.442094
+
+✖ failing tests:
+
+test at tests/p4-talk.test.mjs:108:1
+✖ lines: every one of Rae's 174 original lines and 2 canteen delivery lines fills with no leftover token, Thai-only voice words are resolved, and length stays readable (4.023007ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  176 !== 174
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/p4-talk.test.mjs:116:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 176,
+    expected: 174,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

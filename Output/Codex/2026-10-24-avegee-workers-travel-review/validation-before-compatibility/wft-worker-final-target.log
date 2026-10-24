@@ -1,0 +1,162 @@
+(node:7591) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: both regional gatherers physically collect and sell distinct materials with real wages (335.481587ms)
+✖ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (2096.767352ms)
+✔ th: workers build and repair before Taan inspection; jobs remain exclusive (6590.823802ms)
+✔ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (160.063392ms)
+✔ asia: both regional gatherers physically collect and sell distinct materials with real wages (268.547033ms)
+✖ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1994.710598ms)
+✔ asia: workers build and repair before Taan inspection; jobs remain exclusive (6152.136893ms)
+✔ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (204.213462ms)
+✔ west: both regional gatherers physically collect and sell distinct materials with real wages (219.70362ms)
+✖ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1582.35712ms)
+✔ west: workers build and repair before Taan inspection; jobs remain exclusive (5045.421697ms)
+✔ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (175.35497ms)
+✔ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (66.465135ms)
+✖ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (194.87568ms)
+✔ cyberhell: workers build and repair before Taan inspection; jobs remain exclusive (214.416447ms)
+✔ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (36.836437ms)
+(node:7592) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Nira hires multiple unique regional assistants, charges escalating cost and enforces capacity (8.603599ms)
+✔ hiring fails without funds or available Nira, without spending coins or IDs (1.551217ms)
+✔ old specialized worker modes migrate to logistics and no longer add a passive supervision bonus (1.86189ms)
+✔ repair helpers start independent work after physical arrival without a stationed builder (67.292551ms)
+✔ auto gatherer sells its cargo before taking newly available build work (237.665772ms)
+✔ auto gatherer sells its cargo before taking newly available repair work (184.414818ms)
+✔ auto priority changes never pull a worker away from its soul escort (25.886888ms)
+✔ assistants pick up and escort a real afterlife walk, release it once and keep souls out of the roster until arrival (24.324054ms)
+✔ stopping an escort or dismissing a worker preserves the soul journey and prevents duplicate assignment (21.74379ms)
+✔ active wages, food and fatigue pause bonuses; rest recovers workers without charging resources (26.162434ms)
+✔ workers and ledger survive normal game save/restore; old saves initialize empty and damaged data is bounded (10.478592ms)
+✔ worker collision and Nira management controls expose real hire, task, rest and dismissal actions (1.70651ms)
+✔ a saved worker escort settles exactly once on reload and releases the assistant (29.911933ms)
+✔ frame-local atlas guards remove edge bleed without clipping the character or held tool in all 64 source cells (7013.012806ms)
+✔ workers escort legitimate gate deliveries, retaining the soul until exact-once arrival (25.757341ms)
+✔ saving a gate worker delivery settles once on reload without stranding the assistant (28.104857ms)
+✔ workers escort legitimate queue deliveries, retaining the soul until exact-once arrival (24.041111ms)
+✔ saving a queue worker delivery settles once on reload without stranding the assistant (27.664943ms)
+✔ non-prison deliveries preserve the legacy courier when no worker is available without borrowing a keeper (51.088953ms)
+✔ real prison release dispatches workers to heaven or back to the queue instead of the fallback courier (190.529642ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 32
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25604.560704
+
+✖ failing tests:
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (2096.767352ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   kind: 'gather',
+  +   material: 'dabShards',
+  +   phase: 'sell',
+  +   worked: 1680
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { kind: 'gather', material: 'dabShards', phase: 'sell', worked: 1680 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1994.710598ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   kind: 'gather',
+  +   material: 'dabShards',
+  +   phase: 'sell',
+  +   worked: 0
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { kind: 'gather', material: 'dabShards', phase: 'sell', worked: 0 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1582.35712ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   kind: 'gather',
+  +   material: 'dabShards',
+  +   phase: 'sell',
+  +   worked: 1320
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { kind: 'gather', material: 'dabShards', phase: 'sell', worked: 1320 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (194.87568ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   kind: 'gather',
+  +   material: 'dabShards',
+  +   phase: 'sell',
+  +   worked: 840
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { kind: 'gather', material: 'dabShards', phase: 'sell', worked: 840 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

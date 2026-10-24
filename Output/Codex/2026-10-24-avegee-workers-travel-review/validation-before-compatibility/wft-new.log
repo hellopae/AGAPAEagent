@@ -1,0 +1,19 @@
+(node:6863) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (8.984699ms)
+✔ workers build without Taan and cannot open the building before physical inspection (298.236148ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (178.202782ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.368133ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.40418ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.524481ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.041639ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (147.010481ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (145.509972ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1002.947928

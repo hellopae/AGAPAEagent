@@ -1,0 +1,9 @@
+# WFT — workers, canteen and on-map travel
+Owner PAE directly authorized 24Oct2026 in Codex chat. Claude paused; no other workers/agents. Isolated branch codex/2026-10-24-workers-travel, basea720ec5. Direct user instructions are acceptance criteria; no additional approval gate inferred from worker template.
+
+1. Hiring new workers unlocks only after victory in the invading frontier-demon event (frontierBreach). Existing hired workers retained in old saves.
+2. Simplify visible duties to help/transport+construction, gather/sell, food delivery; rest separately. Help handles dock→court and post-punishment→prison→heaven, crew keep judgment→punishment transfer. Workers can build/repair without Taan present, progress caps at inspection until Taan physically visits; if no hired workers, Taan builds/repairs as before. Old mode assignments migrate safely.
+3. Gathering visits built ngiw/dab, collects finite cargo and sells at merchant; no gathering at nonexistent plots.
+4. Add a canteen staffed by Dam/Plerng, workers collect cooked food and physically distribute to crew/guard/workers; don't require repeated manual rice-ball feeding. Reuse existing supply economy, no unsolicited costs. Staff exclusive with other duties. Workers sit to recover morale/stamina.
+5. Replace the cropped modal boat scene with actual-map staged departure/arrival: Yama+Nira at pier, boat approaches, board/jump, Kan arrives and says exact owner line, sail right; destination boat enters from left and lands at pier. Border departure also receives Kan handoff. Respect travel permissions, skip/reduced motion/cancel, no duplicated zone change, no paid fare.
+6. No map masks/new routes activated. No reset/cleanup/deletion. Meaningful subsystem/save migration tests, full suite zero-red, browser desktop/mobile/reduced and save persistence. Self-check not Claude/owner acceptance. New art exact prompts/raw stored outside game.

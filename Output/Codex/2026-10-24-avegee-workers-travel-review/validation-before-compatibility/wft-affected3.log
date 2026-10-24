@@ -1,0 +1,104 @@
+(node:7403) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary frontier reward keeps its frontier backdrop and selected office team (13.558934ms)
+✔ accepted guide journey starts with three actual combatants and preserves outside-map reward scene (37.714085ms)
+✔ enemy patrols travel smoothly along the road without snapping back to an anchor (56.708529ms)
+✖ worker office explains empty supplies and offers actual paid or inventory refill paths (6.474211ms)
+(node:7404) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ early trial preserves the worker's pickup position before station delivery (301.825697ms)
+✔ early trial preserves the worker's lead position before station delivery (199.693534ms)
+(node:7405) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ unlock table: tea Lv1 -> dab Lv2 -> sawan Lv3 -> ngiw/lan Lv4 -> lokan/krajok Lv5, every plan entry is a real buildable station (3.191028ms)
+✔ g.build refuses a locked station without charging, and accepts it the moment the level is reached (6.734363ms)
+✔ old saves: buildings already standing stay usable even when the level is below their unlock level (10.458985ms)
+✔ recommended build follows tea -> dab -> sawan, never recommends a locked station, and starts with krata in a new zone (2.830244ms)
+✔ level-up that unlocks a station logs it once (1.481117ms)
+✔ sleep needs a finished tea pavilion, not a bought bed (1.031308ms)
+✔ named cases never surface when their worst sin has no place to go yet (locked stations stay out of the queue) (68.736836ms)
+✔ hiring order: dam -> helper -> plerng -> guard -> boon -> kan, recommendation moves to the next un-hired entry (3.691708ms)
+✔ profile page has no management shortcut; the pause menu still reaches the management drawer (11.327125ms)
+
+lines over 60 chars after fill (worst case, long names): 1
+TALK_LINES.crew.dam.supervise[0] (62) ลุงมี มั่นคง อยู่ที่กระทะทองแดงนะครับ ผมแค่ยืนดู ไม่ได้ยืนหลับ
+(node:7407) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ who can be talked to: crew (not Nira), guard, workers, queue ranks 2+ and walking souls — not the head of the queue (8.366719ms)
+✔ crew states: first line once (and saved), then hungry / tired / escort / build / supervise / idle with real values (10.187388ms)
+✔ workers: group follows the real job/reason, gather lines follow the material (N2), no leftover tokens (1.879004ms)
+✔ queue + walking souls: group follows wait/back/queue length/destination; pronouns filled; monks skip the "back again" lines (N7) (1.57013ms)
+✔ Nira / merchant greetings come from Rae lines and need real state (1.317336ms)
+✔ TALK = ATMOSPHERE ONLY (D8): talking never changes any resource, state or the verdict inputs (3.741092ms)
+✔ lines: every one of Rae's 174 lines fills with no leftover token, Thai-only voice words are resolved, and length stays readable (2.48338ms)
+✔ proximity: talk interactions sit above the head, use the 70 reach; click hit-test: workers are clickable and the NEAREST figure wins (2.98324ms)
+✔ wiring: ui.js uses 💬 for far taps (walks then opens), cancels on own movement, never pauses the game for talk (3.00816ms)
+(node:7408) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ worker delivers harbour arrivals immediately available for trial, then hands the judged soul to its keeper (270.454757ms)
+✔ court ferry waits for an open court and leaves a soul at the harbour when no worker is free (93.147306ms)
+✔ saving an inbound or escorted ferry case never restores the soul on the dais stairs (109.525481ms)
+✔ gatherers physically visit the resource site and merchant before income is paid (190.953781ms)
+✔ build helpers only accelerate a real Taan construction after physical arrival (22.295323ms)
+✔ each farewell grants next-zone outfit once, with no money replay during old-save migration (0.831381ms)
+✔ renderer preload retains the decoded image and retries a broken browser response (29.030446ms)
+✔ delivered court souls remain ashore across reopening and save restore (95.150886ms)
+(node:7410) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing intake does not strand already disembarked souls waiting for a newly hired worker (161.112302ms)
+✔ closed intake still holds boats that have not disembarked (1.643473ms)
+✔ a saved dungeon route does not freeze workers when the town is running (161.211715ms)
+✔ empty central supplies hold dock pickup, then a paid refill resumes the same hired worker without rehiring or reloading (188.006145ms)
+(node:7411) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (8.859228ms)
+✔ workers build without Taan and cannot open the building before physical inspection (293.133306ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (172.283165ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.072062ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.525989ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.409344ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (0.97471ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (140.235132ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (134.983013ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 44
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1801.422297
+
+✖ failing tests:
+
+test at tests/border-owner-flow.test.mjs:29:1
+✖ worker office explains empty supplies and offers actual paid or inventory refill paths (6.474211ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /รอวิญญาณที่ท่าเรือหรือปลายทาง/. Input:
+  
+  '<section class="worker-office"><h3>อสูรผู้ช่วยประจำโซน 1/6</h3>\n' +
+    '    <p class="hint">ปลดล็อกหลังชนะปีศาจบุกชายแดน · ช่วยรับวิญญาณจากท่าเรือ ส่งจากสถานที่ลงทัณฑ์ไปคุกและประตูสวรรค์ · สร้าง/ซ่อมได้ก่อน แล้วรอทัณฑ์ตรวจรับ · เก็บกิ่งงิ้ว/เศษดาบจากสถานีที่สร้างแล้วไปขาย · รับอาหารไปแจก</p>\n' +
+    '    <p class="hint">ค่าจ้าง 2 เบี้ยกรรม / 30 วาระที่ทำงาน · ใช้เสบียง 0.03 / วาระ · กำลังใจหมดแล้วเดินไปนั่งพักอัตโนมัติ · อยู่ประจำโซนเดิม</p>\n' +
+    '    <div class="worker-supplies"><b>เสบียงกลาง 22 ห่อ</b>\n' +
+    '      <p class="hint">เสบียงกลางใช้เลี้ยงคนงาน แยกจากข้าวปั้นในกระเป๋าที่ให้ตัวละครกินโดยตรง · โรงอาหารให้ดำและเพลิงทำอาหารเมื่อว่าง คนงานรับอาหารไปแจกและเติมเสบียงให้โดยอัตโนมัติ</p>\n' +
+    '      \n' +
+    '      <button class="sm gold" data-worker-buy-food >ซื้อเสบียง 10 ห่อ · 10 เบี้ยกรรม</button>\n' +
+    '      \n' +
+    '    </div>\n' +
+    '    <div class="worker-supplies"><b>🍲 โรงอาหาร · ดำและเพลิงเป็นพ่อครัวเมื่อว่าง</b><p class="hint">อาหารพร้อมแจก 0/6 ชุด · แจกแล้ว 0 ครั้ง · คนงานนำไปให้ยมทูต ยักษ์เขียว และคนงานถึงตัว ไม่ใช้ข้าวปั้นในกระเป๋า</p></div>\n' +
+    '    <button class="gold" data-hire-worker  title="">จ้างผู้ช่วย 240 เบี้ยกรรม</button>\n' +
+    `    <div class="market-grid"><article class="shop-card worker-card" style="grid-template-columns:72px minmax(0,1fr) auto;gap:12px"><span role="img" aria-label="อสูรผู้ช่วย 1" style="display:block;width:72px;height:72px;flex-shrink:0;background-image:url('img/workers/worker-th-sheet-v1.webp');background-size:400% 400%;background-position:33.333333% 0;clip-path:inset(0% 0% 0% 1.5625%)"></span><span><b>อสูรผู้ช่วย 1</b><small>รอวิญญาณหรืองานสร้าง/ซ่อม</small><small>กำลัง 100/100 · กำลังใจ 100/100</small><label>หน้าที่ <select style="display:block;width:100%;max-width:220px;margin-top:4px;background:#281d22;color:inherit;border:1px solid #715638;border-radius:6px;padding:5px" data-worker-mode="worker:1"><option value="auto" selected>ช่วยขนส่งและสร้าง/ซ่อม</option><option value="gather" >เก็บวัสดุขาย</option><option value="food" >รับอาหารไปแจก</option><option value="rest" >นั่งพัก</option></select></label></span><button class="sm" data-dismiss-worker="worker:1">เลิกจ้าง</button></article></div><small>รายได้จากวัสดุ 0 เบี้ยกรรม · ส่งวิญญาณ 0 ครั้ง</small></section>`
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/border-owner-flow.test.mjs:33:66)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `<section class="worker-office"><h3>อสูรผู้ช่วยประจำโซน 1/6</h3>\n    <p class="hint">ปลดล็อกหลังชนะปีศาจบุกชายแดน · ช่วยรับวิญญาณจากท่าเรือ ส่งจากสถานที่ลงทัณฑ์ไปคุกและประตูสวรรค์ · สร้าง/ซ่อมได้ก่อน แล้วรอทัณฑ์ตรวจรับ · เก็บกิ่งงิ้ว/เศษดาบจากสถานีที่สร้างแล้วไปขาย · รับอาหารไปแจก</p>\n    <p class="hint">ค่าจ้าง 2 เบี้ยกรรม / 30 วาระที่ทำงาน · ใช้เสบียง 0.03 / วาระ · กำลังใจหมดแล้วเดินไปนั่งพักอัตโนมัติ · อยู่ประจำโซนเดิม</p>\n    <div class="worker-supplies"><b>เสบียงกลาง 22 ห่อ</b>\n      <p class="hint">เสบียงกลางใช้เลี้ยงคนงาน แยกจากข้าวปั้นในกระเป๋าที่ให้ตัวละครกินโดยตรง · โรงอาหารให้ดำและเพลิงทำอาหารเมื่อว่าง คนงานรับอาหารไปแจกและเติมเสบียงให้โดยอัตโนมัติ</p>\n      \n      <button class="sm gold" data-worker-buy-food >ซื้อเสบียง 10 ห่อ · 10 เบี้ยกรรม</button>\n      \n    </div>\n    <div class="worker-supplies"><b>🍲 โรงอาหาร · ดำและเพลิงเป็นพ่อครัวเมื่อว่าง</b><p class="hint">อาหารพร้อมแจก 0/6 ชุด · แจกแล้ว 0 ครั้ง · คนงานนำไปให้ยมทูต ยักษ์เขียว และคนงานถึงตัว ไม่ใช้ข้าวปั้นในกระเป๋า</p></div>\n    <button class="gold" data-hire-worker  title="">จ้างผู้ช่วย 240 เบี้ยกรรม</button>\n    <div class="market-grid"><article class="shop-card worker-card" style="grid-template-columns:72px minmax(0,1fr) auto;gap:12px"><span role="img" aria-label="อสูรผู้ช่วย 1" style="display:block;width:72px;height:72px;flex-shrink:0;background-image:url('img/workers/worker-th-sheet-v1.webp');background-size:400% 400%;background-position:33.333333% 0;clip-path:inset(0% 0% 0% 1.5625%)"></span><span><b>อสูรผู้ช่วย 1</b><small>รอวิญญาณหรืองานสร้าง/ซ่อม</small><small>กำลัง 100/100 · กำลังใจ 100/100</small><label>หน้าที่ <select style="display:block;width:100%;max-width:220px;margin-top:4px;background:#281d22;color:inherit;border:1px solid #715638;border-radius:6px;padding:5px" data-worker-mode="worker:1"><option value="auto" selected>ช่วยขนส่งและสร้าง/ซ่อม</option><option value="gather" >เก็บวัสดุขาย</option><option value="food" >รับอาหารไปแจก</option><option value="rest" >นั่งพัก</option></select></label></span><button class="sm" data-dismiss-worker="worker:1">เลิกจ้าง</button></article></div><small>รายได้จากวัสดุ 0 เบี้ยกรรม · ส่งวิญญาณ 0 ครั้ง</small></section>`,
+    expected: /รอวิญญาณที่ท่าเรือหรือปลายทาง/,
+    operator: 'match',
+    diff: 'simple'
+  }

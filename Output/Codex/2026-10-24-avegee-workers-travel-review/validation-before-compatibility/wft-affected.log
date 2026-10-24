@@ -1,0 +1,774 @@
+(node:6569) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary frontier reward keeps its frontier backdrop and selected office team (15.091517ms)
+✔ accepted guide journey starts with three actual combatants and preserves outside-map reward scene (34.060805ms)
+✔ enemy patrols travel smoothly along the road without snapping back to an anchor (46.916721ms)
+✖ worker office explains empty supplies and offers actual paid or inventory refill paths (5.714441ms)
+(node:6570) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ early trial preserves the worker's pickup position before station delivery (7.746131ms)
+✖ early trial preserves the worker's lead position before station delivery (1.457283ms)
+(node:6571) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ unlock table: tea Lv1 -> dab Lv2 -> sawan Lv3 -> ngiw/lan Lv4 -> lokan/krajok Lv5, every plan entry is a real buildable station (2.625554ms)
+✔ g.build refuses a locked station without charging, and accepts it the moment the level is reached (8.057884ms)
+✔ old saves: buildings already standing stay usable even when the level is below their unlock level (12.219007ms)
+✔ recommended build follows tea -> dab -> sawan, never recommends a locked station, and starts with krata in a new zone (2.856592ms)
+✔ level-up that unlocks a station logs it once (1.631371ms)
+✔ sleep needs a finished tea pavilion, not a bought bed (1.417737ms)
+✔ named cases never surface when their worst sin has no place to go yet (locked stations stay out of the queue) (68.307798ms)
+✖ hiring order: dam -> helper -> plerng -> guard -> boon -> kan, recommendation moves to the next un-hired entry (13.205281ms)
+✔ profile page has no management shortcut; the pause menu still reaches the management drawer (7.364406ms)
+
+lines over 60 chars after fill (worst case, long names): 1
+TALK_LINES.crew.dam.supervise[0] (62) ลุงมี มั่นคง อยู่ที่กระทะทองแดงนะครับ ผมแค่ยืนดู ไม่ได้ยืนหลับ
+(node:6573) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ who can be talked to: crew (not Nira), guard, workers, queue ranks 2+ and walking souls — not the head of the queue (14.944722ms)
+✔ crew states: first line once (and saved), then hungry / tired / escort / build / supervise / idle with real values (11.344817ms)
+✖ workers: group follows the real job/reason, gather lines follow the material (N2), no leftover tokens (1.846292ms)
+✔ queue + walking souls: group follows wait/back/queue length/destination; pronouns filled; monks skip the "back again" lines (N7) (2.088525ms)
+✔ Nira / merchant greetings come from Rae lines and need real state (1.180642ms)
+✔ TALK = ATMOSPHERE ONLY (D8): talking never changes any resource, state or the verdict inputs (3.823168ms)
+✔ lines: every one of Rae's 174 lines fills with no leftover token, Thai-only voice words are resolved, and length stays readable (2.941774ms)
+✖ proximity: talk interactions sit above the head, use the 70 reach; click hit-test: workers are clickable and the NEAREST figure wins (1.502738ms)
+✔ wiring: ui.js uses 💬 for far taps (walks then opens), cancels on own movement, never pauses the game for talk (3.641814ms)
+(node:6574) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ worker delivers harbour arrivals immediately available for trial, then hands the judged soul to its keeper (7.768612ms)
+✖ court ferry waits for an open court and leaves a soul at the harbour when no worker is free (1.430767ms)
+✖ saving an inbound or escorted ferry case never restores the soul on the dais stairs (1.588424ms)
+✖ gatherers physically visit the resource site and merchant before income is paid (1.211977ms)
+✖ build helpers only accelerate a real Taan construction after physical arrival (1.296429ms)
+✔ each farewell grants next-zone outfit once, with no money replay during old-save migration (1.419938ms)
+✔ renderer preload retains the decoded image and retries a broken browser response (41.683551ms)
+✖ delivered court souls remain ashore across reopening and save restore (1.186398ms)
+(node:6575) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ closing intake does not strand already disembarked souls waiting for a newly hired worker (7.472059ms)
+✖ closed intake still holds boats that have not disembarked (1.712924ms)
+✖ a saved dungeon route does not freeze workers when the town is running (1.623128ms)
+✖ empty central supplies hold dock pickup, then a paid refill resumes the same hired worker without rehiring or reloading (1.352475ms)
+(node:6577) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ th: both regional gatherers physically collect and sell distinct materials with real wages (7.842731ms)
+✖ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.591879ms)
+✖ th: construction, repair and supervision helpers require arrival and keep exclusive jobs (1.251069ms)
+✖ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (1.620263ms)
+✖ asia: both regional gatherers physically collect and sell distinct materials with real wages (1.315977ms)
+✖ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.073455ms)
+✖ asia: construction, repair and supervision helpers require arrival and keep exclusive jobs (1.11474ms)
+✖ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (1.077501ms)
+✖ west: both regional gatherers physically collect and sell distinct materials with real wages (2.593046ms)
+✖ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.020832ms)
+✖ west: construction, repair and supervision helpers require arrival and keep exclusive jobs (0.751919ms)
+✖ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (0.716895ms)
+✖ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (0.769619ms)
+✖ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (0.698172ms)
+✖ cyberhell: construction, repair and supervision helpers require arrival and keep exclusive jobs (0.719095ms)
+✖ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (0.708584ms)
+(node:6578) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ Nira hires multiple unique regional assistants, charges escalating cost and enforces capacity (7.755558ms)
+✖ hiring fails without funds or available Nira, without spending coins or IDs (1.73866ms)
+✖ supervisors walk to the site and increase real station progress, with at most two per station (1.347712ms)
+✖ repair helpers accelerate the actual countdown only after Taan arrives and never start a repair alone (1.174115ms)
+✖ auto gatherer sells its cargo before taking newly available build work (1.703575ms)
+✖ auto gatherer sells its cargo before taking newly available repair work (1.169936ms)
+✖ auto gatherer sells its cargo before taking newly available supervise work (1.272207ms)
+✖ auto priority changes never pull a worker away from its soul escort (1.185014ms)
+✖ assistants pick up and escort a real afterlife walk, release it once and keep souls out of the roster until arrival (1.127833ms)
+✖ stopping an escort or dismissing a worker preserves the soul journey and prevents duplicate assignment (2.045762ms)
+✖ active wages, food and fatigue pause bonuses; rest recovers workers without charging resources (0.83103ms)
+✖ workers and ledger survive normal game save/restore; old saves initialize empty and damaged data is bounded (0.811363ms)
+✖ worker collision and Nira management controls expose real hire, task, rest and dismissal actions (1.117633ms)
+✖ a saved worker escort settles exactly once on reload and releases the assistant (0.858434ms)
+✖ frame-local atlas guards remove edge bleed without clipping the character or held tool in all 64 source cells (7822.194932ms)
+✖ workers escort legitimate gate deliveries, retaining the soul until exact-once arrival (0.881431ms)
+✖ saving a gate worker delivery settles once on reload without stranding the assistant (0.865734ms)
+✖ workers escort legitimate queue deliveries, retaining the soul until exact-once arrival (0.718336ms)
+✖ saving a queue worker delivery settles once on reload without stranding the assistant (0.778254ms)
+✖ non-prison deliveries preserve the legacy courier when no worker is available without borrowing a keeper (0.861086ms)
+✖ real prison release dispatches workers to heaven or back to the queue instead of the fallback courier (0.9266ms)
+ℹ tests 73
+ℹ suites 0
+ℹ pass 19
+ℹ fail 54
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8782.345279
+
+✖ failing tests:
+
+test at tests/border-owner-flow.test.mjs:29:1
+✖ worker office explains empty supplies and offers actual paid or inventory refill paths (5.714441ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /รอเสบียง/. Input:
+  
+  '<section class="worker-office"><h3>อสูรผู้ช่วยประจำโซน 0/6 <small class="hire-rank">ลำดับจ้างที่ 2</small></h3>\n' +
+    '    <p class="hint">ปลดล็อกหลังชนะปีศาจบุกชายแดน · ช่วยรับวิญญาณจากท่าเรือ ส่งจากสถานที่ลงทัณฑ์ไปคุกและประตูสวรรค์ · สร้าง/ซ่อมได้ก่อน แล้วรอทัณฑ์ตรวจรับ · เก็บกิ่งงิ้ว/เศษดาบจากสถานีที่สร้างแล้วไปขาย · รับอาหารไปแจก</p>\n' +
+    '    <p class="hint">ค่าจ้าง 2 เบี้ยกรรม / 30 วาระที่ทำงาน · ใช้เสบียง 0.03 / วาระ · กำลังใจหมดแล้วเดินไปนั่งพักอัตโนมัติ · อยู่ประจำโซนเดิม</p>\n' +
+    '    <div class="worker-supplies"><b>เสบียงกลาง 0 ห่อ</b>\n' +
+    '      <p class="hint">เสบียงกลางใช้เลี้ยงคนงาน แยกจากข้าวปั้นในกระเป๋าที่ให้ตัวละครกินโดยตรง · โรงอาหารให้ดำและเพลิงทำอาหารเมื่อว่าง คนงานรับอาหารไปแจกและเติมเสบียงให้โดยอัตโนมัติ</p>\n' +
+    '      <p role="status" style="color:var(--warning)">เสบียงกลางหมด — คนงานหยุดงานและยังไปรับวิญญาณไม่ได้ เติมเสบียงแล้วทำงานต่ออัตโนมัติ</p>\n' +
+    '      <button class="sm gold" data-worker-buy-food >ซื้อเสบียง 10 ห่อ · 10 เบี้ยกรรม</button>\n' +
+    '      <button class="sm" data-worker-share-food>ให้นิราแจกข้าวปั้น 1 ชิ้น · เสบียง +12</button>\n' +
+    '    </div>\n' +
+    '    \n' +
+    '    <button class="gold" data-hire-worker disabled title="ชนะปีศาจที่บุกจากชายแดนก่อน จึงจ้างคนงานได้">จ้างผู้ช่วย 180 เบี้ยกรรม</button>\n' +
+    '    <small>ชนะปีศาจที่บุกจากชายแดนก่อน จึงจ้างคนงานได้</small><div class="market-grid"></div><small>รายได้จากวัสดุ 0 เบี้ยกรรม · ส่งวิญญาณ 0 ครั้ง</small></section>'
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/border-owner-flow.test.mjs:31:161)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<section class="worker-office"><h3>อสูรผู้ช่วยประจำโซน 0/6 <small class="hire-rank">ลำดับจ้างที่ 2</small></h3>\n    <p class="hint">ปลดล็อกหลังชนะปีศาจบุกชายแดน · ช่วยรับวิญญาณจากท่าเรือ ส่งจากสถานที่ลงทัณฑ์ไปคุกและประตูสวรรค์ · สร้าง/ซ่อมได้ก่อน แล้วรอทัณฑ์ตรวจรับ · เก็บกิ่งงิ้ว/เศษดาบจากสถานีที่สร้างแล้วไปขาย · รับอาหารไปแจก</p>\n    <p class="hint">ค่าจ้าง 2 เบี้ยกรรม / 30 วาระที่ทำงาน · ใช้เสบียง 0.03 / วาระ · กำลังใจหมดแล้วเดินไปนั่งพักอัตโนมัติ · อยู่ประจำโซนเดิม</p>\n    <div class="worker-supplies"><b>เสบียงกลาง 0 ห่อ</b>\n      <p class="hint">เสบียงกลางใช้เลี้ยงคนงาน แยกจากข้าวปั้นในกระเป๋าที่ให้ตัวละครกินโดยตรง · โรงอาหารให้ดำและเพลิงทำอาหารเมื่อว่าง คนงานรับอาหารไปแจกและเติมเสบียงให้โดยอัตโนมัติ</p>\n      <p role="status" style="color:var(--warning)">เสบียงกลางหมด — คนงานหยุดงานและยังไปรับวิญญาณไม่ได้ เติมเสบียงแล้วทำงานต่ออัตโนมัติ</p>\n      <button class="sm gold" data-worker-buy-food >ซื้อเสบียง 10 ห่อ · 10 เบี้ยกรรม</button>\n      <button class="sm" data-worker-share-food>ให้นิราแจกข้าวปั้น 1 ชิ้น · เสบียง +12</button>\n    </div>\n    \n    <button class="gold" data-hire-worker disabled title="ชนะปีศาจที่บุกจากชายแดนก่อน จึงจ้างคนงานได้">จ้างผู้ช่วย 180 เบี้ยกรรม</button>\n    <small>ชนะปีศาจที่บุกจากชายแดนก่อน จึงจ้างคนงานได้</small><div class="market-grid"></div><small>รายได้จากวัสดุ 0 เบี้ยกรรม · ส่งวิญญาณ 0 ครั้ง</small></section>',
+    expected: /รอเสบียง/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/court-worker-cancel.test.mjs:12:38
+✖ early trial preserves the worker's pickup position before station delivery (7.746131ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/court-worker-cancel.test.mjs:8:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/court-worker-cancel.test.mjs:13:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/court-worker-cancel.test.mjs:12:38
+✖ early trial preserves the worker's lead position before station delivery (1.457283ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/court-worker-cancel.test.mjs:8:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/court-worker-cancel.test.mjs:13:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/p1-early-game.test.mjs:105:1
+✖ hiring order: dam -> helper -> plerng -> guard -> boon -> kan, recommendation moves to the next un-hired entry (13.205281ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(g.hireWorker())
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/p1-early-game.test.mjs:114:33)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/p4-talk.test.mjs:18:1
+✖ who can be talked to: crew (not Nira), guard, workers, queue ranks 2+ and walking souls — not the head of the queue (14.944722ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(ids.some(i=>i.startsWith('worker:')))
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/p4-talk.test.mjs:26:45)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/p4-talk.test.mjs:51:1
+✖ workers: group follows the real job/reason, gather lines follow the material (N2), no leftover tokens (1.846292ms)
+  TypeError: Cannot create property 'mode' on boolean 'false'
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/p4-talk.test.mjs:55:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/p4-talk.test.mjs:121:1
+✖ proximity: talk interactions sit above the head, use the 70 reach; click hit-test: workers are clickable and the NEAREST figure wins (1.502738ms)
+  TypeError: Cannot create property 'x' on boolean 'false'
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/p4-talk.test.mjs:129:6)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/release-20261019.test.mjs:9:1
+✖ worker delivers harbour arrivals immediately available for trial, then hands the judged soul to its keeper (7.768612ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:10:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/release-20261019.test.mjs:22:1
+✖ court ferry waits for an open court and leaves a soul at the harbour when no worker is free (1.430767ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:23:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/release-20261019.test.mjs:34:1
+✖ saving an inbound or escorted ferry case never restores the soul on the dais stairs (1.588424ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:36:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/release-20261019.test.mjs:45:1
+✖ gatherers physically visit the resource site and merchant before income is paid (1.211977ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/release-20261019.test.mjs:51:1
+✖ build helpers only accelerate a real Taan construction after physical arrival (1.296429ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:52:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/release-20261019.test.mjs:74:1
+✖ delivered court souls remain ashore across reopening and save restore (1.186398ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at setup (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:8:69)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/release-20261019.test.mjs:76:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-dock-resume.test.mjs:6:1
+✖ closing intake does not strand already disembarked souls waiting for a newly hired worker (7.472059ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:5:68)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:7:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/worker-dock-resume.test.mjs:12:1
+✖ closed intake still holds boats that have not disembarked (1.712924ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:5:68)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:13:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/worker-dock-resume.test.mjs:16:1
+✖ a saved dungeon route does not freeze workers when the town is running (1.623128ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:5:68)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:17:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-dock-resume.test.mjs:23:1
+✖ empty central supplies hold dock pickup, then a paid refill resumes the same hired worker without rehiring or reloading (1.352475ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:5:68)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:40:3
+✖ th: both regional gatherers physically collect and sell distinct materials with real wages (7.842731ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:41:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.591879ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:58:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/worker-regional-acceptance.test.mjs:86:3
+✖ th: construction, repair and supervision helpers require arrival and keep exclusive jobs (1.251069ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:87:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:114:3
+✖ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (1.620263ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:115:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:40:3
+✖ asia: both regional gatherers physically collect and sell distinct materials with real wages (1.315977ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:41:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.073455ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:58:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:86:3
+✖ asia: construction, repair and supervision helpers require arrival and keep exclusive jobs (1.11474ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:87:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:114:3
+✖ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (1.077501ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:115:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:40:3
+✖ west: both regional gatherers physically collect and sell distinct materials with real wages (2.593046ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:41:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (1.020832ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:58:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:86:3
+✖ west: construction, repair and supervision helpers require arrival and keep exclusive jobs (0.751919ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:87:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:114:3
+✖ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (0.716895ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:115:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:40:3
+✖ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (0.769619ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:41:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:57:3
+✖ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (0.698172ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:58:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:86:3
+✖ cyberhell: construction, repair and supervision helpers require arrival and keep exclusive jobs (0.719095ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:87:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/worker-regional-acceptance.test.mjs:114:3
+✖ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (0.708584ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at fixture (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:16:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-regional-acceptance.test.mjs:115:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:27:1
+✖ Nira hires multiple unique regional assistants, charges escalating cost and enforces capacity (7.755558ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:28:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests/workers.test.mjs:39:1
+✖ hiring fails without funds or available Nira, without spending coins or IDs (1.73866ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:40:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/workers.test.mjs:45:1
+✖ supervisors walk to the site and increase real station progress, with at most two per station (1.347712ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:46:18)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:59:1
+✖ repair helpers accelerate the actual countdown only after Taan arrives and never start a repair alone (1.174115ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:60:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:69:50
+✖ auto gatherer sells its cargo before taking newly available build work (1.703575ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:70:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:69:50
+✖ auto gatherer sells its cargo before taking newly available repair work (1.169936ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:70:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:69:50
+✖ auto gatherer sells its cargo before taking newly available supervise work (1.272207ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:70:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:89:1
+✖ auto priority changes never pull a worker away from its soul escort (1.185014ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:90:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:102:1
+✖ assistants pick up and escort a real afterlife walk, release it once and keep souls out of the roster until arrival (1.127833ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:103:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:115:1
+✖ stopping an escort or dismissing a worker preserves the soul journey and prevents duplicate assignment (2.045762ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:116:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:124:1
+✖ active wages, food and fatigue pause bonuses; rest recovers workers without charging resources (0.83103ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:125:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:132:1
+✖ workers and ledger survive normal game save/restore; old saves initialize empty and damaged data is bounded (0.811363ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:133:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:143:1
+✖ worker collision and Nira management controls expose real hire, task, rest and dismissal actions (1.117633ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:144:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:151:1
+✖ a saved worker escort settles exactly once on reload and releases the assistant (0.858434ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:152:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:167:1
+✖ frame-local atlas guards remove edge bleed without clipping the character or held tool in all 64 source cells (7822.194932ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:192:11)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:198:3
+✖ workers escort legitimate gate deliveries, retaining the soul until exact-once arrival (0.881431ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:199:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:213:3
+✖ saving a gate worker delivery settles once on reload without stranding the assistant (0.865734ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:214:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:198:3
+✖ workers escort legitimate queue deliveries, retaining the soul until exact-once arrival (0.718336ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:199:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:213:3
+✖ saving a queue worker delivery settles once on reload without stranding the assistant (0.778254ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:214:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:226:1
+✖ non-prison deliveries preserve the legacy courier when no worker is available without borrowing a keeper (0.861086ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:228:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests/workers.test.mjs:236:1
+✖ real prison release dispatches workers to heaven or back to the queue instead of the fallback courier (0.9266ms)
+  TypeError: Cannot set properties of undefined (setting 'frontierBreach')
+      at game (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:12:54)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/workers.test.mjs:238:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)

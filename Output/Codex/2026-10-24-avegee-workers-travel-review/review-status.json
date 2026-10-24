@@ -1,0 +1,20 @@
+{
+  "review": "merged 335efec12b1ea6b5edffe6eb884637c96fd2e236",
+  "implementation": "b27fdd0",
+  "branch": "codex/2026-10-24-workers-travel",
+  "tests": {
+    "tests": 1444,
+    "pass": 1444,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "syntax": 129,
+  "test_files": 213,
+  "pages": "built 335efec12b1ea6b5edffe6eb884637c96fd2e236",
+  "owner_visual_acceptance": "pending",
+  "next_queue": "team HUD, keeper submenu/Kan placement, mitigating-truth relief tears",
+  "cleanup": "worktree retained per handoff",
+  "live_files_match": 20
+}

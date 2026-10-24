@@ -14,3 +14,5 @@
 - 2026-10-24 Z3-WEST codex/west-sprites-20261024 → merged 3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3 | tests1434/1434; syntax127;16sprites,28owner tree feet, strict owner floor153600/153600 cells,10station routes; browser1280/390; Pages built 3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3; live23files match; worktree retained
 
 - 2026-10-24 Z4-ART codex/cyberhell-art-20261024 → merged a720ec548f70adfadd03e248415c4c1d0775225b | tests1434/1434; syntax127;38newfiles image-only (20chunks+preview/report+16sprites), alpha/base/canvas QA; browser1280/390; cyberhell and borders remain disabled pending owner masks; keep worktree; Pages built exact a720ec548f70adfadd03e248415c4c1d0775225b; live40files byte-match
+
+- 2026-10-24 WFT codex/2026-10-24-workers-travel → merged 335efec12b1ea6b5edffe6eb884637c96fd2e236 | tests1444/1444; syntax129;213files once; inspected worker construction, canteen/physical meal delivery, manual empty-food rest latch, keeper couriers, on-map boat/hand-off; browser1280/390; Pages/live evidence in review folder; worktree retained; next HUD/interrogation queue saved separately

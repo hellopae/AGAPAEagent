@@ -1,0 +1,130 @@
+{
+  "commit": "335efec12b1ea6b5edffe6eb884637c96fd2e236",
+  "pages": {
+    "status": "built",
+    "commit": "335efec12b1ea6b5edffe6eb884637c96fd2e236"
+  },
+  "all_match": true,
+  "files": [
+    {
+      "file": "img/workers/canteen-v1.webp",
+      "status": 200,
+      "bytes": 146822,
+      "sha256": "16005152b346197922baf2f8773aa8ee508e16417dad3f8eafe0af5029ba4903"
+    },
+    {
+      "file": "img/workers/worker-asia-rest-v1.webp",
+      "status": 200,
+      "bytes": 28020,
+      "sha256": "7adf26323bd2aa478451267d5ca0702b1d694ad60ab320484ebfa8dd8133fafc"
+    },
+    {
+      "file": "img/workers/worker-cyberhell-rest-v1.webp",
+      "status": 200,
+      "bytes": 25968,
+      "sha256": "881fdd46871a8884d282c97ce096d88099a74e87ce8580156a8659428fb57532"
+    },
+    {
+      "file": "img/workers/worker-th-rest-v1.webp",
+      "status": 200,
+      "bytes": 28830,
+      "sha256": "1d23328cbb2dac7a2a6ceafaac9bce8e0c470177fba201ba7280bc4156c235ba"
+    },
+    {
+      "file": "img/workers/worker-west-rest-v1.webp",
+      "status": 200,
+      "bytes": 27220,
+      "sha256": "44a0221453c89262262a6b543b3ef54523d53733b5dbff28587f83f8727de03a"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 220597,
+      "sha256": "a71cf7c8ae097364493c62bbc02ff32cc8495260e336fc7dd0a2e5d78ca27397"
+    },
+    {
+      "file": "src/canteen.js",
+      "status": 200,
+      "bytes": 2902,
+      "sha256": "86793eb22a5ecb111308dd3d90e74b5018ebb62085be2210a9b78a4d1f3e2249"
+    },
+    {
+      "file": "src/game.js",
+      "status": 200,
+      "bytes": 383721,
+      "sha256": "ec89efea03a27de506ad92b4f289156189c2f3b71d76bdea49fb190ac9b3818d"
+    },
+    {
+      "file": "src/map-travel.js",
+      "status": 200,
+      "bytes": 4776,
+      "sha256": "3fdf002b3671f98ae9872f222c0881d3d7a6f36ae33c0436e55fd667b95549ec"
+    },
+    {
+      "file": "src/preload.js",
+      "status": 200,
+      "bytes": 12235,
+      "sha256": "011c3f34a214719d67b1c230d82b9158f36d8dec5e1eb453a27f8144485e3879"
+    },
+    {
+      "file": "src/scene.js",
+      "status": 200,
+      "bytes": 67946,
+      "sha256": "b27546024b7d0d4ab7a275a6346dcf70ddee5d1d49be3c36ab178bdc35c60fd5"
+    },
+    {
+      "file": "src/talk-lines.js",
+      "status": 200,
+      "bytes": 30854,
+      "sha256": "a82b0b0dd8a6a1fe6179b55f517ad5cfa0e6378faa29b827b4a922477b964779"
+    },
+    {
+      "file": "src/talk.js",
+      "status": 200,
+      "bytes": 11975,
+      "sha256": "7eae9cbbcb987150a013c6ee47a74d8d161c5c12062816fa8ff78f7d4905037c"
+    },
+    {
+      "file": "src/ui.js",
+      "status": 200,
+      "bytes": 562295,
+      "sha256": "85c327a1525163b3331a40b2ca10a24cb0e48f703cf6f8dcd4b9a24fe2dd675b"
+    },
+    {
+      "file": "src/unlocks.js",
+      "status": 200,
+      "bytes": 7242,
+      "sha256": "8a8d8b251dd377118275962e328fdc01144c65a7264b57907a2e11ddb5009c98"
+    },
+    {
+      "file": "src/worker-ui.js",
+      "status": 200,
+      "bytes": 9064,
+      "sha256": "046c94a1079d6b132b24f2393ff99c3f95b3576bb1648f3577e227707218c979"
+    },
+    {
+      "file": "src/workers.js",
+      "status": 200,
+      "bytes": 23887,
+      "sha256": "5a9c43d85199aa95e289a349ae361ae8b04caec2bb548b41bbe0558d9860bf35"
+    },
+    {
+      "file": "src/zone-travel.js",
+      "status": 200,
+      "bytes": 10708,
+      "sha256": "7a385a20c9819737034fcf9fbcc885ea9572e1334bba50ec87aafd9b8296f773"
+    },
+    {
+      "file": "src/zone-skin.js",
+      "status": 200,
+      "bytes": 11326,
+      "sha256": "92fc07577032050a413aa5966939fe2c5392885d05596305551beda199d338d5"
+    },
+    {
+      "file": "src/route-geometry.js",
+      "status": 200,
+      "bytes": 5302,
+      "sha256": "4e58a77b3cb3a4896da48191db51d51a26b5972008d5d0a21ebf27030fc9300c"
+    }
+  ]
+}

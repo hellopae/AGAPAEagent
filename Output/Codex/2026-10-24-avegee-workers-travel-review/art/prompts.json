@@ -1,0 +1,27 @@
+[
+  {
+    "key": "canteen",
+    "prompt": "Create a production-ready transparent isolated isometric 2.5D fantasy game sprite for AVEGEE: one modest communal canteen, an open-sided charcoal timber and muted bronze cooking pavilion, wide low roof, two visible hearths with pots, rice steamer and serving counter with bowls, one side bench. No people, no writing, no religious symbols, no ground island or landscape. Crisp hand-painted game art with pixel-art-friendly edges, warm upper-left light, deep soft interior shading, three-quarter elevated view. Width to height about 1.4, full structure uncropped with generous transparent border, base centered. Restrained common materials fit Thai, Asian, snowy Gothic and cyber fantasy towns. Actual transparent background, not checkerboard.",
+    "path": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-ea823a56-2a05-4a12-be26-41372fd6bb02.png"
+  },
+  {
+    "key": "rest-th",
+    "prompt": "Edit the reference character into ONE full-body seated resting pose game sprite. Preserve this exact th worker's identity, skin, outfit, horns, hat and 2.5D pixel game-art style. Sit on a small simple low stool, leaning slightly forward with arms resting on knees, tired but content, facing right. No tools held, no other character, no text, no scene, no shadow rectangle, no traces of neighbouring frames. Complete uncropped character and stool, generous transparent margins, grounded bottom center. Actual alpha transparency. This is a compact sprite that will render about 48px tall.",
+    "path": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-18a85bc9-92d1-4f01-9d32-a6b0c88a5e28.png"
+  },
+  {
+    "key": "rest-asia",
+    "prompt": "Edit the reference character into ONE full-body seated resting pose game sprite. Preserve this exact asia worker's identity, skin, outfit, horns, hat and 2.5D pixel game-art style. Sit on a small simple low stool, leaning slightly forward with arms resting on knees, tired but content, facing right. No tools held, no other character, no text, no scene, no shadow rectangle, no traces of neighbouring frames. Complete uncropped character and stool, generous transparent margins, grounded bottom center. Actual alpha transparency. This is a compact sprite that will render about 48px tall.",
+    "path": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-2bb0abc0-0b8d-42c2-b50f-fcc2a07a0e0a.png"
+  },
+  {
+    "key": "rest-west",
+    "prompt": "Edit the reference character into ONE full-body seated resting pose game sprite. Preserve this exact west worker's identity, skin, outfit, horns, hat and 2.5D pixel game-art style. Sit on a small simple low stool, leaning slightly forward with arms resting on knees, tired but content, facing right. No tools held, no other character, no text, no scene, no shadow rectangle, no traces of neighbouring frames. Complete uncropped character and stool, generous transparent margins, grounded bottom center. Actual alpha transparency. This is a compact sprite that will render about 48px tall.",
+    "path": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-7e9be5e9-30b1-46a9-b9a5-0ec7a2a6359f.png"
+  },
+  {
+    "key": "rest-cyberhell",
+    "prompt": "Edit the reference character into ONE full-body seated resting pose game sprite. Preserve this exact cyberhell worker's identity, skin, outfit, horns, hat and 2.5D pixel game-art style. Sit on a small simple low stool, leaning slightly forward with arms resting on knees, tired but content, facing right. No tools held, no other character, no text, no scene, no shadow rectangle, no traces of neighbouring frames. Complete uncropped character and stool, generous transparent margins, grounded bottom center. Actual alpha transparency. This is a compact sprite that will render about 48px tall.",
+    "path": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-13385f24-b6ce-44bb-bc51-7ee44a4a4eaa.png"
+  }
+]

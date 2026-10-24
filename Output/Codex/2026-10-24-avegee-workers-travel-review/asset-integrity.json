@@ -1,0 +1,62 @@
+[
+  {
+    "file": "img/workers/canteen-v1.webp",
+    "size": [
+      768,
+      640
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "16005152b346197922baf2f8773aa8ee508e16417dad3f8eafe0af5029ba4903"
+  },
+  {
+    "file": "img/workers/worker-west-rest-v1.webp",
+    "size": [
+      320,
+      320
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "44a0221453c89262262a6b543b3ef54523d53733b5dbff28587f83f8727de03a"
+  },
+  {
+    "file": "img/workers/worker-cyberhell-rest-v1.webp",
+    "size": [
+      320,
+      320
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "881fdd46871a8884d282c97ce096d88099a74e87ce8580156a8659428fb57532"
+  },
+  {
+    "file": "img/workers/worker-th-rest-v1.webp",
+    "size": [
+      320,
+      320
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "1d23328cbb2dac7a2a6ceafaac9bce8e0c470177fba201ba7280bc4156c235ba"
+  },
+  {
+    "file": "img/workers/worker-asia-rest-v1.webp",
+    "size": [
+      320,
+      320
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "sha256": "7adf26323bd2aa478451267d5ca0702b1d694ad60ab320484ebfa8dd8133fafc"
+  }
+]

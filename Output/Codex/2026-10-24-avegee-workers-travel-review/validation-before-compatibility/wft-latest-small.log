@@ -1,0 +1,26 @@
+(node:9832) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing intake does not strand already disembarked souls waiting for a newly hired worker (220.35253ms)
+✔ closed intake still holds boats that have not disembarked (1.976146ms)
+✔ a saved dungeon route does not freeze workers when the town is running (200.692798ms)
+✔ empty central supplies hold dock pickup; a paid refill plus player rice gift resumes the same worker (354.879118ms)
+(node:9833) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (11.541939ms)
+✔ workers build without Taan and cannot open the building before physical inspection (356.959016ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (224.224119ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.726452ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.776362ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.99047ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.457628ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (184.329248ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (181.64207ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (2.367356ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1250.830718

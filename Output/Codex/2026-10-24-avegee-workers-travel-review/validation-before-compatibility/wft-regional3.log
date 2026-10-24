@@ -1,0 +1,43 @@
+(node:8063) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary frontier reward keeps its frontier backdrop and selected office team (14.342071ms)
+✔ accepted guide journey starts with three actual combatants and preserves outside-map reward scene (28.067193ms)
+✔ enemy patrols travel smoothly along the road without snapping back to an anchor (37.921852ms)
+✔ worker office explains empty supplies and offers actual paid or inventory refill paths (4.215614ms)
+(node:8064) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: both regional gatherers physically collect and sell distinct materials with real wages (326.415707ms)
+✔ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3566.127666ms)
+✔ th: workers build and repair before Taan inspection; jobs remain exclusive (6658.268532ms)
+✔ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (156.96456ms)
+✔ asia: both regional gatherers physically collect and sell distinct materials with real wages (282.813077ms)
+✔ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3439.439647ms)
+✔ asia: workers build and repair before Taan inspection; jobs remain exclusive (6614.188107ms)
+✔ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (230.666394ms)
+✔ west: both regional gatherers physically collect and sell distinct materials with real wages (356.018839ms)
+✔ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (2857.217239ms)
+✔ west: workers build and repair before Taan inspection; jobs remain exclusive (5749.373556ms)
+✔ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (183.857573ms)
+✔ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (67.995079ms)
+✔ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (358.032866ms)
+✔ cyberhell: workers build and repair before Taan inspection; jobs remain exclusive (227.941117ms)
+✔ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (37.846883ms)
+(node:8066) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (8.950894ms)
+✔ workers build without Taan and cannot open the building before physical inspection (287.158905ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (172.004053ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.155559ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.448002ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.703822ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.032332ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (143.416325ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (142.206972ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31435.457011

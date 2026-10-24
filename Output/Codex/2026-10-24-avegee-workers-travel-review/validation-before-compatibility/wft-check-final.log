@@ -1,0 +1,28 @@
+(node:11394) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closed court finishes punishment and afterlife walk without advancing punitive clocks (382.914482ms)
+✔ an escort already dispatched keeps delivering souls while court is closed (269.063017ms)
+✔ closed court admits a returning case without spawning a new soul (2.204759ms)
+✔ hired guard crosses the city waterfront route and defeats a mob without player combat (1168.661494ms)
+✔ without guard player combat remains available and mobs spawn on reachable lower shore in every zone (553.622903ms)
+✔ older saves without court status restore with an open court (9.581898ms)
+(node:11395) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (13.037232ms)
+✔ workers build without Taan and cannot open the building before physical inspection (391.607562ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (246.002777ms)
+✔ when no worker is hired Taan still builds and repairs normally (2.296253ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (2.754849ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (2.136208ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.255268ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (199.44594ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (200.884887ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (3.348241ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2708.4096

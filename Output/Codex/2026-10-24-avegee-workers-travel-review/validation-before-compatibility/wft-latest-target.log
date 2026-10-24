@@ -1,0 +1,101 @@
+(node:9588) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary frontier reward keeps its frontier backdrop and selected office team (23.820337ms)
+✔ accepted guide journey starts with three actual combatants and preserves outside-map reward scene (61.172803ms)
+✔ enemy patrols travel smoothly along the road without snapping back to an anchor (81.633747ms)
+✔ worker office explains empty supplies and offers actual paid or inventory refill paths (11.697282ms)
+(node:9589) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing intake does not strand already disembarked souls waiting for a newly hired worker (335.358188ms)
+✔ closed intake still holds boats that have not disembarked (2.818426ms)
+✔ a saved dungeon route does not freeze workers when the town is running (351.854911ms)
+✖ empty central supplies hold dock pickup; a paid refill plus player rice gift resumes the same worker (498.164286ms)
+(node:9590) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: both regional gatherers physically collect and sell distinct materials with real wages (666.835246ms)
+✔ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (7539.456417ms)
+✔ th: workers build and repair before Taan inspection; jobs remain exclusive (12161.164525ms)
+✔ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (276.713524ms)
+✔ asia: both regional gatherers physically collect and sell distinct materials with real wages (494.249408ms)
+✔ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (6210.172498ms)
+✔ asia: workers build and repair before Taan inspection; jobs remain exclusive (11099.880546ms)
+✔ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (338.069101ms)
+✔ west: both regional gatherers physically collect and sell distinct materials with real wages (351.227933ms)
+✔ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (4645.621203ms)
+✔ west: workers build and repair before Taan inspection; jobs remain exclusive (8009.898607ms)
+✔ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (271.181362ms)
+✔ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (98.719927ms)
+✔ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (496.172264ms)
+✔ cyberhell: workers build and repair before Taan inspection; jobs remain exclusive (338.046444ms)
+✔ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (56.100049ms)
+(node:9592) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (16.847366ms)
+✔ workers build without Taan and cannot open the building before physical inspection (531.401922ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (338.485993ms)
+✔ when no worker is hired Taan still builds and repairs normally (3.891367ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (4.465668ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (3.086158ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (2.28755ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (298.108204ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (310.40089ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (3.556231ms)
+(node:9594) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Nira hires multiple unique regional assistants, charges escalating cost and enforces capacity (18.755774ms)
+✔ hiring fails without funds or available Nira, without spending coins or IDs (2.545002ms)
+✔ old specialized worker modes migrate to logistics and no longer add a passive supervision bonus (3.379283ms)
+✔ repair helpers start independent work after physical arrival without a stationed builder (118.263943ms)
+✔ auto gatherer sells its cargo before taking newly available build work (475.300605ms)
+✔ auto gatherer sells its cargo before taking newly available repair work (354.653566ms)
+✔ auto priority changes never pull a worker away from its soul escort (52.322591ms)
+✔ assistants pick up and escort a real afterlife walk, release it once and keep souls out of the roster until arrival (48.928646ms)
+✔ stopping an escort or dismissing a worker preserves the soul journey and prevents duplicate assignment (40.636494ms)
+✔ active wages, food and fatigue pause bonuses; rest recovers workers without charging resources (45.288938ms)
+✔ workers and ledger survive normal game save/restore; old saves initialize empty and damaged data is bounded (25.761201ms)
+✔ worker collision and Nira management controls expose real hire, task, rest and dismissal actions (3.259305ms)
+✔ a saved worker escort settles exactly once on reload and releases the assistant (61.369814ms)
+✔ frame-local atlas guards remove edge bleed without clipping the character or held tool in all 64 source cells (13310.686606ms)
+✔ workers escort legitimate gate deliveries, retaining the soul until exact-once arrival (43.470672ms)
+✔ saving a gate worker delivery settles once on reload without stranding the assistant (49.88823ms)
+✔ workers escort legitimate queue deliveries, retaining the soul until exact-once arrival (43.740101ms)
+✔ saving a queue worker delivery settles once on reload without stranding the assistant (48.968817ms)
+✔ non-prison deliveries preserve the legacy courier when no worker is available without borrowing a keeper (88.257424ms)
+✔ real prison release dispatches workers to heaven or back to the queue instead of the fallback courier (340.505566ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 53
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53526.538715
+
+✖ failing tests:
+
+test at tests/worker-dock-resume.test.mjs:24:1
+✖ empty central supplies hold dock pickup; a paid refill plus player rice gift resumes the same worker (498.164286ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   1986.7220555038111,
+  +   1007.8753751164252
+  -   1794,
+  -   1158
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/workers-travel-20261024/tests/worker-dock-resume.test.mjs:30:51)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 1986.7220555038111, 1007.8753751164252 ],
+    expected: [ 1794, 1158 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

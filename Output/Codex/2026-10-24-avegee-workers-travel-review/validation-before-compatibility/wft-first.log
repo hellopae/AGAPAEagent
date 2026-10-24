@@ -1,0 +1,30 @@
+(node:6371) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ dam builds while taan is on duty, escorting, or building; busy crew cannot take another job (12.84345ms)
+✔ two simultaneous builds preserve their owners on reload and release each worker independently (73.245179ms)
+✔ dam repairs independently while taan builds, keeping ownership through walking, reload and completion (222.782435ms)
+✔ repair never interrupts an escort and still requires enemies to be cleared (1.011242ms)
+✔ loading a dam-owned repair does not assign taan to the same site (2.595188ms)
+✔ two repair jobs keep separate owners when leaving and returning to a branch (80.812508ms)
+✔ a builder stopped 45 units from lan approaches instead of roaming forever, with a mob present (77.188904ms)
+(node:6372) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ physical border, checkpoint and city exit guards are enforced by game methods (11.696266ms)
+✔ real dungeon victories unlock arrival then dock interaction, keeping local cities on boat return (134.618264ms)
+✔ dungeon encounter cleanup leaves ordinary city mobs intact and saves checkpoint position (9.025068ms)
+✔ boss victory opens only adjacent dungeon and cannot skip straight into next city (2.137065ms)
+✔ loss retries current checkpoint; unrelated and duplicate battle results do not advance (0.296611ms)
+✔ first arrival requires route completion, then separate harbour activation unlocks boat return (1.09076ms)
+✔ restore preserves cleared checkpoints but resets in-flight combat for a safe retry (0.40317ms)
+✔ legacy migration preserves actually visited towns without unlocking boss-only destinations (0.215983ms)
+✔ invalid saved route indices/evidence and unknown ports cannot unlock travel (0.241019ms)
+✔ busy states prevent travel, dock activation, leaving and new encounters (0.230572ms)
+✔ each subsequent boss gates its own route and full route chain visits all cities (0.355565ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 818.270511

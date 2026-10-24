@@ -1,0 +1,11 @@
+{
+  "status": " {\"zone\":\"th\",\"player\":[2118,934],\"cooks\":[[\"dam\",2085.6534891198885,814.5267090218904,2096,804],[\"plerng\",2115.6376449558293,792.8041590138225,2140,804]],\"workers\":[{\"mode\":\"auto\",\"job\":\"gather\",\"meal\":false,\"sitting\":false},{\"mode\":\"gather\",\"job\":\"gather\",\"sitting\":false},{\"mode\":\"food\",\"meal\":false,\"sitting\":false},{\"mode\":\"rest\",\"sitting\":true}],\"kitchen\":{\"meals\":6,\"cookedMs\":2331,\"served\":7},\"errors\":[]}",
+  "logs": [],
+  "mobile": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dialogWidth": 364,
+    "dialogScrollWidth": 364,
+    "travelPanelWidth": 358.796875
+  }
+}
