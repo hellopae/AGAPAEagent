@@ -1,0 +1,37 @@
+(node:29868) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: no hired worker, Nira physically collects a docked soul and leads it onto the court path (2480.219546ms)
+✔ asia: no hired worker, Nira physically collects a docked soul and leads it onto the court path (145.538967ms)
+✔ west: no hired worker, Nira physically collects a docked soul and leads it onto the court path (115.410417ms)
+✔ cyberhell: no hired worker, Nira physically collects a docked soul and leads it onto the court path (83.419727ms)
+✔ the opening game has only Nira and Taan and ferry arrival dispatches Nira without unlocking hiring or consuming supplies (146.67896ms)
+✔ Nira handles one arrival at a time; busy/resting Nira leaves the next passenger safely docked (183.813355ms)
+✔ early trial cancels Nira's pickup at her visible position, without teleporting her to the destination (143.963857ms)
+✔ early trial cancels Nira's lead at her visible position, without teleporting her to the destination (150.82349ms)
+✔ hiring a worker keeps Nira current delivery intact and routes the next arrival to the worker (193.268249ms)
+✔ hired workers resting or out of food do not gain a Nira shortcut around their availability rules (59.403783ms)
+✔ restore of Nira pickup retries from the dock once, without a stuck reader or duplicate soul (256.875148ms)
+(node:29869) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ worker delivers harbour arrivals immediately available for trial, then hands the judged soul to its keeper (272.464094ms)
+✔ court ferry waits for an open court and leaves a soul at the harbour when no worker is free (93.180745ms)
+✔ saving an inbound or escorted ferry case never restores the soul on the dais stairs (104.965847ms)
+✔ gatherers physically visit the resource site and merchant before income is paid (185.159243ms)
+✔ build helpers only accelerate a real Taan construction after physical arrival (22.423476ms)
+✔ each farewell grants next-zone outfit once, with no money replay during old-save migration (0.817535ms)
+✔ renderer preload retains the decoded image and retries a broken browser response (38.749904ms)
+✔ delivered court souls remain ashore across reopening and save restore (195.749533ms)
+(node:29882) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing intake with busy Nira does not strand docked souls when a worker is hired (158.056763ms)
+✔ closed intake still holds boats that have not disembarked (1.820512ms)
+✔ a saved dungeon route does not freeze workers when the town is running (187.809306ms)
+✔ empty central supplies hold dock pickup; a paid refill plus player rice gift resumes the same worker (281.758073ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4200.095157
