@@ -1,0 +1,36 @@
+(node:12561) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P8 TUTOR.fight hint numbers match BATTLE (mp cost, lose hp, lose order) and no map-pickup claim (6.517495ms)
+✔ P8 stale claims are gone from TUTOR / explainBar / openHelp / meThought (7.360193ms)
+✔ P8 ending text removed per owner decision (no "ทายาทบัลลังก์" / "ต่ำกว่า 25") (7.522775ms)
+✔ P8 krajok copy has no Kan and matches the mirror minigame (TH + EN) (0.974047ms)
+✔ P8 g5 final-attempt messages exist in TH and EN; krata-qte picks them via state.done (2.371192ms)
+✔ P8 lock badges go through i18n (rank in EN) (3.855313ms)
+✔ P8 index.html cache-bust carries -p8 on every touched file (3.687656ms)
+(node:12562) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ TEAM current-zone actors have real vitals and duties; no other zone roster or hiring control leaks into quick manage (19.465573ms)
+✔ TEAM starvation stays visible after kitchen refills; manual rice clears only selected worker and uses inventory once (3.70928ms)
+✔ TEAM crew rice follows inventory API and cannot feed a full actor or a reader (3.996038ms)
+✔ TEAM tea accepts a healthy hungry keeper, walks before recovery and restores hunger only after sitting (4907.974862ms)
+✔ TEAM mitigating press is relief from structured negative deed, ordinary incrimination stays fear and justice weights stay unchanged (3.749829ms)
+(node:12563) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29H: every sin targets the plea that actually reveals the primary deed, rather than the first denial (31.424672ms)
+✔ 29H: all authored targets are proved by pressing the indicated issue (69.955483ms)
+✔ 29H: used target, no matching issue, pure souls and exhausted attempts do not consume roar (22.31036ms)
+✔ 29H: hypnosis renders the station on the wheel with no force/keeper reveal, even before construction (9.674246ms)
+✔ 29H: mirror renders station, force and keeper, and marks the primary issue before construction too (10.074384ms)
+✔ 29H: desktop advice bounds stay in the stage and viewport at both required sizes (CSS geometry) (0.735641ms)
+(node:12564) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29E: fresh zone shows TH/EN next steps; build and manual jail hold are real actions (371.403893ms)
+✔ 29E: event alert has one close action, no pause/X; close dismisses and start still works (56.554601ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5451.899277

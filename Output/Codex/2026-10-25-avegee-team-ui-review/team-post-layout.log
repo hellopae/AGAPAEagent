@@ -1,0 +1,37 @@
+(node:22703) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P2 lock: every named case and every generated soul gets a trait the moment it enters court (38.707953ms)
+✔ P2 spread: all three colours are common, for named cases and for generated souls (180.725952ms)
+✔ P2 rule: priority is resist → concealment (fake merit / secret / heavy hidden deed) → hard denial → accepting (0.531339ms)
+✔ P2 lock survives the whole interrogation, a save/load and a returned verdict (23.654396ms)
+✔ P2 old saves: a soul without a locked colour is locked from its case data on load, and never changes again (8.104843ms)
+✔ P2 keeper plan and recommendation use the locked colour, not what the player has since uncovered (2.677313ms)
+✔ P2 Kan icon appears only once Kan is hired and keeps the original reasons for a disabled state (3.09393ms)
+✔ P2 camera: a correct press closes in on the spirit with a fright beat; a wrong press never moves the camera (4.696235ms)
+✔ P2 lesson: three pages, shown once per save after the first-warrant lesson (6.472521ms)
+✔ P2 handbook: trait page + keeper-team page exist, carry five keeper profile slots, and match the code (1.669192ms)
+✔ P2 case 15: the false-charity merit and its boast claim replace the old chanting merit; Kan can expose it (2.721219ms)
+✔ camera smoothing keeps the world in bounds at every edge, including resize (5.256838ms)
+✔ camera movement is independent of frame rate and reduced motion snaps to target (1.986536ms)
+✔ camera offsets round-trip pointer coordinates and floating button positions (0.475848ms)
+✔ frontier weather is bounded and reduced motion keeps only static light (1.667416ms)
+(node:22705) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29H: every sin targets the plea that actually reveals the primary deed, rather than the first denial (19.754711ms)
+✔ 29H: all authored targets are proved by pressing the indicated issue (49.0378ms)
+✔ 29H: used target, no matching issue, pure souls and exhausted attempts do not consume roar (13.94435ms)
+✔ 29H: hypnosis renders the station on the wheel with no force/keeper reveal, even before construction (6.520504ms)
+✔ 29H: mirror renders station, force and keeper, and marks the primary issue before construction too (6.647912ms)
+✔ 29H: desktop advice bounds stay in the stage and viewport at both required sizes (CSS geometry) (0.364314ms)
+(node:22706) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29E: fresh zone shows TH/EN next steps; build and manual jail hold are real actions (179.79703ms)
+✔ 29E: event alert has one close action, no pause/X; close dismisses and start still works (30.085188ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 628.858188

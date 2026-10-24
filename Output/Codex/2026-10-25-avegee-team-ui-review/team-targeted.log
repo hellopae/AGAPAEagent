@@ -1,0 +1,62 @@
+(node:86429) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G1 all four item families restore only the specified resource, round and cap by maximum (41.352962ms)
+✔ G1 rice balls and medicine feed/heal real crew and Guard at Nira; hunger and stock remain correct (10.808463ms)
+✔ G1 battle recipient commands heal crew/Guard, also feed hunger, never give MP to crew (31.93483ms)
+✔ G1 Guard rest requires built pavilion, HP below full and available actor (1325.868869ms)
+✔ G1 travel, save/load, 120-second rest, inactivity, full HP and original post survive real serialization (958.756684ms)
+✔ G1 old saves load without rest fields; offline completion and dormant branch rest remain valid (837.160678ms)
+✔ G1 translated controls, bag targets, HP/progress widgets and animated pavilion use real shared state (30.553085ms)
+(node:86431) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G4 item ids: zone variants are gone; every zone shelf sells the same four ids (9.967891ms)
+✔ G4 names: Thai and English names are identical across zones (4 names), from one source (6.800569ms)
+✔ G4 old saves: zone-variant ids merge into the new items, counts add up, nothing lost (inventory, map drops, codex) (81.592467ms)
+✔ G4 Large items: restore 100%, zone 2+ shelf only, ~1.8x price (3.432347ms)
+✔ G4 Large items: buy in zone 2+, refused in the Thai zone, usable by Yama / reaper / Guard / in battle (46.310396ms)
+✔ G4 tea rest for a regular reaper: needs pavilion + HP < 100 + standing; travel, 60 s rest, save/load, full HP, back to post (2361.53786ms)
+✔ G4 tea rest: Guard keeps working through the same method (restGuard alias) and the dialog lists regular reapers too (853.824789ms)
+✔ G4 enemy atk: cyber breach and the final-line waves hit harder than before G4 (2.373468ms)
+✔ G4 weapon cooldown: drain triggers, then rests 3 turns, strike bonus never stops; new battle starts ready (52.176612ms)
+✔ G4 weapon cooldown: nothing happens (and nothing is rolled) while resting, for burn / crit / replay (8.334592ms)
+✔ G4 weapon cooldown is shown on screen: HUD badge + attack button, TH and EN text, effect line mentions it (9.78651ms)
+(node:86432) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: no hired worker, Nira physically collects a docked soul and leads it onto the court path (12429.555008ms)
+✔ asia: no hired worker, Nira physically collects a docked soul and leads it onto the court path (726.246208ms)
+✔ west: no hired worker, Nira physically collects a docked soul and leads it onto the court path (565.645187ms)
+✔ cyberhell: no hired worker, Nira physically collects a docked soul and leads it onto the court path (436.72996ms)
+✔ the opening game has only Nira and Taan and ferry arrival dispatches Nira without unlocking hiring or consuming supplies (761.265106ms)
+✔ Nira handles one arrival at a time; busy/resting Nira leaves the next passenger safely docked (920.711157ms)
+✔ early trial cancels Nira's pickup at her visible position, without teleporting her to the destination (725.964265ms)
+✔ early trial cancels Nira's lead at her visible position, without teleporting her to the destination (724.08577ms)
+✔ hiring a worker keeps Nira current delivery intact and routes the next arrival to the worker (909.045555ms)
+✔ hired workers resting or out of food do not gain a Nira shortcut around their availability rules (321.536445ms)
+✔ restore of Nira pickup retries from the dock once, without a stuck reader or duplicate soul (1256.843507ms)
+(node:86433) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P2 lock: every named case and every generated soul gets a trait the moment it enters court (160.730613ms)
+✔ P2 spread: all three colours are common, for named cases and for generated souls (837.660397ms)
+✔ P2 rule: priority is resist → concealment (fake merit / secret / heavy hidden deed) → hard denial → accepting (1.8161ms)
+✔ P2 lock survives the whole interrogation, a save/load and a returned verdict (102.946777ms)
+✔ P2 old saves: a soul without a locked colour is locked from its case data on load, and never changes again (37.178717ms)
+✔ P2 keeper plan and recommendation use the locked colour, not what the player has since uncovered (10.63459ms)
+✔ P2 Kan icon appears only once Kan is hired and keeps the original reasons for a disabled state (15.280875ms)
+✔ P2 camera: a correct press closes in on the spirit with a fright beat; a wrong press never moves the camera (15.325425ms)
+✔ P2 lesson: three pages, shown once per save after the first-warrant lesson (36.676597ms)
+✔ P2 handbook: trait page + keeper-team page exist, carry five keeper profile slots, and match the code (9.242185ms)
+✔ P2 case 15: the false-charity merit and its boast claim replace the old chanting merit; Kan can expose it (11.974109ms)
+(node:86434) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P1: there is no bed to buy — sleeping needs only a finished tea pavilion; old teaBeds data is kept but never read (107.962431ms)
+✔ losses queue recovery without ending the game; recovery survives saving and restores full HP (257.732454ms)
+✔ tea backgrounds fill desktop and portrait canvases without distorting their aspect ratio (2.241823ms)
+✔ tea restores only MP; sleep gradually restores HP without blackout and wakes fully recovered (62.038366ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20954.515312

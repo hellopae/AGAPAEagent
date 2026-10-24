@@ -1,0 +1,19 @@
+{
+  "logs": [],
+  "state": {
+    "hud": {
+      "bottom": 784,
+      "height": 279.28125,
+      "left": 947.2109375,
+      "right": 1254.40625,
+      "top": 504.71875,
+      "width": 307.1953125,
+      "x": 947.2109375,
+      "y": 504.71875
+    },
+    "scroll": 1280,
+    "topFood": false,
+    "topWarning": false,
+    "width": 1280
+  }
+}

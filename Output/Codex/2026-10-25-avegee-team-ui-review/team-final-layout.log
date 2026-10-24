@@ -1,0 +1,32 @@
+(node:7200) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ final docket renders the normal illustrated interrogation arena with bound sprite and four command panels (13.787823ms)
+✔ mandatory mirror reveals selectable answers without auto-selecting or spending the ordinary inventory (52.374043ms)
+✔ saved partially selected final court resumes its revealed answers without queue or coin changes (13.505985ms)
+✔ docket names are escaped and the final UI does not mount for ordinary court cases (1.780507ms)
+✔ bound boss asset is shipped and all entry aliases resolve the new court and shared trial styles (13.824719ms)
+(node:7201) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P2 lock: every named case and every generated soul gets a trait the moment it enters court (33.978477ms)
+✔ P2 spread: all three colours are common, for named cases and for generated souls (172.205409ms)
+✔ P2 rule: priority is resist → concealment (fake merit / secret / heavy hidden deed) → hard denial → accepting (0.541717ms)
+✔ P2 lock survives the whole interrogation, a save/load and a returned verdict (24.834397ms)
+✔ P2 old saves: a soul without a locked colour is locked from its case data on load, and never changes again (7.614713ms)
+✔ P2 keeper plan and recommendation use the locked colour, not what the player has since uncovered (2.704666ms)
+✔ P2 Kan icon appears only once Kan is hired and keeps the original reasons for a disabled state (4.476001ms)
+✔ P2 camera: a correct press closes in on the spirit with a fright beat; a wrong press never moves the camera (3.405271ms)
+✔ P2 lesson: three pages, shown once per save after the first-warrant lesson (6.648633ms)
+✔ P2 handbook: trait page + keeper-team page exist, carry five keeper profile slots, and match the code (1.969972ms)
+✔ P2 case 15: the false-charity merit and its boast claim replace the old chanting merit; Kan can expose it (3.158717ms)
+✔ camera smoothing keeps the world in bounds at every edge, including resize (3.81497ms)
+✔ camera movement is independent of frame rate and reduced motion snaps to target (1.644968ms)
+✔ camera offsets round-trip pointer coordinates and floating button positions (0.27318ms)
+✔ frontier weather is bounded and reduced motion keeps only static light (1.603611ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 593.523188

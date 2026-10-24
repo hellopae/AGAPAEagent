@@ -1,0 +1,16 @@
+{
+  "dialogScroll": 384,
+  "dialogWidth": 380,
+  "pane": {
+    "bottom": 443.640625,
+    "height": 250,
+    "left": 157.34375,
+    "right": 367.34375,
+    "top": 193.640625,
+    "width": 210,
+    "x": 157.34375,
+    "y": 193.640625
+  },
+  "scroll": 390,
+  "viewport": 390
+}

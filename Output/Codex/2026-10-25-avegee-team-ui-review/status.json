@@ -1,0 +1,29 @@
+{
+  "task": "TEAM",
+  "implementation": "ef6dda6",
+  "merge": "c01167bcce2ef74f7f6aa3241e8a9e168515d8a8",
+  "full_run_start_commit": "43d4c2c3fc8b8caa2f82d221397c82f5e0a97e6c",
+  "tests": {
+    "tests": 1460,
+    "pass": 1460,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "syntax_files": 130,
+  "post_full_change": "CSS mobile shortcuts only; browser overlap0 and23relevant tests passed",
+  "browser": [
+    "1280x720",
+    "1280x800",
+    "390x844"
+  ],
+  "pages": {
+    "status": "built",
+    "commit": "c01167bcce2ef74f7f6aa3241e8a9e168515d8a8"
+  },
+  "owner_acceptance": "pending",
+  "remaining_queue": "../AVEGEE-WORK-QUEUE.md",
+  "worktree": "retained",
+  "live_files_match": "7/7"
+}

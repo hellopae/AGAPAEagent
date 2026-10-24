@@ -18,3 +18,5 @@
 - 2026-10-24 WFT codex/2026-10-24-workers-travel → merged 335efec12b1ea6b5edffe6eb884637c96fd2e236 | tests1444/1444; syntax129;213files once; inspected worker construction, canteen/physical meal delivery, manual empty-food rest latch, keeper couriers, on-map boat/hand-off; browser1280/390; Pages/live evidence in review folder; worktree retained; next HUD/interrogation queue saved separately
 
 - 2026-10-25 NDC codex/2026-10-24-nira-dock-courier → merged854f088f9ff91b5ede498ac1b105c2ec850a9fee | tests1455/1455; syntax129; early Nira courier, four-zone routes/cancel/save/hire regressions, natural browser delivery; Pages built exact merge, live4/4 byte-match; worktree retained
+
+- 2026-10-25 TEAM codex/2026-10-25-team-hud-interrogation → mergedc01167bcce2ef74f7f6aa3241e8a9e168515d8a8 | full1460/1460,synax130; finalCSSmobile23relevanttests; browser1280/390,worker rice/rest/mode/party and relief-vs-fear; Pages built exact merge,live7/7 byte-match; worktree retained;17newfeedbackitems queued separately

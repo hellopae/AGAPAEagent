@@ -1,0 +1,15 @@
+# TEAM — map roster and interrogation UI
+
+Direct owner screenshot queue, implemented sequentially after NDC. No new battle mechanics: B1 and B3 already published. Original workers/travel preserved. No delegation. Review fixture is memory only and appended over local HTTP, not production. Owner visual acceptance remains pending.
+
+Browser self-check:1280x720/800 and390x844. Real UI quick-manage rice used inventory5→3 for worker1 + Taan, worker2 sent to tea, other starved workers remained latched. No hiring buttons in quick manager (DOM0), worker mode and party toggles retained. Guard missing-name fixture issue fixed with GUARD.name fallback. Map old food/alert nodes removed from upper row, current count at right. Busy actual tasks fade. Actual native Keeper click and selected Taan verified; keyboard Enter works too. Kan left of Yama is outside command hit area. Touch-readable power/cost details expand inside scrollable keeper flyout.
+
+Relief/fear production click results recorded in team-relief-final.json and team-fear-final.json (true/false reversed as intended). Warm camera beat then releases; repeated trial closure cancels prior timers. Reduced-motion static CSS inspected, no OS preference emulation claimed. No sentence or case weights changed.
+
+Mobile regression: earlier pane x209..419 exceeded the dialogue; fixed query to actual hud-body command stage rather than cam-world's actor stage. Final pane x157..367 stays within390px viewport; page scroll width390. Quick manage width/scroll365. Name-tag clipping remains explicitly in new feedback queue, not claimed complete. Earlier screenshot and measurements kept for audit; filenames containing final are corrected artifacts. Final screenshots are local memory fixtures, not screenshots of a player's saved game.
+
+Current source2b17e57. Full suite started on250e145; final UI layout/accessibility changes need final verification before publish. Owner acceptance pending. No new17-item bug/art queue item claimed complete.
+
+Final acceptance: full1460/1460 (214regular files1440 + workers20); syntax130, zero skip/fail/cancel/todo, diff check clean. Full run inventory43d4c2c,449.95s. Final ef6dda6 adds CSS only: mobile left shortcuts stack in126px column, clear of roster with measured overlap0; viewport/page390/390.23 relevant UI/camera tests pass after this CSS change. Final game.js/ui.js logic identical to full-run43d4c2c. No further logic changes. Earlier full250e145 run1456/1460 retained as validation-before-compatibility: P8 URL suffix and VM extraction/helper context failures fixed, no weakened assertions. Natural browser mode select worker1=gather and Taan party0→1/2 confirmed, no hiring control and no console warnings/errors. Screenshots named clean-final are final corrected layout. Worktree retained.
+
+Published game mergec01167bcce2ef74f7f6aa3241e8a9e168515d8a8; Pages built exact merge; all7live runtime files byte-match. Owner visual acceptance pending. Main Thai queue updated with TEAM complete and17newitems still pending.
