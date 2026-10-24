@@ -1,0 +1,21 @@
+{
+  "review": "merged a720ec548f70adfadd03e248415c4c1d0775225b",
+  "branch": "codex/cyberhell-art-20261024",
+  "implementation": "c089a4d",
+  "tests": {
+    "tests": 1434,
+    "pass": 1434,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "syntax": 127,
+  "pages": "built a720ec548f70adfadd03e248415c4c1d0775225b",
+  "scope": "38 new image/report files only",
+  "cyberhell_enabled": false,
+  "borders_enabled": false,
+  "owner_visual_acceptance": "pending",
+  "cleanup": "keep worktree per handoff",
+  "live_files_match": 40
+}

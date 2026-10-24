@@ -1,0 +1,17 @@
+(node:93859) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Arrival matrix: 160 walked, 0 recovered at timeout
+✔ all stations in all four zones: both builders arrive for build and repair among other buildings (86892.369257ms)
+✔ blocked definition point plus mob: build and repair reach a walkable visible work point (191551.595083ms)
+✔ disconnected route recovers after 30 active seconds, preserving elapsed time on reload and pause (6973.821029ms)
+✔ escort suspends arrival, then releases the worker; battle help keeps the job owner (136.219268ms)
+✔ two builds approach concurrently and retain each owner and build-work render state (6649.769844ms)
+✔ Thai city quarry is reachable from the civic square before bounded recovery (345.362122ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 293117.167652

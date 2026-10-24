@@ -1,0 +1,797 @@
+{
+  "borrowedZone1Placements": true,
+  "sprites": [
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2381,
+      "y": 275.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 349,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 453,
+      "y": 340.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 359,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2658,
+      "y": 291.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 365,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 540,
+      "y": 359.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 378,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2339,
+      "y": 323.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 397,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 288,
+      "y": 384.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 403,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2706,
+      "y": 335.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 409,
+      "flip": false
+    },
+    {
+      "x": 2431.7589852008455,
+      "y": 144.99999999999994,
+      "w": 208.48202959830869,
+      "h": 267.00000000000006,
+      "flip": false,
+      "file": "img/map-v5/st-sawan-cyberhell-v2.webp",
+      "depth": 412
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 588,
+      "y": 403.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 422,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 645,
+      "y": 417.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 436,
+      "flip": false
+    },
+    {
+      "x": 1505.455421686747,
+      "y": 160,
+      "w": 291.089156626506,
+      "h": 289,
+      "flip": false,
+      "file": "img/map-v5/st-tarang-cyberhell.webp",
+      "depth": 449
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 244,
+      "y": 436.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 455,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1881.5,
+      "y": 344.16180150125103,
+      "w": 115,
+      "h": 125.83819849874895,
+      "depth": 470,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2371,
+      "y": 400.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 474,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 695,
+      "y": 465.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 484,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2709,
+      "y": 416.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 490,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1752,
+      "y": 377.01000834028355,
+      "w": 106,
+      "h": 115.98999165971642,
+      "depth": 493,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2473,
+      "y": 423.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 497,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1784,
+      "y": 383.01000834028355,
+      "w": 106,
+      "h": 115.98999165971642,
+      "depth": 499,
+      "flip": false
+    },
+    {
+      "w": 267.512846011334,
+      "h": 277.74930695564524,
+      "flip": false,
+      "x": 3398.4302921529484,
+      "y": 242.0971522177419,
+      "file": "img/theme-v4/st-lokan-cyberhell.webp",
+      "depth": 507
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2412,
+      "y": 435.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 509,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2661,
+      "y": 444.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 518,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 283,
+      "y": 499.01430274135873,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 518,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "x": 2588,
+      "y": 448.15625,
+      "w": 34,
+      "h": 73.84375,
+      "depth": 522,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 716,
+      "y": 522.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 541,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-c-cyberhell-v1.webp",
+      "x": 3309.5,
+      "y": 401.6538782318599,
+      "w": 131,
+      "h": 143.3461217681401,
+      "depth": 545,
+      "flip": false
+    },
+    {
+      "x": 349.9494736842105,
+      "y": 327.4,
+      "w": 240.10105263157897,
+      "h": 237.6,
+      "flip": true,
+      "file": "img/map-v5/st-krata-cyberhell.webp",
+      "depth": 565
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 332,
+      "y": 547.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 566,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-c-cyberhell-v1.webp",
+      "x": 3607,
+      "y": 432.8056713928273,
+      "w": 140,
+      "h": 153.19432860717265,
+      "depth": 586,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 400,
+      "y": 580.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 599,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 647,
+      "y": 580.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 599,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 475,
+      "y": 595.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 614,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 582,
+      "y": 599.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 618,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "x": 1480,
+      "y": 575.7067938021454,
+      "w": 142,
+      "h": 79.29320619785459,
+      "depth": 655,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-left-two-cyberhell-v1.webp",
+      "x": 1885.5,
+      "y": 632.5500595947557,
+      "w": 119,
+      "h": 66.44994040524433,
+      "depth": 699,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1992,
+      "y": 594.1826522101751,
+      "w": 136,
+      "h": 148.81734778982485,
+      "depth": 743,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "x": 568,
+      "y": 671.7067938021454,
+      "w": 142,
+      "h": 79.29320619785459,
+      "depth": 751,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "x": 2053.5,
+      "y": 693.9660309892729,
+      "w": 129,
+      "h": 72.03396901072706,
+      "depth": 766,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1660,
+      "y": 664.2977481234362,
+      "w": 156,
+      "h": 170.7022518765638,
+      "depth": 835,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/prop-rock-v1.webp",
+      "x": 2975.5,
+      "y": 825.0029797377831,
+      "w": 77,
+      "h": 42.99702026221693,
+      "depth": 868,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 615,
+      "y": 708.2977481234362,
+      "w": 156,
+      "h": 170.7022518765638,
+      "depth": 879,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/prop-rock-v1.webp",
+      "x": 3436.5,
+      "y": 820.5500595947557,
+      "w": 119,
+      "h": 66.44994040524433,
+      "depth": 887,
+      "flip": false
+    },
+    {
+      "x": 3095.0898550724637,
+      "y": 640.8,
+      "w": 273.8202898550724,
+      "h": 271.2,
+      "flip": false,
+      "file": "img/map-v5/st-lan-cyberhell.webp",
+      "depth": 912
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 226,
+      "y": 792.4286905754795,
+      "w": 144,
+      "h": 157.57130942452042,
+      "depth": 950,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-left-two-cyberhell-v1.webp",
+      "x": 1487,
+      "y": 905.2765196662693,
+      "w": 98,
+      "h": 54.723480333730635,
+      "depth": 960,
+      "flip": true
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 2117,
+      "y": 828.1826522101751,
+      "w": 136,
+      "h": 148.81734778982485,
+      "depth": 977,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/prop-rock-v1.webp",
+      "x": 3272.5,
+      "y": 936.8861740166865,
+      "w": 79,
+      "h": 44.11382598331347,
+      "depth": 981,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/prop-rock-v1.webp",
+      "x": 3215,
+      "y": 966.9630512514899,
+      "w": 52,
+      "h": 29.03694874851013,
+      "depth": 996,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-right-one-cyberhell-v1.webp",
+      "x": 2165.5,
+      "y": 931.9147794994041,
+      "w": 147,
+      "h": 82.08522050059595,
+      "depth": 1014,
+      "flip": true
+    },
+    {
+      "x": 337.42894736842106,
+      "y": 780.6,
+      "w": 255.1421052631579,
+      "h": 257.4,
+      "flip": false,
+      "file": "img/map-v5/st-dab-cyberhell.webp",
+      "depth": 1038
+    },
+    {
+      "file": "img/theme-v4/town-judgment-cyberhell-v2.webp",
+      "x": 1708.5,
+      "y": 852.3333333333334,
+      "w": 307,
+      "h": 204.66666666666666,
+      "depth": 1057,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "x": 1481.5,
+      "y": 1000.9660309892729,
+      "w": 129,
+      "h": 72.03396901072706,
+      "depth": 1073,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 1693,
+      "y": 1061.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1080,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 2083,
+      "y": 1061.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1080,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 280,
+      "y": 931.863219349458,
+      "w": 150,
+      "h": 164.1367806505421,
+      "depth": 1096,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 593.5,
+      "y": 925.8265221017515,
+      "w": 161,
+      "h": 176.17347789824854,
+      "depth": 1102,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1677.5,
+      "y": 959.0150125104253,
+      "w": 159,
+      "h": 173.98498748957465,
+      "depth": 1133,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1882.5,
+      "y": 963.0150125104253,
+      "w": 159,
+      "h": 173.98498748957465,
+      "depth": 1137,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 2844,
+      "y": 924.9624687239366,
+      "w": 202,
+      "h": 221.0375312760634,
+      "depth": 1146,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-right-one-cyberhell-v1.webp",
+      "x": 635.5,
+      "y": 1120.7979737783076,
+      "w": 149,
+      "h": 83.20202622169249,
+      "depth": 1204,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "x": 1941,
+      "y": 1216.9404052443385,
+      "w": 138,
+      "h": 77.05959475566151,
+      "depth": 1294,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 671,
+      "y": 1165.2977481234361,
+      "w": 156,
+      "h": 170.7022518765638,
+      "depth": 1336,
+      "flip": false
+    },
+    {
+      "x": 2156.8,
+      "y": 1158,
+      "w": 190.4,
+      "h": 224,
+      "flip": false,
+      "file": "img/map-v5/st-sala-cyberhell-v2.webp",
+      "depth": 1382
+    },
+    {
+      "w": 177.20703125,
+      "h": 177.20703125,
+      "flip": false,
+      "x": 1438.396484375,
+      "y": 1220.79296875,
+      "file": "img/theme-v4/st-tea-cyberhell-v2.webp",
+      "depth": 1398
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 1771,
+      "y": 1386.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1405,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 2033,
+      "y": 1386.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1405,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 2233.5,
+      "y": 1276.8265221017514,
+      "w": 161,
+      "h": 176.17347789824854,
+      "depth": 1453,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 3132,
+      "y": 1236.3394495412845,
+      "w": 198,
+      "h": 216.6605504587156,
+      "depth": 1453,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1325.5,
+      "y": 1265.5070892410342,
+      "w": 175,
+      "h": 191.4929107589658,
+      "depth": 1457,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1737.5,
+      "y": 1301.8265221017514,
+      "w": 161,
+      "h": 176.17347789824854,
+      "depth": 1478,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1935.5,
+      "y": 1301.8265221017514,
+      "w": 161,
+      "h": 176.17347789824854,
+      "depth": 1478,
+      "flip": false
+    },
+    {
+      "x": 408.65,
+      "y": 1212.8892344497608,
+      "w": 284.7,
+      "h": 283.11076555023925,
+      "flip": false,
+      "file": "img/map-v5/st-ngiw-cyberhell.webp",
+      "depth": 1496
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 289,
+      "y": 1331.674728940784,
+      "w": 152,
+      "h": 166.32527105921602,
+      "depth": 1498,
+      "flip": false
+    },
+    {
+      "x": 3361.6,
+      "y": 1215.9507346585997,
+      "w": 240.8,
+      "h": 283.0492653414002,
+      "flip": false,
+      "file": "img/map-v5/st-krajok-cyberhell-v2.webp",
+      "depth": 1499
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 731,
+      "y": 1376.4286905754795,
+      "w": 144,
+      "h": 157.57130942452042,
+      "depth": 1534,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "x": 312,
+      "y": 1390.674728940784,
+      "w": 152,
+      "h": 166.32527105921602,
+      "depth": 1557,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 1773,
+      "y": 1541.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1560,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 2033,
+      "y": 1541.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 1560,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-right-two-cyberhell-v1.webp",
+      "x": 2226,
+      "y": 1524.3420738974971,
+      "w": 114,
+      "h": 63.65792610250298,
+      "depth": 1588,
+      "flip": true
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 3467,
+      "y": 1413.1509591326105,
+      "w": 200,
+      "h": 218.8490408673895,
+      "depth": 1632,
+      "flip": false
+    },
+    {
+      "file": "img/town-district/house-right-two-cyberhell-v1.webp",
+      "x": 1491,
+      "y": 1593.9916567342075,
+      "w": 120,
+      "h": 67.0083432657926,
+      "depth": 1661,
+      "flip": true
+    },
+    {
+      "file": "img/theme-v4/town-landmark-cyberhell-v1.webp",
+      "x": 1714,
+      "y": 1491.8125,
+      "w": 132,
+      "h": 171.1875,
+      "depth": 1663,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 1984.5,
+      "y": 1480.2610508757298,
+      "w": 167,
+      "h": 182.73894912427022,
+      "depth": 1663,
+      "flip": false
+    },
+    {
+      "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "x": 2266.5,
+      "y": 1504.0150125104253,
+      "w": 159,
+      "h": 173.98498748957465,
+      "depth": 1678,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 1753,
+      "y": 2061.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 2080,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 2053,
+      "y": 2061.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 2080,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 1753,
+      "y": 2231.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 2250,
+      "flip": false
+    },
+    {
+      "file": "img/map-zone4/torch-pillar-v1.webp",
+      "x": 2053,
+      "y": 2231.0143027413587,
+      "w": 34,
+      "h": 18.98569725864124,
+      "depth": 2250,
+      "flip": false
+    }
+  ]
+}

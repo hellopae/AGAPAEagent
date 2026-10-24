@@ -1,0 +1,34 @@
+[
+  {
+    "file": "ref-q-ne-layout.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "b82007080696f05d2790a8a72ad1a21ee598a2f153df63e0d96269608c082c90"
+  },
+  {
+    "file": "ref-q-sw-layout.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "2f794a69ef6ee568949f3285ab8813af9e65b6ca95ebef4d2f601135a85e44c0"
+  },
+  {
+    "file": "ref-q-nw-layout.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "fc870c326a30cf802877ba5b958928027f77da2948c12daf66da2fb8e245e61f"
+  },
+  {
+    "file": "ref-q-se-layout.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "26857a588f33a0b3584c31b3829a79317c4636aaab060ed5d1c6d83ab0f802fd"
+  }
+]

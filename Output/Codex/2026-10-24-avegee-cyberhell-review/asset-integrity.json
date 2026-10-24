@@ -1,0 +1,200 @@
+{
+  "commit": "c089a4d7000fe8bbb5341afaeb1441cbd19b84e6",
+  "added_files": 38,
+  "sprites": 16,
+  "ground_chunks": 20,
+  "image_only_diff": true,
+  "production_code_changed": false,
+  "files": [
+    {
+      "path": "img/map-v5/st-krajok-cyberhell-v2.webp",
+      "bytes": 337020,
+      "sha256": "b38f5d2a4bee174b9d74232f8a1ebab5367a31fd319cefa3d64327f9b3293e99"
+    },
+    {
+      "path": "img/map-v5/st-sala-cyberhell-v2.webp",
+      "bytes": 402662,
+      "sha256": "0a559156c4e0d39add6852a7eea55121ce87a891d1db97b37df8f3e6ef536d4d"
+    },
+    {
+      "path": "img/map-v5/st-sawan-cyberhell-v2.webp",
+      "bytes": 400188,
+      "sha256": "d9cb5f57cbf0530800924177e93ab3f352f1f9a3d55a5d323c6d32250f26d831"
+    },
+    {
+      "path": "img/map-zone4/prop-rock-v1.webp",
+      "bytes": 267632,
+      "sha256": "a290c86ca472b6cb487f41f170f367a8da018650eb17d2c5e063193868b4f0b9"
+    },
+    {
+      "path": "img/map-zone4/torch-pillar-v1.webp",
+      "bytes": 20362,
+      "sha256": "07cbdda5e9322b8efab0581e98f863c0290bebb6b7f4d07aa9fee8eb584c08a5"
+    },
+    {
+      "path": "img/map-zone4/v1/r1-c1.webp",
+      "bytes": 305172,
+      "sha256": "9b4123f335c9f357b3d6997facbf36965954d1eac30b1a091e8e290b32fa24e0"
+    },
+    {
+      "path": "img/map-zone4/v1/r1-c2.webp",
+      "bytes": 288942,
+      "sha256": "342d7b291835b3c56b6bbdb03017d18f17d62b91f52aaaf8d87d1c784cd39db6"
+    },
+    {
+      "path": "img/map-zone4/v1/r1-c3.webp",
+      "bytes": 269610,
+      "sha256": "5a51e643ed5cf5f0549f8848269a508d73ff5c43a0fac60be2ccfba22d7ecd7f"
+    },
+    {
+      "path": "img/map-zone4/v1/r1-c4.webp",
+      "bytes": 274232,
+      "sha256": "5188dbd2a8fa294ca5f80011bc26b8636e5829b4b8425cab55ae31e67acf3508"
+    },
+    {
+      "path": "img/map-zone4/v1/r1-c5.webp",
+      "bytes": 243718,
+      "sha256": "aa746dadb63882d894d76642d329b9a32d76aff4c8aff023dd66ff59c4f2316b"
+    },
+    {
+      "path": "img/map-zone4/v1/r2-c1.webp",
+      "bytes": 289446,
+      "sha256": "57fe5f2546ad3b22642593f383fa9f65c8cc3cc0b1600bf749da43757223a406"
+    },
+    {
+      "path": "img/map-zone4/v1/r2-c2.webp",
+      "bytes": 301144,
+      "sha256": "3aee6b16a218100345c47ff6aa0d22f6242cd4935d35e44c7ec05f18698b644b"
+    },
+    {
+      "path": "img/map-zone4/v1/r2-c3.webp",
+      "bytes": 283304,
+      "sha256": "b425a2304cadc75d92f6a166ffe286d6039060c2b03fa0076ee39dba830d9734"
+    },
+    {
+      "path": "img/map-zone4/v1/r2-c4.webp",
+      "bytes": 309968,
+      "sha256": "2fec373b3df55516cf4dbd36ef1191254a036d399af93d919e35c031291ea14f"
+    },
+    {
+      "path": "img/map-zone4/v1/r2-c5.webp",
+      "bytes": 229030,
+      "sha256": "7e981989e6985a9dfe5e7f74beedd29aed77381e2015846604d5f2713d554cbd"
+    },
+    {
+      "path": "img/map-zone4/v1/r3-c1.webp",
+      "bytes": 256324,
+      "sha256": "a9d8a21af4aadc96db1df941eb0335c50ce323bf712366c829f3bbd9cc5a6e88"
+    },
+    {
+      "path": "img/map-zone4/v1/r3-c2.webp",
+      "bytes": 259730,
+      "sha256": "c7387c481a8ce7951b529c749f701aee5e8eba2234ab6896f90e5e938dcc318e"
+    },
+    {
+      "path": "img/map-zone4/v1/r3-c3.webp",
+      "bytes": 265976,
+      "sha256": "d41758d927ebfe6be891037b899e46ebc5d061c18e41692f6b41964e66bfc928"
+    },
+    {
+      "path": "img/map-zone4/v1/r3-c4.webp",
+      "bytes": 280644,
+      "sha256": "ee9fe7c5a5a84cd67798c215bbfee55707870f0469aa4767fefda93fdb4ee642"
+    },
+    {
+      "path": "img/map-zone4/v1/r3-c5.webp",
+      "bytes": 220742,
+      "sha256": "b857a408813e3dffc7cd42b264a97eb120d18bf457b7b30ca36234611a56e1be"
+    },
+    {
+      "path": "img/map-zone4/v1/r4-c1.webp",
+      "bytes": 48088,
+      "sha256": "0eb87a1047681439120a1942a38bcdb0c5f0a9a5ebddf714f2a93a2688f98856"
+    },
+    {
+      "path": "img/map-zone4/v1/r4-c2.webp",
+      "bytes": 47370,
+      "sha256": "19860ed9c7e56a0391710d4a4abf44e2e823fc0bb6a104c699f23e2cd5cd5186"
+    },
+    {
+      "path": "img/map-zone4/v1/r4-c3.webp",
+      "bytes": 48886,
+      "sha256": "7a8d762aa4db84ebb00fcbab0849a89adf851d8df7be7849db62cc79eb8b0d1f"
+    },
+    {
+      "path": "img/map-zone4/v1/r4-c4.webp",
+      "bytes": 55166,
+      "sha256": "35d9a6b6d8f78a3f533830f8d688f90efb1ed24d2a878b9b5be8ac38ea5689cb"
+    },
+    {
+      "path": "img/map-zone4/v1/r4-c5.webp",
+      "bytes": 46310,
+      "sha256": "6f66eb4e74c60f62ed29b51323792527551cfd79336742b73b70232ec180d82e"
+    },
+    {
+      "path": "img/map-zone4/v1/stitch-report.json",
+      "bytes": 1067,
+      "sha256": "54b77e4197e3248628d50f188a3e371c9f766e10e935443284adae5dcfa38744"
+    },
+    {
+      "path": "img/map-zone4/v1/zone4-terrain-v1-preview.webp",
+      "bytes": 888980,
+      "sha256": "618007a53471ca8514da4677e1a136a44f249914b88481b45e46d3c9b3e323bd"
+    },
+    {
+      "path": "img/theme-v4/st-tea-cyberhell-v2.webp",
+      "bytes": 413272,
+      "sha256": "76a185561933a6af72eba4a0ccd2270bc5714b72fc1dcb724e09a7fb4733584f"
+    },
+    {
+      "path": "img/theme-v4/town-judgment-cyberhell-v2.webp",
+      "bytes": 410838,
+      "sha256": "231c1114559e0b0e13e660dfa0e881502f011eaa7e0fa7ae87822bd9a7d0fd00"
+    },
+    {
+      "path": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+      "bytes": 66018,
+      "sha256": "2a9aff98964a7fa054efdb2a7cae35840778659625306d773e0d10ec3927f016"
+    },
+    {
+      "path": "img/theme-v4/town-landmark-cyberhell-v1.webp",
+      "bytes": 427936,
+      "sha256": "2933f0f96b8dd8d0af19373c1f989cc1c1611288e5e15f2bb93b09dce7298e5b"
+    },
+    {
+      "path": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+      "bytes": 305564,
+      "sha256": "78271f46c093e42310f324baabbc3ef01fd0908f367f5c30719d5c836cce08ae"
+    },
+    {
+      "path": "img/theme-v4/town-tree-c-cyberhell-v1.webp",
+      "bytes": 431736,
+      "sha256": "a9d29e602d69f740795f1a727a0e5d1b1b8325f1a8b5fada6d05031efac81609"
+    },
+    {
+      "path": "img/theme-v4/town-tree-cyberhell-v1.webp",
+      "bytes": 499254,
+      "sha256": "66aa0d4070282e746771f7cdf92e1e3f7b82e4ede85ba556506bce1057d38ccf"
+    },
+    {
+      "path": "img/town-district/house-front-one-cyberhell-v1.webp",
+      "bytes": 360962,
+      "sha256": "204e27b8c56cc100e668b93d816b78c00c77a4bfbdb0a96f1fcee87be7a02157"
+    },
+    {
+      "path": "img/town-district/house-left-two-cyberhell-v1.webp",
+      "bytes": 373698,
+      "sha256": "66eb7e5b99ebc923dc73a6fc37442b8f03f1dd6ea3ba851a081e83567caf2294"
+    },
+    {
+      "path": "img/town-district/house-right-one-cyberhell-v1.webp",
+      "bytes": 372508,
+      "sha256": "b1cfd686c1bfad6c036703567954146c9f55f694355d5cd44bd58a4f1e295607"
+    },
+    {
+      "path": "img/town-district/house-right-two-cyberhell-v1.webp",
+      "bytes": 449922,
+      "sha256": "6c4668cca65c77d520eab00904368aa5ae1f5193489558f8e6938ba97f8f9002"
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+[
+  {
+    "key": "tree",
+    "reference": "img/theme-v4/town-tree-th-v1.webp",
+    "file": "img/theme-v4/town-tree-cyberhell-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      5,
+      9,
+      1198,
+      1306
+    ],
+    "raw_bbox_alpha8": [
+      9,
+      9,
+      1307,
+      1191
+    ],
+    "bbox_alpha8": [
+      5,
+      220,
+      1198,
+      1306
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 499254
+  },
+  {
+    "key": "thorn",
+    "reference": "img/theme-v4/town-tree-red-th-v1.webp",
+    "file": "img/theme-v4/town-tree-b-cyberhell-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      4,
+      8,
+      1195,
+      1306
+    ],
+    "raw_bbox_alpha8": [
+      16,
+      6,
+      1286,
+      1189
+    ],
+    "bbox_alpha8": [
+      4,
+      197,
+      1195,
+      1306
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 305564
+  },
+  {
+    "key": "snow",
+    "reference": "img/theme-v4/town-tree-snow-th-v1.webp",
+    "file": "img/theme-v4/town-tree-c-cyberhell-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      4,
+      5,
+      1195,
+      1308
+    ],
+    "raw_bbox_alpha8": [
+      18,
+      3,
+      1013,
+      1534
+    ],
+    "bbox_alpha8": [
+      176,
+      5,
+      1023,
+      1308
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 431736
+  },
+  {
+    "key": "landmark",
+    "reference": "img/theme-v4/town-palm-th-v1.webp",
+    "file": "img/theme-v4/town-landmark-cyberhell-v1.webp",
+    "canvas": [
+      1024,
+      1328
+    ],
+    "reference_bbox_alpha8": [
+      13,
+      18,
+      1019,
+      1319
+    ],
+    "raw_bbox_alpha8": [
+      12,
+      2,
+      1307,
+      1194
+    ],
+    "bbox_alpha8": [
+      13,
+      394,
+      1019,
+      1319
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 427936
+  },
+  {
+    "key": "judgment",
+    "reference": "img/theme-v4/town-judgment-th-v2.webp",
+    "file": "img/theme-v4/town-judgment-cyberhell-v2.webp",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "reference_bbox_alpha8": [
+      48,
+      10,
+      1488,
+      990
+    ],
+    "raw_bbox_alpha8": [
+      18,
+      0,
+      1519,
+      1023
+    ],
+    "bbox_alpha8": [
+      49,
+      10,
+      1487,
+      990
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 410838
+  },
+  {
+    "key": "lamp",
+    "reference": "img/theme-v4/town-lamp-gold-th-v1.webp",
+    "file": "img/theme-v4/town-lamp-cyberhell-v1.webp",
+    "canvas": [
+      512,
+      1112
+    ],
+    "reference_bbox_alpha8": [
+      125,
+      8,
+      401,
+      1107
+    ],
+    "raw_bbox_alpha8": [
+      382,
+      26,
+      642,
+      1463
+    ],
+    "bbox_alpha8": [
+      164,
+      8,
+      363,
+      1107
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 66018
+  },
+  {
+    "key": "torch",
+    "reference": "img/map-zone1/torch-pillar-v1.webp",
+    "file": "img/map-zone4/torch-pillar-v1.webp",
+    "canvas": [
+      240,
+      419
+    ],
+    "reference_bbox_alpha8": [
+      68,
+      0,
+      180,
+      417
+    ],
+    "raw_bbox_alpha8": [
+      305,
+      26,
+      720,
+      1506
+    ],
+    "bbox_alpha8": [
+      68,
+      18,
+      180,
+      417
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 20362
+  },
+  {
+    "key": "rock",
+    "reference": "img/map-zone1/prop-rock-v1.webp",
+    "file": "img/map-zone4/prop-rock-v1.webp",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "reference_bbox_alpha8": [
+      108,
+      169,
+      1159,
+      1085
+    ],
+    "raw_bbox_alpha8": [
+      260,
+      62,
+      1285,
+      939
+    ],
+    "bbox_alpha8": [
+      108,
+      186,
+      1159,
+      1085
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 267632
+  },
+  {
+    "key": "house-front",
+    "reference": "img/town-district/house-front-one-v1.webp",
+    "file": "img/town-district/house-front-one-cyberhell-v1.webp",
+    "canvas": [
+      1402,
+      1122
+    ],
+    "reference_bbox_alpha8": [
+      28,
+      62,
+      1375,
+      1067
+    ],
+    "raw_bbox_alpha8": [
+      86,
+      11,
+      1464,
+      1012
+    ],
+    "bbox_alpha8": [
+      28,
+      89,
+      1375,
+      1067
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 360962
+  },
+  {
+    "key": "house-right",
+    "reference": "img/town-district/house-right-one-v1.webp",
+    "file": "img/town-district/house-right-one-cyberhell-v1.webp",
+    "canvas": [
+      1438,
+      1094
+    ],
+    "reference_bbox_alpha8": [
+      10,
+      11,
+      1429,
+      1073
+    ],
+    "raw_bbox_alpha8": [
+      20,
+      23,
+      1523,
+      987
+    ],
+    "bbox_alpha8": [
+      11,
+      163,
+      1429,
+      1073
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 372508
+  },
+  {
+    "key": "house-left-two",
+    "reference": "img/town-district/house-left-two-v1.webp",
+    "file": "img/town-district/house-left-two-cyberhell-v1.webp",
+    "canvas": [
+      1036,
+      1518
+    ],
+    "reference_bbox_alpha8": [
+      6,
+      12,
+      1035,
+      1509
+    ],
+    "raw_bbox_alpha8": [
+      111,
+      10,
+      914,
+      1493
+    ],
+    "bbox_alpha8": [
+      115,
+      12,
+      926,
+      1509
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 373698
+  },
+  {
+    "key": "house-right-two",
+    "reference": "img/town-district/house-right-two-v1.webp",
+    "file": "img/town-district/house-right-two-cyberhell-v1.webp",
+    "canvas": [
+      1036,
+      1518
+    ],
+    "reference_bbox_alpha8": [
+      13,
+      4,
+      1036,
+      1494
+    ],
+    "raw_bbox_alpha8": [
+      65,
+      27,
+      1007,
+      1489
+    ],
+    "bbox_alpha8": [
+      44,
+      4,
+      1004,
+      1494
+    ],
+    "bottom_delta": 0,
+    "center_delta": -0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 449922
+  },
+  {
+    "key": "sala",
+    "reference": "img/map-v5/st-sala-th-v2.webp",
+    "file": "img/map-v5/st-sala-cyberhell-v2.webp",
+    "canvas": [
+      1156,
+      1360
+    ],
+    "reference_bbox_alpha8": [
+      33,
+      1,
+      1129,
+      1351
+    ],
+    "raw_bbox_alpha8": [
+      18,
+      7,
+      1133,
+      1346
+    ],
+    "bbox_alpha8": [
+      33,
+      35,
+      1129,
+      1351
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 402662
+  },
+  {
+    "key": "tea",
+    "reference": "img/map-v5/st-tea-th-v2.webp",
+    "file": "img/theme-v4/st-tea-cyberhell-v2.webp",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "reference_bbox_alpha8": [
+      125,
+      16,
+      1217,
+      1201
+    ],
+    "raw_bbox_alpha8": [
+      57,
+      5,
+      1204,
+      1238
+    ],
+    "bbox_alpha8": [
+      125,
+      27,
+      1217,
+      1201
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 413272
+  },
+  {
+    "key": "sawan",
+    "reference": "img/map-v5/st-sawan-th-v2.webp",
+    "file": "img/map-v5/st-sawan-cyberhell-v2.webp",
+    "canvas": [
+      1108,
+      1419
+    ],
+    "reference_bbox_alpha8": [
+      65,
+      6,
+      1042,
+      1391
+    ],
+    "raw_bbox_alpha8": [
+      33,
+      7,
+      1116,
+      1364
+    ],
+    "bbox_alpha8": [
+      66,
+      167,
+      1042,
+      1391
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 400188
+  },
+  {
+    "key": "krajok",
+    "reference": "img/map-v5/st-krajok-th-v2.webp",
+    "file": "img/map-v5/st-krajok-cyberhell-v2.webp",
+    "canvas": [
+      1157,
+      1360
+    ],
+    "reference_bbox_alpha8": [
+      119,
+      6,
+      1089,
+      1334
+    ],
+    "raw_bbox_alpha8": [
+      145,
+      1,
+      946,
+      1482
+    ],
+    "bbox_alpha8": [
+      245,
+      6,
+      963,
+      1334
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 337020
+  }
+]
