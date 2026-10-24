@@ -1,0 +1,148 @@
+{
+  "commit": "3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3",
+  "pages": {
+    "status": "built",
+    "commit": "3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3"
+  },
+  "files": [
+    {
+      "file": "img/theme-v4/town-tree-west-v1.webp",
+      "status": 200,
+      "bytes": 580460,
+      "sha256": "c8b8b986f13ee5af6945cbc3bd0de553ac5f5173328f33d001d393a47a7f116d"
+    },
+    {
+      "file": "img/theme-v4/town-tree-b-west-v1.webp",
+      "status": 200,
+      "bytes": 605472,
+      "sha256": "e1cd5f1f122ba87707a0f79b6b4b685ac35a867b370f65e5226a06d07911be83"
+    },
+    {
+      "file": "img/theme-v4/town-tree-c-west-v1.webp",
+      "status": 200,
+      "bytes": 451764,
+      "sha256": "fb187125ef8d4586a0957c9b7b6bc984bb50e04d3bd69df98152c53a7beeef1a"
+    },
+    {
+      "file": "img/theme-v4/town-landmark-west-v1.webp",
+      "status": 200,
+      "bytes": 547974,
+      "sha256": "21b13f8174544d65dba572d37fbe05bf2fd07d5e8346440faf2eec775c4ec7d2"
+    },
+    {
+      "file": "img/theme-v4/town-judgment-west-v2.webp",
+      "status": 200,
+      "bytes": 481088,
+      "sha256": "3476b8fc4fd5e27aec044d69535e9c54ad57486a7d04e1f5d093fedf1bec6384"
+    },
+    {
+      "file": "img/theme-v4/town-lamp-west-v1.webp",
+      "status": 200,
+      "bytes": 104808,
+      "sha256": "ff9c5399bc0ec6496cb8e5dcf6a2029b6a5e653cec8f8532c0571c6b114eca7c"
+    },
+    {
+      "file": "img/map-zone3/torch-pillar-v1.webp",
+      "status": 200,
+      "bytes": 22024,
+      "sha256": "948ba3e923d296db9c58abbcf2dd1fe81cc97d060128d5c2ab1db32f5802238c"
+    },
+    {
+      "file": "img/map-zone3/prop-rock-v1.webp",
+      "status": 200,
+      "bytes": 256958,
+      "sha256": "3f3d2b747f931efd830d948ff3e8d997c06623332a38c4ac71996b55d7a680d4"
+    },
+    {
+      "file": "img/town-district/house-front-one-west-v1.webp",
+      "status": 200,
+      "bytes": 420852,
+      "sha256": "8b47f1de9a98a60f6f649c0340cc1a1020b4ecba0516f96310e01bd16efe3603"
+    },
+    {
+      "file": "img/town-district/house-right-one-west-v1.webp",
+      "status": 200,
+      "bytes": 451822,
+      "sha256": "cc1c5fe471c35f1e662fe3da90fc7339af9cd408ef66e3253e8e9b9e38b2698e"
+    },
+    {
+      "file": "img/town-district/house-left-two-west-v1.webp",
+      "status": 200,
+      "bytes": 451358,
+      "sha256": "783a380dc342dfe8ee973c34b5bfb5d6d653e6420fcc285f4563779b9d20ecc0"
+    },
+    {
+      "file": "img/town-district/house-right-two-west-v1.webp",
+      "status": 200,
+      "bytes": 421380,
+      "sha256": "5a8abef20353fc634f4d22813908100c221a3afc2e4eab789eeae342d9b6d8bb"
+    },
+    {
+      "file": "img/map-v5/st-sala-west-v2.webp",
+      "status": 200,
+      "bytes": 518982,
+      "sha256": "40b76175791d113a1a31a6705e373521662e5e0d4cc1806e062ef1acd36bbadc"
+    },
+    {
+      "file": "img/theme-v4/st-tea-west-v2.webp",
+      "status": 200,
+      "bytes": 451908,
+      "sha256": "5654090d76266fc9166fe52b1aaea163362448b6c9642246d7bb3b555a7596a0"
+    },
+    {
+      "file": "img/map-v5/st-sawan-west-v2.webp",
+      "status": 200,
+      "bytes": 438980,
+      "sha256": "d1dc957f23d43b3215009c9aa92d5c4177931861182eaf2cb5aeb300e0d00094"
+    },
+    {
+      "file": "img/map-v5/st-krajok-west-v2.webp",
+      "status": 200,
+      "bytes": 332648,
+      "sha256": "d966bd4def3b697dae8717e8bcaaa51370687372e6cd13f37fc59c4efa933751"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 219962,
+      "sha256": "f292347377078a7d19c43c00bbdb05f40a42f2465afaeee76f4ca77306dc442d"
+    },
+    {
+      "file": "src/zone-skin.js",
+      "status": 200,
+      "bytes": 11326,
+      "sha256": "92fc07577032050a413aa5966939fe2c5392885d05596305551beda199d338d5"
+    },
+    {
+      "file": "src/town-layout.js",
+      "status": 200,
+      "bytes": 19159,
+      "sha256": "e74752d83c08b71a70105b2ab4dafdc075574b9bebb75718acc38bfa28fdc103"
+    },
+    {
+      "file": "src/town-owner-walkmask-west.js",
+      "status": 200,
+      "bytes": 8137,
+      "sha256": "5a6966a44f7b294b66317a64544368a61c22031843f6c984153a6e4d048df6c9"
+    },
+    {
+      "file": "src/town-west-trees.js",
+      "status": 200,
+      "bytes": 7778,
+      "sha256": "cfa04baf98fba4faf1a02c95722c9901a32d24747a737ee1a8067fb148143dfb"
+    },
+    {
+      "file": "src/preload.js",
+      "status": 200,
+      "bytes": 12157,
+      "sha256": "662c905405c88cd5e79824ffd01b44d654081bc89f0ec7d5e8db62d237d229bc"
+    },
+    {
+      "file": "img/preload-catalog.json",
+      "status": 200,
+      "bytes": 37915,
+      "sha256": "9748c5820c8879dbc7a5a31e7eaaffea3c6a76264226c9ddec68514f5435c9fb"
+    }
+  ],
+  "all_live_bytes_match_local": true
+}

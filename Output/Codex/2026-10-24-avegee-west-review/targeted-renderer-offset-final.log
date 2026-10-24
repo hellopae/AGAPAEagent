@@ -1,0 +1,24 @@
+(node:8024) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30F: CyberHell translations move hits and worker/service points together and restore on every branch change (16.248818ms)
+✔ 30F: selected story image is 16:9; selected regional map sprites have alpha and are registered (427.909426ms)
+✔ 30F: real alpha footprints and lava mask allow paths to every station with all buildings present; old saves restore (3671.269793ms)
+✔ 30F review: new Rage image is full-bleed, so the old letterbox crop is gone from cutscene-presentation (2.70241ms)
+✔ themed sprites keep every zone station reachable with its terrain or town street layout (12717.009224ms)
+(node:8025) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Z3: production west skin has all16 sprites/preloads and20 chunks; pending borders stay closed (5.909303ms)
+✔ Z3: owner grid preserves28586 cells, one component, small blocked reserves and no dilation (4736.201358ms)
+✔ Z3: all28 owner trunk feet are unchanged, with real solid roots and suitable west sprites (9.754264ms)
+✔ Z3: actual paths reach all10 built station doors, entry, harbour and civic anchors (1212.677127ms)
+✔ Z3: NPC avoidance takes a valid detour on the entry plaza (70.913202ms)
+✔ Z3: leaving west restores Zone1/Asia geometry and original house/lamp/torch feet (9963.962205ms)
+✔ Z3: old western saves migrate exactly once and keep rewards/progress (160.5224ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17253.831484

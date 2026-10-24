@@ -1,0 +1,38 @@
+(node:23074) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30F: CyberHell translations move hits and worker/service points together and restore on every branch change (23.019795ms)
+✔ 30F: selected story image is 16:9; selected regional map sprites have alpha and are registered (740.668569ms)
+✔ 30F: real alpha footprints and lava mask allow paths to every station with all buildings present; old saves restore (5590.227523ms)
+✔ 30F review: new Rage image is full-bleed, so the old letterbox crop is gone from cutscene-presentation (2.573323ms)
+✔ themed sprites keep every zone station reachable with its terrain or town street layout (15989.520206ms)
+(node:23075) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ enabled towns use large city geometry and legacy zones retain their geometry when traveling (587.647476ms)
+✔ พื้นเมืองและภาพจริงของโซนเดิมกันธารและให้เดินข้ามสะพานถึงจุดงาน (2788.719572ms)
+✔ ยักษ์เดินกลับจุดเฝ้าจากท่าเรือและขอบล่างในทุกโซน แล้วหยุดนิ่ง (34736.623782ms)
+✔ spawnMob เลือกเฉพาะจุดขอบล่างที่ findPath เชื่อมถึงจุดเฝ้า ทุกโซน (61701.6039ms)
+✔ ยักษ์ปราบปีศาจจากท่าเรือขวาแล้วกลับจุดเฝ้าในโซนไทยและบูรพา (3774.577906ms)
+✔ ยักษ์ snap จุดแวะขณะไล่ปีศาจที่เฟรม 16ms แล้วเดินถึงเป้าหมาย (1651.310579ms)
+✔ เซฟผังเก่าโซน 2–4 ย้ายผู้เล่น ของตก ยมทูต และยักษ์ครั้งเดียว (43.691832ms)
+✔ เซฟที่ยักษ์ยืนจุดเฝ้าเก่าย้ายมาจุดใหม่ทุกโซน (8.495856ms)
+(node:23076) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Z3: production west skin has all16 sprites/preloads and20 chunks; pending borders stay closed (5.661037ms)
+✔ Z3: owner grid preserves28586 cells, one component, small blocked reserves and no dilation (7090.138787ms)
+✔ Z3: all28 owner trunk feet are unchanged, with real solid roots and suitable west sprites (11.189119ms)
+✔ Z3: actual paths reach all10 built station doors, entry, harbour and civic anchors (1363.086788ms)
+✔ Z3: NPC avoidance takes a valid detour on the entry plaza (123.753649ms)
+✔ Z3: leaving west restores Zone1/Asia geometry and original house/lamp/torch feet (12513.46671ms)
+✔ Z3: old western saves migrate exactly once and keep rewards/progress (228.875802ms)
+(node:23077) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ จุดเกิด/ปลายทางตอนเข้าโซน และจุดสำคัญของทุกโซน อยู่ในพื้นที่เดินได้และเดินถึงกัน (5915.122847ms)
+✔ เข้าโซน 2–4 ครั้งแรก: ยมบาทกับนิราออกจากประตูชายแดน ถึงแท่นและจุดประจำ ไม่ติดกลางทาง (2866.014805ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106026.2125

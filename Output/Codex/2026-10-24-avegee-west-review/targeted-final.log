@@ -1,0 +1,32 @@
+✔ Zone 1 skin resolves to exactly the files the hard-coded keys used to (3.019763ms)
+✔ Zone 1 station art: facade v2 only for the four listed stations, same box limits (0.470325ms)
+✔ disabled zones retain the old map system, no skin, no town (2.265818ms)
+✔ switching a skin on is data: `use` lists the finished groups, the rest falls back to Zone 1 (1.172614ms)
+✔ syncSceneZone puts a skin-enabled zone on the 3840x2560 city, same station sites as Zone 1, then restores (43.754016ms)
+✔ town layout per zone: overrides apply in place and Zone 1 comes back exactly (73.900825ms)
+✔ undrawn zones inherit Zone 1; Asia and west owner masks disable patches (50.817368ms)
+✔ light emitters: Zone 1 fire reader unchanged; ice / cyan / violet need their hue range (0.860378ms)
+✔ index.html: M2 modules are pinned in the import map and the touched ones carry the m2 cache-bust token (10.742974ms)
+(node:7094) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ M3b: Asia ships Q5 terrain and S2b houses without Zone 1 repairs, flow or tree tint (7.481618ms)
+✔ M3: Asia uses owner floor and leaving restores Zone 1 station geometry (166.08781ms)
+✔ M3: an old Asia save migrates once with the production skin and preserves progress (284.778007ms)
+✔ M3: title uses existing town copy in Zone 1 and the legacy Asia label without inventing copy (1.613229ms)
+(node:7095) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Z3: production west skin has all16 sprites/preloads and20 chunks; pending borders stay closed (2.048319ms)
+✔ Z3: owner grid preserves28586 cells, one component, small blocked reserves and no dilation (3581.4882ms)
+✔ Z3: all28 owner trunk feet are unchanged, with real solid roots and suitable west sprites (6.139543ms)
+✔ Z3: actual paths reach all10 built station doors, entry, harbour and civic anchors (716.002595ms)
+✔ Z3: NPC avoidance takes a valid detour on the entry plaza (58.189945ms)
+✔ Z3: leaving west restores Zone1/Asia geometry and original house/lamp/torch feet (6609.609588ms)
+✔ Z3: old western saves migrate exactly once and keep rewards/progress (107.808907ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11393.437885

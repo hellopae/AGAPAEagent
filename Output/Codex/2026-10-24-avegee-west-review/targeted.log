@@ -1,0 +1,55 @@
+✔ Zone 1 skin resolves to exactly the files the hard-coded keys used to (2.957006ms)
+✔ Zone 1 station art: facade v2 only for the four listed stations, same box limits (1.398456ms)
+✔ disabled zones retain the old map system, no skin, no town (2.035818ms)
+✔ switching a skin on is data: `use` lists the finished groups, the rest falls back to Zone 1 (0.745066ms)
+✔ syncSceneZone puts a skin-enabled zone on the 3840x2560 city, same station sites as Zone 1, then restores (42.846755ms)
+✔ town layout per zone: overrides apply in place and Zone 1 comes back exactly (76.500449ms)
+✔ undrawn zones inherit Zone 1; Asia and west owner masks disable patches (58.060396ms)
+✔ light emitters: Zone 1 fire reader unchanged; ice / cyan / violet need their hue range (0.738952ms)
+✔ index.html: M2 modules are pinned in the import map and the touched ones carry the m2 cache-bust token (5.586489ms)
+(node:6977) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ M3b: Asia ships Q5 terrain and S2b houses without Zone 1 repairs, flow or tree tint (4.180978ms)
+✔ M3: Asia uses owner floor and leaving restores Zone 1 station geometry (167.177121ms)
+✔ M3: an old Asia save migrates once with the production skin and preserves progress (286.428391ms)
+✔ M3: title uses existing town copy in Zone 1 and the legacy Asia label without inventing copy (4.310898ms)
+(node:6978) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Z3: production west skin has all16 sprites/preloads and20 chunks; pending borders stay closed (3.908647ms)
+✔ Z3: owner grid preserves28586 cells, one component, small blocked reserves and no dilation (3371.526719ms)
+✔ Z3: all28 owner trunk feet are unchanged, with real solid roots and suitable west sprites (5.114008ms)
+✔ Z3: actual paths reach all10 built station doors, entry, harbour and civic anchors (619.072527ms)
+✖ Z3: NPC avoidance takes a valid detour on the entry plaza (64.123663ms)
+✔ Z3: leaving west restores Zone1/Asia geometry and original house/lamp/torch feet (6394.195596ms)
+✔ Z3: old western saves migrate exactly once and keep rewards/progress (97.295603ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 19
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10870.744932
+
+✖ failing tests:
+
+test at tests/z3-west-integration.test.mjs:53:1
+✖ Z3: NPC avoidance takes a valid detour on the entry plaza (64.123663ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(Math.hypot(x-1920,y-2170)>22)
+  
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/.codex-worktrees/west-sprites-20261024/tests/z3-west-integration.test.mjs:56:155)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

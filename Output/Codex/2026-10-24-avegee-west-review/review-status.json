@@ -1,0 +1,17 @@
+{
+  "review": "merged 3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3",
+  "branch": "codex/west-sprites-20261024",
+  "implementation": "276a4ce",
+  "tests": {
+    "tests": 1434,
+    "pass": 1434,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "syntax": 127,
+  "pages": "built 3541c29f6d95fd3962e78d5f2ddf29b340bf1ca3",
+  "owner_visual_acceptance": "pending",
+  "cleanup": "keep worktree per handoff"
+}

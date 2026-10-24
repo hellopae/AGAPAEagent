@@ -1,0 +1,546 @@
+[
+  {
+    "key": "tree",
+    "reference": "img/theme-v4/town-tree-th-v1.webp",
+    "file": "img/theme-v4/town-tree-west-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      5,
+      9,
+      1198,
+      1306
+    ],
+    "raw_bbox_alpha8": [
+      55,
+      1,
+      1220,
+      1282
+    ],
+    "bbox_alpha8": [
+      12,
+      9,
+      1192,
+      1306
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 580460
+  },
+  {
+    "key": "thorn",
+    "reference": "img/theme-v4/town-tree-red-th-v1.webp",
+    "file": "img/theme-v4/town-tree-b-west-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      4,
+      8,
+      1195,
+      1306
+    ],
+    "raw_bbox_alpha8": [
+      6,
+      5,
+      1309,
+      1193
+    ],
+    "bbox_alpha8": [
+      4,
+      220,
+      1195,
+      1306
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 605472
+  },
+  {
+    "key": "snow",
+    "reference": "img/theme-v4/town-tree-snow-th-v1.webp",
+    "file": "img/theme-v4/town-tree-c-west-v1.webp",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "reference_bbox_alpha8": [
+      4,
+      5,
+      1195,
+      1308
+    ],
+    "raw_bbox_alpha8": [
+      82,
+      17,
+      1064,
+      1339
+    ],
+    "bbox_alpha8": [
+      116,
+      5,
+      1084,
+      1308
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 451764
+  },
+  {
+    "key": "landmark",
+    "reference": "img/theme-v4/town-palm-th-v1.webp",
+    "file": "img/theme-v4/town-landmark-west-v1.webp",
+    "canvas": [
+      1024,
+      1328
+    ],
+    "reference_bbox_alpha8": [
+      13,
+      18,
+      1019,
+      1319
+    ],
+    "raw_bbox_alpha8": [
+      10,
+      13,
+      1232,
+      1252
+    ],
+    "bbox_alpha8": [
+      13,
+      299,
+      1019,
+      1319
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 547974
+  },
+  {
+    "key": "judgment",
+    "reference": "img/theme-v4/town-judgment-th-v2.webp",
+    "file": "img/theme-v4/town-judgment-west-v2.webp",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "reference_bbox_alpha8": [
+      48,
+      10,
+      1488,
+      990
+    ],
+    "raw_bbox_alpha8": [
+      30,
+      12,
+      1507,
+      992
+    ],
+    "bbox_alpha8": [
+      48,
+      35,
+      1488,
+      990
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 481088
+  },
+  {
+    "key": "lamp",
+    "reference": "img/theme-v4/town-lamp-gold-th-v1.webp",
+    "file": "img/theme-v4/town-lamp-west-v1.webp",
+    "canvas": [
+      512,
+      1112
+    ],
+    "reference_bbox_alpha8": [
+      125,
+      8,
+      401,
+      1107
+    ],
+    "raw_bbox_alpha8": [
+      313,
+      11,
+      672,
+      1490
+    ],
+    "bbox_alpha8": [
+      130,
+      8,
+      397,
+      1107
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 104808
+  },
+  {
+    "key": "torch",
+    "reference": "img/map-zone1/torch-pillar-v1.webp",
+    "file": "img/map-zone3/torch-pillar-v1.webp",
+    "canvas": [
+      240,
+      419
+    ],
+    "reference_bbox_alpha8": [
+      68,
+      0,
+      180,
+      417
+    ],
+    "raw_bbox_alpha8": [
+      291,
+      13,
+      740,
+      1506
+    ],
+    "bbox_alpha8": [
+      68,
+      45,
+      180,
+      417
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 22024
+  },
+  {
+    "key": "rock",
+    "reference": "img/map-zone1/prop-rock-v1.webp",
+    "file": "img/map-zone3/prop-rock-v1.webp",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "reference_bbox_alpha8": [
+      108,
+      169,
+      1159,
+      1085
+    ],
+    "raw_bbox_alpha8": [
+      74,
+      73,
+      1473,
+      940
+    ],
+    "bbox_alpha8": [
+      108,
+      434,
+      1159,
+      1085
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 256958
+  },
+  {
+    "key": "house-front",
+    "reference": "img/town-district/house-front-one-v1.webp",
+    "file": "img/town-district/house-front-one-west-v1.webp",
+    "canvas": [
+      1402,
+      1122
+    ],
+    "reference_bbox_alpha8": [
+      28,
+      62,
+      1375,
+      1067
+    ],
+    "raw_bbox_alpha8": [
+      73,
+      52,
+      1466,
+      978
+    ],
+    "bbox_alpha8": [
+      28,
+      173,
+      1375,
+      1067
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 420852
+  },
+  {
+    "key": "house-right",
+    "reference": "img/town-district/house-right-one-v1.webp",
+    "file": "img/town-district/house-right-one-west-v1.webp",
+    "canvas": [
+      1438,
+      1094
+    ],
+    "reference_bbox_alpha8": [
+      10,
+      11,
+      1429,
+      1073
+    ],
+    "raw_bbox_alpha8": [
+      71,
+      7,
+      1478,
+      999
+    ],
+    "bbox_alpha8": [
+      10,
+      73,
+      1429,
+      1073
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 451822
+  },
+  {
+    "key": "house-left-two",
+    "reference": "img/town-district/house-left-two-v1.webp",
+    "file": "img/town-district/house-left-two-west-v1.webp",
+    "canvas": [
+      1036,
+      1518
+    ],
+    "reference_bbox_alpha8": [
+      6,
+      12,
+      1035,
+      1509
+    ],
+    "raw_bbox_alpha8": [
+      68,
+      12,
+      957,
+      1500
+    ],
+    "bbox_alpha8": [
+      74,
+      12,
+      968,
+      1509
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 451358
+  },
+  {
+    "key": "house-right-two",
+    "reference": "img/town-district/house-right-two-v1.webp",
+    "file": "img/town-district/house-right-two-west-v1.webp",
+    "canvas": [
+      1036,
+      1518
+    ],
+    "reference_bbox_alpha8": [
+      13,
+      4,
+      1036,
+      1494
+    ],
+    "raw_bbox_alpha8": [
+      126,
+      14,
+      940,
+      1460
+    ],
+    "bbox_alpha8": [
+      105,
+      4,
+      944,
+      1494
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 421380
+  },
+  {
+    "key": "sala",
+    "reference": "img/map-v5/st-sala-th-v2.webp",
+    "file": "img/map-v5/st-sala-west-v2.webp",
+    "canvas": [
+      1156,
+      1360
+    ],
+    "reference_bbox_alpha8": [
+      33,
+      1,
+      1129,
+      1351
+    ],
+    "raw_bbox_alpha8": [
+      124,
+      18,
+      1157,
+      1242
+    ],
+    "bbox_alpha8": [
+      33,
+      52,
+      1129,
+      1351
+    ],
+    "bottom_delta": 0,
+    "center_delta": 0.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 518982
+  },
+  {
+    "key": "tea",
+    "reference": "img/map-v5/st-tea-th-v2.webp",
+    "file": "img/theme-v4/st-tea-west-v2.webp",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "reference_bbox_alpha8": [
+      125,
+      16,
+      1217,
+      1201
+    ],
+    "raw_bbox_alpha8": [
+      30,
+      0,
+      1222,
+      1226
+    ],
+    "bbox_alpha8": [
+      125,
+      78,
+      1216,
+      1201
+    ],
+    "bottom_delta": 0,
+    "center_delta": -0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 451908
+  },
+  {
+    "key": "sawan",
+    "reference": "img/map-v5/st-sawan-th-v2.webp",
+    "file": "img/map-v5/st-sawan-west-v2.webp",
+    "canvas": [
+      1108,
+      1419
+    ],
+    "reference_bbox_alpha8": [
+      65,
+      6,
+      1042,
+      1391
+    ],
+    "raw_bbox_alpha8": [
+      54,
+      19,
+      971,
+      1514
+    ],
+    "bbox_alpha8": [
+      128,
+      6,
+      977,
+      1391
+    ],
+    "bottom_delta": 0,
+    "center_delta": -1.0,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 438980
+  },
+  {
+    "key": "krajok",
+    "reference": "img/map-v5/st-krajok-th-v2.webp",
+    "file": "img/map-v5/st-krajok-west-v2.webp",
+    "canvas": [
+      1157,
+      1360
+    ],
+    "reference_bbox_alpha8": [
+      119,
+      6,
+      1089,
+      1334
+    ],
+    "raw_bbox_alpha8": [
+      76,
+      16,
+      931,
+      1488
+    ],
+    "bbox_alpha8": [
+      218,
+      6,
+      989,
+      1334
+    ],
+    "bottom_delta": 0,
+    "center_delta": -0.5,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bytes": 332648
+  }
+]
