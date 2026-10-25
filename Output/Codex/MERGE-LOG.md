@@ -20,3 +20,6 @@
 - 2026-10-25 NDC codex/2026-10-24-nira-dock-courier → merged854f088f9ff91b5ede498ac1b105c2ec850a9fee | tests1455/1455; syntax129; early Nira courier, four-zone routes/cancel/save/hire regressions, natural browser delivery; Pages built exact merge, live4/4 byte-match; worktree retained
 
 - 2026-10-25 TEAM codex/2026-10-25-team-hud-interrogation → mergedc01167bcce2ef74f7f6aa3241e8a9e168515d8a8 | full1460/1460,synax130; finalCSSmobile23relevanttests; browser1280/390,worker rice/rest/mode/party and relief-vs-fear; Pages built exact merge,live7/7 byte-match; worktree retained;17newfeedbackitems queued separately
+
+- 2026-10-25 A1 codex/2026-10-25-guard-cutscene → merged be45a8d376a38ebd33d6cfc6338f8bc2dd5c3509 | tests1465/1465,syntax130; Guardregionalcutbeforemelee,onepayment; Pagesbuilt/live3/3; worktreeretained
+- 2026-10-25 A2 codex/2026-10-25-tea-rest → merged 04edb9638549aa3af71271bd8700d8026145dc03 | full1471/1471 at225876f,syntax131; finalcoordinate-only0009088 +19targetedpass; all4zonebrowser,cushion60s/save; Pagesbuilt/live36/36; worktreeretained

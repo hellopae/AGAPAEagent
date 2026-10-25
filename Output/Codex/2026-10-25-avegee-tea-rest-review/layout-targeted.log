@@ -1,0 +1,33 @@
+✔ all cutscene and story assets preserve proportions and keep visible content inside varied viewports (10.700774ms)
+✔ cutscene CSS cannot crop or zoom beyond the frame; every battle cutscene uses fitted layout (16.183137ms)
+(node:4227) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G1 all four item families restore only the specified resource, round and cap by maximum (52.406698ms)
+✔ G1 rice balls and medicine feed/heal real crew and Guard at Nira; hunger and stock remain correct (8.110313ms)
+✔ G1 battle recipient commands heal crew/Guard, also feed hunger, never give MP to crew (27.306179ms)
+✔ G1 Guard rest requires built pavilion, HP below full and available actor (1190.830091ms)
+✔ G1 travel, save/load, 60-second rest, inactivity, full HP and original post survive real serialization (776.886293ms)
+✔ G1 old saves load without rest fields; offline completion and dormant branch rest remain valid (726.48543ms)
+✔ G1 translated controls, bag targets, HP/progress widgets and animated pavilion use real shared state (13.667402ms)
+(node:4228) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P1: there is no bed to buy — sleeping needs only a finished tea pavilion; old teaBeds data is kept but never read (103.396559ms)
+✔ losses queue recovery without ending the game; recovery survives saving and restores full HP (236.871538ms)
+✔ tea backgrounds fill desktop and portrait canvases without distorting their aspect ratio (2.714799ms)
+✔ tea restores only MP; sleep gradually restores HP without blackout and wakes fully recovered (67.032171ms)
+(node:4229) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A2 th: shared seats, minute on arrival, no drift and save/reload (2367.521792ms)
+✔ A2 asia: shared seats, minute on arrival, no drift and save/reload (1263.455137ms)
+✔ A2 west: shared seats, minute on arrival, no drift and save/reload (963.277663ms)
+✔ A2 cyberhell: shared seats, minute on arrival, no drift and save/reload (380.435769ms)
+✔ A2 worker rest cancellation releases cushion; legacy boolean orders and old Guard duration migrate (595.330656ms)
+✔ A2 every regional seated identity and worker rest sprite exists; cushions stay off Yama seat (2.291975ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12730.896554

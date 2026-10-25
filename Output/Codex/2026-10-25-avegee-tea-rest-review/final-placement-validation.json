@@ -1,0 +1,9 @@
+{
+  "commit": "00090889a38f284610e130fe9679cd982a3c7240",
+  "full_suite_commit": "225876f",
+  "full_pass": 1471,
+  "final_placement_tests": 19,
+  "only_change_after_full_suite": "teaSeatPoint floor y coordinates .61/.715 -> .57/.68 to clear balcony posts",
+  "browser": "new final1280cyberhell; earlier all4 runtime minute checks",
+  "owner_acceptance": "pending"
+}

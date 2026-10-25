@@ -18,9 +18,9 @@
 
 เว็บ revisionc01167b · เทสต์1,460/1,460 · Pages builtตรงrevision · ไฟล์เว็บ7/7ตรง · ตรวจภาพมือถือ/เดสก์ท็อปแล้ว (รอคุณเป้ตรวจรับหน้าตา)
 
-## 2. บั๊กตัวละคร/คัตซีน — รอทำหลังข้อ1
+## 2. บั๊กตัวละคร/คัตซีน — ทำตามรายการที่ยังไม่ติ๊ก
 - [x] Guard ยักษ์เขียว: คัตซีนท่าโจมตีกลับมาแล้ว ก่อนพุ่งฟาดและหักพลังครั้งเดียว — A1 be45a8d, เทสต์1465/1465, Pages/live3/3
-- [ ] พักชา (1.png): ยมทูต/Guard/คนงานนั่งฟูกหรือนอนเตียงคนละ1นาที ไม่เดินวน; ตรวจทุกโซน
+- [x] พักชา (1.png): ยมทูต/Guard/คนงานนั่งฟูกแยกคนละ1นาที ไม่เดินวน; ตรวจทุกโซน/โหลดเซฟ — A2 04edb96, full1471/1471 + หลังปรับฟูก19/19, Pages/live36/36
 - [ ] ท่าเดินคนงาน (8.png): แก้เดินชูมือโซน2 และตรวจทุกโซน
 - [ ] คนงานทับวิญญาณขณะนำส่ง (12.png): แยกระยะทุกโซน รวมท่าเรือ/แท่น/ปลายทาง
 - [ ] ผลคำตัดสิน (9.png): หัวหน้าคอมเมนต์เป็นคัตซีนทุกครั้ง ไม่ย้อนเป็นกล่องเดิม; รางวัล/โทษต้องไม่ซ้ำ
@@ -63,3 +63,5 @@
 Guard: src/ui.js actionCutsceneSrc/playActionCutscene/command action และsrc/game.js guardHelpWhy; พักชา: src/room.js,src/game.js updateGuardRest,src/workers.js; ท่าเดิน: workers.js workerFrameRect; วิญญาณทับ: src/escort.js +workers.js advanceWorkerEscort; คัตซีนผลตัดสิน: ui.js showVerdict/pendingVerdictScene; ชายแดน: src/frontier.js CHALLENGE_STAND และbreach-approach.js; แผนที่: src/zone-skin.js/route-geometry.js. เส้นทางเหล่านี้เป็นจุดเริ่มค้นหา ยังไม่ใช่ข้อสรุปสาเหตุ.
 
 หลักฐาน A1: 2026-10-25-avegee-guard-cutscene-review/ · คิวถัดไป A2 ศาลาน้ำชา60วินาที
+
+หลักฐาน A2: 2026-10-25-avegee-tea-rest-review/ · คิวถัดไป A3 ท่าเดินคนงานชูมือ(8.png)
