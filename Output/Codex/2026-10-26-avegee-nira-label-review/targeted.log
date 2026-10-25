@@ -1,0 +1,36 @@
+(node:35699) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 1. ไม่มีปุ่มฝึกตัวละครในการ์ดห้องแล้ว แต่จุดฝึกบนพื้น → openTraining ยังอยู่ (ระบบฝึกเบื้องหลังไม่ถูกลบ) (7.913981ms)
+✔ 2. ท่ายืนของยมบาททั้ง 4 ชุดไม่ถูกพลิกจนหันซ้าย: ภาพที่วาดหันขวา (บูรพา/ปัจฉิม/นรกเครือข่าย) ขึ้นทะเบียนไม่พลิก · ภาพโซน 1 วาดหันซ้าย → พลิก (2.058969ms)
+✔ 2. corrected sword atlases draw actual frames 0–7 for every outfit; timing remains 580ms (4.676883ms)
+✔ 3. ข้อความ "เพื่อลดกรรม" / "to reduce karma" มี TH+EN และถูกวางใต้ปุ่มมอบดอกบัว (แสดงทุกขนาดจอ) (3.32136ms)
+✔ 3. ป้ายชื่อวิญญาณใต้ตัว (soulLabel) เล็กกว่าเดิม U*0.025 และใช้ในห้องประตูสวรรค์/สถานีลงทัณฑ์ (2.076066ms)
+✔ 4. หนังสือคู่มือ: หน้านาฬิกาย้อนเวลามีรูปไอเท็ม และการ์ดยมทูตทุกคนมีรูปประจำตัวที่มีไฟล์จริง (3.286666ms)
+✔ 5. กระทะทองแดงทั้ง 4 โซนมีพิกัดปากกระทะ 3 ใบเรียงซ้าย→ขวาในกรอบภาพ และ potLayout อ่านโซนจากชื่อไฟล์ฉาก (0.657221ms)
+✔ 5. drawPotSoul: วาดไฟหลังตัว → ตัววิญญาณ (ตัดในปากกระทะ) → แสงกองไฟ ด้วย canvas ล้วน ไม่แตะรูป และเรียกวาดตัววิญญาณเดิมหนึ่งครั้งต่อกระทะ (2.391499ms)
+✔ 6. เสียงท่าไม้ตาย: ชาร์จสั้น → ระเบิด/กระแทก รวม ~1.0–1.5 วิ ผลรวมความดังตอนกระแทกไม่เกิน 0.8 (17.413439ms)
+✔ 6. เคารพปุ่มปิดเสียง (สวิตช์รวม และ สวิตช์เสียงเอฟเฟกต์) · มี hook เสียงพากย์: เติมหนึ่งบรรทัดใน VOICE_LINES แล้วเล่นตามหลังจังหวะกระแทก (2106.979664ms)
+✔ 6. ui.js ใช้เสียงใหม่เฉพาะท่าไม้ตายที่ขึ้นคัตซีนจริง ที่ทั้งฉากต่อสู้และวงไต่สวน · ท่าอื่นใช้เสียงสั้นเดิม (2.451165ms)
+✔ 7. ไอคอนปิดเสียงอยู่ใน img/ui และลง manifest + preload catalog ด้วยมือ (4.373219ms)
+✔ 7. สวิตช์เสียงเพลง/เอฟเฟกต์แยกกัน: เซฟเก่าไม่มีคีย์ = เปิด · ปิดเพลง = ความดังเพลงเป็น 0 · ปิดเอฟเฟกต์ = sfx() เงียบ แต่เพลงยังดัง (2.313943ms)
+✔ 8. ปุ่ม "เข้าไป" เลื่อนลงจากยอดแหลมมาอยู่บนหลังคา (48% ของความสูงอาคาร) และไม่ใช้ class anchor-top (1.320611ms)
+✔ ไม่แตะ walk*/room walking และมินิเกมกระจก (ใบ F1/F3) · เวอร์ชัน cache-bust ขยับแล้ว (4.429274ms)
+(node:35700) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ nearest action uses one inclusive radius, disappears out of range and handles ties (2.08999ms)
+✔ every room/zone gets a reachable entrance exit; config overrides distance (1.78885ms)
+✔ repair targets cover zones, call actual builder and preserve special station actions (17.438024ms)
+✔ old saved crew training survives load (5.262695ms)
+✔ all three map actions share the radius and follow moving Nira (1.775345ms)
+(node:35701) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ zone1 town plaza reaches every entrance with initial buildings (1762.553894ms)
+✔ zone1 town plaza reaches every entrance with all buildings built (2862.036376ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5032.998689

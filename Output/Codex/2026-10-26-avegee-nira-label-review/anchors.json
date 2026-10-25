@@ -1,0 +1,38 @@
+[
+  {
+    "zone": "th",
+    "paintedTown": true,
+    "bodyHeight": 49.2,
+    "labelAboveFeet": 58,
+    "aboveHead": 8.799999999999997,
+    "reach": 100,
+    "movedWithActor": true
+  },
+  {
+    "zone": "asia",
+    "paintedTown": true,
+    "bodyHeight": 49.2,
+    "labelAboveFeet": 58,
+    "aboveHead": 8.799999999999997,
+    "reach": 100,
+    "movedWithActor": true
+  },
+  {
+    "zone": "west",
+    "paintedTown": true,
+    "bodyHeight": 49.2,
+    "labelAboveFeet": 58,
+    "aboveHead": 8.799999999999997,
+    "reach": 100,
+    "movedWithActor": true
+  },
+  {
+    "zone": "cyberhell",
+    "paintedTown": false,
+    "bodyHeight": 65.60000000000001,
+    "labelAboveFeet": 74,
+    "aboveHead": 8.399999999999991,
+    "reach": 100,
+    "movedWithActor": true
+  }
+]

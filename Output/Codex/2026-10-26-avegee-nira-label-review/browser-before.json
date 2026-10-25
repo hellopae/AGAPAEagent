@@ -1,0 +1,62 @@
+[
+  {
+    "zone": "th",
+    "nira": [
+      1938,
+      950
+    ],
+    "player": [
+      1898,
+      980
+    ],
+    "target": {
+      "id": "nira",
+      "kind": "nira",
+      "x": 1938,
+      "y": 950,
+      "bx": 1938,
+      "by": 846,
+      "anchor": "top",
+      "label": "จัดทีมยมทูต"
+    },
+    "button": {
+      "left": 661.8046875,
+      "top": 38.0426025390625,
+      "width": 102.64111328125,
+      "height": 37.9886474609375
+    },
+    "dialog": false,
+    "quickManage": true,
+    "errors": []
+  },
+  {
+    "zone": "th",
+    "nira": [
+      1938,
+      950
+    ],
+    "player": [
+      1898,
+      980
+    ],
+    "target": {
+      "id": "nira",
+      "kind": "nira",
+      "x": 1938,
+      "y": 950,
+      "bx": 1938,
+      "by": 846,
+      "anchor": "top",
+      "label": "จัดทีมยมทูต"
+    },
+    "button": {
+      "left": 661.8046875,
+      "top": 50.9918212890625,
+      "width": 102.64111328125,
+      "height": 37.9886474609375
+    },
+    "dialog": false,
+    "quickManage": true,
+    "errors": []
+  }
+]

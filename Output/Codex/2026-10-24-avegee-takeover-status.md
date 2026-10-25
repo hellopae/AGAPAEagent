@@ -90,3 +90,12 @@ UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3by
 ใบreviewระบุข้อจำกัดbrowserviewport687แม้ขอ390 จึงใช้iframe390x844ที่รันเกมจริงวัดcards316/button282x44. Ledger987/escorts23/reports1คงเดิม ไม่แสดงreportในoffice แต่maplogยังมี. หลังปิดเหลือ11คิว,maskพักรอภาพใหม่ตามคุณเป้. หลักฐาน2026-10-25-avegee-nira-office-review/.
 
 UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,productionbootconsoleempty.
+
+## UI-B4 — ป้ายจัดทีมใกล้นิรา · 26ต.ค.
+
+
+- 2026-10-26 UI-B4 codex/2026-10-26-nira-team-label → merged10c96c888984bd0a7e9eacc98f3d66049b242f5c | tested9f14daf,full1525/1525,syntax133,targeted22/22;2files2insertions2deletions;visualanchor104→58town/112→74legacy,actor/reach100unchanged;nativeThai click/E/quickmanage/zoom1–3,4zoneanchorchecks;ownerreviewpending,worktreeretained;new2–3mask/stairs andallborderdetailFX queued.
+
+รับรูปใหม่2500x1407ทั้งคู่ต้นฉบับไม่แก้และบันทึกhash. Map-Zone2.jpgเป็นภาพเส้นทางเดียวกับชายแดน2–3ที่ส่งคู่กัน วงทางขาดต้องวาดบันไดและcollisionตรงกับmaskก่อนเปิด. เพิ่มขอบเขตความชัด/VFXชายแดน1–2,2–3,3–4ในC4/L1–L3เดิม. โซน3รอฉบับแก้ไขแต่คงmaskเก่าที่ใช้ได้;โซน4/ชายแดน3–4รอข้อมูล. งานแผนที่เหล่านี้queuedไม่ได้ทำเสร็จ.
+
+UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Map-Zone2-3.jpg",
+    "source": "/Users/agapae/Desktop/untitled folder 2/Map-Zone2-3.jpg",
+    "size": [
+      2500,
+      1407
+    ],
+    "sha256": "a4c95cfe10ab3fbe3314c5157d2b3457890e626677e7cb5e619f1e3eb67f9462"
+  },
+  {
+    "name": "Map-Zone2.jpg",
+    "source": "/Users/agapae/Desktop/untitled folder 2/Map-Zone2.jpg",
+    "size": [
+      2500,
+      1407
+    ],
+    "sha256": "655cf68d1602cb66af9f05b630c387addd6d3480aa27c571ec274fd9f8e30bcc"
+  }
+]

@@ -43,3 +43,7 @@ UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3by
 - 2026-10-26 UI-B2/B3 codex/2026-10-25-nira-office-cards → mergedf61849c4bbc9f98960c0ddbc765a695d5c1e2185 | tested7c224a7,full1525/1525,syntax133,223testfiles,targeted54cache+3new;5files55insertions23deletions; concise duties/wage,3servicecards,office-onlyhire,hideoffice accounting panels without clearing data; native actual buy/share/hire costs+locked/empty,390iframebounds; firstfull6legacycacheassertionsfixedtokenorder then rerunallpass; ownerreviewpending; next floating teamlabel.
 
 UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,productionbootconsoleempty.
+
+- 2026-10-26 UI-B4 codex/2026-10-26-nira-team-label → merged10c96c888984bd0a7e9eacc98f3d66049b242f5c | tested9f14daf,full1525/1525,syntax133,targeted22/22;2files2insertions2deletions;visualanchor104→58town/112→74legacy,actor/reach100unchanged;nativeThai click/E/quickmanage/zoom1–3,4zoneanchorchecks;ownerreviewpending,worktreeretained;new2–3mask/stairs andallborderdetailFX queued.
+
+UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.

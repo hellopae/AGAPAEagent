@@ -1,0 +1,12 @@
+[
+  {
+    "file": "index.html",
+    "match": true,
+    "sha256": "5ba281450b60c58205bdf211f480669eb5ecb23aba8fd0493e36054813d20165"
+  },
+  {
+    "file": "src/proximity.js",
+    "match": true,
+    "sha256": "17b9caea4cae0cc88684b0286d458b9362250e5a0f6027dae44bbcfde48fc128"
+  }
+]
