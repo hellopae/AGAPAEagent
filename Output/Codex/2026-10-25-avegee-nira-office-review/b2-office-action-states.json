@@ -1,0 +1,32 @@
+[
+  {
+    "coin": 990,
+    "food": 10,
+    "rice": 2,
+    "workers": 1,
+    "income": 987,
+    "escorts": 23,
+    "reports": 1,
+    "errors": []
+  },
+  {
+    "coin": 990,
+    "food": 22,
+    "rice": 1,
+    "workers": 1,
+    "income": 987,
+    "escorts": 23,
+    "reports": 1,
+    "errors": []
+  },
+  {
+    "coin": 750,
+    "food": 22,
+    "rice": 1,
+    "workers": 2,
+    "income": 987,
+    "escorts": 23,
+    "reports": 1,
+    "errors": []
+  }
+]

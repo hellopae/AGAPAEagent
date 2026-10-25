@@ -1,0 +1,60 @@
+{
+  "coin": 1000,
+  "food": 0,
+  "rice": 2,
+  "workers": 1,
+  "income": 987,
+  "escorts": 23,
+  "reports": 1,
+  "errors": [],
+  "bounds": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "cards": [
+      {
+        "left": 215,
+        "right": 490.328125,
+        "width": 275.328125,
+        "scroll": 273,
+        "client": 273
+      },
+      {
+        "left": 502.328125,
+        "right": 777.6640625,
+        "width": 275.3359375,
+        "scroll": 273,
+        "client": 273
+      },
+      {
+        "left": 789.6640625,
+        "right": 1065,
+        "width": 275.3359375,
+        "scroll": 273,
+        "client": 273
+      }
+    ],
+    "buttons": [
+      {
+        "left": 232,
+        "right": 473.328125,
+        "width": 241.328125,
+        "height": 44
+      },
+      {
+        "left": 519.328125,
+        "right": 760.6640625,
+        "width": 241.3359375,
+        "height": 44
+      },
+      {
+        "left": 806.6640625,
+        "right": 1048,
+        "width": 241.3359375,
+        "height": 44
+      }
+    ],
+    "officeReports": 0
+  }
+}

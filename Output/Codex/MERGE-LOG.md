@@ -39,3 +39,7 @@
 - 2026-10-25 UI-B1 codex/2026-10-25-trial-name-bounds → merged239f506cb63e4464f1a62d0c6f252f1114009bb5 | tested86cd972,full1522/1522,syntax133;3files7insertions5deletions; shrinkable wrapping spirit name text,icon retained,rightaligned badge grows inside scene; native8boundschecks desktop1280/mobile320,390/short1024x480; ownerreviewpending; next Nira officecards; walkabilitydeferredperowner.
 
 UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3byte-match.
+
+- 2026-10-26 UI-B2/B3 codex/2026-10-25-nira-office-cards → mergedf61849c4bbc9f98960c0ddbc765a695d5c1e2185 | tested7c224a7,full1525/1525,syntax133,223testfiles,targeted54cache+3new;5files55insertions23deletions; concise duties/wage,3servicecards,office-onlyhire,hideoffice accounting panels without clearing data; native actual buy/share/hire costs+locked/empty,390iframebounds; firstfull6legacycacheassertionsfixedtokenorder then rerunallpass; ownerreviewpending; next floating teamlabel.
+
+UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,productionbootconsoleempty.

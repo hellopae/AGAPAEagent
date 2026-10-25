@@ -1,0 +1,72 @@
+✔ Zone 1 skin resolves to exactly the files the hard-coded keys used to (4.868334ms)
+✔ Zone 1 station art: facade v2 only for the four listed stations, same box limits (0.681213ms)
+✔ disabled zones retain the old map system, no skin, no town (3.937088ms)
+✔ switching a skin on is data: `use` lists the finished groups, the rest falls back to Zone 1 (1.685071ms)
+✔ syncSceneZone puts a skin-enabled zone on the 3840x2560 city, same station sites as Zone 1, then restores (42.763094ms)
+✔ town layout per zone: overrides apply in place and Zone 1 comes back exactly (60.989696ms)
+✔ undrawn zones inherit Zone 1; Asia and west owner masks disable patches (48.525403ms)
+✔ light emitters: Zone 1 fire reader unchanged; ice / cyan / violet need their hue range (0.706012ms)
+✔ index.html: M2 modules are pinned in the import map and the touched ones carry the m2 cache-bust token (5.006165ms)
+(node:30986) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ O2 I: a piece on a cell left edge that continues the previous cell right edge is erased (2.645959ms)
+✔ O2 I: pieces that do not continue the neighbour, and clean sheets, are left alone (0.306104ms)
+✔ O2 B: Nira attack/heal rows opt out of the ally mirror; on a v1 sheet idle/hurt rows keep it (drawn facing left) — P9: v2 sheets face right in every row (0.543869ms)
+✔ O2 B: Yama own slash / flame charge sets the formation attack key (forward lunge) (2.879581ms)
+✔ O2 A/E: hurt poses wait for a covering cutscene card; Nira hurt row takes the same hold (2.56232ms)
+✔ O2 D: on a narrow stage the command column may sit under the squad at the left edge (2.213165ms)
+✔ O2 J: cutscene card is a clean rectangle and the push-in never scales below 1 (1.316485ms)
+✔ O2 K: Yama overlay canvases use a device-resolution backing store (0.521967ms)
+✔ O2: touched modules carry the -o2 cache-bust suffix (2.056277ms)
+(node:30987) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ five stars keep special praise; ordinary grades now receive an A5 review (19.144151ms)
+✔ rebuke exactly where DAD.redsToCome counts red (score < 50), not by star count (6.733405ms)
+✔ rebuke tier follows the red streak 1 -> 2 -> 3, and a green verdict resets it (5.508142ms)
+✔ tier 1 drops the silent-look line that would contradict the rebuke; tiers 2 and 3 keep the original warning (4.333693ms)
+✔ rebuke scene shows the same stars the verdict got (30 points = 1 star, not 0) (3.305186ms)
+✔ a middle verdict without a soul id still builds a review without throwing (1.131259ms)
+✔ praise reports the reward the game already granted and changes no numbers (2.001918ms)
+✔ reward line is hidden when there is no reward text (0.262261ms)
+✔ save then load while the scene is pending: same scene, nothing granted again (15.288599ms)
+✔ queued: scene opens before the red warning / Yama fight and never over another dialog; skippable (2.098606ms)
+✔ lines: variables are filled, never leak braces, and unmet variables fall back to a plain line (0.948908ms)
+✔ art slots exist for every zone and kind (P9: all four zones have their own Codex praise/scold pair) (0.649875ms)
+✔ star badge is anchored: the .score badge scales around its own anchor and quiet verdicts skip it (3.780748ms)
+✔ small items: kan clue text says พลังเวท, not MP; cache-bust suffixes (2.210351ms)
+(node:30988) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P5b boss zone 3: cane cutscene points at the v2 art, other zones unchanged, file is 1375x768 (4.583554ms)
+✔ P5b pier: r3-c3 repair registered once, box covers the pier plus feather, file is a full 1024 chunk (2.690442ms)
+✔ P5b walk mask is untouched: pier floor strip still walkable, water beside it not (5.772158ms)
+✔ P5b worker sheet v2: 1280x3840, v1 stays for every zone and for thumbnails (P9: all four zones now have a v2 entry) (5.676078ms)
+✔ P5b worker rows follow what the worker is doing (v2) with natural escort walking on both atlas versions (0.942167ms)
+✔ P5b drawWorker reads the 12-row v2 sheet by row and the 4-row v1 sheet for a zone without v2 (P9: only an unknown zone falls back now) (1.171574ms)
+(node:30989) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P6 cauldron: painted flames behind AND in front of the soul, sweat drawn, red tint via source-atop (never ctx.filter) (4.832589ms)
+✔ P6 cauldron: red flash pulses over time; reduced-motion = constant tint, static flames/sweat/embers (3.707465ms)
+✔ P6 cauldron: wired into the room, no per-frame ctx.filter, assets present, cache-bust suffixes (2.60909ms)
+✔ P6 minigame: every input counts a hit inside the green window (mouse, touch, portrait tap, tap anywhere, Space/Enter without focus) (24.570761ms)
+✔ P6 minigame: a press never vanishes — wait period gives feedback without a miss, the button is never disabled (1.847506ms)
+✔ P6 minigame: Space keydown + the keyup click it spawns count once; Close button keys are ignored; non-primary mouse buttons ignored (2.161982ms)
+✔ P6 minigame: judged at the moment of the press (event time), not the last painted frame; early/late is reported (5.022441ms)
+✔ P6 minigame: reward/difficulty numbers unchanged (window ±0.12 radius, 5 hits / 3 misses, 650 ms retry) (0.834919ms)
+✔ P6 minigame: cleanup — stop() removes every listener and pending flash timer (1.843503ms)
+(node:30990) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P8 TUTOR.fight hint numbers match BATTLE (mp cost, lose hp, lose order) and no map-pickup claim (3.675596ms)
+✔ P8 stale claims are gone from TUTOR / explainBar / openHelp / meThought (6.044921ms)
+✔ P8 ending text removed per owner decision (no "ทายาทบัลลังก์" / "ต่ำกว่า 25") (5.847378ms)
+✔ P8 krajok copy has no Kan and matches the mirror minigame (TH + EN) (0.807919ms)
+✔ P8 g5 final-attempt messages exist in TH and EN; krata-qte picks them via state.done (1.266469ms)
+✔ P8 lock badges go through i18n (rank in EN) (3.038636ms)
+✔ P8 index.html cache-bust carries -p8 on every touched file (2.813258ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 54
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 399.544414

@@ -81,3 +81,12 @@
 เกม239f506,tested86cd972,full1522/1522,syntax133. Outerbadgeจำกัดความกว้างแต่innerflexยังnowrap/minwidthautoทำให้ข้อความ423pxล้นป้าย157px. เปลี่ยนเป็นshrinkablewrappingfulltext,iconไม่ยุบ,ป้ายขยายเข้าในฉาก. ตรวจ8nativeDOMcasesdesktop1280/mobile320,390/short1024x480ทั้งไทยยาว/ไม่มีspace/ชื่อสั้น,ข้อความอยู่ในป้ายและป้ายอยู่ในstage. ไม่มีconsoleerror. คิวเหลือ13,ถัดไปโต๊ะนิรา13.png. คุณเป้ให้ข้ามงานตำแหน่งเดินได้จนส่งรูปใหม่;ไม่มีการแก้map/collisionในงานนี้. ภาพรอตรวจรับ.
 
 UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3byte-match.
+
+## UI-B2/B3 — โต๊ะนิราการ์ดและตัดรายละเอียด · 26ต.ค.
+
+
+- 2026-10-26 UI-B2/B3 codex/2026-10-25-nira-office-cards → mergedf61849c4bbc9f98960c0ddbc765a695d5c1e2185 | tested7c224a7,full1525/1525,syntax133,223testfiles,targeted54cache+3new;5files55insertions23deletions; concise duties/wage,3servicecards,office-onlyhire,hideoffice accounting panels without clearing data; native actual buy/share/hire costs+locked/empty,390iframebounds; firstfull6legacycacheassertionsfixedtokenorder then rerunallpass; ownerreviewpending; next floating teamlabel.
+
+ใบreviewระบุข้อจำกัดbrowserviewport687แม้ขอ390 จึงใช้iframe390x844ที่รันเกมจริงวัดcards316/button282x44. Ledger987/escorts23/reports1คงเดิม ไม่แสดงreportในoffice แต่maplogยังมี. หลังปิดเหลือ11คิว,maskพักรอภาพใหม่ตามคุณเป้. หลักฐาน2026-10-25-avegee-nira-office-review/.
+
+UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,productionbootconsoleempty.

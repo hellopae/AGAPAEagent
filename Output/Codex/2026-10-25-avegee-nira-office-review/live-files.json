@@ -1,0 +1,22 @@
+[
+  {
+    "file": "index.html",
+    "match": true,
+    "sha256": "779472f58e99d8b915b5dbb9af50151f9dabcdf1ee65042858c993570dec451c"
+  },
+  {
+    "file": "src/ui.js",
+    "match": true,
+    "sha256": "1b30bb007d38e07bc11de67099b65445c2123dd1232856ba4db73c8106457646"
+  },
+  {
+    "file": "src/worker-ui.js",
+    "match": true,
+    "sha256": "ad1deeddf79a1c5a35c3150445d029a1202662975b39c8ec310e0406f7737657"
+  },
+  {
+    "file": "src/team-hud.css",
+    "match": true,
+    "sha256": "da0f17a19619e4c33c6db06c4a007d7defef39d20ab6dbb2be2d0371df4b1799"
+  }
+]

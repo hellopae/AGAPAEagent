@@ -1,0 +1,51 @@
+{
+  "source": "native iframe QA visible AX state; previously asserted before browser-after.json was updated by later desktop capture",
+  "viewport": [
+    390,
+    844
+  ],
+  "cards": [
+    {
+      "left": 37,
+      "right": 353,
+      "width": 316,
+      "scroll": 314,
+      "client": 314
+    },
+    {
+      "left": 37,
+      "right": 353,
+      "width": 316,
+      "scroll": 314,
+      "client": 314
+    },
+    {
+      "left": 37,
+      "right": 353,
+      "width": 316,
+      "scroll": 314,
+      "client": 314
+    }
+  ],
+  "buttons": [
+    {
+      "left": 54,
+      "right": 336,
+      "width": 282,
+      "height": 44
+    },
+    {
+      "left": 54,
+      "right": 336,
+      "width": 282,
+      "height": 44
+    },
+    {
+      "left": 54,
+      "right": 336,
+      "width": 282,
+      "height": 44
+    }
+  ],
+  "officeReports": 0
+}
