@@ -23,3 +23,5 @@
 
 - 2026-10-25 A1 codex/2026-10-25-guard-cutscene → merged be45a8d376a38ebd33d6cfc6338f8bc2dd5c3509 | tests1465/1465,syntax130; Guardregionalcutbeforemelee,onepayment; Pagesbuilt/live3/3; worktreeretained
 - 2026-10-25 A2 codex/2026-10-25-tea-rest → merged 04edb9638549aa3af71271bd8700d8026145dc03 | full1471/1471 at225876f,syntax131; finalcoordinate-only0009088 +19targetedpass; all4zonebrowser,cushion60s/save; Pagesbuilt/live36/36; worktreeretained
+
+- 2026-10-25 A2-120s codex/2026-10-25-tea-two-minutes → merged d5fd2680a02bc87332a1e9a555b5633067aa77bd | full1471/1471,syntax131; owner duration120s for crew/Guard/workers; native120074ms completion, old60s save retains start; Pagesbuilt/live3/3; worktree and old branch retained

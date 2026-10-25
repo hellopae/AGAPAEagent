@@ -1,0 +1,72 @@
+(node:6285) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G1 all four item families restore only the specified resource, round and cap by maximum (8.51821ms)
+✔ G1 rice balls and medicine feed/heal real crew and Guard at Nira; hunger and stock remain correct (2.280092ms)
+✔ G1 battle recipient commands heal crew/Guard, also feed hunger, never give MP to crew (5.837986ms)
+✔ G1 Guard rest requires built pavilion, HP below full and available actor (293.510419ms)
+✔ G1 travel, save/load, 120-second rest, inactivity, full HP and original post survive real serialization (185.33859ms)
+✔ G1 old saves load without rest fields; offline completion and dormant branch rest remain valid (174.72456ms)
+✔ G1 translated controls, bag targets, HP/progress widgets and animated pavilion use real shared state (3.892429ms)
+(node:6286) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ G4 item ids: zone variants are gone; every zone shelf sells the same four ids (1.703941ms)
+✔ G4 names: Thai and English names are identical across zones (4 names), from one source (1.473126ms)
+✔ G4 old saves: zone-variant ids merge into the new items, counts add up, nothing lost (inventory, map drops, codex) (16.549534ms)
+✔ G4 Large items: restore 100%, zone 2+ shelf only, ~1.8x price (0.657605ms)
+✔ G4 Large items: buy in zone 2+, refused in the Thai zone, usable by Yama / reaper / Guard / in battle (11.19923ms)
+✔ G4 tea rest for a regular reaper: needs pavilion + HP < 100 + standing; travel, 120 s rest, save/load, full HP, back to post (477.11293ms)
+✔ G4 tea rest: Guard keeps working through the same method (restGuard alias) and the dialog lists regular reapers too (179.116976ms)
+✔ G4 enemy atk: cyber breach and the final-line waves hit harder than before G4 (0.455057ms)
+✔ G4 weapon cooldown: drain triggers, then rests 3 turns, strike bonus never stops; new battle starts ready (10.081511ms)
+✔ G4 weapon cooldown: nothing happens (and nothing is rolled) while resting, for burn / crit / replay (1.472983ms)
+✔ G4 weapon cooldown is shown on screen: HUD badge + attack button, TH and EN text, effect line mentions it (2.736027ms)
+(node:6287) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ J3 bag rejects other recipients; Nira food restores hunger only and medicine HP only (8.92291ms)
+✔ J3 fallen guard stays out of current battle, returns to map/reload at HP 1 without auto healing (21.556642ms)
+✔ J3 guard travels on map, rests exactly 120 s across saves, resumes original post and automatic combat slot (292.339465ms)
+✔ J3 UI exposes per actor bag-stock controls and current zone guard, without old bag or Nira bulk controls (6.062002ms)
+(node:6288) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ L3 rest: HP 97 reaper can walk to the tea pavilion, rests, returns to post at full HP (321.797282ms)
+✔ L3 rest: crew in the battle team may rest; he sits out while resting but stays on the team (176.727897ms)
+✔ L3 rest UI: button for everyone below full HP, disabled with a reason for full HP / no pavilion / battle (3.116899ms)
+✔ L3 hypnosis: level 4 in zone 1 no longer unlocks it (no power, no discovery popup, interrogation/battle blocked) (1.928577ms)
+✔ L3 hypnosis: unlocked after winning the zone-3 frontier boss, announced once (80.872771ms)
+✔ L3 hypnosis data: reward on the boss event, no "buy from boon" wording left (1.243751ms)
+✔ L3 old saves: hypnosis from level 4 is revoked; only saves that beat the zone-3 boss keep it (15.34069ms)
+(node:6289) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P1: there is no bed to buy — sleeping needs only a finished tea pavilion; old teaBeds data is kept but never read (26.700512ms)
+✔ losses queue recovery without ending the game; recovery survives saving and restores full HP (57.199763ms)
+✔ tea backgrounds fill desktop and portrait canvases without distorting their aspect ratio (0.367997ms)
+✔ tea restores only MP; sleep gradually restores HP without blackout and wakes fully recovered (15.365737ms)
+(node:6290) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A2 th: shared seats, two minutes on arrival, no drift and save/reload (556.68115ms)
+✔ A2 asia: shared seats, two minutes on arrival, no drift and save/reload (334.135499ms)
+✔ A2 west: shared seats, two minutes on arrival, no drift and save/reload (226.281427ms)
+✔ A2 cyberhell: shared seats, two minutes on arrival, no drift and save/reload (86.029875ms)
+✔ A2 worker rest cancellation releases cushion; legacy boolean orders and old Guard duration migrate (156.181316ms)
+✔ A2 every regional seated identity and worker rest sprite exists; cushions stay off Yama seat (1.089303ms)
+(node:6291) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (12.217257ms)
+✔ workers build without Taan and cannot open the building before physical inspection (352.537332ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (196.576356ms)
+✔ when no worker is hired Taan still builds and repairs normally (1.505887ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (2.293366ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.980294ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.67325ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (164.171081ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (147.538978ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (144.108381ms)
+✔ a keeper collects successive judged souls one journey at a time and a cook can leave for an assigned case (418.67713ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1715.289233

@@ -1,0 +1,21 @@
+{
+  "commit": "d5fd2680a02bc87332a1e9a555b5633067aa77bd",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "44df1f39a5ef69c611f6a932490e4e21b6ef22b0bcdec51e0e7c6c309ccd1326",
+      "matches": true
+    },
+    {
+      "path": "src/ui.js",
+      "sha256": "767664b142c5bccfc42460d5e3611cb5e4c3aeda49694c0f634fe2428b5b5d7f",
+      "matches": true
+    },
+    {
+      "path": "src/tea-staff-rest.js",
+      "sha256": "ad7cdea84b1829ea6eb7c35ff2bd449dfa1ef91e6248a0af8110f86a6c9143a6",
+      "matches": true
+    }
+  ],
+  "passed": true
+}
