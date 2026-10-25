@@ -1,0 +1,17 @@
+{
+  "fonts": [
+    {
+      "text": "ปีศาจบุกที่ชายแดน",
+      "font": "600 20px \"IBM Plex Sans Thai\", system-ui, sans-serif"
+    },
+    {
+      "text": "ทัณฑสูร",
+      "font": "600 20px \"IBM Plex Sans Thai\", system-ui, sans-serif"
+    }
+  ],
+  "coin": 100000,
+  "food": 1000,
+  "event": "pending",
+  "dialog": true,
+  "errors": []
+}

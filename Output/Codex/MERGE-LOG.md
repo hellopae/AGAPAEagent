@@ -47,3 +47,5 @@ UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,produ
 - 2026-10-26 UI-B4 codex/2026-10-26-nira-team-label → merged10c96c888984bd0a7e9eacc98f3d66049b242f5c | tested9f14daf,full1525/1525,syntax133,targeted22/22;2files2insertions2deletions;visualanchor104→58town/112→74legacy,actor/reach100unchanged;nativeThai click/E/quickmanage/zoom1–3,4zoneanchorchecks;ownerreviewpending,worktreeretained;new2–3mask/stairs andallborderdetailFX queued.
 
 UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.
+
+- 2026-10-26 B5a codex/2026-10-26-frontier-name-size → merged308bf8e61601274fc2e4bf0c11e249007e250d9c | tested2b224e7,full1526/1526,syntax133,targeted9/9with8DPRzonecases;3files22insertions6deletions;DPRaware10–14CSSpxname labels only;nativebefore35/2→20/2,390mobile12px,actualtalkintro,resources/eventunchanged;Pagesbuilt/live2/2;ownerreviewpending;B5brelocationstillqueued,worktreeretained.

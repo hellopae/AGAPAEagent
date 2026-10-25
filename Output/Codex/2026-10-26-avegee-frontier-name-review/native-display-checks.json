@@ -1,0 +1,30 @@
+{
+  "desktop": {
+    "cssCanvas": [
+      1280,
+      720
+    ],
+    "backingCanvas": [
+      2560,
+      1440
+    ],
+    "dpr": 2,
+    "beforeFont": 35,
+    "afterFont": 20,
+    "beforeCssPx": 17.5,
+    "afterCssPx": 10
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 1,
+    "fontCssPx": 12
+  },
+  "talkOpensActualIntro": true,
+  "coin": 100000,
+  "food": 1000,
+  "event": "pending",
+  "ownerVisualAcceptance": "pending"
+}

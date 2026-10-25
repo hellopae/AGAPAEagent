@@ -1,0 +1,407 @@
+import {bossGuideWaiting,bossGuideDismissed} from './boss-guides.js';
+import { followCamera, drawFrontierAtmosphere } from './scene-style.js';
+import { breachApproachActors } from './breach-approach.js';
+import { actorStanding } from './actor-recovery.js';
+import { exitStep, drawExitMarker } from './exit-marker.js';
+// src/frontier.js — แผนที่ชายแดน: เดินสำรวจ + เลือกศัตรูเข้าสู้เอง (ข้อ A ชุด 14 คุณเป้ 26 ก.ย. 2569)
+//
+// เดิม: กดเข้าชายแดน → จัดทีม → ตัดเข้าฉากสู้ทันที (สุ่มศัตรู) → ชนะ เก็บของ → กลับ "แผนที่โซน"
+// ตอนนี้:  กดเข้าชายแดน → จัดทีม (หน้าเดิม ไม่แตะ) → เข้า "แผนที่ชายแดน" (ไฟล์นี้) →
+//   ยมบาทน้อยเดินเอง (คลิก/แตะ/WASD เหมือนแผนที่หลัก) จากประตูบน → ศัตรูค่อย ๆ บุกจากประตูล่าง
+//   จนถึงจุดในสนามแล้ว "หยุดยืนรอ" (ไม่ไล่ล่าเรา — ดูเหตุผลเลือกแบบนี้ในรายงาน Toby ข้อ A6) →
+//   เดินเข้าไปใกล้ตัวไหน ปุ่ม "เริ่มต่อสู้" ลอยขึ้นเหนือหัวตัวนั้น → กดแล้วตัดเข้าฉากต่อสู้เดิมกับตัวนั้น
+//   เป๊ะ (ไม่แตะฉากต่อสู้/ค่าพลัง/คูลดาวน์เลย) → ชนะ เก็บของที่ตก → กลับมา "แผนที่ชายแดน" ต่อ (ไฟล์นี้)
+//   ตัวที่แพ้หายไปจากสนาม ตัวอื่นยังยืนรออยู่เหมือนเดิม
+//
+// เก็บ "เซสชันชายแดน" (ตำแหน่งยมบาทน้อย + รายชื่อศัตรูที่ยังยืนอยู่) ไว้ในตัวแปรโมดูลนี้เอง
+// **ไม่ผ่าน g.snapshot()/restore()** — ตั้งใจ ใบงานอนุญาตให้ "ออกเกมกลางชายแดนแล้วกลับมา = เริ่ม
+// ชายแดนใหม่ได้" (ข้อ A8) เพราะของที่ทิ้งไว้ในสนามไม่มีค่าอะไรต้องรักษา (ต่างจากสถานี/ยมทูตในโซน)
+// อยู่ในหน่วยความจำ JS เฉย ๆ จึงอยู่รอดข้าม "เปิด/ปิดกล่องระหว่างไปสู้แล้วกลับมา" ได้ในหนึ่งเซสชันเล่น
+// (ui.js เปิด/ปิด <dialog> ใบเดียวกันสลับกับฉากต่อสู้ ไม่ใช่โหลดหน้าใหม่) แต่หายไปเมื่อโหลดหน้าใหม่จริง ๆ
+
+import { MOB, CHALLENGE_STAND, BOSS_NAMES } from './data.js';
+import { t as tr } from './i18n.js';
+import { drawStandee, drawHeroWalk } from './art.js';
+import { walkDirection } from './walk-direction.js';
+import { walkStridePx, walkSlices, walkDrawDistance, WALK_GRACE_MS } from './walk-motion.js';
+import { frontierWalkable, frontierPath, frontierSegmentClear, liveBlockers } from './frontier-navigation.js';
+
+// ทางเดินและสิ่งกีดขวางแต่ละโซนอยู่ใน frontier-navigation.js
+const HERO_H = 0.085;
+const MOB_H = 0.088;
+const BOSS_H = 0.1725; // authored/boss scale stays at the former 0.115 * 1.5
+const REACH = 0.09;                 // ระยะเดินเข้าใกล้ศัตรูแล้วปุ่ม "เริ่มต่อสู้" โผล่เหนือหัวตัวนั้น
+const GATE = [0.5, 0.19], NIRA = [0.575, 0.265], GUARD = [0.43, 0.265];
+export const FRONTIER_EXIT = Object.freeze([.5,.90]);
+export const nearFrontierExit = p => Math.hypot(p.x-FRONTIER_EXIT[0],p.y-FRONTIER_EXIT[1])<=REACH;
+export const nearFrontierGate = p => Math.hypot(p.x - GATE[0], p.y - GATE[1]) <= REACH;
+// P5: ปุ่มกลับเข้าโซน/ออกนอกชายแดนถูกตัดแล้ว — เดินถึงวงนี้ = ออกเลย · วงแคบกว่า REACH เดิม
+// (REACH .09 ของประตูบนทับระยะคุยกับนิรา — ยืนคุยนิราแล้วโดนเตะออกไม่ได้) ยังเป็นจุดเดียวกับที่ปุ่มเคยอยู่
+export const FRONTIER_EXIT_TRIGGER = 0.055;
+export const atFrontierGate = p => Math.hypot(p.x - GATE[0], p.y - GATE[1]) <= FRONTIER_EXIT_TRIGGER;
+export const atFrontierExit = p => Math.hypot(p.x - FRONTIER_EXIT[0], p.y - FRONTIER_EXIT[1]) <= FRONTIER_EXIT_TRIGGER;
+export const frontierAnchors = zone => ({ GATE, NIRA:zone === 'cyberhell' ? [0.548,0.30] : NIRA, GUARD:zone === 'cyberhell' ? [0.46,0.30] : GUARD });
+export const nearFrontierNira = (p, zone = 'th') => { const {NIRA} = frontierAnchors(zone); return Math.hypot(p.x - NIRA[0], p.y - NIRA[1]) <= REACH; };
+const SPAWN_EVERY = 2600;           // ลองสร้างศัตรูใหม่ทุกเท่านี้ (ms) ถ้ายังไม่เต็มจอ
+const MOVE_SPEED = 0.00015;         // สัดส่วนพื้นที่เดินต่อ ms — ศัตรูเดินจากขอบเข้ามาจุดในสนาม
+export const maxOnScreen = wave => wave >= 4 ? 3 : 2;
+
+// เซสชันเดียวต่อโซน — สลับโซนแล้วเริ่มใหม่ (ของเก่าทิ้ง ตรงกับกติกาเดิมที่แต่ละโซนมีชายแดนแยกกัน)
+let session = null;   // { zone, player:{x,y,tx,ty,face}, enemies:[{id,kindIdx,x,y,tx,ty,arrived,level}], nextId }
+
+/** ได้เซสชันของโซนนี้ — สร้างใหม่ถ้ายังไม่มีหรือเพิ่งย้ายโซน */
+export function frontierSession(zone) {
+  if (!session || session.zone !== zone) {
+    session = { zone, player: { x: 0.485, y: 0.35, tx: null, ty: null, face: 1 },
+                enemies: [], nextId: 1 };
+  }
+  return session;
+}
+/** ล้างเซสชันด้วยมือ — ปัจจุบัน ui.js ไม่เรียกจุดไหนแล้ว (กด "กลับแผนที่โซน" แค่ปิดกล่อง
+ *  ไม่ล้างสนามรบ จะได้ออกไปทำธุระอื่นแล้วกลับมาสู้ต่อได้) เก็บฟังก์ชันนี้ไว้เผื่อใช้ debug/อนาคต
+ *  เซสชันเปลี่ยนเองอัตโนมัติอยู่แล้วตอนย้ายโซน (ดู frontierSession ด้านบน) */
+export function clearFrontierSession() { session = null; }
+
+/** ชนะฉากต่อสู้แล้ว — ลบตัวที่แพ้ออกจากแผนที่ชายแดน (ui.js เรียกหลัง endBattle เพราะตอนนั้น
+ *  makeFrontierWalk ตัวเก่าถูก destroy() ไปแล้ว ไม่มี instance ให้เรียก แต่ session ยังอยู่) */
+export function removeSessionEnemy(zone, id) {
+  if (!session || session.zone !== zone || id == null) return;
+  const i = session.enemies.findIndex(e => e.id === id);
+  if (i >= 0) session.enemies.splice(i, 1);
+}
+
+const rand = (a, b) => a + Math.random() * (b - a);
+function edgePoint() {
+  return [rand(0.47, 0.53), 0.955];
+}
+function insidePoint() {
+  return [rand(0.20, 0.80), rand(0.47, 0.70)];
+}
+
+function loadImg(src) {
+  const el = new Image();
+  const rec = { el, ok: false };
+  el.onload = () => { rec.ok = true; };
+  el.onerror = () => { rec.ok = false; };
+  el.src = src;
+  return rec;
+}
+
+function label(ctx, text, x, y, size, color) {
+  ctx.font = `600 ${Math.round(Math.max(10, size))}px "IBM Plex Sans Thai", system-ui, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(0,0,0,.8)';
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = color; ctx.fillText(text, x, y);
+}
+
+/** แผนที่ชายแดนหนึ่งโซน — เรียก destroy() ทุกครั้งที่ปิดหน้า/จะไปสู้ ไม่งั้นลูปเฟรมค้าง
+ *  cv = canvas · g = instance เกม · opts = { bg, kinds (MOB.kinds ที่กรองแล้วของโซนนี้),
+ *  wave, alive, fab (ปุ่ม DOM "เริ่มต่อสู้" ที่ ui.js สร้างไว้ให้ — ไฟล์นี้แค่โชว์/ซ่อน/จัดตำแหน่ง) } */
+/** A sentenced frontier captain returns as a friendly post NPC, never as another spawned foe. */
+export function releasedFrontierBoss(g, { guide = false, invasion = false } = {}) {
+  if(invasion || g.bossJustice?.active)return null;
+  const cases=Object.values(g.bossJustice?.ledger||{});
+  const c=cases.reverse().find(c=>c.zone===g.zone&&c.phase==='released'&&!c.final&&
+    (c.frontierBoss || /^boss-frontier(?:-|$)/.test(c.art||'')));
+  if(!c)return null;
+  const post=guide?{x:.64,y:.60}:CHALLENGE_STAND[g.zone];
+  if(!post)return null;
+  return {id:`released:${c.id}`,docket:c.id,art:c.art,name:c.name,sourceZone:c.zone,...post};
+}
+
+export function makeFrontierWalk(cv, g, opts) {
+  const {GATE,NIRA,GUARD} = frontierAnchors(g.zone);
+  // kinds = ดัชนีของ MOB.kinds ที่ใช้ได้ในโซนนี้ (g.zoneDef().mobs — ui.js กรองมาให้แล้ว)
+  const { bg, kinds, wave, alive, fab, nira, challenge, guide, onGate, onExit } = opts;
+  const invasion = breachApproachActors(g.zone, opts.invasionKey);
+  const sess = frontierSession(invasion.length ? `${g.zone}:${opts.invasionKey}` : g.zone);
+  if (invasion.length) sess.enemies = invasion;
+  // Replay boss is an NPC: keep spawned enemy counts, drops and waves unchanged.
+  const guideBoss=!invasion.length&&bossGuideWaiting(g)?CHALLENGE_STAND[g.zone]:null;
+  // Zone 1's replay boss used to live in the cave; once the guide has said farewell he stands at the frontier stand like the others.
+  const challengeBoss = !guideBoss&&(g.zone!=='th'||bossGuideDismissed(g)) && !invasion.length && g.challengeUnlocked?.() ? CHALLENGE_STAND[g.zone] : null;
+  const releasedBoss=releasedFrontierBoss(g,{guide:!!guideBoss,invasion:!!invasion.length});
+  const P = sess.player;
+  if (!frontierWalkable(g.zone, P.x, P.y)) { P.x = .485; P.y = .35; }
+  let route = P.tx == null ? [] : frontierPath(g.zone,[P.x,P.y],[P.tx,P.ty]);
+  const routes = new Map();
+  const KEY = {};
+  let raf = 0, last = performance.now(), dead = false, nextSpawn = 500;
+  let box = { ox: 0, oy: 0, w: 1, h: 1 };
+  let nearId = null;
+  let camera = null, cameraTime = performance.now();
+  const reducedMotion = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
+  let walkDistance = 0, direction = 'down', simClock = 0, movedSim = -1e9;   // F1: นาฬิกาของการเดินเอง ไม่ผูกกับเฟรมวาด
+  let bgCache = null;   // F1: ฉากที่ย่อ/ขยายตามจอแล้ว วาดทีเดียว (ดู draw)
+
+  const bgRec = loadImg(bg);
+
+  const px = u => box.ox + u * box.w, py = v => box.oy + v * box.h;
+  const unit = () => Math.min(box.w, box.h);
+  // 30D — ยมบาทเดินทับศัตรู/นิรา/ยักษ์ที่ยืนอยู่ไม่ได้: วงรีรอบเท้าแต่ละตัว (พิกัด 0–1 · ขนาดตามตัวละครที่วาด)
+  const blockers = () => {
+    const rx = unit() * 0.045 / box.w, ry = unit() * 0.022 / box.h;
+    const list = sess.enemies.map(en => [en.x, en.y, rx, ry]);
+    if (challengeBoss) list.push([challengeBoss.x, challengeBoss.y, rx, ry]);
+    list.push([NIRA[0], NIRA[1], rx, ry]);
+    if (actorStanding(g.guard)) list.push([GUARD[0], GUARD[1], rx, ry]);
+    return list;
+  };
+  let replanAt = 0;
+  // P5: เปิดหน้ามายืนที่จุดออกอยู่แล้ว (เพิ่งกลับจากเส้นทาง/ศึก) ไม่เด้งออก — ต้องเดินออกจากวงก่อน
+  let gateLatched = true, exitLatched = true;
+
+  function spawnOne() {
+    if (invasion.length) return;
+    if (sess.enemies.length >= maxOnScreen(wave) || !kinds.length) return;
+    const kindIdx = kinds[Math.floor(Math.random() * kinds.length)];
+    const [ex, ey] = edgePoint();
+    let [tx, ty] = insidePoint();
+    // keep spawned enemies from stopping on top of the replay boss NPC
+    const free = (x,y) => frontierWalkable(g.zone,x,y) && (!challengeBoss || Math.hypot((x-challengeBoss.x)/.09,(y-challengeBoss.y)/.07) > 1);
+    for (let tries=0; tries<50 && !free(tx,ty); tries++) [tx,ty]=insidePoint();
+    if (!free(tx,ty)) return;
+    sess.enemies.push({ id: sess.nextId++, kindIdx, x: ex, y: ey, tx, ty, arrived: false, level: wave });
+  }
+
+  const onKey = e => {
+    if (/input|textarea/i.test(e.target.tagName)) return;
+    const k = e.key.toLowerCase();
+    if (['arrowup', 'arrowdown', 'arrowleft', 'arrowright', 'w', 'a', 's', 'd'].includes(k)) {
+      e.preventDefault();
+      KEY[k] = e.type === 'keydown';
+      if (e.type === 'keydown') { P.tx = null; P.ty = null; route = []; }
+    }
+  };
+  addEventListener('keydown', onKey);
+  addEventListener('keyup', onKey);
+
+  const onDown = e => {
+    const r = cv.getBoundingClientRect();
+    const cx = (e.clientX - r.left) / r.width * cv.width;
+    const cy = (e.clientY - r.top) / r.height * cv.height;
+    route = frontierPath(g.zone, [P.x,P.y], [(cx-box.ox)/box.w,(cy-box.oy)/box.h], blockers());
+    const target=route.at(-1);
+    P.tx=target?.[0] ?? null; P.ty=target?.[1] ?? null;
+  };
+  cv.addEventListener('pointerdown', onDown);
+
+  function step(dt) {
+    const beforeX = P.x, beforeY = P.y;
+    simClock += dt;
+    // ความเร็ว = ความสูงตัวละคร/วินาที (walk-motion.js) แปลงเป็นหน่วยของด้านสูงฉาก — เท่ากับในห้องและบนแผนที่โซน
+    const sp = walkStridePx(unit() * HERO_H, dt) / box.h;
+    let dx = 0, dy = 0;
+    if (KEY.a || KEY.arrowleft) dx -= 1;
+    if (KEY.d || KEY.arrowright) dx += 1;
+    if (KEY.w || KEY.arrowup) dy -= 1;
+    if (KEY.s || KEY.arrowdown) dy += 1;
+    if (!dx && !dy && P.tx != null) {
+      const target=route[0] || [P.tx,P.ty];
+      dx = target[0] - P.x; dy = target[1] - P.y;
+      if (Math.hypot(dx,dy)<.000001) { route.shift(); if(!route.length) P.tx=null; dx=dy=0; }
+    }
+    const d = Math.hypot(dx * box.w / box.h, dy);
+    if (d > 0) {
+      const stride=Math.min(sp,d), nx=P.x+dx/d*stride, ny=P.y+dy/d*stride;
+      const blk = liveBlockers(blockers(), [P.x, P.y]);
+      if(frontierSegmentClear(g.zone,[P.x,P.y],[nx,ny],blk)) {P.x=nx;P.y=ny;}
+      else if(frontierSegmentClear(g.zone,[P.x,P.y],[nx,P.y],blk)) P.x=nx;
+      else if(frontierSegmentClear(g.zone,[P.x,P.y],[P.x,ny],blk)) P.y=ny;
+      else if(P.tx != null && performance.now() >= replanAt) {
+        // ติดเพราะมีศัตรูเดินมายืนขวาง — วางเส้นทางอ้อมใหม่ (ไม่ถี่เกิน 4 ครั้ง/วินาที)
+        replanAt = performance.now() + 250;
+        route = frontierPath(g.zone, [P.x,P.y], [P.tx,P.ty], blockers());
+      }
+      if (P.tx != null && Math.hypot(P.x - (route[0]?.[0] ?? P.tx), P.y - (route[0]?.[1] ?? P.ty)) < .000001) { route.shift(); if (!route.length) P.tx = null; }
+      if (Math.abs(dx) > 0.001) P.face = dx < 0 ? -1 : 1;
+    }
+    const actualX = (P.x - beforeX) * box.w, actualY = (P.y - beforeY) * box.h;
+    if (Math.hypot(actualX, actualY) > .15) {
+      walkDistance += Math.hypot(actualX, actualY);   // พิกเซล — แปลงเป็นเฟรมตอนวาด (walkDrawDistance)
+      direction = walkDirection(actualX, actualY, direction);
+      movedSim = simClock;
+    }
+    // ศัตรูเดินจากขอบเข้ามาจุดในสนามทีละก้าว ถึงแล้วหยุดยืนรอ (ไม่ไล่ล่ายมบาทน้อย — ดูข้อ A6 ในรายงาน)
+    for (const en of sess.enemies) {
+      if (en.arrived) continue;
+      if(!routes.has(en.id)) routes.set(en.id,frontierPath(g.zone,[en.x,en.y],[en.tx,en.ty]));
+      const path=routes.get(en.id), target=path[0];
+      if(!target) { en.arrived=true; continue; }
+      const ex = target[0] - en.x, ey = target[1] - en.y, ed = Math.hypot(ex, ey);
+      if (ed < 0.006) { path.shift(); if(!path.length) en.arrived=true; continue; }
+      en.x += ex / ed * Math.min(ed,MOVE_SPEED * dt);
+      en.y += ey / ed * Math.min(ed,MOVE_SPEED * dt);
+    }
+    // ศัตรูใกล้ที่สุดในระยะเอื้อม — ปุ่ม "เริ่มต่อสู้" โผล่เหนือหัวตัวนั้นตัวเดียว
+    let bestId = null, bestD = Infinity;
+    for (const en of sess.enemies) {
+      if (invasion.length && !en.boss) continue;
+      const dd = Math.hypot(en.x - P.x, en.y - P.y);
+      if (dd <= REACH && dd < bestD) { bestD = dd; bestId = en.id; }
+    }
+    nearId = bestId;
+    // P5: เดินถึงประตูบน = กลับโซน · เดินถึงทางล่าง = ออกนอกชายแดน (ไม่ trigger ขณะสู้/ฟื้นตัว/ถูกทำลายแล้ว)
+    const blocked = dead || !!g.battle || !!g.pendingRecovery;
+    const gs = exitStep({ at: atFrontierGate(P), latched: gateLatched, blocked });
+    gateLatched = gs.latched;
+    const es = exitStep({ at: !invasion.length && atFrontierExit(P), latched: exitLatched, blocked });
+    exitLatched = es.latched;
+    const fire = gs.fire ? onGate : es.fire ? onExit : null;
+    if (gs.fire) { P.x = .485; P.y = .35; }   // ออกทางประตูบน → เข้าครั้งหน้าเริ่มที่จุดเริ่มเดิม ไม่ใช่ยืนค้างที่ประตู
+    if (fire) { P.tx = null; P.ty = null; route = []; for (const k of Object.keys(KEY)) KEY[k] = false; queueMicrotask(() => { if (!dead) fire(); }); }
+  }
+
+  function draw(t) {
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    const rect = cv.getBoundingClientRect();
+    const bw = Math.max(64, Math.round((rect.width || cv.clientWidth || 640) * dpr));
+    const bh = Math.max(64, Math.round((rect.height || cv.clientHeight || 420) * dpr));
+    if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
+    const W = bw, H = bh;
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.imageSmoothingEnabled = false;
+
+    if (bgRec.ok && bgRec.el.naturalWidth) {
+      const im = bgRec.el, sw = im.naturalWidth, sh = im.naturalHeight;
+      // Fill the viewport without stretching the map. Narrow screens follow Yama;
+      // pointer coordinates still map back to the same navigation polygons.
+      const s = Math.max(W / sw, H / sh), w = sw * s, h = sh * s;
+      camera = followCamera(camera,{w:W,h:H},{w,h},P,t-cameraTime,!!reducedMotion?.matches);
+      box = camera;
+      ctx.fillStyle = '#0d0710'; ctx.fillRect(0, 0, W, H);
+      // F1 — เดิมย่อ/ขยายภาพฉากด้วย smoothing 'high' ทุกเฟรม (ฉาก 1678px → 3516px บนจอ retina ≈ 40-80ms/เฟรม
+      // = ค้างที่ ~12fps ตามวิดีโอของเจ้าของ) ตอนนี้ปรับขนาดครั้งเดียวลง canvas นอกจอ แล้วคัดลอก 1:1 ทุกเฟรม
+      // คุณภาพภาพเท่าเดิม (ยังเป็น smoothing 'high' ครั้งเดียว) เปลี่ยนเฉพาะเมื่อขนาดจอเปลี่ยน
+      const bw2 = Math.max(1, Math.round(w)), bh2 = Math.max(1, Math.round(h));
+      if (!bgCache || bgCache.key !== `${bw2}x${bh2}:${bgRec.el.src}`) {
+        const c = document.createElement('canvas'); c.width = bw2; c.height = bh2;
+        const cc = c.getContext('2d');
+        cc.imageSmoothingEnabled = true; cc.imageSmoothingQuality = 'high';
+        cc.drawImage(im, 0, 0, sw, sh, 0, 0, bw2, bh2);
+        bgCache = { key: `${bw2}x${bh2}:${bgRec.el.src}`, c };
+      }
+      ctx.drawImage(bgCache.c, 0, 0, bw2, bh2, box.ox, box.oy, box.w, box.h);
+    } else {
+      box = { ox: 0, oy: 0, w: W, h: H };
+      ctx.fillStyle = '#1c0f16'; ctx.fillRect(0, 0, W, H);
+      label(ctx, 'กำลังโหลดฉากชายแดน…', W / 2, H / 2, 16, 'rgba(240,225,215,.6)');
+    }
+
+    cameraTime = t;
+    if (bgRec.ok) drawFrontierAtmosphere(ctx,g.zone,box,t,!!reducedMotion?.matches);
+    const U = unit();
+    // P5: ลูกศรทางออกบนพื้น (ไม่มีปุ่ม) — ประตูบนชี้ขึ้น · ทางล่างชี้ลง · ทางล่างจางกว่าถ้าเส้นทางนอกชายแดนยังไม่เปิด
+    const reduced = !!reducedMotion?.matches, r = FRONTIER_EXIT_TRIGGER;
+    drawExitMarker(ctx, px(GATE[0]), py(GATE[1]), { rx: r * box.w, ry: r * box.h, dir: [0, -1], u: U, t, label: opts.gateLabel || '', alpha: 0.9, reduced });
+    if (!invasion.length) drawExitMarker(ctx, px(FRONTIER_EXIT[0]), py(FRONTIER_EXIT[1]), { rx: r * box.w, ry: r * box.h, dir: [0, 1], u: U, t, label: opts.exitLabel || '', alpha: opts.exitOpen?.() === false ? 0.45 : 0.9, reduced });
+    const acts = [];
+    for (const en of sess.enemies) {
+      acts.push({ y: en.y, fn: () => {
+        const x = px(en.x), y = py(en.y);
+        const inReach = en.id === nearId;
+        const kd = MOB.kinds[en.kindIdx] || MOB;
+        drawStandee(ctx, en.art || kd.img, x, y, U * (en.boss ? BOSS_H : MOB_H), t, '👹', en.x < P.x ? 1 : -1, !en.arrived);
+        if (inReach) {
+          ctx.strokeStyle = `rgba(255,205,120,${0.55 + 0.35 * Math.sin(t / 260)})`;
+          ctx.lineWidth = 2.5;
+          ctx.beginPath(); ctx.ellipse(x, y, U * 0.05, U * 0.02, 0, 0, 7); ctx.stroke();
+        }
+        label(ctx, en.name || `${kd.name} · ระดับ ${en.level}`, x, y + U * 0.032, U * 0.024,
+              inReach ? '#ffd27a' : 'rgba(255,225,195,.8)');
+      } });
+    }
+    if(guideBoss)acts.push({y:guideBoss.y,fn:()=>{drawStandee(ctx,'zone-boss',px(guideBoss.x),py(guideBoss.y),U*BOSS_H,t,'👑',1,false,g.zone);}});
+    if(releasedBoss)acts.push({y:releasedBoss.y,fn:()=>{
+      drawStandee(ctx,releasedBoss.art,px(releasedBoss.x),py(releasedBoss.y),U*BOSS_H,t,'👹',1,false,releasedBoss.sourceZone);
+      label(ctx,`${releasedBoss.name} · รับทัณฑ์ครบแล้ว`,px(releasedBoss.x),py(releasedBoss.y)+U*.032,U*.024,'#c0e6ba');
+    }});
+    if (challengeBoss && !releasedBoss) acts.push({ y:challengeBoss.y, fn:() => {
+      drawStandee(ctx, g.zone === 'th' ? 'boss-frontier-th' : 'boss-frontier', px(challengeBoss.x), py(challengeBoss.y), U * BOSS_H, t, '👹');
+      label(ctx, BOSS_NAMES[g.zone].frontier, px(challengeBoss.x), py(challengeBoss.y) + U * .032, U * .024, '#ffd27a');
+    } });
+    acts.push({ y: P.y, fn: () => {
+      const moving = simClock - movedSim < WALK_GRACE_MS;
+      if (!drawHeroWalk(ctx, px(P.x), py(P.y), U * HERO_H, moving ? walkDrawDistance(walkDistance, U * HERO_H) : 0, P.face, direction))
+        drawStandee(ctx, 'hero-yama', px(P.x), py(P.y), U * HERO_H, t, '👑', P.face, moving);
+    } });
+    if(actorStanding(g.guard)) acts.push({ y: GUARD[1], fn: () => drawStandee(ctx, 'crew-guard', px(GUARD[0]), py(GUARD[1]), U * .10, t, '🛡️') });
+    acts.push({ y: NIRA[1], fn: () => drawStandee(ctx, 'crew-nira', px(NIRA[0]), py(NIRA[1]), U * HERO_H, t, '📋') });
+    acts.sort((a, b) => a.y - b.y).forEach(o => o.fn());
+
+    // ปุ่ม "เริ่มต่อสู้" ลอย — DOM element ที่ ui.js ส่งเข้ามา ไฟล์นี้แค่โชว์/ซ่อน/จัดตำแหน่งเป็น %
+    // (ใช้ % แทนพิกเซลจริง กันปัญหาขนาด canvas จริง (backing store) กับขนาด CSS ไม่ตรงกันตอน dpr>1)
+    if (fab) {
+      if (nearId == null) { fab.hidden = true; }
+      else {
+        const en = sess.enemies.find(e => e.id === nearId);
+        if (!en) { fab.hidden = true; }
+        else {
+          fab.textContent = invasion.length ? tr('challenge.fab', {name:en.name}) : '⚔️ เริ่มต่อสู้';
+          fab.hidden = false;
+          fab.style.left = `${(px(en.x)) / W * 100}%`;
+          fab.style.top = `${(py(en.y) - U * (en.boss ? BOSS_H : MOB_H)) / H * 100}%`;
+          fab.dataset.enemyId = String(en.id);
+        }
+      }
+    }
+    if(guide){guide.hidden=!guideBoss||Math.hypot(P.x-guideBoss.x,P.y-guideBoss.y)>.09;if(!guide.hidden){guide.style.left=`${px(guideBoss.x)/W*100}%`;guide.style.top=`${(py(guideBoss.y)-U*BOSS_H)/H*100}%`;}}
+    if (challenge) {
+      challenge.hidden = !challengeBoss || !g.challengeCanTalk(P);
+      if (!challenge.hidden) {
+        challenge.textContent = tr('challenge.fab', {name:BOSS_NAMES[g.zone].frontier});
+        challenge.style.left = `${px(challengeBoss.x) / W * 100}%`;
+        challenge.style.top = `${(py(challengeBoss.y) - U * BOSS_H) / H * 100}%`;
+      }
+    }
+    if (nira) {
+      const shown = nearFrontierNira(P, g.zone);
+      nira.hidden = !shown;
+      if (shown) {
+        nira.style.left = `${px(NIRA[0]) / W * 100}%`;
+        nira.style.top = `${(py(NIRA[1]) - U * HERO_H) / H * 100}%`;
+      }
+    }
+
+    if (!sess.enemies.length) {
+      label(ctx, 'ยังไม่มีศัตรูในสนาม — รอครู่หนึ่งให้มันเดินเข้ามา', W / 2, py(.22) - U * 0.02, 13, 'rgba(240,225,215,.72)');
+    }
+  }
+
+  function frame(now) {
+    if (dead) return;
+    if (!alive()) { api.destroy(); return; }
+    // F1 — ไล่เวลาจริงให้ครบ หั่นเป็นก้อนเล็ก (เดิมตัดที่ 50ms: เฟรมช้าแล้วเดินช้าลงอีก)
+    const dt = Math.min(250, now - last); last = now;
+    for (const s of walkSlices(dt)) step(s);
+    if (now >= nextSpawn) { spawnOne(); nextSpawn = now + SPAWN_EVERY; }
+    draw(now);
+    raf = requestAnimationFrame(frame);
+  }
+
+  const api = {
+    nearId: () => nearId,
+    canTalkGuide:()=>!!guideBoss&&Math.hypot(P.x-guideBoss.x,P.y-guideBoss.y)<=.09,
+    canTalkChallenge: () => !!challengeBoss && g.challengeCanTalk(P),
+    releasedBoss:()=>releasedBoss,
+    enemyCount: () => sess.enemies.length,
+    getEnemy: id => sess.enemies.find(e => e.id === id),
+    removeEnemy: id => { const i = sess.enemies.findIndex(e => e.id === id); if (i >= 0) sess.enemies.splice(i, 1); },
+    start() { draw(performance.now()); raf = requestAnimationFrame(frame); },
+    destroy() {
+      dead = true;
+      cancelAnimationFrame(raf);
+      removeEventListener('keydown', onKey);
+      removeEventListener('keyup', onKey);
+      cv.removeEventListener('pointerdown', onDown);
+      if (fab) fab.hidden = true;
+      if (nira) nira.hidden = true;
+      if (challenge) challenge.hidden = true;
+      if (guide) guide.hidden=true;
+    },
+  };
+  return api;
+}

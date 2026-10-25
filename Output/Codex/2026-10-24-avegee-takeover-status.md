@@ -99,3 +99,5 @@ UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,produ
 รับรูปใหม่2500x1407ทั้งคู่ต้นฉบับไม่แก้และบันทึกhash. Map-Zone2.jpgเป็นภาพเส้นทางเดียวกับชายแดน2–3ที่ส่งคู่กัน วงทางขาดต้องวาดบันไดและcollisionตรงกับmaskก่อนเปิด. เพิ่มขอบเขตความชัด/VFXชายแดน1–2,2–3,3–4ในC4/L1–L3เดิม. โซน3รอฉบับแก้ไขแต่คงmaskเก่าที่ใช้ได้;โซน4/ชายแดน3–4รอข้อมูล. งานแผนที่เหล่านี้queuedไม่ได้ทำเสร็จ.
 
 UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.
+
+- 2026-10-26 B5a codex/2026-10-26-frontier-name-size → merged308bf8e61601274fc2e4bf0c11e249007e250d9c | tested2b224e7,full1526/1526,syntax133,targeted9/9with8DPRzonecases;3files22insertions6deletions;DPRaware10–14CSSpxname labels only;nativebefore35/2→20/2,390mobile12px,actualtalkintro,resources/eventunchanged;Pagesbuilt/live2/2;ownerreviewpending;B5brelocationstillqueued,worktreeretained.

@@ -1,0 +1,12 @@
+[
+  {
+    "file": "index.html",
+    "match": true,
+    "sha256": "7437556d28e5d42566fc854c7bbf51a15fd88c7dbd8c553ac0aaa4bbdcf423f6"
+  },
+  {
+    "file": "src/frontier.js",
+    "match": true,
+    "sha256": "7734fa7c0e4b21aec3164734ad498b22d19b3144b9a1abb1daecbae3ce2b57ed"
+  }
+]

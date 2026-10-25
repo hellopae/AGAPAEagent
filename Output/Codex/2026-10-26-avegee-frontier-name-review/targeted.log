@@ -1,0 +1,19 @@
+(node:41526) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: replay boss uses its current frontier or cave location (73.094426ms)
+✔ th: invasion boss uses lower position and talk label, without a duplicate replay boss (16.060382ms)
+✔ asia: replay boss uses its current frontier or cave location (291.984194ms)
+✔ asia: invasion boss uses lower position and talk label, without a duplicate replay boss (7.221943ms)
+✔ west: replay boss uses its current frontier or cave location (257.429055ms)
+✔ west: invasion boss uses lower position and talk label, without a duplicate replay boss (6.348508ms)
+✔ cyberhell: replay boss uses its current frontier or cave location (177.974893ms)
+✔ cyberhell: invasion boss uses lower position and talk label, without a duplicate replay boss (3.983996ms)
+✔ B5a: invasion enemy names stay readable and compact in all four zones (34.073633ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1718.09614
