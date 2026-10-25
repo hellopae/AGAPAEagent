@@ -20,3 +20,5 @@ Actual Guard actor supplies home branch to regionalCrewCutscene, independent of 
 QA fixture เป็น memory-only, ปิดการเซฟผู้เล่น ไม่มีการเปิดโซนที่ยังรอ mask ในเกมจริง; browser-before-invalid-fixture.json เป็นข้อผิดพลาดของ fixture รุ่นแรก ไม่ใช่ผลทดสอบเกม ใช้ browser-before.json ที่แก้ fixture แล้วเท่านั้น
 
 ผลเป็น Codex self-check; รอคุณเป้ตรวจรับภาพ ไม่อ้างว่า Claude หรือ QA ตรวจแล้ว คิวถัดไป A2 นั่ง/นอนพักศาลาน้ำชา 60 วินาที ยังไม่ได้ทำในชุดนี้ Worktree/branch เก็บไว้ตาม handoff ไม่ลบ
+
+เผยแพร่ main be45a8d376a38ebd33d6cfc6338f8bc2dd5c3509; merged tree เท่ากับ tested24beecd; Pages builtตรงSHA; live-verification.json ผ่าน3/3; browserเว็บจริงโหลดสำเร็จและไม่มีconsoleerror/warn.
