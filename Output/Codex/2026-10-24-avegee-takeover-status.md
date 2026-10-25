@@ -55,3 +55,7 @@
 ## A2 — คุณเป้ปรับเป็น2นาที · เผยแพร่25ต.ค.
 
 เกมd5fd268,PagesbuiltตรงSHA,live3/3,full1471/1471,syntax131. ยมทูต/Guard/คนงานพัก120วินาทีหลังถึงศาลา UIใช้ค่ากลางเดียวกัน,เซฟเดิมเก็บเวลาเริ่มแล้วใช้endpoint2นาที ไม่เริ่มใหม่. Browser12คนจบที่120074msไม่มีruntimeerror. คิวA3ยังเดิม; หลักฐาน2026-10-25-avegee-tea-two-minutes-review/.
+
+## A3 — คนงานเดินชูมือ · เผยแพร่25ต.ค.
+
+เกม542b7d1;Pagesbuilt/live2/2;full1477/1477,syntax131. คนงานescortใช้normalwalkrowsตามheadingและidleเมื่อหยุด,คงท่าแบก/ทำงานและfootfit. Browserเทียบrendererจริงก่อนหลัง4โซน5โหมดผ่าน ไม่มีconsoleerror;เป็นพื้นทดสอบไม่อ้างเดินpathจริงในbrowser. ไม่แก้ระยะworker/soul;A4ยังรอทำ. หลักฐาน2026-10-25-avegee-worker-walk-review/. Codex self-checkรอคุณเป้ดูภาพ.

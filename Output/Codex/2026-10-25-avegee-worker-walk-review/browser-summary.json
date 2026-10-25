@@ -1,0 +1,31 @@
+{
+  "modes": [
+    "down",
+    "left",
+    "right",
+    "stop",
+    "up"
+  ],
+  "errors": [],
+  "rows": {
+    "right": [
+      0,
+      1
+    ],
+    "stop": [
+      0
+    ],
+    "down": [
+      0,
+      4
+    ],
+    "left": [
+      0,
+      1
+    ],
+    "up": [
+      0,
+      5
+    ]
+  }
+}

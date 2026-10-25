@@ -1,0 +1,16 @@
+{
+  "commit": "542b7d1fbe346f7fd482165ccb8c41e09ec265bb",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "c5e43e9f126459320ba424322b2f4f8d2c4f601cf532e3771cf27bae535af149",
+      "matches": true
+    },
+    {
+      "path": "src/workers.js",
+      "sha256": "d38a803f787225777f52fa3ece8e060cb64b74efc36705b4d79ecca1c4f29242",
+      "matches": true
+    }
+  ],
+  "passed": true
+}

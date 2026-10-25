@@ -1,0 +1,59 @@
+(node:7861) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ early trial preserves the worker's pickup position before station delivery (278.852323ms)
+✔ early trial preserves the worker's lead position before station delivery (217.430362ms)
+(node:7862) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P5b boss zone 3: cane cutscene points at the v2 art, other zones unchanged, file is 1375x768 (5.039765ms)
+✔ P5b pier: r3-c3 repair registered once, box covers the pier plus feather, file is a full 1024 chunk (3.221112ms)
+✔ P5b walk mask is untouched: pier floor strip still walkable, water beside it not (6.120739ms)
+✔ P5b worker sheet v2: 1280x3840, v1 stays for every zone and for thumbnails (P9: all four zones now have a v2 entry) (5.592058ms)
+✔ P5b worker rows follow what the worker is doing (v2) with natural escort walking on both atlas versions (1.001862ms)
+✔ P5b drawWorker reads the 12-row v2 sheet by row and the 4-row v1 sheet for a zone without v2 (P9: only an unknown zone falls back now) (1.059731ms)
+✔ P5c every measured v2 row ends at v1 height +-2% and feet on the cell centre (3.193937ms)
+✔ P5c rows without an entry, and zones without a table, are not compensated (0.558625ms)
+✔ P5c drawWorker applies the row fit: bigger, feet shifted, baseline unchanged; v1 sheets and fit-less rows untouched (2.583248ms)
+✔ P5c cache-bust: workers.js ends -p5c, nothing else of the importmap touched by this round (0.64632ms)
+✔ P9 Nira: all four zones draw the v2 sheet (1280x1280, 4x4); v1 files stay on disk untouched (10.696226ms)
+✔ P9 Nira: v2 faces right in every pose so nothing is mirrored by the squad; a v1 sheet keeps the old rule (0.530893ms)
+✔ P9 cache-bust: nira-combat.js ends -p9 (0.299378ms)
+✔ P9 workers: asia/west/cyberhell draw the 12-row v2 sheet (1280x3840); th unchanged; v1 files stay (14.245311ms)
+✔ P9 workers: upright rows end within 2 % of the zone own v1 standing height; crouch/lean rows 6-8 are deliberately not scaled (0.712675ms)
+✔ P9 drawWorker: asia/west/cyberhell read v2 rows by what the worker does (repair=8, carry shards=11) and apply their scale about the foot baseline (0.989037ms)
+✔ P9 cache-bust: workers.js ends -p9 (0.483255ms)
+✔ P9 Trojan horse: cyberhell boss-frontier atlas reads the v2 file (same geometry, only attack f6/f7 redrawn), v1 stays; every other zone untouched (4.855605ms)
+✔ P9 manifest fetch carries a new cache key in all three readers, so returning players do not keep the old atlas path (7.487602ms)
+✔ P9 verdict scene: every zone draws its own praise/scold pair (1672x941 PNG); the scene kind `blame` points at the `scold` file; no placeholder left (19.825187ms)
+(node:7865) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ closing intake with busy Nira does not strand docked souls when a worker is hired (171.65486ms)
+✔ closed intake still holds boats that have not disembarked (1.450213ms)
+✔ a saved dungeon route does not freeze workers when the town is running (151.752175ms)
+✔ empty central supplies hold dock pickup; a paid refill plus player rice gift resumes the same worker (297.167042ms)
+✔ A3 th: real escort positions choose walk direction and stop on an unchanged frame (4.667845ms)
+✔ A3 asia: real escort positions choose walk direction and stop on an unchanged frame (0.539679ms)
+✔ A3 west: real escort positions choose walk direction and stop on an unchanged frame (0.313405ms)
+✔ A3 cyberhell: real escort positions choose walk direction and stop on an unchanged frame (0.239893ms)
+✔ A3 pickup direction, cargo/work priority and v1 fallback retain their meaning (0.453082ms)
+✔ A3 drawWorker crops normal walking rows for all four zones and columns without changing foot fit (1.544213ms)
+(node:7867) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (8.48308ms)
+✔ workers build without Taan and cannot open the building before physical inspection (291.92807ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (181.620857ms)
+✔ when no worker is hired Taan still builds and repairs normally (2.219285ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (1.629371ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (1.701318ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (0.976295ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (154.478855ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (139.63916ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (141.522248ms)
+✔ a keeper collects successive judged souls one journey at a time and a cook can leave for an assigned case (385.094989ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1616.941084

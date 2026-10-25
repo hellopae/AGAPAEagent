@@ -25,3 +25,5 @@
 - 2026-10-25 A2 codex/2026-10-25-tea-rest → merged 04edb9638549aa3af71271bd8700d8026145dc03 | full1471/1471 at225876f,syntax131; finalcoordinate-only0009088 +19targetedpass; all4zonebrowser,cushion60s/save; Pagesbuilt/live36/36; worktreeretained
 
 - 2026-10-25 A2-120s codex/2026-10-25-tea-two-minutes → merged d5fd2680a02bc87332a1e9a555b5633067aa77bd | full1471/1471,syntax131; owner duration120s for crew/Guard/workers; native120074ms completion, old60s save retains start; Pagesbuilt/live3/3; worktree and old branch retained
+
+- 2026-10-25 A3 codex/2026-10-25-worker-walk → merged542b7d1fbe346f7fd482165ccb8c41e09ec265bb | full1477/1477,syntax131,targeted43/43; natural side/up/down escort walking and idle on unchanged position,4zones browser production-renderer comparison; Pagesbuilt/live2/2; no art/path/spacing changes; worktree retained
