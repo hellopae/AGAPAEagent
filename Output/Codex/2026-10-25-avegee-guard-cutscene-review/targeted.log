@@ -1,0 +1,33 @@
+(node:53377) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 30A: every story page puts caption and controls after the image; navigation finishes once (31.994434ms)
+✔ 30A: back navigation retains the separate caption (1.691939ms)
+✔ 30A: zones 2–4 choose real arrival scenes even with a loaded boss profile; zone 1 keeps resolver behavior (7.273631ms)
+✔ 30A: opening intro and both regional arrival pages keep text below the frame (7.185451ms)
+✔ 30A: crop geometry removes letterbox rows without horizontal cropping in the story frame (86.904193ms)
+✔ 30A: crop updates cached, newly loaded and fallback images; thumbnail stays square (2.291589ms)
+✔ 30A: ending popup uses a clipped cover thumbnail, with crop preparation (6.316744ms)
+✔ 30A: only the two requested action sources opt out of mirroring; runtime adds right-facing class (7.531603ms)
+(node:53378) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B1 measured endpoint leaves a sprite-width-aware gap in either direction and aligns feet (8.12207ms)
+✔ B1 outbound, contact hold, return and exact home position (5.221705ms)
+✔ B1 real command damages exactly once at contact and holds the turn until home (reduced=false) (47.930413ms)
+✔ B1 real command damages exactly once at contact and holds the turn until home (reduced=true) (6.685406ms)
+✔ B1 a delayed tick still dispatches pose, one hit, return then finish in order (0.886727ms)
+✔ B1 only physical melee recipes opt in; ranged, magic, healing and items stay on their existing path (0.604972ms)
+(node:53379) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A1 Guard cutscene precedes one real contact and keeps its turn until return (reduced=false) (73.819812ms)
+✔ A1 Guard cutscene precedes one real contact and keeps its turn until return (reduced=true) (22.088447ms)
+✔ A1 absent cutscene has no blank delay; other melee paths do not acquire a new cutscene (25.303842ms)
+✔ A1 closing/replacing the battle during the introduction does not pay or hit a new battle (16.194284ms)
+✔ A1 actual Guard identity determines branch cutscene independently of Yama outfit (13.010441ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1257.502863
