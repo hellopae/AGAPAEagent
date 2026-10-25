@@ -1,0 +1,396 @@
+{
+  "cases": [
+    {
+      "icon": "🧿",
+      "name": "เจ้าของกิจการในนามศิลปินผู้สนับสนุนพื้นที่จัดแสดงศิลปะแห่งเมืองบูรพา",
+      "plate": {
+        "bottom": 530.11962890625,
+        "clientWidth": 277,
+        "height": 52.046875,
+        "left": 454.21875,
+        "right": 734.21875,
+        "scrollWidth": 277,
+        "top": 478.07275390625,
+        "width": 280
+      },
+      "rightPanel": {
+        "bottom": 683.3984375,
+        "clientWidth": 495,
+        "height": 636.265625,
+        "left": 734.21875,
+        "right": 1228.8671875,
+        "scrollWidth": 495,
+        "top": 47.1328125,
+        "width": 494.6484375
+      },
+      "stage": {
+        "bottom": 683.3984375,
+        "clientWidth": 683,
+        "height": 636.265625,
+        "left": 51.1328125,
+        "right": 734.21875,
+        "scrollWidth": 716,
+        "top": 47.1328125,
+        "width": 683.0859375
+      },
+      "text": {
+        "bottom": 526.61962890625,
+        "clientWidth": 234,
+        "height": 45.046875,
+        "left": 487.21875,
+        "right": 720.71875,
+        "scrollWidth": 234,
+        "top": 481.57275390625,
+        "width": 233.5
+      },
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "icon": "🧿",
+      "name": "เจ้าของกิจการในนามศิลปินผู้สนับสนุนพื้นที่จัดแสดงศิลปะแห่งเมืองบูรพา",
+      "plate": {
+        "bottom": 349.5665283203125,
+        "clientWidth": 147,
+        "height": 85.78125,
+        "left": 225.09375,
+        "right": 375.09375,
+        "scrollWidth": 147,
+        "top": 263.7852783203125,
+        "width": 150
+      },
+      "rightPanel": {
+        "bottom": 1255.296875,
+        "clientWidth": 360,
+        "height": 783.9765625,
+        "left": 14.8984375,
+        "right": 375.09375,
+        "scrollWidth": 360,
+        "top": 471.3203125,
+        "width": 360.1953125
+      },
+      "stage": {
+        "bottom": 461.3203125,
+        "clientWidth": 360,
+        "height": 365,
+        "left": 14.8984375,
+        "right": 375.09375,
+        "scrollWidth": 374,
+        "top": 96.3203125,
+        "width": 360.1953125
+      },
+      "text": {
+        "bottom": 345.0665283203125,
+        "clientWidth": 109,
+        "height": 76.78125,
+        "left": 254.59375,
+        "right": 363.59375,
+        "scrollWidth": 109,
+        "top": 268.2852783203125,
+        "width": 109
+      },
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "icon": "🧿",
+      "name": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "plate": {
+        "bottom": 351.53729248046875,
+        "clientWidth": 147,
+        "height": 104.97657775878906,
+        "left": 225.09375,
+        "right": 375.09375,
+        "scrollWidth": 147,
+        "top": 246.5607147216797,
+        "width": 150
+      },
+      "rightPanel": {
+        "bottom": 1129.7109375,
+        "clientWidth": 360,
+        "height": 658.390625,
+        "left": 14.8984375,
+        "right": 375.09375,
+        "scrollWidth": 360,
+        "top": 471.3203125,
+        "width": 360.1953125
+      },
+      "stage": {
+        "bottom": 461.3203125,
+        "clientWidth": 360,
+        "height": 365,
+        "left": 14.8984375,
+        "right": 375.09375,
+        "scrollWidth": 369,
+        "top": 96.3203125,
+        "width": 360.1953125
+      },
+      "text": {
+        "bottom": 347.03729248046875,
+        "clientWidth": 109,
+        "height": 95.97657775878906,
+        "left": 254.59375,
+        "right": 363.59375,
+        "scrollWidth": 109,
+        "top": 251.0607147216797,
+        "width": 109
+      },
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "icon": "🧿",
+      "name": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "plate": {
+        "bottom": 346.24383544921875,
+        "clientWidth": 222,
+        "height": 64.5859375,
+        "left": 362.0625,
+        "right": 587.3359375,
+        "scrollWidth": 222,
+        "top": 281.65789794921875,
+        "width": 225.2734375
+      },
+      "rightPanel": {
+        "bottom": 450.59375,
+        "clientWidth": 396,
+        "height": 415.578125,
+        "left": 587.3359375,
+        "right": 982.890625,
+        "scrollWidth": 396,
+        "top": 35.015625,
+        "width": 395.5546875
+      },
+      "stage": {
+        "bottom": 450.59375,
+        "clientWidth": 546,
+        "height": 415.578125,
+        "left": 41.09375,
+        "right": 587.3359375,
+        "scrollWidth": 550,
+        "top": 35.015625,
+        "width": 546.2421875
+      },
+      "text": {
+        "bottom": 342.74383544921875,
+        "clientWidth": 181,
+        "height": 57.5859375,
+        "left": 392.5625,
+        "right": 573.8359375,
+        "scrollWidth": 181,
+        "top": 285.15789794921875,
+        "width": 181.2734375
+      },
+      "viewport": [
+        1024,
+        480
+      ]
+    },
+    {
+      "icon": "🍃",
+      "name": "เจ้าของกิจการในนามศิลปินผู้สนับสนุนพื้นที่จัดแสดงศิลปะแห่งเมืองบูรพา",
+      "plate": {
+        "bottom": 350.531005859375,
+        "clientWidth": 222,
+        "height": 64.5859375,
+        "left": 362.0625,
+        "right": 587.3359375,
+        "scrollWidth": 222,
+        "top": 285.945068359375,
+        "width": 225.2734375
+      },
+      "rightPanel": {
+        "bottom": 450.59375,
+        "clientWidth": 396,
+        "height": 415.578125,
+        "left": 587.3359375,
+        "right": 982.890625,
+        "scrollWidth": 396,
+        "top": 35.015625,
+        "width": 395.5546875
+      },
+      "stage": {
+        "bottom": 450.59375,
+        "clientWidth": 546,
+        "height": 415.578125,
+        "left": 41.09375,
+        "right": 587.3359375,
+        "scrollWidth": 556,
+        "top": 35.015625,
+        "width": 546.2421875
+      },
+      "text": {
+        "bottom": 347.031005859375,
+        "clientWidth": 181,
+        "height": 57.5859375,
+        "left": 392.5625,
+        "right": 573.8359375,
+        "scrollWidth": 181,
+        "top": 289.445068359375,
+        "width": 181.2734375
+      },
+      "viewport": [
+        1024,
+        480
+      ]
+    },
+    {
+      "icon": "🍃",
+      "name": "เจ้าของกิจการในนามศิลปินผู้สนับสนุนพื้นที่จัดแสดงศิลปะแห่งเมืองบูรพา",
+      "plate": {
+        "bottom": 345.1690368652344,
+        "clientWidth": 147,
+        "height": 85.78125,
+        "left": 155.796875,
+        "right": 305.796875,
+        "scrollWidth": 147,
+        "top": 259.3877868652344,
+        "width": 150
+      },
+      "rightPanel": {
+        "bottom": 1156.84375,
+        "clientWidth": 292,
+        "height": 688.640625,
+        "left": 14.203125,
+        "right": 305.796875,
+        "scrollWidth": 292,
+        "top": 468.203125,
+        "width": 291.59375
+      },
+      "stage": {
+        "bottom": 458.203125,
+        "clientWidth": 292,
+        "height": 365,
+        "left": 14.203125,
+        "right": 305.796875,
+        "scrollWidth": 313,
+        "top": 93.203125,
+        "width": 291.59375
+      },
+      "text": {
+        "bottom": 340.6690368652344,
+        "clientWidth": 109,
+        "height": 76.78125,
+        "left": 185.296875,
+        "right": 294.296875,
+        "scrollWidth": 109,
+        "top": 263.8877868652344,
+        "width": 109
+      },
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "icon": "🧿",
+      "name": "เจ้าของกิจการ",
+      "plate": {
+        "bottom": 348.46832275390625,
+        "clientWidth": 110,
+        "height": 28.1953125,
+        "left": 192.5859375,
+        "right": 305.796875,
+        "scrollWidth": 110,
+        "top": 320.27301025390625,
+        "width": 113.2109375
+      },
+      "rightPanel": {
+        "bottom": 1208.984375,
+        "clientWidth": 292,
+        "height": 740.78125,
+        "left": 14.203125,
+        "right": 305.796875,
+        "scrollWidth": 292,
+        "top": 468.203125,
+        "width": 291.59375
+      },
+      "stage": {
+        "bottom": 458.203125,
+        "clientWidth": 292,
+        "height": 365,
+        "left": 14.203125,
+        "right": 305.796875,
+        "scrollWidth": 313,
+        "top": 93.203125,
+        "width": 291.59375
+      },
+      "text": {
+        "bottom": 343.96832275390625,
+        "clientWidth": 72,
+        "height": 19.1953125,
+        "left": 222.0859375,
+        "right": 294.296875,
+        "scrollWidth": 72,
+        "top": 324.77301025390625,
+        "width": 72.2109375
+      },
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "icon": "🧿",
+      "name": "เจ้าของกิจการ",
+      "plate": {
+        "bottom": 530.1204223632812,
+        "clientWidth": 128,
+        "height": 29.5234375,
+        "left": 602.9921875,
+        "right": 734.21875,
+        "scrollWidth": 128,
+        "top": 500.5969848632813,
+        "width": 131.2265625
+      },
+      "rightPanel": {
+        "bottom": 683.3984375,
+        "clientWidth": 495,
+        "height": 636.265625,
+        "left": 734.21875,
+        "right": 1228.8671875,
+        "scrollWidth": 495,
+        "top": 47.1328125,
+        "width": 494.6484375
+      },
+      "stage": {
+        "bottom": 683.3984375,
+        "clientWidth": 683,
+        "height": 636.265625,
+        "left": 51.1328125,
+        "right": 734.21875,
+        "scrollWidth": 716,
+        "top": 47.1328125,
+        "width": 683.0859375
+      },
+      "text": {
+        "bottom": 526.6204223632812,
+        "clientWidth": 85,
+        "height": 22.5234375,
+        "left": 635.9921875,
+        "right": 720.71875,
+        "scrollWidth": 85,
+        "top": 504.0969848632813,
+        "width": 84.7265625
+      },
+      "viewport": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "passed": true,
+  "before_overflow": {
+    "textWidth": 422.65625,
+    "plateWidth": 157.109375,
+    "textRight": 1032.765625,
+    "stageRight": 734.21875
+  },
+  "console_errors": []
+}

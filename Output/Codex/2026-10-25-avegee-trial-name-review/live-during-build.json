@@ -1,0 +1,17 @@
+[
+  {
+    "file": "index.html",
+    "match": false,
+    "sha256": "9c5e74e44e2626f760f06d44ce607aba7de35f0c9d0f2220a86c2edf83decd13"
+  },
+  {
+    "file": "src/interrogation-ui.js",
+    "match": false,
+    "sha256": "a9bcd9af9c531988db07a798020a26d6e944e01dab88de52f9e5f07564a8122d"
+  },
+  {
+    "file": "src/interrogation-ui.css",
+    "match": false,
+    "sha256": "0da42db1562254bbd9bf50a9560e6b31d01d2a2e932b90ac8c612ccec67e5446"
+  }
+]

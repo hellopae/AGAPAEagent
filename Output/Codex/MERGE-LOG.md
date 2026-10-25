@@ -35,3 +35,7 @@
 - 2026-10-25 A6 codex/2026-10-25-mirror-pose → merged5fef1a2f6a3da7f963750783860cd149c3bf6dae | testedd7ce523,full1517/1517,syntax132,targeted24/24,realrenderer15/15; neutral outfit idle faces mirror, residual swing ignored only in mirror presentation, normal room attacks unchanged; native Asia before/after+walkbothsides+opticalcharge+mobile390+panelclose/exit; Pagesbuilt/live2/2; worktree retained; next A7 outfit visual size
 
 - 2026-10-25 A7 codex/2026-10-25-yama-outfit-size → merged bfece144a074175d30a5bf030cd21af662e8ddf3 | testedf3e0c13,full1522/1522,syntax133,targeted30/30; alpha20sources236frames, fixed visibleheight/sole anchors for4outfits; native setOutfit4styles sameworldfoot/coin,16renderer comparisons,mirror th/cyberhell,trial th; Pagesbuilt/live4/4,bootconsoleempty; no art/geometry edits; worktree retained; next long spirit names. New L1–L3 lighting handoff queued only.
+
+- 2026-10-25 UI-B1 codex/2026-10-25-trial-name-bounds → merged239f506cb63e4464f1a62d0c6f252f1114009bb5 | tested86cd972,full1522/1522,syntax133;3files7insertions5deletions; shrinkable wrapping spirit name text,icon retained,rightaligned badge grows inside scene; native8boundschecks desktop1280/mobile320,390/short1024x480; ownerreviewpending; next Nira officecards; walkabilitydeferredperowner.
+
+UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3byte-match.

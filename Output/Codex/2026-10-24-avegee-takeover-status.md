@@ -75,3 +75,9 @@
 ## A7 — ขนาดชุดยามา · เผยแพร่25ต.ค.
 
 เกมbfece14, full1522/1522,syntax133,Pagesbuilt/live4/4. วัดalphaจาก20ต้นฉบับ236เฟรมแล้วfitความสูง/แนวเท้าตามชุดและทิศ; idleและwalkคงสเกลเดียวไม่บีบยืดทีละเฟรม. Nativeเปลี่ยนชุด4แบบเท้าคง[1862,1148],coin100000เดิม; เปรียบเทียบrenderer16ช่อง,mirror th/cyberhell,trial th. ไม่มีการแก้ภาพหรือcollision; ไม่อ้างnative mobile/fullnaturalwalk. Ownerตรวจรับภาพยังรอ. คิวเหลือ14รวมL1–L3ใหม่,mask3แผนที่แยกต่างหาก;ถัดไปชื่อวิญญาณยาว10.png. หลักฐาน2026-10-25-avegee-yama-outfit-size-review/.
+
+## UI-B1 — ชื่อวิญญาณหลุดกรอบ · 25ต.ค.
+
+เกม239f506,tested86cd972,full1522/1522,syntax133. Outerbadgeจำกัดความกว้างแต่innerflexยังnowrap/minwidthautoทำให้ข้อความ423pxล้นป้าย157px. เปลี่ยนเป็นshrinkablewrappingfulltext,iconไม่ยุบ,ป้ายขยายเข้าในฉาก. ตรวจ8nativeDOMcasesdesktop1280/mobile320,390/short1024x480ทั้งไทยยาว/ไม่มีspace/ชื่อสั้น,ข้อความอยู่ในป้ายและป้ายอยู่ในstage. ไม่มีconsoleerror. คิวเหลือ13,ถัดไปโต๊ะนิรา13.png. คุณเป้ให้ข้ามงานตำแหน่งเดินได้จนส่งรูปใหม่;ไม่มีการแก้map/collisionในงานนี้. ภาพรอตรวจรับ.
+
+UI-B1 finalpublish: Pagesbuilt239f506cb63e4464f1a62d0c6f252f1114009bb5,live3/3byte-match.

@@ -1,0 +1,6 @@
+
+// External memory-only native trial fixture; never shipped.
+const b1QA=document.createElement('div');b1QA.id='b1-qa';b1QA.style='position:fixed;top:0;left:0;z-index:20000;background:#170c12';b1QA.innerHTML='<button data-b1="normal">Short name</button><button data-b1="long">Long Thai name</button><button data-b1="unbroken">Unbroken name</button><button data-b1="before">Before CSS</button><button data-b1="after">After CSS</button>';document.body.append(b1QA);
+const b1Names={normal:'เจ้าของกิจการ',long:'เจ้าของกิจการในนามศิลปินผู้สนับสนุนพื้นที่จัดแสดงศิลปะแห่งเมืองบูรพา',unbroken:'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'};
+function b1Trial(key){const fresh=createGame();g.save=()=>{};g.onChange=()=>{};g.queue=[{...fresh.queue[0],id:991010,name:b1Names[key],courtDisembarked:true}];g.started=true;g.paused=true;startPlay(false);openTrial();}
+b1QA.querySelectorAll('[data-b1]').forEach(b=>b.onclick=()=>{const k=b.dataset.b1;if(b1Names[k])b1Trial(k);else document.getElementById('interrogation-role-styles').href=k==='before'?'/__before.css':'/src/interrogation-ui.css?v=b1-qa';});setInterval(()=>{const parent=dlg.open?dlg:document.body;if(b1QA.parentElement!==parent)parent.append(b1QA);},200);
