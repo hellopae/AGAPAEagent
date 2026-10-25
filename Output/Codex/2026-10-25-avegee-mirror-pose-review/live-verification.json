@@ -1,0 +1,23 @@
+{
+  "merge": "5fef1a2f6a3da7f963750783860cd149c3bf6dae",
+  "tested": "d7ce523",
+  "pages": {
+    "status": "built",
+    "commit": "5fef1a2f6a3da7f963750783860cd149c3bf6dae"
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "local": "5f0206fe0cb3e5f659c37c89a4995aab09b73eba6afc467fbca0b29f65a13163",
+      "live": "5f0206fe0cb3e5f659c37c89a4995aab09b73eba6afc467fbca0b29f65a13163",
+      "match": true
+    },
+    {
+      "path": "src/room.js",
+      "local": "8434f08ed96f050af1decfd0ecd24da2f7dc1e2615a1c6dd8290846efb24ffec",
+      "live": "8434f08ed96f050af1decfd0ecd24da2f7dc1e2615a1c6dd8290846efb24ffec",
+      "match": true
+    }
+  ],
+  "passed": true
+}

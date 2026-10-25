@@ -1,0 +1,145 @@
+{
+  "history": [
+    {
+      "open": true,
+      "pos": [
+        0.613837803359987,
+        0.7535135518222366,
+        0.68,
+        0.68
+      ],
+      "mirror": {
+        "placed": false,
+        "angle": 0,
+        "adjusting": false
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.625244630436873,
+        0.7408392995145857,
+        0.68,
+        0.68
+      ],
+      "mirror": {
+        "placed": false,
+        "angle": 0,
+        "adjusting": false
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.6338255970294555,
+        0.7313048921894939,
+        0.68,
+        0.68
+      ],
+      "mirror": {
+        "placed": false,
+        "angle": 0,
+        "adjusting": false
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.6751796528973214,
+        0.6853559412251987,
+        null,
+        0.68
+      ],
+      "mirror": {
+        "placed": false,
+        "angle": 0,
+        "adjusting": false
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.6751796528973214,
+        0.6853559412251987,
+        null,
+        0.68
+      ],
+      "mirror": {
+        "placed": true,
+        "angle": 0,
+        "adjusting": false
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.6751796528973214,
+        0.6853559412251987,
+        null,
+        0.68
+      ],
+      "mirror": {
+        "placed": true,
+        "angle": 0,
+        "adjusting": true
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    },
+    {
+      "open": true,
+      "pos": [
+        0.6751796528973214,
+        0.6853559412251987,
+        null,
+        0.68
+      ],
+      "mirror": {
+        "placed": true,
+        "angle": 13,
+        "adjusting": true
+      },
+      "ammo": 0,
+      "coin": 100400,
+      "hp": 140,
+      "mp": 40,
+      "solution": 17,
+      "roomStillOpen": true
+    }
+  ],
+  "errors": []
+}

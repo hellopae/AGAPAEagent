@@ -1,0 +1,42 @@
+(node:16819) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ archive cards expose portrait, name, stars, score, deserved/given, verdict and escaped deed summary (4.986102ms)
+✔ real-room mirror beam, slider, drag and reward at viewport 844x390 (simulated DOM) (12.963039ms)
+✔ real-room mirror beam, slider, drag and reward at viewport 390x844 (simulated DOM) (5.530835ms)
+✔ mirror stand blocks real pointer movement (before and after placing) and can be approached (33.52338ms)
+✔ scan, rebirth, sky and floating −N draw on canvas; departures fade and sky rises (2.043818ms)
+✔ new rainbow asset exists, is background-only, replaces every rendered gold book, and UI strings have TH+EN (2.060105ms)
+✔ gate sound companions create distinct soft WebAudio tones and obey mute (2.305264ms)
+✔ ledger keeps card identity and complete deeds after closed-case history rolls off and saving (9.038493ms)
+(node:16820) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ painted apparatus aligns at the measured centres and its integer angle is playable (1.544491ms)
+✔ every successful painted-board aim calibrates to the existing reward model (5.978731ms)
+✔ mirror reserves only base clearance and ejects existing overlapping feet (1.075267ms)
+✔ F3 transparent sprite files are included in shared manifest/preload (3.152927ms)
+(node:16822) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A6 th: mirror idle faces the apparatus with no combat pose, including unloaded idle art (6.743617ms)
+✔ A6 asia: mirror idle faces the apparatus with no combat pose, including unloaded idle art (2.661445ms)
+✔ A6 west: mirror idle faces the apparatus with no combat pose, including unloaded idle art (3.596237ms)
+✔ A6 cyberhell: mirror idle faces the apparatus with no combat pose, including unloaded idle art (3.873178ms)
+✔ A6 walking while panel is open keeps movement direction; closed panel ignores a residual swing (2.405598ms)
+✔ A6 ordinary combat poses and sword strokes outside the mirror room are unchanged (2.15838ms)
+(node:16823) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 29G: all eight manifest-selected Asia assets fill the real desktop renderer bounds (14.776301ms)
+✔ 29G: pointer/tick walks from spawn to work point and back to the exit staircase (34.504395ms)
+(node:16824) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ทุกห้องมี ui4: crop ตรงสัดส่วนกรอบแบบ · พื้นที่เดิน · ปุ่มครบ (1.461915ms)
+✔ ยมบาทเริ่มและจุดลงมือของทุกห้องอยู่ในพื้นที่เดินได้ (ไม่งั้นเดินไปกดไม่ถึง) (0.990375ms)
+✔ หนึ่งเฟรมเดินข้ามแถบห้ามเดินที่คั่นระหว่างจุดเริ่มและปลายไม่ได้ (0.23052ms)
+✔ ข้อความของห้องมีทั้งไทยและอังกฤษ และตัวเลขความจุไม่ถูกฝังในข้อความ (13.265435ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 283.506506

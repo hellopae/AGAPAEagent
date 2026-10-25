@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "outfit": "asia",
+  "room": "asia/krajok",
+  "native_walk": true,
+  "angle13": "before combat fireball; after normal idle",
+  "sides": "both inspected with panel open; residual swing did not render attack",
+  "charge": "17 degrees, ammo0→1; explicit close/reopen after cooldown produced a second legitimate charge1→2",
+  "exit": "panel close leaves room; Escape returns to map",
+  "console_errors": [],
+  "viewports": [
+    "1191x720",
+    "390x844"
+  ],
+  "limitation": "Memory-only prepared game; no saves. Only Asia outfit inspected in native browser, all four outfits covered by renderer tests; owner visual acceptance pending."
+}

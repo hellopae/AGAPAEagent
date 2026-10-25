@@ -1,0 +1,858 @@
+import {teaRoomStaff,teaRestSprite} from './tea-staff-rest.js';
+import { drawSchoolProps } from './sword-school-props.js?v=minigame-review-20261011-j2-l4a';
+import { mirrorObstacle, mirrorClearPosition, MIRROR_FOOT, MIRROR_SORT_Y, mirrorHeroSortY, MIRROR_ROOM_LAYOUT } from './mirror-charge.js?v=minigame-review-20261011';
+import { gateArrivals, gateKarma, GATE_EFFECT_MS, gateEffectPose, drawGateEffect } from './h4-location-ui.js';
+import { actorStanding } from './actor-recovery.js';
+import { drawYamaSword, SWORD_DURATION_MS } from './yama-sword.js?v=20261009-f2-merge-f3-f4-sala-books-mirror-art-book-art-oriverse-25d-g1-g3b';
+import { fitSoulName, soulNameplateWidth } from './soul-nameplate.js';
+import { potLayout, drawPotSoul } from './pot-souls.js';
+import { TEA_SLEEP_MS, TEA_BLACKOUT_MS, TEA_WAKE_MS, TEA_REST_TOTAL_MS, teaSleepPhase, teaRecoveredHp, roomImageBox, sleepSpriteWidth } from './tea-recovery.js';
+import { regenMp } from './mp-regen.js';
+// room.js — ฉากภายในของสถานีหนึ่งหลัง (10 ก.ย. 2569)
+//
+// ห้องสถานีแสดงวิญญาณ ผู้คุม และตัวละครที่ผู้เล่นบังคับเดินได้
+//
+// เดิมหน้าสถานีเป็นการ์ดนิ่ง ๆ วางรูปวิญญาณเรียงกันหน้าฉาก — ไม่มีอะไรให้ทำนอกจากกดปุ่ม
+// ตอนนี้เป็นฉากจริง: ภาพที่เจ้าของวาดวางเต็มกรอบ (contain ไม่ครอป จุดยึดจะได้ตรงเสมอ)
+// แล้วโค้ดวางคน "ตามจุดยึด" ที่วัดจากภาพนั้นเป็นสัดส่วน 0-1
+//
+// **จุดยึดอยู่ที่ ROOMS ใน data.js ที่เดียว** — วาดฉากใหม่/เปลี่ยนภาพ แก้ตัวเลขชุดเดียวจบ
+// ไม่มีพิกัดพิกเซลฝังอยู่ในไฟล์นี้เลย
+
+import { walkDirection } from './walk-direction.js';
+import { walkStridePx, walkSlices, walkDrawDistance, WALK_GRACE_MS, WALK_MAX_CATCHUP_MS } from './walk-motion.js';
+import { ITEMS, BAL } from './data.js';
+import { drawStandee, drawCrewWalk, drawHeroWalk, drawSoul, drawFire, img, rr } from './art.js';
+import { t as tr } from './i18n.js';
+import { ragePoseSrc } from './battle-facing.js';
+import { drawContactShadow } from './scene-style.js';
+import { drawExitMarker } from './exit-marker.js';
+
+const HERO_H = 0.15;      // ความสูงตัวละครเทียบกับด้านสั้นของกรอบภาพ
+const CREW_H = 0.13;
+const SOUL_H = 0.085;     // วิญญาณเล็กกว่าคนเป็น — ต้องพอดีปากกระทะ ไม่ใช่ล้นออกมา
+const MAGIC_MIRROR_W = 0.07;   // N1/N1b: กระจกวิเศษภาพจริงบนฐานดอกบัว (แยกจากฉากหลัง เพื่อให้ปรากฏหลังผู้เล่นวางกระจกเท่านั้น)
+let magicMirror = null;
+function magicMirrorImg() {
+  if (!magicMirror) { magicMirror = { el:new Image(), ok:false }; magicMirror.el.onload = () => { magicMirror.ok = true; }; magicMirror.el.src = 'img/krajok-magic-mirror.png?v=20261018-n1b'; }
+  return magicMirror.ok ? magicMirror.el : null;
+}
+const MIRROR_W = 0.075;   // ความกว้างฐาน/แผ่นกระจกเทียบความกว้างภาพฉาก (เดิมกำหนดใน mirror-charge.js ผ่าน CSS)
+const GATE_DOOR = [0.5, 0.25];   // ประตูกลางของประตูสวรรค์ (สัดส่วนภาพฉาก) — ปลายทางของดวงไฟตอนไปเกิดใหม่
+let reducedQuery;   // P6: เรียกทุกเฟรมจากฉากกระทะ → เก็บ MediaQueryList ไว้ใช้ซ้ำ ไม่สร้างใหม่ทุกครั้ง
+const prefersReducedMotion = () => { try { return !!(reducedQuery ||= matchMedia('(prefers-reduced-motion: reduce)')).matches; } catch { return false; } };
+const poseCache = new Map();
+/** โหลดภาพท่าตรง ๆ จาก path (ท่า atk ของชุด) — คืน null ถ้ายังไม่โหลดเสร็จ/ไม่มีไฟล์ */
+function poseImg(src) {
+  if (!src) return null;
+  let r = poseCache.get(src);
+  if (!r) { r = { el: new Image(), ok: false }; r.el.onload = () => { r.ok = true; }; r.el.src = src; poseCache.set(src, r); }
+  return r.ok ? r.el : null;
+}
+const LYING_W_FALLBACK = 0.24;   // ความกว้างท่านอนเดิม (U) — ใช้เมื่อวัดพิกเซลไม่ได้เท่านั้น
+const solidCache = new WeakMap();
+/** สัดส่วนพิกเซลทึบ (alpha>200) ของภาพ 0-1 — วัดจากสำเนาย่อ ≤256px; คืน null ถ้าอ่านพิกเซลไม่ได้ */
+function solidFraction(el) {
+  if (solidCache.has(el)) return solidCache.get(el);
+  let out = null;
+  try {
+    const k = Math.min(1, 256 / Math.max(el.naturalWidth, el.naturalHeight)), w = Math.max(1, Math.round(el.naturalWidth * k)), h = Math.max(1, Math.round(el.naturalHeight * k));
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(el, 0, 0, w, h);
+    const d = x.getImageData(0, 0, w, h).data; let n = 0;
+    for (let i = 3; i < d.length; i += 4) if (d[i] > 200) n++;
+    out = n / (w * h);
+  } catch { out = null; }
+  solidCache.set(el, out); return out;
+}
+/** ความกว้างท่านอน (หน่วย U) ให้ตัวเท่าท่ายืน */
+function lyingWidth(down, stand) {
+  if (!down?.naturalWidth || !stand?.naturalWidth) return LYING_W_FALLBACK;
+  return sleepSpriteWidth(solidFraction(stand), solidFraction(down), down.naturalHeight / down.naturalWidth, HERO_H) ?? LYING_W_FALLBACK;
+}
+const REACH  = 0.17;      // ระยะเอื้อมถึงจุดลงมือ — ยืนใกล้ ๆ ก็พอ ไม่ต้องเดินจ่อ
+
+/** ตรวจตลอดทางในหนึ่งเฟรม ไม่ให้ก้าวข้ามช่องที่ห้ามเดินซึ่งแคบกว่าระยะก้าว */
+export function walkSegmentInside(x1, y1, x2, y2, inArea) {
+  const steps = Math.max(1, Math.ceil(Math.hypot(x2 - x1, y2 - y1) / 0.002));
+  for (let i = 1; i <= steps; i++) {
+    const f = i / steps;
+    if (!inArea(x1 + (x2 - x1) * f, y1 + (y2 - y1) * f)) return false;
+  }
+  return true;
+}
+
+const bgCache = new Map();
+const lumCache = new Map();
+
+/** ปรับแสงฉากให้เท่ากันทุกห้อง — ภาพที่เจ้าของวาดมาสว่างไม่เท่ากัน
+ *  หอทะเบียนกรรมมืดกว่าห้องอื่นราวหนึ่งในสาม เข้าไปแล้วแทบมองไม่เห็นอะไรเลย
+ *  (เจ้าของเจอ 10 ก.ย. 2569) · วัดความสว่างเฉลี่ยจากภาพย่อครั้งเดียวแล้วจำไว้
+ *  ห้องไหนอยากคุมเองก็ใส่ bright ใน ROOMS ทับได้ */
+// เป้าความสว่างเฉลี่ยของฉากในห้อง (0-255)
+// 74 ยังมืดเกินไปบนจอจริง เจ้าของบอกว่า "มืดทุกหน้าเลย" (10 ก.ย. 2569)
+const LUM_TARGET = 86;
+
+/** เบราว์เซอร์นี้ตั้ง ctx.filter ได้ไหม — เช็คครั้งเดียว
+ *  (เช็คหลัง restore ไม่ได้ เพราะค่ามันถูกคืนกลับเป็น none เสมอ ไม่ว่าจะรองรับหรือไม่) */
+let filterOk = null;
+function canFilter() {
+  if (filterOk !== null) return filterOk;
+  try {
+    const c = document.createElement('canvas').getContext('2d');
+    c.filter = 'brightness(1.2)';
+    filterOk = c.filter !== 'none' && c.filter !== '';
+  } catch { filterOk = false; }
+  return filterOk;
+}
+/** เบราว์เซอร์นี้ผสมสีแบบ color/multiply บน canvas ได้ไหม — เช็คครั้งเดียว
+ *  ถ้าไม่ได้ ค่า globalCompositeOperation จะถูกเมินเงียบ ๆ แล้วสีทองกับไล่เงาจะถูกวาด "ทับ" ฉากทั้งใบ
+ *  กรณีนั้นข้ามการย้อมแสงไปเลยดีกว่า (เห็นฉากสว่างเกิน ดีกว่าเห็นแผ่นสีทึบ) */
+let blendOk = null;
+function canBlend() {
+  if (blendOk !== null) return blendOk;
+  try {
+    const c = document.createElement('canvas').getContext('2d');
+    c.globalCompositeOperation = 'color';
+    const a = c.globalCompositeOperation;
+    c.globalCompositeOperation = 'multiply';
+    blendOk = a === 'color' && c.globalCompositeOperation === 'multiply';
+  } catch { blendOk = false; }
+  return blendOk;
+}
+
+/** ลดแสงฉากที่ "สว่างเกิน" ลงมา — ค่าอยู่ที่ ROOMS[k].light ใน data.js (ตอนนี้มีแค่ประตูสวรรค์)
+ *  brightOf() ข้างล่างยกแสงได้อย่างเดียว (Math.max(1, …)) ภาพที่สว่างเกินจึงหลุดผ่านไปทั้งใบ
+ *  ประตูสวรรค์ความสว่างเฉลี่ย 195 ขาวจ้าเกือบครึ่งภาพ ขณะที่ห้องอื่นอยู่ราว 45-93 (เจ้าของเจอ 10 ก.ย. 2569)
+ *  shade ไล่เงาเทากลางแบบ multiply เป็นวงรอบ at (ประตู) ตรงกลางมืดน้อย ขอบมืดมาก
+ *              ประตูจึงยังเป็นจุดที่สว่างที่สุดในภาพ = ยังดูออกว่าแสงมาจากสวรรค์
+ *  ไฟล์ภาพไม่ถูกแก้ — ถ้าวาดฉากใหม่ให้โทนถูกแล้ว ลบ light ออกจาก ROOMS ได้เลย */
+function applyLight(ctx, L, box) {
+  if (!L || !canBlend()) return;
+  ctx.save();
+  ctx.beginPath(); ctx.rect(box.ox, box.oy, box.w, box.h); ctx.clip();
+  if (L.tint) {
+    ctx.globalCompositeOperation = 'color';
+    ctx.globalAlpha = L.mix ?? 0.5;
+    ctx.fillStyle = L.tint;
+    ctx.fillRect(box.ox, box.oy, box.w, box.h);
+  }
+  if (L.shade) {
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'multiply';
+    const at = L.at || [0.5, 0.5];
+    const cx = box.ox + at[0] * box.w, cy = box.oy + at[1] * box.h;
+    const gr = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.max(box.w, box.h) * (L.r ?? 0.75));
+    L.shade.forEach(([pos, col]) => gr.addColorStop(pos, col));
+    ctx.fillStyle = gr;
+    ctx.fillRect(box.ox, box.oy, box.w, box.h);
+  }
+  ctx.restore();
+}
+
+function brightOf(bg, src) {
+  if (lumCache.has(src)) return lumCache.get(src);
+  let f = 1;
+  try {
+    const c = document.createElement('canvas');
+    c.width = c.height = 48;
+    const x = c.getContext('2d', { willReadFrequently: true });
+    x.drawImage(bg, 0, 0, 48, 48);
+    const d = x.getImageData(0, 0, 48, 48).data;
+    let sum = 0;
+    for (let i = 0; i < d.length; i += 4) sum += (d[i] * 299 + d[i + 1] * 587 + d[i + 2] * 114) / 1000;
+    const mean = sum / (d.length / 4);
+    f = Math.max(1, Math.min(2.4, LUM_TARGET / Math.max(1, mean)));
+  } catch { f = 1; }
+  lumCache.set(src, f);
+  return f;
+}
+/** โหลดภาพฉากของสถานี — ไม่มีไฟล์ก็ถอยไปเวทีกลาง */
+function bgOf(src, fallback) {
+  if (bgCache.has(src)) { const r = bgCache.get(src); return r.ok ? r.el : (fallback ? bgOf(fallback) : null); }
+  const el = new Image();
+  const rec = { el, ok: false };
+  el.onload = () => { rec.ok = true; };
+  el.onerror = () => { rec.ok = false; };
+  el.src = src;
+  bgCache.set(src, rec);
+  return null;
+}
+
+/** ฉากภายในหนึ่งห้อง — เรียก destroy() ทุกครั้งที่ปิดหน้า ไม่งั้นลูปเฟรมค้างอยู่ตลอดเกม */
+export function makeRoom(cv, g, def, room, bgSrc, bgFallback, alive = () => true) {
+  const P = { x: room.me[0], y: room.me[1], tx: null, ty: null, face: 1 };
+  const mirrorRoom = !!room.mirror;       // 29M: ภาพศาลาไทยใหม่ไม่ต้องกลับซ้ายขวาแล้ว (บันไดอยู่ล่างขวาในไฟล์)
+  const KEY = {};
+  const gateEffects = new Map(), visibleGateSlots = new Map(), prisonEscorts = new Map(), waitSlots = new Map();   // waitSlots: id วิญญาณที่ยืนรอในตะราง/ประตู → ช่องที่วาด (ให้ปุ่มใบวินิจฉัยลอยเหนือหัว)
+  let raf = 0, last = performance.now(), dead = false;
+  let box = { ox: 0, oy: 0, w: 1, h: 1 };     // กรอบที่ภาพฉากถูกวางจริงบน canvas
+
+  /** ข้อ A คุณเป้ 24 ก.ย. 2569 — จุดนั่งพักฟื้นบารมี มีเฉพาะศาลาน้ำชา (def.k === 'tea')
+   *  ใช้จุด "act" เดิมของห้องเป็นที่นั่ง (ศาลาไม่เคยมีปุ่มลงมืออื่นอยู่แล้ว ไม่ชนกัน)
+   *  sitting=true ระหว่างนั่ง: ล็อกไม่ให้เดิน เติม MP ด้วยเวลาจริง (ไม่ผ่าน g.step() ที่พักไปพร้อมกล่องโมดัล)
+   *  ลุกเองอัตโนมัติเมื่อเต็ม · ผู้เล่นกด "ลุกขึ้น" เองก่อนเต็มก็ได้ (ui.js เรียก api.setSit(false)) */
+  const canSit = def.k === 'tea';
+  let sitting = false, sipAt = 0, sipping = false;
+  let lying = false, sleepElapsed = 0, recoverySleep = false, sleepStartHp = 0;
+  const mpAcc = { frac:0 };   // เศษ MP ที่ยังไม่ครบหน่วย (ข้อ 5 ชุด 30B)
+  // ข้อ 7 ใบงานชุดที่ 9 (มินิเกม "เร่งการทำงาน") — ระหว่างมินิเกมเปิดทับอยู่ ห้องนี้ต้อง
+  // "เดินต่อได้ตามปกติแต่ไม่รับอินพุตซ้ำ" กันเว้นวรรค/ลูกศรของห้องไปชนกับปุ่มของมินิเกม
+  // (คีย์บอร์ดผูกกับ window ทั้งคู่ ปิดจาก CSS อย่างเดียวไม่พอ) ui.js เรียก api.lock(true/false)
+  let locked = false;
+  let stokeFx = null;
+  // แอนิเมชันเดิน — ใช้สไปรท์เดินชุดเดียวกับบนแผนที่ (art.js drawHeroWalk) เฟรมเปลี่ยนตามระยะที่เดินจริง
+  let walkDist = 0, simClock = 0, movedSim = -1e9, direction = 'down';
+  // F1 — "กำลังเดิน" นับด้วยนาฬิกาของการเดินเอง (ไม่ใช่นาฬิกาเฟรม) เฟรมช้า/กระตุกจะได้ไม่สลับท่ายืน↔ท่าเดินมั่ว
+
+  // ---- พิกัดสัดส่วน (0-1 ของภาพฉาก) → พิกเซลบน canvas ----
+  const px = u => box.ox + (mirrorRoom ? 1 - u : u) * box.w;
+  const py = v => box.oy + v * box.h;
+  const unit = () => Math.min(box.w, box.h);     // ใช้คิดความสูงตัวละครให้คงที่ทุกอัตราส่วน
+
+  // walk รองรับทั้งกรอบและ polygon — ฉากหน้าผาใช้ polygon เพื่อไม่ให้กรอบสี่เหลี่ยมคร่อมเหว
+  const areas = Array.isArray(room.walk) && (Array.isArray(room.walk[0]) || room.walk[0]?.poly)
+    ? room.walk : [room.walk];
+  const insidePoly = (x, y, p) => {
+    let hit = false;
+    for (let i = 0, j = p.length - 1; i < p.length; j = i++) {
+      const a = p[i], b = p[j];
+      if ((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) hit = !hit;
+    }
+    return hit;
+  };
+  const inArea = (x, y) => !(def.k === 'krajok' && mirrorObstacle(x,y)) && areas.some(a => a.poly ? insidePoly(x, y, a.poly)
+                                                   : x >= a[0] && y >= a[1] && x <= a[2] && y <= a[3]);
+  /** จุดที่เดินได้ซึ่งใกล้ (x,y) ที่สุด — ใช้ตอนแตะนอกพื้นที่ */
+  const snap = (x, y) => {
+    if (def.k === 'krajok') [x,y]=mirrorClearPosition(x,y);   // N1: แท่นกระจกปรับองศาตั้งอยู่ในห้องเสมอ (ไม่ต้องรอกดวางกระจก)
+    if (inArea(x, y)) return [x, y];
+    let best = null, bd = Infinity;
+    for (const a of areas) {
+      if (!a.poly) {
+        const cx = Math.max(a[0], Math.min(a[2], x)), cy = Math.max(a[1], Math.min(a[3], y));
+        const d = Math.hypot(cx - x, cy - y);
+        if (d < bd) { bd = d; best = [cx, cy]; }
+        continue;
+      }
+      for (let i = 0; i < a.poly.length; i++) {
+        const p = a.poly[i], q = a.poly[(i + 1) % a.poly.length];
+        const vx = q[0] - p[0], vy = q[1] - p[1];
+        const u = Math.max(0, Math.min(1, ((x - p[0]) * vx + (y - p[1]) * vy) / (vx * vx + vy * vy || 1)));
+        const cx = p[0] + u * vx, cy = p[1] + u * vy, d = Math.hypot(cx - x, cy - y);
+        if (d < bd) { bd = d; best = [cx, cy]; }
+      }
+    }
+    return best || [x, y];
+  };
+
+  /** ยืนถึงจุดลงมือหรือยัง — ผู้เรียกใช้ตัดสินว่าปุ่มกดได้ไหม */
+  const inTrainingReach = () => {
+    const at = room.training || room.act;
+    return Math.hypot(P.x-at[0], (P.y-at[1])*.7) <= REACH;
+  };
+  const inReach = () => Math.hypot(P.x - room.act[0], (P.y - room.act[1]) * 0.7) <= REACH;
+
+  // ---- คีย์บอร์ด: กล่องโมดัลกินคีย์ของเกมหลักไปหมด ห้องนี้จึงต้องดักเอง ----
+  const onKey = e => {
+    if (/input|textarea/i.test(e.target.tagName)) return;
+    if (locked || lying) return;         // มินิเกมกำลังเปิดอยู่ — ปล่อยให้มินิเกมจัดการคีย์เอง
+    const k = e.key.toLowerCase();
+    if (['arrowup', 'arrowdown', 'arrowleft', 'arrowright', 'w', 'a', 's', 'd', ' '].includes(k)) {
+      if (k === ' ') { e.preventDefault(); if (api.onAct) api.onAct(); return; }
+      e.preventDefault();
+      KEY[k] = e.type === 'keydown';
+      if (e.type === 'keydown') { P.tx = null; P.ty = null; }
+    }
+  };
+  addEventListener('keydown', onKey);
+  addEventListener('keyup', onKey);
+
+  // ---- แตะ/คลิกบนฉาก = เดินไปตรงนั้น ----
+  const onDown = e => {
+    if (locked || sitting || lying) return;              // มินิเกมกำลังเปิดอยู่ — แตะฉากไม่ให้ตัวละครเดิน
+    // box อยู่ในหน่วยพิกเซลของ canvas (backing store) — แปลงพิกัดเมาส์ให้เป็นหน่วยเดียวกัน
+    const r = cv.getBoundingClientRect();
+    const cx = (e.clientX - r.left) / r.width * cv.width;
+    const cy = (e.clientY - r.top) / r.height * cv.height;
+    const visualX = (cx - box.ox) / box.w;
+    const [tx, ty] = snap(mirrorRoom ? 1 - visualX : visualX, (cy - box.oy) / box.h);
+    P.tx = tx; P.ty = ty;
+  };
+  cv.addEventListener('pointerdown', onDown);
+
+  /** เริ่ม/เลิกนั่งพัก — ui.js ผูกกับปุ่ม "นั่งพัก"/"ลุกขึ้น" ในแผงขวา (เฉพาะศาลาน้ำชา)
+   *  ต้องยืนถึงจุด (inReach) ถึงจะเริ่มนั่งได้ · ลุกได้ทุกเมื่อไม่มีเงื่อนไข */
+  function setSit(on) {
+    if (on) {
+      if (lying || !canSit || !inReach() || g.mp >= g.mpMax) return false;
+      sitting = true; sipAt = performance.now() + 1800; sipping = false;
+      P.x = room.act[0]; P.y = room.act[1];
+      P.tx = null; P.ty = null;
+    } else {
+      sitting = false;
+      // H2: จุดนั่งอยู่บนเบาะ (สูงกว่าขอบพื้นที่เดินได้) — ลุกขึ้นแล้วต้องย้ายกลับเข้าพื้นที่เดินได้ ไม่งั้นตัวละครขยับไม่ได้
+      const [sx, sy] = snap(P.x, P.y); P.x = sx; P.y = sy;
+    }
+    return true;
+  }
+
+  // I1-A: ตื่นแล้วยืนที่ "พื้น" หน้าเตียง (room.wake — เท้าพ้นขอบหน้าเตียง อยู่ในพื้นที่เดินได้) ไม่ใช่บนขอบเตียง
+  // (เดิมใช้ bed.y+0.09 / ขอบบนของพื้นที่เดินได้ ซึ่งยังอยู่บนตัวเตียง) · ถ้าห้องไหนไม่มี wake ถอยกลับสูตรเดิม
+  const wakePoint = () => room.wake || [room.bed[0], Math.max(room.bed[1] + 0.09, areas[0]?.[1] ?? 0)];
+
+  function setSleep(emergency = false) {
+    // P1: ไม่มีเตียงให้ซื้อแล้ว — ห้องนี้ (canSit) มีก็ต่อเมื่อศาลาน้ำชาสร้างเสร็จ จึงนอนได้เลยเมื่อยืนใกล้ที่นอนและบารมียังไม่เต็ม
+    if (!canSit || lying || sitting || (!emergency &&
+        (Math.hypot(P.x-room.bed[0], (P.y-room.bed[1])*.7) > REACH || g.hp >= g.hpMax))) return false;
+    lying = true; recoverySleep = emergency;
+    sleepElapsed = emergency && g.pendingRecovery?.stage === 'wake' ? TEA_SLEEP_MS : 0;
+    sleepStartHp = g.hp;
+    P.x = room.bed[0]; P.y = room.bed[1]; P.tx = null; P.ty = null;
+    return true;
+  }
+
+  function step(dt) {
+    if (lying) {
+      sleepElapsed += dt;
+      g.hp = teaRecoveredHp(sleepStartHp, g.hpMax, sleepElapsed);
+      if (sleepElapsed >= TEA_SLEEP_MS + TEA_BLACKOUT_MS && recoverySleep && g.pendingRecovery?.stage !== 'wake') g.finishTeaSleep();
+      if (sleepElapsed >= TEA_REST_TOTAL_MS) {
+        lying = false;
+        [P.x, P.y] = snap(...wakePoint()); P.tx = null; P.ty = null;
+        if (recoverySleep) g.completeTeaRecovery();
+        else { g.hp = g.hpMax; g.save(); g.onChange(); }
+      }
+      return;
+    }
+    if (sitting) {
+      // นั่งนิ่ง ไม่รับอินพุตเดินเลย — เติม MP ด้วยเวลาจริง (ห้องนี้เดินต่อได้แม้กล่องโมดัลจะพัก g.step() ไว้)
+      if (g.mp < g.mpMax) {
+        regenMp(g, mpAcc, dt);   // ชุด 30B ข้อ 5 — MP เป็นจำนวนเต็มเสมอ (ดู mp-regen.js)
+        if (g.mp >= g.mpMax) setSit(false);
+      } else setSit(false);
+      const now = performance.now();
+      if (now >= sipAt) { sipping = !sipping; sipAt = now + 1800 + Math.random() * 900; }
+      return;
+    }
+    for (const slice of walkSlices(dt, Infinity)) walkStep(slice);   // F1: เดินทีละก้อนเล็ก (เวลานั่ง/นอนด้านบนใช้ dt เต็มเหมือนเดิม)
+  }
+
+  function walkStep(dt) {
+    simClock += dt;
+    // ความเร็วเดิน = ความสูงตัวละคร/วินาที (walk-motion.js) แปลงเป็นหน่วยของด้านสูงภาพฉาก — เท่ากันทุกจอ ทุกเฟรมเรต
+    const sp = walkStridePx(unit() * HERO_H, dt) / box.h;
+    let dx = 0, dy = 0;
+    if (KEY.a || KEY.arrowleft) dx -= 1;
+    if (KEY.d || KEY.arrowright) dx += 1;
+    if (mirrorRoom) dx = -dx;
+    if (KEY.w || KEY.arrowup) dy -= 1;
+    if (KEY.s || KEY.arrowdown) dy += 1;
+    if (!dx && !dy && P.tx != null) {            // เดินไปจุดที่แตะไว้
+      dx = P.tx - P.x; dy = P.ty - P.y;
+      if (Math.hypot(dx, dy) < 0.008) { P.tx = null; dx = dy = 0; }
+    }
+    const aspect = box.w / box.h;
+    const d = Math.hypot(dx * aspect, dy);
+    if (d > 0) {
+      const stride = P.tx != null ? Math.min(sp, d) : sp;
+      const nx = P.x + dx / d * stride, ny = P.y + dy / d * stride;
+      // ชนขอบแล้วไถลไปตามแกนที่ยังไปได้ — เหมือน stepTo บนแผนที่ ไม่ติดหนึบที่มุม
+      const bx = P.x, by = P.y;
+      if (walkSegmentInside(bx, by, nx, ny, inArea)) { P.x = nx; P.y = ny; }
+      else if (walkSegmentInside(bx, by, nx, by, inArea)) P.x = nx;
+      else if (walkSegmentInside(bx, by, bx, ny, inArea)) P.y = ny;
+      else P.tx = null;
+      const stepPx = Math.hypot((P.x - bx) * box.w, (P.y - by) * box.h);
+      if (stepPx > 0.05) { walkDist += stepPx; direction = walkDirection((P.x - bx) * box.w * (mirrorRoom ? -1 : 1), (P.y - by) * box.h, direction); movedSim = simClock; }
+      if (Math.abs(dx) > 0.001) P.face = (mirrorRoom ? -dx : dx) < 0 ? -1 : 1;
+    }
+    const ii = g.items.findIndex(it => it.from === def.k);
+    if (ii >= 0 && room.item && Math.hypot(P.x - room.item[0], (P.y - room.item[1]) * 0.75) < 0.055) {
+      if (g.collectItem(ii) && api.onCollect) api.onCollect();
+    }
+  }
+
+  function draw(t, st) {
+    // ขนาดจริงของ canvas ต้องตามกรอบที่ CSS จัดให้ ไม่งั้นภาพถูกยืดผิดสัดส่วน
+    // (ตั้ง width/height ไว้ตายตัวใน HTML แล้วปล่อยให้ CSS ยืด = ฉากบิดทั้งใบ)
+    //
+    // **วาดด้วยพิกเซลของ canvas ตรง ๆ ทั้งไฟล์** ไม่ตั้ง transform ตาม dpr
+    // ทุกขนาด (ตัวละคร ตัวหนังสือ หลอด) คิดเป็นสัดส่วนของ U ซึ่งมาจากกรอบภาพจริง
+    // จอ dpr เท่าไหร่ก็ได้สัดส่วนเดียวกัน — เคยตั้ง transform แล้วมีจุดที่ผสมหน่วยกัน
+    // จนตัวละครใหญ่ผิดขนาดหลายเท่า (เจ้าของเจอ 10 ก.ย. 2569: วิญญาณล้นทั้งจอ)
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    const rect = cv.getBoundingClientRect();
+    const bw = Math.max(64, Math.round((rect.width || cv.clientWidth || 640) * dpr));
+    const bh = Math.max(64, Math.round((rect.height || cv.clientHeight || 420) * dpr));
+    if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
+    const W = bw, H = bh;
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.imageSmoothingEnabled = false;
+
+    // ---- ฉาก: โซน 1 บนจอกว้างใช้พื้นที่เต็มกรอบ; จอเล็กยังคงสัดส่วนภาพเดิม ----
+    // room.crop = [sx,sy,sw,sh] สัดส่วน 0-1 ของภาพต้นฉบับ — ถ้ามี ตัดเฉพาะส่วนนั้นมาขยายเต็มกรอบ
+    // แทนที่จะยัดภาพทั้งใบ (ใช้ซูมเข้าไปในอาคารโดยไม่ต้องวาดภาพใหม่ — ข้อ D คุณเป้ 24 ก.ย. 2569)
+    // จุดยึด (me/walk/act/item) ของห้องที่มี crop ต้องวัดใหม่เทียบกับกรอบที่ครอปแล้ว ไม่ใช่ภาพเต็มอีกต่อไป
+    const bg = bgOf(bgSrc, bgFallback) || (bgFallback ? bgOf(bgFallback) : null);
+    if (bg && bg.naturalWidth) {
+      const crop = room.crop;
+      const sx = crop ? crop[0] * bg.naturalWidth  : 0;
+      const sy = crop ? crop[1] * bg.naturalHeight : 0;
+      const sw = crop ? crop[2] * bg.naturalWidth  : bg.naturalWidth;
+      const sh = crop ? crop[3] * bg.naturalHeight : bg.naturalHeight;
+      // ภาพฉากวางแบบ contain ไม่ยืด/ไม่ครอปซ้ำ — โซน 1 ใช้ room.crop ตัดแถบกว้างตามแบบ UI4 มาแล้ว
+      // กรอบหน้าสถานีบนจอกว้างมีสัดส่วนเท่ากับแถบนั้น จึงเต็มพอดี
+      box = roomImageBox(W, H, sw, sh, canSit || room.cover);
+      ctx.fillStyle = '#120810'; ctx.fillRect(0, 0, W, H);
+      // ห้องศาลาโซนไทยใช้ภาพฉากเดิม แต่หันให้ตรงกับสไปรท์บนแผนที่;
+      // จุดเดิน/จุดนั่งแปลงผ่าน px และ pointer เพื่อให้ยังตรงกับภาพที่กลับด้าน
+      const drawRoomBg = () => {
+        ctx.save();
+        if (mirrorRoom) { ctx.translate(box.ox * 2 + box.w, 0); ctx.scale(-1, 1); }
+        ctx.drawImage(bg, sx, sy, sw, sh, box.ox, box.oy, box.w, box.h);
+        ctx.restore();
+      };
+      // ยกแสงเฉพาะภาพฉาก ตัวละครไม่โดนด้วย จะได้ยังเด่นอยู่บนพื้นหลัง
+      const bf = room.bright || brightOf(bg, bgSrc);
+      if (Math.abs(bf - 1) > 0.02 && canFilter()) {
+        ctx.save();
+        ctx.filter = `brightness(${bf.toFixed(2)})`;
+        drawRoomBg();
+        ctx.restore();
+      } else if (bf > 1.02) {                            // ไม่รองรับ filter — ทับอีกชั้นแบบบวกแสง
+        drawRoomBg();
+        ctx.save();
+        ctx.globalCompositeOperation = 'lighter';
+        ctx.globalAlpha = Math.min(0.5, (bf - 1) * 0.7);
+        drawRoomBg();
+        ctx.restore();
+      } else drawRoomBg();
+      applyLight(ctx, room.light, box);                 // ห้องที่สว่างเกิน — ย้อมลงเฉพาะภาพฉาก
+    } else {
+      box = { ox: 0, oy: 0, w: W, h: H };
+      ctx.fillStyle = '#221324'; ctx.fillRect(0, 0, W, H);
+    }
+
+    const U = unit();
+    if (def.k === 'krajok' && mirrorObstacle(P.x,P.y)) { [P.x,P.y]=snap(P.x,P.y); P.tx=P.ty=null; }
+
+    // ---- วงแหวนบอกจุดลงมือ ----
+    const ax = px(room.act[0]), ay = py(room.act[1]);
+    const q = 0.5 + 0.5 * Math.sin(t / 300);
+    const near = inReach();
+    ctx.strokeStyle = near ? `rgba(255,205,120,${0.55 + q * 0.45})` : 'rgba(255,205,120,.30)';
+    ctx.lineWidth = 2.5;
+    if (!sitting && !lying && !['ngiw','dab'].includes(def.k)) {
+      ctx.beginPath(); ctx.ellipse(ax, ay, U * 0.075, U * 0.028, 0, 0, 7); ctx.stroke();
+    }
+
+    if (room.training && !['sala','ngiw','dab','sawan'].includes(def.k)) {
+      const [x,y] = room.training, ready = inTrainingReach();
+      ctx.strokeStyle = ready ? '#ffe29a' : 'rgba(255,226,154,.65)';
+      ctx.beginPath(); ctx.ellipse(px(x),py(y),U*.065,U*.022,0,0,Math.PI*2); ctx.stroke();
+      ctx.font = `${Math.max(12,U*.023)}px sans-serif`; ctx.textAlign = 'center';
+      ctx.fillStyle = '#ffe29a'; ctx.fillText('จุดฝึก',px(x),py(y)+U*.045);
+    }
+    // P5 — จุดออกบนพื้น: ไม่มีปุ่มแล้ว เดินถึงวงนี้ = ออกจากห้อง (ui.js ตั้ง api.exitSpot = {x,y,reach,label})
+    if (api.exitSpot && !lying) {
+      const e = api.exitSpot, r = e.reach ?? 0.10;
+      drawExitMarker(ctx, px(e.x), py(e.y), { rx: r * box.w, ry: r * box.h, dir: [0, 1], u: U, t, label: e.label || '', alpha: 0.9, reduced: prefersReducedMotion() });
+    }
+    const chains = (x,y) => {
+      if(def.k !== 'tarang') return;
+      ctx.save();ctx.strokeStyle='#a7a4a1';ctx.lineWidth=Math.max(1,U*.0018);
+      for(const side of [-1,1]) {
+        const ax=x+side*U*.025, ay=y-U*SOUL_H*.42;
+        const bx=x+side*U*.065, by=y+U*.012;
+        for(let i=0;i<10;i++) {
+          const f=i/9, lx=ax+(bx-ax)*f, ly=ay+(by-ay)*f+Math.sin(f*Math.PI)*U*.012;
+          ctx.beginPath();ctx.ellipse(lx,ly,U*.004,U*.0025,i%2?Math.PI/3:-Math.PI/3,0,Math.PI*2);ctx.stroke();
+        }
+        ctx.beginPath();ctx.ellipse(ax,ay,U*.008,U*.003,0,0,Math.PI*2);ctx.stroke();
+      }
+      ctx.restore();
+    };
+    // ---- คนทั้งห้อง เรียงจากหลังมาหน้า ----
+    const acts = [];
+    for (const a of room.souls || []) acts.push({y:a[1] + (def.k === 'ngiw' ? 0.001 : 0),fn:()=>drawSchoolProps(ctx,def.k,px(a[0]),py(a[1]),U,g.zone)});
+    (st ? st.slots : []).forEach((sl, i) => {
+      const a = room.souls[i] || room.souls[room.souls.length - 1];
+      if (!a) return;
+      acts.push({ y: a[1], fn: () => {
+        const x = px(a[0]), y = py(a[1]);
+        // F2 ข้อ 5: กระทะทองแดง — วิญญาณยืนในกระทะ มีไฟลุกใต้ตัว (src/pot-souls.js) · แท่นเดิมเหลือไว้เป็นจุดวางชื่อ/หลอดความคืบหน้า
+        drawSchoolProps(ctx,def.k,x,y,U,g.zone);
+        const pot = def.k === 'krata' ? potLayout(bgSrc) : null;
+        if (pot) drawPotSoul(ctx, pot, i, { px, py, U, t, reduced:prefersReducedMotion() }, (sx, sy, c = ctx) => drawSoul(c, sx, sy, U * SOUL_H, t + sl.soul.id * 200, '#ffd9c0', sl.soul.sp || 7));
+        else drawSoul(ctx, x, y, U * SOUL_H, t + sl.soul.id * 200, '#ffd9c0', sl.soul.sp || 7);
+        chains(x,y);
+        const p = Math.min(1, sl.progress / sl.need);
+        const bw = U * 0.09, bh2 = Math.max(4, U * 0.011);
+        ctx.fillStyle = 'rgba(0,0,0,.72)'; rr(ctx, x - bw / 2, y + U * 0.012, bw, bh2, bh2 / 2); ctx.fill();
+        ctx.fillStyle = def.fx === 'fx-ice' ? '#8fd8ff' : '#ff9d3a';
+        rr(ctx, x - bw / 2, y + U * 0.012, bw * p, bh2, bh2 / 2); ctx.fill();
+        // ชื่อสลับสูง-ต่ำทีละดวง + ตัดให้สั้น ไม่งั้นสามดวงที่ยืนใกล้กันป้ายทับกันจนอ่านไม่ออก
+        const nm = sl.soul.who.length > 9 ? sl.soul.who.slice(0, 8) + '…' : sl.soul.who;
+        if (def.k === 'tarang') soulNameplate(ctx, sl.soul.name || sl.soul.who, x, y, U, soulNameplateWidth(room.souls, i, box.w, U));
+        else soulLabel(ctx, nm, x, y + U * 0.033 + (i % 2) * U * 0.024, U);
+      } });
+    });
+
+    if (def.k === 'tarang' || def.k === 'sawan') {
+      const stage = def.k === 'tarang' ? 'prison' : 'gate';
+      const occupied = st?.slots.length || 0;
+      const freeSlots=room.souls.slice(occupied).filter(at=>![...gateEffects.values()].some(fx=>(fx.kind==='reborn'||fx.kind==='sky') && !gateEffectPose(fx.kind,t-fx.start,fx.reduced).done && fx.at[0]===at[0] && fx.at[1]===at[1]));
+      if(def.k === 'sawan')visibleGateSlots.clear();
+      waitSlots.clear();
+      const waiting = [
+        ...(def.k === 'tarang' ? (g.held || []).map(soul => ({ soul })) : []),
+        ...(g.sentences || []).filter(x => x.zone === g.zone && x.stage === stage),
+      ].slice(0, freeSlots.length);
+      waiting.forEach((entry, i) => {
+        if(prisonEscorts.has(entry.soul.id)) return;
+        const a = freeSlots[i];
+        if(def.k === 'sawan')visibleGateSlots.set(entry.soul.id,a);
+        waitSlots.set(entry.soul.id,a);
+        acts.push({ y:a[1], fn:() => {
+          const x = px(a[0]), y = py(a[1]);
+          drawSoul(ctx, x, y, U * SOUL_H, t + entry.soul.id * 200,
+                   entry.inspected || entry.checked ? '#d4f9cf' : '#ffd9c0', entry.soul.sp || 7);
+          chains(x,y);
+          if (def.k === 'tarang') soulNameplate(ctx, entry.soul.name || entry.soul.who, x, y, U,
+            soulNameplateWidth(room.souls, i + occupied, box.w, U));
+          else {
+            soulLabel(ctx, entry.soul.name || entry.soul.who, x, y + U * 0.036, U);
+          }
+        } });
+      });
+    }
+    // (ชุด 27A: ตัดป้ายชื่อใต้ NPC/ผู้คุม/ของในฉากออก — แบบ UI4 ไม่มีตัวหนังสือบนฉาก)
+    if (def.k === 'tea') {
+      for (const {actor:c,point:[x,y]} of teaRoomStaff(g)) {
+        acts.push({y,fn:()=>{
+          const h=U*.105,atX=px(x),atY=py(y),sprite=poseImg(teaRestSprite(c,g.zone));
+          // Low floor cushion; feet and crossed legs stay fixed on its centre.
+          ctx.save();ctx.fillStyle='#842e36';ctx.strokeStyle='#c99a50';ctx.lineWidth=Math.max(1,U*.002);
+          ctx.beginPath();ctx.ellipse(atX,atY,h*.53,h*.19,0,0,Math.PI*2);ctx.fill();ctx.stroke();
+          if(sprite){const width=h*sprite.naturalWidth/sprite.naturalHeight;ctx.drawImage(sprite,atX-width/2,atY-h*.94,width,h);}
+          ctx.restore();
+        }});
+      }
+    }
+    // NPC ประจำห้อง — นิรา (ตะราง) / บุญ (ประตูสวรรค์) / กานต์ (หอส่องกรรม ข้อ A-2 คุณเป้ 24 ก.ย. 2569)
+    // กานต์เป็นยมทูตตัวเดียวกับใน CREW (ใช้ภาพ crew-kan เดิม ไม่วาดใหม่ — ตามข้อห้ามใบงาน "ห้ามใช้ภาพอื่นแทน")
+    // ข้อ I-2 คุณเป้เจอ 25 ก.ย. 2569 — ประตูสวรรค์ (sawan) มอบหมายผู้คุมได้จริงผ่านระบบเดียวกับ
+    // สถานีลงทัณฑ์ทั่วไป (pow:6 > 0) ถ้าผู้เล่นสั่งให้ "บุญ" (ตัวเดียวกับ NPC ประจำห้องนี้) เข้าเวร
+    // จะมีทั้ง NPC ประจำห้อง (บล็อกนี้) และผู้คุมเข้าเวร (บล็อกด้านล่าง room.crew+0.13) วาดพร้อมกัน
+    // กลายเป็น "บุญ" สองตัวยืนคนละจุด — ตัวที่เข้าเวรจริงต้องมาแทนตัวประจำ ไม่ใช่ยืนคู่กัน
+    // (ตะราง/หอส่องกรรมไม่เจอเคสนี้: นิราเป็น reader ห้ามมอบหมาย · กานต์ที่หอส่องกรรม pow:0 ไม่เคยมี crewK)
+    // ซ้ำกับผู้คุมเข้าเวรด้านล่างเฉพาะตอน "ตัวเดียวกัน" เข้าเวรอยู่จริง (เช่น บุญเข้าเวรที่ sawan เอง)
+    // ถ้าเข้าเวรเป็นคนอื่น (เช่น ดำมาคุมแทน) NPC ประจำห้องยังต้องยืนอยู่ตามปกติ ไม่ใช่หายไปด้วย
+    if (def.k === 'krata' && g.crew?.some(c=>c.k==='plerng') && st?.crewK !== 'plerng') {
+      acts.push({y:room.crew[1],fn:()=>drawStandee(ctx,'crew-plerng',px(room.crew[0]),py(room.crew[1]),U*CREW_H,t,'')});
+    }
+    if (['tarang','sawan','krajok','ngiw','dab'].includes(def.k)) {
+      const key = def.k === 'tarang' ? 'nira' : def.k === 'sawan' ? 'boon' : def.k === 'krajok' ? 'kan' : 'dam';
+      const name = def.k === 'tarang' ? 'นิรา' : def.k === 'sawan' ? 'บุญ' : def.k === 'krajok' ? 'กานต์' : 'ดำ';
+      if (!(st && st.crewK === key)) {
+        const a = room.crew || [0.30,0.80];
+        acts.push({ y:a[1], fn:() => {
+          const x = px(a[0]), y = py(a[1]);
+          drawStandee(ctx, 'crew-' + key, x, y, U * CREW_H, t, name);
+        } });
+      }
+    }
+
+    if (st && st.crewK && room.crew) {
+      const c = g.crewOf(st.crewK);
+      const guard = def.k === 'krata' && c?.k !== 'plerng' ? [.42,.74] : room.guard || [room.crew[0] + (['sawan','tarang','ngiw','dab'].includes(def.k) ? 0.13 : 0), room.crew[1]];
+      if (actorStanding(c) && !c.self) acts.push({ y: guard[1], fn: () => {
+        const x = px(guard[0]), y = py(guard[1]);
+        drawStandee(ctx, 'crew-' + c.k, x, y, U * CREW_H, t, c.glyph, room.crew[0] < room.act[0] ? 1 : -1);
+      } });
+    }
+
+    const roomItem = g.items.find(it => it.from === def.k);
+    if (roomItem && room.item) {
+      const itemDef = ITEMS[roomItem.k];
+      acts.push({ y: room.item[1], fn: () => {
+        const x = px(room.item[0]), y = py(room.item[1]);
+        const pulse = 0.5 + 0.5 * Math.sin(t / 420);
+        ctx.fillStyle = `rgba(255,215,125,${0.12 + pulse * 0.18})`;
+        ctx.beginPath(); ctx.arc(x, y - U * 0.035, U * 0.07, 0, 7); ctx.fill();
+        drawStandee(ctx, itemDef.img, x, y, U * 0.085, t, itemDef.glyph || '🎁');
+      } });
+    }
+
+    // ข้อ D คุณเป้ 25 ก.ย. 2569 — ถ้วยน้ำชาที่ศาลาเลิกเป็น "ของเก็บ" แล้ว (เดินเก็บแล้วบารมีไม่เพิ่มจริง
+    // ตามที่คุณเป้เจอ — STATIONS.tea ไม่มี visit/drop อีกต่อไป ดู data.js) เหลือเป็นของประกอบฉากนิ่ง ๆ
+    // วางอยู่ที่จุดเดิม (room.item) ตลอดเวลา "ยกเว้น" ตอนนั่งพัก — ตอนนั่ง ถ้วยไปอยู่ในมือยมบาทน้อยแทน
+    // อยู่แล้วในภาพ hero-yama-sit(-sip).png ที่เจ้าของวาดมาให้ (ไม่ต้องวาดถ้วยซ้อนเพิ่ม) ลุกขึ้นแล้ว
+    // ถ้วยที่วางในฉากก็กลับมาโผล่ที่เดิมทันที (ไม่มีอนิเมชันเคลื่อนที่ — แค่ซ่อน/โผล่ตามสถานะนั่ง)
+    if (def.k === 'tea' && room.item && !room.noCup && !sitting) {
+      acts.push({ y: room.item[1], fn: () => {
+        const x = px(room.item[0]), y = py(room.item[1]);
+        drawStandee(ctx, ITEMS.tea.img, x, y, U * 0.07, t, ITEMS.tea.glyph);
+      } });
+    }
+
+    // I1-A: ฐาน+แผ่นกระจกวาดลง canvas นี้เอง เรียงลึกตามเส้นพื้นของฐานเทียบกับเท้ายมบาท
+    // (เดิมเป็น <img> ซ้อนทับ canvas เสมอ — ยมบาทที่ยืนหน้าแท่นจึงถูกฐานบังทั้งตัว)
+    // N1 (คุณเป้ 16 ต.ค. ภาพ 10): แท่น+แผ่นกระจกปรับองศาตั้งรออยู่ที่วงขวาเสมอ · "วางกระจก" = กระจกวิเศษมาวางบนฐานดอกบัวด้านบน + เปิดให้ปรับองศาได้
+    if (def.k === 'krajok') {
+      acts.push({ y: MIRROR_SORT_Y, fn: () => {
+        const base = img('mirror-charge-base'), pane = img('mirror-charge-pane');
+        const dprK = cv.width / (cv.getBoundingClientRect().width || cv.width), w = MIRROR_W * box.w;
+        ctx.save(); ctx.imageSmoothingEnabled = true;
+        if (base) {
+          const bh = w * base.naturalHeight / base.naturalWidth;
+          ctx.shadowColor = 'rgba(33,22,36,.67)'; ctx.shadowBlur = 6 * dprK; ctx.shadowOffsetY = 3 * dprK;
+          ctx.drawImage(base, px(MIRROR_FOOT[0]) - w / 2, py(MIRROR_FOOT[1]) - bh * 0.7, w, bh);
+        }
+        if (pane) {
+          const ph = w * pane.naturalHeight / pane.naturalWidth;
+          ctx.shadowColor = '#ffd16d'; ctx.shadowBlur = 6 * dprK; ctx.shadowOffsetY = 0;
+          ctx.translate(px(MIRROR_ROOM_LAYOUT.pivot[0]), py(MIRROR_ROOM_LAYOUT.pivot[1]));
+          ctx.rotate((api.mirrorState?.().angle || 0) * Math.PI / 180);
+          ctx.drawImage(pane, -w / 2, -ph / 2, w, ph);
+        }
+        ctx.restore();
+      } });
+    }
+
+    if (def.k === 'krajok' && api.mirrorState?.().placed) {
+      acts.push({ y: MIRROR_ROOM_LAYOUT.target[1], fn: () => {
+        const m = magicMirrorImg(); if (!m) return;
+        const w = MAGIC_MIRROR_W * box.w, h = w * m.naturalHeight / m.naturalWidth, x = px(MIRROR_ROOM_LAYOUT.target[0]), y = py(MIRROR_ROOM_LAYOUT.target[1]);
+        const bob = Math.sin(t / 700) * h * 0.01;
+        ctx.save(); ctx.imageSmoothingEnabled = true;
+        ctx.shadowColor = '#ffd16d'; ctx.shadowBlur = 14; ctx.drawImage(m, x - w / 2, y - h * 0.62 + bob, w, h);
+        ctx.restore();
+      } });
+    }
+
+    acts.push({ y: def.k === 'krajok' ? mirrorHeroSortY(P.x, P.y) : P.y, fn: () => {
+      // I1-A: เปิดแผงปรับองศากระจก = ยมบาทเปลี่ยนเป็นท่า atk (ยกมือชี้) ของชุดที่สวมอยู่ หันไปทางกระจก · ปิดแผง = กลับท่ายืน
+      if (def.k === 'krajok' && api.mirrorState?.().adjusting && !(simClock - movedSim < WALK_GRACE_MS)) {
+        const atk = poseImg(ragePoseSrc(g.outfit || g.zone));
+        if (atk) {
+          const h = U * HERO_H, x = px(P.x), y = py(P.y), flip = px(MIRROR_ROOM_LAYOUT.pivot[0]) < x;
+          drawContactShadow(ctx, x, y, h);
+          if (flip) { ctx.save(); ctx.translate(x, 0); ctx.scale(-1, 1); ctx.drawImage(atk, -h / 2, y - h, h, h); ctx.restore(); }
+          else ctx.drawImage(atk, x - h / 2, y - h, h, h);
+          return;
+        }
+      }
+      // นั่งพักอยู่ — ใช้ภาพดื่มชาที่ตัดเสื่อออกแล้ว เพื่อวางบนเบาะจริงในฉาก
+      // กำลังลงทัณฑ์อยู่ = สลับไปท่าฟาด (เจ้าของวาดมาให้ 10 ก.ย. 2569)
+      if (lying && teaSleepPhase(sleepElapsed) === 'wake') {
+        ctx.save();
+        ctx.globalAlpha = Math.min(1,(sleepElapsed-TEA_SLEEP_MS-TEA_BLACKOUT_MS)/TEA_WAKE_MS);
+        drawStandee(ctx,'hero-yama',px(wakePoint()[0]),py(wakePoint()[1]),U*HERO_H,t,'👑',P.face);
+        ctx.restore(); return;
+      }
+      if (lying) {
+        const down = img('hero-yama-unconscious');
+        if (down) {
+          const width = U * lyingWidth(down, img('hero-yama')), height = width * down.naturalHeight / down.naturalWidth;
+          ctx.drawImage(down, px(P.x)-width/2, py(P.y)-height/2, width, height);
+        }
+        return;
+      }
+      const swinging = !sitting && g.swingUntil && Date.now() < g.swingUntil;
+      const sitKey = 'hero-yama-tea-clean';
+      const haveSitArt = !!img('hero-yama-tea-clean');
+      const key = sitting ? (haveSitArt ? sitKey : 'hero-yama')
+                : swinging && img('hero-yama-atk') ? 'hero-yama-atk' : 'hero-yama';
+      // เดินอยู่จริง (ขยับตำแหน่งในช่วง 120ms ที่ผ่านมา) → ใช้สไปรท์เดิน 4 เฟรมเหมือนบนแผนที่
+      // สไปรท์เดินวาดหันซ้าย drawHeroWalk พลิกให้ตามทิศ P.face เอง · ไม่มีไฟล์เดินก็ถอยไปท่ายืนเด้งเดิม
+      const moving = !sitting && !swinging && simClock - movedSim < WALK_GRACE_MS;
+      const heroH = U * HERO_H;
+      if (swinging && ['dab','ngiw'].includes(def.k) && drawYamaSword(ctx, g.outfit || g.zone, px(P.x), py(P.y), heroH,
+          SWORD_DURATION_MS - (g.swingUntil - Date.now()), P.face)) return;
+      if (!(!sitting && !swinging && drawHeroWalk(ctx, px(P.x), py(P.y), heroH, moving ? walkDrawDistance(walkDist, heroH) : 0, P.face, direction, moving))) {
+        const gait = Math.floor(t / 180) % 4;
+        const hop = moving && gait % 2 ? U * 0.010 : 0;
+        const stretch = moving ? (gait % 2 ? 1.045 : 0.965) : 1;
+        drawStandee(ctx, key, px(P.x), py(P.y) - hop, heroH * stretch, t, '👑', P.face);
+      }
+      // ยังไม่มีไฟล์ท่านั่ง — ใช้ท่ายืนเดิมแทนพร้อมสัญลักษณ์ 💤 กำกับว่ากำลังพัก (ข้อ A ข้อห้าม 24 ก.ย. 2569)
+      if (sitting && !haveSitArt) {
+        const zx = px(P.x) + U * HERO_H * 0.34, zy = py(P.y) - U * HERO_H * 1.05 + Math.sin(t / 380) * U * 0.012;
+        ctx.font = `${Math.round(U * 0.05)}px "Apple Color Emoji","Segoe UI Emoji",sans-serif`;
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('💤', zx, zy);
+      }
+    } });
+
+    for(const [id,fx] of prisonEscorts) {
+      const progress=Math.min(1,(t-fx.start)/2400);
+      if(progress>=1){prisonEscorts.delete(id);fx.done();continue;}
+      const x=fx.at[0]+(.5-fx.at[0])*progress, y=fx.at[1]+(.96-fx.at[1])*progress;
+      acts.push({y,fn:()=>{
+        if(!drawCrewWalk(ctx,'crew-dam',px(x),py(y),U*CREW_H,progress*240, x>=fx.at[0]?1:-1))
+          drawStandee(ctx,'crew-dam',px(x),py(y),U*CREW_H,t,'🦇');
+        drawSoul(ctx,px(x-.035),py(y-.025),U*SOUL_H,t,'#ffd9c0',fx.soul.sp||7);
+      }});
+    }
+
+    for(const [id,fx] of gateEffects) {
+      const pose=gateEffectPose(fx.kind,t-fx.start,fx.reduced);
+      if(pose.done){gateEffects.delete(id);continue;}
+      acts.push({y:fx.at[1],fn:()=>{
+        const x=px(fx.at[0]),y=py(fx.at[1]),h=U*SOUL_H;
+        if(fx.kind==='reborn'||fx.kind==='sky'){
+          // I1-A: ตัววิญญาณจางหายขึ้นด้านบน (ไปสวรรค์) หรือหดเข้าหาศูนย์กลางตัวเป็นดวงไฟ (ไปเกิดใหม่)
+          const hh=h*pose.scale, footY=y-h*.5+hh*.5-U*pose.rise;
+          ctx.save();ctx.globalAlpha=pose.alpha;
+          drawSoul(ctx,x,footY,hh,t,'#fff1cf',fx.soul.sp || 7);ctx.restore();
+        }
+        drawGateEffect(ctx,x,y,h,fx.kind,pose,fx.cut,{seed:fx.soul.id,to:[px(GATE_DOOR[0]),py(GATE_DOOR[1])]});
+      }});
+    }
+    acts.sort((a, b) => a.y - b.y).forEach(o => o.fn());
+    const pots = def.k === 'krata' ? potLayout(bgSrc) : null;
+    if (stokeFx && pots) {
+      const age=t-stokeFx.at;
+      if (age > 2200) stokeFx=null;
+      else {
+        const f=Math.min(1,age/650), targetX=px(pots.cx[1]), targetY=py(pots.fireY);
+        const startX=px(P.x), startY=py(P.y)-U*HERO_H*.55;
+        if (stokeFx.hit) drawFire(ctx,startX+(targetX-startX)*f,startY+(targetY-startY)*f,U*.065,t,1);
+        if (age > 500) pots.cx.forEach(x=>drawFire(ctx,px(x),py(pots.fireY)+U*.04,U*(stokeFx.hit?.09:.035),t,stokeFx.hit?5:2));
+      }
+    }
+
+  }
+
+  function frame(now) {
+    if (dead) return;
+    // กล่องปิดไปแล้ว/ถูกกล่องอื่นแทนที่ — เก็บตัวเองทิ้ง อย่ารอ event close
+    // (event close ของ <dialog> ยิงแบบ async และมาถึงตอนกล่องใหม่เปิดไปแล้ว
+    //  ผูกการเก็บกวาดไว้กับมันเมื่อไหร่ ห้องจะโดนทำลายทิ้งตั้งแต่เฟรมแรก)
+    if (!alive()) { api.destroy(); return; }
+    // F1 — ไล่เวลาจริงให้ครบ (เพดาน 250ms) หั่นเป็นก้อนเล็ก ไม่ตัดที่ 50ms เหมือนเดิม ความเร็วไม่ตกตามเฟรมเรต
+    const dt = Math.min(WALK_MAX_CATCHUP_MS, now - last); last = now;
+    if(def.k==='tea')g.updateActorRecovery();
+    step(dt);
+    if (api.onFrame) api.onFrame(inReach());
+    draw(now, api.st);
+    raf = requestAnimationFrame(frame);
+  }
+
+  const api = {
+    krataApproach: room.act,
+    walkTo(x,y) { for (const key of Object.keys(KEY)) KEY[key]=false; [P.tx,P.ty]=snap(x,y); },
+    stokeEffect(hit) { stokeFx={at:performance.now(),hit}; g.swingUntil=Date.now()+900; },
+    st: null,               // สถานีที่กำลังเปิดอยู่ (ผู้เรียกอัปเดตให้)
+    onAct: null,            // กดเว้นวรรคตอนยืนถึง
+    onFrame: null,          // แจ้งผู้เรียกว่ายืนถึงหรือยัง (ไว้เปิด/ปิดปุ่ม)
+    exitSpot: null,         // P5: จุดออก {x,y,reach,label} — วาดลูกศรบนพื้น (ui.js เป็นคนตั้งและเป็นคนตัดสินว่าออก)
+    isLocked: () => locked, // มินิเกม/หอทะเบียนเปิดทับอยู่ — ห้ามออกอัตโนมัติ
+    onCollect: null,        // เก็บของในห้องแล้ว ให้แผงข้อมูลด้านข้างวาดใหม่
+    inReach, inTrainingReach,
+    mirrorPlaced:null,
+    mirrorState:null,       // ui.js ผูก: () => ({placed, angle, adjusting}) ให้ห้องวาดฐาน/แผ่นกระจกและเปลี่ยนท่ายมบาท
+    prisonEscorting: id => prisonEscorts.has(id),
+    prisonEscort(id,done) {
+      if(def.k!=='tarang' || prisonEscorts.has(id))return false;
+      const entries=[...(g.held||[]).map(soul=>({soul})),...(g.sentences||[]).filter(x=>x.zone===g.zone&&x.stage==='prison')];
+      const index=entries.findIndex(x=>x.soul.id===id), entry=entries[index];
+      const at=room.souls[Math.min(room.souls.length-1,index+(api.st?.slots.length||0))];
+      if(!entry || !at)return false;
+      prisonEscorts.set(id,{soul:entry.soul,at:[...at],start:performance.now(),done});return true;
+    },
+    gateEffect(id,kind,cut=0) {
+      if(def.k !== 'sawan' || !GATE_EFFECT_MS[kind])return false;
+      const entries=gateArrivals(g),index=entries.findIndex(x=>x.soul.id===id),entry=entries[index];
+      if(!entry)return false;
+      const at=visibleGateSlots.get(id) || room.souls[Math.min(room.souls.length-1,index+(api.st?.slots.length || 0))];
+      if(!at)return false;
+      gateEffects.set(id,{kind,cut,soul:entry.soul,at:[...at],start:performance.now(),reduced:prefersReducedMotion()});return true;
+    },
+    /** ชุด 29C — จุดบนฉากเป็นเปอร์เซ็นต์ของ canvas (ไว้วางปุ่ม HTML ลอยเหนือตัวละคร)
+     *  u,v = สัดส่วน 0-1 ของภาพฉากเหมือน ROOMS · up = ยกขึ้นกี่ส่วนของด้านสั้นของกรอบ (CREW_H = เหนือหัวคน) */
+    anchor(u, v, up = 0) {
+      const w = cv.width || 1, h = cv.height || 1;
+      return [px(u) / w * 100, (py(v) - up * unit()) / h * 100];
+    },
+    /** P4 — จุดเหนือหัววิญญาณที่ยืนรอ (เปอร์เซ็นต์ของ canvas) · ไม่ได้ยืนรออยู่บนจอ (เกิน 3 ดวง/กำลังเดินไปส่ง) → null */
+    soulAnchor(id) { const a = waitSlots.get(id); return a ? api.anchor(a[0], a[1], SOUL_H + 0.035) : null; },
+    crewHeight: CREW_H,
+    canSit,                 // มีจุดนั่งพักไหม — เฉพาะศาลาน้ำชา (ข้อ A 24 ก.ย. 2569)
+    sitting: () => sitting,
+    sleeping: () => lying,
+    sleepPhase: () => lying ? teaSleepPhase(sleepElapsed) : null,
+    nearBed: () => !!room.bed && Math.hypot(P.x-room.bed[0], (P.y-room.bed[1])*.7) <= REACH,
+    setSleep,
+    setSit,
+    lock: v => { locked = !!v; if (locked && (def.k === 'krata' || def.k === 'krajok')) { for (const key of Object.keys(KEY)) KEY[key]=false; P.tx=null; P.ty=null; } },   // มินิเกม "เร่งการทำงาน" เปิดอยู่ — ห้องหยุดรับอินพุตชั่วคราว (ชุดที่ 9)
+    project: ([x, y]) => {
+      const rect = cv.getBoundingClientRect();
+      return [px(x) / cv.width * rect.width,
+              (box.oy + y * box.h) / cv.height * rect.height];
+    },
+    pos: () => [P.x, P.y, P.tx, P.ty],       // ไว้ส่องตอนดีบัก
+    /** เดินหนึ่งเฟรมด้วยมือ — แท็บที่ไม่ได้อยู่หน้าจอ rAF ไม่ยิงเลย ทดสอบจากคอนโซลต้องใช้ตัวนี้
+     *  (แนวเดียวกับ G.step() ที่เกมเปิดไว้ให้อยู่แล้ว) */
+    tick(dt = 16) { step(dt); if (api.onFrame) api.onFrame(inReach()); draw(performance.now(), api.st); },
+    start() {
+      draw(performance.now(), api.st);   // วาดใบแรกทันที — ก่อนหน้านี้กรอบภาพยังไม่ถูกคำนวณ
+      raf = requestAnimationFrame(frame); //  แตะฉากก่อนเฟรมแรกจะได้พิกัดเพี้ยน
+    },
+    destroy() {
+      const pending=[...prisonEscorts.values()];
+      prisonEscorts.clear();
+      for(const fx of pending) fx.done();
+      dead = true;
+      cancelAnimationFrame(raf);
+      removeEventListener('keydown', onKey);
+      removeEventListener('keyup', onKey);
+      cv.removeEventListener('pointerdown', onDown);
+    },
+  };
+  return api;
+}
+
+function label(ctx, text, x, y, size, color) {
+  ctx.font = `600 ${Math.round(Math.max(10, size))}px "IBM Plex Sans Thai", system-ui, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(0,0,0,.8)';
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = color; ctx.fillText(text, x, y);
+}
+
+/** F2 ข้อ 3 — ชื่อวิญญาณใต้ตัว: เล็ก เรียบ ไม่เกะกะ (เดิมใช้ label() ขนาด U*0.025 ตัวใหญ่จนบังฉาก) */
+function soulLabel(ctx, text, x, y, U) {
+  const size = Math.max(10, U * 0.0155);
+  ctx.font = `500 ${Math.round(size)}px "IBM Plex Sans Thai", system-ui, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.lineJoin = 'round'; ctx.lineWidth = 2.5; ctx.strokeStyle = 'rgba(0,0,0,.7)';
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = 'rgba(255,224,200,.92)'; ctx.fillText(text, x, y);
+}
+
+function tag(ctx, x, y, text, color, U = 400) {
+  const size = Math.max(11, U * 0.027);
+  ctx.font = `600 ${Math.round(size)}px "IBM Plex Sans Thai", system-ui, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  const w = ctx.measureText(text).width + size * 1.4, h = size * 1.9;
+  ctx.fillStyle = 'rgba(16,8,12,.82)';
+  rr(ctx, x - w / 2, y - h / 2, w, h, h / 3); ctx.fill();
+  ctx.fillStyle = color; ctx.fillText(text, x, y);
+}
+
+function soulNameplate(ctx, name, x, y, U, maxWidth) {
+  const size = Math.max(10, U * 0.018), pad = size * 0.55;
+  ctx.font = `600 ${size}px "IBM Plex Sans Thai", system-ui, sans-serif`;
+  const text = fitSoulName(name, Math.max(0, maxWidth - pad * 2), s => ctx.measureText(s).width);
+  const width = Math.min(maxWidth, ctx.measureText(text).width + pad * 2), height = size * 1.65;
+  const top = y + U * 0.012;
+  ctx.fillStyle = 'rgba(16,8,12,.92)';
+  rr(ctx, x - width / 2, top, width, height, height / 3); ctx.fill();
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#ffe0c8'; ctx.fillText(text, x, top + height / 2);
+}
