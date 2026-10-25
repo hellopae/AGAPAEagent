@@ -71,3 +71,7 @@
 ## A6 — ปรับกระจกไม่ยิงลูกไฟ · เผยแพร่25ต.ค.
 
 เกม5fef1a2,PagesbuiltตรงSHA/live2/2; full1517/1517,syntax132. room.jsเดิมเรียกragePoseSrcเมื่อปรับจึงมีลูกไฟวาดติดท่าAsia; เปลี่ยนเป็นidleชุดจริงหันหาอุปกรณ์,เดินตามheadingจริงและไม่วาดswingค้างในห้องกระจก. ไม่ลบtimerหรือแก้combatอื่น/optics/reward. NativebrowserAsiaoutfitก่อนหลัง,เดินจริงสองด้าน,ปรับ17ชาร์จได้และเปิดรอบใหม่ตามคูลดาวน์,มือถือ390,ปิดแผงยังอยู่ห้อง/Escapeกลับmap,consoleempty. All4outfitsผ่านrenderer tests;ไม่ได้อ้างbrowserทุกโซน. คิวถัดไปA7ขนาดYama;ภาพรอคุณเป้ตรวจรับ. หลักฐาน2026-10-25-avegee-mirror-pose-review/.
+
+## A7 — ขนาดชุดยามา · เผยแพร่25ต.ค.
+
+เกมbfece14, full1522/1522,syntax133,Pagesbuilt/live4/4. วัดalphaจาก20ต้นฉบับ236เฟรมแล้วfitความสูง/แนวเท้าตามชุดและทิศ; idleและwalkคงสเกลเดียวไม่บีบยืดทีละเฟรม. Nativeเปลี่ยนชุด4แบบเท้าคง[1862,1148],coin100000เดิม; เปรียบเทียบrenderer16ช่อง,mirror th/cyberhell,trial th. ไม่มีการแก้ภาพหรือcollision; ไม่อ้างnative mobile/fullnaturalwalk. Ownerตรวจรับภาพยังรอ. คิวเหลือ14รวมL1–L3ใหม่,mask3แผนที่แยกต่างหาก;ถัดไปชื่อวิญญาณยาว10.png. หลักฐาน2026-10-25-avegee-yama-outfit-size-review/.

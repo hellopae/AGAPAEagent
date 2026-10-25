@@ -1,0 +1,49 @@
+✔ four directions follow actual displacement and retain facing when stopped (1.066771ms)
+✔ all 64 frames exist inside RGBA PNG sheets registered in the manifest (5.571073ms)
+✔ outfit overrides branch and every direction selects its own row without mirroring (3.31112ms)
+(node:5447) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ I1-A mirror stand is drawn in the room canvas, depth-sorted against Yama by feet y (11.473318ms)
+✔ I1-A depth key: every spot in front of the stand foot is drawn over it, every spot behind is drawn under it (10.337329ms)
+th: width 0.24 -> 0.1763 (x0.735), linear size lying/standing 1.36 -> 1.00
+asia: width 0.24 -> 0.1984 (x0.827), linear size lying/standing 1.21 -> 1.00
+west: width 0.24 -> 0.1711 (x0.713), linear size lying/standing 1.40 -> 1.00
+cyberhell: width 0.24 -> 0.1841 (x0.767), linear size lying/standing 1.30 -> 1.00
+✔ A6 mirror adjustment and closed panel both draw normal Yama without a combat fireball (3.01577ms)
+✔ I1-A mirror DOM: stand no longer painted in DOM (only drag area), close button no longer closes the whole room (3.463839ms)
+✔ I1-A lying sprite is scaled so its silhouette area equals the standing one, measured from real pixels, all four outfits (1506.50812ms)
+✔ I1-A room.js sizes the lying sprite from pixels and wakes Yama on the floor (room.wake), not on the bed (0.419323ms)
+✔ I1-A wake point is on the floor in front of the bed, inside the walkable area and within bed reach, every zone (0.358699ms)
+✔ I1-A after waking, Yama stands at the wake point and can walk immediately (7.076371ms)
+✔ I1-A cache-bust: -i1a is appended (existing suffixes kept) on every changed file that carries a version query (3.042421ms)
+(node:5448) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A6 th: mirror idle faces the apparatus with no combat pose, including unloaded idle art (6.681449ms)
+✔ A6 asia: mirror idle faces the apparatus with no combat pose, including unloaded idle art (3.090413ms)
+✔ A6 west: mirror idle faces the apparatus with no combat pose, including unloaded idle art (2.692241ms)
+✔ A6 cyberhell: mirror idle faces the apparatus with no combat pose, including unloaded idle art (3.099219ms)
+✔ A6 walking while panel is open keeps movement direction; closed panel ignores a residual swing (1.528818ms)
+✔ A6 ordinary combat poses and sword strokes outside the mirror room are unchanged (2.240581ms)
+✔ N2: every drawn combat frame is free of neighbour bleed (edge pieces, stray tops, specks) (5019.242761ms)
+✔ N2: the atlases still match the manifest geometry (cleaning never resizes a sheet) (252.551063ms)
+✔ N2: interrogation Yama no longer bobs; the suspect still floats (99.31494ms)
+✔ N2: trial render mounts the map idle pose with the same timing as yama-animation.js (2.791655ms)
+✔ all outfits use the shipped 8-frame walk with the existing full stride and fixed feet root (5.714268ms)
+✔ stopped hero blinks using new poses without changing scale or anchor (0.48898ms)
+✔ sword idle uses six poses and all zone exports are preloaded (1.25338ms)
+/Users/agapae/agapae-work/.codex-worktrees/tea-rest-20261025/scripts/art/measure-yama-fit.py:15: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  band=alpha.crop((0,max(0,b[3]-8),w,b[3]));pixels=list(band.getdata());xx=[i%w+.5 for i,v in enumerate(pixels) if v];xs.append(sum(xx)/len(xx))
+<string>:9: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+✔ A7 generated body fits still match all 236 shipped alpha frames and source hashes (1766.959326ms)
+✔ A7 production book renderer makes actual idle silhouettes equally high with the same foot baseline (2057.825935ms)
+✔ A7 walking retains native eight poses and one unchanged scale/anchor shared with standing idle (2.991917ms)
+✔ A7 sword idle fits a constant body height while retaining the same six-frame timing (792.463586ms)
+✔ A7 production standing fallback aligns every outfit silhouette to requested height and foot (110.279339ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5660.862318

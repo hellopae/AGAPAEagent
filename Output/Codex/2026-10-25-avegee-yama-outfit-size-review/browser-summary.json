@@ -1,0 +1,14 @@
+{
+  "native_map_outfits": 4,
+  "world_foot_unchanged": true,
+  "coin_unchanged": true,
+  "native_room_outfits": [
+    "th",
+    "cyberhell"
+  ],
+  "trial_opened": "th",
+  "renderer_comparison": 16,
+  "console_errors": [],
+  "mobile_native_check": false,
+  "owner_visual_acceptance": "pending"
+}

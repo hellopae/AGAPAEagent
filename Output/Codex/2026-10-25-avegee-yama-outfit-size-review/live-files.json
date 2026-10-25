@@ -1,0 +1,22 @@
+[
+  {
+    "file": "index.html",
+    "match": true,
+    "sha256": "9c5e74e44e2626f760f06d44ce607aba7de35f0c9d0f2220a86c2edf83decd13"
+  },
+  {
+    "file": "src/art.js",
+    "match": true,
+    "sha256": "3aa8e0e1ab2baa91c494d22ca0b37e0839c63a41cacceb9ea58ec8cc89faeffd"
+  },
+  {
+    "file": "src/yama-animation.js",
+    "match": true,
+    "sha256": "b75117ca40b28e4cace2924dd04a3664c35db756f3728ab515594845821921d5"
+  },
+  {
+    "file": "src/yama-fit.js",
+    "match": true,
+    "sha256": "b60e4c277302e0500b019d5ffc2139bfdbd849ec8d94c88f4d8459d5efec9033"
+  }
+]
