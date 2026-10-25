@@ -29,3 +29,5 @@
 - 2026-10-25 A3 codex/2026-10-25-worker-walk → merged542b7d1fbe346f7fd482165ccb8c41e09ec265bb | full1477/1477,syntax131,targeted43/43; natural side/up/down escort walking and idle on unchanged position,4zones browser production-renderer comparison; Pagesbuilt/live2/2; no art/path/spacing changes; worktree retained
 
 - 2026-10-25 A4 codex/2026-10-25-worker-spacing → merged2f705814218ae1ef824c51e324661a4b3b74a775 | tested2f78bd0, full1500/1500, syntax132, targeted23/23; worker pickup gap40, handoff>=72, lead/follow routing on existing floor, saved cancellation/release exact once; native map before/after4zone end-state fixtures, Pagesbuilt/live4/4; worktree retained; next A5 verdict authority cutscene
+
+- 2026-10-25 A5 codex/2026-10-25-verdict-comments → mergedbfc54da78cd416208644be9e8100e6202d2840d1 | tested537ca13, full1511/1511,syntax132,targeted31/31; every verdict grade authorityscene, critical over-punishment copy/color, reason/actualbonuses, consume/reload/skip exactonce; 4zone native UI fixtures+mobile390, red2scene→fireballwarning HP unchanged onskip; Pagesbuilt/live4/4; worktree retained; next A6 mirror pose

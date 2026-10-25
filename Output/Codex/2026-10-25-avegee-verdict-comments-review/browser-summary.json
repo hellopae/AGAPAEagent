@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "label": "th-80",
+      "valid_samples": 2,
+      "fixture_transition_samples": 1,
+      "effects": {
+        "coin": 100025,
+        "hp": 120
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    },
+    {
+      "label": "asia-80",
+      "valid_samples": 3,
+      "fixture_transition_samples": 0,
+      "effects": {
+        "coin": 100425,
+        "hp": 120
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    },
+    {
+      "label": "west-60",
+      "valid_samples": 2,
+      "fixture_transition_samples": 1,
+      "effects": {
+        "coin": 100800,
+        "hp": 120
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    },
+    {
+      "label": "cyberhell-95-over",
+      "valid_samples": 2,
+      "fixture_transition_samples": 1,
+      "effects": {
+        "coin": 101200,
+        "hp": 92
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    },
+    {
+      "label": "th-30-red2",
+      "valid_samples": 4,
+      "fixture_transition_samples": 1,
+      "effects": {
+        "coin": 100000,
+        "hp": 85
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    },
+    {
+      "label": "asia-95",
+      "valid_samples": 3,
+      "fixture_transition_samples": 0,
+      "effects": {
+        "coin": 100460,
+        "hp": 124
+      },
+      "scene_seen": true,
+      "bubble_seen": false
+    }
+  ],
+  "red2": "scene before fireball warning, HP85 unchanged after dismissal",
+  "viewports": [
+    "1280x720",
+    "390x844"
+  ],
+  "console_errors": [],
+  "limitation": "deterministic judge, real assign/dialog. Raw histories retain zero-case async fixture-reset samples; only post-assign casesDone1 is acceptance evidence. Owner visual acceptance pending."
+}

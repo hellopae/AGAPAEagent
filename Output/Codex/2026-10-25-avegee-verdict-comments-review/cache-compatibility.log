@@ -1,0 +1,27 @@
+(node:14265) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P8 TUTOR.fight hint numbers match BATTLE (mp cost, lose hp, lose order) and no map-pickup claim (3.616244ms)
+✔ P8 stale claims are gone from TUTOR / explainBar / openHelp / meThought (5.898173ms)
+✔ P8 ending text removed per owner decision (no "ทายาทบัลลังก์" / "ต่ำกว่า 25") (11.818713ms)
+✔ P8 krajok copy has no Kan and matches the mirror minigame (TH + EN) (0.942423ms)
+✔ P8 g5 final-attempt messages exist in TH and EN; krata-qte picks them via state.done (2.029637ms)
+✔ P8 lock badges go through i18n (rank in EN) (3.365268ms)
+✔ P8 index.html cache-bust carries -p8 on every touched file (3.774626ms)
+✔ P9 Nira: all four zones draw the v2 sheet (1280x1280, 4x4); v1 files stay on disk untouched (14.460416ms)
+✔ P9 Nira: v2 faces right in every pose so nothing is mirrored by the squad; a v1 sheet keeps the old rule (0.771167ms)
+✔ P9 cache-bust: nira-combat.js ends -p9 (0.45097ms)
+✔ P9 workers: asia/west/cyberhell draw the 12-row v2 sheet (1280x3840); th unchanged; v1 files stay (12.548073ms)
+✔ P9 workers: upright rows end within 2 % of the zone own v1 standing height; crouch/lean rows 6-8 are deliberately not scaled (0.823652ms)
+✔ P9 drawWorker: asia/west/cyberhell read v2 rows by what the worker does (repair=8, carry shards=11) and apply their scale about the foot baseline (1.451817ms)
+✔ P9 cache-bust: workers.js ends -p9 (0.432716ms)
+✔ P9 Trojan horse: cyberhell boss-frontier atlas reads the v2 file (same geometry, only attack f6/f7 redrawn), v1 stays; every other zone untouched (4.506293ms)
+✔ P9 manifest fetch carries a new cache key in all three readers, so returning players do not keep the old atlas path (8.811162ms)
+✔ P9 verdict scene: every zone draws its own praise/scold pair (1672x941 PNG); the scene kind `blame` points at the `scold` file; no placeholder left (19.676987ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 293.724065

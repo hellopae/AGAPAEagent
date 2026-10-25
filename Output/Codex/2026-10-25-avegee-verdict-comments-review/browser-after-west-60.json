@@ -1,0 +1,46 @@
+{
+  "label": "west-60",
+  "history": [
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "ฮาลวาร์ให้ความเห็น",
+      "coin": 100800,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false,
+      "quiet": true
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "ฮาลวาร์ให้ความเห็น",
+      "coin": 100800,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "ฮาลวาร์ให้ความเห็น",
+      "coin": 101200,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 0,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    }
+  ],
+  "errors": []
+}

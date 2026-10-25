@@ -1,0 +1,33 @@
+{
+  "label": "asia-80",
+  "history": [
+    {
+      "dialog": null,
+      "scene": false,
+      "title": null,
+      "coin": 100425,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": true,
+      "quiet": false
+    },
+    {
+      "dialog": null,
+      "scene": false,
+      "title": null,
+      "coin": 100425,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    }
+  ],
+  "errors": []
+}

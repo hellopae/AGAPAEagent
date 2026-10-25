@@ -1,0 +1,46 @@
+{
+  "label": "th-80",
+  "history": [
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "พญายมให้ความเห็น",
+      "coin": 100025,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false,
+      "quiet": true
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "พญายมให้ความเห็น",
+      "coin": 100025,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "พญายมให้ความเห็น",
+      "coin": 100800,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 0,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,46 @@
+{
+  "label": "asia-95",
+  "history": [
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "จ้าวเหวินพยักหน้า",
+      "coin": 100460,
+      "hp": 124,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false,
+      "quiet": true
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "จ้าวเหวินพยักหน้า",
+      "coin": 100460,
+      "hp": 124,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    },
+    {
+      "dialog": null,
+      "scene": false,
+      "title": null,
+      "coin": 100460,
+      "hp": 124,
+      "karma": 0,
+      "reds": 0,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    }
+  ],
+  "errors": []
+}

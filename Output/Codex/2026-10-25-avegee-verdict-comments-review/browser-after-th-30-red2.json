@@ -1,0 +1,71 @@
+{
+  "label": "th-30-red2",
+  "history": [
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "พญายมหมดความอดทน",
+      "coin": 100000,
+      "hp": 85,
+      "karma": 0,
+      "reds": 2,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": true,
+      "bubble": false,
+      "quiet": true
+    },
+    {
+      "dialog": "intro-comic-dialog verdict-dialog",
+      "scene": true,
+      "title": "พญายมหมดความอดทน",
+      "coin": 100000,
+      "hp": 85,
+      "karma": 0,
+      "reds": 2,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": true,
+      "bubble": false
+    },
+    {
+      "dialog": "",
+      "scene": false,
+      "coin": 100000,
+      "hp": 85,
+      "karma": 0,
+      "reds": 2,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    },
+    {
+      "dialog": null,
+      "scene": false,
+      "title": null,
+      "coin": 100000,
+      "hp": 85,
+      "karma": 0,
+      "reds": 2,
+      "cases": 1,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    },
+    {
+      "dialog": null,
+      "scene": false,
+      "title": null,
+      "coin": 100400,
+      "hp": 120,
+      "karma": 0,
+      "reds": 0,
+      "cases": 0,
+      "pendingScene": false,
+      "pendingWarn": false,
+      "bubble": false
+    }
+  ],
+  "errors": []
+}

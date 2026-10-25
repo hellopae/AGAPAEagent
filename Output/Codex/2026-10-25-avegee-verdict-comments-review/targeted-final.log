@@ -1,0 +1,43 @@
+✔ P2: the trait sits on the spirit name tag with the icon first and an accessible label — never colour alone (6.834318ms)
+✔ P2: the compact keeper bar lists keepers as picture + name + the colour they suit, and never reads hidden answers (3.209607ms)
+✔ P2: Kan is a round icon with the owner label, shown only when Kan is hired, with the exact price and one guarded action (2.432105ms)
+✔ completion reports remain a bounded unobtrusive regional list and acknowledging only marks read (1.42875ms)
+✔ production supervisor feedback displays the specific reason and skips once without repeating judgment or rewards (4.229037ms)
+✔ interrogation styles mount once and remain scoped to the new controls (3.611683ms)
+(node:15053) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ five stars keep special praise; ordinary grades now receive an A5 review (31.152845ms)
+✔ rebuke exactly where DAD.redsToCome counts red (score < 50), not by star count (16.00767ms)
+✔ rebuke tier follows the red streak 1 -> 2 -> 3, and a green verdict resets it (7.63624ms)
+✔ tier 1 drops the silent-look line that would contradict the rebuke; tiers 2 and 3 keep the original warning (8.664384ms)
+✔ rebuke scene shows the same stars the verdict got (30 points = 1 star, not 0) (4.582431ms)
+✔ a middle verdict without a soul id still builds a review without throwing (1.883534ms)
+✔ praise reports the reward the game already granted and changes no numbers (3.867768ms)
+✔ reward line is hidden when there is no reward text (0.402042ms)
+✔ save then load while the scene is pending: same scene, nothing granted again (29.940226ms)
+✔ queued: scene opens before the red warning / Yama fight and never over another dialog; skippable (7.127151ms)
+✔ lines: variables are filled, never leak braces, and unmet variables fall back to a plain line (2.109786ms)
+✔ art slots exist for every zone and kind (P9: all four zones have their own Codex praise/scold pair) (1.614977ms)
+✔ star badge is anchored: the .score badge scales around its own anchor and quiet verdicts skip it (7.905304ms)
+✔ small items: kan clue text says พลังเวท, not MP; cache-bust suffixes (6.270635ms)
+(node:15054) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A5 th: real assign queues a head scene for every grade boundary (7189.692521ms)
+✔ A5 asia: real assign queues a head scene for every grade boundary (8474.081408ms)
+✔ A5 west: real assign queues a head scene for every grade boundary (7193.913107ms)
+✔ A5 cyberhell: real assign queues a head scene for every grade boundary (1290.90601ms)
+✔ A5 th: pending ordinary review survives reload without duplicate rewards (420.01287ms)
+✔ A5 asia: pending ordinary review survives reload without duplicate rewards (493.539538ms)
+✔ A5 west: pending ordinary review survives reload without duplicate rewards (421.586639ms)
+✔ A5 cyberhell: pending ordinary review survives reload without duplicate rewards (77.263705ms)
+✔ A5 non-red over-punishment is a critical scene with no bonus or new red escalation (398.798818ms)
+✔ A5 real scene consumes and skips once, leaving red warning effects untouched across reload (426.807654ms)
+✔ A5 consumed scene still suppresses the old map bubble, including a stale dismissal timer (2.868475ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26986.90692

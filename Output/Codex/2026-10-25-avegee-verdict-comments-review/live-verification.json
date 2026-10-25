@@ -1,0 +1,39 @@
+{
+  "merge": "bfc54da78cd416208644be9e8100e6202d2840d1",
+  "tested": "537ca13",
+  "pages": {
+    "status": "built",
+    "commit": "bfc54da78cd416208644be9e8100e6202d2840d1"
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "url": "https://hellopae.github.io/AVEGEE/index.html?review=bfc54da78cd416208644be9e8100e6202d2840d1",
+      "local": "18e7d0efb1b7f23efe2ea593693d6e1d52b3424028ba484bf3b0ade94e4e7b03",
+      "live": "18e7d0efb1b7f23efe2ea593693d6e1d52b3424028ba484bf3b0ade94e4e7b03",
+      "match": true
+    },
+    {
+      "path": "src/game.js",
+      "url": "https://hellopae.github.io/AVEGEE/src/game.js?review=bfc54da78cd416208644be9e8100e6202d2840d1",
+      "local": "046480f495398d378da97c5787223305d93e53c764cf4264d59085429b14558a",
+      "live": "046480f495398d378da97c5787223305d93e53c764cf4264d59085429b14558a",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "url": "https://hellopae.github.io/AVEGEE/src/ui.js?review=bfc54da78cd416208644be9e8100e6202d2840d1",
+      "local": "44e591dffb48fb1e97ba479087fb34a635322906101d3bd0c5a87c1b1b380caa",
+      "live": "44e591dffb48fb1e97ba479087fb34a635322906101d3bd0c5a87c1b1b380caa",
+      "match": true
+    },
+    {
+      "path": "src/verdict-scene.js",
+      "url": "https://hellopae.github.io/AVEGEE/src/verdict-scene.js?review=bfc54da78cd416208644be9e8100e6202d2840d1",
+      "local": "ac9a8cb64000e0d8c38472c63bdc6a16fa86b38e9c3f60f352326f17ae5dc2f4",
+      "live": "ac9a8cb64000e0d8c38472c63bdc6a16fa86b38e9c3f60f352326f17ae5dc2f4",
+      "match": true
+    }
+  ],
+  "passed": true
+}
