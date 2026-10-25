@@ -59,3 +59,7 @@
 ## A3 — คนงานเดินชูมือ · เผยแพร่25ต.ค.
 
 เกม542b7d1;Pagesbuilt/live2/2;full1477/1477,syntax131. คนงานescortใช้normalwalkrowsตามheadingและidleเมื่อหยุด,คงท่าแบก/ทำงานและfootfit. Browserเทียบrendererจริงก่อนหลัง4โซน5โหมดผ่าน ไม่มีconsoleerror;เป็นพื้นทดสอบไม่อ้างเดินpathจริงในbrowser. ไม่แก้ระยะworker/soul;A4ยังรอทำ. หลักฐาน2026-10-25-avegee-worker-walk-review/. Codex self-checkรอคุณเป้ดูภาพ.
+
+## A4 — คนงานทับวิญญาณ · เผยแพร่25ต.ค.
+
+เกม2f70581; PagesbuiltตรงSHA/live4/4; full1500/1500,syntax132. คนงานเข้ารับโดยเว้นระยะ40และมีจุดส่งแยก>=72, ทางแคบรับจากหลังแล้วเดินตาม, เลือกfloorเดิมและกันจุดคนงาน/คิวซ้ำ. Soulroute/เวลาเดินเดิม; release matching jobครั้งเดียว, ยกเลิกอยู่ตำแหน่งจริง, เซฟเก่า/โหลดซ้ำ/westfreezeผ่าน. Browsernative4โซนจุดส่ง gap80ทุกโซน,ก่อนแก้โซน2gap0; fixtureจบเส้นทางทันทีเพื่อถ่ายภาพ ไม่อ้างnatural journey. ต้นไม้ยังบังบางส่วนและUIป้ายโซน4บนมือถือใหญ่เป็นงานค้างเดิม; ไม่ปลดล็อกโซน4/ชายแดนที่รอmask. คิวถัดไปA5คัตซีนผลคำตัดสิน; หลักฐาน2026-10-25-avegee-worker-spacing-review/. Codex self-checkรอคุณเป้ตรวจรับภาพ.

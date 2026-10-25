@@ -1,0 +1,20 @@
+{
+  "zone": "cyberhell",
+  "worker": [
+    890.6506078970958,
+    519.2878587894913
+  ],
+  "soul": [
+    880,
+    440
+  ],
+  "gap": 80,
+  "walkable": true,
+  "job": null,
+  "ledger": 1,
+  "queue": [
+    988001
+  ],
+  "formation": "lead",
+  "errors": []
+}

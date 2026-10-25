@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "zones": [
+    {
+      "zone": "th",
+      "worker": [
+        1931.4392266866312,
+        1073.374390581189
+      ],
+      "soul": [
+        1856,
+        1100
+      ],
+      "gap": 80.00000000000006,
+      "walkable": true,
+      "job": null,
+      "ledger": 1,
+      "queue": [
+        988001
+      ],
+      "formation": "lead",
+      "errors": []
+    },
+    {
+      "zone": "asia",
+      "worker": [
+        1931.6549279443893,
+        1073.9936185191161
+      ],
+      "soul": [
+        1856,
+        1100
+      ],
+      "gap": 80.00000000000001,
+      "walkable": true,
+      "job": null,
+      "ledger": 1,
+      "queue": [
+        988001
+      ],
+      "formation": "lead",
+      "errors": []
+    },
+    {
+      "zone": "west",
+      "worker": [
+        1931.6549279443893,
+        1073.9936185191161
+      ],
+      "soul": [
+        1856,
+        1100
+      ],
+      "gap": 80.00000000000001,
+      "walkable": true,
+      "job": null,
+      "ledger": 1,
+      "queue": [
+        988001
+      ],
+      "formation": "lead",
+      "errors": []
+    },
+    {
+      "zone": "cyberhell",
+      "worker": [
+        890.6506078970958,
+        519.2878587894913
+      ],
+      "soul": [
+        880,
+        440
+      ],
+      "gap": 80,
+      "walkable": true,
+      "job": null,
+      "ledger": 1,
+      "queue": [
+        988001
+      ],
+      "formation": "lead",
+      "errors": []
+    }
+  ],
+  "console_errors": [],
+  "viewport": "1280x720; mobile390x844 inspected",
+  "limitation": "mobile zone4 existing labels oversized; zone4 remains disabled pending mask. Native end-state fixture, not timed journey."
+}

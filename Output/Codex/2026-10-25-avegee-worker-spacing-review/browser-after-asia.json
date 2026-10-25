@@ -1,0 +1,20 @@
+{
+  "zone": "asia",
+  "worker": [
+    1931.6549279443893,
+    1073.9936185191161
+  ],
+  "soul": [
+    1856,
+    1100
+  ],
+  "gap": 80.00000000000001,
+  "walkable": true,
+  "job": null,
+  "ledger": 1,
+  "queue": [
+    988001
+  ],
+  "formation": "lead",
+  "errors": []
+}

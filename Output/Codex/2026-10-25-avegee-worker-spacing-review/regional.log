@@ -1,0 +1,46 @@
+(node:9705) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: both regional gatherers physically collect and sell distinct materials with real wages (313.940524ms)
+✔ th: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3666.720851ms)
+✔ th: workers build and repair before Taan inspection; jobs remain exclusive (6400.451596ms)
+✔ th: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (136.961394ms)
+✔ asia: both regional gatherers physically collect and sell distinct materials with real wages (277.785858ms)
+✔ asia: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (3289.00252ms)
+✔ asia: workers build and repair before Taan inspection; jobs remain exclusive (6275.442768ms)
+✔ asia: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (209.404968ms)
+✔ west: both regional gatherers physically collect and sell distinct materials with real wages (215.018991ms)
+✔ west: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (2543.58643ms)
+✔ west: workers build and repair before Taan inspection; jobs remain exclusive (5148.012838ms)
+✔ west: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (169.297318ms)
+✔ cyberhell: both regional gatherers physically collect and sell distinct materials with real wages (64.53444ms)
+✔ cyberhell: ferry, worker court delivery, keeper handoff, prison and heaven form one exact-once lifecycle (302.43263ms)
+✔ cyberhell: workers build and repair before Taan inspection; jobs remain exclusive (210.459588ms)
+✔ cyberhell: save/restore keeps inbound dock availability and the regional worker roster without duplicating delivery (34.125906ms)
+(node:9706) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A4 th/arrival: separated pickup, walkable delivery and exact-once release (167.225493ms)
+✔ A4 th/prison: separated pickup, walkable delivery and exact-once release (156.362471ms)
+✔ A4 th/gate: separated pickup, walkable delivery and exact-once release (96.377794ms)
+✔ A4 th/queue: separated pickup, walkable delivery and exact-once release (84.453107ms)
+✔ A4 asia/arrival: separated pickup, walkable delivery and exact-once release (180.301462ms)
+✔ A4 asia/prison: separated pickup, walkable delivery and exact-once release (221.70341ms)
+✔ A4 asia/gate: separated pickup, walkable delivery and exact-once release (149.453033ms)
+✔ A4 asia/queue: separated pickup, walkable delivery and exact-once release (141.069517ms)
+✔ A4 west/arrival: separated pickup, walkable delivery and exact-once release (119.323535ms)
+✔ A4 west/prison: separated pickup, walkable delivery and exact-once release (184.958113ms)
+✔ A4 west/gate: separated pickup, walkable delivery and exact-once release (116.7687ms)
+✔ A4 west/queue: separated pickup, walkable delivery and exact-once release (105.083209ms)
+✔ A4 cyberhell/arrival: separated pickup, walkable delivery and exact-once release (51.605002ms)
+✔ A4 cyberhell/prison: separated pickup, walkable delivery and exact-once release (21.439936ms)
+✔ A4 cyberhell/gate: separated pickup, walkable delivery and exact-once release (17.946539ms)
+✔ A4 cyberhell/queue: separated pickup, walkable delivery and exact-once release (16.824789ms)
+✔ A4 handoff reservations separate workers; cancellation and legacy save retain a safe position (176.561129ms)
+✔ A4 no safe floor does not assign or alter the soul journey (1.067449ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29501.521642

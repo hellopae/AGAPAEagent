@@ -1,0 +1,33 @@
+(node:9814) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A4 th/arrival: separated pickup, walkable delivery and exact-once release (161.770117ms)
+✔ A4 th/prison: separated pickup, walkable delivery and exact-once release (151.695815ms)
+✔ A4 th/gate: separated pickup, walkable delivery and exact-once release (93.326107ms)
+✔ A4 th/queue: separated pickup, walkable delivery and exact-once release (78.235517ms)
+✔ A4 asia/arrival: separated pickup, walkable delivery and exact-once release (160.992295ms)
+✔ A4 asia/prison: separated pickup, walkable delivery and exact-once release (204.462959ms)
+✔ A4 asia/gate: separated pickup, walkable delivery and exact-once release (150.733383ms)
+✔ A4 asia/queue: separated pickup, walkable delivery and exact-once release (142.224175ms)
+✔ A4 west/arrival: separated pickup, walkable delivery and exact-once release (126.744772ms)
+✔ A4 west/prison: separated pickup, walkable delivery and exact-once release (167.751101ms)
+✔ A4 west/gate: separated pickup, walkable delivery and exact-once release (116.88054ms)
+✔ A4 west/queue: separated pickup, walkable delivery and exact-once release (107.465185ms)
+✔ A4 cyberhell/arrival: separated pickup, walkable delivery and exact-once release (46.894766ms)
+✔ A4 cyberhell/prison: separated pickup, walkable delivery and exact-once release (20.898242ms)
+✔ A4 cyberhell/gate: separated pickup, walkable delivery and exact-once release (18.388514ms)
+✔ A4 cyberhell/queue: separated pickup, walkable delivery and exact-once release (16.586203ms)
+✔ A4 handoff reservations separate workers; cancellation and legacy save retain a safe position (186.167506ms)
+✔ A4 no safe floor does not assign or alter the soul journey (1.67565ms)
+✔ A4 th: saved gate delivery settles beside the soul once across two reloads (116.477175ms)
+✔ A4 asia: saved gate delivery settles beside the soul once across two reloads (142.089524ms)
+✔ A4 west: saved gate delivery settles beside the soul once across two reloads (113.512515ms)
+✔ A4 cyberhell: saved gate delivery settles beside the soul once across two reloads (19.786598ms)
+✔ A4 frozen west save preserves the separated route and resumes without settling early (115.357602ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2693.52617
