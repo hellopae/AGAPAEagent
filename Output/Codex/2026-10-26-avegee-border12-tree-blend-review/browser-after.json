@@ -1,0 +1,16 @@
+{
+  "route": "th:asia",
+  "position": {
+    "x": 0.53,
+    "y": 0.75
+  },
+  "checkpoint": 3,
+  "cleared": [
+    "th:asia:0",
+    "th:asia:1",
+    "th:asia:2"
+  ],
+  "coin": 100000,
+  "food": 1000,
+  "errors": []
+}

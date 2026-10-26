@@ -1,0 +1,51 @@
+[
+  {
+    "path": "index.html",
+    "bytes": 221668,
+    "sha256": "c2c19e9e99bc768de276c8a7e09c6a0e36a318afa07feab07b32e55661264bff",
+    "expected": "c2c19e9e99bc768de276c8a7e09c6a0e36a318afa07feab07b32e55661264bff",
+    "matched": true
+  },
+  {
+    "path": "src/route-geometry.js",
+    "bytes": 5902,
+    "sha256": "8ba7f6e911d6a5ca34ecac5fbb75de323ef243798de2a9398662a898e93a92d3",
+    "expected": "8ba7f6e911d6a5ca34ecac5fbb75de323ef243798de2a9398662a898e93a92d3",
+    "matched": true
+  },
+  {
+    "path": "src/dungeon-view.js",
+    "bytes": 44277,
+    "sha256": "1812461be72c758e52490f6d98972e62b04447e684e15a611bae83e7e19bf3aa",
+    "expected": "1812461be72c758e52490f6d98972e62b04447e684e15a611bae83e7e19bf3aa",
+    "matched": true
+  },
+  {
+    "path": "src/frontier-ambient.js",
+    "bytes": 2532,
+    "sha256": "2efe98a3ca207c4c747627bee2ba49f45a7baf361337be04c2f03d37af46d549",
+    "expected": "2efe98a3ca207c4c747627bee2ba49f45a7baf361337be04c2f03d37af46d549",
+    "matched": true
+  },
+  {
+    "path": "img/frontier-route/tree-maple-v2.png",
+    "bytes": 2202455,
+    "sha256": "85c4f6a1d8301bce464e0cc808ae13bf2f008b5a3051ba3b14ca227ac97cfe62",
+    "expected": "85c4f6a1d8301bce464e0cc808ae13bf2f008b5a3051ba3b14ca227ac97cfe62",
+    "matched": true
+  },
+  {
+    "path": "img/frontier-route/tree-pine-v2.png",
+    "bytes": 2300384,
+    "sha256": "2675c21fb0322ee9694117b2b110893c43bed45424db9cf6519bb76048cab0cc",
+    "expected": "2675c21fb0322ee9694117b2b110893c43bed45424db9cf6519bb76048cab0cc",
+    "matched": true
+  },
+  {
+    "path": "img/frontier-route/tree-bamboo-v2.png",
+    "bytes": 2508937,
+    "sha256": "71dfb889b6f96f915bc9e365a4205fa9ded99c5d1b88d7820f9a5dcf5d239305",
+    "expected": "71dfb889b6f96f915bc9e365a4205fa9ded99c5d1b88d7820f9a5dcf5d239305",
+    "matched": true
+  }
+]

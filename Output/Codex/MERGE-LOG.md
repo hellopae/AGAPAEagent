@@ -52,3 +52,6 @@ UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2by
 
 ## 26ต.ค.2569 — C6ชายแดน2–3 และ C5ต้นไม้หนาว
 C6 testedbf94fb2→mergec62c728ec33ae65ad50583f452c1cb1078e7b0dd; C5 tested0cada57→merge384af89770be17b6c8eba0870a5925dec8838be9. Full1530/1530ทั้งสองชุด,syntax134,224files. Pagesbuiltexact384af89,live8/8,nativebootconsoleว่าง. คุณเป้อนุมัติเผยแพร่ชุดนี้และคิวถัดไปเมื่อผ่านตรวจโดยตรงหลังauto-reviewปฏิเสธครั้งแรก;ไม่มีการเลี่ยงบล็อก. หลักฐาน2026-10-26-avegee-border23-review/และ2026-10-26-avegee-zone2-cold-trees-review/. ไม่ปิดC4ซูมละเอียด;ต้นไม้C1กำลังทำ.
+
+## 26 Oct — C1 border1–2 tree blending published
+Candidate91506bb → main986751db42f3f433827037106bca62ea80013805. 9files,65insertions,12deletions; full1533/1533,134syntax,225testfiles. Pages built exact merge, live7/7 match; native desktop/mobile and production boot console empty. Owner visual acceptance pending. Evidence: 2026-10-26-avegee-border12-tree-blend-review/. Next B5b; zone4 wooden horse stays at original lower frontier stand.

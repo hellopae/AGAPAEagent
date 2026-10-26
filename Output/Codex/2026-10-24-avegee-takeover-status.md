@@ -103,3 +103,6 @@ UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2by
 - 2026-10-26 B5a codex/2026-10-26-frontier-name-size → merged308bf8e61601274fc2e4bf0c11e249007e250d9c | tested2b224e7,full1526/1526,syntax133,targeted9/9with8DPRzonecases;3files22insertions6deletions;DPRaware10–14CSSpxname labels only;nativebefore35/2→20/2,390mobile12px,actualtalkintro,resources/eventunchanged;Pagesbuilt/live2/2;ownerreviewpending;B5brelocationstillqueued,worktreeretained.
 
 26ต.ค.C6+C5เผยแพร่384af89ผ่าน1530/1530,Pagesexact/live8/8. C6route2–3ownerfloor+บันได,เซฟเก่ารักษาความคืบหน้า;C5สนหิมะ2จุดคงfoot/collider. คง8รายการค้างและ3maskรอใหม่;C1ต้นไม้ชายแดน1–2เป็นคิวปัจจุบัน. คุณเป้อนุมัติmainเผยแพร่ต่อเนื่องเมื่อผ่านตรวจแล้ว. บอสม้าไม้4คงจุดล่างเดิมทั้งระหว่างและหลังevent,ไม่เพิ่มถ้ำ4.
+
+## 26 Oct — C1 border1–2 tree blending published
+Candidate91506bb → main986751db42f3f433827037106bca62ea80013805. 9files,65insertions,12deletions; full1533/1533,134syntax,225testfiles. Pages built exact merge, live7/7 match; native desktop/mobile and production boot console empty. Owner visual acceptance pending. Evidence: 2026-10-26-avegee-border12-tree-blend-review/. Next B5b; zone4 wooden horse stays at original lower frontier stand.

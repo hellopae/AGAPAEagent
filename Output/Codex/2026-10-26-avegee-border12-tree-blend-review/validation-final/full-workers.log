@@ -1,0 +1,30 @@
+(node:70530) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Nira hires multiple unique regional assistants, charges escalating cost and enforces capacity (15.084556ms)
+✔ hiring fails without funds or available Nira, without spending coins or IDs (3.099251ms)
+✔ old specialized worker modes migrate to logistics and no longer add a passive supervision bonus (3.110329ms)
+✔ repair helpers start independent work after physical arrival without a stationed builder (99.515605ms)
+✔ auto gatherer sells its cargo before taking newly available build work (388.390793ms)
+✔ auto gatherer sells its cargo before taking newly available repair work (336.231385ms)
+✔ auto priority changes never pull a worker away from its soul escort (43.945239ms)
+✔ assistants pick up and escort a real afterlife walk, release it once and keep souls out of the roster until arrival (38.984422ms)
+✔ stopping an escort or dismissing a worker preserves the soul journey and prevents duplicate assignment (39.188224ms)
+✔ active wages, food and fatigue pause bonuses; rest recovers workers without charging resources (39.421416ms)
+✔ workers and ledger survive normal game save/restore; old saves initialize empty and damaged data is bounded (17.110392ms)
+✔ worker collision and Nira management controls expose real hire, task, rest and dismissal actions (3.18479ms)
+✔ a saved worker escort settles exactly once on reload and releases the assistant (46.643878ms)
+✔ frame-local atlas guards remove edge bleed without clipping the character or held tool in all 64 source cells (11296.959938ms)
+✔ workers escort legitimate gate deliveries, retaining the soul until exact-once arrival (38.886297ms)
+✔ saving a gate worker delivery settles once on reload without stranding the assistant (47.083534ms)
+✔ workers escort legitimate queue deliveries, retaining the soul until exact-once arrival (39.717676ms)
+✔ saving a queue worker delivery settles once on reload without stranding the assistant (46.801435ms)
+✔ non-prison deliveries preserve the legacy courier when no worker is available without borrowing a keeper (76.944552ms)
+✔ real prison release dispatches workers to heaven or back to the queue instead of the fallback courier (318.301869ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13331.44156

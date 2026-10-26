@@ -1,0 +1,78 @@
+{
+  "green": {
+    "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-b3cec649-1983-4bf4-852f-96cdfd938b42.png",
+    "asset": "img/frontier-route/tree-pine-v2.png",
+    "size": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBounds": [
+      0,
+      10,
+      1189,
+      1312
+    ],
+    "discardedSource": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-b8ef2564-0903-415e-85db-e5a0a005f8b2.png",
+    "rootAnchor": [
+      0.567556297,
+      0.958841463
+    ],
+    "anchorMethod": "alpha>32; median x in bottom8% pixel band; y below last solid pixel",
+    "sha256": "2675c21fb0322ee9694117b2b110893c43bed45424db9cf6519bb76048cab0cc"
+  },
+  "red": {
+    "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-342112ec-8e2c-43c1-989a-7496809c4bc3.png",
+    "asset": "img/frontier-route/tree-maple-v2.png",
+    "size": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      1199,
+      1312
+    ],
+    "rootAnchor": [
+      0.569224354,
+      0.987804878
+    ],
+    "anchorMethod": "alpha>32; median x in bottom8% pixel band; y below last solid pixel",
+    "sha256": "85c4f6a1d8301bce464e0cc808ae13bf2f008b5a3051ba3b14ca227ac97cfe62"
+  },
+  "lightgreen": {
+    "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-c2feb87e-d253-4664-9960-fae463650f19.png",
+    "asset": "img/frontier-route/tree-bamboo-v2.png",
+    "size": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBounds": [
+      0,
+      0,
+      1193,
+      1312
+    ],
+    "rootAnchor": [
+      0.510842369,
+      0.971036585
+    ],
+    "anchorMethod": "alpha>32; median x in bottom8% pixel band; y below last solid pixel",
+    "sha256": "71dfb889b6f96f915bc9e365a4205fa9ded99c5d1b88d7820f9a5dcf5d239305"
+  }
+}
