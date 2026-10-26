@@ -1,0 +1,58 @@
+[
+  {
+    "path": "index.html",
+    "bytes": 221656,
+    "sha256": "4423c32cc75acf8076bc87a0ae12cf87937d05839b228c3760c77cdefd7c540e",
+    "expected": "4423c32cc75acf8076bc87a0ae12cf87937d05839b228c3760c77cdefd7c540e",
+    "matched": true
+  },
+  {
+    "path": "src/route-geometry.js",
+    "bytes": 5633,
+    "sha256": "3f783184847ee34c35bb192850d21cfede4a058d4390abc1ad4ab8644bb3725b",
+    "expected": "3f783184847ee34c35bb192850d21cfede4a058d4390abc1ad4ab8644bb3725b",
+    "matched": true
+  },
+  {
+    "path": "src/frontier-walkmask-asia-west.js",
+    "bytes": 11202,
+    "sha256": "82b0b1894c962b5b5d547cce96645d9bc1bbd8ef4f3960f7590a5fc77b88ba52",
+    "expected": "82b0b1894c962b5b5d547cce96645d9bc1bbd8ef4f3960f7590a5fc77b88ba52",
+    "matched": true
+  },
+  {
+    "path": "src/zone-travel.js",
+    "bytes": 11320,
+    "sha256": "09e31fa48bcea2b36dc56157e5f85cf083985d92816b2eda2ee5234472a7d9fc",
+    "expected": "09e31fa48bcea2b36dc56157e5f85cf083985d92816b2eda2ee5234472a7d9fc",
+    "matched": true
+  },
+  {
+    "path": "img/frontier-route/zone2-3-v2-stairs.png",
+    "bytes": 3444254,
+    "sha256": "c34bc105b29070f71f6fa3ffa25694bff2681493db7897e53ca039d7da340d26",
+    "expected": "c34bc105b29070f71f6fa3ffa25694bff2681493db7897e53ca039d7da340d26",
+    "matched": true
+  },
+  {
+    "path": "src/town-layout.js",
+    "bytes": 19160,
+    "sha256": "15c084feeaac094bb38635d76490e881a74ec15e5ebae5fe069a3eed0f03577f",
+    "expected": "15c084feeaac094bb38635d76490e881a74ec15e5ebae5fe069a3eed0f03577f",
+    "matched": true
+  },
+  {
+    "path": "src/zone-skin.js",
+    "bytes": 11326,
+    "sha256": "097cdd51eb3ab8df2f25702583fa5f47a2988789709ec31937d0540849189936",
+    "expected": "097cdd51eb3ab8df2f25702583fa5f47a2988789709ec31937d0540849189936",
+    "matched": true
+  },
+  {
+    "path": "img/preload-catalog.json",
+    "bytes": 37962,
+    "sha256": "831c3841629a1a40ab79b22410500295aa2b1604d87b950329deee55011ada8d",
+    "expected": "831c3841629a1a40ab79b22410500295aa2b1604d87b950329deee55011ada8d",
+    "matched": true
+  }
+]

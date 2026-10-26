@@ -1,0 +1,32 @@
+{
+  "url": "https://api.github.com/repos/hellopae/AVEGEE/pages/builds/1314640659",
+  "status": "built",
+  "error": {
+    "message": null
+  },
+  "pusher": {
+    "login": "hellopae",
+    "id": 5118788,
+    "node_id": "MDQ6VXNlcjUxMTg3ODg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5118788?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hellopae",
+    "html_url": "https://github.com/hellopae",
+    "followers_url": "https://api.github.com/users/hellopae/followers",
+    "following_url": "https://api.github.com/users/hellopae/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hellopae/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hellopae/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hellopae/subscriptions",
+    "organizations_url": "https://api.github.com/users/hellopae/orgs",
+    "repos_url": "https://api.github.com/users/hellopae/repos",
+    "events_url": "https://api.github.com/users/hellopae/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hellopae/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "commit": "384af89770be17b6c8eba0870a5925dec8838be9",
+  "duration": 88991,
+  "created_at": "2026-10-26T01:40:11Z",
+  "updated_at": "2026-10-26T01:41:39Z"
+}

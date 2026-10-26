@@ -49,3 +49,6 @@ UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,produ
 UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.
 
 - 2026-10-26 B5a codex/2026-10-26-frontier-name-size → merged308bf8e61601274fc2e4bf0c11e249007e250d9c | tested2b224e7,full1526/1526,syntax133,targeted9/9with8DPRzonecases;3files22insertions6deletions;DPRaware10–14CSSpxname labels only;nativebefore35/2→20/2,390mobile12px,actualtalkintro,resources/eventunchanged;Pagesbuilt/live2/2;ownerreviewpending;B5brelocationstillqueued,worktreeretained.
+
+## 26ต.ค.2569 — C6ชายแดน2–3 และ C5ต้นไม้หนาว
+C6 testedbf94fb2→mergec62c728ec33ae65ad50583f452c1cb1078e7b0dd; C5 tested0cada57→merge384af89770be17b6c8eba0870a5925dec8838be9. Full1530/1530ทั้งสองชุด,syntax134,224files. Pagesbuiltexact384af89,live8/8,nativebootconsoleว่าง. คุณเป้อนุมัติเผยแพร่ชุดนี้และคิวถัดไปเมื่อผ่านตรวจโดยตรงหลังauto-reviewปฏิเสธครั้งแรก;ไม่มีการเลี่ยงบล็อก. หลักฐาน2026-10-26-avegee-border23-review/และ2026-10-26-avegee-zone2-cold-trees-review/. ไม่ปิดC4ซูมละเอียด;ต้นไม้C1กำลังทำ.

@@ -1,0 +1,14 @@
+{
+  "route": "asia:west",
+  "position": {
+    "x": 0.4364114832535885,
+    "y": 0.44314558979808716
+  },
+  "checkpoint": 1,
+  "cleared": [
+    "asia:west:0"
+  ],
+  "coin": 100000,
+  "food": 1000,
+  "errors": []
+}

@@ -1,0 +1,32 @@
+{
+  "route": "asia:west",
+  "fixture": "memory only; first checkpoint and six optional patrols marked cleared to isolate stair movement",
+  "input": "actual pointer clicks on game canvas",
+  "start": [
+    0.44,
+    0.446
+  ],
+  "afterUp": [
+    0.49801435406698563,
+    0.37725823591923485
+  ],
+  "afterDown": [
+    0.4364114832535885,
+    0.44314558979808716
+  ],
+  "checkpoint": 1,
+  "cleared": [
+    "asia:west:0"
+  ],
+  "coinBeforeAfter": 100000,
+  "foodBeforeAfter": 1000,
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "mobileCanvas": [
+    390,
+    844
+  ],
+  "consoleErrorsWarnings": []
+}

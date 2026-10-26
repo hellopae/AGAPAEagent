@@ -101,3 +101,5 @@ UI-B2/B3 final: Pagesbuiltf61849c4bbc9f98960c0ddbc765a695d5c1e2185,live4/4,produ
 UI-B4 finalpublish: Pagesbuilt10c96c888984bd0a7e9eacc98f3d66049b242f5c,live2/2byte-match.
 
 - 2026-10-26 B5a codex/2026-10-26-frontier-name-size → merged308bf8e61601274fc2e4bf0c11e249007e250d9c | tested2b224e7,full1526/1526,syntax133,targeted9/9with8DPRzonecases;3files22insertions6deletions;DPRaware10–14CSSpxname labels only;nativebefore35/2→20/2,390mobile12px,actualtalkintro,resources/eventunchanged;Pagesbuilt/live2/2;ownerreviewpending;B5brelocationstillqueued,worktreeretained.
+
+26ต.ค.C6+C5เผยแพร่384af89ผ่าน1530/1530,Pagesexact/live8/8. C6route2–3ownerfloor+บันได,เซฟเก่ารักษาความคืบหน้า;C5สนหิมะ2จุดคงfoot/collider. คง8รายการค้างและ3maskรอใหม่;C1ต้นไม้ชายแดน1–2เป็นคิวปัจจุบัน. คุณเป้อนุมัติmainเผยแพร่ต่อเนื่องเมื่อผ่านตรวจแล้ว. บอสม้าไม้4คงจุดล่างเดิมทั้งระหว่างและหลังevent,ไม่เพิ่มถ้ำ4.
