@@ -1,0 +1,56 @@
+{
+  "route": "th:asia",
+  "position": {
+    "x": 0.53,
+    "y": 0.75
+  },
+  "checkpoint": 3,
+  "canTalk": true,
+  "farewell": {
+    "version": 2,
+    "zones": {
+      "th": {
+        "won": true,
+        "praised": true,
+        "welcomed": true,
+        "following": false,
+        "farewell": true,
+        "grantPaid": true,
+        "grantNotice": false,
+        "grantAmount": 500,
+        "outfitGranted": true
+      },
+      "asia": {
+        "won": false,
+        "praised": false,
+        "welcomed": false,
+        "following": false,
+        "farewell": false,
+        "grantPaid": false,
+        "grantNotice": false,
+        "grantAmount": 0,
+        "outfitGranted": false
+      },
+      "west": {
+        "won": false,
+        "praised": false,
+        "welcomed": false,
+        "following": false,
+        "farewell": false,
+        "grantPaid": false,
+        "grantNotice": false,
+        "grantAmount": 0,
+        "outfitGranted": false
+      }
+    }
+  },
+  "challenge": {},
+  "cleared": [
+    "th:asia:0",
+    "th:asia:1",
+    "th:asia:2"
+  ],
+  "coin": 100000,
+  "food": 1000,
+  "errors": []
+}

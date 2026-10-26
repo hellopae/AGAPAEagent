@@ -1,0 +1,37 @@
+[
+  {
+    "path": "index.html",
+    "match": true,
+    "sha256": "a307335b19ae00b0182e0d92b6eb0ab7f8a90a30529906abf9f3d8d726172a96"
+  },
+  {
+    "path": "src/game.js",
+    "match": true,
+    "sha256": "e1ebeb5ad39fd04aeaca5f6bafd89d85beb2b15c35ce6533b99cc71cd11deb6b"
+  },
+  {
+    "path": "src/frontier.js",
+    "match": true,
+    "sha256": "f97c2def2c6afd467676078a0a791f2f08804c4edd52b592a290ea0347e62bfd"
+  },
+  {
+    "path": "src/dungeon-view.js",
+    "match": true,
+    "sha256": "48dac94987cffe69fb640626f19347dc210aaca1ff5fa7f2d4a53b40ac3b71e5"
+  },
+  {
+    "path": "src/route-geometry.js",
+    "match": true,
+    "sha256": "8aff629580ea5a2c98f6e62db3778f4d59001d0b7c4e09c8d983e359614dcfe2"
+  },
+  {
+    "path": "src/zone-travel.js",
+    "match": true,
+    "sha256": "dcfa6c55db4b2574a6ad839d606156c622b548c5e5494862da518eeda069bec8"
+  },
+  {
+    "path": "img/frontier-route/zone2-3-v3-cave.png",
+    "match": true,
+    "sha256": "035e7f33129af30815df92f2fbdc9b3aafb5666bbf7bb5e4a0d1c23b312e19b9"
+  }
+]

@@ -55,3 +55,7 @@ C6 testedbf94fb2→mergec62c728ec33ae65ad50583f452c1cb1078e7b0dd; C5 tested0cada
 
 ## 26 Oct — C1 border1–2 tree blending published
 Candidate91506bb → main986751db42f3f433827037106bca62ea80013805. 9files,65insertions,12deletions; full1533/1533,134syntax,225testfiles. Pages built exact merge, live7/7 match; native desktop/mobile and production boot console empty. Owner visual acceptance pending. Evidence: 2026-10-26-avegee-border12-tree-blend-review/. Next B5b; zone4 wooden horse stays at original lower frontier stand.
+
+B5b Zone1 published cef1202a4bd62eaeb11eea9c7499529dd77ca71c: candidate90f90b2,full1534/1534,134syntax,225files,Pagesbuilt/live4/4,native cave invite→wave1 and mobile390,consoleempty. Evidence2026-10-26-avegee-frontier-boss-cave-review/. Zone2 in progress,Zone3 waitingmask,Zone4 stays lower stand. B5b overall remains open.
+
+B5b Zone2 published1127c84e87dbe59e04a20356e3f6119ab60c0350,candidates2819758+d4ea528. 13files76insertions24deletions,newPNG3385569bytes. Full1538/1538,134syntax,226files,271.59s; Pagesbuilt exactSHA/live7/7,productionbootconsoleempty. Nativewalk/invite→wave1 and390x844 button passed. Captain refuge separate from story ruler; destination gate remains ruler-locked. Zone3 deferredpendingmask,Zone4 horse remains. C3terrain repaint next; no image selected/integrated yet.

@@ -1,0 +1,9 @@
+{
+  "mode": "built-in image_gen edit",
+  "transparent_background": false,
+  "target": "img/frontier-route/zone2-3-v2-stairs.png",
+  "source": "/Users/agapae/.codex/generated_images/01a16968-bdf6-7982-aea6-4973fb1b564a/exec-fd28b697-e0f1-4041-83d7-1005e552663d.png",
+  "selected": "img/frontier-route/zone2-3-v3-cave.png",
+  "prompt": "Use case: precise-object-edit. Edit target: provided border route Zone 2\u20133 game map. Change ONLY the small gothic gate facade on the back edge of the LOWER CENTRAL circular stone plaza (gate centered at normalized x .525 y .65, plaza center .535,.735). Replace that small facade with an entrance to a dark mountain cave, naturally embedded in the existing snowy rocky cliff behind that plaza, dark stone arch with subtle East Asian carvings, two existing warm torches retained. Cave doorway threshold must meet exactly the same back edge of the existing stone plaza. Do NOT place anything onto the plaza walking floor. Preserve every existing pixel outside this small gate/cliff patch as closely as possible: all roads, stairs, railings, walls, river, trees, mountains, bridges, top-left start gate and bottom-right destination gate stay in identical positions and shapes. Especially preserve the newly repaired stairs near x .47 y .41. Keep exact original landscape canvas framing, aspect ratio, perspective, palette and illustration style. No characters, no labels, no text, no arrows. This is a collision-aligned game background so the walkable stone surfaces must remain geometrically identical. Do not redesign the whole map.",
+  "limits": "1672x941 unchanged size; not C4 resolution work; texture differences outside cave patch recorded, geometry landmarks registered identity800/800"
+}

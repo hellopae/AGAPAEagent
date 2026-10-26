@@ -1,0 +1,22 @@
+[
+  {
+    "path": "index.html",
+    "match": true,
+    "sha256": "2024cc87b243d1f09d60e1fec9100986f1c6450c800da8b36792d5e93d5fafc1"
+  },
+  {
+    "path": "src/game.js",
+    "match": true,
+    "sha256": "bea1f32a1cd316983726616654d8ee26059d47ae84b2e6f59ed7511df935cb7d"
+  },
+  {
+    "path": "src/frontier.js",
+    "match": true,
+    "sha256": "ac8b6095d57503f9df26bf130723517a4e6e67c228cf330b02fcafbe0b67cf2c"
+  },
+  {
+    "path": "src/dungeon-view.js",
+    "match": true,
+    "sha256": "5ca8fed13652ac0a16cbbf64e626c0334dcaac3e018ea694d11aee1de0527a94"
+  }
+]
