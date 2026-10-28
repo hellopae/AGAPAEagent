@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T04:45:07.145Z",
+  "updatedAt": "2026-10-28T16:31:39.848Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae fixes P8 per Reese",
+      "status": "working",
+      "task": "Rae writes AVEGEE lore bible",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
