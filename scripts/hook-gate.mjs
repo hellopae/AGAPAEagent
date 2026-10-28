@@ -199,7 +199,8 @@ if (mode === "agent-done") {
   if (!st.ran.includes(id)) st.ran.push(id);
 
   // Reese โหมด fact-check → เคลียร์ค้าง (ดูจากมาร์กเกอร์ที่ scaffold กำหนดไว้)
-  if (id === "reese" && /VERIFIED|UNVERIFIED|INCORRECT|fact[- ]?check|แฟกต์เช็ก|ตรวจสอบข้อเท็จจริง/i.test(msg)) {
+  // [29 ต.ค. 2569] เพิ่ม PASS / FIX LIST: ใบงาน plan-relay ให้ผู้ตรวจตอบคำเดียวแบบนี้ รายงานที่ขึ้นต้น "ผลตรวจ: FIX LIST" เคยไม่ถูกนับ
+  if (id === "reese" && /VERIFIED|UNVERIFIED|INCORRECT|fact[- ]?check|แฟกต์เช็ก|ตรวจสอบข้อเท็จจริง|\bPASS\b|FIX\s*LIST/i.test(msg)) {
     st.pendingFactCheck = null;
     st.factCheckedAt = new Date().toISOString();
     st.factCheckRounds = (st.factCheckRounds || 0) + 1;
