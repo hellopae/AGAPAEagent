@@ -1,0 +1,40 @@
+{
+ "route": "west:cyberhell",
+ "background": "img/frontier-route/zone3-4-v1.webp",
+ "size": [
+  1672,
+  941
+ ],
+ "inputs": {
+  "Map-Zone3-3.jpg": "acb78d494e7767a0dcbfc56affbb9f1f170b6eb8175c14b098d9b5494a7b6438",
+  "Map-Zone3-4.jpg": "8714869e4f3d010fd61977a32221c0e7b8762c216b146c34c38f8b9637d34c9e"
+ },
+ "alignment": "owner images 2500x1407 = same art; ORB affine scale 0.6683/0.6687, offset <0.5px -> plain resize",
+ "walk": {
+  "rule": "not red (R-max(G,B)>90 & R>180) -> resize nearest -> open5 close7 -> components>3000px",
+  "components": 1,
+  "pixels": 107353,
+  "bbox": [
+   127,
+   159,
+   1468,
+   686
+  ]
+ },
+ "trees": {
+  "total": 28,
+  "white": 16,
+  "teal": 11,
+  "purple": 1,
+  "manual_added": [
+   26,
+   27,
+   28
+  ],
+  "moved_off_path": [
+   11,
+   25
+  ],
+  "coords": "root (bottom-centre) 0-1 of background"
+ }
+}
