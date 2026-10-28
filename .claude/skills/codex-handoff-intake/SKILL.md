@@ -22,6 +22,10 @@ commit message ที่มีคำว่า "note for Claude" = มีโน�
 ตั้งแต่ 19 ต.ค. Codex ทิ้งโน้ตใน `docs/handoffs/YYYYMMDD-*.md` ด้วย (status-audit, reset-continuation — รายการค้างละเอียดอยู่ในนี้)
 และโน้ตหลักอาจถูกต่อหัวไฟล์หลายรอบ — อ่านทั้งไฟล์ อัปเดตล่าสุดอยู่ **บนสุด** ไม่ใช่ท้าย
 
+**อ่านโน้ตใน clone ของ Codex ไม่ได้** (28 ต.ค.: `output/coordination/*-HANDOFF.md` ไม่อยู่ใน git และ macOS บล็อกแม้ปิด sandbox)
+→ แหล่งสรุปที่อ่านได้คือ `AGAPAE Agent/Output/Codex/AVEGEE-WORK-QUEUE.md` (Codex ต่อท้ายทุกชุดงาน: commit, เทสต์, งานค้าง) — `git diff` ไฟล์นี้ใน repo AGAPAE
+ไฟล์ภาพที่คุณเป้แนบจาก `~/Desktop` ก็อ่านไม่ได้เช่นกัน → ขอให้ลากใส่ `AGAPAE Agent/Output/Claudy/<slug>/input/` ด้วย Finder
+
 ## 2. ดึงเข้า clone ของเรา — เฉพาะตอน tree สะอาด
 `git status --porcelain` ว่าง → `git pull --ff-only` · ไม่ว่าง → หยุด ถามคุณเป้
 
@@ -47,6 +51,11 @@ for f in $(git show --name-only --format= <commit> -- src index.html); do chk <c
 ```bash
 node --test tests/*.test.mjs > "$TMPDIR/t.log" 2>&1; echo "exit=$?"; grep -E 'ℹ (tests|pass|fail|cancelled)' "$TMPDIR/t.log"; grep '✖' "$TMPDIR/t.log" | head
 ```
+
+**เทสต์เต็มตก ทั้งที่ Codex อ้างว่าผ่าน** — Codex มักรันแค่ focused tests · แยกว่าเป็นบั๊กหรือเทสต์เก่า:
+หาไฟล์เทสต์ที่ตกด้วย `grep -l -F '<ชื่อข้อ>' tests/*.test.mjs` → รันเฉพาะไฟล์นั้นใน `git worktree add --detach` ที่ HEAD เก่า แล้วไล่ `git rev-list --reverse <old>..origin/main` ทีละ commit
+(zsh: ใส่ไฟล์ใน array `FILES=(…)` แล้ว `"${FILES[@]}"` — string เดียวจะได้ "Could not find")
+แบบที่เจอบ่อย: เทสต์ตรวจ cache-bust token ยาวแบบเดิม (`-o2`, `-p8`) แต่ Codex ย่อ token · เทสต์ slice โค้ดไปรันใน `vm` แล้วโค้ดใหม่ใช้ตัวแปร import ที่ context ไม่มี → แก้ที่เทสต์ ไม่ใช่ src
 
 ## 5. แยกงานว่าชน Codex ไหม
 - **ไม่ชน**: อ่าน/เทสต์ใน clone ของเรา · เขียนในโฟลเดอร์ output ที่ใบงาน Codex กำหนดให้ Claude (เช่น `output/claude-2d-art/`) โดยไม่ commit/push
