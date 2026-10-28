@@ -49,3 +49,11 @@ DEFEAT/AIM/PARTY ทีม 3→7 (รวมกับ C1) · BALANCE-01 (ทำ�
 ## ข้อสันนิษฐานที่ต้องให้คุณเป้ยืนยันระหว่างทาง (ไม่ขวางงาน)
 - "side quest … ให้ย้ายโซนกลับมาตัวละครอื่นได้" ตีความว่า: ภารกิจพาผู้เล่น **ย้อนกลับไปโซนเก่า** เพื่อพบ/ช่วยตัวละครโซนนั้น — W2 จะเขียนตามนี้และระบุไว้ให้แก้ได้
 - "ยักษ์" ในกลุ่ม ทัณฑ์ ดำ ยักษ์ = ยักษ์ทวารบาล (Guard)
+
+## อัปเดต 29 ต.ค. 00:10
+- Codex ชน usage limit ทุก run (R1/R2/B34/S1) → claude-only · R1 ให้ Dale ปิดงาน · R2/B34/S1 ตั้ง resume v2 อัตโนมัติ 02:56 (`2026-10-29-avegee-*-v2.md`)
+- A1 เสร็จ: `Output/Astra/2026-10-28-avegee-a1-combat-moves-design.md` · W1 เสร็จ: `Output/Rae/2026-10-28-avegee-lore-bible.md` → Reese fact-check
+- คุณเป้ copy `Output/Codex/BACKLOG.md` (owner feedback 27 ต.ค.) + `Output/Codex/2026-10-28-HANDOFF.md` มาให้แล้ว
+- คำถาม Astra ที่ BACKLOG ตอบแล้ว: ข้อ1 ทีม 7 **นับรวมยามา/ยักษ์** (PARTY-01: เริ่ม 3 → โซน1 ยักษ์เขียวช่วย 4 → … โซน4 = 7) · ข้อ3 **กาญ = กานต์ (`kan`)** (HUD-01 รายชื่อ นิรา ทัณฑ์ บุญ เพลิง กาญ ดำ)
+- C1 = SKILL-01 + PARTY-01 + BALANCE-01 + ท่าไม้ตายยามา รวมใบงานเดียวกันตามสเปก Astra
+- คิวถัดไปฝั่ง Claude (เมื่อโควตา 5h รีเซ็ต 04:00): FOOD-02 + HUD-01 (Toby) · NAV-01 repro (Toby) · FOOD-ART/LEADER-ART รอ Codex วาด
