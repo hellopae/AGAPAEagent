@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T17:26:57.968Z",
+  "updatedAt": "2026-10-29T04:29:25.652Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby profiles AVEGEE mobile lag",
       "report": {
         "when": "05:17",

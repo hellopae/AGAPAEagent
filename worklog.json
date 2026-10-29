@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-28T17:26:57.968Z",
+  "updatedAt": "2026-10-29T04:29:25.652Z",
   "entries": [
+    {
+      "id": "wl-261029-toby-no5w",
+      "datetime": "2026-10-29T04:29:25Z",
+      "displayDate": "29 ต.ค. 2569",
+      "displayTime": "11:29",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby profiles AVEGEE mobile lag",
+      "summary": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,"
+    },
     {
       "id": "wl-261028-dale-zqnm",
       "datetime": "2026-10-28T17:26:57Z",
