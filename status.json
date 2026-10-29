@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T09:43:58.829Z",
+  "updatedAt": "2026-10-29T09:59:52.146Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale merges R3, MAP-Z4, FOOD-A",
       "report": {
         "when": "20:27",
