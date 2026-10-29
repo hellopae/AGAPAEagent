@@ -1,0 +1,372 @@
+{
+ "asia": {
+  "idx": 0,
+  "has_pose": true,
+  "src": "img/soul-poses/cleric-asia-caught-lie-v1.png",
+  "nat": 1254,
+  "bad": [
+   [
+    404,
+    "http://127.0.0.1:59758/img/hero-yama-side.png"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-title.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-zone.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-battle.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-trial.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-trial.mp3"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-trial.m4a"
+   ]
+  ],
+  "err": []
+ },
+ "bug-desktop": {
+  "r": {
+   "k": 12,
+   "ok": true
+  },
+  "info": {
+   "card": [
+    140,
+    814,
+    152,
+    137
+   ],
+   "weapon": [
+    142,
+    814,
+    44,
+    44
+   ],
+   "profile": [
+    142,
+    814,
+    44,
+    44
+   ],
+   "imgs": [
+    [
+     "img/ui/icon-setting2.png",
+     476
+    ],
+    [
+     "img/hero-yama.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/fx-fireball.png",
+     512
+    ],
+    [
+     "img/item-tea.png",
+     512
+    ],
+    [
+     "img/item-health.png",
+     512
+    ],
+    [
+     "img/item-holywater.png",
+     512
+    ],
+    [
+     "img/item-food.png",
+     512
+    ],
+    [
+     "img/ui/icon-pause.png",
+     486
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/weapons/weapon-icon-base.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ]
+   ]
+  },
+  "bad": [
+   [
+    404,
+    "http://127.0.0.1:59758/img/hero-yama-side.png"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-title.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-zone.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-battle.ogg"
+   ]
+  ],
+  "err": []
+ },
+ "bug-m390": {
+  "r": {
+   "k": 12,
+   "ok": true
+  },
+  "info": {
+   "card": [
+    13,
+    719,
+    107,
+    91
+   ],
+   "weapon": [
+    15,
+    719,
+    44,
+    44
+   ],
+   "profile": [
+    15,
+    719,
+    44,
+    44
+   ],
+   "imgs": [
+    [
+     "img/ui/icon-setting2.png",
+     476
+    ],
+    [
+     "img/hero-yama.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/fx-fireball.png",
+     512
+    ],
+    [
+     "img/item-tea.png",
+     512
+    ],
+    [
+     "img/item-health.png",
+     512
+    ],
+    [
+     "img/item-holywater.png",
+     512
+    ],
+    [
+     "img/item-food.png",
+     512
+    ],
+    [
+     "img/ui/icon-pause.png",
+     486
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ],
+    [
+     "img/weapons/weapon-icon-base.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bug-cyberhell.png",
+     512
+    ]
+   ]
+  },
+  "bad": [
+   [
+    404,
+    "http://127.0.0.1:59758/img/hero-yama-side.png"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-title.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-zone.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-battle.ogg"
+   ]
+  ],
+  "err": []
+ },
+ "bot-desktop": {
+  "r": {
+   "k": 11,
+   "ok": true
+  },
+  "info": {
+   "card": [
+    140,
+    814,
+    152,
+    137
+   ],
+   "weapon": [
+    142,
+    814,
+    44,
+    44
+   ],
+   "profile": [
+    142,
+    814,
+    44,
+    44
+   ],
+   "imgs": [
+    [
+     "img/ui/icon-setting2.png",
+     476
+    ],
+    [
+     "img/hero-yama.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bot-cyberhell.png",
+     512
+    ],
+    [
+     "img/fx-fireball.png",
+     512
+    ],
+    [
+     "img/item-tea.png",
+     512
+    ],
+    [
+     "img/item-health.png",
+     512
+    ],
+    [
+     "img/item-holywater.png",
+     512
+    ],
+    [
+     "img/item-food.png",
+     512
+    ],
+    [
+     "img/ui/icon-pause.png",
+     486
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bot-cyberhell.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bot-cyberhell.png",
+     512
+    ],
+    [
+     "img/weapons/weapon-icon-base.png",
+     512
+    ],
+    [
+     "img/hero-yama-profile.png",
+     512
+    ],
+    [
+     "img/CyberHell/mob-bot-cyberhell.png",
+     512
+    ]
+   ]
+  },
+  "bad": [
+   [
+    404,
+    "http://127.0.0.1:59758/img/hero-yama-side.png"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-title.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-zone.ogg"
+   ],
+   [
+    404,
+    "http://127.0.0.1:59758/audio/bgm-battle.ogg"
+   ]
+  ],
+  "err": []
+ }
+}
