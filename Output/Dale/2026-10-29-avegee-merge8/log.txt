@@ -1,0 +1,15 @@
+town-th desktop x1 {"n":1181,"median":16.7,"p95":16.8,"p99":16.8,"max":116.6,"mean":17.12} long>50: 5 LoAF 9 extra {"walkedPx":3350} err 0
+town-th desktop x1 {"n":1182,"median":16.7,"p95":16.8,"p99":16.8,"max":116.7,"mean":17.09} long>50: 5 LoAF 9 extra {"walkedPx":3350} err 0
+town-asia desktop x1 {"n":1186,"median":16.7,"p95":16.8,"p99":16.8,"max":100,"mean":17} long>50: 1 LoAF 8 extra {"walkedPx":2847} err 0
+town-asia desktop x1 {"n":1187,"median":16.7,"p95":16.8,"p99":16.8,"max":116.6,"mean":17.02} long>50: 1 LoAF 8 extra {"walkedPx":2856} err 0
+town-west desktop x1 {"n":1187,"median":16.7,"p95":16.8,"p99":16.8,"max":83.3,"mean":16.95} long>50: 1 LoAF 7 extra {"walkedPx":2757} err 0
+town-west desktop x1 {"n":1186,"median":16.7,"p95":16.7,"p99":16.8,"max":83.4,"mean":16.98} long>50: 1 LoAF 7 extra {"walkedPx":2755} err 0
+town-cyberhell desktop x1 {"n":1361,"median":16.7,"p95":16.8,"p99":16.8,"max":116.7,"mean":17.12} long>50: 9 LoAF 8 extra {"walkedPx":3138} err 0
+town-cyberhell desktop x1 {"n":1354,"median":16.7,"p95":16.8,"p99":16.8,"max":133.5,"mean":17.16} long>50: 9 LoAF 9 extra {"walkedPx":3135} err 0
+border-1-2 desktop x1 {"n":839,"median":16.7,"p95":16.8,"p99":16.8,"max":83.5,"mean":16.75} long>50: 1 LoAF 1 extra undefined err 0
+border-1-2 desktop x1 {"n":840,"median":16.7,"p95":16.8,"p99":16.8,"max":83.3,"mean":16.75} long>50: 1 LoAF 1 extra undefined err 0
+border-2-3 desktop x1 {"n":839,"median":16.7,"p95":16.8,"p99":16.8,"max":66.6,"mean":16.75} long>50: 1 LoAF 0 extra undefined err 0
+border-2-3 desktop x1 {"n":839,"median":16.7,"p95":16.7,"p99":16.8,"max":83.3,"mean":16.75} long>50: 1 LoAF 0 extra undefined err 0
+town-cyberhell mobile x4 {"n":1064,"median":16.7,"p95":16.8,"p99":66.6,"max":716.7,"mean":19.63} long>50: 8 LoAF 13 extra {"walkedPx":2674} err 0
+town-cyberhell mobile x4 {"n":1089,"median":16.7,"p95":16.8,"p99":50,"max":583.4,"mean":19.34} long>50: 8 LoAF 12 extra {"walkedPx":2698} err 0
+DONE
