@@ -33,9 +33,11 @@ def find_codex():
         return found
     return next((str(p) for p in APP_CODEX_PATHS if p.is_file()), None)
 
-def command(codex, project, model, report, sandbox='read-only'):
-    # model None = ไม่ส่ง --model ให้ ~/.codex/config.toml เป็นตัวกำหนด
+def command(codex, project, model, report, sandbox='read-only', effort=None):
+    # model/effort None = ไม่ส่ง ให้ ~/.codex/config.toml เป็นตัวกำหนด
+    # effort ส่งเป็น -c override ราย run ไม่แก้ config.toml (ไม่กระทบ Codex app)
     cmd = [codex, 'exec', '-C', str(project)] + (['--model', model] if model else [])
+    cmd += ['-c', f'model_reasoning_effort={effort}'] if effort else []
     return cmd + ['--sandbox', sandbox, '--ephemeral', '--json', '--output-last-message', str(report), '-']
 
 def git_bytes(*args):
@@ -141,6 +143,8 @@ def main(argv=None):
     p.add_argument('--task', type=Path, required=True)
     p.add_argument('--project', type=Path, required=True)
     p.add_argument('--model', default=None, help='Default: model from ~/.codex/config.toml')
+    p.add_argument('--effort', default=None, choices=['low', 'medium', 'high', 'xhigh', 'max', 'ultra'],
+                   help='Reasoning effort for this run only. Default: ~/.codex/config.toml')
     p.add_argument('--write', action='store_true', help='codex only: edit on branch codex/<run_id> in a separate git worktree')
     p.add_argument('--run', action='store_true')
     p.add_argument('--publish', action='store_true', help='Publish limited public status of this agent only')
@@ -175,7 +179,7 @@ def main(argv=None):
     out.mkdir(parents=True)
     report = out / 'report.md'
     (out / 'task.md').write_text(prompt)
-    state = dict(run_id=run_id, agent=args.agent, model=args.model or 'config.toml', status='running', review='pending', sandbox=sandbox)
+    state = dict(run_id=run_id, agent=args.agent, model=args.model or 'config.toml', effort=args.effort or 'config.toml', status='running', review='pending', sandbox=sandbox)
     status_path = out / 'status.json'
     def save():
         status_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
@@ -198,7 +202,7 @@ def main(argv=None):
             except (OSError, ValueError, subprocess.CalledProcessError) as exc:
                 raise RuntimeError('worktree: ' + type(exc).__name__)
         with (out / 'events.jsonl').open('w') as events, (out / 'stderr.log').open('w') as errors:
-            result = subprocess.run(command(codex, workdir, args.model, report, sandbox), input=prompt, text=True, stdout=events, stderr=errors,
+            result = subprocess.run(command(codex, workdir, args.model, report, sandbox, args.effort), input=prompt, text=True, stdout=events, stderr=errors,
                                     timeout=1800 if args.write else 600)
         state['exit_code'] = result.returncode
         state['status'] = 'ready_for_review' if result.returncode == 0 and report.is_file() and report.read_text().strip() else 'failed'

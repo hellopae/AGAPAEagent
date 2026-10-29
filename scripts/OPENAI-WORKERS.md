@@ -54,3 +54,7 @@ node scripts/seed-firestore.mjs codex astra
 โฟลเดอร์ runs ถูก gitignore เพราะมีใบงานและบันทึกส่วนตัว; ไม่ควรเพิ่มไฟล์เหล่านี้ด้วย git add -f. ส่งรายงานที่ตรวจแล้วแยกเป็น Output/<Agent>/YYYY-MM-DD-topic.md เมื่อได้รับอนุญาตให้เผยแพร่
 
 ตัวรันใช้ --ephemeral ไม่บันทึก session ของ Codex ถาวร; เมื่อ --publish จะส่ง working ก่อนเริ่ม และส่งผล ready_for_review/failed/rate_limited ตอนจบ โดยใช้ข้อความตายตัวที่ไม่เปิดเผยเนื้อหา. hook-status ข้าม wrapper ของสองตัวนี้ เพื่อไม่ให้การจบ wrapper ถูกนับเป็นงาน OpenAI สำเร็จ หรือส่งข้อความดิบขึ้นเว็บ
+
+## เลือกโมเดล/effort ราย run (29 ต.ค. 2569)
+`--model <slug>` และ `--effort low|medium|high|xhigh|max|ultra` ส่งเป็น `codex exec --model … -c model_reasoning_effort=…` เฉพาะ run นั้น ไม่แก้ `config.toml` (ไม่กระทบ Codex app) · บันทึกใน `status.json` (`model`, `effort`)
+ตารางที่คุณเป้อนุมัติ: ระบบเกมซับซ้อน/เซฟ/สมดุล → `gpt-6.1-sol` high · ออกแบบ/วิเคราะห์ → `gpt-6-astra` medium · แผนที่/mask/สัดส่วน → `gpt-6.1-sol` medium · วาดล้วน → `gpt-6.1-terra` medium · แก้ UI เล็ก/เทสต์ → `gpt-6.1-terra` หรือ `gpt-6-luna`
