@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T09:13:36.306Z",
+  "updatedAt": "2026-10-29T09:16:16.632Z",
   "agents": [
     {
       "id": "claudy",
@@ -70,7 +70,7 @@
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
       "status": "done",
-      "task": "Reese fact-checks AVEGEE lore bible",
+      "task": "Reese fact-checks W2 side quests",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
