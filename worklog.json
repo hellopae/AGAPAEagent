@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-29T23:20:00.247Z",
+  "updatedAt": "2026-10-30T04:01:32.850Z",
   "entries": [
+    {
+      "id": "wl-261030-toby-3o36",
+      "datetime": "2026-10-30T04:01:32Z",
+      "displayDate": "30 ต.ค. 2569",
+      "displayTime": "11:01",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby builds zone 4 power poles",
+      "summary": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,"
+    },
     {
       "id": "wl-261029-dale-1lo8",
       "datetime": "2026-10-29T23:20:00Z",
