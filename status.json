@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T10:40:51.719Z",
+  "updatedAt": "2026-10-31T11:02:23.777Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby builds zone 4 power poles",
+      "task": "Toby Q2 history guide",
       "report": {
         "when": "05:17",
         "title": "Toby builds AVEGEE P4",
