@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-10-31T11:08:03.073Z",
+  "updatedAt": "2026-10-31T11:45:46.584Z",
   "entries": [
+    {
+      "id": "wl-261031-toby-4iu0",
+      "datetime": "2026-10-31T11:45:46Z",
+      "displayDate": "31 ต.ค. 2569",
+      "displayTime": "18:45",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby Q3 UI fixes",
+      "summary": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,"
+    },
     {
       "id": "wl-261031-dale-s0ap",
       "datetime": "2026-10-31T11:08:03Z",

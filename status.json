@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T11:08:03.073Z",
+  "updatedAt": "2026-10-31T11:45:46.584Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby Q2 history guide",
+      "task": "Toby Q3 UI fixes",
       "report": {
         "when": "05:17",
         "title": "Toby builds AVEGEE P4",
