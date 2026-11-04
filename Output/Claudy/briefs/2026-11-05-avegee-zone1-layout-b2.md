@@ -16,6 +16,15 @@
 ## ภาพที่ Codex วาดให้
 `fx-manifest.json` จาก run FX-ART-Z1 (`Output/Claudy/briefs/2026-11-05-avegee-fx-art-z1.md`) — รูปแบบ `id, sheet, frameW, frameH, frames, fps, loop, tileable, blend, suggestedPlacement`
 
+## ✅ ภาพจาก Codex พร้อมแล้ว (ตรวจรับ 5 พ.ย.)
+run `20261104T191411Z-285bbd21` branch `codex/20261104T191411Z-285bbd21` (push แล้ว) · โฟลเดอร์
+`/Users/agapae/agapae-work/.codex-worktrees/20261104T191411Z-285bbd21/docs/art-reviews/2026-11-05-fx-art-z1/`
+(`fx-manifest.json`, `sheets/*.webp` 25 ชิ้น, `river-mask.png`, `lava-mask.png`, `preview/`, README) — คัดลอกเฉพาะที่ใช้เข้า `img/map-zone1/v3/fx/`
+- ชิ้น: spirit-river (tile x), river-foam, river-mist, water-sparkle, lava-surface (tile x), lava-bubble, lava-fall-left, lava-steam, embers-ash, ice-mist, torch-flame, leaf-maple/gold/green, snowflake, god-ray-01..03, air-dust, cloud-01..04, cloud-far-01..02
+- ⚠️ เมฆของ Codex เล็ก (~296 px) → **เมฆหลัก parallax ใช้เมฆของคุณเป้จาก AI** (`baseLayerExtras` ใน layout.json รอบ A, 3.ai Im8–10 ต้นฉบับ 2172×724) เมฆ Codex ใช้เป็นก้อนเล็ก/ไกลเสริม
+- ยังไม่มีน้ำตกฝั่งน้ำแข็ง — ข้ามได้ ไม่ใช่ของในผังหลัก
+- ไฟคบเพลิง: วางบนเสาไฟ 3 ต้น + กระทะทองแดง/ศาลาที่มีไฟในภาพ
+
 ## ขั้นตอน
 1. ตัวเล่น animation sprite (เสียบที่จุดที่ B1 เตรียม): tile ของเหลวตามรูปร่างร่อง (mask จาก alpha terrain) + sprite จุด (ฟองลาวา ลาวาตก หมอก ลำแสง) · โหลดเฉพาะรอบกล้อง · หยุดเมื่อ pause/แท็บซ่อน
 2. ฟ้า: เมฆ sprite ลอยแนวนอนช้า parallax เทียบพื้น (ฟ้า < ภูเขา < พื้น) · ภูเขา parallax เล็กน้อย
