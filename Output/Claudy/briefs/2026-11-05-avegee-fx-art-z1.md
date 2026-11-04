@@ -11,6 +11,15 @@ Repo: AVEGEE (worktree ของ run นี้) · งานวาดล้ว�
 
 ## ⚠️ ห้ามหยุดที่ภาพร่าง — ทำครบใน run เดียว (~30 นาที) ImageGen ≤ ~12 ครั้ง ถ้าไม่ทันทำตามลำดับความสำคัญด้านล่างแล้วรายงานว่าค้างข้อไหน
 
+## ภาพ/วิดีโอตัวอย่างจากคุณเป้ (แนว HD-2D) — ดูก่อนวาด
+โฟลเดอร์ `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/2026-11-05-map-redraw/input/fx-reference/`
+- `cloud-6s.mp4` / `cloud-sheet.jpg` — เมือง: หมอก/แสง ฉากหน้าเบลอ เมฆเงาผ่าน
+- `cloud-river-6s.mp4` / `cloud-river-sheet.jpg` — ฟ้าเมฆก้อนใหญ่ลอย, ลำแสง, แม่น้ำไกลระยิบ
+- `f1-6s.mp4` / `f1-sheet.jpg` — ป่า/หิมะ/น้ำตก: ใบไม้-หิมะโปรย, ไอหมอก, ลำแสง
+- `ref-fb.jpg`, `ref-screenshot.jpg` — เมืองหลังคากระเบื้อง กล้องใกล้ DOF บน-ล่าง
+ใช้เป็นตัวอย่าง **ลักษณะการเคลื่อนไหว/บรรยากาศ** เท่านั้น — ห้ามลอกภาพ ตัวละคร หรือ asset ของเกมในวิดีโอ วาดในสไตล์ AVEGEE (`New-Map-Zone1-ok.jpg`)
+เพิ่มชิ้น: **ลำแสง (god rays)** RGBA นุ่ม 2–3 แบบ 6–8 เฟรมระยิบช้า และ **ฝุ่น/ประกายลอยในอากาศ** sprite เล็ก 6 เฟรม (ลำดับความสำคัญหลังข้อ 5)
+
 ## อ้างอิง
 - ผังโซน 1: `/Users/agapae/Documents/Work PAE/Claude/AVEGEE-reference/files/UI New map/New-Map-Zone1-ok.jpg` (สไตล์ แสง ขนาด)
 - ผังจัดวางที่ประกอบแล้ว + พิกัด: branch `claude/2026-11-05-zone1-layout` → อ่านได้ที่ `/Users/agapae/agapae-work/.toby-worktrees/z1-layout/docs/art-reviews/2026-11-05-zone1-layout/` (`proof-composite.jpg`, `layout.json`, `terrain-registration.json`, README) — พิกัด ok-space 2500×1759
