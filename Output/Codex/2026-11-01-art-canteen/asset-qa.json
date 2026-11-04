@@ -1,0 +1,58 @@
+{
+  "th": {
+    "size": [
+      768,
+      640
+    ],
+    "alpha0Fraction": 0.43448486328125,
+    "solidBounds": [
+      6,
+      4,
+      763,
+      625
+    ],
+    "footY": 0.9765625
+  },
+  "asia": {
+    "size": [
+      768,
+      640
+    ],
+    "alpha0Fraction": 0.4767537434895833,
+    "solidBounds": [
+      20,
+      38,
+      751,
+      616
+    ],
+    "footY": 0.9625
+  },
+  "west": {
+    "size": [
+      768,
+      640
+    ],
+    "alpha0Fraction": 0.4691996256510417,
+    "solidBounds": [
+      8,
+      36,
+      760,
+      614
+    ],
+    "footY": 0.959375
+  },
+  "cyberhell": {
+    "size": [
+      768,
+      640
+    ],
+    "alpha0Fraction": 0.4136759440104167,
+    "solidBounds": [
+      5,
+      3,
+      766,
+      632
+    ],
+    "footY": 0.9875
+  }
+}

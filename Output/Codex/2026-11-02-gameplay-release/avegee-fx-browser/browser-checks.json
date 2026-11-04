@@ -1,0 +1,104 @@
+{
+  "results": [
+    {
+      "zone": "th",
+      "context": "trial",
+      "pixels": 898833,
+      "particles": 25,
+      "elapsed": 667,
+      "events": "none",
+      "width": 1226.796875
+    },
+    {
+      "zone": "th",
+      "context": "battle",
+      "pixels": 898833,
+      "particles": 25,
+      "elapsed": 923,
+      "events": "none",
+      "width": 1349.4765625
+    },
+    {
+      "zone": "asia",
+      "context": "trial",
+      "pixels": 898833,
+      "particles": 25,
+      "elapsed": 357,
+      "events": "none",
+      "width": 1226.796875
+    },
+    {
+      "zone": "asia",
+      "context": "battle",
+      "pixels": 898833,
+      "particles": 25,
+      "elapsed": 960,
+      "events": "none",
+      "width": 1349.4765625
+    },
+    {
+      "zone": "west",
+      "context": "trial",
+      "pixels": 898833,
+      "particles": 160,
+      "elapsed": 287,
+      "events": "none",
+      "width": 1226.796875
+    },
+    {
+      "zone": "west",
+      "context": "battle",
+      "pixels": 898833,
+      "particles": 160,
+      "elapsed": 903,
+      "events": "none",
+      "width": 1349.4765625
+    },
+    {
+      "zone": "cyberhell",
+      "context": "trial",
+      "pixels": 898833,
+      "particles": 160,
+      "elapsed": 187,
+      "events": "none",
+      "width": 1226.796875
+    },
+    {
+      "zone": "cyberhell",
+      "context": "battle",
+      "pixels": 898833,
+      "particles": 160,
+      "elapsed": 797,
+      "events": "none",
+      "width": 1349.4765625
+    },
+    {
+      "cloudComposite": [
+        {
+          "zone": "th",
+          "maxAlpha": 51,
+          "compositeAlphas": [
+            0.2
+          ]
+        },
+        {
+          "zone": "asia",
+          "maxAlpha": 179,
+          "compositeAlphas": [
+            0.2
+          ]
+        }
+      ]
+    },
+    {
+      "controls": {
+        "before": 233.39999999999964,
+        "after": 233.39999999999964,
+        "weatherOffMaxAlpha": 0,
+        "disposed": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual production trial/battle dialogs in isolated Chromium; canvas budgets and click-through verified"
+}

@@ -1,0 +1,48 @@
+(node:87692) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ map masks select lava and water, avoiding snow, bridges and red ground (3.962819ms)
+✔ all four zone effects move deterministically, stay bounded, and use small particle budgets (27.545533ms)
+✔ sky renders different frames and reduced motion avoids all drawing and mask work (13.374023ms)
+(node:87693) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weather cap follows CSS viewport and DPR, never world size, and reduced motion disables particles (13.297861ms)
+✔ reduced motion is identical across time, has no smoke/dust, and settings disable every new draw (6.256803ms)
+✔ pause holds the last weather phase; labels are unioned and clipped before weather (6.838828ms)
+✔ frontiers clip weather to the authored biome halves, retain cold snow, and invent no fire anchors (19.067995ms)
+✔ scene schedules weather after actors, before dialogue/badges; cache aliases share settings instance (15.020354ms)
+✔ settings preference persists and restores, and blocked storage never breaks rendering (11.803235ms)
+✔ unsupported canvas skips weather safely and can retry after a usable context is available (16.76336ms)
+✔ Q5 cloud shadows are sized from the visible map area, always present, and stay inside the opacity budget (2.17038ms)
+✔ Q5 cloud shadows drift slowly and hold still when paused (24.37425ms)
+✔ Q5 cloud shadows cover every map type: all three border routes and the frontier post of every zone (7.753958ms)
+(node:87694) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Q5 lightning: a strike every ~5 s with at most two decaying flash pulses, never above .25 opacity, never more than 2 flashes per second; none under reduced motion (116.680247ms)
+✔ WEATHER-B budgets shrink with viewport/DPR; settings and reduced motion stop all weather (1.236432ms)
+✔ WEATHER-B border 3–4 clips snow west and storm east, leaving the transition clear (19.891532ms)
+✔ WEATHER-B weather renders before actors/labels; settings checkbox is bound (7.396906ms)
+✔ WATER-01 water emits crests rather than sparks and rejects sprite footprints crossing a dry hole (28.506365ms)
+✔ WEATHER-B changed renderer imports share canonical release identities (40.510906ms)
+✔ Q5 zone 3 snowfall is at least 3x the old ceiling on a desktop canvas, shrinks by the screen budget on phones, and brings visible fog (11.95874ms)
+✔ Q5 zone 4 rain is at least 3x the old ceiling, lightning draws a visible bolt and a faint flash, all clipped to the visible area (9.843006ms)
+(node:87695) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ TH and Asia cloud caps are20%, while other biome settings remain independent (4.466985ms)
+✔ dialog weather particle and canvas budgets stay bounded on desktop and phone (4.194656ms)
+✔ snow prints are movement-only, alternate along real path, and remain capped (5.494938ms)
+✔ snow prints freeze on pause, fade in final2seconds, and expire after6active seconds (1.566776ms)
+✔ teleports, biome changes and disabled effects never leave a long trail (0.662867ms)
+✔ requested TH lamp bases stay on existing blocked margins, not on walkable routes (1.175337ms)
+✔ cinematic camera shares one invertible projection with raster, actors and pointer at all zoom levels (1.202347ms)
+✔ both actual scene builders mount the shared effect and foreground route data stays enabled (20.212801ms)
+✔ dialog profiles retain zone3 fog/snow and zone4 rain/lightning in both mounted contexts (6.26249ms)
+✔ lava projection matches centered cover and the42percent trial background anchor (1.651947ms)
+✔ Thai leaf motion is bounded and reduced motion creates no particles (3.024815ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 631.193194

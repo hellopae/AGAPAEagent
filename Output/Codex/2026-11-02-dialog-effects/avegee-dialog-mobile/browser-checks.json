@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "zone": "th",
+      "context": "trial",
+      "features": "cloud,leaves,lava",
+      "lava": {
+        "pixels": 449494,
+        "nonzero": 10383
+      },
+      "pixels": 449494,
+      "particles": 12,
+      "elapsed": 626,
+      "events": "none",
+      "width": 380.1875
+    },
+    {
+      "zone": "th",
+      "context": "battle",
+      "features": "cloud,leaves,lava",
+      "lava": {
+        "pixels": 307040,
+        "nonzero": 7057
+      },
+      "pixels": 307040,
+      "particles": 8,
+      "elapsed": 810,
+      "events": "none",
+      "width": 418.2062683105469
+    },
+    {
+      "zone": "asia",
+      "context": "trial",
+      "features": "cloud,leaves,light,lava",
+      "lava": {
+        "pixels": 427880,
+        "nonzero": 437
+      },
+      "pixels": 427880,
+      "particles": 11,
+      "elapsed": 543,
+      "events": "none",
+      "width": 380.1875
+    },
+    {
+      "zone": "asia",
+      "context": "battle",
+      "features": "cloud,leaves,light,lava",
+      "lava": {
+        "pixels": 307040,
+        "nonzero": 199
+      },
+      "pixels": 307040,
+      "particles": 8,
+      "elapsed": 917,
+      "events": "none",
+      "width": 418.2062683105469
+    },
+    {
+      "zone": "west",
+      "context": "trial",
+      "features": "cloud,fog,snow",
+      "lava": null,
+      "pixels": 435100,
+      "particles": 77,
+      "elapsed": 743,
+      "events": "none",
+      "width": 380.1875
+    },
+    {
+      "zone": "west",
+      "context": "battle",
+      "features": "cloud,fog,snow",
+      "lava": null,
+      "pixels": 307040,
+      "particles": 55,
+      "elapsed": 880,
+      "events": "none",
+      "width": 418.2062683105469
+    },
+    {
+      "zone": "cyberhell",
+      "context": "trial",
+      "features": "cloud,rain,lightning",
+      "lava": null,
+      "pixels": 408120,
+      "particles": 73,
+      "elapsed": 753,
+      "events": "none",
+      "width": 380.1875
+    },
+    {
+      "zone": "cyberhell",
+      "context": "battle",
+      "features": "cloud,rain,lightning",
+      "lava": null,
+      "pixels": 307040,
+      "particles": 55,
+      "elapsed": 777,
+      "events": "none",
+      "width": 418.2062683105469
+    },
+    {
+      "cloudComposite": [
+        {
+          "zone": "th",
+          "maxAlpha": 51,
+          "compositeAlphas": [
+            0.2
+          ]
+        },
+        {
+          "zone": "asia",
+          "maxAlpha": 179,
+          "compositeAlphas": [
+            0.2
+          ]
+        }
+      ]
+    },
+    {
+      "controls": {
+        "before": 233.30000000000018,
+        "after": 233.30000000000018,
+        "weatherOffMaxAlpha": 0,
+        "disposed": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual production trial/battle dialogs in isolated Chromium; canvas budgets and click-through verified"
+}

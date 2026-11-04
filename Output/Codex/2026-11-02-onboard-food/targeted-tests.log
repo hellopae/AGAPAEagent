@@ -1,0 +1,45 @@
+(node:50505) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ BALANCE-2 new-game office buttons really remove and restore taan+nira without moving map actors (39.513969ms)
+✔ BALANCE-2 tutor keeps the exact approved sentence; intro and help disclose back-line support (0.978891ms)
+✔ BALANCE-2 every new move renders an unclipped-name row, ultimate chip short name and full tooltip/manual (5.388696ms)
+✔ BALANCE-2 enemy scaling freezes the initial party count and does not rescale an ongoing/restored wave (18.440492ms)
+✔ BALANCE-2 changed runtime modules share release identities; stylesheet is versioned (41.063576ms)
+✔ BALANCE-2 Western hypnosis uses the initial party size for its solo-Yama enemy group (4.843094ms)
+✔ BALANCE-2 evidence covers 200 paired trials per case and stays tied to the runtime under test (1049.266742ms)
+(node:50506) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ no implicit kitchen after worker unlock; construction charges once and entry waits for completion (43.816841ms)
+✔ legacy implicit kitchens migrate visited branches once; new saves keep unbuilt kitchens absent (46.148701ms)
+✔ paid FIFO batches wait for arrival, reject duplicates, pause and cancel/refund only unfinished portions (8.987777ms)
+✔ keeper conflicts, invalid quantities and insufficient resources cannot create an order (474.021056ms)
+✔ save/load mid-batch and after completion never replays portions or currency; cooks return to posts (320.678133ms)
+✔ zone changes freeze source orders and resume them once on return (180.092989ms)
+✔ kitchen footprints and entry are finite in every zone and repeat without drift (9.92429ms)
+✔ both cooks physically walk back to ngiw/krata after their ordered batch (981.086141ms)
+(node:50507) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ only explicit New Game removes free cauldron; opening lesson persists once and waits for completion (37.193433ms)
+✔ cook enters from stairs, produces inside only, and reload retains room pose with one paid batch (36.645769ms)
+✔ merchant and canteen buy pooled rice without Nira; cook hidden outside and rendered inside (13.806843ms)
+(node:50508) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ new hiring is gated by the invading demon victory, existing workers survive legacy mode migration (30.481094ms)
+✔ workers build without Taan and cannot open the building before physical inspection (607.893263ms)
+✔ workers repair without Taan and cannot open the building before physical inspection (292.626866ms)
+✔ when no worker is hired Taan still builds and repairs normally (3.178399ms)
+✔ gathering requires a real built resource station and sells exactly the collected load at merchant (4.103167ms)
+✔ cooks physically reach canteen, make food, courier picks up and delivers it without consuming inventory rice (5.131834ms)
+✔ worker with zero morale walks to rest seats, sits and recovers; seated art exists for all zones (1.810857ms)
+✔ on-map journey includes handoff, boarding, right departure, left arrival and commits zone exactly once (244.249044ms)
+✔ cancel before departure preserves source, skip travels once, reduced motion keeps readable handoff (261.274226ms)
+✔ empty supplies seat workers and require a player rice gift or tea-rest order even after kitchen refills (178.682402ms)
+✔ a keeper collects successive judged souls one journey at a time and idle Dam remains available for an assigned case (514.211461ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2962.565832

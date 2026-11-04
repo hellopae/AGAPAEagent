@@ -1,0 +1,43 @@
+{
+  "method": "Real Playwright Chromium with a clean temporary profile and local HTTP server; no personal browser data",
+  "results": [
+    {
+      "case": "new slot2",
+      "onlySlot2Written": true,
+      "playTimeMs": 4317.696000000742
+    },
+    {
+      "case": "reload and continue slot2",
+      "passed": true
+    },
+    {
+      "case": "legacy migration and occupied slots",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "bounds": {
+        "width": 520,
+        "client": 516,
+        "scroll": 516,
+        "height": 701.421875
+      },
+      "preserved": true
+    },
+    {
+      "case": "legacy migration and occupied slots",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "bounds": {
+        "width": 366.59375,
+        "client": 363,
+        "scroll": 363,
+        "height": 681.421875
+      },
+      "preserved": true
+    }
+  ],
+  "pageErrors": []
+}

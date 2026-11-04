@@ -1,0 +1,56 @@
+(node:60895) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ first boss victory praises once, invitation follows, farewell dismisses once (2.318908ms)
+✔ each guide farewell uses dedicated money and outfit handover artwork (0.256571ms)
+✔ migration skips past praise and completed journeys without deleting unfinished invitations (0.435935ms)
+✔ captured bosses cannot guide until their sentencing has finished (0.225806ms)
+✔ follow positions stay on recorded bends instead of cutting across a ravine (0.933277ms)
+✔ guide state and acknowledged cutscenes survive real game snapshot/restore (18.376516ms)
+✔ acknowledged guide stories repair a partial guide save instead of locking the gate (0.350641ms)
+✔ th farewell grants 500 once on acknowledgment, with a persistent receipt (0.560381ms)
+✔ asia farewell grants 800 once on acknowledgment, with a persistent receipt (0.323478ms)
+✔ west farewell grants 1200 once on acknowledgment, with a persistent receipt (0.348966ms)
+✔ legacy acknowledged farewells and repaired partial saves never retroactively grant money (1.73123ms)
+✔ a real reload before farewell acknowledgment pays exactly once and saves the unpaid receipt (12.494319ms)
+✔ a restored active asia route can meet its waiting guide and finish the journey (122.290222ms)
+✔ a restored active west route can meet its waiting guide and finish the journey (18.274508ms)
+✔ th actual snapshots preserve welcome, farewell payment and acknowledged receipt boundaries (12.529396ms)
+✔ asia actual snapshots preserve welcome, farewell payment and acknowledged receipt boundaries (17.494718ms)
+✔ west actual snapshots preserve welcome, farewell payment and acknowledged receipt boundaries (17.754533ms)
+(node:60896) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ captured zone boss is tried, escorted along map route, punished and released exactly once (215.127292ms)
+✔ final boss requires asked dossier, mandatory mirror and all correct maximum choices before ending02 (33.307149ms)
+✔ saved escort and sentence choices resume without receiving another battle reward (78.907047ms)
+✔ lost battles and ordinary mobs never start a boss docket (1.784569ms)
+✔ all four frontier bosses receive one persistent docket and rematches do not repeat sentencing (256.344486ms)
+✔ partial saves with no station or keeper requisition court resources and can finish finale (21.744671ms)
+✔ interrupted final sentencing does not auto-complete or skip back to ending02 on load (6.452151ms)
+✔ actual stepWorld drives court escort, punishment and release; dialog pause release resumes it (151.733939ms)
+✔ released frontier NPC selects newest returned captain without duplicating a ruler guide or active invasion (1.423572ms)
+✔ final world sentencing keeps ending02 locked until mirror, actual punishment and sentencing cutscene acknowledgement (19.577982ms)
+✔ actual completed tenth-wave frontier challenges enter court in every zone; unfinished wave does not (12.207606ms)
+✔ a replayed final capture acknowledgement cannot rewind an already sentenced boss after reload (20.22701ms)
+✔ th court resumes every saved phase without duplicate docket, money or temporary chamber (168.865446ms)
+✔ asia court resumes every saved phase without duplicate docket, money or temporary chamber (265.421827ms)
+✔ west court resumes every saved phase without duplicate docket, money or temporary chamber (207.370237ms)
+✔ cyberhell court resumes every saved phase without duplicate docket, money or temporary chamber (87.967841ms)
+✔ a requisitioned construction site resumes its original build state after a saved court sentence (77.484222ms)
+✔ final court survives capture, mirror, escort and sentencing saves before one ending acknowledgement (65.735696ms)
+(node:60897) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story sources resolve ruler, frontier and tester independently in every zone (48.074162ms)
+✔ level ups never unlock or announce Ice, but a real West ruler win unlocks it at any level (26.260408ms)
+✔ legacy premature Ice flags and queued notices are removed without losing earned West powers (12.346626ms)
+✔ Thai frontier victory grants the team move, Asia frontier grants big fire, neither retires the ruler (13.218925ms)
+✔ challenge captains cannot grant ruler praise or ruler abilities even when their sprite is a boss (1.610415ms)
+✔ public merit colors describe claimed merit without leaking whether the claim is true (5.361852ms)
+✔ Thai ruler dockets use ruler identity; released legacy ruler dockets cannot be sentenced twice (4.110197ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2019.788217

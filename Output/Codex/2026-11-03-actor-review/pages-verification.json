@@ -1,0 +1,25 @@
+{
+  "commit": "ca57fb7ff7708bd37dfc06272e309b9e57a6a47e",
+  "pagesCommit": "ca57fb7ff7708bd37dfc06272e309b9e57a6a47e",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "3fd67fd49ee17c83e6a11128ebbb86acf9ee8394cbf713cc6d25e6beb9efe4cd",
+      "liveSha256": "3fd67fd49ee17c83e6a11128ebbb86acf9ee8394cbf713cc6d25e6beb9efe4cd",
+      "match": true
+    },
+    {
+      "path": "src/scene.js",
+      "localSha256": "523cf694f2645e5daa5f15adf8facc4fbe821c32118af6d9761b4bcfda8a5a4b",
+      "liveSha256": "523cf694f2645e5daa5f15adf8facc4fbe821c32118af6d9761b4bcfda8a5a4b",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "localSha256": "2e03cd57e37f5e77faa35f9d1d7875c128906fdb4e8074c6876d308421bf6cd6",
+      "liveSha256": "2e03cd57e37f5e77faa35f9d1d7875c128906fdb4e8074c6876d308421bf6cd6",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

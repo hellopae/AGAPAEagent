@@ -61,3 +61,15 @@ B5b Zone1 published cef1202a4bd62eaeb11eea9c7499529dd77ca71c: candidate90f90b2,f
 B5b Zone2 published1127c84e87dbe59e04a20356e3f6119ab60c0350,candidates2819758+d4ea528. 13files76insertions24deletions,newPNG3385569bytes. Full1538/1538,134syntax,226files,271.59s; Pagesbuilt exactSHA/live7/7,productionbootconsoleempty. Nativewalk/invite→wave1 and390x844 button passed. Captain refuge separate from story ruler; destination gate remains ruler-locked. Zone3 deferredpendingmask,Zone4 horse remains. C3terrain repaint next; no image selected/integrated yet.
 
 C3 publisheddb88a609740794b666f39a65c876ef111c13f637;candidatea341210. 31files97insertions21deletions,full1540/1540,134syntax,227files,277.03s. Pagesexact/live26/26,nativecenterbeforeafter+ice/lava/overview/mobile390,consoleempty. Evidence2026-10-26-avegee-zone2-terrain-repaint-review/. Fourfreshpaintedquadrantsregisteredandpackaged;containerresamplingexplicit,C4stillpending. L1/L2pilotTown2next,existingcodeaudit/nativeevidencebeforeclaimingcomplete.
+- 1 พ.ย. 2569 B23-REDRAW → merged locally 6f2328b8 | tests1786/1786 | push rejected by automatic approval review; awaiting explicit GitHub hellopae/AVEGEE main permission
+- 1 พ.ย. 2569 B34-REDRAW → merge held at logic/data conflicts | tests1782/1782 before integration | concrete resolution patch prepared; awaiting owner approval per checklist
+
+- 2026-11-01 19:45 +07 B23/B34-REDRAW → published main f9a4edd3b203d78386240a7487cbee836fbccfb7 | user explicitly approved GitHub hellopae/AVEGEE main push and five-file resolution | candidate300c354f; full1790/1790,syntax160/160; main tree matches tested tree; Pages built exact SHA,live12/12hash-match | earlier approval holds resolved
+
+- 1พ.ย.2569 ART-INTEGRATION → published df42fb1b2fba38222ee64d6d64de5266670b4014 | six approved art tasks +17walk keys; full1810/1810,syntax161; Pagesbuilt exactSHA/live39/39hashmatch
+
+- 2026-11-02 gameplay-update → merged/pushed 22b03e4c903935552bdbb3ed56e777790393d0eb | full1844/1844,syntax192/192 | Pages built exact commit,23/23changed runtime hashes match | START/3saves,sentence time+tint,zone atmosphere,120srecovery,onboarding/food | queue docs/queues/2026-11-02-active-queue.md
+
+- 2026-11-02 DIALOG-FX → merged/pushed 27fb00a784558d49a790684e1cffc2d23ae56aa1 | full1847/1847 |16actualbrowsercontexts,0errors | Pagesbuilt exactcommit,3/3changedruntimehashmatch | cleanmergedworktreeremoved
+
+- 2026-11-02 SAVE-VISUAL/CLOUD-RAYS → merged/pushed cfe04ef5447d74e59ff27129ad1d15724d485184 | full1852/1852,syntax193/193 | sloticons/currentzoneportraits,dialoglampsremoved,20percentcloudsactual4maps,softAsiasunlight | Pagesexactcommit,5/5runtimehashmatch | cleanmergedworktreesremoved

@@ -1,0 +1,268 @@
+[
+  {
+    "key": "hanuman",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-hanuman-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      184,
+      93,
+      1142,
+      1178
+    ],
+    "uniformScale": 0.4682027649769585,
+    "bodySize": [
+      449,
+      508
+    ],
+    "origin": [
+      31,
+      4
+    ],
+    "transparentFraction": 0.4951591491699219,
+    "opaqueBounds": [
+      31,
+      4,
+      480,
+      512
+    ],
+    "sha256": "8e35a59ac687696a36dd141959189ffc594869bdf5f8d6029c55cd68ab6c0091",
+    "sourceSHA256": "7c7eb11eadeb53f3f573b43c6a52e8a3db3f2b112eafa903a08d828f61cd5eeb",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "sun-wukong",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-sun-wukong-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      117,
+      108,
+      1200,
+      1161
+    ],
+    "uniformScale": 0.469067405355494,
+    "bodySize": [
+      508,
+      494
+    ],
+    "origin": [
+      2,
+      18
+    ],
+    "transparentFraction": 0.5552215576171875,
+    "opaqueBounds": [
+      2,
+      18,
+      510,
+      512
+    ],
+    "sha256": "f9e761dc2c0e3478f7287c109018039dee08e1fede39832fc88837cc269df6bd",
+    "sourceSHA256": "0c0475155f8ddd6b509a54c57f3f786e01fdc3c0861bbd05d37f3f53d5c318b5",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "sita",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-sita-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      428,
+      15,
+      909,
+      1216
+    ],
+    "uniformScale": 0.42298084929225643,
+    "bodySize": [
+      203,
+      508
+    ],
+    "origin": [
+      154,
+      4
+    ],
+    "transparentFraction": 0.7829093933105469,
+    "opaqueBounds": [
+      154,
+      4,
+      357,
+      512
+    ],
+    "sha256": "38c78afa978a191f5266424734de8f8e2e2330172f19467234b5649fd4e0e297",
+    "sourceSHA256": "c720638f3a3308c9daa4d0a13db8c9b6d5a65caf12b4dd39f554fd6e382b5bee",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "huaguoshan-monkey",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-huaguoshan-monkey-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      235,
+      165,
+      950,
+      1130
+    ],
+    "uniformScale": 0.5264248704663212,
+    "bodySize": [
+      376,
+      508
+    ],
+    "origin": [
+      68,
+      4
+    ],
+    "transparentFraction": 0.5597572326660156,
+    "opaqueBounds": [
+      68,
+      4,
+      444,
+      512
+    ],
+    "sha256": "4ab75701e225f50000a484c2de24a460db255d8dde13009771460a491137e2cc",
+    "sourceSHA256": "06553ec468199c0f829d889128c96218d08067d4854c5ef48c67eb4dbe81f344",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "cerberus",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-cerberus-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      41,
+      157,
+      1230,
+      1156
+    ],
+    "uniformScale": 0.4272497897392767,
+    "bodySize": [
+      508,
+      427
+    ],
+    "origin": [
+      2,
+      85
+    ],
+    "transparentFraction": 0.4857025146484375,
+    "opaqueBounds": [
+      2,
+      85,
+      510,
+      512
+    ],
+    "sha256": "8367b8744c78738e29dd9ef2db14db9ddce649df64793a7430de9d39a4faf19c",
+    "sourceSHA256": "812201d7769ee55d92fc148d6bf0b240f989577b4c0aec6513a4679f2518f043",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "jormungandr",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-jormungandr-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      19,
+      27,
+      1239,
+      1222
+    ],
+    "uniformScale": 0.4163934426229508,
+    "bodySize": [
+      508,
+      498
+    ],
+    "origin": [
+      2,
+      14
+    ],
+    "transparentFraction": 0.3732185363769531,
+    "opaqueBounds": [
+      2,
+      14,
+      510,
+      512
+    ],
+    "sha256": "22c5cc0a84dc986f628b2d181adeb7cefa493f60287fbbfdcfd319114b614b94",
+    "sourceSHA256": "9dda3ccf281b0c15c243543355c447abc61b65a4be908dbfae6781a1c0fe52ea",
+    "status": "review-only; not integrated"
+  },
+  {
+    "key": "ai-scammer-robot",
+    "file": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-ai-scammer-robot-v1.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "nativeBounds": [
+      130,
+      17,
+      1190,
+      1219
+    ],
+    "uniformScale": 0.4226289517470882,
+    "bodySize": [
+      448,
+      508
+    ],
+    "origin": [
+      32,
+      4
+    ],
+    "transparentFraction": 0.46163177490234375,
+    "opaqueBounds": [
+      32,
+      4,
+      480,
+      512
+    ],
+    "sha256": "f1e6c248ea2fa06759d3875b0b89c53c983b3e4d03e0ade05202aa7cd07007df",
+    "sourceSHA256": "eb970118eae10993820dbb721b0c5c790ee5847993bc2882447e078a503ab192",
+    "status": "review-only; not integrated"
+  }
+]

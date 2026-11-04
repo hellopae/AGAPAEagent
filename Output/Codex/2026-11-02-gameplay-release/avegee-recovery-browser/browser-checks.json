@@ -1,0 +1,14 @@
+{
+  "state": {
+    "before": 0,
+    "after": 50,
+    "absent": true,
+    "seats": [
+      0
+    ],
+    "spriteLoaded": true,
+    "deadlineMs": 120000
+  },
+  "pageErrors": [],
+  "method": "Production room renderer and actual down/snapshot/restore/recovery paths in isolated Chromium; deadline boundaries simulated"
+}

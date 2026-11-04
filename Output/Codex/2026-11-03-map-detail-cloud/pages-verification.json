@@ -1,0 +1,37 @@
+{
+  "commit": "d6657bb2f72bcb8a99eb652ac0c1f3b0defc278a",
+  "pagesCommit": "d6657bb2f72bcb8a99eb652ac0c1f3b0defc278a",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "9801c9b528004521415048469d50eb35944bb5a8798f35777fefa4be7c53aa7b",
+      "liveSha256": "9801c9b528004521415048469d50eb35944bb5a8798f35777fefa4be7c53aa7b",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "5bec38d796a508975f8bb45c62550549326ffef1821339aebdfc0a2e7129ea00",
+      "liveSha256": "5bec38d796a508975f8bb45c62550549326ffef1821339aebdfc0a2e7129ea00",
+      "match": true
+    },
+    {
+      "path": "src/terrain-detail.js",
+      "localSha256": "3b660a807f60e68c82f40718e813752d5b1502cb262af48a9703da2e6da3e785",
+      "liveSha256": "3b660a807f60e68c82f40718e813752d5b1502cb262af48a9703da2e6da3e785",
+      "match": true
+    },
+    {
+      "path": "src/town-lighting.js",
+      "localSha256": "a098719a7e4c0f2b113f1ed349fa8727b94c31a86b9b7b49d8ec5988146869d2",
+      "liveSha256": "a098719a7e4c0f2b113f1ed349fa8727b94c31a86b9b7b49d8ec5988146869d2",
+      "match": true
+    },
+    {
+      "path": "src/town-terrain.js",
+      "localSha256": "c2e1ebae3655c1e4d510b3e974a5edb9c75c21ab9bb647e205176a2594920960",
+      "liveSha256": "c2e1ebae3655c1e4d510b3e974a5edb9c75c21ab9bb647e205176a2594920960",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

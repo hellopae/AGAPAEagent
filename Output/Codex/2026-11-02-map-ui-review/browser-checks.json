@@ -1,0 +1,230 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "start": {
+        "width": 206.71875,
+        "height": 64,
+        "parentWidth": 272,
+        "font": "26.4px"
+      },
+      "pauseHover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "shadow": "rgba(239, 198, 101, 0.667) 0px 0px 10px",
+        "filter": "brightness(1.16) drop-shadow(rgba(239, 198, 101, 0.6) 0px 0px 8px)"
+      },
+      "harbour": {
+        "x": 2225,
+        "y": 1780
+      },
+      "duplicateHarbourHidden": true,
+      "weatherClip": {
+        "clipped": [
+          [],
+          []
+        ]
+      },
+      "navigation": {
+        "points": [
+          [
+            900,
+            1150
+          ],
+          [
+            950,
+            1150
+          ],
+          [
+            1000,
+            1150
+          ],
+          [
+            1080,
+            1155
+          ]
+        ],
+        "blocked": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "recovered": {
+          "x": 1029.1959594928933,
+          "y": 1070.8040405071067,
+          "walkable": true
+        },
+        "bridgeRouteClear": true,
+        "path": [
+          [
+            1272,
+            1112
+          ],
+          [
+            1320,
+            1144
+          ],
+          [
+            1410,
+            1190
+          ]
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "start": {
+        "width": 228,
+        "height": 50,
+        "parentWidth": 300,
+        "font": "18.4px"
+      },
+      "pauseHover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "shadow": "rgba(239, 198, 101, 0.667) 0px 0px 9.99564px",
+        "filter": "brightness(1.16) drop-shadow(rgba(239, 198, 101, 0.6) 0px 0px 8px)"
+      },
+      "harbour": {
+        "x": 2225,
+        "y": 1780
+      },
+      "duplicateHarbourHidden": true,
+      "weatherClip": {
+        "clipped": [
+          [],
+          []
+        ]
+      },
+      "navigation": {
+        "points": [
+          [
+            900,
+            1150
+          ],
+          [
+            950,
+            1150
+          ],
+          [
+            1000,
+            1150
+          ],
+          [
+            1080,
+            1155
+          ]
+        ],
+        "blocked": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "recovered": {
+          "x": 1029.1959594928933,
+          "y": 1070.8040405071067,
+          "walkable": true
+        },
+        "bridgeRouteClear": true,
+        "path": [
+          [
+            1272,
+            1112
+          ],
+          [
+            1320,
+            1144
+          ],
+          [
+            1410,
+            1190
+          ]
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "start": {
+        "width": 228,
+        "height": 51,
+        "parentWidth": 300,
+        "font": "19.412px"
+      },
+      "pauseHover": {
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "shadow": "rgba(239, 198, 101, 0.667) 0px 0px 10px",
+        "filter": "brightness(1.16) drop-shadow(rgba(239, 198, 101, 0.6) 0px 0px 8px)"
+      },
+      "harbour": {
+        "x": 2225,
+        "y": 1780
+      },
+      "duplicateHarbourHidden": true,
+      "weatherClip": {
+        "clipped": [
+          [],
+          []
+        ]
+      },
+      "navigation": {
+        "points": [
+          [
+            900,
+            1150
+          ],
+          [
+            950,
+            1150
+          ],
+          [
+            1000,
+            1150
+          ],
+          [
+            1080,
+            1155
+          ]
+        ],
+        "blocked": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "recovered": {
+          "x": 1029.1959594928933,
+          "y": 1070.8040405071067,
+          "walkable": true
+        },
+        "bridgeRouteClear": true,
+        "path": [
+          [
+            1272,
+            1112
+          ],
+          [
+            1320,
+            1144
+          ],
+          [
+            1410,
+            1190
+          ]
+        ]
+      }
+    }
+  ],
+  "pageErrors": []
+}

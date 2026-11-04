@@ -1,0 +1,56 @@
+{
+  "commit": "cf4a565447c07c7a51eb63a5d6c628599f118035",
+  "pagesStatus": "built",
+  "pagesCommit": "cf4a565447c07c7a51eb63a5d6c628599f118035",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "3793af086e04078e0a6beaa7d1d47f20abfbc2b844abd8280b26eb6662879348",
+      "liveSha256": "3793af086e04078e0a6beaa7d1d47f20abfbc2b844abd8280b26eb6662879348",
+      "match": true
+    },
+    {
+      "path": "src/boss-guides.js",
+      "localSha256": "c3cf4ba5895529489fbb7a97b9ca666f2bed5e4123952ae69c12fee393e71fea",
+      "liveSha256": "c3cf4ba5895529489fbb7a97b9ca666f2bed5e4123952ae69c12fee393e71fea",
+      "match": true
+    },
+    {
+      "path": "src/boss-justice.js",
+      "localSha256": "f26a98a953120739254c98b1eaeee5e8b553dc7cf2e81dd06de77c209341e38a",
+      "liveSha256": "f26a98a953120739254c98b1eaeee5e8b553dc7cf2e81dd06de77c209341e38a",
+      "match": true
+    },
+    {
+      "path": "src/data.js",
+      "localSha256": "edf63341cb2cd0cf873e8c49716b4b45471f26705d0d75223d3339bb694714f6",
+      "liveSha256": "edf63341cb2cd0cf873e8c49716b4b45471f26705d0d75223d3339bb694714f6",
+      "match": true
+    },
+    {
+      "path": "src/game.js",
+      "localSha256": "8358bf2aecc8d3f61402a7be7e372ed04e098039e2f01e98adfd5736988e08b5",
+      "liveSha256": "8358bf2aecc8d3f61402a7be7e372ed04e098039e2f01e98adfd5736988e08b5",
+      "match": true
+    },
+    {
+      "path": "src/story-progression.js",
+      "localSha256": "24feb2ea866f7575c52f489431919400e0e0b5ac824dbc02d7f7787c1467a76b",
+      "liveSha256": "24feb2ea866f7575c52f489431919400e0e0b5ac824dbc02d7f7787c1467a76b",
+      "match": true
+    },
+    {
+      "path": "src/story.js",
+      "localSha256": "6e0bf96980a6e5417b34ead2cb37be024091e89b2e2697a50b2cd8c0e6f04683",
+      "liveSha256": "6e0bf96980a6e5417b34ead2cb37be024091e89b2e2697a50b2cd8c0e6f04683",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "localSha256": "affeabfae8cb7745b8f5d229ae06c088f6e78691de9ba2d438eb4ce99fa2aa2f",
+      "liveSha256": "affeabfae8cb7745b8f5d229ae06c088f6e78691de9ba2d438eb4ce99fa2aa2f",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

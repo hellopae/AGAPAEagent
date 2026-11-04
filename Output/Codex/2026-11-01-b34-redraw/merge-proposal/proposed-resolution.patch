@@ -1,0 +1,108 @@
+--- a/src/route-geometry.js
++++ b/src/route-geometry.js
+@@ -1,6 +1,7 @@
++import {BORDER34_REDRAW_MASK,BORDER34_REDRAW_CORRIDOR} from './frontier-walkmask-west-cyberhell-redraw.js';
+ import {BORDER23_REDRAW_MASK,BORDER23_REDRAW_CORRIDOR} from './frontier-walkmask-asia-west-redraw.js';
+ import {BORDER12_MASK} from './frontier-walkmask-th-asia-b12.js';
+-import {BORDER34_MASK,BORDER34_CORRIDOR,BORDER34_CHECKPOINT_VERTEX,BORDER34_TREES} from './frontier-walkmask-west-cyberhell.js';
++import {BORDER34_CHECKPOINT_VERTEX,BORDER34_TREES} from './frontier-walkmask-west-cyberhell.js';
+ import {BORDER23_CHECKPOINT_VERTEX} from './frontier-walkmask-asia-west.js';
+ import {FRONTIER_CORRIDOR_MASK} from './frontier-walkmask-th-asia.js';
+ // M2 R1 — ROUTE GEOMETRY: one row per frontier route (the walk between two cities).
+@@ -59,9 +60,9 @@
+       leafArea:[0,0,.44,1],snowArea:[.48,0,1,1]},
+   }),
+   'west:cyberhell': row('west:cyberhell', {
+-    enabled:true, geometryVersion:1, background:'img/frontier-route/zone3-4-v1.webp', foes:[10,11,12],
+-    corridor:BORDER34_CORRIDOR, checkpointVertex:BORDER34_CHECKPOINT_VERTEX, pads:[], walkMask:BORDER34_MASK,
+-    ambient:{trees:BORDER34_TREES,waterfalls:[],leafArea:null,snowArea:[0,0,.46,1],rainArea:[.54,0,1,1],
++    enabled:true, geometryVersion:2, background:'img/frontier-route/zone3-4-v2.webp', foes:[10,11,12],
++    corridor:BORDER34_REDRAW_CORRIDOR, checkpointVertex:BORDER34_CHECKPOINT_VERTEX, pads:[], walkMask:BORDER34_REDRAW_MASK,
++    ambient:{trees:[],bakedTrees:BORDER34_TREES,waterfalls:[],flowUrl:'img/frontier-route/zone3-4-v2-flow.png',leafArea:null,snowArea:[0,0,.46,1],rainArea:[.54,0,1,1],
+       treeArt:{white:'img/theme-v4/town-tree-snow-th-v1.webp',teal:'img/frontier-route/tree-pine-v2.png',purple:'img/theme-v4/town-tree-cyberhell-v1.webp'},
+       treeAnchors:{white:[.569224354,.987804878],teal:[.567556297,.958841463],purple:[.5,.987804878]}},
+   }),
+--- a/tests/b12-fx.test.mjs
++++ b/tests/b12-fx.test.mjs
+@@ -32,7 +32,7 @@
+  const trace=JSON.parse(readFileSync('output/coordination/2026-10-30-b12-fx/flow-trace.json'));
+  assert.equal(trace.sha256,createHash('sha256').update(readFileSync(trace.source)).digest('hex'),'flow trace belongs to the shipped painting');
+  for(const k of [2,3,4,5])assert.ok(trace.kindCells[k]>100,`surface ${k} exists`);
+- assert.equal(ROUTE_GEOMETRY['asia:west'].ambient.waterfallAnchors.length,4);assert.equal(ROUTE_GEOMETRY['asia:west'].ambient.waterfalls.length,0);assert.ok(ROUTE_GEOMETRY['west:cyberhell'].ambient.trees.length);
++ assert.equal(ROUTE_GEOMETRY['asia:west'].ambient.waterfallAnchors.length,4);assert.equal(ROUTE_GEOMETRY['asia:west'].ambient.waterfalls.length,0);assert.equal(ROUTE_GEOMETRY['west:cyberhell'].ambient.trees.length,0);assert.equal(ROUTE_GEOMETRY['west:cyberhell'].ambient.bakedTrees.length,28);
+ });
+ 
+ test('B12 pause settings/manual destroy the old renderer and return to the border on close',()=>{
+--- a/tests/map-z4-terrain.test.mjs
++++ b/tests/map-z4-terrain.test.mjs
+@@ -83,7 +83,7 @@
+   assert.equal(report.mobile.upperBoundTileRGBABytes,12*1024*1024*4);
+ });
+ 
+-test('MAP-Z4: unchanged fallback and routes retain their baseline, allowing B12 and the authorized B23 redraw',async()=>{
++test('MAP-Z4: unchanged fallback and routes retain their baseline, allowing B12 and the authorized B23/B34 redraws',async()=>{
+   const {createHash}=await import('node:crypto');
+   const baseline=JSON.parse(readFileSync('output/coordination/2026-10-29-map-z4/baseline.json'));
+   for(const [path,hash]of Object.entries(baseline))if(path!=='note'&&!['src/data.js','src/town-layout.js','src/town-owner-walkmask-cyberhell.js','src/zone-skin.js'].includes(path)){
+@@ -104,8 +104,11 @@
+         .replace(/import \{BORDER23_REDRAW_MASK,BORDER23_REDRAW_CORRIDOR\} from '\.\/frontier-walkmask-asia-west-redraw\.js';\n/,'')
+         .replace(/import \{[^}]+\} from '\.\/frontier-walkmask-asia-west\.js';/,"import {BORDER23_CHECKPOINT_VERTEX} from './frontier-walkmask-asia-west.js';")
+         .replace(/  'asia:west': row\('asia:west', \{[\s\S]*?\n  \}\),/,'B23_ROW')
++        .replace(/import \{BORDER34_REDRAW_MASK,BORDER34_REDRAW_CORRIDOR\} from '\.\/frontier-walkmask-west-cyberhell-redraw\.js';\n/,'')
++        .replace(/import \{[^}]+\} from '\.\/frontier-walkmask-west-cyberhell\.js';/,"import {BORDER34_CHECKPOINT_VERTEX,BORDER34_TREES} from './frontier-walkmask-west-cyberhell.js';")
++        .replace(/  'west:cyberhell': row\('west:cyberhell', \{[\s\S]*?\n  \}\),/,'B34_ROW')
+         .replace(/\/\/[^\n]*/g,'').replace(/\n\s*\n/g,'\n');
+-      assert.equal(normalize(bytes.toString()),normalize(base),'only B12 plus the authorized B23 imports/row may differ; repaint anchors are checked independently');
++      assert.equal(normalize(bytes.toString()),normalize(base),'only B12 plus the authorized B23/B34 imports/rows may differ; repaint anchors are checked independently');
+       // Other routes and fallback runtime bytes remain protected by the original fixture hash.
+       bytes=Buffer.from(base.replace(current,original));
+     }
+--- a/index.html
++++ b/index.html
+@@ -2325,7 +2325,7 @@
+   "imports": {
+     "./src/deva-map.js": "./src/deva-map.js?v=20261030-z4-town-a",
+     "./src/town-cyberhell-layout.js": "./src/town-cyberhell-layout.js?v=20261101-tweak",
+-    "./src/route-occlusion.js": "./src/route-occlusion.js?v=20261101-b23-redraw",
++    "./src/route-occlusion.js": "./src/route-occlusion.js?v=20261101-b23-redraw-b34-redraw",
+     "./src/character-scale.js": "./src/character-scale.js?v=20261031-q3",
+     "./src/worker-escort-spacing.js": "./src/worker-escort-spacing.js?v=20261025-a4",
+     "./src/escort.js": "./src/escort.js?v=20261025-a4",
+@@ -2335,7 +2335,7 @@
+     "./src/dungeon-navigation.js": "./src/dungeon-navigation.js?v=m2-f12-20261023",
+     "./src/frontier-walkmask-th-asia.js": "./src/frontier-walkmask-th-asia.js?v=m2-f12-20261023",
+     "./src/frontier-walkmask-th-asia-b12.js": "./src/frontier-walkmask-th-asia-b12.js?v=20261030-map-b12-v3",
+-    "./src/route-geometry.js": "./src/route-geometry.js?v=20261101-b23-redraw",
++    "./src/route-geometry.js": "./src/route-geometry.js?v=20261101-b23-redraw-b34-redraw",
+     "./src/map-art-v5.js": "./src/map-art-v5.js?v=m2",
+     "./src/walk.js?v=k1d": "./src/walk.js?v=k1d-z2-code",
+     "./src/town-asia-trees.js": "./src/town-asia-trees.js?v=m2-z2-code",
+@@ -2403,8 +2403,8 @@
+     "./src/town-lighting.js?v=fire-v2": "./src/town-lighting.js?v=20261029-load01b",
+     "./src/battle-formation.js?v=20261015-k2": "./src/battle-formation.js?v=20261021-town-repairs",
+     "./src/frontier-view-metrics.js": "./src/frontier-view-metrics.js?v=20261021-worker-supplies-o1-r3-scale",
+-    "./src/dungeon-view.js": "./src/dungeon-view.js?v=20261101-b23-redraw",
+-    "./src/dungeon-view.js?v=l5": "./src/dungeon-view.js?v=20261101-b23-redraw",
++    "./src/dungeon-view.js": "./src/dungeon-view.js?v=20261101-b23-redraw-b34-redraw",
++    "./src/dungeon-view.js?v=l5": "./src/dungeon-view.js?v=20261101-b23-redraw-b34-redraw",
+     "./src/data.js": "./src/data.js?v=20261031-q3",
+     "./src/data.js?v=minigame-review-20261011": "./src/data.js?v=20261031-q3",
+     "./src/cases.js": "./src/cases.js?v=20261030-e1-v2",
+--- a/docs/handoffs/claude-handoff-2026-11-01.md
++++ b/docs/handoffs/claude-handoff-2026-11-01.md
+@@ -75,3 +75,15 @@
+ - ยังรอตรวจรับภาพใน browser และ FPS มือถือจริง; ไม่อ้างผ่าน Reese/Chris
+ - ไม่มี commit/push/merge และไม่ได้แตะ status.json, worklog.json หรือ work-mode.json
+ - B23/B34 แยก branch/worktree; คุณเป้ย้ำให้รายงานและคอนเฟิร์มก่อน merge งานอื่นใน queue ยังไม่เริ่ม
++
++## Codex 1 พ.ย. 2569 — B34-REDRAW (รอตรวจรับ)
++
++- Branch `codex/2026-11-01-b34-redraw` · worktree `/Users/agapae/agapae-work/AVEGEE/.codex-worktrees/2026-11-01-b34-redraw` · ฐาน `a2cd7069`
++- ภาพใหม่ 3344×1882 + walk mask ที่เป็นผืนเดียว + zoom/HUD เดิม + flow trace ตามภาพ + foreground จากภาพจริง
++- เลิกวาด tree sprites 28 ต้น; ต้นไม้วาดผสานในภาพตามรากเจ้าของ 28 จุด เก็บพิกัด/ชนิดต้นฉบับเป็น bakedTrees; ทางแยกขึ้นเหนือยังปิดทั้งในภาพและ collision
++- ความกว้างรวม p10 44.27, median 61.74 px; ทุกช่วงผ่านเกณฑ์ 40/48 และ off-floor 0
++- Full suite 1782/1782 ผ่าน, 0 fail; native input/zoom/HUD ที่ 390/1280 ผ่าน
++- รายละเอียด/ภาพก่อน–หลัง/overlay/log/prompt: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-b34-redraw/README.md`
++- ยังรอตรวจรับภาพใน browser และ FPS มือถือจริง; ไม่อ้างผ่าน Reese/Chris
++- ไม่มี commit/push/merge และไม่ได้แตะ status.json, worklog.json หรือ work-mode.json
++- B23/B34 แยก branch/worktree; คุณเป้ย้ำให้รายงานและคอนเฟิร์มก่อน merge งานอื่นใน queue ยังไม่เริ่ม

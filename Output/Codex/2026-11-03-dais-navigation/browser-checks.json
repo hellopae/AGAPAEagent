@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "zone": "th",
+      "dais": {
+        "x": 1862,
+        "y": 1057,
+        "w": 307
+      },
+      "from": [
+        1862,
+        1097
+      ],
+      "to": [
+        1938,
+        950
+      ],
+      "path": [
+        [
+          1896,
+          968
+        ],
+        [
+          1938,
+          950
+        ]
+      ],
+      "clear": true,
+      "samples": 180,
+      "railsBlocked": true,
+      "niraWalkable": true
+    },
+    {
+      "zone": "asia",
+      "dais": {
+        "x": 1862,
+        "y": 1057,
+        "w": 307
+      },
+      "from": [
+        1862,
+        1097
+      ],
+      "to": [
+        1938,
+        968
+      ],
+      "path": [
+        [
+          1892,
+          980
+        ],
+        [
+          1938,
+          968
+        ]
+      ],
+      "clear": true,
+      "samples": 169,
+      "railsBlocked": true,
+      "niraWalkable": true
+    },
+    {
+      "zone": "west",
+      "dais": {
+        "x": 1862,
+        "y": 1057,
+        "w": 307
+      },
+      "from": [
+        1862,
+        1097
+      ],
+      "to": [
+        1938,
+        974
+      ],
+      "path": [
+        [
+          1900,
+          1012
+        ],
+        [
+          1938,
+          974
+        ]
+      ],
+      "clear": true,
+      "samples": 148,
+      "railsBlocked": true,
+      "niraWalkable": true
+    },
+    {
+      "zone": "cyberhell",
+      "dais": {
+        "x": 1855,
+        "y": 1062.5,
+        "w": 307
+      },
+      "from": [
+        1855,
+        1102.5
+      ],
+      "to": [
+        1931,
+        955.5
+      ],
+      "path": [
+        [
+          1900,
+          980
+        ],
+        [
+          1931,
+          955.5
+        ]
+      ],
+      "clear": true,
+      "samples": 171,
+      "railsBlocked": true,
+      "niraWalkable": true
+    }
+  ],
+  "pageErrors": []
+}

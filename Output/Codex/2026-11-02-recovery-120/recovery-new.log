@@ -1,0 +1,14 @@
+(node:30967) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a downed reaper occupies a real cushion for exactly 120 seconds; no battle re-entry (16.780034ms)
+✔ JSON reload preserves recovery seat and remaining time, dormant home-zone crew recovers (255.746953ms)
+✔ legacy 60-second deadline migrates once while retaining elapsed time and input (0.63808ms)
+✔ full tea room never double-books a cushion; waiting recovery still respects original deadline (2.222891ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 754.543134

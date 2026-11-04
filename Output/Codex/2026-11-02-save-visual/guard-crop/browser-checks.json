@@ -1,0 +1,144 @@
+{
+  "method": "Real installed Chromium, clean temporary profiles, actual START/save-slot UI",
+  "results": [
+    {
+      "zone": "cyberhell",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "width": 366.59375,
+      "scrollWidth": 363,
+      "clientWidth": 363,
+      "portraits": [
+        {
+          "id": "global:nira",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-nira-cyberhell-profile.png",
+          "alt": "นิรา",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:taan",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-taan-cyberhell-profile.png",
+          "alt": "ซิสอ็อป",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:plerng",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-plerng-cyberhell-profile.png",
+          "alt": "เทอร์โบ",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:kan",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-kan-cyberhell-profile.png",
+          "alt": "ไซเฟอร์",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:boon",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-boon-cyberhell-profile.png",
+          "alt": "บัฟเฟอร์",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:dam",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-dam-cyberhell-profile.png",
+          "alt": "ดาร์กเน็ต",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:guard",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-guard-cyberhell-cutscene.jpeg",
+          "alt": "ไฟร์วอลล์",
+          "decoded": true
+        }
+      ],
+      "icons": [
+        "img/ui/icon-coin.png",
+        "img/ui/icon-justice.png",
+        "img/ui/icon-skull.png"
+      ],
+      "back": 1,
+      "saveUnchanged": true,
+      "awaitedImageDecode": true
+    },
+    {
+      "zone": "cyberhell",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "width": 520,
+      "scrollWidth": 516,
+      "clientWidth": 516,
+      "portraits": [
+        {
+          "id": "global:nira",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-nira-cyberhell-profile.png",
+          "alt": "นิรา",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:taan",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-taan-cyberhell-profile.png",
+          "alt": "ซิสอ็อป",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:plerng",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-plerng-cyberhell-profile.png",
+          "alt": "เทอร์โบ",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:kan",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-kan-cyberhell-profile.png",
+          "alt": "ไซเฟอร์",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:boon",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-boon-cyberhell-profile.png",
+          "alt": "บัฟเฟอร์",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:dam",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-dam-cyberhell-profile.png",
+          "alt": "ดาร์กเน็ต",
+          "decoded": true
+        },
+        {
+          "id": "cyberhell:guard",
+          "zone": "cyberhell",
+          "src": "img/CyberHell/crew-guard-cyberhell-cutscene.jpeg",
+          "alt": "ไฟร์วอลล์",
+          "decoded": true
+        }
+      ],
+      "icons": [
+        "img/ui/icon-coin.png",
+        "img/ui/icon-justice.png",
+        "img/ui/icon-skull.png"
+      ],
+      "back": 1,
+      "saveUnchanged": true,
+      "awaitedImageDecode": true
+    }
+  ],
+  "pageErrors": []
+}

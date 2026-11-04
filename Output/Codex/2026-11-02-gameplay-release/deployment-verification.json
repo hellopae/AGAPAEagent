@@ -1,0 +1,146 @@
+{
+  "commit": "22b03e4c903935552bdbb3ed56e777790393d0eb",
+  "pagesStatus": "built",
+  "pagesCommit": "22b03e4c903935552bdbb3ed56e777790393d0eb",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "1466fed299e803c8d373659c095d1c37af4475765ef516e567c7f3e2978fb655",
+      "liveSha256": "1466fed299e803c8d373659c095d1c37af4475765ef516e567c7f3e2978fb655",
+      "match": true
+    },
+    {
+      "path": "src/actor-recovery.js",
+      "localSha256": "2d7959cadf1586015e402dd16b2965cf99d7f3e98024af970683525d47110c7b",
+      "liveSha256": "2d7959cadf1586015e402dd16b2965cf99d7f3e98024af970683525d47110c7b",
+      "match": true
+    },
+    {
+      "path": "src/art.js",
+      "localSha256": "61d38f7d1d2a5c331e59948258b7b67edb7efdd7c1804cffcbbf22af5ed277ce",
+      "liveSha256": "61d38f7d1d2a5c331e59948258b7b67edb7efdd7c1804cffcbbf22af5ed277ce",
+      "match": true
+    },
+    {
+      "path": "src/canteen.js",
+      "localSha256": "2f5f2f4605c358c1cdfbf74a3d55b4a9d03691928b81a9aa9d6cde80daa56084",
+      "liveSha256": "2f5f2f4605c358c1cdfbf74a3d55b4a9d03691928b81a9aa9d6cde80daa56084",
+      "match": true
+    },
+    {
+      "path": "src/diagnosis.js",
+      "localSha256": "678a1be682c98b898384b2a8fe899966a2c4cce53fff4790ca873a13ca1fece9",
+      "liveSha256": "678a1be682c98b898384b2a8fe899966a2c4cce53fff4790ca873a13ca1fece9",
+      "match": true
+    },
+    {
+      "path": "src/dungeon-view.js",
+      "localSha256": "dcce9d313ea1f2168f6ffe2e9989fe6dd0298ac2db4daff8bc34706a5956ce6e",
+      "liveSha256": "dcce9d313ea1f2168f6ffe2e9989fe6dd0298ac2db4daff8bc34706a5956ce6e",
+      "match": true
+    },
+    {
+      "path": "src/frontier-view-metrics.js",
+      "localSha256": "1e7e4a1bbfa9aeffb7551c11b1681efde4838197c070df348a35db1936aa45eb",
+      "liveSha256": "1e7e4a1bbfa9aeffb7551c11b1681efde4838197c070df348a35db1936aa45eb",
+      "match": true
+    },
+    {
+      "path": "src/game.js",
+      "localSha256": "7c106c8df8c2de4d815283556f28eec0ffbe5015c98176a37397b84754ecfaaf",
+      "liveSha256": "7c106c8df8c2de4d815283556f28eec0ffbe5015c98176a37397b84754ecfaaf",
+      "match": true
+    },
+    {
+      "path": "src/i18n.js",
+      "localSha256": "52d70e772143d331b869776f9f1d8ac27a44304f01be7fbdc2b5e6614782b526",
+      "liveSha256": "52d70e772143d331b869776f9f1d8ac27a44304f01be7fbdc2b5e6614782b526",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "aecb96ac2728054578f350d38e4abba49a53926f0c772a225b6c254df6d7e344",
+      "liveSha256": "aecb96ac2728054578f350d38e4abba49a53926f0c772a225b6c254df6d7e344",
+      "match": true
+    },
+    {
+      "path": "src/onboarding.js",
+      "localSha256": "c3c0112ce487b2d5ea40a1e964f6dbbb44f087188592c2c3f175447f46cef83b",
+      "liveSha256": "c3c0112ce487b2d5ea40a1e964f6dbbb44f087188592c2c3f175447f46cef83b",
+      "match": true
+    },
+    {
+      "path": "src/punishment.js",
+      "localSha256": "fa24c526b3ce420b05616f310eda86903950af75f13c52d337752f2e56c7d8e2",
+      "liveSha256": "fa24c526b3ce420b05616f310eda86903950af75f13c52d337752f2e56c7d8e2",
+      "match": true
+    },
+    {
+      "path": "src/remorse.js",
+      "localSha256": "f680e2e1a68e7cd28240df0b6bfe98c9c6a306665f69f1f1a10dd07d3c39232b",
+      "liveSha256": "f680e2e1a68e7cd28240df0b6bfe98c9c6a306665f69f1f1a10dd07d3c39232b",
+      "match": true
+    },
+    {
+      "path": "src/room.js",
+      "localSha256": "14f9265e5a6b62838941f183626e72b6e8ff923be40a6090761b24176a87a201",
+      "liveSha256": "14f9265e5a6b62838941f183626e72b6e8ff923be40a6090761b24176a87a201",
+      "match": true
+    },
+    {
+      "path": "src/roster.js",
+      "localSha256": "078ec39fe86253ba7ed7022240d0aea9f9356cf7172b0c41d8a43e9e41cdf3a6",
+      "liveSha256": "078ec39fe86253ba7ed7022240d0aea9f9356cf7172b0c41d8a43e9e41cdf3a6",
+      "match": true
+    },
+    {
+      "path": "src/save-slot-menu.js",
+      "localSha256": "bc634a02fc95fe06912188c2554f07432eb03373292948c3b69ea19c6d6db474",
+      "liveSha256": "bc634a02fc95fe06912188c2554f07432eb03373292948c3b69ea19c6d6db474",
+      "match": true
+    },
+    {
+      "path": "src/save-slots.js",
+      "localSha256": "2375a08099e6c4455a21d98d8e985122accb6b43814c6c36d719a2bcedd639a2",
+      "liveSha256": "2375a08099e6c4455a21d98d8e985122accb6b43814c6c36d719a2bcedd639a2",
+      "match": true
+    },
+    {
+      "path": "src/scene-atmosphere.js",
+      "localSha256": "445be2e4b3c78f4b2dbf443b623d6e920843ed9c4c9286791fbfe4f091737211",
+      "liveSha256": "445be2e4b3c78f4b2dbf443b623d6e920843ed9c4c9286791fbfe4f091737211",
+      "match": true
+    },
+    {
+      "path": "src/scene.js",
+      "localSha256": "960bc6dea0a10429ad47bdea410b4d524d10667b186a4f9319538c61848aaf11",
+      "liveSha256": "960bc6dea0a10429ad47bdea410b4d524d10667b186a4f9319538c61848aaf11",
+      "match": true
+    },
+    {
+      "path": "src/sentencing-guide.js",
+      "localSha256": "8d2729ad579a8e95f340447d631c7b7a9804c0c1edb756b4ff1506569aa6f1bd",
+      "liveSha256": "8d2729ad579a8e95f340447d631c7b7a9804c0c1edb756b4ff1506569aa6f1bd",
+      "match": true
+    },
+    {
+      "path": "src/snow-footprints.js",
+      "localSha256": "6a468645227b6f74a0458e4d3a43c8cfbc010b7620034e4152c84f5c94322da6",
+      "liveSha256": "6a468645227b6f74a0458e4d3a43c8cfbc010b7620034e4152c84f5c94322da6",
+      "match": true
+    },
+    {
+      "path": "src/tea-staff-rest.js",
+      "localSha256": "3037cc32599a4425785e2b99733873bd5019029267030d228770388a0bfb2785",
+      "liveSha256": "3037cc32599a4425785e2b99733873bd5019029267030d228770388a0bfb2785",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "localSha256": "cfaa3bba11a98ac4e0254f361a6907a77db85a8b683d59459153bd756b6b69ad",
+      "liveSha256": "cfaa3bba11a98ac4e0254f361a6907a77db85a8b683d59459153bd756b6b69ad",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

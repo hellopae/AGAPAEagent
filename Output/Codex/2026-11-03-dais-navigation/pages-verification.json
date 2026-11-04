@@ -1,0 +1,50 @@
+{
+  "commit": "3f66f75998437e352bf6c2ff756403c69d36283d",
+  "pagesStatus": "built",
+  "pagesCommit": "3f66f75998437e352bf6c2ff756403c69d36283d",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "20e0522f1ab6a8934067d802ec606925ea53c3900eb0cb82e548f002d8db1a5f",
+      "liveSha256": "20e0522f1ab6a8934067d802ec606925ea53c3900eb0cb82e548f002d8db1a5f",
+      "match": true
+    },
+    {
+      "path": "src/data.js",
+      "localSha256": "3a4088c119c5202e30eba9c0c1c5e7b30be646cbf31fcba7bd92c0260bc64415",
+      "liveSha256": "3a4088c119c5202e30eba9c0c1c5e7b30be646cbf31fcba7bd92c0260bc64415",
+      "match": true
+    },
+    {
+      "path": "src/map-travel.js",
+      "localSha256": "868d2ea83d742753ebbeaf6623eb413b450b40c8d3c4a873577d26e1457298be",
+      "liveSha256": "868d2ea83d742753ebbeaf6623eb413b450b40c8d3c4a873577d26e1457298be",
+      "match": true
+    },
+    {
+      "path": "src/town-cyberhell-layout.js",
+      "localSha256": "a3b583db41cee04ba8be8f2eb11c9b6a61c54a069721d2a09861df95fd466ae3",
+      "liveSha256": "a3b583db41cee04ba8be8f2eb11c9b6a61c54a069721d2a09861df95fd466ae3",
+      "match": true
+    },
+    {
+      "path": "src/town-dais-geometry.js",
+      "localSha256": "ddc972d5b2cbabb90486caeca1ccbbe364956070b1ced7a59006c04c95afecbe",
+      "liveSha256": "ddc972d5b2cbabb90486caeca1ccbbe364956070b1ced7a59006c04c95afecbe",
+      "match": true
+    },
+    {
+      "path": "src/town-layout.js",
+      "localSha256": "eb7d869002de173bee518a235cf0293acbe822310aabb4191ab1abefda40e6aa",
+      "liveSha256": "eb7d869002de173bee518a235cf0293acbe822310aabb4191ab1abefda40e6aa",
+      "match": true
+    },
+    {
+      "path": "src/walk.js",
+      "localSha256": "b715e6e3883e93922634a10f1725680274da95d787a04f64d293c3fed2dd123e",
+      "liveSha256": "b715e6e3883e93922634a10f1725680274da95d787a04f64d293c3fed2dd123e",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

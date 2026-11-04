@@ -1,0 +1,104 @@
+{
+  "commit": "f9a4edd3b203d78386240a7487cbee836fbccfb7",
+  "buildStatus": "built",
+  "buildCommit": "f9a4edd3b203d78386240a7487cbee836fbccfb7",
+  "url": "https://hellopae.github.io/AVEGEE/",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 224122,
+      "sha256": "b15e5d4aebe3050449ef2ceeb40050646e357f3ab6bbf9691026633100ca2491",
+      "expectedSHA256": "b15e5d4aebe3050449ef2ceeb40050646e357f3ab6bbf9691026633100ca2491",
+      "match": true
+    },
+    {
+      "path": "src/route-geometry.js",
+      "status": 200,
+      "bytes": 7286,
+      "sha256": "32179b8601821f8d467b4a9b5add89f3e99e512fab50d56fed286dc369e34cf2",
+      "expectedSHA256": "32179b8601821f8d467b4a9b5add89f3e99e512fab50d56fed286dc369e34cf2",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion.js",
+      "status": 200,
+      "bytes": 1792,
+      "sha256": "54b84d7c2e9ef0a0ec15c76acc1a16cc6dce7bedc94ab5cabb8f27b3e5fd41d4",
+      "expectedSHA256": "54b84d7c2e9ef0a0ec15c76acc1a16cc6dce7bedc94ab5cabb8f27b3e5fd41d4",
+      "match": true
+    },
+    {
+      "path": "src/dungeon-view.js",
+      "status": 200,
+      "bytes": 53761,
+      "sha256": "c3cffd531b397c0af6508cca2264b1468b56576baf60b90ce96b036a737f88e6",
+      "expectedSHA256": "c3cffd531b397c0af6508cca2264b1468b56576baf60b90ce96b036a737f88e6",
+      "match": true
+    },
+    {
+      "path": "src/frontier-walkmask-asia-west-redraw.js",
+      "status": 200,
+      "bytes": 9625,
+      "sha256": "af2a2de2dcf532b48452eea284038da6ae6220dc5bd644e4087308957b836a23",
+      "expectedSHA256": "af2a2de2dcf532b48452eea284038da6ae6220dc5bd644e4087308957b836a23",
+      "match": true
+    },
+    {
+      "path": "src/frontier-walkmask-west-cyberhell-redraw.js",
+      "status": 200,
+      "bytes": 10856,
+      "sha256": "337988ac4c6d99b7251524d7abc2a9552be5a618589960fc74ec20824f38b525",
+      "expectedSHA256": "337988ac4c6d99b7251524d7abc2a9552be5a618589960fc74ec20824f38b525",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion-data/asia-west-redraw.js",
+      "status": 200,
+      "bytes": 2399,
+      "sha256": "a27e9d89f882a7c2913922200fec3f2f7fd0be874cb5ed3afbec25e2a6ed5266",
+      "expectedSHA256": "a27e9d89f882a7c2913922200fec3f2f7fd0be874cb5ed3afbec25e2a6ed5266",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion-data/west-cyberhell-redraw.js",
+      "status": 200,
+      "bytes": 3590,
+      "sha256": "57865fbd68f70f87c0ff51b3c599e7631e760d5a9ebc7d4057610b2a44a1e25a",
+      "expectedSHA256": "57865fbd68f70f87c0ff51b3c599e7631e760d5a9ebc7d4057610b2a44a1e25a",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone2-3-v4.webp",
+      "status": 200,
+      "bytes": 3096704,
+      "sha256": "8d765d621746e6a5d161451c8527db9bcfabfdf4126f6cc93738a4db7400b6b6",
+      "expectedSHA256": "8d765d621746e6a5d161451c8527db9bcfabfdf4126f6cc93738a4db7400b6b6",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone2-3-v4-flow.png",
+      "status": 200,
+      "bytes": 5116,
+      "sha256": "117cd853184b9131545dbf9637504a747d804941d5d8bb1439f01955a547bd3e",
+      "expectedSHA256": "117cd853184b9131545dbf9637504a747d804941d5d8bb1439f01955a547bd3e",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone3-4-v2.webp",
+      "status": 200,
+      "bytes": 2612064,
+      "sha256": "37028d62b6b2ff86a942540514d7b3aed4121df1be63c08d68ce6299129fc137",
+      "expectedSHA256": "37028d62b6b2ff86a942540514d7b3aed4121df1be63c08d68ce6299129fc137",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone3-4-v2-flow.png",
+      "status": 200,
+      "bytes": 5273,
+      "sha256": "3aebbb4fa1d177cdd3837722112362a6f4fc81536380456ff40f90c549e513ed",
+      "expectedSHA256": "3aebbb4fa1d177cdd3837722112362a6f4fc81536380456ff40f90c549e513ed",
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "key": "sita",
+    "selectedFile": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-sita-spirit-v2.png",
+    "sourceFile": "/Users/agapae/.codex/generated_images/01a1957c-6dc3-7d60-9284-a7d889765579/exec-23156e19-0dbf-43d8-8fd9-516abfdb864f.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "sourceBounds": [
+      402,
+      0,
+      908,
+      1244
+    ],
+    "uniformScale": 0.40192926045016075,
+    "origin": [
+      154,
+      10
+    ],
+    "transparentPixels": 200922,
+    "semiTransparentPixels": 61207,
+    "sha256": "2b9974acb32e24d16fb3bb94f06aa6282d11826ab11f69c88e68030c9872dc6f",
+    "sourceSHA256": "dc5cd1c24ae3ab34cd914e2e3d9481177014d1f485e9e101e6de9de9f4406ade",
+    "meaning": "deceased soul; punishment ledger entry incorrect",
+    "integration": "review-only, no game code"
+  },
+  {
+    "key": "huaguoshan-monkey",
+    "selectedFile": "/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-huaguoshan-monkey-spirit-v2.png",
+    "sourceFile": "/Users/agapae/.codex/generated_images/01a1957c-6dc3-7d60-9284-a7d889765579/exec-9998bd65-9bf5-4a97-a359-0c37949be920.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "sourceBounds": [
+      163,
+      0,
+      1091,
+      1247
+    ],
+    "uniformScale": 0.40096230954290296,
+    "origin": [
+      70,
+      10
+    ],
+    "transparentPixels": 154864,
+    "semiTransparentPixels": 107234,
+    "sha256": "5d8950fe980b4c9ce50216a250adf43502645b5678baa514f86719ad5abb482a",
+    "sourceSHA256": "f1bcb8ae2efb23557f2c59a2bfa518ab404dcb896024e1078b0cb973828189c0",
+    "meaning": "deceased soul; punishment ledger entry incorrect",
+    "integration": "review-only, no game code"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "zone": "th",
+      "a": {
+        "hash": 403277449,
+        "clear": 0.23833826721926188,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 47
+      },
+      "b": {
+        "hash": 803502801,
+        "clear": 0.13005723307677128,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 116
+      }
+    },
+    {
+      "zone": "asia",
+      "a": {
+        "hash": 457610366,
+        "clear": 0.24173475429248076,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 49
+      },
+      "b": {
+        "hash": 2704271086,
+        "clear": 0.13906256167357411,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 113
+      }
+    },
+    {
+      "zone": "west",
+      "a": {
+        "hash": 4055180464,
+        "clear": 0.23822182751134793,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 51
+      },
+      "b": {
+        "hash": 2580653507,
+        "clear": 0.12728636273929347,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 97
+      }
+    },
+    {
+      "zone": "cyberhell",
+      "a": {
+        "hash": 3687546444,
+        "clear": 0.23271758436944937,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 56
+      },
+      "b": {
+        "hash": 467033109,
+        "clear": 0.1321866982435366,
+        "peak": 255,
+        "alpha": 0.2,
+        "frames": 111
+      }
+    },
+    {
+      "rays": {
+        "active": 312022,
+        "soft": 311592
+      }
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual production map canvas drawImage instrumentation and moving cloud-layer pixel hashes; generated textured light inspection"
+}

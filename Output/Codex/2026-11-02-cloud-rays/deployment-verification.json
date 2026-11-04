@@ -1,0 +1,38 @@
+{
+  "commit": "cfe04ef5447d74e59ff27129ad1d15724d485184",
+  "pagesStatus": "built",
+  "pagesCommit": "cfe04ef5447d74e59ff27129ad1d15724d485184",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "aec5040b0bc1817c697a26baf13890c16b6cea80ec5eba10cde93e47f4e9ffaa",
+      "liveSha256": "aec5040b0bc1817c697a26baf13890c16b6cea80ec5eba10cde93e47f4e9ffaa",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "94386ea633e218434e3c01e8b0fb627174c8dcd82a785e8c04d3e0cd84b01b04",
+      "liveSha256": "94386ea633e218434e3c01e8b0fb627174c8dcd82a785e8c04d3e0cd84b01b04",
+      "match": true
+    },
+    {
+      "path": "src/save-slot-menu.js",
+      "localSha256": "4e879fc9ec8a9b478c071c31539c1772e81566c38853865479781480e7001a78",
+      "liveSha256": "4e879fc9ec8a9b478c071c31539c1772e81566c38853865479781480e7001a78",
+      "match": true
+    },
+    {
+      "path": "src/scene-atmosphere.js",
+      "localSha256": "88478c3ad2e6b65dba8441cbdc865786fa46376c62a20972a72e0f97388b092e",
+      "liveSha256": "88478c3ad2e6b65dba8441cbdc865786fa46376c62a20972a72e0f97388b092e",
+      "match": true
+    },
+    {
+      "path": "src/sun-shafts.js",
+      "localSha256": "99370e39f87babc349b2db1fb849708d839231acf9c54dfc0e52ee0457a80f3c",
+      "liveSha256": "99370e39f87babc349b2db1fb849708d839231acf9c54dfc0e52ee0457a80f3c",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

@@ -1,0 +1,31 @@
+{
+  "commit": "4f682ff7cdf3654b3b257c57aecf1f6e44870a8c",
+  "pagesCommit": "4f682ff7cdf3654b3b257c57aecf1f6e44870a8c",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "1b861279a3c018ca8c22335471b086fb5d2150c1ee016e5803b13b2a88b5512c",
+      "liveSha256": "1b861279a3c018ca8c22335471b086fb5d2150c1ee016e5803b13b2a88b5512c",
+      "match": true
+    },
+    {
+      "path": "src/electric-fx.js",
+      "localSha256": "7916e3c721ce3c8d6fb88c1b7858cd7a6e70267aaab6b84fe10b0143c62e8953",
+      "liveSha256": "7916e3c721ce3c8d6fb88c1b7858cd7a6e70267aaab6b84fe10b0143c62e8953",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "3acbdba09db5617218c3753da16c1cbdce79dcec2336555fa066cd487796b25e",
+      "liveSha256": "3acbdba09db5617218c3753da16c1cbdce79dcec2336555fa066cd487796b25e",
+      "match": true
+    },
+    {
+      "path": "src/z4-poles.js",
+      "localSha256": "c579cc6167e00d760341796aef0934ae1ecb843b8502b2584a783318755a1d4e",
+      "liveSha256": "c579cc6167e00d760341796aef0934ae1ecb843b8502b2584a783318755a1d4e",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

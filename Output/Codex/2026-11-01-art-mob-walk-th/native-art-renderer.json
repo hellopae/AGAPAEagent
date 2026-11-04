@@ -1,0 +1,101 @@
+{
+  "method": "Actual art.drawCrewWalk with native canvas and real PNGs; records crop phase and world foot for each frame.",
+  "keys": [
+    {
+      "key": "mob-pret",
+      "source": "img/mob-pret-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-pret2",
+      "source": "img/mob-pret2-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-werewolf",
+      "source": "img/mob-werewolf-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-krahang",
+      "source": "img/mob-krahang-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-pop",
+      "source": "img/mob-pop-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-tanee",
+      "source": "img/mob-tanee-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    }
+  ]
+}

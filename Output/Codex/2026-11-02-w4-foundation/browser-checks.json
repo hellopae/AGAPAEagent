@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "migrated": {
+        "iceLocked": true,
+        "iceQueued": false
+      },
+      "lockedMeterAbsent": true,
+      "earnedMeterVisible": true,
+      "meritColors": [
+        {
+          "text": "🪷 แบ่งอาหารให้ผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        },
+        {
+          "text": "🪷 อ้างว่าเคยช่วยผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "migrated": {
+        "iceLocked": true,
+        "iceQueued": false
+      },
+      "lockedMeterAbsent": true,
+      "earnedMeterVisible": true,
+      "meritColors": [
+        {
+          "text": "🪷 แบ่งอาหารให้ผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        },
+        {
+          "text": "🪷 อ้างว่าเคยช่วยผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "migrated": {
+        "iceLocked": true,
+        "iceQueued": false
+      },
+      "lockedMeterAbsent": true,
+      "earnedMeterVisible": true,
+      "meritColors": [
+        {
+          "text": "🪷 แบ่งอาหารให้ผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        },
+        {
+          "text": "🪷 อ้างว่าเคยช่วยผู้หิวโหย",
+          "color": "rgb(74, 157, 106)"
+        }
+      ]
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,63 @@
+(node:48409) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Zone 1 finale triggers even on a lethal hit, injures the hero and awards flame charge once (74.856852ms)
+✔ Zone 2 finale saves Nira, unlocks Rage and allows a visit during three turns of rest (619.109987ms)
+✔ Zone 3 wins grant ice and queue its two story panels (7.851296ms)
+✔ Rage requires 60 active seconds and three boosted attacks before reuse (6.552442ms)
+✔ old saves keep earned powers and derive the revised milestone rewards (10.327088ms)
+(node:48412) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ตารางค่าพลัง B — ทัณฑ์/เพลิง/ดำ/ยักษ์ ดาเมจตรงเป๊ะ ไม่สุ่ม (39.967885ms)
+✔ คูลดาวน์ B5 — ยมทูตและยักษ์ 120 วิ ของเวลาศึก (5.956003ms)
+✔ ลูกไฟ 40 คงที่ · น้ำแข็ง 30 + ศัตรูข้าม 1 ตา — ไม่สุ่มอีกต่อไป (7.73714ms)
+✔ บุญเติมบารมี 50 (ไม่เกินเพดาน) — ค่าฐานตรงตาราง B (6.944937ms)
+✔ กานต์สะกดจิต — เทิร์นถัดไปของศัตรู มึน ฟาดใส่ตัวเองแทนยมบาทน้อย (5.835509ms)
+✔ ระบบฝึก "แรง" (upgradeCrew) ยังเพิ่มดาเมจต่อยอดบนฐานใหม่ได้ตามเดิม (3.720155ms)
+✔ สะกดจิตฆ่าศัตรูตายพอดี — ประกาศชนะทันทีในคอลเดียวกัน ไม่ต้องรอกดโจมตีอีกครั้ง (4.523688ms)
+(node:48413) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case five monk → praise → test → mirror once (489.7989ms)
+✔ case five monk → warning → test → mirror once (117.431531ms)
+✔ Asia: two kills → saved descent → intro → deva defeats third → waiting actor → test → disappears (46.89923ms)
+✔ legacy active fire restarts safely, cleared fire waits, completed tester never repeats (26.55898ms)
+✔ breaches keep thresholds, waves, bosses and saved marching state (16.047288ms)
+✔ area damage and self-hit still leave the third spirit to the deva (8.995975ms)
+✔ case five cannot be deferred or replaced; old case-four saves receive the monk (7.944753ms)
+✔ breach actors stand on navigable ground with a reachable boss; UI waits for approach (213.806191ms)
+✔ both deva intro images preload only in their zones and cache version changed (3.655516ms)
+✔ temple beggar deity stays separate from the abbot and old saves load (407.850845ms)
+✔ legacy case-five monk is refreshed as the innocent temple beggar without changing soul id (2.183686ms)
+(node:48414) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ arrival: only rescue actors/interactions; yama + Taan; unchanged stats/reward; building unlocks (295.184448ms)
+✔ case 3 freezes all walkers and management until vampire win; thaw resumes elapsed position (544.01558ms)
+✔ vampire approach uses zone art and existing intro; two minion waves, hypnotized party wave, then vampire reward (0.683699ms)
+✔ case 7: run from bottom → saved intro with five bilingual lines → move right → wait → fight → spear once (340.522656ms)
+✔ old cleared rescue save is never replayed; interrupted deva battle retries on map (283.313433ms)
+✔ west intro preloads in west only; new cache token and rescue proximity UI are wired (6.203186ms)
+✔ frozen transit deadlines resume from same point and vampire loss leaves spirits frozen (141.232112ms)
+✔ deva defeat returns to waiting actor and permits another challenge without replaying intro (144.715401ms)
+(node:48415) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ L3 rest: HP 97 reaper can walk to the tea pavilion, rests, returns to post at full HP (446.79159ms)
+✔ L3 rest: crew in the battle team may rest; he sits out while resting but stays on the team (198.647013ms)
+✔ L3 rest UI: button for everyone below full HP, disabled with a reason for full HP / no pavilion / battle (6.258332ms)
+✔ L3 hypnosis: level 4 in zone 1 no longer unlocks it (no power, no discovery popup, interrogation/battle blocked) (2.816793ms)
+✔ L3 hypnosis: unlocked after winning the zone-3 frontier boss, announced once (156.347301ms)
+✔ L3 hypnosis data: reward on the boss event, no "buy from boon" wording left (2.079329ms)
+✔ L3 old saves: hypnosis from level 4 is revoked; only saves that beat the zone-3 boss keep it (41.173861ms)
+(node:48416) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story sources resolve ruler, frontier and tester independently in every zone (47.729638ms)
+✔ level ups never unlock or announce Ice, but a real West ruler win unlocks it at any level (56.07288ms)
+✔ legacy premature Ice flags and queued notices are removed without losing earned West powers (27.996493ms)
+✔ Thai frontier victory grants the team move, Asia frontier grants big fire, neither retires the ruler (37.137951ms)
+✔ challenge captains cannot grant ruler praise or ruler abilities even when their sprite is a boss (2.634041ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2507.915912

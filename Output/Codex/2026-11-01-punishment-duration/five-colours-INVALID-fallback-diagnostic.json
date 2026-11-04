@@ -1,0 +1,37 @@
+{
+  "method": "actual drawSoul with native canvas and shipped sprite, channel measurements for each severity",
+  "averages": [
+    {
+      "level": 1,
+      "r": 70.18399619523215,
+      "g": 116.1446406277867,
+      "b": 145.66280244931932
+    },
+    {
+      "level": 2,
+      "r": 69.54093767867353,
+      "g": 119.61132075471698,
+      "b": 106.24894225271584
+    },
+    {
+      "level": 3,
+      "r": 122.59247555449559,
+      "g": 124.20725017886954,
+      "b": 93.65209873598855
+    },
+    {
+      "level": 4,
+      "r": 126.73288782196846,
+      "g": 101.43716343346526,
+      "b": 84.3533380912217
+    },
+    {
+      "level": 5,
+      "r": 128.25598377281946,
+      "g": 80.52488167680866,
+      "b": 94.06288032454361
+    }
+  ],
+  "valid": false,
+  "note": "Native decoder rejected target PNG; fallback proof excluded. Use five-colours-browser.json."
+}

@@ -1,0 +1,577 @@
+{
+  "base": "cfe04ef5",
+  "quests": 16,
+  "acceptanceCopyChangedOnly": [
+    "sqNira",
+    "sqTaan",
+    "sqPlerng",
+    "sqDam",
+    "sqGuard"
+  ],
+  "originalLettersUnchanged": true,
+  "laterNarrativeChoicesResponsesUnchanged": true,
+  "caseFactsUnchanged": true,
+  "rewardFunctionUnchanged": true,
+  "matrix": [
+    {
+      "id": "sqNira",
+      "title": "สมุดเล่มที่ยังไม่ปิด",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "th",
+          "npc": "nira",
+          "name": "นิรา",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "nira",
+          "name": "นิรา",
+          "objective": "คุยกับนิรา เพื่อเรียกสำนวน “แพทย์ประจำบ้านผู้เซ็นใบสั่งยา” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "th",
+          "npc": "nira",
+          "name": "นิรา",
+          "objective": "พิจารณาสำนวน “แพทย์ประจำบ้านผู้เซ็นใบสั่งยา” และออกหมายให้เสร็จ แล้วกลับไปหานิรา"
+        },
+        {
+          "step": 3,
+          "zone": "th",
+          "npc": "nira",
+          "name": "นิรา",
+          "objective": "กลับไปคุยกับนิรา หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "th",
+          "npc": "nira",
+          "name": "นิรา",
+          "objective": "ส่งคำตอบให้นิรา และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqTaan",
+      "title": "ตรวนที่ไม่ได้ตีเอง",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "asia",
+          "npc": "taan",
+          "name": "โกคุ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "asia",
+          "npc": "taan",
+          "name": "โกคุ",
+          "objective": "คุยกับโกคุ เพื่อเรียกสำนวน “ลูกมือช่างตรวน” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "asia",
+          "npc": "taan",
+          "name": "โกคุ",
+          "objective": "พิจารณาสำนวน “ลูกมือช่างตรวน” และออกหมายให้เสร็จ แล้วกลับไปหาโกคุ"
+        },
+        {
+          "step": 3,
+          "zone": "asia",
+          "npc": "taan",
+          "name": "โกคุ",
+          "objective": "กลับไปคุยกับโกคุ หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "asia",
+          "npc": "taan",
+          "name": "โกคุ",
+          "objective": "ส่งคำตอบให้โกคุ และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqPlerng",
+      "title": "ไฟที่ไม่มีใครขอโทษ",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "west",
+          "npc": "plerng",
+          "name": "อ็อกเนียน",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "west",
+          "npc": "plerng",
+          "name": "อ็อกเนียน",
+          "objective": "คุยกับอ็อกเนียน เพื่อเรียกสำนวน “ช่างก่อไฟรับจ้าง” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "west",
+          "npc": "plerng",
+          "name": "อ็อกเนียน",
+          "objective": "พิจารณาสำนวน “ช่างก่อไฟรับจ้าง” และออกหมายให้เสร็จ แล้วกลับไปหาอ็อกเนียน"
+        },
+        {
+          "step": 3,
+          "zone": "west",
+          "npc": "plerng",
+          "name": "อ็อกเนียน",
+          "objective": "กลับไปคุยกับอ็อกเนียน หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "th",
+          "npc": "plerng",
+          "name": "เพลิง",
+          "objective": "ส่งคำตอบให้เพลิง และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqKan",
+      "title": "ผู้ต้องหาที่ไม่ปริปาก",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "asia",
+          "npc": "kan",
+          "name": "ซาโตริ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "asia",
+          "npc": "kan",
+          "name": "ซาโตริ",
+          "objective": "คุยกับซาโตริ เพื่อเรียกสำนวน “ผู้ต้องหาที่ไม่ปริปาก” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "asia",
+          "npc": "kan",
+          "name": "ซาโตริ",
+          "objective": "พิจารณาสำนวน “ผู้ต้องหาที่ไม่ปริปาก” และออกหมายให้เสร็จ แล้วกลับไปหาซาโตริ"
+        },
+        {
+          "step": 3,
+          "zone": "asia",
+          "npc": "kan",
+          "name": "ซาโตริ",
+          "objective": "กลับไปคุยกับซาโตริ หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "asia",
+          "npc": "kan",
+          "name": "ซาโตริ",
+          "objective": "ส่งคำตอบให้ซาโตริ และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqBoon",
+      "title": "คำฝากที่ไม่เคยส่ง",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "west",
+          "npc": "boon",
+          "name": "เกรซ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "west",
+          "npc": "boon",
+          "name": "เกรซ",
+          "objective": "คุยกับเกรซ เพื่อเรียกสำนวน “ลูกสาวผู้ไม่เคยมาเยี่ยม” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "west",
+          "npc": "boon",
+          "name": "เกรซ",
+          "objective": "พิจารณาสำนวน “ลูกสาวผู้ไม่เคยมาเยี่ยม” และออกหมายให้เสร็จ แล้วกลับไปหาเกรซ"
+        },
+        {
+          "step": 3,
+          "zone": "west",
+          "npc": "boon",
+          "name": "เกรซ",
+          "objective": "กลับไปคุยกับเกรซ หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "th",
+          "npc": "boon",
+          "name": "บุญ",
+          "objective": "ส่งคำตอบให้บุญ และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqDam",
+      "title": "ข้าวสารที่ขาด",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "คุยกับดำ เพื่อเรียกสำนวน “ชายชราในค่ายพักพิง” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "พิจารณาสำนวน “ชายชราในค่ายพักพิง” และออกหมายให้เสร็จ แล้วกลับไปหาดำ"
+        },
+        {
+          "step": 3,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "กลับไปคุยกับดำ หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "ส่งคำตอบให้ดำ และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqMerchant",
+      "title": "ควันที่มีเจ้าของ",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "asia",
+          "npc": "merchant",
+          "name": "พ่อค้าควันทอง",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "asia",
+          "npc": "merchant",
+          "name": "พ่อค้าควันทอง",
+          "objective": "คุยกับพ่อค้าควันทอง เพื่อเรียกสำนวน “พ่อค้าตาชั่งโกง” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "asia",
+          "npc": "merchant",
+          "name": "พ่อค้าควันทอง",
+          "objective": "พิจารณาสำนวน “พ่อค้าตาชั่งโกง” และออกหมายให้เสร็จ แล้วกลับไปหาพ่อค้าควันทอง"
+        },
+        {
+          "step": 3,
+          "zone": "asia",
+          "npc": "merchant",
+          "name": "พ่อค้าควันทอง",
+          "objective": "กลับไปคุยกับพ่อค้าควันทอง หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "asia",
+          "npc": "merchant",
+          "name": "พ่อค้าควันทอง",
+          "objective": "ส่งคำตอบให้พ่อค้าควันทอง และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "sqGuard",
+      "title": "คนที่ไม่กล้ามองหน้า",
+      "kin": false,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "คุยกับยักษ์ทวารบาล เพื่อเรียกสำนวน “หญิงเฒ่าผู้สืบแค้น” เข้าคิว"
+        },
+        {
+          "step": 2,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "พิจารณาสำนวน “หญิงเฒ่าผู้สืบแค้น” และออกหมายให้เสร็จ แล้วกลับไปหายักษ์ทวารบาล"
+        },
+        {
+          "step": 3,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "กลับไปคุยกับยักษ์ทวารบาล หลังคำตัดสิน เพื่อรับฟังและตอบคำขอ"
+        },
+        {
+          "step": 4,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "ส่งคำตอบให้ยักษ์ทวารบาล และรับรางวัลเพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinTaan",
+      "title": "ค้อนด้ามเดียวกัน",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "cyberhell",
+          "npc": "taan",
+          "name": "ซิสอ็อป",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "taan",
+          "name": "ทัณฑ์",
+          "objective": "นำคำฝากไปคุยกับทัณฑ์ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "cyberhell",
+          "npc": "taan",
+          "name": "ซิสอ็อป",
+          "objective": "นำคำตอบกลับไปให้ซิสอ็อป เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinPlerng",
+      "title": "ไฟสองดวง",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "cyberhell",
+          "npc": "plerng",
+          "name": "เทอร์โบ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "plerng",
+          "name": "เพลิง",
+          "objective": "นำคำฝากไปคุยกับเพลิง เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "cyberhell",
+          "npc": "plerng",
+          "name": "เทอร์โบ",
+          "objective": "นำคำตอบกลับไปให้เทอร์โบ เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinKan",
+      "title": "บรรทัดสุดท้ายของน้อง",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "cyberhell",
+          "npc": "kan",
+          "name": "ไซเฟอร์",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "kan",
+          "name": "กานต์",
+          "objective": "นำคำฝากไปคุยกับกานต์ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "cyberhell",
+          "npc": "kan",
+          "name": "ไซเฟอร์",
+          "objective": "นำคำตอบกลับไปให้ไซเฟอร์ เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinBoonCousin",
+      "title": "ธูปหนึ่งดอกสำหรับคนที่ไม่เคยพัก",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "th",
+          "npc": "boon",
+          "name": "บุญ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "cyberhell",
+          "npc": "boon",
+          "name": "บัฟเฟอร์",
+          "objective": "นำคำฝากไปคุยกับบัฟเฟอร์ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "th",
+          "npc": "boon",
+          "name": "บุญ",
+          "objective": "นำคำตอบกลับไปให้บุญ เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinBoonGrand",
+      "title": "ท่าพนมมือเดียวกัน",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "asia",
+          "npc": "boon",
+          "name": "เมกุมิ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "boon",
+          "name": "บุญ",
+          "objective": "นำคำฝากไปคุยกับบุญ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "asia",
+          "npc": "boon",
+          "name": "เมกุมิ",
+          "objective": "นำคำตอบกลับไปให้เมกุมิ เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinDamBro",
+      "title": "บัญชีสองเล่มที่ตรงกัน",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "cyberhell",
+          "npc": "dam",
+          "name": "ดาร์กเน็ต",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "นำคำฝากไปคุยกับดำ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "cyberhell",
+          "npc": "dam",
+          "name": "ดาร์กเน็ต",
+          "objective": "นำคำตอบกลับไปให้ดาร์กเน็ต เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinDamCousin",
+      "title": "ขนมปังก้อนที่เกินร้อย",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "west",
+          "npc": "dam",
+          "name": "นัวร์",
+          "objective": "นำคำฝากไปคุยกับนัวร์ เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "th",
+          "npc": "dam",
+          "name": "ดำ",
+          "objective": "นำคำตอบกลับไปให้ดำ เพื่อปิดภารกิจ"
+        }
+      ]
+    },
+    {
+      "id": "kinGuard",
+      "title": "ประตูสองบาน",
+      "kin": true,
+      "stages": [
+        {
+          "step": 0,
+          "zone": "cyberhell",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": null
+        },
+        {
+          "step": 1,
+          "zone": "th",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "นำคำฝากไปคุยกับยักษ์ทวารบาล เพื่อรับคำตอบ"
+        },
+        {
+          "step": 2,
+          "zone": "cyberhell",
+          "npc": "guard",
+          "name": "ยักษ์ทวารบาล",
+          "objective": "นำคำตอบกลับไปให้ยักษ์ทวารบาล เพื่อปิดภารกิจ"
+        }
+      ]
+    }
+  ]
+}

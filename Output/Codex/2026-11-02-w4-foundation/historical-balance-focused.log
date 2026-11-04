@@ -1,0 +1,25 @@
+(node:50946) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ BALANCE-2 new-game office buttons really remove and restore taan+nira without moving map actors (17.119807ms)
+✔ BALANCE-2 tutor keeps the exact approved sentence; intro and help disclose back-line support (0.649578ms)
+✔ BALANCE-2 every new move renders an unclipped-name row, ultimate chip short name and full tooltip/manual (3.05965ms)
+✔ BALANCE-2 enemy scaling freezes the initial party count and does not rescale an ongoing/restored wave (6.947343ms)
+✔ BALANCE-2 changed runtime modules share release identities; stylesheet is versioned (22.118417ms)
+✔ BALANCE-2 Western hypnosis uses the initial party size for its solo-Yama enemy group (2.998505ms)
+✔ BALANCE-2 historical evidence retains its original input hashes; W4 progression requires its own balance run (567.473426ms)
+(node:50947) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story sources resolve ruler, frontier and tester independently in every zone (23.85806ms)
+✔ level ups never unlock or announce Ice, but a real West ruler win unlocks it at any level (27.513832ms)
+✔ legacy premature Ice flags and queued notices are removed without losing earned West powers (17.366147ms)
+✔ Thai frontier victory grants the team move, Asia frontier grants big fire, neither retires the ruler (16.752339ms)
+✔ challenge captains cannot grant ruler praise or ruler abilities even when their sprite is a boss (2.03792ms)
+✔ public merit colors describe claimed merit without leaking whether the claim is true (5.776116ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1017.624715

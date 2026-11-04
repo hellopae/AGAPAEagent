@@ -1,0 +1,320 @@
+{
+  "commit": "df42fb1b2fba38222ee64d6d64de5266670b4014",
+  "buildStatus": "built",
+  "buildCommit": "df42fb1b2fba38222ee64d6d64de5266670b4014",
+  "url": "https://hellopae.github.io/AVEGEE/",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 224261,
+      "sha256": "28f2058ec8007f6229d780eeef965d4532cfaf79be25606ed532b937df527cd5",
+      "expectedSHA256": "28f2058ec8007f6229d780eeef965d4532cfaf79be25606ed532b937df527cd5",
+      "match": true
+    },
+    {
+      "path": "src/route-geometry.js",
+      "status": 200,
+      "bytes": 7286,
+      "sha256": "32179b8601821f8d467b4a9b5add89f3e99e512fab50d56fed286dc369e34cf2",
+      "expectedSHA256": "32179b8601821f8d467b4a9b5add89f3e99e512fab50d56fed286dc369e34cf2",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion.js",
+      "status": 200,
+      "bytes": 1792,
+      "sha256": "54b84d7c2e9ef0a0ec15c76acc1a16cc6dce7bedc94ab5cabb8f27b3e5fd41d4",
+      "expectedSHA256": "54b84d7c2e9ef0a0ec15c76acc1a16cc6dce7bedc94ab5cabb8f27b3e5fd41d4",
+      "match": true
+    },
+    {
+      "path": "src/dungeon-view.js",
+      "status": 200,
+      "bytes": 53761,
+      "sha256": "c3cffd531b397c0af6508cca2264b1468b56576baf60b90ce96b036a737f88e6",
+      "expectedSHA256": "c3cffd531b397c0af6508cca2264b1468b56576baf60b90ce96b036a737f88e6",
+      "match": true
+    },
+    {
+      "path": "src/frontier-walkmask-asia-west-redraw.js",
+      "status": 200,
+      "bytes": 9625,
+      "sha256": "af2a2de2dcf532b48452eea284038da6ae6220dc5bd644e4087308957b836a23",
+      "expectedSHA256": "af2a2de2dcf532b48452eea284038da6ae6220dc5bd644e4087308957b836a23",
+      "match": true
+    },
+    {
+      "path": "src/frontier-walkmask-west-cyberhell-redraw.js",
+      "status": 200,
+      "bytes": 10856,
+      "sha256": "337988ac4c6d99b7251524d7abc2a9552be5a618589960fc74ec20824f38b525",
+      "expectedSHA256": "337988ac4c6d99b7251524d7abc2a9552be5a618589960fc74ec20824f38b525",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion-data/asia-west-redraw.js",
+      "status": 200,
+      "bytes": 2399,
+      "sha256": "a27e9d89f882a7c2913922200fec3f2f7fd0be874cb5ed3afbec25e2a6ed5266",
+      "expectedSHA256": "a27e9d89f882a7c2913922200fec3f2f7fd0be874cb5ed3afbec25e2a6ed5266",
+      "match": true
+    },
+    {
+      "path": "src/route-occlusion-data/west-cyberhell-redraw.js",
+      "status": 200,
+      "bytes": 3590,
+      "sha256": "57865fbd68f70f87c0ff51b3c599e7631e760d5a9ebc7d4057610b2a44a1e25a",
+      "expectedSHA256": "57865fbd68f70f87c0ff51b3c599e7631e760d5a9ebc7d4057610b2a44a1e25a",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone2-3-v4.webp",
+      "status": 200,
+      "bytes": 3096704,
+      "sha256": "8d765d621746e6a5d161451c8527db9bcfabfdf4126f6cc93738a4db7400b6b6",
+      "expectedSHA256": "8d765d621746e6a5d161451c8527db9bcfabfdf4126f6cc93738a4db7400b6b6",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone2-3-v4-flow.png",
+      "status": 200,
+      "bytes": 5116,
+      "sha256": "117cd853184b9131545dbf9637504a747d804941d5d8bb1439f01955a547bd3e",
+      "expectedSHA256": "117cd853184b9131545dbf9637504a747d804941d5d8bb1439f01955a547bd3e",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone3-4-v2.webp",
+      "status": 200,
+      "bytes": 2612064,
+      "sha256": "37028d62b6b2ff86a942540514d7b3aed4121df1be63c08d68ce6299129fc137",
+      "expectedSHA256": "37028d62b6b2ff86a942540514d7b3aed4121df1be63c08d68ce6299129fc137",
+      "match": true
+    },
+    {
+      "path": "img/frontier-route/zone3-4-v2-flow.png",
+      "status": 200,
+      "bytes": 5273,
+      "sha256": "3aebbb4fa1d177cdd3837722112362a6f4fc81536380456ff40f90c549e513ed",
+      "expectedSHA256": "3aebbb4fa1d177cdd3837722112362a6f4fc81536380456ff40f90c549e513ed",
+      "match": true
+    },
+    {
+      "path": "src/art.js",
+      "status": 200,
+      "bytes": 43356,
+      "sha256": "1583f73d89a8696b1cbd4c01102ab80b73c95a7a4aa08752a10a4f2720df1f7a",
+      "expectedSHA256": "1583f73d89a8696b1cbd4c01102ab80b73c95a7a4aa08752a10a4f2720df1f7a",
+      "match": true
+    },
+    {
+      "path": "src/canteen-art-layout.js",
+      "status": 200,
+      "bytes": 243,
+      "sha256": "0c638496c7dc079f5ab819835dbf388df56b8a951873c30de07db3d81c3c138d",
+      "expectedSHA256": "0c638496c7dc079f5ab819835dbf388df56b8a951873c30de07db3d81c3c138d",
+      "match": true
+    },
+    {
+      "path": "src/town-layout.js",
+      "status": 200,
+      "bytes": 21097,
+      "sha256": "a700334bbfae3a06e379114845e9329774aabc4df70f2096abe0eabbe6dc1703",
+      "expectedSHA256": "a700334bbfae3a06e379114845e9329774aabc4df70f2096abe0eabbe6dc1703",
+      "match": true
+    },
+    {
+      "path": "src/enemy-walk-assets.js",
+      "status": 200,
+      "bytes": 559,
+      "sha256": "b101a9a72b18f3e3b8307ed423a8e2dd9c900c41563a391a778e1604be680ee7",
+      "expectedSHA256": "b101a9a72b18f3e3b8307ed423a8e2dd9c900c41563a391a778e1604be680ee7",
+      "match": true
+    },
+    {
+      "path": "img/theme-v4/town-judgment-asia-v3.webp",
+      "status": 200,
+      "bytes": 1617366,
+      "sha256": "54f5ded7e9d38860661940e964a0e6f42b07b72ed8997b9b03ae77228d7fd7cf",
+      "expectedSHA256": "54f5ded7e9d38860661940e964a0e6f42b07b72ed8997b9b03ae77228d7fd7cf",
+      "match": true
+    },
+    {
+      "path": "img/skills-v1/icons/teamJudgment.webp",
+      "status": 200,
+      "bytes": 62762,
+      "sha256": "3659868fc51f55105bf142175c22a0ab4b96ae7ede9df854a8f8272580f2bdc0",
+      "expectedSHA256": "3659868fc51f55105bf142175c22a0ab4b96ae7ede9df854a8f8272580f2bdc0",
+      "match": true
+    },
+    {
+      "path": "img/food-art/canteen-th.webp",
+      "status": 200,
+      "bytes": 550996,
+      "sha256": "cc52dfc3e945da1df4a6c4132485924a7e87be07eb271155924de17a80b2d8a8",
+      "expectedSHA256": "cc52dfc3e945da1df4a6c4132485924a7e87be07eb271155924de17a80b2d8a8",
+      "match": true
+    },
+    {
+      "path": "img/food-art/canteen-asia.webp",
+      "status": 200,
+      "bytes": 496578,
+      "sha256": "f6fc782c4ae783a0b0ed107ec426a851021af0610b6988e08313f3642e52d418",
+      "expectedSHA256": "f6fc782c4ae783a0b0ed107ec426a851021af0610b6988e08313f3642e52d418",
+      "match": true
+    },
+    {
+      "path": "img/food-art/canteen-west.webp",
+      "status": 200,
+      "bytes": 529758,
+      "sha256": "d92f8f25372e6842ea2d91a629341d03789a9336f68cfbc333c48cb0c01f0c77",
+      "expectedSHA256": "d92f8f25372e6842ea2d91a629341d03789a9336f68cfbc333c48cb0c01f0c77",
+      "match": true
+    },
+    {
+      "path": "img/food-art/canteen-cyberhell.webp",
+      "status": 200,
+      "bytes": 590290,
+      "sha256": "c7afeee2d5e326513136081160222eaa95d64f037d6d5fa309340fed3b4e9449",
+      "expectedSHA256": "c7afeee2d5e326513136081160222eaa95d64f037d6d5fa309340fed3b4e9449",
+      "match": true
+    },
+    {
+      "path": "img/mob-pret-walk.png",
+      "status": 200,
+      "bytes": 795918,
+      "sha256": "87bc0480488cfc28735716b2b93224acc2bb6d12f18e419a1501360262a81a6d",
+      "expectedSHA256": "87bc0480488cfc28735716b2b93224acc2bb6d12f18e419a1501360262a81a6d",
+      "match": true
+    },
+    {
+      "path": "img/mob-pret2-walk.png",
+      "status": 200,
+      "bytes": 798958,
+      "sha256": "d548fc702e73f82514a1cf1382762fb7ea45d22a6d320a695f593846223b1ee6",
+      "expectedSHA256": "d548fc702e73f82514a1cf1382762fb7ea45d22a6d320a695f593846223b1ee6",
+      "match": true
+    },
+    {
+      "path": "img/mob-werewolf-walk.png",
+      "status": 200,
+      "bytes": 898165,
+      "sha256": "4ddc1d9a06769cecc41e1c855e4b0436b9f9bbb140a0e3bd4ec25eb5fb779e4e",
+      "expectedSHA256": "4ddc1d9a06769cecc41e1c855e4b0436b9f9bbb140a0e3bd4ec25eb5fb779e4e",
+      "match": true
+    },
+    {
+      "path": "img/mob-krahang-walk.png",
+      "status": 200,
+      "bytes": 917420,
+      "sha256": "295d48d6e7cbf11f85ed14e7636518554f9c05b02eebe58eae3c6a67732362b2",
+      "expectedSHA256": "295d48d6e7cbf11f85ed14e7636518554f9c05b02eebe58eae3c6a67732362b2",
+      "match": true
+    },
+    {
+      "path": "img/mob-pop-walk.png",
+      "status": 200,
+      "bytes": 958986,
+      "sha256": "c1f2ecdb436417bc7ff6581b06f3470861170c6e282a9fe1712e2a5c3a954f7b",
+      "expectedSHA256": "c1f2ecdb436417bc7ff6581b06f3470861170c6e282a9fe1712e2a5c3a954f7b",
+      "match": true
+    },
+    {
+      "path": "img/mob-tanee-walk.png",
+      "status": 200,
+      "bytes": 762537,
+      "sha256": "e222cb2702936c77a42c613d9b4e435a012c655d7c4d0d6608270ca3a9f96b64",
+      "expectedSHA256": "e222cb2702936c77a42c613d9b4e435a012c655d7c4d0d6608270ca3a9f96b64",
+      "match": true
+    },
+    {
+      "path": "img/mob-gaki-walk.png",
+      "status": 200,
+      "bytes": 993667,
+      "sha256": "376667f7c745689059dd6932c9f73f9e26b84358b64899e5404eb73013b552c6",
+      "expectedSHA256": "376667f7c745689059dd6932c9f73f9e26b84358b64899e5404eb73013b552c6",
+      "match": true
+    },
+    {
+      "path": "img/mob-kasha-walk.png",
+      "status": 200,
+      "bytes": 1134812,
+      "sha256": "c4e2346ee7a1753d8b1faea99b5f4f7ac34c90114906a238c2694b0daf1ea560",
+      "expectedSHA256": "c4e2346ee7a1753d8b1faea99b5f4f7ac34c90114906a238c2694b0daf1ea560",
+      "match": true
+    },
+    {
+      "path": "img/mob-nukekubi-walk.png",
+      "status": 200,
+      "bytes": 757824,
+      "sha256": "f6c42547730455fd0be62aef8113de815eb29e70ec338b53cccf1e57e1d71ca4",
+      "expectedSHA256": "f6c42547730455fd0be62aef8113de815eb29e70ec338b53cccf1e57e1d71ca4",
+      "match": true
+    },
+    {
+      "path": "img/mob-hitodama-walk.png",
+      "status": 200,
+      "bytes": 609577,
+      "sha256": "76a6b82a065bbe2a64043881ceb649ce3903924e02a76f5bd0b8e8b6bccd7da5",
+      "expectedSHA256": "76a6b82a065bbe2a64043881ceb649ce3903924e02a76f5bd0b8e8b6bccd7da5",
+      "match": true
+    },
+    {
+      "path": "img/mob-skeleton-walk.png",
+      "status": 200,
+      "bytes": 1047011,
+      "sha256": "a86f79b4a3f575488079739607f284160e45f86e041ab6b9482cf59feeb78c38",
+      "expectedSHA256": "a86f79b4a3f575488079739607f284160e45f86e041ab6b9482cf59feeb78c38",
+      "match": true
+    },
+    {
+      "path": "img/mob-bot-walk.png",
+      "status": 200,
+      "bytes": 1007616,
+      "sha256": "e2023a3e658e8b618d4624dde52f2e12d72bd90aa1c6a60320ff4b3fdfc51a81",
+      "expectedSHA256": "e2023a3e658e8b618d4624dde52f2e12d72bd90aa1c6a60320ff4b3fdfc51a81",
+      "match": true
+    },
+    {
+      "path": "img/mob-bug-walk.png",
+      "status": 200,
+      "bytes": 1204698,
+      "sha256": "484efd2fbbe47eacef2ab4f35f8ef85b17446398d3afe25402a6f41ba2d127b6",
+      "expectedSHA256": "484efd2fbbe47eacef2ab4f35f8ef85b17446398d3afe25402a6f41ba2d127b6",
+      "match": true
+    },
+    {
+      "path": "img/mob-worm-walk.png",
+      "status": 200,
+      "bytes": 987477,
+      "sha256": "535edce2b9f55de7b083cb21b1abbe067f3a45f305d932b65ed47cf6f988644a",
+      "expectedSHA256": "535edce2b9f55de7b083cb21b1abbe067f3a45f305d932b65ed47cf6f988644a",
+      "match": true
+    },
+    {
+      "path": "img/mob-cyber-guard-walk.png",
+      "status": 200,
+      "bytes": 1057433,
+      "sha256": "a1a4fe664eae1d2044450719e6b148a535d296eed9959fb6eaccd00df3554596",
+      "expectedSHA256": "a1a4fe664eae1d2044450719e6b148a535d296eed9959fb6eaccd00df3554596",
+      "match": true
+    },
+    {
+      "path": "img/mob-cyber-lancer-walk.png",
+      "status": 200,
+      "bytes": 923093,
+      "sha256": "7314f14b75ca9081274066050fa2edf7d9ef49c78c7a2ef4344e541fd9232614",
+      "expectedSHA256": "7314f14b75ca9081274066050fa2edf7d9ef49c78c7a2ef4344e541fd9232614",
+      "match": true
+    },
+    {
+      "path": "img/mob-cyber-brute-walk.png",
+      "status": 200,
+      "bytes": 1233603,
+      "sha256": "790b7a2c99d469295a40075bbd76b8d1c9b5667f0143609b1a05c281319d0d87",
+      "expectedSHA256": "790b7a2c99d469295a40075bbd76b8d1c9b5667f0143609b1a05c281319d0d87",
+      "match": true
+    }
+  ]
+}

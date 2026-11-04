@@ -1,0 +1,43 @@
+{
+  "commit": "69f43e41dca33e60c30a3c2717962c28efc38880",
+  "pagesCommit": "69f43e41dca33e60c30a3c2717962c28efc38880",
+  "files": [
+    {
+      "path": "img/preload-catalog.json",
+      "localSha256": "6cbb66eb975c3a7b0cf830ee6dd7fb014c9511e2da23e29278b99005e55791ff",
+      "liveSha256": "6cbb66eb975c3a7b0cf830ee6dd7fb014c9511e2da23e29278b99005e55791ff",
+      "match": true
+    },
+    {
+      "path": "img/theme-v4/town-pole-cyberhell-v1.webp",
+      "localSha256": "aa32b6094c99959061acf9e36bf6ac1889fe0ddb621940776c88596bb1d4dc48",
+      "liveSha256": "aa32b6094c99959061acf9e36bf6ac1889fe0ddb621940776c88596bb1d4dc48",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "localSha256": "1de0b13000378dc1441ec6d29cd2427d63143edec1793dff9e2c3ce3fc04e7df",
+      "liveSha256": "1de0b13000378dc1441ec6d29cd2427d63143edec1793dff9e2c3ce3fc04e7df",
+      "match": true
+    },
+    {
+      "path": "src/town-startup.js",
+      "localSha256": "6f6324d024177ea3b134affca8bb2b16caac33a5a8c5c60fef8ec98e2cb3be47",
+      "liveSha256": "6f6324d024177ea3b134affca8bb2b16caac33a5a8c5c60fef8ec98e2cb3be47",
+      "match": true
+    },
+    {
+      "path": "src/z4-pole-art.js",
+      "localSha256": "d9e8f6a4438d8c13bccf7a95c78e6f4069cd480866ff8ef174843c6658ef7051",
+      "liveSha256": "d9e8f6a4438d8c13bccf7a95c78e6f4069cd480866ff8ef174843c6658ef7051",
+      "match": true
+    },
+    {
+      "path": "src/z4-poles.js",
+      "localSha256": "3323a6866c45885cd3ab91410d95da4275b8761b1123e9e478c384be137a6060",
+      "liveSha256": "3323a6866c45885cd3ab91410d95da4275b8761b1123e9e478c384be137a6060",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

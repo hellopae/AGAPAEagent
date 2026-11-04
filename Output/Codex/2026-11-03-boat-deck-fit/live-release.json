@@ -1,0 +1,25 @@
+{
+  "commit": "812152d2f60651f71955d6083cb1403a92203625",
+  "pagesCommit": "812152d2f60651f71955d6083cb1403a92203625",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "acbb252d9fe38992e1416f12f113ab4a6d2a2a6704c88a642ededdf54d3eec57",
+      "liveSha256": "acbb252d9fe38992e1416f12f113ab4a6d2a2a6704c88a642ededdf54d3eec57",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "17b100d71526f8bd7dc46c8df873490cb871edbf48e0458574a340633a6fba5c",
+      "liveSha256": "17b100d71526f8bd7dc46c8df873490cb871edbf48e0458574a340633a6fba5c",
+      "match": true
+    },
+    {
+      "path": "src/map-travel.js",
+      "localSha256": "70da18f46ee7fa9fe444a6111ec16c3cdc3d5a1fc9fc0844da0a6f41ef70d88b",
+      "liveSha256": "70da18f46ee7fa9fe444a6111ec16c3cdc3d5a1fc9fc0844da0a6f41ef70d88b",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

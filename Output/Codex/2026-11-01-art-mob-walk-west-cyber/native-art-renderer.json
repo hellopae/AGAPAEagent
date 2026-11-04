@@ -1,0 +1,117 @@
+{
+  "method": "Actual art.drawCrewWalk with native canvas and real PNGs; records crop phase and world foot for each frame.",
+  "keys": [
+    {
+      "key": "mob-skeleton",
+      "source": "img/mob-skeleton-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-bot",
+      "source": "img/mob-bot-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-bug",
+      "source": "img/mob-bug-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-worm",
+      "source": "img/mob-worm-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-cyber-guard",
+      "source": "img/mob-cyber-guard-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-cyber-lancer",
+      "source": "img/mob-cyber-lancer-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-cyber-brute",
+      "source": "img/mob-cyber-brute-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    }
+  ]
+}

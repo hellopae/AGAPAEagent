@@ -1,0 +1,47 @@
+(node:56804) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ no implicit kitchen after worker unlock; construction charges once and entry waits for completion (19.773689ms)
+✔ legacy implicit kitchens migrate visited branches once; new saves keep unbuilt kitchens absent (27.263084ms)
+✔ paid FIFO batches wait for arrival, reject duplicates, pause and cancel/refund only unfinished portions (5.041223ms)
+✔ keeper conflicts, invalid quantities and insufficient resources cannot create an order (204.665745ms)
+✔ save/load mid-batch and after completion never replays portions or currency; cooks return to posts (135.934715ms)
+✔ zone changes freeze source orders and resume them once on return (122.98566ms)
+✔ kitchen footprints and entry are finite in every zone and repeat without drift (4.504232ms)
+✔ both cooks physically walk back to ngiw/krata after their ordered batch (625.218805ms)
+(node:56805) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ legacy save is copied exactly into slot1 once; backup and other slots survive (15.355746ms)
+✔ migration never overwrites occupied slot1 and malformed records are not empty games (8.402453ms)
+✔ quota and unavailable storage fail without losing original data (5.771599ms)
+✔ real game API isolates three selected slots and refuses writes before a choice (29.201819ms)
+✔ restart clears only its selected slot and cannot resurrect the copied legacy save (2.049905ms)
+✔ playtime survives real snapshot/restore, excludes inactive gaps and does not invent legacy history (8.223481ms)
+✔ slot cards show all requested fields and owned crew across branches, with exactly three choices (30.964262ms)
+✔ Home exposes one START action and cache aliases retain a single refreshed game module (4.237791ms)
+(node:56806) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ only explicit New Game removes free cauldron; opening lesson persists once and waits for completion (13.802553ms)
+✔ cook enters from stairs, produces inside only, and reload retains room pose with one paid batch (24.709293ms)
+✔ merchant and canteen buy pooled rice without Nira; cook hidden outside and rendered inside (7.423482ms)
+(node:56807) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ five sentence levels use confirmed seconds and five distinct requested colours (2.798671ms)
+✔ level 1 completes at exactly 10 active seconds (1.016672ms)
+✔ level 2 completes at exactly 30 active seconds (0.335102ms)
+✔ level 3 completes at exactly 60 active seconds (0.271878ms)
+✔ level 4 completes at exactly 120 active seconds (0.29183ms)
+✔ level 5 completes at exactly 240 active seconds (0.286965ms)
+✔ pause, transport, absent keeper, fire and repair cannot consume punishment time (0.429317ms)
+✔ legacy progress migrates proportionally once and survives JSON roundtrip without offline time (0.422145ms)
+✔ keeper strength, upgrades and crowd do not alter standard active seconds (0.420349ms)
+✔ ordinary verdict score and karma depend on destination and evidence, never chosen force (13.248804ms)
+✔ actual frame advance is not counted again by the management tick (5.822414ms)
+✔ game snapshot/restore preserves served active milliseconds, not elapsed offline time (18.355123ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1511.660766

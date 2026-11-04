@@ -1,0 +1,15 @@
+✔ MAP-Z4 v3: enabled town uses owner mask and a 3:2 world (10.524158ms)
+✔ MAP-Z4: tiles exactly cover the new 3:2 world; production files exist (1.641735ms)
+✔ MAP-Z4: three load lanes, complete-camera switch, same tile destinations for clipped ferry redraw (2.843903ms)
+✔ MAP-Z4: failed and stalled loads retry with backoff; late decode cannot publish expired pixels (2.96524ms)
+✔ MAP-Z4: overview uses painting without allocations; panning keeps at most twelve images (4.922676ms)
+✔ MAP-Z4: delivered tile dimensions and mobile allocation budget match the Zone 2 size class (15.171616ms)
+✔ MAP-Z4: unchanged fallback and routes retain their baseline, allowing B12 and the authorized B23/B34 redraws (20.231245ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.460006

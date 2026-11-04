@@ -1,0 +1,55 @@
+(node:35283) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weights are exactly Guard 3 / Yama 2 / each crew 1; recovery cannot be targeted (2.823753ms)
+✔ actual counters hit crew and Guard, down excludes actions; crew disappears until recovery, guard retains 1 map HP (13.785595ms)
+✔ crew recovers after 120 real seconds including reload; fallen guard retains 1 HP without regeneration (14.192842ms)
+✔ Yama loss stages persist through return, sleep, Nira wake; spare heart precedes loss (10.299344ms)
+✔ five selected final helpers retain distinct HP and CD; cooldown stops paused/hidden and survives reload (48.598884ms)
+✔ down worker stops station progress and movement; last special action still resolves at zero morale (52.160032ms)
+(node:35284) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ BALANCE-2 new-game office buttons really remove and restore taan+nira without moving map actors (16.975602ms)
+✔ BALANCE-2 tutor keeps the exact approved sentence; intro and help disclose back-line support (0.726652ms)
+✔ BALANCE-2 every new move renders an unclipped-name row, ultimate chip short name and full tooltip/manual (3.774173ms)
+✔ BALANCE-2 enemy scaling freezes the initial party count and does not rescale an ongoing/restored wave (8.657606ms)
+✔ BALANCE-2 changed runtime modules share release identities; stylesheet is versioned (17.06876ms)
+✔ BALANCE-2 Western hypnosis uses the initial party size for its solo-Yama enemy group (2.792011ms)
+✔ BALANCE-2 evidence covers 200 paired trials per case and stays tied to the runtime under test (345.713165ms)
+(node:35285) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ legacy save is copied exactly into slot1 once; backup and other slots survive (14.351687ms)
+✔ migration never overwrites occupied slot1 and malformed records are not empty games (5.267039ms)
+✔ quota and unavailable storage fail without losing original data (4.893088ms)
+✔ real game API isolates three selected slots and refuses writes before a choice (25.943077ms)
+✔ restart clears only its selected slot and cannot resurrect the copied legacy save (2.51046ms)
+✔ playtime survives real snapshot/restore, excludes inactive gaps and does not invent legacy history (7.898245ms)
+✔ slot cards show all requested fields and owned crew across branches, with exactly three choices (22.513452ms)
+✔ Home exposes one START action and cache aliases retain a single refreshed game module (3.298314ms)
+(node:35286) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ five sentence levels use confirmed seconds and five distinct requested colours (3.073943ms)
+✔ level 1 completes at exactly 10 active seconds (0.828108ms)
+✔ level 2 completes at exactly 30 active seconds (0.210495ms)
+✔ level 3 completes at exactly 60 active seconds (0.212618ms)
+✔ level 4 completes at exactly 120 active seconds (0.231643ms)
+✔ level 5 completes at exactly 240 active seconds (0.226039ms)
+✔ pause, transport, absent keeper, fire and repair cannot consume punishment time (0.375061ms)
+✔ legacy progress migrates proportionally once and survives JSON roundtrip without offline time (0.303455ms)
+✔ keeper strength, upgrades and crowd do not alter standard active seconds (0.278422ms)
+✔ ordinary verdict score and karma depend on destination and evidence, never chosen force (9.130199ms)
+✔ actual frame advance is not counted again by the management tick (4.57512ms)
+✔ game snapshot/restore preserves served active milliseconds, not elapsed offline time (14.258702ms)
+(node:35287) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a downed reaper occupies a real cushion for exactly 120 seconds; no battle re-entry (13.391974ms)
+✔ JSON reload preserves recovery seat and remaining time, dormant home-zone crew recovers (137.484794ms)
+✔ legacy 60-second deadline migrates once while retaining elapsed time and input (0.373783ms)
+✔ full tea room never double-books a cushion; waiting recovery still respects original deadline (1.77995ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 700.464418

@@ -1,0 +1,67 @@
+(node:25826) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ frontier follow camera uses the approved cinematic close framing on phone and laptop, and scales up (never letterboxes) on a large display (2.409915ms)
+✔ overview contains the complete map and scales every actor with the terrain (0.434186ms)
+✔ frontier decoration trunks stay outside the walkable road (200.473833ms)
+(node:25827) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ border23 weather respects the warm/cold boundary and reduced motion (20.960297ms)
+✔ frozen town keeps its existing snow sky and no longer sheds warm canopy leaves (6.436321ms)
+(node:25828) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ map masks select lava and water, avoiding snow, bridges and red ground (1.831321ms)
+✔ all four zone effects move deterministically, stay bounded, and use small particle budgets (27.362772ms)
+✔ sky renders different frames and reduced motion avoids all drawing and mask work (10.984341ms)
+(node:25829) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ markup: the route is one full-bleed map with only floating controls (no header, footer, gate button or back button) (3.834144ms)
+✔ camera: the map always covers the viewport (portrait, landscape, laptop, large display) (0.760535ms)
+✔ gate: reaching the exit enters automatically, once, and only after stepping out of range again (11.899823ms)
+✔ gate: never enters during a fight, recovery, pending encounter, cut-in or after the view was destroyed (2.89547ms)
+✔ gate: a route that is not finished never auto-enters even when Yama stands on the exit (1.912739ms)
+✔ wiring: both route views enter by the latch and neither can be triggered by a button (0.606294ms)
+✔ farewell dismisses the guide from the city pier (talk spot, rematch menu, walk blocker) (12.398854ms)
+✔ after the farewell zone 1 captain stays in its cave; other frontier stands remain usable (34.469205ms)
+✔ route again after the farewell: Yama + Nira only (no hired keepers, guard or guide); first escort keeps the guide (5.216485ms)
+✔ an old save that already said farewell never shows the guide again and keeps money and outfits (14.376986ms)
+✔ B5b: cave replay survives saved farewell and released court without duplicate grants (4.963181ms)
+(node:25830) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weather cap follows CSS viewport and DPR, never world size, and reduced motion disables particles (8.175098ms)
+✔ reduced motion is identical across time, has no smoke/dust, and settings disable every new draw (3.227368ms)
+✔ pause holds the last weather phase; labels are unioned and clipped before weather (3.714853ms)
+✔ frontiers clip weather to the authored biome halves, retain cold snow, and invent no fire anchors (10.873477ms)
+✔ scene schedules weather after actors, before dialogue/badges; cache aliases share settings instance (10.731471ms)
+✔ settings preference persists and restores, and blocked storage never breaks rendering (3.843905ms)
+✔ unsupported canvas skips weather safely and can retry after a usable context is available (8.427712ms)
+✔ Q5 cloud shadows are sized from the visible map area, always present, and stay inside the opacity budget (1.485737ms)
+✔ Q5 cloud shadows drift slowly and hold still when paused (10.948868ms)
+✔ Q5 cloud shadows cover every map type: all three border routes and the frontier post of every zone (4.156538ms)
+(node:25831) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Q5 lightning: a strike every ~5 s with at most two decaying flash pulses, never above .25 opacity, never more than 2 flashes per second; none under reduced motion (51.216395ms)
+✔ WEATHER-B budgets shrink with viewport/DPR; settings and reduced motion stop all weather (0.928937ms)
+✔ WEATHER-B border 3–4 clips snow west and storm east, leaving the transition clear (12.033209ms)
+✔ WEATHER-B weather renders before actors/labels; settings checkbox is bound (4.422213ms)
+✔ WATER-01 water emits crests rather than sparks and rejects sprite footprints crossing a dry hole (17.652908ms)
+✔ WEATHER-B changed renderer imports share canonical release identities (29.259996ms)
+✔ Q5 zone 3 snowfall is at least 3x the old ceiling on a desktop canvas, shrinks by the screen budget on phones, and brings visible fog (9.450764ms)
+✔ Q5 zone 4 rain is at least 3x the old ceiling, lightning draws a visible bolt and a faint flash, all clipped to the visible area (10.827646ms)
+(node:25832) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ TH and Asia cloud caps are20%, while other biome settings remain independent (2.048962ms)
+✔ dialog weather particle and canvas budgets stay bounded on desktop and phone (1.971836ms)
+✔ snow prints are movement-only, alternate along real path, and remain capped (3.552324ms)
+✔ snow prints freeze on pause, fade in final2seconds, and expire after6active seconds (1.027105ms)
+✔ teleports, biome changes and disabled effects never leave a long trail (0.506745ms)
+✔ requested TH lamp bases stay on existing blocked margins, not on walkable routes (0.614802ms)
+✔ cinematic camera shares one invertible projection with raster, actors and pointer at all zoom levels (0.584934ms)
+✔ both actual scene builders mount the shared effect and foreground route data stays enabled (12.292082ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 499.204422

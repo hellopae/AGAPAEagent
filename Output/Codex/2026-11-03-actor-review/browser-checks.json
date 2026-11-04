@@ -1,0 +1,397 @@
+{
+  "results": [
+    {
+      "battle": {
+        "zone": "th",
+        "actors": [
+          {
+            "id": "you",
+            "k": "yama"
+          },
+          {
+            "id": "th:guard",
+            "k": "guard",
+            "homeZone": "th"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 1
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 1
+          },
+          {
+            "id": "th:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 1
+          },
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 2
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 2
+          },
+          {
+            "id": "th:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 2
+          }
+        ]
+      },
+      "portraits": [
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/Thai/spirit-worker-th-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/crew-guard-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/Thai/spirit-worker-th-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/crew-guard-profile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "battle": {
+        "zone": "asia",
+        "actors": [
+          {
+            "id": "you",
+            "k": "yama"
+          },
+          {
+            "id": "asia:guard",
+            "k": "guard",
+            "homeZone": "asia"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 1
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 1
+          },
+          {
+            "id": "asia:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 1
+          },
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 2
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 2
+          },
+          {
+            "id": "asia:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 2
+          }
+        ]
+      },
+      "portraits": [
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/Asia/spirit-worker-asia-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/Asia/crew-guard-asia-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/Asia/spirit-worker-asia-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/Asia/crew-guard-asia-profile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "battle": {
+        "zone": "west",
+        "actors": [
+          {
+            "id": "you",
+            "k": "yama"
+          },
+          {
+            "id": "west:guard",
+            "k": "guard",
+            "homeZone": "west"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 1
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 1
+          },
+          {
+            "id": "west:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 1
+          },
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 2
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 2
+          },
+          {
+            "id": "west:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 2
+          }
+        ]
+      },
+      "portraits": [
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/West/spirit-worker-west-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/West/crew-guard-west.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/West/spirit-worker-west-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/West/crew-guard-west.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "battle": {
+        "zone": "cyberhell",
+        "actors": [
+          {
+            "id": "you",
+            "k": "yama"
+          },
+          {
+            "id": "cyberhell:guard",
+            "k": "guard",
+            "homeZone": "cyberhell"
+          }
+        ],
+        "timeline": [
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 1
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 1
+          },
+          {
+            "id": "cyberhell:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 1
+          },
+          {
+            "id": "you",
+            "side": "ally",
+            "name": "ยามา / Yama",
+            "k": "yama",
+            "speed": 12,
+            "round": 2
+          },
+          {
+            "id": "foe-1",
+            "side": "foe",
+            "name": "ทดสอบคิว Guard",
+            "k": "spirit-worker",
+            "speed": 9,
+            "round": 2
+          },
+          {
+            "id": "cyberhell:guard",
+            "side": "ally",
+            "name": "ยักษ์ทวารบาล",
+            "k": "guard",
+            "speed": 6,
+            "round": 2
+          }
+        ]
+      },
+      "portraits": [
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/CyberHell/spirit-worker-cyberhell-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/CyberHell/crew-guard-cyberhell-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยามา / Yama",
+          "src": "img/hero-yama-profile.png",
+          "loaded": true
+        },
+        {
+          "alt": "ทดสอบคิว Guard",
+          "src": "img/CyberHell/spirit-worker-cyberhell-v2.png",
+          "loaded": true
+        },
+        {
+          "alt": "ยักษ์ทวารบาล",
+          "src": "img/CyberHell/crew-guard-cyberhell-v2.png",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "title": "ตรวนที่ไม่ได้ตีเอง",
+      "tracker": {
+        "x": 1052,
+        "y": 430,
+        "w": 210,
+        "h": 157,
+        "hidden": false,
+        "compact": false,
+        "minimapBottom": 421.65625
+      },
+      "bounds": {
+        "client": 996,
+        "scroll": 996
+      },
+      "acceptedOnce": true,
+      "reloadStep": 1,
+      "merchantOnlyOwn": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "ตรวนที่ไม่ได้ตีเอง",
+      "tracker": {
+        "x": 229,
+        "y": 359,
+        "w": 145,
+        "h": 136.484375,
+        "hidden": false,
+        "compact": false,
+        "minimapBottom": 351.328125
+      },
+      "bounds": {
+        "client": 388,
+        "scroll": 388
+      },
+      "acceptedOnce": true,
+      "reloadStep": 1,
+      "merchantOnlyOwn": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "title": "ตรวนที่ไม่ได้ตีเอง",
+      "tracker": {
+        "x": 10,
+        "y": 88,
+        "w": 210,
+        "h": 116,
+        "hidden": false,
+        "compact": true,
+        "minimapBottom": 421.65625
+      },
+      "bounds": {
+        "client": 656,
+        "scroll": 656
+      },
+      "acceptedOnce": true,
+      "reloadStep": 1,
+      "merchantOnlyOwn": true
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual NPC talk→owner acceptance→confirmation→tracker→handbook tabs→merchant own mission→reload in isolated Chromium"
+}

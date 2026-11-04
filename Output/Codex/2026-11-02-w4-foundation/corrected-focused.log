@@ -1,0 +1,51 @@
+(node:70358) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ roar points to an unexamined evidence claim in every authored case, without RNG (11.925577ms)
+✔ discovery queue covers pickups, shops, levels, abilities and survives save; legacy saves seed owned items (19.778258ms)
+✔ discovery modal waits for reward and existing dialogs, shows one entry, and acknowledges only on close (3.539789ms)
+✔ all item icons have files or usable error fallback; sword shares the helper and lotus name has no duplicated emoji (3.568745ms)
+✔ outfit cards use the same ownership rule as equipping, show a visible lock reason and enable owned outfits (4.303324ms)
+✔ ordinary close dispatch preserves reward and level priority before explanations (4.405702ms)
+✔ roar handles generated cases and exhausted interrogation attempts without inventing evidence (49.46897ms)
+(node:70359) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ case eight waits for deva test before frontier breach (16.304723ms)
+✔ two waves keep one battle, heal at transition, and reward after both (8.505802ms)
+✔ loss leaves one authority and retry starts at wave one; active save restores pending (15.720395ms)
+✔ cleared deva save at case eight schedules the breach on load (4.147065ms)
+✔ frontier crew and hired guard use the existing combat powers (2.334774ms)
+✔ battle hypnosis makes the target strike itself, unlike ice stun (2.879748ms)
+✔ a confused foe dying to its own counter queues the next wave (2.571786ms)
+(node:70360) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ W4 public merits use green; karma and relief keep numeric colours, including blood donation (5.656432ms)
+✔ J4 mirror only blocks its foot, with reachable front and back depth ordering (5.469472ms)
+✔ J4 gate souls shift onto raised platforms and training is removed only there (52.116898ms)
+✔ J4 prison escort keeps soul until walking completes, rejects duplicate and transfers exactly once (25.792222ms)
+✔ J4 prison controls have no proximity gate and handbook renders all chapters together (0.720931ms)
+✔ UI-JW heaven has no crew fallback; queue keeps its existing courier and both arrive after walking (144.526636ms)
+(node:70361) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ ordinary combat owns HP in one foe and keeps the old result (13.562346ms)
+✔ ordinary encounters keep one foe; Zone 2 boss arrives with two demons (9.394769ms)
+✔ case three schedules prison break once and active restore becomes pending (18.331204ms)
+✔ three foes take selected damage, counter in order, and win only when all fall (4.442078ms)
+✔ loss applies the event penalty and allows a fresh retry (2.490757ms)
+✔ ice hits every foe, spends its stun on the counter turn, then the next counter is normal (3.912903ms)
+(node:70362) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ story sources resolve ruler, frontier and tester independently in every zone (24.04591ms)
+✔ level ups never unlock or announce Ice, but a real West ruler win unlocks it at any level (24.975666ms)
+✔ legacy premature Ice flags and queued notices are removed without losing earned West powers (15.273451ms)
+✔ Thai frontier victory grants the team move, Asia frontier grants big fire, neither retires the ruler (18.829327ms)
+✔ challenge captains cannot grant ruler praise or ruler abilities even when their sprite is a boss (1.857289ms)
+✔ public merit colors describe claimed merit without leaking whether the claim is true (6.795998ms)
+✔ Thai ruler dockets use ruler identity; released legacy ruler dockets cannot be sentenced twice (6.942979ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 494.202966

@@ -1,0 +1,122 @@
+(node:53864) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ no implicit kitchen after worker unlock; construction charges once and entry waits for completion (26.156612ms)
+✔ legacy implicit kitchens migrate visited branches once; new saves keep unbuilt kitchens absent (27.997814ms)
+✔ paid FIFO batches wait for arrival, reject duplicates, pause and cancel/refund only unfinished portions (5.897038ms)
+✔ keeper conflicts, invalid quantities and insufficient resources cannot create an order (268.905675ms)
+✔ save/load mid-batch and after completion never replays portions or currency; cooks return to posts (149.457074ms)
+✔ zone changes freeze source orders and resume them once on return (113.447523ms)
+✔ kitchen footprints and entry are finite in every zone and repeat without drift (4.93488ms)
+✔ both cooks physically walk back to ngiw/krata after their ordered batch (781.199862ms)
+
+cases=49 (non-pure) combos=1225
+group            n   old    new
+exact sentence 1225  100.0% 100.0%
+short (เบาไป)      0   30.0%   NaN%
+over (หนักเกิน)    0  100.0%   NaN%
+  short 1           0   30.0%   NaN%
+  short 2           0   30.0%   NaN%
+  short 3           0   30.0%   NaN%
+  short 4           0   30.0%   NaN%
+  over  1           0  100.0%   NaN%
+  over  2           0  100.0%   NaN%
+  over  3           0  100.0%   NaN%
+  over  4           0  100.0%   NaN%
+  exact · accepting  425  100.0% 100.0%
+  exact · concealing 500  100.0% 100.0%
+  exact · resisting  300  100.0% 100.0%
+  exact · keeper taan   245  100.0% 100.0%
+  exact · keeper plerng 245  100.0% 100.0%
+  exact · keeper kan    245  100.0% 100.0%
+  exact · keeper boon   245  100.0% 100.0%
+  exact · keeper dam    245  100.0% 100.0%
+
+innocent cases=4 combos=100 (tham 0)
+tier (=over)  n   pass
+  1           20  0.0%
+  2           20  0.0%
+  3           20  0.0%
+  4           20  0.0%
+  5           20  0.0%
+by keeper at tier 1: taan 0.0% · plerng 0.0% · kan 0.0% · boon 0.0% · dam 0.0%
+by trait at tier 1: concealing 0.0% · accepting 0.0%
+(node:53866) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ REMORSE constants live in data.js: weights sum to 100, pass = 60 (2.348142ms)
+✔ calcRemorse is deterministic and returns {total,parts:{keeper,intensity,trait}} in 0..100 (8.117828ms)
+✔ keeper fit: matching colour > neutral (taan/dam) > mismatching colour (0.419507ms)
+✖ intensity fit: exact beats short beats nothing; cruel (over) is never high (1.198709ms)
+✖ pass rates over every case × keeper × intensity vs the old rule (printed table) (9.316513ms)
+✔ finish() stores station/keeper/need/servedAt and the computed remorse; inspect reads it; reload keeps it (468.981605ms)
+✔ legacy entries without remorse keep the old inspect roll (1.690748ms)
+✔ CREW_POWER metadata: every fighter has name/icon/tint/kind and the icon file ships; balance numbers untouched (3.952229ms)
+✔ CREW_POWER job icons ship for every keeper (nira + taan/plerng/kan/boon/dam) (2.765412ms)
+✖ innocents wrongly sentenced (Reese N1): sentence tier 1 CAN pass for neutral/matching keepers; tier 2+ never does — table printed (1.864544ms)
+(node:53867) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ หอทะเบียนกรรมไม่ใช่สถานที่ที่เลือกส่งวิญญาณได้ · ส่งไม่ได้ด้วย (14.278047ms)
+✔ ทุกโซน: ตัวเลือกสถานที่ทุกตัวมีอยู่จริงในโซนนั้น มีฉากห้อง และส่งไปแล้วทำงานได้ (1850.424689ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 17
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2289.027778
+
+✖ failing tests:
+
+test at tests/p4-remorse.test.mjs:68:1
+✖ intensity fit: exact beats short beats nothing; cruel (over) is never high (1.198709ms)
+  AssertionError [ERR_ASSERTION]: exact > short1 ; short1 > over1 in points
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/.codex-worktrees/2026-11-01-punishment-duration/tests/p4-remorse.test.mjs:70:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/p4-remorse.test.mjs:79:1
+✖ pass rates over every case × keeper × intensity vs the old rule (printed table) (9.316513ms)
+  AssertionError [ERR_ASSERTION]: short>0 pass rate stays near the old 30%: NaN
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/.codex-worktrees/2026-11-01-punishment-duration/tests/p4-remorse.test.mjs:95:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/p4-remorse.test.mjs:158:1
+✖ innocents wrongly sentenced (Reese N1): sentence tier 1 CAN pass for neutral/matching keepers; tier 2+ never does — table printed (1.864544ms)
+  AssertionError [ERR_ASSERTION]: tier 1 passes for some combinations (documented, owner accepted)
+      at TestContext.<anonymous> (file:///Users/agapae/agapae-work/AVEGEE/.codex-worktrees/2026-11-01-punishment-duration/tests/p4-remorse.test.mjs:167:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

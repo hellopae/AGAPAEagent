@@ -1,0 +1,779 @@
+[
+  {
+    "key": "mob-skeleton",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "96facaec49886f482748e6d5ec8931d726ff2fa32a1df61cd286c2e9de5a10f6",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          106,
+          12,
+          572,
+          607
+        ],
+        "bodySize": [
+          394,
+          503
+        ],
+        "origin": [
+          59,
+          9
+        ],
+        "baseline": 511,
+        "sha256": "8aa3f94161dfe528a165e09c4363f569b11465806f198deea2283185be3c5a63"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          745,
+          14,
+          1195,
+          607
+        ],
+        "bodySize": [
+          380,
+          501
+        ],
+        "origin": [
+          66,
+          11
+        ],
+        "baseline": 511,
+        "sha256": "ee3312ae478f70a6a698dee2b527109d63b34f40023f7bf545e86120eb36ca8d"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          121,
+          633,
+          571,
+          1234
+        ],
+        "bodySize": [
+          380,
+          508
+        ],
+        "origin": [
+          66,
+          4
+        ],
+        "baseline": 511,
+        "sha256": "49009ed6d36b994388d76810c52ae4d8b75b1f84a2518688871c753f3660b42f"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          757,
+          633,
+          1192,
+          1227
+        ],
+        "bodySize": [
+          368,
+          502
+        ],
+        "origin": [
+          72,
+          10
+        ],
+        "baseline": 511,
+        "sha256": "1725fd0732f7efe8d9f6557e2fad835f89e0f853c2330bf10cfe3b90e7ef6f75"
+      }
+    ],
+    "sheetSHA256": "a86f79b4a3f575488079739607f284160e45f86e041ab6b9482cf59feeb78c38"
+  },
+  {
+    "key": "mob-bot",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "c2b69a286d55c0d14eefa8f7bd069c4b1422f01d5bc0ac16017d60f9fec5ac6e",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          90,
+          14,
+          611,
+          605
+        ],
+        "bodySize": [
+          447,
+          507
+        ],
+        "origin": [
+          32,
+          5
+        ],
+        "baseline": 511,
+        "sha256": "56cbc5a4d6e9a685a335fecc765011dd22b829ef573688bbaed087a1144e4fdc"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          716,
+          14,
+          1230,
+          606
+        ],
+        "bodySize": [
+          441,
+          508
+        ],
+        "origin": [
+          35,
+          4
+        ],
+        "baseline": 511,
+        "sha256": "723f178893272c643f31903b69b4fd72236a542533a7bd967bfbd28b882bd6f8"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          76,
+          641,
+          621,
+          1230
+        ],
+        "bodySize": [
+          468,
+          505
+        ],
+        "origin": [
+          22,
+          7
+        ],
+        "baseline": 511,
+        "sha256": "0d576d72503f1070c096d52db76812dc8b2bfacc42ab94df1f48525d0a11b26b"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          715,
+          641,
+          1245,
+          1230
+        ],
+        "bodySize": [
+          455,
+          505
+        ],
+        "origin": [
+          28,
+          7
+        ],
+        "baseline": 511,
+        "sha256": "6ac2ed3c12d2d48c8b7fcee5574a2b467b8b9f21b8ae59ddd05ed3dce64e7b54"
+      }
+    ],
+    "sheetSHA256": "e2023a3e658e8b618d4624dde52f2e12d72bd90aa1c6a60320ff4b3fdfc51a81"
+  },
+  {
+    "key": "mob-bug",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "2f21998a882310a7a72f147273209189121ed345e0667d523dcdf72fe9ded86e",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          25,
+          53,
+          645,
+          598
+        ],
+        "bodySize": [
+          508,
+          447
+        ],
+        "origin": [
+          2,
+          65
+        ],
+        "baseline": 511,
+        "sha256": "6c89c9bd589b7ab0defa6183b2c60e61dc40cde2a89e7c96d71962f9a96afcfe"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          652,
+          53,
+          1239,
+          598
+        ],
+        "bodySize": [
+          481,
+          447
+        ],
+        "origin": [
+          15,
+          65
+        ],
+        "baseline": 511,
+        "sha256": "d687a66185cb4ff6b4a9d259ae7c0ff68b0cb737c3d68f04de2835eb420405c9"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          36,
+          662,
+          640,
+          1206
+        ],
+        "bodySize": [
+          495,
+          446
+        ],
+        "origin": [
+          8,
+          66
+        ],
+        "baseline": 511,
+        "sha256": "1e057fcf390de1ef74453fe73926fd5cf0cd9ab3794ccb9946d98b55a43ac80b"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          655,
+          663,
+          1244,
+          1188
+        ],
+        "bodySize": [
+          483,
+          430
+        ],
+        "origin": [
+          14,
+          82
+        ],
+        "baseline": 511,
+        "sha256": "88bf8900258ff3363bb74480daa8418f8baf301891867bc2b1cea33892e872b3"
+      }
+    ],
+    "sheetSHA256": "484efd2fbbe47eacef2ab4f35f8ef85b17446398d3afe25402a6f41ba2d127b6"
+  },
+  {
+    "key": "mob-worm",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "5d9bbe8a29977fcbdb6a6281bf924b32a09f0d1525e3531d9d6432f81d8b3e02",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          60,
+          86,
+          625,
+          613
+        ],
+        "bodySize": [
+          485,
+          452
+        ],
+        "origin": [
+          13,
+          60
+        ],
+        "baseline": 511,
+        "sha256": "d176a105ee49f45bfb02c5e6ec29af5aa42fe9cb363d4c6bd34277e417e0e18a"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          660,
+          99,
+          1252,
+          613
+        ],
+        "bodySize": [
+          508,
+          441
+        ],
+        "origin": [
+          2,
+          71
+        ],
+        "baseline": 511,
+        "sha256": "dcfd7bc8d8ae227a39a1c7e645b480a68d024fa17d04b46d83435e9fe5364ddd"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          76,
+          768,
+          629,
+          1213
+        ],
+        "bodySize": [
+          475,
+          382
+        ],
+        "origin": [
+          18,
+          130
+        ],
+        "baseline": 511,
+        "sha256": "3ab8198eb5966a4446dd22178ca47d5d2bf75cdfaaf8d5bd2617e65da8926690"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          668,
+          700,
+          1248,
+          1216
+        ],
+        "bodySize": [
+          498,
+          443
+        ],
+        "origin": [
+          7,
+          69
+        ],
+        "baseline": 511,
+        "sha256": "8bc38be98e6ebf52002edac02ead2588cd3c757b3220fc1e50dd0df01eb2bd54"
+      }
+    ],
+    "sheetSHA256": "535edce2b9f55de7b083cb21b1abbe067f3a45f305d932b65ed47cf6f988644a"
+  },
+  {
+    "key": "mob-cyber-guard",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "9f32ee3ddfb539bdc1bfbf2a45249e4d9d85db924f3ed7c02e68a88c47da12f5",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          40,
+          96,
+          652,
+          595
+        ],
+        "bodySize": [
+          498,
+          406
+        ],
+        "origin": [
+          7,
+          106
+        ],
+        "baseline": 511,
+        "sha256": "46ae2afec187abcd546471dac4a1148cc46686ccd1f6ca595fb3d1428ff135b9"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          669,
+          92,
+          1252,
+          595
+        ],
+        "bodySize": [
+          474,
+          409
+        ],
+        "origin": [
+          19,
+          103
+        ],
+        "baseline": 511,
+        "sha256": "21bdda66e7755938f7601874019d5595d742a3b85bd7a2c60cec1905bf5c287a"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          39,
+          684,
+          649,
+          1180
+        ],
+        "bodySize": [
+          496,
+          403
+        ],
+        "origin": [
+          8,
+          109
+        ],
+        "baseline": 511,
+        "sha256": "68eff53b2cb211d9719b43cffc375ae6e614773b7922d2d0250e757c4c11893c"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          668,
+          684,
+          1251,
+          1179
+        ],
+        "bodySize": [
+          474,
+          402
+        ],
+        "origin": [
+          19,
+          110
+        ],
+        "baseline": 511,
+        "sha256": "7f9df19629fb3db5fcdfe060a5844965354264c8576e5304857113013ef50781"
+      }
+    ],
+    "sheetSHA256": "a1a4fe664eae1d2044450719e6b148a535d296eed9959fb6eaccd00df3554596"
+  },
+  {
+    "key": "mob-cyber-lancer",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "c5f9569d39996a438258ad0e935cb28dd9837ca14bc3212a64ed7f6e1a417f3e",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          104,
+          2,
+          595,
+          621
+        ],
+        "bodySize": [
+          403,
+          508
+        ],
+        "origin": [
+          54,
+          4
+        ],
+        "baseline": 511,
+        "sha256": "80ad7d64c1a1284501f9386d5f9813a870a3e8dc3688e155044342f6e8b07b0e"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          749,
+          2,
+          1222,
+          616
+        ],
+        "bodySize": [
+          388,
+          504
+        ],
+        "origin": [
+          62,
+          8
+        ],
+        "baseline": 511,
+        "sha256": "e3330beabac5b7531189a4965a97db5d1685d635d67eb2bf69799b3c48b4f684"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          130,
+          627,
+          595,
+          1223
+        ],
+        "bodySize": [
+          382,
+          489
+        ],
+        "origin": [
+          65,
+          23
+        ],
+        "baseline": 511,
+        "sha256": "facf64fbb8af74aa89759de1329d50a4fe17c171e2b419b377e4488fb69e6a9b"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          739,
+          627,
+          1226,
+          1225
+        ],
+        "bodySize": [
+          400,
+          491
+        ],
+        "origin": [
+          56,
+          21
+        ],
+        "baseline": 511,
+        "sha256": "dfd7620ac78c69677684a7febfb0fc401595366d51dd2a330a58ea0093f90f12"
+      }
+    ],
+    "sheetSHA256": "7314f14b75ca9081274066050fa2edf7d9ef49c78c7a2ef4344e541fd9232614"
+  },
+  {
+    "key": "mob-cyber-brute",
+    "size": [
+      2048,
+      512
+    ],
+    "cell": [
+      512,
+      512
+    ],
+    "sourceNativeSize": [
+      1254,
+      1254
+    ],
+    "sourceSHA256": "c0f07c283385229c000d45a6e119d42360128669ba8f6129bacd5827209ea771",
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          97,
+          91,
+          612,
+          583
+        ],
+        "bodySize": [
+          464,
+          443
+        ],
+        "origin": [
+          24,
+          69
+        ],
+        "baseline": 511,
+        "sha256": "089ca3873e28254b261e64286fcd5f8da7feb0da815610a292e933ee0bb28ea4"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          728,
+          99,
+          1212,
+          583
+        ],
+        "bodySize": [
+          436,
+          436
+        ],
+        "origin": [
+          38,
+          76
+        ],
+        "baseline": 511,
+        "sha256": "4477769e30748bf58739b6553a99747f82f32e66aff45c60a102fdb50a877690"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          106,
+          694,
+          625,
+          1181
+        ],
+        "bodySize": [
+          467,
+          438
+        ],
+        "origin": [
+          22,
+          74
+        ],
+        "baseline": 511,
+        "sha256": "7cbccc60092dead5c7bc315843a148ceefb0fc9c17710ded30ae5cf7d6310444"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          1254,
+          1254
+        ],
+        "sourceBounds": [
+          712,
+          694,
+          1222,
+          1181
+        ],
+        "bodySize": [
+          459,
+          438
+        ],
+        "origin": [
+          26,
+          74
+        ],
+        "baseline": 511,
+        "sha256": "fe0dbcfbeb3a5eabb13fbe7c0287ba6ac5a7e8f5551a43195ee777c54bbe1152"
+      }
+    ],
+    "sheetSHA256": "790b7a2c99d469295a40075bbd76b8d1c9b5667f0143609b1a05c281319d0d87"
+  }
+]

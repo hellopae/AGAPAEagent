@@ -1,0 +1,50 @@
+✔ terrain detail resamples once per device size, evicts within budget and avoids full-world zoom canvases (1.648758ms)
+✔ a failed sharp tile retries after backoff with a fresh URL while the decoded overview remains available (43.64249ms)
+✔ stalled requests release all three loading lanes and ignore late callbacks from the expired generation (3.966663ms)
+✔ a decode that finishes after timeout cannot overwrite its successful replacement (2.909857ms)
+✔ optional terrain repair composition and decoding finish before the sharp tile becomes ready (3.07064ms)
+✔ phone follow zoom loads sharp tiles before the1536px overview is magnified (2.199961ms)
+(node:24344) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weather cap follows CSS viewport and DPR, never world size, and reduced motion disables particles (4.223223ms)
+✔ reduced motion is identical across time, has no smoke/dust, and settings disable every new draw (1.732665ms)
+✔ pause holds the last weather phase; text bounds never cut rectangular holes in atmosphere (2.507178ms)
+✔ frontiers clip weather to the authored biome halves, retain cold snow, and invent no fire anchors (5.576006ms)
+✔ scene schedules weather after actors, before dialogue/badges; cache aliases share settings instance (3.883489ms)
+✔ settings preference persists and restores, and blocked storage never breaks rendering (2.45106ms)
+✔ unsupported canvas skips weather safely and can retry after a usable context is available (3.463958ms)
+✔ Q5 cloud shadows are sized from the visible map area, always present, and stay inside the opacity budget (0.683218ms)
+✔ Q5 cloud shadows drift slowly and hold still when paused (4.709831ms)
+✔ Q5 cloud shadows cover every map type: all three border routes and the frontier post of every zone (2.214616ms)
+(node:24345) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Q5 lightning: a strike every ~5 s with at most two decaying flash pulses, never above .25 opacity, never more than 2 flashes per second; none under reduced motion (27.645972ms)
+✔ WEATHER-B budgets shrink with viewport/DPR; settings and reduced motion stop all weather (0.484669ms)
+✔ WEATHER-B border 3–4 clips snow west and storm east, leaving the transition clear (7.78306ms)
+✔ WEATHER-B weather renders before actors/labels; settings checkbox is bound (3.107799ms)
+✔ WATER-01 water emits crests rather than sparks and rejects sprite footprints crossing a dry hole (11.604257ms)
+✔ WEATHER-B changed renderer imports share canonical release identities (18.361382ms)
+✔ Q5 zone 3 snowfall is at least 3x the old ceiling on a desktop canvas, shrinks by the screen budget on phones, and brings visible fog (5.514375ms)
+✔ Q5 zone 4 rain is at least 3x the old ceiling, lightning draws a visible bolt and a faint flash, all clipped to the visible area (7.107057ms)
+(node:24346) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Thai cloud cap follows the November3 visibility review; other biome caps remain20% (1.310712ms)
+✔ dialog weather particle and canvas budgets stay bounded on desktop and phone (1.657823ms)
+✔ snow prints are movement-only, alternate along real path, and remain capped (1.945648ms)
+✔ snow prints freeze on pause, fade in final2seconds, and expire after6active seconds (0.442425ms)
+✔ teleports, biome changes and disabled effects never leave a long trail (0.21269ms)
+✔ requested TH lamp bases stay on existing blocked margins, not on walkable routes (0.48948ms)
+✔ cinematic camera shares one invertible projection with raster, actors and pointer at all zoom levels (0.368074ms)
+✔ both actual scene builders mount the shared effect and foreground route data stays enabled (5.352533ms)
+✔ dialog profiles retain zone3 fog/snow and zone4 rain/lightning in both mounted contexts (0.50165ms)
+✔ lava projection matches centered cover and the42percent trial background anchor (0.53001ms)
+✔ Thai leaf motion is bounded and reduced motion creates no particles (0.678216ms)
+✔ cloud shadows use their regional cap and dialog lamps are absent (0.319787ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 234.223764

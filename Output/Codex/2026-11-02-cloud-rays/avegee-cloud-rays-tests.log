@@ -1,0 +1,48 @@
+(node:69439) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ border23 weather respects the warm/cold boundary and reduced motion (19.824847ms)
+✔ frozen town keeps its existing snow sky and no longer sheds warm canopy leaves (6.794264ms)
+(node:69440) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weather cap follows CSS viewport and DPR, never world size, and reduced motion disables particles (7.185639ms)
+✔ reduced motion is identical across time, has no smoke/dust, and settings disable every new draw (2.895391ms)
+✔ pause holds the last weather phase; labels are unioned and clipped before weather (4.118784ms)
+✔ frontiers clip weather to the authored biome halves, retain cold snow, and invent no fire anchors (11.668356ms)
+✔ scene schedules weather after actors, before dialogue/badges; cache aliases share settings instance (7.878937ms)
+✔ settings preference persists and restores, and blocked storage never breaks rendering (5.272621ms)
+✔ unsupported canvas skips weather safely and can retry after a usable context is available (6.349978ms)
+✔ Q5 cloud shadows are sized from the visible map area, always present, and stay inside the opacity budget (0.893216ms)
+✔ Q5 cloud shadows drift slowly and hold still when paused (8.034835ms)
+✔ Q5 cloud shadows cover every map type: all three border routes and the frontier post of every zone (4.051229ms)
+(node:69441) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Q5 lightning: a strike every ~5 s with at most two decaying flash pulses, never above .25 opacity, never more than 2 flashes per second; none under reduced motion (53.268931ms)
+✔ WEATHER-B budgets shrink with viewport/DPR; settings and reduced motion stop all weather (0.93137ms)
+✔ WEATHER-B border 3–4 clips snow west and storm east, leaving the transition clear (13.136567ms)
+✔ WEATHER-B weather renders before actors/labels; settings checkbox is bound (5.30477ms)
+✔ WATER-01 water emits crests rather than sparks and rejects sprite footprints crossing a dry hole (17.901192ms)
+✔ WEATHER-B changed renderer imports share canonical release identities (26.624572ms)
+✔ Q5 zone 3 snowfall is at least 3x the old ceiling on a desktop canvas, shrinks by the screen budget on phones, and brings visible fog (8.975188ms)
+✔ Q5 zone 4 rain is at least 3x the old ceiling, lightning draws a visible bolt and a faint flash, all clipped to the visible area (8.214347ms)
+(node:69442) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all four cloud caps are20% with independent biome weather (2.17464ms)
+✔ dialog weather particle and canvas budgets stay bounded on desktop and phone (2.23174ms)
+✔ snow prints are movement-only, alternate along real path, and remain capped (3.139391ms)
+✔ snow prints freeze on pause, fade in final2seconds, and expire after6active seconds (0.864437ms)
+✔ teleports, biome changes and disabled effects never leave a long trail (0.40973ms)
+✔ requested TH lamp bases stay on existing blocked margins, not on walkable routes (0.634569ms)
+✔ cinematic camera shares one invertible projection with raster, actors and pointer at all zoom levels (0.753502ms)
+✔ both actual scene builders mount the shared effect and foreground route data stays enabled (10.781626ms)
+✔ dialog profiles retain zone3 fog/snow and zone4 rain/lightning in both mounted contexts (1.054283ms)
+✔ lava projection matches centered cover and the42percent trial background anchor (1.262782ms)
+✔ Thai leaf motion is bounded and reduced motion creates no particles (1.392102ms)
+✔ cloud shadows have20percent maximum in every zone and dialog lamps are absent (0.673852ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 363.861803

@@ -1,0 +1,26 @@
+{
+  "commit": "27fb00a784558d49a790684e1cffc2d23ae56aa1",
+  "pagesStatus": "built",
+  "pagesCommit": "27fb00a784558d49a790684e1cffc2d23ae56aa1",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "d15134ea0f1a382b4e9a16ca88fdc83b4ea0c8240a51a532670874c32e572e31",
+      "liveSha256": "d15134ea0f1a382b4e9a16ca88fdc83b4ea0c8240a51a532670874c32e572e31",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "54ca91ab48f57c15287f31dae19723588b3cdbc7c480e53ddcde47bb9a272e07",
+      "liveSha256": "54ca91ab48f57c15287f31dae19723588b3cdbc7c480e53ddcde47bb9a272e07",
+      "match": true
+    },
+    {
+      "path": "src/scene-atmosphere.js",
+      "localSha256": "25b18060da7807a8675a3459f8c70f23f5f1dc94fe147d630801b9fa6c101aa5",
+      "liveSha256": "25b18060da7807a8675a3459f8c70f23f5f1dc94fe147d630801b9fa6c101aa5",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

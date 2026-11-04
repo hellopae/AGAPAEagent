@@ -1,0 +1,25 @@
+(node:26965) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B12: the entire floor is one four-neighbor component reachable from entry (25.940255ms)
+✔ B12: actual navigation walks entry, all three checkpoints including cave, and exit (34.905659ms)
+✔ B12: wider floor cannot bypass any checkpoint lock, and a removed rock spur rejects input (0.325446ms)
+✔ B12: repaint migration keeps cleared checkpoints and current-format positions (1.522788ms)
+(node:26966) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ B5b zone2: refuge is on connected owner floor and keeps all checkpoints and ruler encounter separate (45.974291ms)
+✔ B5b zone2: cleared invasion permits visiting captain but cannot bypass the ruler or enter zone3 (17.444954ms)
+✔ B5b zone2: no refuge talk before unlock, at a distance, during battle or sentencing (1.284002ms)
+(node:26967) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ outer trail opens after border defense; the cave boss still gates zone 2 (1.778166ms)
+✔ cave victory returns to court, then guide invitation and farewell unlock the next city (231.821366ms)
+✔ free movement supports broad clearings, blocks ravines, and routes around the painted bends (40.795639ms)
+✔ several enemies roam; proximity starts an available encounter once and future victories persist (6.140718ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 505.209232

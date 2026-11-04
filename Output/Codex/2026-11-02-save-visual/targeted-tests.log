@@ -1,0 +1,22 @@
+(node:58344) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ legacy save is copied exactly into slot1 once; backup and other slots survive (29.112047ms)
+✔ migration never overwrites occupied slot1 and malformed records are not empty games (13.408927ms)
+✔ quota and unavailable storage fail without losing original data (9.365148ms)
+✔ real game API isolates three selected slots and refuses writes before a choice (43.892047ms)
+✔ restart clears only its selected slot and cannot resurrect the copied legacy save (4.351645ms)
+✔ playtime survives real snapshot/restore, excludes inactive gaps and does not invent legacy history (10.585872ms)
+✔ slot cards show requested fields and regional crew portraits, with exactly three choices (48.801629ms)
+✔ Home exposes one START action and cache aliases retain a single refreshed game module (6.671962ms)
+✔ save portraits show th owned crew plus global Nira, preserve all saved actors (61.281719ms)
+✔ save portraits show asia owned crew plus global Nira, preserve all saved actors (2.097041ms)
+✔ save portraits show west owned crew plus global Nira, preserve all saved actors (1.859681ms)
+✔ save portraits show cyberhell owned crew plus global Nira, preserve all saved actors (2.310015ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 738.914058

@@ -1,0 +1,44 @@
+{
+  "commit": "5bc9c60b3897f9322067157a58e1672eb868e08b",
+  "pagesStatus": "built",
+  "pagesCommit": "5bc9c60b3897f9322067157a58e1672eb868e08b",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "a9370e5f4cfbcd872c63e475fa870fbca1e74295658095067b8036313a1c6e3b",
+      "liveSha256": "a9370e5f4cfbcd872c63e475fa870fbca1e74295658095067b8036313a1c6e3b",
+      "match": true
+    },
+    {
+      "path": "src/map-ambient.js",
+      "localSha256": "b76b74ab84eb74059a3375ec1977c07bf8cd05bae369598af788bbdb297fc7c0",
+      "liveSha256": "b76b74ab84eb74059a3375ec1977c07bf8cd05bae369598af788bbdb297fc7c0",
+      "match": true
+    },
+    {
+      "path": "src/menu-ui.css",
+      "localSha256": "2179383b22c5ba585d944a548bedeaa7cce99d7a4828040a0ead2d3f392981a2",
+      "liveSha256": "2179383b22c5ba585d944a548bedeaa7cce99d7a4828040a0ead2d3f392981a2",
+      "match": true
+    },
+    {
+      "path": "src/scene.js",
+      "localSha256": "d9824a1178ad25e7f39b22d30aff3c6adbf879d9a333878815239d560082d7bf",
+      "liveSha256": "d9824a1178ad25e7f39b22d30aff3c6adbf879d9a333878815239d560082d7bf",
+      "match": true
+    },
+    {
+      "path": "src/town-layout.js",
+      "localSha256": "c0817bc89c8f5cfd0f2745495a32aef4881eb21ab4b81d1be3819c11aca93c8d",
+      "liveSha256": "c0817bc89c8f5cfd0f2745495a32aef4881eb21ab4b81d1be3819c11aca93c8d",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "localSha256": "b4475b66ee71f10a9f1698157b52c4ffe6aaca9481fdddd44e23e2b8a68993b8",
+      "liveSha256": "b4475b66ee71f10a9f1698157b52c4ffe6aaca9481fdddd44e23e2b8a68993b8",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

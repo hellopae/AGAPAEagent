@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "case": "actual New Game court instructions and no free cauldron",
+      "passed": true
+    },
+    {
+      "case": "actual first investigation requires building and real walk button closes prompt",
+      "passed": true
+    },
+    {
+      "case": "actual merchant rice purchase and canteen cook interior",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "passed": true
+    },
+    {
+      "case": "actual merchant rice purchase and canteen cook interior",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "method": "Clean-profile installed Chromium against actual application UI"
+}

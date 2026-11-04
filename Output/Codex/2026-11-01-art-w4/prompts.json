@@ -1,0 +1,28 @@
+{
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "reference": "references/game-style.png",
+  "shared": "One new full-body game character per square canvas, AVEGEE modern pixel art and controlled palette with selective dark outlines. Style reference only, not copied characters. Compact game proportions, slightly three-quarter idle pose; human/monkey about three heads tall, quadruped/serpent natural anatomy. All equipment and tail within frame with transparent margins. No text, labels, logos, watermark, ground, environment or gore. Normalize to 512 square after generation; review-only until story approval.",
+  "subjects": {
+    "hanuman": "Thai Ramakien white-furred monkey warrior, khon-style monkey face, traditional gold Thai ornaments, red-gold fitted wrap, long white curled tail, compact Thai trident upright, alert loyal expression. Respectful Thai adaptation, not modern branded interpretation.",
+    "sun-wukong": "Classical Journey to the West monkey king, golden-brown fur, golden circlet, compact red-gold Chinese armor, sash, boots, long red-gold staff, curved tail, clever determined face. No modern anime/game likeness.",
+    "sita": "Sida of Thai Ramakien, dignified innocent royal woman, serene confident face, gold Thai chada, modest blouse covering torso and shoulders, long green silk lower garment, embroidered sash, jewelry, hands together at waist. Fully clothed, no exposed cleavage or abdomen, no weapon, horns, injury, chains, humiliation or prisoner costume. Peaceful visitor.",
+    "huaguoshan-monkey": "Original small friendly Huaguoshan spirit monkey, brown fur/beige muzzle and belly, round eyes, simple muted jade waist sash, curled tail, no armor/weapon. Animal monkey anatomy, two arms/two legs, no human face, not evil or injured.",
+    "cerberus": "One powerful charcoal-grey canine body, exactly four paws and three distinct dog heads sharing shoulders, middle forward/outer heads slightly outward, ember-orange eyes, bronze collar, one tail, dark fur/cool purple rim. Broad guardian boss, no extra body, wings, humanoid torso or gore.",
+    "jormungandr": "Single massive teal-green sea serpent, exactly one snake head, pale icy underside, amber eyes, dark teal scales/restrained blue rim, broad near-ring coil with visible tail, raised head toward right. No limbs/wings/arms, not Asian dragon, no ocean backdrop.",
+    "ai-scammer-robot": "Original black-metal violet-armored cyber underworld robot boss with cyan circuits, angular monitor head false smile from simple eye/mouth shapes. One hand forged gold ledger seal, other black electronic ledger with fractured cyan square-ring. Purple cable strips, sturdy boots, deceptive posture. No real brand, currency symbols, letters, numbers or trademarked robot likeness."
+  },
+  "notes": "Prompt set records production constraints for the selected first-generation variants. No profiles for newly drafted souls were generated. Story-related cultural details remain pending Reese review.",
+  "spiritRevision": {
+    "tool": "built-in image_gen",
+    "transparent_background": true,
+    "identityImages": [
+      "assets/w4-sita-v1.png",
+      "assets/w4-huaguoshan-monkey-v1.png"
+    ],
+    "styleReference": "/Users/agapae/agapae-work/AVEGEE/img/soul-nurse.png",
+    "shared": "Edit image1 only into a deceased SOUL/GHOST form. Image2 supplies pale blue-grey spirit palette, luminous transparency and tapered legless wisp only; never copy nurse face/uniform. Preserve exact face, pose, outfit, hairstyle, proportions and pixel-art craftsmanship from image1. Pale icy cyan/blue-grey ethereal body and muted identity colors, softly transparent edges, lower feet dissolve into spirit wisp. Full character, transparent RGBA background, clear margins, no text/checkerboard/floor/shadow/extra props. Deceased soul incorrectly sent for punishment due to erroneous ledger, not living person summoned early.",
+    "sita": "Preserve beautiful dignified face, crown, modest blouse, jade long court garment, gold embroidery and jewelry; faint jade/gold in ghost palette, graceful lower garment dissolves into wisp, gentle innocent expression; no wounds/chains/punishment markings/nudity.",
+    "huaguoshan-monkey": "Preserve friendly big-eyed round face, spiky fur silhouette, curved side tail, jade sash and pose; ethereal pale blue-grey with muted brown/jade memory colors, lower paws dissolve to tapered spirit wisp. Not evil or injured."
+  }
+}

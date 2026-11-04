@@ -1,0 +1,54 @@
+(node:34472) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ BALANCE-2 new-game office buttons really remove and restore taan+nira without moving map actors (22.335285ms)
+✔ BALANCE-2 tutor keeps the exact approved sentence; intro and help disclose back-line support (0.953159ms)
+✔ BALANCE-2 every new move renders an unclipped-name row, ultimate chip short name and full tooltip/manual (4.840016ms)
+✔ BALANCE-2 enemy scaling freezes the initial party count and does not rescale an ongoing/restored wave (11.217128ms)
+✔ BALANCE-2 changed runtime modules share release identities; stylesheet is versioned (23.736515ms)
+✔ BALANCE-2 Western hypnosis uses the initial party size for its solo-Yama enemy group (3.182702ms)
+✔ BALANCE-2 historical evidence retains its original input hashes; W4 progression requires its own balance run (652.974158ms)
+(node:34473) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ th: rails and throne block all foot approaches; Nira remains reachable through front stairs (131.908212ms)
+✔ asia: rails and throne block all foot approaches; Nira remains reachable through front stairs (133.07181ms)
+✔ west: rails and throne block all foot approaches; Nira remains reachable through front stairs (115.961025ms)
+✔ cyberhell: rails and throne block all foot approaches; Nira remains reachable through front stairs (87.230857ms)
+✔ Cyber platform matches other town widths and geometry scales around its fixed foot (3.503944ms)
+(node:34474) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Zone 1 skin resolves to exactly the files the hard-coded keys used to (4.875301ms)
+✔ Zone 1 station art: facade v2 only for the four listed stations, same box limits (0.724666ms)
+✔ disabled zones retain the old map system, no skin, no town (4.346436ms)
+✔ switching a skin on is data: `use` lists the finished groups, the rest falls back to Zone 1 (1.307325ms)
+✔ syncSceneZone puts a skin-enabled zone on the 3840x2560 city, same station sites and fitted Asia dais anchors, then restores (52.719859ms)
+✔ town layout per zone: overrides apply in place and Zone 1 comes back exactly (54.717715ms)
+✔ owner masks for zones 2–4 disable inherited patches (68.056004ms)
+✔ light emitters: Zone 1 fire reader unchanged; ice / cyan / violet need their hue range (0.618731ms)
+✔ index.html: M2 modules have versioned imports matching the entry script (17.029199ms)
+(node:34475) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ border arrival skips caretaker speech and boarding, committing only once (316.505557ms)
+✔ border handoff can cancel without discovering destination; incomplete exits cannot start it (2.961055ms)
+✔ boat approach gives Nira ordinary walk speed instead of a rush to the dock (186.104049ms)
+✔ border transition keeps its backdrop without replaying the portrait; cancel reconstructs its view (3.474464ms)
+✔ border skip closes the old backdrop only after successful commit (1.529704ms)
+✔ source-gate portrait starts the route only on confirmation, once (1.897151ms)
+✔ cancelling source-gate portrait leaves no route and returns to frontier (1.251296ms)
+(node:34476) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Z3: production west skin has all16 sprites/preloads and20 chunks; border 3-4 uses its owner route (2.508159ms)
+✔ Z3: owner grid preserves27328 cells, one component, small blocked reserves and no dilation (3497.225289ms)
+✔ Z3: all28 owner trunk feet are unchanged, with real solid roots and suitable west sprites (4.187852ms)
+✔ Z3: actual paths reach all10 built station doors, entry, harbour and civic anchors (739.670801ms)
+✔ Z3: NPC avoidance takes a valid detour on the entry plaza (79.321068ms)
+✔ Z3: leaving west restores Zone1/Asia geometry and original house/lamp/torch feet (6401.611683ms)
+✔ Z3: old western saves migrate exactly once and keep rewards/progress (145.878567ms)
+✔ Z3: smoothing cannot skip the narrow painted-floor seam beside the dais stairs (2.095427ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11283.58698

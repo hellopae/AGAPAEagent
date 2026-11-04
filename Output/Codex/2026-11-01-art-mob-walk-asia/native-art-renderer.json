@@ -1,0 +1,69 @@
+{
+  "method": "Actual art.drawCrewWalk with native canvas and real PNGs; records crop phase and world foot for each frame.",
+  "keys": [
+    {
+      "key": "mob-gaki",
+      "source": "img/mob-gaki-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-kasha",
+      "source": "img/mob-kasha-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-nukekubi",
+      "source": "img/mob-nukekubi-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    },
+    {
+      "key": "mob-hitodama",
+      "source": "img/mob-hitodama-walk.png",
+      "sourceX": [
+        0,
+        512,
+        1024,
+        1536
+      ],
+      "cell": [
+        512,
+        512
+      ],
+      "worldHeight": 150,
+      "baselineStable": true
+    }
+  ]
+}

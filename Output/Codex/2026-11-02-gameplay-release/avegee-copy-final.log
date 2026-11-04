@@ -1,0 +1,26 @@
+(node:32177) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ clock is a reusable item, works with zero MP, persists unlock and cannot be consumed from map bag (33.444436ms)
+✔ clock cannot refresh between ordinary event waves (7.23764ms)
+✔ finale clock shared by all minions, then all four rulers, then final boss, including save/load (112.726717ms)
+✔ handbook explains duration-only severity while legacy deserved calculation remains available (0.336018ms)
+(node:32178) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P7 handbook: removed claims are gone (wisdom +6, rab in score, metta karma cut, 50/33/17) (2.230267ms)
+✔ P7 handbook: chapters 1, 3, 4 carry the code-true numbers (77 cap, 14/8 karma, 60/40, stars, 3 reds) (0.653545ms)
+✔ P7 ui.js: verdict card no longer shows rab; crewNote and the self-speed help line do not promise metta karma cuts (6.471781ms)
+✔ P7 krata-qte: no Thai string literals left in code (comments aside); every g5 key exists in TH and EN (4.562167ms)
+✔ P7 P1 copy: unlock labels say ขั้น (matches the profile card), tea desc matches step(), no Lv. on lock badges (3.946461ms)
+(node:32179) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all four zones resolve complete exterior, arena and frontier sets shipped in preload (4.95796ms)
+✔ simple sentence ignores other guilt weights and fake merit, and clamps to levels one to five (0.662163ms)
+✔ pending cases update across saved zones without changing handed-down punishments (24.482181ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 635.616866

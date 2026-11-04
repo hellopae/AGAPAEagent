@@ -1,0 +1,41 @@
+✔ th: Guard timeline resolves an existing image, including when visiting another zone (4.449767ms)
+✔ asia: Guard timeline resolves an existing image, including when visiting another zone (1.779208ms)
+✔ west: Guard timeline resolves an existing image, including when visiting another zone (1.041094ms)
+✔ cyberhell: Guard timeline resolves an existing image, including when visiting another zone (1.181307ms)
+(node:79982) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ each living ally and enemy gets a distinct turn; commands cannot bypass the active unit (17.252497ms)
+✔ dead foes drop out and every remaining enemy acts once per round (2.748375ms)
+✔ defense lasts through enemy turns, reduces damage and expires on actor next action (1.867301ms)
+✔ queue survives JSON save shape and a new wave starts a fresh round (1.568984ms)
+✔ queued hypnosis redirects each enemy on its own turn, and burns tick only on that enemy turn (36.283299ms)
+✔ retreat cannot skip a dungeon checkpoint or bypass a story boss (1.647218ms)
+(node:79983) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all 28 native PNG sheets exist and every crop stays inside its image (41.602321ms)
+✔ all seven crew walk assets resolve the current zone before manifest loads (2.28161ms)
+✔ four crop frames retain the foot anchor, mirror right-facing art and use distance phase (2.80296ms)
+✔ crew and Guard movement advances only with displacement, preserves direction and stops at rest (0.537834ms)
+✔ escort travel reads its actual timeline position without changing game coordinates (0.318834ms)
+(node:79984) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ five sentence levels use confirmed seconds and five distinct requested colours (2.351029ms)
+✔ level 1 completes at exactly 10 active seconds (1.037503ms)
+✔ level 2 completes at exactly 30 active seconds (0.227953ms)
+✔ level 3 completes at exactly 60 active seconds (0.190929ms)
+✔ level 4 completes at exactly 120 active seconds (0.185239ms)
+✔ level 5 completes at exactly 240 active seconds (0.183413ms)
+✔ pause, transport, absent keeper, fire and repair cannot consume punishment time (0.360538ms)
+✔ legacy progress migrates proportionally once and survives JSON roundtrip without offline time (0.433072ms)
+✔ keeper strength, upgrades and crowd do not alter standard active seconds (0.335048ms)
+✔ ordinary verdict score and karma depend on destination and evidence, never chosen force (8.982651ms)
+✔ actual frame advance is not counted again by the management tick (4.284748ms)
+✔ game snapshot/restore preserves served active milliseconds, not elapsed offline time (13.676562ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 427.224485

@@ -1,0 +1,54 @@
+✔ discharges pin both attachment points and keep stable finite branches while fading (11.222237ms)
+✔ discharge strokes taper and restore blend/opacity; expired strikes draw nothing (0.968585ms)
+(node:18427) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ weather cap follows CSS viewport and DPR, never world size, and reduced motion disables particles (6.196431ms)
+✔ reduced motion is identical across time, has no smoke/dust, and settings disable every new draw (2.370173ms)
+✔ pause holds the last weather phase; text bounds never cut rectangular holes in atmosphere (3.08287ms)
+✔ frontiers clip weather to the authored biome halves, retain cold snow, and invent no fire anchors (6.946173ms)
+✔ scene schedules weather after actors, before dialogue/badges; cache aliases share settings instance (8.604933ms)
+✔ settings preference persists and restores, and blocked storage never breaks rendering (3.887006ms)
+✔ unsupported canvas skips weather safely and can retry after a usable context is available (6.363723ms)
+✔ Q5 cloud shadows are sized from the visible map area, always present, and stay inside the opacity budget (0.941058ms)
+✔ Q5 cloud shadows drift slowly and hold still when paused (6.586124ms)
+✔ Q5 cloud shadows cover every map type: all three border routes and the frontier post of every zone (3.815046ms)
+(node:18428) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Q5 lightning: a strike every ~5 s with at most two decaying flash pulses, never above .25 opacity, never more than 2 flashes per second; none under reduced motion (45.981511ms)
+✔ WEATHER-B budgets shrink with viewport/DPR; settings and reduced motion stop all weather (0.644601ms)
+✔ WEATHER-B border 3–4 clips snow west and storm east, leaving the transition clear (10.154615ms)
+✔ WEATHER-B weather renders before actors/labels; settings checkbox is bound (4.261431ms)
+✔ WATER-01 water emits crests rather than sparks and rejects sprite footprints crossing a dry hole (14.989687ms)
+✔ WEATHER-B changed renderer imports share canonical release identities (24.310965ms)
+✔ Q5 zone 3 snowfall is at least 3x the old ceiling on a desktop canvas, shrinks by the screen budget on phones, and brings visible fog (6.9416ms)
+✔ Q5 zone 4 rain is at least 3x the old ceiling, lightning draws a visible bolt and a faint flash, all clipped to the visible area (8.444378ms)
+✔ painted pole ships in Cyber startup only, with a real catalogued sprite (5.060699ms)
+✔ all 287 painted pole bases and crossbars retain the authored wire geometry (2.287433ms)
+✔ decoded painting replaces the placeholder body without canvas shape painting (1.87658ms)
+✔ Z4-POLES: pole / wire counts are pinned and the data is well-formed (5.583321ms)
+✔ Z4-POLES: reduced motion / weather off => no sparks, no bolts, still glowing wires (13.337078ms)
+✔ Z4-POLES: at most 3 flashes per second, one at a time, never full-screen (30.777518ms)
+✔ Z4-POLES: electricity budget is capped by screen size and zero when reduced (2.959535ms)
+✔ Z4-POLES: only on-screen poles/wires are queued, depth key is the pole foot (4.657161ms)
+(node:18431) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all four cloud caps are20% with independent biome weather (2.118278ms)
+✔ dialog weather particle and canvas budgets stay bounded on desktop and phone (1.891278ms)
+✔ snow prints are movement-only, alternate along real path, and remain capped (2.185595ms)
+✔ snow prints freeze on pause, fade in final2seconds, and expire after6active seconds (0.528233ms)
+✔ teleports, biome changes and disabled effects never leave a long trail (0.269071ms)
+✔ requested TH lamp bases stay on existing blocked margins, not on walkable routes (0.634292ms)
+✔ cinematic camera shares one invertible projection with raster, actors and pointer at all zoom levels (0.493571ms)
+✔ both actual scene builders mount the shared effect and foreground route data stays enabled (8.753866ms)
+✔ dialog profiles retain zone3 fog/snow and zone4 rain/lightning in both mounted contexts (0.869172ms)
+✔ lava projection matches centered cover and the42percent trial background anchor (1.368889ms)
+✔ Thai leaf motion is bounded and reduced motion creates no particles (1.606978ms)
+✔ cloud shadows have20percent maximum in every zone and dialog lamps are absent (0.546839ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 340.383419

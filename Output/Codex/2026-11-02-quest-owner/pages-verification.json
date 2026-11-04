@@ -1,0 +1,44 @@
+{
+  "commit": "17772e7855709fc0b40c6442ba82b3edc4285ff7",
+  "pagesStatus": "built",
+  "pagesCommit": "17772e7855709fc0b40c6442ba82b3edc4285ff7",
+  "files": [
+    {
+      "path": "index.html",
+      "localSha256": "bc2569cbd3f22c86ab281020fc1ab5815a8806d8a5b3a2f2e85233dd89299bd5",
+      "liveSha256": "bc2569cbd3f22c86ab281020fc1ab5815a8806d8a5b3a2f2e85233dd89299bd5",
+      "match": true
+    },
+    {
+      "path": "src/e1-content.js",
+      "localSha256": "0010736d2f6d2a810a9294ef9fd59ba2a7778e67fcf7d16a796d12a36dd3f031",
+      "liveSha256": "0010736d2f6d2a810a9294ef9fd59ba2a7778e67fcf7d16a796d12a36dd3f031",
+      "match": true
+    },
+    {
+      "path": "src/quest-journal.js",
+      "localSha256": "8b26a61b509fd6adb33c5572ef26f38d9329086698b2a2a57e4740b2dbdc8cb8",
+      "liveSha256": "8b26a61b509fd6adb33c5572ef26f38d9329086698b2a2a57e4740b2dbdc8cb8",
+      "match": true
+    },
+    {
+      "path": "src/quest-panels.js",
+      "localSha256": "843815733b0840d24b59c3df988ffa79f7225f4aba0f5741afcfa06d1dd7e13e",
+      "liveSha256": "843815733b0840d24b59c3df988ffa79f7225f4aba0f5741afcfa06d1dd7e13e",
+      "match": true
+    },
+    {
+      "path": "src/side-quests.js",
+      "localSha256": "eae6399995e45198caa64b7b0f6a9f760f42cdbca9d4f83e6aa3bc353cdabea5",
+      "liveSha256": "eae6399995e45198caa64b7b0f6a9f760f42cdbca9d4f83e6aa3bc353cdabea5",
+      "match": true
+    },
+    {
+      "path": "src/ui.js",
+      "localSha256": "c91a6acf5442be06e5aedfd573df56b28b1e900c30ce5ec9a8257347619cbdad",
+      "liveSha256": "c91a6acf5442be06e5aedfd573df56b28b1e900c30ce5ec9a8257347619cbdad",
+      "match": true
+    }
+  ],
+  "allMatch": true
+}

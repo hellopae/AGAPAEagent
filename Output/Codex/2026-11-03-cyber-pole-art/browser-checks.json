@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "asset": {
+        "src": "img/theme-v4/town-pole-cyberhell-v1.webp",
+        "ready": true,
+        "dimensions": [
+          512,
+          768
+        ],
+        "blits": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "asset": {
+        "src": "img/theme-v4/town-pole-cyberhell-v1.webp",
+        "ready": true,
+        "dimensions": [
+          512,
+          768
+        ],
+        "blits": 0
+      }
+    }
+  ],
+  "pageErrors": []
+}

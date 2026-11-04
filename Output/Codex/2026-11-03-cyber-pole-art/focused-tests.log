@@ -1,0 +1,19 @@
+✔ first painted frame gates the exact current facades, trees, houses and canteen even with an empty catalog (3.107798ms)
+✔ startup promotion partitions tiers without duplication or dropping old assets (17.832399ms)
+✔ decoded first-frame image stays usable by its renderer after the gate resolves (4.177775ms)
+✔ painted pole ships in Cyber startup only, with a real catalogued sprite (2.744372ms)
+✔ all 287 painted pole bases and crossbars retain the authored wire geometry (1.582404ms)
+✔ decoded painting replaces the placeholder body without canvas shape painting (1.292837ms)
+✔ Z4-POLES: pole / wire counts are pinned and the data is well-formed (4.396594ms)
+✔ Z4-POLES: reduced motion / weather off => no sparks, no bolts, still glowing wires (14.072244ms)
+✔ Z4-POLES: at most 3 flashes per second, one at a time, never full-screen (13.759194ms)
+✔ Z4-POLES: electricity budget is capped by screen size and zero when reduced (1.654791ms)
+✔ Z4-POLES: only on-screen poles/wires are queued, depth key is the pole foot (2.470562ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 183.147687
