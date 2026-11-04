@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-04T18:54:50.595Z",
+  "updatedAt": "2026-11-04T20:35:33.386Z",
   "entries": [
+    {
+      "id": "wl-261104-toby-t8cs",
+      "datetime": "2026-11-04T20:35:33Z",
+      "displayDate": "5 พ.ย. 2569",
+      "displayTime": "03:35",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Z1-LAYOUT-B1 zone 1 in-game",
+      "summary": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,"
+    },
     {
       "id": "wl-261104-toby-7ppg",
       "datetime": "2026-11-04T18:54:50Z",
