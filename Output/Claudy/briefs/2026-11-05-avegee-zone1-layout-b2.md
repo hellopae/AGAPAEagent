@@ -1,7 +1,8 @@
 # ใบงาน Z1-LAYOUT-B2 — บรรยากาศแบบ HD-2D ให้แผนที่โซน 1 (รอหลัง B1)
 
 - เจ้าของ: **Toby** · ตรวจรับ: Claudy (+ Dale รีวิวก่อน merge) · ร่าง 5 พ.ย. 2569 · เริ่มเมื่อ B1 ผ่าน
-- worktree/branch เดิม `claude/2026-11-05-zone1-layout` (ต่อจาก B1)
+- worktree **ใหม่** `/Users/agapae/agapae-work/.toby-worktrees/z1-fx` branch `claude/2026-11-05-zone1-fx` (แตกจาก B1 `57ac7c90`) — **ห้ามแก้ worktree `z1-layout`** คุณเป้กำลังเล่นทดสอบอยู่ (server 8940)
+- จุดเสียบจาก B1: `setTownV6Fx(manifest)` ใน `src/town-v6.js` phase `sky`/`liquid`/`ground`/`over` · วัตถุมี `depth`/`box` ใน `TOWN_V6.objects` · โน้ต B1 `Output/Toby/2026-11-05-z1-layout-b1.md`
 
 ## คุณเป้สั่ง
 
