@@ -138,3 +138,6 @@
 - ISO 12647-7:2016 (หน้าสรุป): https://infostore.saiglobal.com/en-us/Standards/ISO-12647-7-2016-587643_SAIG_ISO_ISO_1346028/
 - OFM, บล็อกหมึก Brother (ชื่อไทยของ Cyan/Magenta): https://www.ofm.co.th/blog/brother-ink-guide/amp/
 - Yellow Pages TH, รายการบริการเคลือบ PVC/UV: https://www.yellowpages.co.th/catalog/item/กล่องเคลือบพีวีซีด้าน-สปอร์ต-q77L3XJ
+
+---
+## Claudy (5 พ.ย. 2569): แก้ FIX LIST ครบ 2 ข้อใน `Output/Rae/2026-11-05-article-56-logo-color.md` (ใช้ถ้อยคำแรกที่เสนอ: "จอ Retina ของ Apple") → ปิด fact-check ตามกติกา build (แก้ 1 รอบ Claudy ตัดสิน ไม่ส่งตรวจซ้ำ)
