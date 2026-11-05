@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T18:12:18.060Z",
+  "updatedAt": "2026-11-05T18:32:39.608Z",
   "agents": [
     {
       "id": "claudy",
@@ -308,9 +308,9 @@
       "status": "done",
       "task": "Toby: interrogation + battle scene FX",
       "report": {
-        "when": "05:17",
-        "title": "Toby builds AVEGEE P4",
-        "body": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,359 ผ่าน แดง 0\n- **สิ่งที่แก้:** การ์ดทีม (`ui.js` ~2404) และตัวอัปเดตแถบ (~4291) หารด้วย `GUARD.helpCdMs/1000` (20 วิ) แล้ว แถบจึงเริ่มที่ 0% แทนที่จะเริ่มราว 83%\n- **`GUARD.battleCd`:** ไม่ได้ลบ ใส่คอมเมนต์ว่าเป็นค่าเก่า เพราะ `tests/combat-power.test.mjs` ยังอ้างค่า 120"
+        "when": "01:32",
+        "title": "Toby: interrogation + battle scene FX",
+        "body": "The coordinator has already received my earlier report, so this follow-up could not be sent as a second handback. The summary for the guard change is below.\n\n- **Commit:** `ad300034` on `claude/2026-11-05-zone1-v5-fx` (on top of `0f50f37a`), pushed. The AGAPAE repo notes are at `2c7ca66`.\n- **What changed:** the guard now falls like every other teammate. His morale goes to 0 and he lies down in the scene. At battle end he gets the same `startRecoveryTeaRest` with `RECOVERY_MS` (120 s), then walks back to his gate post.\n- **Full suite:** 1956 run, 1955 pass, 1 fail. The failure is the 30 s timeout in `tests/workers.test.mjs`, a load flake that passed 20 of 20 when run alone on the previous commit. I did not re-run it alone on this commit.\n- **Checked in the game:** with a hired guard, he fa …"
       }
     },
     {
