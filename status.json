@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T22:53:19.697Z",
+  "updatedAt": "2026-11-05T03:52:26.574Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Z1-LAYOUT-B2 HD-2D atmosphere",
+      "status": "working",
+      "task": "Toby: zone 1 v5 FX in-game",
       "report": {
         "when": "05:17",
         "title": "Toby builds AVEGEE P4",
