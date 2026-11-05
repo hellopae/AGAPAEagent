@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-05T12:26:53.799Z",
+  "updatedAt": "2026-11-05T16:13:18.002Z",
   "entries": [
+    {
+      "id": "wl-261105-toby-vtiq",
+      "datetime": "2026-11-05T16:13:18Z",
+      "displayDate": "5 พ.ย. 2569",
+      "displayTime": "23:13",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby: interrogation + battle scene FX",
+      "summary": "แก้แถบคูลดาวน์ยักษ์ในฉากต่อสู้เสร็จแล้ว แต่ผมยังไม่ได้เปิดเกมดูแถบจริง ตรวจด้วยเทสต์เท่านั้น ตัวส่งรายงานปิดไปแล้ว จึงตอบตรงนี้แทน\n\n- **Commit:** โค้ด `e839bc5` บน `toby/p4-build` (worktree `/Users/agapae/agapae-work/.toby-worktrees/p4`) รายงานต่อท้ายหนึ่งย่อหน้าที่ `2ee69ed`\n- **เทสต์:** ชุดเต็ม 1,"
+    },
     {
       "id": "wl-261105-dale-snvs",
       "datetime": "2026-11-05T12:26:53Z",
