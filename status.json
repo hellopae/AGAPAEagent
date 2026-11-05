@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T05:34:44.684Z",
+  "updatedAt": "2026-11-05T06:45:02.361Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae Q1 guard names",
+      "status": "working",
+      "task": "Rae: polish TANAPAT article 56",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
