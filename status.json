@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T11:59:54.425Z",
+  "updatedAt": "2026-11-05T12:07:34.594Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale: publish TANAPAT article 56",
+      "status": "working",
+      "task": "Dale: review zone 1 v5 FX branch",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
