@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T04:43:30.080Z",
+  "updatedAt": "2026-11-09T06:11:32.635Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Reese: Steam vs mobile research",
+      "status": "working",
+      "task": "Reese: Steam upload guide",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
