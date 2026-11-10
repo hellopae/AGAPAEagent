@@ -1,0 +1,45 @@
+{
+ "map_idle_zoom5": {
+  "frames": 354,
+  "secs": 8.07,
+  "fps_avg": 44,
+  "fps_min_1s": 36,
+  "ft_avg": 22.74,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 33.4,
+  "ft_max": 50.1,
+  "frames_over_33": 39,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 69017,
+   "clip": 1065,
+   "fillRect": 19336,
+   "stroke": 3741,
+   "fill": 9236,
+   "createRadialGradient": 355
+  },
+  "heap_MB": 20.7,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

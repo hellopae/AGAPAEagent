@@ -1,0 +1,252 @@
+{
+ "map_walk_10s": {
+  "frames": 388,
+  "secs": 10.04,
+  "fps_avg": 38.7,
+  "fps_min_1s": 13,
+  "ft_avg": 25.81,
+  "ft_p50": 16.7,
+  "ft_p95": 50,
+  "ft_p99": 116.6,
+  "ft_max": 183.3,
+  "frames_over_33": 53,
+  "long_tasks": 2,
+  "long_ms": 174,
+  "long_max": 89,
+  "canvases_created": 80,
+  "canvas_px_created_M": 52.59,
+  "calls": {
+   "drawImage": 78813,
+   "clip": 1167,
+   "fillRect": 20484,
+   "stroke": 10253,
+   "fill": 15809,
+   "createPattern": 24
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 347,
+  "decoded_img_MB": 1058,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "loaf": [
+  {
+   "d": 298,
+   "block": 69,
+   "scripts": []
+  },
+  {
+   "d": 216,
+   "block": 157,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|23|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|183|forced0"
+   ]
+  },
+  {
+   "d": 2262,
+   "block": 2209,
+   "scripts": [
+    "BUTTON.onclick|ui.js::467926|113|forced3",
+    "FrameRequestCallback|ui.js:frame:25964|2110|forced1"
+   ]
+  },
+  {
+   "d": 71,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|25|forced0"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 13,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|62|forced0"
+   ]
+  },
+  {
+   "d": 131,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 69,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 65,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 79,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|24|forced0"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 84,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|41|forced0"
+   ]
+  },
+  {
+   "d": 99,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|8|forced0"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 94,
+   "block": 33,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|80|forced0"
+   ]
+  },
+  {
+   "d": 56,
+   "block": 6,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|52|forced0"
+   ]
+  },
+  {
+   "d": 137,
+   "block": 79,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|124|forced1"
+   ]
+  },
+  {
+   "d": 79,
+   "block": 28,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|77|forced2"
+   ]
+  },
+  {
+   "d": 140,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|22|forced0"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 39,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|89|forced1"
+   ]
+  },
+  {
+   "d": 100,
+   "block": 35,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|83|forced4"
+   ]
+  },
+  {
+   "d": 66,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|36|forced1"
+   ]
+  },
+  {
+   "d": 58,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+   ]
+  },
+  {
+   "d": 55,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+   ]
+  },
+  {
+   "d": 93,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|8|forced2"
+   ]
+  },
+  {
+   "d": 184,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|8|forced1"
+   ]
+  },
+  {
+   "d": 137,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|18|forced2"
+   ]
+  },
+  {
+   "d": 85,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+   ]
+  },
+  {
+   "d": 202,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|15|forced1"
+   ]
+  },
+  {
+   "d": 63,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|10|forced1"
+   ]
+  },
+  {
+   "d": 73,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 54,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|6|forced1"
+   ]
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

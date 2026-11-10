@@ -1,0 +1,171 @@
+{
+ "map_idle_zoom5": {
+  "frames": 359,
+  "secs": 8.04,
+  "fps_avg": 44.8,
+  "fps_min_1s": 39,
+  "ft_avg": 22.33,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 33.4,
+  "ft_max": 33.5,
+  "frames_over_33": 35,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 72160,
+   "clip": 1080,
+   "fillRect": 19608,
+   "stroke": 10170,
+   "fill": 15521,
+   "createRadialGradient": 360
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 351,
+  "secs": 10.01,
+  "fps_avg": 35.1,
+  "fps_min_1s": 27,
+  "ft_avg": 28.49,
+  "ft_p50": 33.3,
+  "ft_p95": 50,
+  "ft_p99": 100,
+  "ft_max": 183.3,
+  "frames_over_33": 71,
+  "long_tasks": 5,
+  "long_ms": 563,
+  "long_max": 189,
+  "canvases_created": 79,
+  "canvas_px_created_M": 51.57,
+  "calls": {
+   "drawImage": 71654,
+   "clip": 1056,
+   "fillRect": 19179,
+   "stroke": 9306,
+   "fill": 14357,
+   "createRadialGradient": 352,
+   "getImageData": 5,
+   "putImageData": 5,
+   "createPattern": 24
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 362,
+  "decoded_img_MB": 1118,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "battle_idle": {
+  "frames": 211,
+  "secs": 8.09,
+  "fps_avg": 26.2,
+  "fps_min_1s": 23,
+  "ft_avg": 38.15,
+  "ft_p50": 33.4,
+  "ft_p95": 50.1,
+  "ft_p99": 50.1,
+  "ft_max": 66.7,
+  "frames_over_33": 103,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 49171,
+   "fillRect": 12296,
+   "stroke": 4240,
+   "fill": 10388,
+   "clip": 1060,
+   "createRadialGradient": 212
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 454,
+  "decoded_img_MB": 1275,
+  "canvases_live": 11,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "927x485",
+   "2x2"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 190,
+  "secs": 8.07,
+  "fps_avg": 23.7,
+  "fps_min_1s": 20.3,
+  "ft_avg": 42.19,
+  "ft_p50": 33.4,
+  "ft_p95": 66.7,
+  "ft_p99": 83.4,
+  "ft_max": 100.1,
+  "frames_over_33": 110,
+  "long_tasks": 2,
+  "long_ms": 116,
+  "long_max": 63,
+  "canvases_created": 154,
+  "canvas_px_created_M": 71.46,
+  "calls": {
+   "drawImage": 46380,
+   "fillRect": 11013,
+   "stroke": 3820,
+   "fill": 9335,
+   "clip": 949,
+   "createRadialGradient": 191,
+   "createLinearGradient": 422,
+   "getImageData": 2
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 458,
+  "decoded_img_MB": 1291,
+  "canvases_live": 10,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "1890x989",
+   "1311x686"
+  ]
+ },
+ "battle_action_hp": [
+  366,
+  180
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
