@@ -1,0 +1,448 @@
+{
+ "map_idle_zoom5": {
+  "frames": 485,
+  "secs": 8.1,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 1,
+  "canvas_px_created_M": 0.02,
+  "calls": {
+   "drawImage": 100274,
+   "clip": 1458,
+   "fillRect": 22806,
+   "stroke": 13796,
+   "fill": 21082
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 529,
+  "secs": 10.09,
+  "fps_avg": 52.6,
+  "fps_min_1s": 42,
+  "ft_avg": 19,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 50,
+  "ft_max": 116.6,
+  "frames_over_33": 24,
+  "long_tasks": 2,
+  "long_ms": 170,
+  "long_max": 93,
+  "canvases_created": 76,
+  "canvas_px_created_M": 54.81,
+  "calls": {
+   "drawImage": 111374,
+   "clip": 1590,
+   "fillRect": 24833,
+   "stroke": 13908,
+   "fill": 21530,
+   "createPattern": 24
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 337,
+  "decoded_img_MB": 1027,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "battle_idle": {
+  "frames": 484,
+  "secs": 8.07,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 1,
+  "canvas_px_created_M": 0.02,
+  "calls": {
+   "drawImage": 20491,
+   "fillRect": 8650,
+   "clip": 822,
+   "fill": 4680,
+   "stroke": 960
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 429,
+  "decoded_img_MB": 1183,
+  "canvases_live": 11,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "927x485",
+   "2x2"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 451,
+  "secs": 8.06,
+  "fps_avg": 56.1,
+  "fps_min_1s": 45.8,
+  "ft_avg": 17.81,
+  "ft_p50": 16.7,
+  "ft_p95": 33.3,
+  "ft_p99": 49.9,
+  "ft_max": 66.7,
+  "frames_over_33": 11,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 154,
+  "canvas_px_created_M": 71.4,
+  "calls": {
+   "fillRect": 8656,
+   "drawImage": 24994,
+   "clip": 822,
+   "fill": 4680,
+   "stroke": 960,
+   "createLinearGradient": 994,
+   "getImageData": 2
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 433,
+  "decoded_img_MB": 1199,
+  "canvases_live": 10,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "2062x1079",
+   "1311x686"
+  ]
+ },
+ "battle_action_hp": [
+  353,
+  180
+ ],
+ "loaf": [
+  {
+   "d": 284,
+   "block": 63,
+   "scripts": []
+  },
+  {
+   "d": 218,
+   "block": 160,
+   "scripts": [
+    "IMG[src=\"img/cover-v4.webp\"].onload|cover-fx-h5b.js::25309|39|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|171|forced0"
+   ]
+  },
+  {
+   "d": 2053,
+   "block": 1999,
+   "scripts": [
+    "BUTTON.onclick|ui.js::468725|107|forced2",
+    "FrameRequestCallback|ui.js:frame:26631|1906|forced2"
+   ]
+  },
+  {
+   "d": 77,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|25|forced0"
+   ]
+  },
+  {
+   "d": 74,
+   "block": 19,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|62|forced0"
+   ]
+  },
+  {
+   "d": 131,
+   "block": 60,
+   "scripts": []
+  },
+  {
+   "d": 74,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 68,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 79,
+   "block": 13,
+   "scripts": []
+  },
+  {
+   "d": 69,
+   "block": 14,
+   "scripts": []
+  },
+  {
+   "d": 189,
+   "block": 15,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|64|forced0"
+   ]
+  },
+  {
+   "d": 74,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|6|forced0"
+   ]
+  },
+  {
+   "d": 64,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|5|forced0"
+   ]
+  },
+  {
+   "d": 91,
+   "block": 33,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|79|forced0"
+   ]
+  },
+  {
+   "d": 135,
+   "block": 68,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|112|forced1"
+   ]
+  },
+  {
+   "d": 58,
+   "block": 7,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|57|forced0"
+   ]
+  },
+  {
+   "d": 98,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|19|forced1"
+   ]
+  },
+  {
+   "d": 93,
+   "block": 43,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|90|forced1"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 27,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|77|forced1"
+   ]
+  },
+  {
+   "d": 61,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|9|forced2"
+   ]
+  },
+  {
+   "d": 116,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|6|forced0"
+   ]
+  },
+  {
+   "d": 72,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|8|forced1"
+   ]
+  },
+  {
+   "d": 56,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 380,
+   "block": 326,
+   "scripts": [
+    "import.then|::46|367|forced20"
+   ]
+  },
+  {
+   "d": 94,
+   "block": 27,
+   "scripts": [
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "FrameRequestCallback|ui.js:frame:26631|67|forced0"
+   ]
+  },
+  {
+   "d": 107,
+   "block": 11,
+   "scripts": [
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|35|forced8",
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|22|forced1",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "IMG[src=\"img/fx/fx-common-flash-star-white.webp?v=m3\"].onload|battle-fx-tex.js::34862|9|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0"
+   ]
+  },
+  {
+   "d": 115,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-common-ray-burst-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|14|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-violet.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-fire-explosion.webp?v=m3\"].onload|battle-fx-tex.js::34862|20|forced0",
+    "IMG[src=\"img/fx/fx-wind-vortex.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|7|forced0"
+   ]
+  },
+  {
+   "d": 87,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-hypno-circle.webp?v=m3\"].onload|battle-fx-tex.js::34862|11|forced0",
+    "IMG[src=\"img/fx/fx-hypno-spiral.webp?v=m3\"].onload|battle-fx-tex.js::34862|10|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|8|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0"
+   ]
+  },
+  {
+   "d": 99,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 58,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 58,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|6|forced0"
+   ]
+  },
+  {
+   "d": 59,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 77,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1022,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 914,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 67,
+   "block": 0,
+   "scripts": [
+    "BUTTON.onclick|ui.js::303028|17|forced11"
+   ]
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|5|forced4"
+   ]
+  },
+  {
+   "d": 81,
+   "block": 2,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262363|17|forced10"
+   ]
+  },
+  {
+   "d": 50,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262363|32|forced16"
+   ]
+  },
+  {
+   "d": 58,
+   "block": 4,
+   "scripts": [
+    "IMG[src=\"img/hero-yama-cry.png\"].onload|battle-scale.js:run:1142|28|forced0",
+    "IMG[src=\"img/hero-yama-cry.png\"].onload|battle-scale.js:run:1142|20|forced0"
+   ]
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

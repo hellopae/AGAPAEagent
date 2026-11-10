@@ -1,0 +1,492 @@
+{
+ "map_idle_zoom5": {
+  "frames": 485,
+  "secs": 8.09,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 100279,
+   "clip": 1458,
+   "fillRect": 22806,
+   "stroke": 13608,
+   "fill": 20775
+  },
+  "heap_MB": 20.7,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 522,
+  "secs": 10.01,
+  "fps_avg": 52.2,
+  "fps_min_1s": 41.7,
+  "ft_avg": 19.16,
+  "ft_p50": 16.7,
+  "ft_p95": 33.3,
+  "ft_p99": 66.6,
+  "ft_max": 116.8,
+  "frames_over_33": 25,
+  "long_tasks": 2,
+  "long_ms": 163,
+  "long_max": 88,
+  "canvases_created": 76,
+  "canvas_px_created_M": 52.66,
+  "calls": {
+   "drawImage": 110066,
+   "clip": 1569,
+   "fillRect": 24592,
+   "stroke": 13903,
+   "fill": 21599,
+   "createPattern": 24
+  },
+  "heap_MB": 20.7,
+  "decoded_imgs": 335,
+  "decoded_img_MB": 1019,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "battle_idle": {
+  "frames": 480,
+  "secs": 8.03,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "fillRect": 8616,
+   "drawImage": 20437,
+   "clip": 819,
+   "fill": 4668,
+   "stroke": 960
+  },
+  "heap_MB": 20.7,
+  "decoded_imgs": 427,
+  "decoded_img_MB": 1175,
+  "canvases_live": 11,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "927x485",
+   "2x2"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 424,
+  "secs": 8.06,
+  "fps_avg": 52.7,
+  "fps_min_1s": 40.4,
+  "ft_avg": 18.99,
+  "ft_p50": 16.7,
+  "ft_p95": 33.3,
+  "ft_p99": 50,
+  "ft_max": 99.9,
+  "frames_over_33": 18,
+  "long_tasks": 3,
+  "long_ms": 185,
+  "long_max": 69,
+  "canvases_created": 155,
+  "canvas_px_created_M": 70.4,
+  "calls": {
+   "drawImage": 24025,
+   "fillRect": 8336,
+   "stroke": 960,
+   "fill": 4560,
+   "clip": 792,
+   "createLinearGradient": 838,
+   "getImageData": 2
+  },
+  "heap_MB": 20.7,
+  "decoded_imgs": 431,
+  "decoded_img_MB": 1191,
+  "canvases_live": 10,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "2062x1079",
+   "1311x686"
+  ]
+ },
+ "battle_action_hp": [
+  360,
+  180
+ ],
+ "loaf": [
+  {
+   "d": 298,
+   "block": 73,
+   "scripts": []
+  },
+  {
+   "d": 70,
+   "block": 0,
+   "scripts": [
+    "http://127.0.0.1:8950/src/preload.js?v=20261105-z1v5-fx3-tiles|preload.js::0|28|forced0",
+    "http://127.0.0.1:8950/src/ui.js|ui.js::0|30|forced1"
+   ]
+  },
+  {
+   "d": 204,
+   "block": 145,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|23|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|171|forced0"
+   ]
+  },
+  {
+   "d": 2213,
+   "block": 2160,
+   "scripts": [
+    "BUTTON.onclick|ui.js::468725|112|forced3",
+    "FrameRequestCallback|ui.js:frame:26631|2082|forced1"
+   ]
+  },
+  {
+   "d": 72,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|22|forced0"
+   ]
+  },
+  {
+   "d": 71,
+   "block": 14,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|63|forced0"
+   ]
+  },
+  {
+   "d": 125,
+   "block": 62,
+   "scripts": []
+  },
+  {
+   "d": 82,
+   "block": 19,
+   "scripts": []
+  },
+  {
+   "d": 73,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 76,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 77,
+   "block": 18,
+   "scripts": []
+  },
+  {
+   "d": 204,
+   "block": 30,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|72|forced0"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|7|forced0"
+   ]
+  },
+  {
+   "d": 62,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|7|forced0"
+   ]
+  },
+  {
+   "d": 80,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|6|forced0"
+   ]
+  },
+  {
+   "d": 86,
+   "block": 34,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|80|forced0"
+   ]
+  },
+  {
+   "d": 101,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|6|forced0"
+   ]
+  },
+  {
+   "d": 79,
+   "block": 25,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::75254|45|forced29",
+    "FrameRequestCallback|ui.js:frame:26631|16|forced0"
+   ]
+  },
+  {
+   "d": 74,
+   "block": 16,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|63|forced1"
+   ]
+  },
+  {
+   "d": 106,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|24|forced0"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 38,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|87|forced1"
+   ]
+  },
+  {
+   "d": 82,
+   "block": 25,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|74|forced1"
+   ]
+  },
+  {
+   "d": 54,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 117,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 77,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|21|forced1"
+   ]
+  },
+  {
+   "d": 61,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 380,
+   "block": 322,
+   "scripts": [
+    "import.then|::46|364|forced18"
+   ]
+  },
+  {
+   "d": 86,
+   "block": 23,
+   "scripts": [
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "FrameRequestCallback|ui.js:frame:26631|64|forced0"
+   ]
+  },
+  {
+   "d": 115,
+   "block": 12,
+   "scripts": [
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|35|forced5",
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|24|forced1",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|7|forced0",
+    "IMG[src=\"img/fx/fx-common-flash-star-white.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ray-burst-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|17|forced0"
+   ]
+  },
+  {
+   "d": 120,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-common-ring-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-violet.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-fire-explosion.webp?v=m3\"].onload|battle-fx-tex.js::34862|19|forced0",
+    "IMG[src=\"img/fx/fx-wind-vortex.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-hypno-circle.webp?v=m3\"].onload|battle-fx-tex.js::34862|8|forced0",
+    "FrameRequestCallback|ui.js:frame:26631|13|forced0"
+   ]
+  },
+  {
+   "d": 57,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-hypno-spiral.webp?v=m3\"].onload|battle-fx-tex.js::34862|9|forced0",
+    "IMG[src=\"img/fx/fx-hypno-ribbons.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0"
+   ]
+  },
+  {
+   "d": 54,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 90,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 66,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 50,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26631|5|forced0"
+   ]
+  },
+  {
+   "d": 61,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 67,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1021,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1014,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 74,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 70,
+   "block": 0,
+   "scripts": [
+    "BUTTON.onclick|ui.js::303028|9|forced4"
+   ]
+  },
+  {
+   "d": 54,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 113,
+   "block": 25,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262363|25|forced16"
+   ]
+  },
+  {
+   "d": 67,
+   "block": 12,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262363|45|forced21"
+   ]
+  },
+  {
+   "d": 64,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::326948|28|forced14",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|9|forced6"
+   ]
+  },
+  {
+   "d": 76,
+   "block": 22,
+   "scripts": [
+    "IMG[src=\"img/hero-yama-cry.png\"].onload|battle-scale.js:run:1142|39|forced0",
+    "IMG[src=\"img/hero-yama-cry.png\"].onload|battle-scale.js:run:1142|31|forced0"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 54,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262363|23|forced16",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|10|forced7"
+   ]
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

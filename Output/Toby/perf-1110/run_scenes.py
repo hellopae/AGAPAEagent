@@ -11,6 +11,9 @@ res={}
 def settle(pg,ms=1500): pg.wait_for_timeout(ms)
 with sync_playwright() as p:
     b,ctx,pg=setup(p,port,vw,vh,dsf)
+    import os
+    if os.environ.get('GFX'):   # GFX-1110: high | performance, through the same module the settings dialog uses
+        print('gfx mode ->',pg.evaluate("async m=>{const g=await import('./src/graphics-setting.js');g.setGraphicsMode(m);return g.getGraphicsMode()}",os.environ['GFX']))
     cdp=ctx.new_cdp_session(pg)
     if prof: cdp.send('Profiler.enable')
     M=lambda s,a=None:measure(pg,s,a,prof,cdp)

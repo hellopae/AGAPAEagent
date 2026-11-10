@@ -1,0 +1,8 @@
+load1=2.69
+load1=2.35
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  58.6 min1s  49.1 p95    16.7 long   2/136ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  57.1 min1s  49.1 p95    16.8 long   0/0ms
+battle_action_hp [362, 180]

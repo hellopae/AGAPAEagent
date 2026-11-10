@@ -1,0 +1,62 @@
+== gfx-high-a
+load1=3.18
+load1=2.88
+load1=2.63
+load1=2.24
+gfx mode -> high
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  52.6 min1s    42 p95    33.4 long   2/170ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  56.1 min1s  45.8 p95    33.3 long   0/0ms
+battle_action_hp [353, 180]
+== gfx-perf-a
+load1=3.33
+load1=3.35
+load1=3.28
+load1=4.70
+load1=3.72
+load1=3.70
+load1=3.68
+load1=3.05
+load1=2.75
+load1=2.52
+load1=2.09
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  53.2 min1s   4.1 p95    16.8 long   2/135ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  57.9 min1s  49.1 p95    16.8 long   0/0ms
+battle_action_hp [349, 180]
+== gfx-perf-b
+load1=2.60
+load1=2.30
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.5 min1s  49.1 p95    16.8 long   2/136ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  53.6 min1s    33 p95    16.8 long   0/0ms
+battle_action_hp [364, 180]
+== gfx-high-b
+load1=3.10
+load1=2.67
+load1=2.39
+gfx mode -> high
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  52.2 min1s  41.7 p95    33.3 long   2/163ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  52.7 min1s  40.4 p95    33.3 long   3/185ms
+battle_action_hp [360, 180]
+== gfx-perf-dpr2-sanity (mapdpr=2 beats performance)
+load1=4.21
+load1=4.19
+load1=4.25
+load1=3.32
+load1=2.50
+load1=2.02
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  55.7 min1s  45.8 p95    33.2 long   2/158ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  57.3 min1s    48 p95    16.8 long   0/0ms
+battle_action_hp [362, 180]
+ALLDONE
