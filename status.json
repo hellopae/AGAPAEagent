@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T10:53:03.853Z",
+  "updatedAt": "2026-11-10T10:53:41.200Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae: polish TANAPAT article 56",
+      "status": "working",
+      "task": "Polish AVEGEE quest dialogue",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
@@ -308,9 +308,9 @@
       "status": "done",
       "task": "AVEGEE graphics quality setting",
       "report": {
-        "when": "01:32",
-        "title": "Toby: interrogation + battle scene FX",
-        "body": "The coordinator has already received my earlier report, so this follow-up could not be sent as a second handback. The summary for the guard change is below.\n\n- **Commit:** `ad300034` on `claude/2026-11-05-zone1-v5-fx` (on top of `0f50f37a`), pushed. The AGAPAE repo notes are at `2c7ca66`.\n- **What changed:** the guard now falls like every other teammate. His morale goes to 0 and he lies down in the scene. At battle end he gets the same `startRecoveryTeaRest` with `RECOVERY_MS` (120 s), then walks back to his gate post.\n- **Full suite:** 1956 run, 1955 pass, 1 fail. The failure is the 30 s timeout in `tests/workers.test.mjs`, a load flake that passed 20 of 20 when run alone on the previous commit. I did not re-run it alone on this commit.\n- **Checked in the game:** with a hired guard, he fa …"
+        "when": "17:53",
+        "title": "AVEGEE graphics quality setting",
+        "body": "Nothing further to do on this notification. It is a stale background wait-loop from earlier in the session. It watched for a `node --test` run that had already finished, and it exited with code 144 when I killed leftover processes.\n\nThe test result that counts is the final full run on the committed code: 1963 pass, 0 fail. The report I already handed back stands as written. The code is on `claude/2026-11-05-zone1-v5-fx` at `a3a94aee`, and the working note and evidence are in the AGAPAE Agent repo (`cfa2612`)."
       }
     },
     {
