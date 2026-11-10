@@ -1,0 +1,6 @@
+base1 :: map_walk_10s             fps  49.1 min1s    37 p95    33.4 long   3/335ms
+nofluid1 :: map_walk_10s             fps  49.3 min1s    33 p95    33.4 long   4/348ms
+base2 :: map_walk_10s             fps  37.5 min1s  27.5 p95    33.4 long   4/472ms
+nofluid2 :: map_walk_10s             fps  44.2 min1s    30 p95    33.4 long   3/525ms
+base3 :: map_walk_10s             fps  28.6 min1s    21 p95    50.1 long   3/410ms
+nofluid3 :: map_walk_10s             fps  44.9 min1s    31 p95    33.4 long   3/342ms

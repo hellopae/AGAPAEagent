@@ -1,31 +1,30 @@
 {
  "map_walk_10s": {
-  "frames": 388,
-  "secs": 10.04,
-  "fps_avg": 38.7,
-  "fps_min_1s": 13,
-  "ft_avg": 25.81,
+  "frames": 452,
+  "secs": 10.09,
+  "fps_avg": 44.9,
+  "fps_min_1s": 31,
+  "ft_avg": 22.27,
   "ft_p50": 16.7,
-  "ft_p95": 50,
+  "ft_p95": 33.4,
   "ft_p99": 116.6,
-  "ft_max": 183.3,
-  "frames_over_33": 53,
-  "long_tasks": 2,
-  "long_ms": 174,
-  "long_max": 89,
-  "canvases_created": 80,
-  "canvas_px_created_M": 52.59,
+  "ft_max": 166.7,
+  "frames_over_33": 32,
+  "long_tasks": 3,
+  "long_ms": 342,
+  "long_max": 146,
+  "canvases_created": 69,
+  "canvas_px_created_M": 4.5,
   "calls": {
-   "drawImage": 78813,
-   "clip": 1167,
-   "fillRect": 20484,
-   "stroke": 10253,
-   "fill": 15809,
-   "createPattern": 24
+   "drawImage": 89765,
+   "clip": 1359,
+   "fillRect": 23314,
+   "stroke": 12036,
+   "fill": 18583
   },
-  "heap_MB": 22,
-  "decoded_imgs": 347,
-  "decoded_img_MB": 1058,
+  "heap_MB": 20.7,
+  "decoded_imgs": 300,
+  "decoded_img_MB": 912,
   "canvases_live": 3,
   "main_canvases": [
    "2205x1179",
@@ -35,208 +34,271 @@
  },
  "loaf": [
   {
-   "d": 298,
-   "block": 69,
+   "d": 745,
+   "block": 216,
    "scripts": []
   },
   {
-   "d": 216,
-   "block": 157,
+   "d": 74,
+   "block": 18,
    "scripts": [
-    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|23|forced0",
-    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|183|forced0"
+    "http://127.0.0.1:8950/src/preload.js?v=20261105-z1v5-fx3-tiles|preload.js::0|67|forced0"
    ]
   },
   {
-   "d": 2262,
-   "block": 2209,
+   "d": 90,
+   "block": 34,
    "scripts": [
-    "BUTTON.onclick|ui.js::467926|113|forced3",
-    "FrameRequestCallback|ui.js:frame:25964|2110|forced1"
+    "http://127.0.0.1:8950/src/ui.js|ui.js::0|66|forced0"
    ]
   },
   {
-   "d": 71,
-   "block": 0,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|25|forced0"
-   ]
+   "d": 59,
+   "block": 8,
+   "scripts": []
   },
   {
-   "d": 70,
-   "block": 13,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|62|forced0"
-   ]
-  },
-  {
-   "d": 131,
+   "d": 54,
    "block": 0,
    "scripts": []
   },
   {
-   "d": 69,
-   "block": 0,
-   "scripts": []
-  },
-  {
-   "d": 65,
-   "block": 0,
-   "scripts": []
-  },
-  {
-   "d": 79,
-   "block": 0,
+   "d": 396,
+   "block": 329,
    "scripts": [
-    "TimerHandler:setTimeout|town-shade.js:step:17695|24|forced0"
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|40|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|338|forced1"
    ]
   },
   {
-   "d": 70,
+   "d": 62,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|7|forced0"
+   ]
+  },
+  {
+   "d": 3970,
+   "block": 3915,
+   "scripts": [
+    "BUTTON.onclick|ui.js::467926|201|forced4",
+    "FrameRequestCallback|ui.js:frame:25964|3622|forced2"
+   ]
+  },
+  {
+   "d": 410,
+   "block": 310,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|43|forced0"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|35|forced0"
+   ]
+  },
+  {
+   "d": 106,
+   "block": 54,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|96|forced0"
+   ]
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|12|forced0"
+   ]
+  },
+  {
+   "d": 58,
    "block": 0,
    "scripts": []
   },
   {
-   "d": 84,
-   "block": 0,
+   "d": 267,
+   "block": 127,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|41|forced0"
+    "TimerHandler:setTimeout|town-shade.js:step:17695|173|forced0"
    ]
   },
   {
-   "d": 99,
+   "d": 57,
    "block": 0,
    "scripts": [
     "FrameRequestCallback|ui.js:frame:25964|8|forced0"
    ]
   },
   {
-   "d": 70,
+   "d": 53,
    "block": 0,
    "scripts": []
   },
   {
-   "d": 94,
-   "block": 33,
-   "scripts": [
-    "TimerHandler:setTimeout|town-shade.js:step:17695|80|forced0"
-   ]
-  },
-  {
    "d": 56,
-   "block": 6,
-   "scripts": [
-    "TimerHandler:setTimeout|town-shade.js:step:17695|52|forced0"
-   ]
-  },
-  {
-   "d": 137,
-   "block": 79,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|124|forced1"
-   ]
-  },
-  {
-   "d": 79,
-   "block": 28,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|77|forced2"
-   ]
-  },
-  {
-   "d": 140,
    "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|22|forced0"
-   ]
-  },
-  {
-   "d": 89,
-   "block": 39,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|89|forced1"
-   ]
-  },
-  {
-   "d": 100,
-   "block": 35,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|83|forced4"
-   ]
-  },
-  {
-   "d": 66,
-   "block": 0,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|36|forced1"
+    "FrameRequestCallback|ui.js:frame:25964|7|forced0"
    ]
   },
   {
    "d": 58,
    "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 77,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 148,
+   "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+    "FrameRequestCallback|ui.js:frame:25964|11|forced0"
    ]
   },
   {
-   "d": 55,
-   "block": 0,
+   "d": 102,
+   "block": 52,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+    "TimerHandler:setTimeout|town-shade.js:step:17695|98|forced0"
    ]
   },
   {
-   "d": 93,
+   "d": 64,
    "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|8|forced2"
+    "FrameRequestCallback|ui.js:frame:25964|25|forced2"
    ]
   },
   {
-   "d": 184,
+   "d": 88,
    "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|8|forced1"
+    "TimerHandler:setTimeout|ui.js::74455|18|forced9"
    ]
   },
   {
-   "d": 137,
+   "d": 80,
    "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|18|forced2"
+    "FrameRequestCallback|ui.js:frame:25964|5|forced0"
    ]
   },
   {
-   "d": 85,
+   "d": 61,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 57,
    "block": 0,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|9|forced1"
+    "FrameRequestCallback|ui.js:frame:25964|5|forced0"
    ]
   },
   {
-   "d": 202,
-   "block": 0,
+   "d": 65,
+   "block": 9,
    "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|15|forced1"
-   ]
-  },
-  {
-   "d": 63,
-   "block": 0,
-   "scripts": [
-    "FrameRequestCallback|ui.js:frame:25964|10|forced1"
+    "FrameRequestCallback|ui.js:frame:25964|20|forced0"
    ]
   },
   {
    "d": 73,
    "block": 0,
-   "scripts": []
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74455|11|forced5",
+    "FrameRequestCallback|ui.js:frame:25964|10|forced0"
+   ]
   },
   {
-   "d": 54,
+   "d": 76,
+   "block": 24,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|70|forced0"
+   ]
+  },
+  {
+   "d": 75,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74455|5|forced0",
+    "TimerHandler:setTimeout|ui.js::74455|12|forced4",
+    "TimerHandler:setTimeout|town-shade.js:step:17695|46|forced0"
+   ]
+  },
+  {
+   "d": 148,
+   "block": 88,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74455|5|forced0",
+    "FrameRequestCallback|ui.js:frame:25964|132|forced1"
+   ]
+  },
+  {
+   "d": 75,
+   "block": 24,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|74|forced1"
+   ]
+  },
+  {
+   "d": 143,
    "block": 0,
    "scripts": [
     "FrameRequestCallback|ui.js:frame:25964|6|forced1"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|44|forced2"
+   ]
+  },
+  {
+   "d": 146,
+   "block": 96,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|145|forced1"
+   ]
+  },
+  {
+   "d": 124,
+   "block": 67,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|116|forced1"
+   ]
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|11|forced1"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 70,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|12|forced1"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 27,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25964|75|forced2"
    ]
   }
  ],

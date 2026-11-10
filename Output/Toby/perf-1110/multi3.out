@@ -1,1 +1,7 @@
 base :: map_walk_10s             fps  38.7 min1s    13 p95      50 long   2/174ms
+nocomposite :: map_walk_10s             fps  31.2 min1s     5 p95     100 long   3/347ms
+srcover :: map_walk_10s             fps    47 min1s    29 p95    33.4 long   2/247ms
+nooverlay :: map_walk_10s             fps  47.4 min1s    36 p95    33.4 long   2/212ms
+noscreen :: map_walk_10s             fps  45.8 min1s    38 p95    33.4 long   2/193ms
+nospots :: map_walk_10s             fps    48 min1s    41 p95    33.4 long   3/323ms
+base2 :: map_walk_10s             fps  45.4 min1s    35 p95    33.4 long   2/208ms
