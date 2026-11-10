@@ -1,0 +1,2311 @@
+{
+ "map_idle_zoom5": {
+  "frames": 49,
+  "secs": 8.09,
+  "fps_avg": 6.2,
+  "fps_min_1s": 6.2,
+  "ft_avg": 160.2,
+  "ft_p50": 166.6,
+  "ft_p95": 166.8,
+  "ft_p99": 166.8,
+  "ft_max": 166.8,
+  "frames_over_33": 49,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 901,
+  "canvas_px_created_M": 183.37,
+  "calls": {
+   "drawImage": 11002,
+   "clip": 150,
+   "fillRect": 3190,
+   "stroke": 1400,
+   "fill": 2177,
+   "createRadialGradient": 50
+  },
+  "heap_MB": 17.4,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 63,
+  "secs": 10.04,
+  "fps_avg": 6.3,
+  "fps_min_1s": 2,
+  "ft_avg": 157.67,
+  "ft_p50": 150,
+  "ft_p95": 216.6,
+  "ft_p99": 849.9,
+  "ft_max": 849.9,
+  "frames_over_33": 55,
+  "long_tasks": 4,
+  "long_ms": 1741,
+  "long_max": 852,
+  "canvases_created": 1013,
+  "canvas_px_created_M": 228.77,
+  "calls": {
+   "drawImage": 15036,
+   "clip": 192,
+   "fillRect": 4236,
+   "stroke": 1730,
+   "fill": 2702,
+   "createRadialGradient": 64,
+   "getImageData": 3,
+   "putImageData": 3,
+   "createPattern": 16
+  },
+  "heap_MB": 17.4,
+  "decoded_imgs": 339,
+  "decoded_img_MB": 1023,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "battle_idle": {
+  "frames": 41,
+  "secs": 8.09,
+  "fps_avg": 5.2,
+  "fps_min_1s": 5.2,
+  "ft_avg": 192.27,
+  "ft_p50": 199.9,
+  "ft_p95": 200,
+  "ft_p99": 200.1,
+  "ft_max": 200.1,
+  "frames_over_33": 41,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 757,
+  "canvas_px_created_M": 169.9,
+  "calls": {
+   "drawImage": 10790,
+   "fillRect": 2268,
+   "stroke": 840,
+   "fill": 2058,
+   "clip": 210,
+   "createRadialGradient": 42
+  },
+  "heap_MB": 17.4,
+  "decoded_imgs": 423,
+  "decoded_img_MB": 1153,
+  "canvases_live": 11,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "927x485",
+   "2x2"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 39,
+  "secs": 8.06,
+  "fps_avg": 5,
+  "fps_min_1s": 5,
+  "ft_avg": 201.7,
+  "ft_p50": 200,
+  "ft_p95": 250,
+  "ft_p99": 283.4,
+  "ft_max": 283.4,
+  "frames_over_33": 39,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 848,
+  "canvas_px_created_M": 214.14,
+  "calls": {
+   "drawImage": 11943,
+   "fillRect": 2160,
+   "stroke": 800,
+   "fill": 1960,
+   "clip": 200,
+   "createRadialGradient": 40,
+   "createLinearGradient": 144
+  },
+  "heap_MB": 17.4,
+  "decoded_imgs": 425,
+  "decoded_img_MB": 1165,
+  "canvases_live": 9,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "2062x1079",
+   "1311x686"
+  ]
+ },
+ "battle_action_hp": [
+  374,
+  180
+ ],
+ "loaf": [
+  {
+   "d": 288,
+   "block": 67,
+   "scripts": []
+  },
+  {
+   "d": 64,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 195,
+   "block": 137,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|22|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|165|forced0"
+   ]
+  },
+  {
+   "d": 1953,
+   "block": 1899,
+   "scripts": [
+    "BUTTON.onclick|ui.js::467517|101|forced2",
+    "FrameRequestCallback|ui.js:frame:25555|1817|forced1"
+   ]
+  },
+  {
+   "d": 96,
+   "block": 7,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|44|forced0"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 13,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|61|forced0"
+   ]
+  },
+  {
+   "d": 88,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 116,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 81,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 73,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 63,
+   "block": 11,
+   "scripts": []
+  },
+  {
+   "d": 140,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 167,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|10|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 200,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|41|forced0"
+   ]
+  },
+  {
+   "d": 200,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 224,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 230,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 183,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 197,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 155,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|11|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74046|7|forced4",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74046|7|forced4",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::74046|6|forced2",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 157,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 383,
+   "block": 177,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|225|forced0"
+   ]
+  },
+  {
+   "d": 124,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|18|forced0"
+   ]
+  },
+  {
+   "d": 146,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 136,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 199,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|47|forced0"
+   ]
+  },
+  {
+   "d": 123,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|11|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 166,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|11|forced2"
+   ]
+  },
+  {
+   "d": 157,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 155,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 157,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|10|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 158,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced2"
+   ]
+  },
+  {
+   "d": 155,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 161,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 209,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|25|forced1"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 41,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|88|forced1"
+   ]
+  },
+  {
+   "d": 86,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 165,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 893,
+   "block": 687,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|736|forced1"
+   ]
+  },
+  {
+   "d": 62,
+   "block": 11,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|61|forced1"
+   ]
+  },
+  {
+   "d": 129,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|10|forced1"
+   ]
+  },
+  {
+   "d": 123,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|13|forced1"
+   ]
+  },
+  {
+   "d": 122,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 138,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|46|forced1"
+   ]
+  },
+  {
+   "d": 157,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 137,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 116,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 131,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 128,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 162,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 154,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 166,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|10|forced1"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 203,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 146,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 204,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 154,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 165,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 120,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced1"
+   ]
+  },
+  {
+   "d": 139,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|15|forced1"
+   ]
+  },
+  {
+   "d": 63,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 311,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 160,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 209,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 141,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 206,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 172,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 152,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 169,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 143,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced1"
+   ]
+  },
+  {
+   "d": 142,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 138,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 153,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced1"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 119,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 129,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced1"
+   ]
+  },
+  {
+   "d": 969,
+   "block": 802,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|850|forced1"
+   ]
+  },
+  {
+   "d": 144,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 495,
+   "block": 353,
+   "scripts": [
+    "import.then|::46|360|forced17",
+    "FrameRequestCallback|ui.js:frame:25555|29|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|8|forced0"
+   ]
+  },
+  {
+   "d": 159,
+   "block": 18,
+   "scripts": [
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|33|forced5",
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|22|forced1",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|7|forced0",
+    "IMG[src=\"img/fx/fx-common-flash-star-white.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ray-burst-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|15|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-violet.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "FrameRequestCallback|ui.js:frame:25555|11|forced0"
+   ]
+  },
+  {
+   "d": 114,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-fire-explosion.webp?v=m3\"].onload|battle-fx-tex.js::34862|21|forced0",
+    "IMG[src=\"img/fx/fx-wind-vortex.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-hypno-circle.webp?v=m3\"].onload|battle-fx-tex.js::34862|9|forced0",
+    "IMG[src=\"img/fx/fx-hypno-spiral.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|7|forced0",
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 90,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-spear-pierce-cone.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0",
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 288,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/map-zone1/v5-fx/sheets/lava-surface.webp\"].onload|scene-fluid-fx.js::5329|8|forced0",
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|9|forced2"
+   ]
+  },
+  {
+   "d": 108,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|7|forced1"
+   ]
+  },
+  {
+   "d": 182,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 239,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 291,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 56,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 269,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 118,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 185,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 187,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 199,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 179,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 195,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|9|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 190,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 187,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 179,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 177,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 240,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 654,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 221,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 170,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|16|forced0"
+   ]
+  },
+  {
+   "d": 63,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 232,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 132,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1016,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 1015,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 74,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 156,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|11|forced0"
+   ]
+  },
+  {
+   "d": 138,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 164,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 219,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 189,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 191,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 196,
+   "block": 0,
+   "scripts": [
+    "BUTTON.onclick|ui.js::301820|13|forced8",
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|5|forced3"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 200,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|16|forced9",
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 193,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|26|forced11",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|6|forced4"
+   ]
+  },
+  {
+   "d": 181,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 283,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|12|forced6",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 142,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 211,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 215,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::325740|19|forced9",
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 147,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 220,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 182,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 216,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 202,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::327422|13|forced6",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 168,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 194,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|5|forced0"
+   ]
+  },
+  {
+   "d": 205,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::325740|19|forced8",
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|5|forced3"
+   ]
+  },
+  {
+   "d": 178,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 225,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 186,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 219,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js::327422|11|forced6"
+   ]
+  },
+  {
+   "d": 214,
+   "block": 0,
+   "scripts": [
+    "BUTTON.onclick|ui.js::301820|7|forced3",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0",
+    "ResizeObserverCallback|ui.js::296602|17|forced11"
+   ]
+  },
+  {
+   "d": 152,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 199,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|14|forced9",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 176,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|17|forced10",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0",
+    "FrameRequestCallback|scene-atmosphere.js:tick:11610|6|forced4"
+   ]
+  },
+  {
+   "d": 239,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  },
+  {
+   "d": 243,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 173,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|13|forced8",
+    "BUTTON.onclick|ui.js::301820|7|forced4",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 188,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 200,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 205,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 163,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 242,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|14|forced8",
+    "FrameRequestCallback|ui.js:frame:25555|7|forced0"
+   ]
+  },
+  {
+   "d": 183,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:261155|24|forced14",
+    "FrameRequestCallback|ui.js:frame:25555|6|forced0"
+   ]
+  },
+  {
+   "d": 170,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:25555|8|forced0"
+   ]
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

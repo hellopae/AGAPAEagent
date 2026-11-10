@@ -22,7 +22,7 @@ def setup(p,port,vw=1440,vh=900,dsf=2):
         body=re.sub(r'src="src/ui\.js\?[^"]*"','src="src/ui.js"',body)
         body=body.replace('</body>','<script type="module">window.__ui=await import("./src/ui.js");</script></body>')
         route.fulfill(response=r,body=body)
-    pg.route(re.compile(r'.*/index\.html$'),fix)
+    pg.route(re.compile(r'.*/index\.html(\?.*)?$'),fix)
     import os
     PATCH=json.loads(os.environ.get('PATCHES','[]'))
     if PATCH:
@@ -36,7 +36,7 @@ def setup(p,port,vw=1440,vh=900,dsf=2):
             route.fulfill(response=r,body=body,headers={**r.headers,'content-type':'text/javascript'})
         names='|'.join(re.escape(f) for f in {x[0] for x in PATCH})
         pg.route(re.compile(r'.*/src/('+names+r')(\?.*)?$'),patch)
-    pg.goto(f'http://127.0.0.1:{port}/index.html')
+    pg.goto(f'http://127.0.0.1:{port}/index.html'+_os.environ.get('QS',''))
     pg.wait_for_timeout(2500)
     for _ in range(8):
         if pg.is_visible('#t-start') and not pg.is_visible('#enter-gate'): break

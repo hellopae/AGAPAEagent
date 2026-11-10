@@ -1,0 +1,30 @@
+== final-base
+map_idle_zoom5           fps   6.2 min1s   6.2 p95   166.8 long   0/0ms
+map_walk_10s             fps   6.3 min1s     2 p95   216.6 long   4/1741ms
+battle_idle              fps   5.2 min1s   5.2 p95     200 long   0/0ms
+battle_action_8s         fps     5 min1s     5 p95     250 long   0/0ms
+battle_action_hp [374, 180]
+== final-new1
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  50.9 min1s    39 p95    33.4 long   2/157ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps    57 min1s    48 p95    16.8 long   1/52ms
+battle_action_hp [365, 180]
+== final-new-dpr15
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.7 min1s  50.2 p95    16.8 long   2/134ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  57.4 min1s  49.1 p95    16.8 long   0/0ms
+battle_action_hp [368, 180]
+== final-new2
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  50.7 min1s  39.7 p95    33.4 long   2/155ms
+battle_idle              fps    60 min1s    60 p95    16.8 long   0/0ms
+battle_action_8s         fps  57.2 min1s    48 p95    16.8 long   0/0ms
+battle_action_hp [362, 180]
+== final-base2
+map_idle_zoom5           fps   6.2 min1s   6.2 p95   166.7 long   0/0ms
+map_walk_10s             fps   6.4 min1s     2 p95   333.2 long   4/1771ms
+battle_idle              fps   5.2 min1s   5.2 p95   200.1 long   0/0ms
+battle_action_8s         fps     5 min1s     5 p95   266.6 long   1/66ms
+battle_action_hp [376, 180]

@@ -1,9 +1,0 @@
-base :: map_walk_10s             fps  45.2 min1s  34.7 p95    33.4 long   2/219ms
-nofluid :: map_walk_10s             fps  55.8 min1s  40.4 p95    16.8 long   2/193ms
-noclouds :: map_walk_10s             fps  48.1 min1s    37 p95    33.4 long   2/178ms
-nosky :: map_walk_10s             fps  44.2 min1s    36 p95    33.4 long   2/210ms
-nonight :: map_walk_10s             fps  45.6 min1s    36 p95    33.4 long   2/226ms
-noscenshadow :: map_walk_10s             fps  43.3 min1s  28.9 p95    33.4 long   2/239ms
-noshadows :: map_walk_10s             fps  48.4 min1s  39.7 p95    33.4 long   3/261ms
-noweather :: map_walk_10s             fps  49.8 min1s    24 p95    33.4 long   4/596ms
-base2 :: map_walk_10s             fps  44.3 min1s  33.6 p95    33.4 long   3/285ms
