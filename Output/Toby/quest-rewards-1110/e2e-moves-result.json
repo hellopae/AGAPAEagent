@@ -77,7 +77,7 @@
     ],
     [
      "asia:kan",
-     23
+     82
     ],
     [
      "asia:dam",
@@ -86,6 +86,10 @@
    ],
    "taunt": null,
    "sealed": {
+    "asia:dam": {
+     "by": "rope",
+     "until": 1
+    },
     "asia:kan": {
      "by": "rope",
      "until": 2
@@ -105,8 +109,110 @@
   },
   "skillWhyAfter": "รออีก 115 วินาที"
  },
- "sqBoon_reached_owner_turn": false,
- "sqBoon_ERROR": "Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"dialog[open] [data-command=\\\"power\\\"]\")\n",
+ "sqBoon_reached_owner_turn": true,
+ "sqBoon_power_buttons": [
+  [
+   "letterDelivered",
+   false,
+   "คำฝากถึงมือกำลังใจ 10 · 120 วินาที"
+  ],
+  [
+   "crew:boon",
+   true,
+   "ฟื้นบารมี 70ถูกผ้าปิดปาก ใช้ท่าพิเศษไม่ได้ / Cooldown or low morale"
+  ],
+  [
+   "tea",
+   true,
+   "น้ำชาไม่มีของ / No stock"
+  ],
+  [
+   "health",
+   true,
+   "กล่องยาไม่มีของ / No stock"
+  ],
+  [
+   "holyWater",
+   true,
+   "น้ำมนต์ไม่มีของ / No stock"
+  ],
+  [
+   "food",
+   true,
+   "ข้าวปั้น / Rice Ballไม่มีของ / No stock"
+  ]
+ ],
+ "sqBoon_cast": {
+  "before": {
+   "foes": [
+    819,
+    198,
+    198,
+    198
+   ],
+   "you": 100,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "west:taan",
+     93.6
+    ],
+    [
+     "west:boon",
+     76
+    ],
+    [
+     "west:dam",
+     92
+    ]
+   ]
+  },
+  "after": {
+   "foes": [
+    819,
+    198,
+    198,
+    198
+   ],
+   "you": 100,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "west:taan",
+     100
+    ],
+    [
+     "west:boon",
+     100
+    ],
+    [
+     "west:dam",
+     100
+    ]
+   ],
+   "taunt": null,
+   "sealed": {},
+   "conf": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "prot": [
+    "you",
+    "west:taan",
+    "west:boon",
+    "west:dam"
+   ]
+  },
+  "skillWhyAfter": "รออีก 116 วินาที"
+ },
  "sqGuard_reached_owner_turn": true,
  "sqGuard_power_buttons": [
   [
@@ -147,7 +253,7 @@
     294,
     294
    ],
-   "you": 78,
+   "you": 100,
    "allies": [
     [
      "you",
@@ -163,7 +269,7 @@
     ],
     [
      "th:guard",
-     72
+     92
     ]
    ]
   },
@@ -173,7 +279,7 @@
     252,
     252
    ],
-   "you": 78,
+   "you": 100,
    "allies": [
     [
      "you",
@@ -189,7 +295,7 @@
     ],
     [
      "th:guard",
-     21
+     79
     ]
    ],
    "taunt": {
@@ -204,7 +310,7 @@
    ],
    "prot": []
   },
-  "skillWhyAfter": "รออีก 115 วินาที"
+  "skillWhyAfter": "รออีก 116 วินาที"
  },
  "sqBoon_receipt_rows": [
   "เบี้ยกรรม+180",
@@ -256,9 +362,7 @@
   "vw": 390,
   "wide": []
  },
- "retro_dialog": [
-  "✨ ได้ไอเท็มใหม่ · ข้าวปั้น"
- ],
+ "retro_dialog": [],
  "retro_overflow": {
   "dialog": [
    16,

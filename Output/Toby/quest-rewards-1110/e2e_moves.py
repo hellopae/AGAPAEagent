@@ -40,7 +40,10 @@ with sync_playwright() as p:
           for(const id of ['sqKan','sqNira','kinTaan','sqGuard']){snap.sideQuests[id]={step:id.startsWith('kin')?3:5,choice:0,done:true,caseId:null,verdict:null};}
           snap.coin=1000;snap.inventory={};return snap;}""")
         pg.evaluate("(s)=>{G.restore(s);G.save=()=>true;G.onChange();}", old)
-        pg.wait_for_timeout(2500)
+        for _ in range(8):   # other windows (new-item discovery, story) go first; the notice waits for them
+            pg.wait_for_timeout(1500)
+            if pg.evaluate("!!document.querySelector('dialog[open] [data-retro-ok]')"): break
+            pg.evaluate("(()=>{const b=document.querySelector('dialog[open] button.gold[data-close]');b&&b.click();})()")   # the new-item windows first: they have their own gold button
         res['retro_dialog'] = pg.evaluate("[...document.querySelectorAll('dialog[open] h2, dialog[open] h3, dialog[open] .reward-row')].map(e=>e.textContent.replace(/\\s+/g,' ').trim())")
         shot(pg, 'retro-notice-390'); res['retro_overflow'] = overflow(pg)
         res['retro_state'] = pg.evaluate("({coin:G.coin,inv:G.inventory,pend:(G.sideQuests.sqKan.reward)})")

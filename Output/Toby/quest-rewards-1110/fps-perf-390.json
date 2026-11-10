@@ -1,0 +1,135 @@
+{
+ "map_idle": {
+  "frames": 365,
+  "secs": 6.1,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 1,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 106655,
+   "clip": 1098,
+   "fillRect": 20826,
+   "stroke": 14029,
+   "fill": 19440
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 276,
+  "decoded_img_MB": 780,
+  "canvases_live": 3,
+  "main_canvases": [
+   "585x1266",
+   "240x160",
+   "561x1242"
+  ]
+ },
+ "quest_fight_idle": {
+  "frames": 483,
+  "secs": 8.06,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "drawImage": 14360,
+   "fillRect": 18609,
+   "stroke": 51712,
+   "fill": 20611,
+   "clip": 824
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 458,
+  "decoded_img_MB": 1298,
+  "canvases_live": 11,
+  "main_canvases": [
+   "585x1266",
+   "240x160",
+   "561x1242",
+   "460x978",
+   "256x384",
+   "256x384",
+   "256x384",
+   "256x384",
+   "281x187",
+   "460x978",
+   "2x2"
+  ]
+ },
+ "quest_fight_actions_10s": {
+  "frames": 593,
+  "secs": 10.09,
+  "fps_avg": 58.9,
+  "fps_min_1s": 55.6,
+  "ft_avg": 16.98,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 33.3,
+  "ft_max": 49.9,
+  "frames_over_33": 3,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 206,
+  "canvas_px_created_M": 39.5,
+  "calls": {
+   "drawImage": 25385,
+   "fillRect": 23661,
+   "stroke": 65952,
+   "fill": 26166,
+   "clip": 1047,
+   "createLinearGradient": 1414,
+   "getImageData": 2
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 463,
+  "decoded_img_MB": 1320,
+  "canvases_live": 11,
+  "main_canvases": [
+   "585x1266",
+   "240x160",
+   "561x1242",
+   "460x978",
+   "256x384",
+   "256x384",
+   "256x384",
+   "256x384",
+   "281x187",
+   "760x1616",
+   "460x978"
+  ]
+ },
+ "foes_hp": [
+  8078,
+  2400,
+  2400,
+  2400
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   390,
+   844,
+   2
+  ],
+  "mode": "performance",
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

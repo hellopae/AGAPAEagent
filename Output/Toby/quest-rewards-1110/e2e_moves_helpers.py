@@ -9,7 +9,7 @@ def start_fight(pg, id, zone, owner):
       g.party.members=[k==='guard'?'taan':k,'taan','dam'].filter((v,i,a)=>a.indexOf(v)===i&&v!=='guard').slice(0,g.partyMax());g.hp=g.hpMax;
       const C=await import('./src/combat-skills.js');const F=await import('./src/quest-fights.js');C.unlockQuestSkill(g,F.QUEST_FIGHTS[id].skill);
       g.sideQuests[id]={step:3,choice:0,done:false,verdict:{right:true,privateOpened:false}};
-      g.startQuestFight(id);g.battle.foes.forEach(f=>{f.hp=f.maxHp=f.maxHp*3;});__ui.openBattle();}""", [id, owner])
+      g.startQuestFight(id);g.battle.foes.forEach(f=>{f.hp=f.maxHp=f.maxHp*3;f.atk=[2,4];});__ui.openBattle();}   // e2e of the MOVES, not of the balance (that is scripts/sim-quest-fights.mjs): weak hits keep everyone standing to their turn""", [id, owner])
     pg.wait_for_timeout(2500)
 
 def pass_turns_until(pg, owner_id, max_s=60):
