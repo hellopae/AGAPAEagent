@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T08:28:28.463Z",
+  "updatedAt": "2026-11-10T08:28:44.503Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Fix AVEGEE frame-rate stutter",
+      "status": "working",
+      "task": "AVEGEE owner UI/map fixes",
       "report": {
         "when": "01:32",
         "title": "Toby: interrogation + battle scene FX",
