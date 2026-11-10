@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-10T11:05:02.315Z",
+  "updatedAt": "2026-11-10T12:26:24.095Z",
   "entries": [
+    {
+      "id": "wl-261110-toby-zaao",
+      "datetime": "2026-11-10T12:26:24Z",
+      "displayDate": "10 พ.ย. 2569",
+      "displayTime": "19:26",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AVEGEE battle FX and encounters",
+      "summary": "These two notifications are also stale background wait-loops, and I'm taking no action on them. Both polled for `node --test` runs that had already finished and exited with code 144 when I killed leftover processes.\n\nThe test result is unchanged: 1963 pass, 0 fail on the committed code. My report to"
+    },
     {
       "id": "wl-261110-rae-2nho",
       "datetime": "2026-11-10T11:05:02Z",

@@ -1,0 +1,47 @@
+== bfx-high-a
+load1=2.68
+load1=2.15
+gfx mode -> high
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  49.9 min1s    40 p95    33.4 long   3/215ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  56.4 min1s  43.6 p95    33.3 long   1/57ms
+battle_action_hp [363, 180]
+== bfx-perf-a
+load1=2.86
+load1=2.66
+load1=2.80
+load1=2.73
+load1=4.60
+load1=3.92
+load1=3.56
+load1=3.05
+load1=2.51
+load1=1.87
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  58.7 min1s  50.2 p95    16.8 long   2/131ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  57.4 min1s    48 p95    16.8 long   0/0ms
+battle_action_hp [349, 180]
+== bfx-high-b
+load1=2.32
+gfx mode -> high
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  53.7 min1s    42 p95    33.3 long   2/163ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  56.5 min1s  46.7 p95    33.2 long   0/0ms
+battle_action_hp [353, 180]
+== bfx-perf-b
+load1=3.19
+load1=3.13
+load1=2.60
+load1=2.62
+load1=2.47
+gfx mode -> performance
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.6 min1s  49.1 p95    16.8 long   2/137ms
+battle_idle              fps    60 min1s    60 p95    16.7 long   0/0ms
+battle_action_8s         fps  57.5 min1s  45.8 p95    16.8 long   0/0ms
+battle_action_hp [363, 180]
+ALLDONE
