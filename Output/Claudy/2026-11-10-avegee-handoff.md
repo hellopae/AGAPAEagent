@@ -26,3 +26,10 @@
 - สัดส่วนศัตรูชายแดน 30/45/25 และรางวัล ×1/1.25/1.5 · บอสอึด ×1.8 · สีแสงวาบโซน · หัวหน้าชายแดนใช้จังหวะ 2,4,6 ไหม
 - ข้อความระบบชั่วคราวในฉากสู้ภารกิจ (ให้ Rae เกลา)
 - ภายหลัง: WebGL หลังพื้น HD ครบ · ถอดตั้งค่ากราฟิกเมื่อ WebGL ลื่น
+
+## เพิ่ม 23:10 — พื้น HD โซน 2–4 + อนุญาต merge
+- คุณเป้: "ถ้าวาดแผนที่ 4 โซนเสร็จแล้ว push ขึ้น main ได้เลย"
+- คิวยาว `Output/Codex/runs/queue-z234-hd.py` (log `queue-z234-hd.log`): รอ after2300 จบ → โซน 2, 3, 4 โซนละ 5 run (4 chunk/run, ขนาน 2) + ASSEMBLE · ใบงาน `Output/Claudy/briefs/2026-11-10-avegee-z234-hd-*.md`
+- **ชนลิมิตแล้วรอ reset เองและรันต่อ** (สลับ work-mode ให้) — ใช้หลายวัน · ถ้า Mac รีสตาร์ท คิวหาย ต้องสั่งใหม่: `cd "<AGAPAE Agent>" && nohup caffeinate -dims python3 Output/Codex/runs/queue-z234-hd.py &` (ระวัง run ที่เสร็จแล้วจะรันซ้ำ — แก้ GROUPS ก่อน)
+- งานที่คิว 23:00 ค้างถ้าชนลิมิต (CLOUDS/COOK/QUEST-ART/FOOD-CONTINUE) **ไม่ resume เอง** — Claudy ต้องสั่งใหม่
+- merge: ครบ 4 โซน → Toby เสียบพื้นทุกโซน → Dale รีวิว → merge main
