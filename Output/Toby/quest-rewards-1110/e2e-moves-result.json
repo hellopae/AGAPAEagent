@@ -1,0 +1,301 @@
+{
+ "sqKan_reached_owner_turn": true,
+ "sqKan_power_buttons": [
+  [
+   "eyeAwaitingPermission",
+   false,
+   "เนตรรอคำอนุญาตกำลังใจ 10 · 120 วินาที"
+  ],
+  [
+   "crew:kan",
+   false,
+   "สะกดจิต — มึน 1 เทิร์น · ตีตัวเอง ×1.05ท่าพิเศษ / Special"
+  ],
+  [
+   "tea",
+   true,
+   "น้ำชาไม่มีของ / No stock"
+  ],
+  [
+   "health",
+   true,
+   "กล่องยาไม่มีของ / No stock"
+  ],
+  [
+   "holyWater",
+   true,
+   "น้ำมนต์ไม่มีของ / No stock"
+  ],
+  [
+   "food",
+   true,
+   "ข้าวปั้น / Rice Ballไม่มีของ / No stock"
+  ]
+ ],
+ "sqKan_cast": {
+  "before": {
+   "foes": [
+    954,
+    282,
+    282
+   ],
+   "you": 100,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "asia:taan",
+     93.6
+    ],
+    [
+     "asia:kan",
+     92
+    ],
+    [
+     "asia:dam",
+     92
+    ]
+   ]
+  },
+  "after": {
+   "foes": [
+    954,
+    282,
+    282
+   ],
+   "you": 100,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "asia:taan",
+     93.6
+    ],
+    [
+     "asia:kan",
+     23
+    ],
+    [
+     "asia:dam",
+     92
+    ]
+   ],
+   "taunt": null,
+   "sealed": {
+    "asia:kan": {
+     "by": "rope",
+     "until": 2
+    }
+   },
+   "conf": [
+    1,
+    0,
+    0
+   ],
+   "prot": [
+    "you",
+    "asia:taan",
+    "asia:kan",
+    "asia:dam"
+   ]
+  },
+  "skillWhyAfter": "รออีก 115 วินาที"
+ },
+ "sqBoon_reached_owner_turn": false,
+ "sqBoon_ERROR": "Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"dialog[open] [data-command=\\\"power\\\"]\")\n",
+ "sqGuard_reached_owner_turn": true,
+ "sqGuard_power_buttons": [
+  [
+   "gatekeeperStand",
+   false,
+   "ทวารบาลยืนรับแค้นกำลังใจ 10 · 120 วินาที"
+  ],
+  [
+   "guard",
+   false,
+   "ฟาดแรง 60ท่าพิเศษ / Special"
+  ],
+  [
+   "tea",
+   true,
+   "น้ำชาไม่มีของ / No stock"
+  ],
+  [
+   "health",
+   true,
+   "กล่องยาไม่มีของ / No stock"
+  ],
+  [
+   "holyWater",
+   true,
+   "น้ำมนต์ไม่มีของ / No stock"
+  ],
+  [
+   "food",
+   true,
+   "ข้าวปั้น / Rice Ballไม่มีของ / No stock"
+  ]
+ ],
+ "sqGuard_cast": {
+  "before": {
+   "foes": [
+    1032,
+    294,
+    294
+   ],
+   "you": 78,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "th:taan",
+     100
+    ],
+    [
+     "th:dam",
+     92
+    ],
+    [
+     "th:guard",
+     72
+    ]
+   ]
+  },
+  "after": {
+   "foes": [
+    990,
+    252,
+    252
+   ],
+   "you": 78,
+   "allies": [
+    [
+     "you",
+     null
+    ],
+    [
+     "th:taan",
+     100
+    ],
+    [
+     "th:dam",
+     92
+    ],
+    [
+     "th:guard",
+     21
+    ]
+   ],
+   "taunt": {
+    "id": "th:guard",
+    "until": 2
+   },
+   "sealed": null,
+   "conf": [
+    0,
+    0,
+    0
+   ],
+   "prot": []
+  },
+  "skillWhyAfter": "รออีก 115 วินาที"
+ },
+ "sqBoon_receipt_rows": [
+  "เบี้ยกรรม+180",
+  "EXPค่าประสบการณ์+30",
+  "ข้าวปั้น×2",
+  "กล่องยา×3",
+  "น้ำมนต์×2",
+  "น้ำชา×2",
+  "คำฝากถึงมือท่าไม้ตายใหม่"
+ ],
+ "sqBoon_closed": {
+  "step": 5,
+  "choice": 0,
+  "done": true,
+  "fought": true,
+  "reward": {
+   "coin": 180,
+   "order": 8,
+   "exp": 30,
+   "items": {
+    "food": 2,
+    "health": 3,
+    "holyWater": 2,
+    "tea": 2
+   },
+   "skill": "letterDelivered",
+   "retro": false
+  },
+  "coin": 1180,
+  "exp": 30,
+  "battle": null,
+  "inv": {
+   "food": 2,
+   "health": 3,
+   "holyWater": 2,
+   "tea": 2
+  }
+ },
+ "sqBoon_receipt_overflow": {
+  "dialog": [
+   16,
+   374,
+   19,
+   825
+  ],
+  "scrollW": 356,
+  "clientW": 356,
+  "docScrollW": 390,
+  "vw": 390,
+  "wide": []
+ },
+ "retro_dialog": [
+  "✨ ได้ไอเท็มใหม่ · ข้าวปั้น"
+ ],
+ "retro_overflow": {
+  "dialog": [
+   16,
+   374,
+   223,
+   621
+  ],
+  "scrollW": 356,
+  "clientW": 356,
+  "docScrollW": 390,
+  "vw": 390,
+  "wide": []
+ },
+ "retro_state": {
+  "coin": 1200,
+  "inv": {
+   "health": 7,
+   "holyWater": 5,
+   "food": 3,
+   "tea": 2,
+   "ashStone": 2,
+   "bladeShard": 2
+  },
+  "pend": {
+   "coin": 80,
+   "order": 0,
+   "exp": 0,
+   "items": {
+    "health": 3,
+    "holyWater": 2,
+    "ashStone": 2
+   },
+   "skill": "eyeAwaitingPermission",
+   "retro": true,
+   "seen": false
+  }
+ },
+ "retro_ERROR": "Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"dialog[open] [data-retro-ok]\")\n",
+ "errors": []
+}

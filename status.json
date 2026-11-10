@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T12:39:29.312Z",
+  "updatedAt": "2026-11-10T13:22:08.428Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE quest rewards and battles",
       "report": {
-        "when": "17:53",
-        "title": "AVEGEE graphics quality setting",
-        "body": "These two notifications are also stale background wait-loops, and I'm taking no action on them. Both polled for `node --test` runs that had already finished and exited with code 144 when I killed leftover processes.\n\nThe test result is unchanged: 1963 pass, 0 fail on the committed code. My report to Claudy already covers everything else."
+        "when": "20:22",
+        "title": "AVEGEE quest rewards and battles",
+        "body": "Another stale background wait-loop, so I'm taking no action. It was waiting on an output file from an earlier experiment run that I had already killed and re-run. It exited with code 144 when I killed those processes.\n\nNo new information here. The report to Claudy stands as delivered."
       }
     },
     {
