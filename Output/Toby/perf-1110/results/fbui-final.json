@@ -1,0 +1,434 @@
+{
+ "map_idle_zoom5": {
+  "frames": 481,
+  "secs": 8.03,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 2,
+  "canvas_px_created_M": 0.04,
+  "calls": {
+   "drawImage": 99464,
+   "clip": 1446,
+   "fillRect": 22626,
+   "stroke": 13496,
+   "fill": 20589
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 483,
+  "secs": 10.03,
+  "fps_avg": 48.3,
+  "fps_min_1s": 38,
+  "ft_avg": 20.7,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 83.3,
+  "ft_max": 133.3,
+  "frames_over_33": 37,
+  "long_tasks": 2,
+  "long_ms": 190,
+  "long_max": 107,
+  "canvases_created": 76,
+  "canvas_px_created_M": 52.66,
+  "calls": {
+   "drawImage": 101906,
+   "clip": 1452,
+   "fillRect": 22787,
+   "stroke": 12876,
+   "fill": 19867,
+   "createPattern": 24
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 341,
+  "decoded_img_MB": 1041,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "battle_idle": {
+  "frames": 481,
+  "secs": 8.03,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 0,
+  "canvas_px_created_M": 0,
+  "calls": {
+   "fillRect": 8624,
+   "drawImage": 20433,
+   "clip": 819,
+   "fill": 4668,
+   "stroke": 960
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 434,
+  "decoded_img_MB": 1198,
+  "canvases_live": 11,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "927x485",
+   "2x2"
+  ]
+ },
+ "battle_action_8s": {
+  "frames": 449,
+  "secs": 8.02,
+  "fps_avg": 56,
+  "fps_min_1s": 43.6,
+  "ft_avg": 17.85,
+  "ft_p50": 16.7,
+  "ft_p95": 33.3,
+  "ft_p99": 50,
+  "ft_max": 66.7,
+  "frames_over_33": 10,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 151,
+  "canvas_px_created_M": 70.36,
+  "calls": {
+   "fillRect": 8557,
+   "drawImage": 25382,
+   "clip": 813,
+   "fill": 4644,
+   "stroke": 960,
+   "createLinearGradient": 1005
+  },
+  "heap_MB": 18.4,
+  "decoded_imgs": 436,
+  "decoded_img_MB": 1210,
+  "canvases_live": 10,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916",
+   "927x485",
+   "927x485",
+   "256x384",
+   "256x384",
+   "422x282",
+   "2062x1079",
+   "1311x686"
+  ]
+ },
+ "battle_action_hp": [
+  363,
+  180
+ ],
+ "loaf": [
+  {
+   "d": 364,
+   "block": 91,
+   "scripts": []
+  },
+  {
+   "d": 209,
+   "block": 151,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/lava-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|24|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|176|forced0"
+   ]
+  },
+  {
+   "d": 2139,
+   "block": 2086,
+   "scripts": [
+    "BUTTON.onclick|ui.js::468479|105|forced2",
+    "FrameRequestCallback|ui.js:frame:26517|2015|forced1"
+   ]
+  },
+  {
+   "d": 82,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|21|forced0"
+   ]
+  },
+  {
+   "d": 75,
+   "block": 23,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|68|forced0"
+   ]
+  },
+  {
+   "d": 130,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 77,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 64,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 78,
+   "block": 24,
+   "scripts": []
+  },
+  {
+   "d": 78,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|8|forced0"
+   ]
+  },
+  {
+   "d": 55,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 162,
+   "block": 23,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|70|forced0"
+   ]
+  },
+  {
+   "d": 66,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|6|forced0"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 31,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|78|forced0"
+   ]
+  },
+  {
+   "d": 77,
+   "block": 20,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|66|forced1"
+   ]
+  },
+  {
+   "d": 92,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|7|forced2"
+   ]
+  },
+  {
+   "d": 107,
+   "block": 57,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|107|forced1"
+   ]
+  },
+  {
+   "d": 92,
+   "block": 33,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|82|forced1"
+   ]
+  },
+  {
+   "d": 55,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|8|forced1"
+   ]
+  },
+  {
+   "d": 128,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|6|forced2"
+   ]
+  },
+  {
+   "d": 75,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|8|forced1"
+   ]
+  },
+  {
+   "d": 76,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|6|forced1"
+   ]
+  },
+  {
+   "d": 53,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:26517|6|forced1"
+   ]
+  },
+  {
+   "d": 431,
+   "block": 369,
+   "scripts": [
+    "import.then|::46|413|forced23"
+   ]
+  },
+  {
+   "d": 89,
+   "block": 24,
+   "scripts": [
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "FrameRequestCallback|ui.js:frame:26517|65|forced0"
+   ]
+  },
+  {
+   "d": 117,
+   "block": 17,
+   "scripts": [
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|37|forced8",
+    "IMG[src=\"img/mob-werewolf.png\"].onload|battle-scale.js:run:1142|25|forced1",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|8|forced0",
+    "IMG[src=\"img/fx/fx-common-flash-star-white.webp?v=m3\"].onload|battle-fx-tex.js::34862|11|forced0"
+   ]
+  },
+  {
+   "d": 114,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-common-ray-burst-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|15|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-gold.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-common-ring-violet.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-fire-explosion.webp?v=m3\"].onload|battle-fx-tex.js::34862|18|forced0",
+    "TimerHandler:setTimeout|battle-fx.js:slice:5071|7|forced0",
+    "IMG[src=\"img/fx/fx-ice-glow-core.webp?v=m3\"].onload|battle-fx-tex.js::34862|5|forced0"
+   ]
+  },
+  {
+   "d": 102,
+   "block": 0,
+   "scripts": [
+    "IMG[src=\"img/fx/fx-wind-vortex.webp?v=m3\"].onload|battle-fx-tex.js::34862|9|forced0",
+    "IMG[src=\"img/fx/fx-hypno-circle.webp?v=m3\"].onload|battle-fx-tex.js::34862|12|forced0",
+    "IMG[src=\"img/fx/fx-hypno-spiral.webp?v=m3\"].onload|battle-fx-tex.js::34862|7|forced0",
+    "IMG[src=\"img/fx/fx-hypno-ribbons.webp?v=m3\"].onload|battle-fx-tex.js::34862|8|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-green.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0",
+    "IMG[src=\"img/fx/fx-heal-aura-blue.webp?v=m3\"].onload|battle-fx-tex.js::34862|6|forced0"
+   ]
+  },
+  {
+   "d": 261,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 119,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 82,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 55,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1020,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 1011,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 350,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 72,
+   "block": 0,
+   "scripts": [
+    "BUTTON.onclick|ui.js::302782|12|forced5"
+   ]
+  },
+  {
+   "d": 78,
+   "block": 6,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262117|20|forced13"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|ui.js:tick:262117|35|forced17"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 52,
+   "block": 0,
+   "scripts": []
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
