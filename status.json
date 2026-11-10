@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T10:53:41.200Z",
+  "updatedAt": "2026-11-10T10:53:44.639Z",
   "agents": [
     {
       "id": "claudy",
@@ -310,7 +310,7 @@
       "report": {
         "when": "17:53",
         "title": "AVEGEE graphics quality setting",
-        "body": "Nothing further to do on this notification. It is a stale background wait-loop from earlier in the session. It watched for a `node --test` run that had already finished, and it exited with code 144 when I killed leftover processes.\n\nThe test result that counts is the final full run on the committed code: 1963 pass, 0 fail. The report I already handed back stands as written. The code is on `claude/2026-11-05-zone1-v5-fx` at `a3a94aee`, and the working note and evidence are in the AGAPAE Agent repo (`cfa2612`)."
+        "body": "These two notifications are also stale background wait-loops, and I'm taking no action on them. Both polled for `node --test` runs that had already finished and exited with code 144 when I killed leftover processes.\n\nThe test result is unchanged: 1963 pass, 0 fail on the committed code. My report to Claudy already covers everything else."
       }
     },
     {
