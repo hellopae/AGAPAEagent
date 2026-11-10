@@ -2,6 +2,14 @@
 
 Repo: AVEGEE (worktree ของ run นี้) · งานวาดล้วน · ห้าม commit/push/merge เอง · **ImageGen ในตัวเท่านั้น**
 
+## ⚠️ อินพุต (เพิ่ม 10 พ.ย. 2569 19:25 — worktree ของ run นี้แตกจาก main ซึ่งยังไม่มีพื้น v7 · อ่านไฟล์จาก path เต็มด้านล่างได้เลย อย่าหยุดงานเพราะ "ขาดพื้น v7")
+- **พื้น v7 (ASSEMBLE เสร็จแล้ว)**: `/Users/agapae/agapae-work/.codex-worktrees/20261110T115811Z-6ad6e037/docs/art-reviews/2026-11-05-z1-v5-hd-assemble/v7/` + `README.md`, `inventory.json`, `overview.jpg`, `structure.json` ในโฟลเดอร์แม่
+- **branch เกมปัจจุบัน** (`claude/2026-11-05-zone1-v5-fx`): `/Users/agapae/agapae-work/.toby-worktrees/z1-v5/` เช่น `img/map-zone1/v5-fx/fx-layout.json`, `src/terrain*.js`, `src/town-walkmask.js`
+- fluids เดิม: `/Users/agapae/agapae-work/.codex-worktrees/20261105T020534Z-e4155fda/`, fluids-HD: `/Users/agapae/agapae-work/.codex-worktrees/20261105T025249Z-3596dfe4/`
+- รายงาน Toby: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-11-05-z1-v5-fx.md` · ภาพคุณเป้วง: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/2026-11-05-map-redraw/input/owner-1809/`
+- คัดลอกไฟล์ที่ต้องใช้เข้า worktree ของ run นี้ (เช่น `docs/art-reviews/<งานนี้>/input/`) แล้วทำงานต่อ · ส่งออกยังอยู่ใน worktree ของ run นี้ตามเดิม
+
+
 ## คุณเป้ (5 พ.ย. ~14:10)
 "หมอกกับเมฆยังไม่เห็นเลยว่าอยู่ตรงไหน เมฆทำ animation sprite ให้ชัดกว่านี้ได้ไหม หรือควรวาดรูปแผนที่แยกเมฆไปอีกรูป"
 Claudy เสนอ: **วาดเมฆแยกเป็นอีกชั้น** ความละเอียดเท่าพื้นใหม่ (2.56 px/หน่วย) แล้วขยับด้วยเมฆลอยช้า + ผสมระหว่าง 2–3 แบบที่วาด (crossfade) → คมเท่าพื้น และเห็นชัดว่าเมฆอยู่ตรงไหน
