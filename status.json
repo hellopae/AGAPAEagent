@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T12:35:14.798Z",
+  "updatedAt": "2026-11-10T12:39:29.312Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE battle FX and encounters",
+      "status": "working",
+      "task": "AVEGEE quest rewards and battles",
       "report": {
         "when": "17:53",
         "title": "AVEGEE graphics quality setting",
