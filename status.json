@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T12:26:24.095Z",
+  "updatedAt": "2026-11-10T12:27:38.931Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Polish AVEGEE quest dialogue",
+      "status": "working",
+      "task": "Write AVEGEE quest battle scripts",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
