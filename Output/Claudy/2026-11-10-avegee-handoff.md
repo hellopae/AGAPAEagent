@@ -32,4 +32,4 @@
 - คิวยาว `Output/Codex/runs/queue-z234-hd.py` (log `queue-z234-hd.log`): รอ after2300 จบ → โซน 2, 3, 4 โซนละ 5 run (4 chunk/run, ขนาน 2) + ASSEMBLE · ใบงาน `Output/Claudy/briefs/2026-11-10-avegee-z234-hd-*.md`
 - **ชนลิมิตแล้วรอ reset เองและรันต่อ** (สลับ work-mode ให้) — ใช้หลายวัน · ถ้า Mac รีสตาร์ท คิวหาย ต้องสั่งใหม่: `cd "<AGAPAE Agent>" && nohup caffeinate -dims python3 Output/Codex/runs/queue-z234-hd.py &` (ระวัง run ที่เสร็จแล้วจะรันซ้ำ — แก้ GROUPS ก่อน)
 - งานที่คิว 23:00 ค้างถ้าชนลิมิต (CLOUDS/COOK/QUEST-ART/FOOD-CONTINUE) **ไม่ resume เอง** — Claudy ต้องสั่งใหม่
-- merge: ครบ 4 โซน → Toby เสียบพื้นทุกโซน → Dale รีวิว → merge main
+- merge (เปลี่ยน 11 พ.ย.): **พื้นโซน 1 เสร็จ** → Toby เสียบพื้น v7 → Dale รีวิว → merge main · โซน 2–4 วาดต่อได้แต่ไม่รอ
