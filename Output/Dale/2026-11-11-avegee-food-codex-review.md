@@ -16,7 +16,7 @@
 3. fixture `food-system-runtime-changes.json` อัปเดตให้เทสต์ SHA ของ BALANCE-2 ยังผ่าน
 
 ## เทสต์
-`node --test tests/*.test.mjs` → **2052/2052 ผ่าน** (เดิมของ Codex 2048 + เพิ่ม 4: hand-off ×2, canteen hire/target/fallback ×… ) fail 0 skipped 0
+`node --test tests/*.test.mjs` → **2052/2052 ผ่าน** (เดิมของ Codex 2048 + เพิ่ม 4: hand-off ข้ามโซน +1, hire/เป้าหมายคนเสิร์ฟ/ถอยไปเสบียงกลาง +3) fail 0 skipped 0
 
 ## browser (Playwright, localhost:8943 เสิร์ฟจาก worktree z1-v5 — พอร์ต 8942 ไม่ได้ listen ตอนตรวจ จึงเปิด 8943 แทน ไม่ได้ kill อะไร)
 ทั้ง 390×844 และ 1792×958, console error 0 (ครั้งเดียวที่เจอ `_h of null` ใน `put()` ของ openStation ตอนปิดหน้าต่างแล้ว panels() timer ยังวิ่ง — โค้ดเก่าตั้งแต่ ต.ค. ไม่เกี่ยวระบบอาหาร ไม่ได้แก้):
