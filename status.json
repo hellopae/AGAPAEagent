@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T16:05:12.845Z",
+  "updatedAt": "2026-11-11T16:50:04.894Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Review and merge Codex food system",
       "report": {
         "when": "20:27",
