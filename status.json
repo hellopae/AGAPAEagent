@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T16:50:19.511Z",
+  "updatedAt": "2026-11-11T18:01:02.137Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "AVEGEE fluids WebGL shader pilot",
       "report": {
         "when": "20:22",

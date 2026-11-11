@@ -1,0 +1,16 @@
+== walk high q=[] load=3.45 5.52 7.86
+map_walk_10s             fps    52 min1s    41 p95    33.4 long   2/172ms
+== walk high q=[?fluid=shader] load=2.90 5.19 7.65
+map_walk_10s             fps  52.1 min1s    41 p95    33.4 long   2/172ms
+== walk performance q=[] load=3.84 5.17 7.56
+map_walk_10s             fps  58.2 min1s  40.7 p95    16.8 long   3/246ms
+== walk performance q=[?fluid=shader] load=4.40 5.17 7.48
+map_walk_10s             fps  58.4 min1s  42.9 p95    16.8 long   3/240ms
+== walk high q=[] load=3.98 5.00 7.33
+map_walk_10s             fps    52 min1s    40 p95    33.4 long   2/172ms
+== walk high q=[?fluid=shader] load=3.84 4.84 7.19
+map_walk_10s             fps  52.1 min1s    41 p95    33.4 long   2/173ms
+== walk performance q=[] load=3.87 4.75 7.07
+map_walk_10s             fps  56.4 min1s  39.7 p95    16.8 long   3/242ms
+== walk performance q=[?fluid=shader] load=3.94 4.69 6.97
+map_walk_10s             fps  55.3 min1s  31.5 p95    16.8 long   3/254ms

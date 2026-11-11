@@ -1,0 +1,199 @@
+{
+ "map_walk_10s": {
+  "frames": 520,
+  "secs": 10.03,
+  "fps_avg": 52,
+  "fps_min_1s": 41,
+  "ft_avg": 19.23,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 50,
+  "ft_max": 116.7,
+  "frames_over_33": 21,
+  "long_tasks": 2,
+  "long_ms": 172,
+  "long_max": 89,
+  "canvases_created": 82,
+  "canvas_px_created_M": 52.9,
+  "calls": {
+   "drawImage": 110257,
+   "clip": 1563,
+   "fillRect": 23962,
+   "fill": 21717,
+   "stroke": 13716,
+   "createPattern": 24
+  },
+  "heap_MB": 19.6,
+  "decoded_imgs": 338,
+  "decoded_img_MB": 1031,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "loaf": [
+  {
+   "d": 256,
+   "block": 69,
+   "scripts": []
+  },
+  {
+   "d": 100,
+   "block": 47,
+   "scripts": [
+    "BUTTON#enter-button.onclick|ui.js:enterFromTap:484586|19|forced0"
+   ]
+  },
+  {
+   "d": 195,
+   "block": 133,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|23|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|159|forced0"
+   ]
+  },
+  {
+   "d": 1960,
+   "block": 1907,
+   "scripts": [
+    "BUTTON.onclick|ui.js::474616|101|forced2",
+    "FrameRequestCallback|ui.js:frame:27496|1826|forced1"
+   ]
+  },
+  {
+   "d": 78,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|22|forced0"
+   ]
+  },
+  {
+   "d": 61,
+   "block": 8,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|57|forced0"
+   ]
+  },
+  {
+   "d": 130,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 69,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 63,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 83,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|24|forced0"
+   ]
+  },
+  {
+   "d": 72,
+   "block": 14,
+   "scripts": []
+  },
+  {
+   "d": 187,
+   "block": 16,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|58|forced0"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 55,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 91,
+   "block": 32,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|79|forced0"
+   ]
+  },
+  {
+   "d": 68,
+   "block": 13,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|59|forced0"
+   ]
+  },
+  {
+   "d": 54,
+   "block": 4,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|54|forced0"
+   ]
+  },
+  {
+   "d": 118,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|24|forced0"
+   ]
+  },
+  {
+   "d": 90,
+   "block": 39,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|89|forced1"
+   ]
+  },
+  {
+   "d": 93,
+   "block": 32,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|82|forced2"
+   ]
+  },
+  {
+   "d": 51,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|5|forced1"
+   ]
+  },
+  {
+   "d": 119,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 72,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|8|forced1"
+   ]
+  },
+  {
+   "d": 53,
+   "block": 0,
+   "scripts": []
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}
