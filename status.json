@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T16:50:04.894Z",
+  "updatedAt": "2026-11-11T16:50:19.511Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE food system (Fable)",
+      "status": "working",
+      "task": "AVEGEE fluids WebGL shader pilot",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
