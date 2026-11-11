@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T18:35:43.269Z",
+  "updatedAt": "2026-11-11T18:36:00.091Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Integrate zone 1 v7 HD ground",
+      "status": "working",
+      "task": "AVEGEE fluids shader full map",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
