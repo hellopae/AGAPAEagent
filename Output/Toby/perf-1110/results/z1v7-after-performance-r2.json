@@ -1,0 +1,226 @@
+{
+ "map_idle_zoom5": {
+  "frames": 484,
+  "secs": 8.09,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.8,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 3,
+  "canvas_px_created_M": 0.04,
+  "calls": {
+   "drawImage": 100327,
+   "clip": 1455,
+   "fillRect": 21804,
+   "fill": 21374,
+   "stroke": 13623
+  },
+  "heap_MB": 19.6,
+  "decoded_imgs": 280,
+  "decoded_img_MB": 791,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "2688x1437"
+  ]
+ },
+ "map_walk_10s": {
+  "frames": 586,
+  "secs": 10.03,
+  "fps_avg": 58.6,
+  "fps_min_1s": 50.2,
+  "ft_avg": 17.06,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 33.4,
+  "ft_max": 66.7,
+  "frames_over_33": 5,
+  "long_tasks": 2,
+  "long_ms": 135,
+  "long_max": 78,
+  "canvases_created": 76,
+  "canvas_px_created_M": 53.1,
+  "calls": {
+   "drawImage": 122689,
+   "clip": 1761,
+   "fillRect": 26327,
+   "fill": 24463,
+   "stroke": 15502,
+   "createPattern": 24
+  },
+  "heap_MB": 19.6,
+  "decoded_imgs": 326,
+  "decoded_img_MB": 983,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "2688x1437"
+  ]
+ },
+ "loaf": [
+  {
+   "d": 242,
+   "block": 58,
+   "scripts": []
+  },
+  {
+   "d": 103,
+   "block": 46,
+   "scripts": [
+    "BUTTON#enter-button.onclick|ui.js:enterFromTap:484586|20|forced0"
+   ]
+  },
+  {
+   "d": 192,
+   "block": 134,
+   "scripts": [
+    "IMG[src=\"img/cover-fx/soul-v4-mask.png?v=h5b-i2a\"].onload|cover-fx-h5b.js::25309|24|forced0",
+    "FrameRequestCallback|cover-fx-h5b.js:tick:24847|160|forced0"
+   ]
+  },
+  {
+   "d": 1943,
+   "block": 1889,
+   "scripts": [
+    "BUTTON.onclick|ui.js::474616|100|forced2",
+    "FrameRequestCallback|ui.js:frame:27496|1809|forced1"
+   ]
+  },
+  {
+   "d": 74,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|22|forced0"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 13,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|61|forced0"
+   ]
+  },
+  {
+   "d": 120,
+   "block": 61,
+   "scripts": []
+  },
+  {
+   "d": 65,
+   "block": 12,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|8|forced0"
+   ]
+  },
+  {
+   "d": 57,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 81,
+   "block": 0,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|25|forced0"
+   ]
+  },
+  {
+   "d": 81,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|6|forced0"
+   ]
+  },
+  {
+   "d": 62,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|37|forced0"
+   ]
+  },
+  {
+   "d": 109,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|6|forced0"
+   ]
+  },
+  {
+   "d": 53,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|5|forced0"
+   ]
+  },
+  {
+   "d": 82,
+   "block": 25,
+   "scripts": [
+    "TimerHandler:setTimeout|town-shade.js:step:17695|71|forced0"
+   ]
+  },
+  {
+   "d": 79,
+   "block": 22,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|67|forced1"
+   ]
+  },
+  {
+   "d": 106,
+   "block": 46,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|96|forced1"
+   ]
+  },
+  {
+   "d": 87,
+   "block": 0,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|18|forced1"
+   ]
+  },
+  {
+   "d": 83,
+   "block": 28,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|78|forced1"
+   ]
+  },
+  {
+   "d": 70,
+   "block": 7,
+   "scripts": [
+    "FrameRequestCallback|ui.js:frame:27496|56|forced1"
+   ]
+  },
+  {
+   "d": 80,
+   "block": 0,
+   "scripts": []
+  },
+  {
+   "d": 58,
+   "block": 0,
+   "scripts": []
+  }
+ ],
+ "errors": [],
+ "meta": {
+  "viewport": [
+   1792,
+   958,
+   2
+  ],
+  "gl": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)"
+ }
+}

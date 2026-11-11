@@ -1,0 +1,33 @@
+== round1 high before load=1.75
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  52.5 min1s    41 p95    33.3 long   2/171ms
+errors []
+== round1 high after load=2.76
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  52.4 min1s  41.7 p95    33.4 long   2/171ms
+errors []
+== round1 performance before load=3.74
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.7 min1s    50 p95    16.8 long   2/135ms
+errors []
+== round1 performance after load=3.30
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  58.6 min1s  49.1 p95    16.8 long   2/136ms
+errors []
+== round2 high before load=3.43
+map_idle_zoom5           fps    60 min1s    60 p95    16.7 long   0/0ms
+map_walk_10s             fps  53.3 min1s  41.7 p95    33.3 long   2/161ms
+errors []
+== round2 high after load=4.11
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  49.1 min1s    37 p95    33.4 long   2/166ms
+errors []
+== round2 performance before load=3.95
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.6 min1s  49.1 p95    16.8 long   2/137ms
+errors []
+== round2 performance after load=4.05
+map_idle_zoom5           fps    60 min1s    60 p95    16.8 long   0/0ms
+map_walk_10s             fps  58.6 min1s  50.2 p95    16.7 long   2/135ms
+errors []
+ALLDONE
