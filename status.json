@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T12:26:58.732Z",
+  "updatedAt": "2026-11-12T13:57:15.581Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Cook animation and polish fixes",
+      "status": "working",
+      "task": "AVEGEE update banner on Home",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
