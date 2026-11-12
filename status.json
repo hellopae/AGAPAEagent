@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T19:31:07.434Z",
+  "updatedAt": "2026-11-12T20:03:11.715Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "FB2-C UI windows fixes",
       "report": {
         "when": "20:22",
