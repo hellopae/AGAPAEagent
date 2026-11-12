@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T20:03:11.715Z",
+  "updatedAt": "2026-11-12T20:08:42.999Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "FB2-C UI windows fixes",
+      "status": "working",
+      "task": "Integrate Codex art + trees + rails",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
