@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T14:25:30.870Z",
+  "updatedAt": "2026-11-12T15:05:12.697Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "AVEGEE update banner on Home",
+      "status": "working",
+      "task": "Spirit pose system code",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
