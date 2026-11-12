@@ -8,3 +8,6 @@ Repo: AVEGEE worktree ของ run นี้ (แตกจาก main) · Image
 - ตัวต้องเป็นวิญญาณตัวเดิม (หน้า ผม ชุด สี) · ขนาดผืน/จุดเท้า/หางเท่าต้นฉบับ · พื้นใส · **ส่งออก .webp lossless** · ห้ามตัวอักษร
 งบ: ImageGen ≤ 40 ครั้ง · check อัตโนมัติ = ไฟล์ครบ/เปิดได้/ขนาดตรง เท่านั้น · retry ≤ 2 ไม่รีเซ็ต (skill codex-reset-queue "กันวนซ้ำ")
 ส่งออก `docs/art-reviews/2026-11-12-spirit-poses/` ชื่อไฟล์ตามตาราง Vera (`<ชนิด>-<โซน>-{scared,cry}-v1.webp`) + `contact-sheet.jpg` (ต้นฉบับ | ใหม่) + README ไทย
+
+## หลังวาดเสร็จ (Claude เสียบ)
+วางไฟล์ลง `img/soul-poses/` → `node scripts/soul-pose-manifest.mjs` → commit คู่กัน (เทสต์ตรวจขนาด/RGBA ให้) · ไม่ถอยข้ามโซน (ตาม Vera)
