@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T04:00:02.540Z",
+  "updatedAt": "2026-11-12T04:00:50.911Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Review and merge Codex food system",
+      "status": "working",
+      "task": "Review and merge AVEGEE to main",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
