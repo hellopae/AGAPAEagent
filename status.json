@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T16:10:45.723Z",
+  "updatedAt": "2026-11-12T17:17:26.671Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Fix settings popup + banner preview",
+      "status": "working",
+      "task": "FB2-A town map fixes",
       "report": {
         "when": "20:22",
         "title": "AVEGEE quest rewards and battles",
