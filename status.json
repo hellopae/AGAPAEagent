@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T14:11:47.315Z",
+  "updatedAt": "2026-11-12T14:17:45.674Z",
   "agents": [
     {
       "id": "claudy",
@@ -148,8 +148,8 @@
         "ดีไซน์รองรับมือถือ",
         "วาง grid + bleed + margin"
       ],
-      "status": "done",
-      "task": "Vera builds trailer shot list",
+      "status": "working",
+      "task": "Spec spirit scared/cry poses",
       "report": {
         "when": "10:43",
         "title": "Vera trial and battle UI layout",
