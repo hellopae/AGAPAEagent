@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-12T12:26:58.732Z",
+  "updatedAt": "2026-11-12T14:11:47.315Z",
   "entries": [
+    {
+      "id": "wl-261112-toby-mino",
+      "datetime": "2026-11-12T14:11:47Z",
+      "displayDate": "12 พ.ย. 2569",
+      "displayTime": "21:11",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "AVEGEE update banner on Home",
+      "summary": "Another stale background wait-loop, so I'm taking no action. It was waiting on an output file from an earlier experiment run that I had already killed and re-run. It exited with code 144 when I killed those processes.\n\nNo new information here. The report to Claudy stands as delivered."
+    },
     {
       "id": "wl-261112-toby-vqct",
       "datetime": "2026-11-12T12:26:58Z",
