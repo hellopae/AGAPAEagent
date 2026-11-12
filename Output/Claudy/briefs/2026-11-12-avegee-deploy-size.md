@@ -17,3 +17,6 @@
 `Output/Dale/2026-11-12-avegee-deploy-size.md` (ไทย): วิธี deploy เดิม/ใหม่, ขนาดก่อน/หลัง, รายการที่ตัดออก, ผล 404, commit
 ## เกณฑ์รับงาน
 1. artifact ≤ 850 MB ไม่มีคำเตือน 2. เกมบน URL จริงเล่นได้ 404 = 0 3. เทสต์ผ่าน
+
+## เพิ่ม (คุณเป้ 12 พ.ย.): แปลง PNG/JPEG ที่เกมโหลดเป็น webp
+img/ มี PNG 637 ไฟล์ 373 MB + JPEG 62 ไฟล์ 23 MB (รอบ 4 ต.ค. แปลงแค่ img/rooms-wide) · ภาพวาด q86 m6 · sprite/pixel/ไอคอนขอบคม lossless (หรือ q90+) · คง alpha · ไม่ถึง −15% ไม่แปลง · แก้ path ทุกที่ + cache-bust · เทียบภาพ ≥10 ใบ เฟรม sheet ไม่เลื่อน · ห้ามเขียน git history ใหม่ · commit แยกจาก allowlist
