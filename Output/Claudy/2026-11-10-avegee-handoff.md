@@ -37,3 +37,7 @@
 ## 12 พ.ย. — คุณเป้รับพื้น v7 โซน 1
 - "ต้นไม้สีแดงหายไปไม่เป็นไร เพราะเพิ่มรูปต้นไม้แยกไว้ด้านบนได้ อยากให้เน้นความชัดมากกว่า" → ใช้ v7 (commit a0667e88/cc50e90e) · คง webp q88 (22 MB) เพราะเน้นความชัด
 - งานภายหลัง (ไม่บล็อก merge): ต้นไม้ใบแดงเป็น sprite แยกวางทับแผนที่ (มีระบบ town-scenery/tree sprite อยู่แล้ว)
+
+## 12 พ.ย. — MERGED main `89fb1a35` (Dale PASS, Fable 5.2) · deploy hellopae.github.io/AVEGEE เล่นได้
+- branch `claude/2026-11-05-zone1-v5-fx` fast-forward ตาม main แล้ว (8942 = main)
+- ค้าง: deploy artifact 1.1 GB เกินเพดาน 1 GB ของ Pages (เตือน) → ย้าย `output/` + `art-src/` ออกจาก deploy · ป้ายศัตรู 3 ตัวที่ 390px · preload preview v7r · ย้ายสคริปต์ shader (`Output/Toby/fluid-full-1112/build_fluids.py`, `classify.py`) เข้า AVEGEE/scripts · animation พ่อครัว (Codex handoff 20261111T170902Z-d171c309) · ต้นไม้แดง sprite แยก · ภาพเมฆ/ก่อสร้าง/quest-art ที่ Codex ส่งยังไม่เสียบ
