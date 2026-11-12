@@ -1,0 +1,315 @@
+[
+ {
+  "label": "shader (default)",
+  "stats": {
+   "status": "ready",
+   "clock": 28648.799999999996,
+   "frozen": false,
+   "ms": 1.88,
+   "drawn": 111,
+   "composites": 14273,
+   "shader": "ready",
+   "shaderDrawn": 52107,
+   "sheetsReady": 7,
+   "masksReady": 10
+  },
+  "errors": [],
+  "requests": {
+   "other:fx-layout.json": [
+    1,
+    28457
+   ],
+   "other:cloud-shadow-1.webp": [
+    1,
+    8250
+   ],
+   "other:cloud-shadow-2.webp": [
+    1,
+    10206
+   ],
+   "other:cloud-shadow-3.webp": [
+    1,
+    12722
+   ],
+   "other:cloud-shadow-4.webp": [
+    1,
+    9534
+   ],
+   "other:cloud-shadow-5.webp": [
+    1,
+    11296
+   ],
+   "shader-json": [
+    1,
+    52022
+   ],
+   "sheets/bank-foam-spirit.webp": [
+    1,
+    433768
+   ],
+   "masks": [
+    10,
+    323650
+   ],
+   "sheets/bank-foam-ice.webp": [
+    1,
+    344314
+   ],
+   "shader-flow": [
+    94,
+    2974091
+   ],
+   "sheets/river-foam.webp": [
+    1,
+    300158
+   ],
+   "sheets/water-sparkle.webp": [
+    1,
+    66586
+   ],
+   "sheets/lava-bubble.webp": [
+    1,
+    116724
+   ],
+   "sheets/lava-steam.webp": [
+    1,
+    98458
+   ],
+   "sheets/embers-ash.webp": [
+    1,
+    74778
+   ]
+  },
+  "totalMB": 4.64
+ },
+ {
+  "label": "no WebGL",
+  "stats": {
+   "status": "ready",
+   "clock": 29065.300000000003,
+   "frozen": false,
+   "ms": 2.16,
+   "drawn": 46,
+   "composites": 34672,
+   "shader": "failed",
+   "shaderDrawn": 0,
+   "sheetsReady": 17,
+   "masksReady": 30
+  },
+  "errors": [],
+  "requests": {
+   "other:fx-layout.json": [
+    1,
+    28457
+   ],
+   "other:cloud-shadow-1.webp": [
+    1,
+    8250
+   ],
+   "other:cloud-shadow-2.webp": [
+    1,
+    10206
+   ],
+   "other:cloud-shadow-3.webp": [
+    1,
+    12722
+   ],
+   "other:cloud-shadow-4.webp": [
+    1,
+    9534
+   ],
+   "other:cloud-shadow-5.webp": [
+    1,
+    11296
+   ],
+   "sheets/bank-foam-spirit.webp": [
+    1,
+    433768
+   ],
+   "masks": [
+    30,
+    386620
+   ],
+   "sheets/bank-foam-ice.webp": [
+    1,
+    344314
+   ],
+   "sheets/spirit-river.webp": [
+    1,
+    497890
+   ],
+   "sheets/lava-surface.webp": [
+    1,
+    1365828
+   ],
+   "sheets/ice-stream.webp": [
+    1,
+    649868
+   ],
+   "sheets/waterfall-ice.webp": [
+    1,
+    555440
+   ],
+   "sheets/lavafall.webp": [
+    1,
+    564540
+   ],
+   "sheets/cloud-sea.webp": [
+    1,
+    616432
+   ],
+   "sheets/cloud-puff-1.webp": [
+    1,
+    119428
+   ],
+   "sheets/cloud-puff-2.webp": [
+    1,
+    123156
+   ],
+   "sheets/river-foam.webp": [
+    1,
+    300158
+   ],
+   "sheets/water-sparkle.webp": [
+    1,
+    66586
+   ],
+   "sheets/cloud-puff-3.webp": [
+    1,
+    114886
+   ],
+   "sheets/lava-bubble.webp": [
+    1,
+    116724
+   ],
+   "sheets/lava-steam.webp": [
+    1,
+    98458
+   ],
+   "sheets/cloud-puff-4.webp": [
+    1,
+    111302
+   ],
+   "sheets/embers-ash.webp": [
+    1,
+    74778
+   ]
+  },
+  "totalMB": 6.31
+ },
+ {
+  "label": "?fluid=frames",
+  "stats": {
+   "status": "ready",
+   "clock": 29065.6,
+   "frozen": false,
+   "ms": 2.06,
+   "drawn": 46,
+   "composites": 34704,
+   "shader": null,
+   "shaderDrawn": 0,
+   "sheetsReady": 17,
+   "masksReady": 30
+  },
+  "errors": [],
+  "requests": {
+   "other:fx-layout.json": [
+    1,
+    28457
+   ],
+   "other:cloud-shadow-1.webp": [
+    1,
+    8250
+   ],
+   "other:cloud-shadow-2.webp": [
+    1,
+    10206
+   ],
+   "other:cloud-shadow-3.webp": [
+    1,
+    12722
+   ],
+   "other:cloud-shadow-4.webp": [
+    1,
+    9534
+   ],
+   "other:cloud-shadow-5.webp": [
+    1,
+    11296
+   ],
+   "sheets/spirit-river.webp": [
+    1,
+    497890
+   ],
+   "masks": [
+    30,
+    386620
+   ],
+   "sheets/lava-surface.webp": [
+    1,
+    1365828
+   ],
+   "sheets/ice-stream.webp": [
+    1,
+    649868
+   ],
+   "sheets/waterfall-ice.webp": [
+    1,
+    555440
+   ],
+   "sheets/lavafall.webp": [
+    1,
+    564540
+   ],
+   "sheets/cloud-sea.webp": [
+    1,
+    616432
+   ],
+   "sheets/cloud-puff-1.webp": [
+    1,
+    119428
+   ],
+   "sheets/bank-foam-spirit.webp": [
+    1,
+    433768
+   ],
+   "sheets/cloud-puff-2.webp": [
+    1,
+    123156
+   ],
+   "sheets/cloud-puff-3.webp": [
+    1,
+    114886
+   ],
+   "sheets/bank-foam-ice.webp": [
+    1,
+    344314
+   ],
+   "sheets/cloud-puff-4.webp": [
+    1,
+    111302
+   ],
+   "sheets/river-foam.webp": [
+    1,
+    300158
+   ],
+   "sheets/water-sparkle.webp": [
+    1,
+    66586
+   ],
+   "sheets/lava-bubble.webp": [
+    1,
+    116724
+   ],
+   "sheets/lava-steam.webp": [
+    1,
+    98458
+   ],
+   "sheets/embers-ash.webp": [
+    1,
+    74778
+   ]
+  },
+  "totalMB": 6.31
+ }
+]

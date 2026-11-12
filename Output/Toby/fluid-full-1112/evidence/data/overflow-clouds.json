@@ -1,0 +1,82 @@
+[
+ {
+  "id": "cloud-flat-6-0",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 183504,
+  "bytes": 46670
+ },
+ {
+  "id": "cloud-flat-7-0",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 144772,
+  "bytes": 44613
+ },
+ {
+  "id": "cloud-flat-8-0",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 77544,
+  "bytes": 26239
+ },
+ {
+  "id": "cloud-flat-9-0",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 188994,
+  "bytes": 47354
+ },
+ {
+  "id": "cloud-flat-10-0",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 51129,
+  "bytes": 19903
+ },
+ {
+  "id": "cloud-flat-6-1",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 1263,
+  "bytes": 6743
+ },
+ {
+  "id": "cloud-flat-7-1",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 1605,
+  "bytes": 5289
+ },
+ {
+  "id": "cloud-flat-9-1",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.02,
+  "maskPx": 53153,
+  "bytes": 24415
+ },
+ {
+  "id": "cloud-flat-10-1",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 25380,
+  "bytes": 16624
+ },
+ {
+  "id": "cloud-flat-9-2",
+  "liquid": "cloud",
+  "source": "codex-mask x colour",
+  "overflowPct": 0.0,
+  "maskPx": 1323,
+  "bytes": 6941
+ }
+]
