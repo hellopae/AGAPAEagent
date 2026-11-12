@@ -1,0 +1,25 @@
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "walk", "load_before": "28.54 21.12 13.36", "load_after": "21.58 20.11 13.30", "fps": 17.1, "min1s": 6.1, "p95": 183.3, "long": 18, "fx_ms": 0.6, "shader": "ready", "heapMB": 21}
+{"set": "v7r", "mode": "shader", "gfx": "high", "scene": "walk", "load_before": "21.58 20.11 13.30", "load_after": "23.23 20.58 13.85", "fps": 32.3, "min1s": 17, "p95": 83.3, "long": 15, "fx_ms": 0.4, "shader": "ready", "heapMB": 33}
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "lava", "load_before": "23.23 20.58 13.85", "load_after": "22.18 20.60 14.16", "fps": 28.2, "min1s": 23, "p95": 50, "long": 0, "fx_ms": 2.36, "shader": "ready", "heapMB": 51}
+{"set": "v7r", "mode": "shader", "gfx": "high", "scene": "lava", "load_before": "22.18 20.60 14.16", "load_after": "16.48 19.36 13.97", "fps": 38.8, "min1s": 37.6, "p95": 33.4, "long": 0, "fx_ms": 1.51, "shader": "ready", "heapMB": 21}
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "overview", "load_before": "16.48 19.36 13.97", "load_after": "13.04 18.14 13.74", "fps": 18.8, "min1s": 13, "p95": 116.7, "long": 1, "fx_ms": 7.4, "shader": "ready", "heapMB": 22}
+{"set": "v7r", "mode": "shader", "gfx": "high", "scene": "overview", "load_before": "12.63 17.97 13.70", "load_after": "12.92 17.44 13.68", "fps": 18.7, "min1s": 13.4, "p95": 116.6, "long": 0, "fx_ms": 8.08, "shader": "ready", "heapMB": 21}
+{"set": "v7", "mode": "shader", "gfx": "performance", "scene": "walk", "load_before": "12.92 17.44 13.68", "load_after": "16.54 17.95 14.02", "fps": 50.7, "min1s": 31.6, "p95": 33.3, "long": 7, "fx_ms": 0.65, "shader": "ready", "heapMB": 20}
+{"set": "v7r", "mode": "shader", "gfx": "performance", "scene": "walk", "load_before": "16.54 17.95 14.02", "load_after": "12.86 16.81 13.78", "fps": 55.5, "min1s": 36.2, "p95": 16.8, "long": 3, "fx_ms": 0.3, "shader": "ready", "heapMB": 20}
+{"set": "v7", "mode": "shader", "gfx": "performance", "scene": "lava", "load_before": "12.86 16.81 13.78", "load_after": "12.30 16.24 13.70", "fps": 50, "min1s": 46, "p95": 33.4, "long": 0, "fx_ms": 1.32, "shader": "ready", "heapMB": 20}
+{"set": "v7r", "mode": "shader", "gfx": "performance", "scene": "lava", "load_before": "12.30 16.24 13.70", "load_after": "18.96 17.33 14.20", "fps": 51.7, "min1s": 43.9, "p95": 33.4, "long": 0, "fx_ms": 1.3, "shader": "ready", "heapMB": 22}
+
+
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "walk", "load_before": "13.35 15.95 13.92", "load_after": "17.10 16.51 14.21", "fps": 34.7, "min1s": 24, "p95": 50, "long": 14, "fx_ms": 0.43, "shader": "ready", "heapMB": 22}
+
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "lava", "load_before": "11.28 14.98 13.79", "load_after": "12.92 15.04 13.86", "fps": 35.2, "min1s": 21, "p95": 33.4, "long": 1, "fx_ms": 1.61, "shader": "ready", "heapMB": 23}
+{"set": "v7r", "mode": "shader", "gfx": "high", "scene": "lava", "load_before": "12.92 15.04 13.86", "load_after": "20.24 16.57 14.47", "fps": 28.8, "min1s": 19.6, "p95": 50, "long": 0, "fx_ms": 1.72, "shader": "ready", "heapMB": 21}
+{"set": "v7", "mode": "shader", "gfx": "high", "scene": "overview", "load_before": "20.24 16.57 14.47", "load_after": "28.60 18.76 15.33", "fps": 12, "min1s": 6.3, "p95": 183.4, "long": 0, "fx_ms": 7.51, "shader": "ready", "heapMB": 21}
+{"set": "v7r", "mode": "shader", "gfx": "high", "scene": "overview", "load_before": "27.27 18.65 15.31", "load_after": "23.03 18.62 15.45", "fps": 9.9, "min1s": 7, "p95": 216.6, "long": 0, "fx_ms": 8.45, "shader": "ready", "heapMB": 22}
+{"set": "v7", "mode": "shader", "gfx": "performance", "scene": "walk", "load_before": "23.03 18.62 15.45", "load_after": "19.46 18.15 15.43", "fps": 40.1, "min1s": 25.4, "p95": 50.1, "long": 14, "fx_ms": 0.34, "shader": "ready", "heapMB": 21}
+
+{"set": "v7", "mode": "shader", "gfx": "performance", "scene": "lava", "load_before": "17.40 17.82 15.42", "load_after": "20.40 18.49 15.76", "fps": 51.9, "min1s": 36, "p95": 33.4, "long": 0, "fx_ms": 1.18, "shader": "ready", "heapMB": 21}
+{"set": "v7r", "mode": "shader", "gfx": "performance", "scene": "lava", "load_before": "20.40 18.49 15.76", "load_after": "18.22 18.13 15.75", "fps": 58, "min1s": 53, "p95": 16.8, "long": 0, "fx_ms": 1.42, "shader": "ready", "heapMB": 32}
+{"set": "v7", "mode": "shader", "gfx": "performance", "scene": "overview", "load_before": "18.22 18.13 15.75", "load_after": "14.76 17.25 15.54", "fps": 36.2, "min1s": 26.9, "p95": 50, "long": 0, "fx_ms": 5.76, "shader": "ready", "heapMB": 20}
+{"set": "v7r", "mode": "shader", "gfx": "performance", "scene": "overview", "load_before": "14.76 17.25 15.54", "load_after": "12.26 16.32 15.27", "fps": 29.6, "min1s": 20.3, "p95": 50.1, "long": 2, "fx_ms": 7.72, "shader": "ready", "heapMB": 23}
+ALLDONE
