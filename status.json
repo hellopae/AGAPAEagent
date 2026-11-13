@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T04:48:58.335Z",
+  "updatedAt": "2026-11-13T04:49:35.192Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "WebGL migration plan (Fable)",
+      "status": "working",
+      "task": "Integrate Codex batch 13 Nov",
       "report": {
         "when": "11:40",
         "title": "WebGL migration plan (Fable)",
