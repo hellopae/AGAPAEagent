@@ -1,0 +1,114 @@
+[
+ {
+  "mode": "2d",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1150,
+  "fps": 144.4,
+  "ms_avg": 6.93,
+  "ms_p95": 14.7,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1409,
+  "fps": 175.9,
+  "ms_avg": 5.69,
+  "ms_p95": 10.5,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1292,
+  "fps": 161.3,
+  "ms_avg": 6.2,
+  "ms_p95": 10.6,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 2053,
+  "fps": 256.3,
+  "ms_avg": 3.9,
+  "ms_p95": 7.3,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "2d",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1125,
+  "fps": 141.8,
+  "ms_avg": 7.05,
+  "ms_p95": 14.7,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1398,
+  "fps": 174.6,
+  "ms_avg": 5.73,
+  "ms_p95": 10.5,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 1296,
+  "fps": 161.8,
+  "ms_avg": 6.18,
+  "ms_p95": 10.4,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 1.5,
+  "size": [
+   2688,
+   1437
+  ],
+  "frames": 2050,
+  "fps": 255.9,
+  "ms_avg": 3.91,
+  "ms_p95": 7.4,
+  "round": 1,
+  "uncap": true
+ }
+]

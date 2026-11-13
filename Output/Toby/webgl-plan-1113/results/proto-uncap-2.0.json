@@ -1,0 +1,170 @@
+[
+ {
+  "mode": "2d",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 700,
+  "fps": 85.4,
+  "ms_avg": 11.71,
+  "ms_p95": 17.9,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 742,
+  "fps": 92.6,
+  "ms_avg": 10.8,
+  "ms_p95": 27.6,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 875,
+  "fps": 109.2,
+  "ms_avg": 9.16,
+  "ms_p95": 11,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 1233,
+  "fps": 153.9,
+  "ms_avg": 6.5,
+  "ms_p95": 9.2,
+  "round": 0,
+  "uncap": true
+ },
+ {
+  "mode": "2d",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 692,
+  "fps": 84.7,
+  "ms_avg": 11.81,
+  "ms_p95": 14,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 773,
+  "fps": 96.4,
+  "ms_avg": 10.37,
+  "ms_p95": 26.3,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 874,
+  "fps": 108.9,
+  "ms_avg": 9.18,
+  "ms_p95": 11,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 1241,
+  "fps": 154.8,
+  "ms_avg": 6.46,
+  "ms_p95": 8.6,
+  "round": 1,
+  "uncap": true
+ },
+ {
+  "mode": "2d",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 664,
+  "fps": 83.4,
+  "ms_avg": 11.99,
+  "ms_p95": 16.3,
+  "round": 2,
+  "uncap": true
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 711,
+  "fps": 88.7,
+  "ms_avg": 11.27,
+  "ms_p95": 27.8,
+  "round": 2,
+  "uncap": true
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 836,
+  "fps": 104.4,
+  "ms_avg": 9.58,
+  "ms_p95": 11.8,
+  "round": 2,
+  "uncap": true
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 1241,
+  "fps": 154.8,
+  "ms_avg": 6.46,
+  "ms_p95": 8.3,
+  "round": 2,
+  "uncap": true
+ }
+]
