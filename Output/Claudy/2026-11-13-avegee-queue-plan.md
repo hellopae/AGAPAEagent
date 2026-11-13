@@ -37,3 +37,12 @@
 - คุณเป้เอาทุกข้อ → `queue-extra-1113` (หลังแผนที่): YAMA-BLINK + HUNGRY-ICON → SPIRIT-CARD-SCARED · ยังค้าง: ลบพื้นเก่า map-v5/zone1 v2–v4 หลังแผนที่ครบ (ลด deploy ~90 MB)
 
 ## 13 พ.ย. คุณเป้: เน้น Steam (คอม) ก่อน — UI มือถือพักไว้จนจะลง Play Store · ลำดับ: เสียบงาน Codex → ผสมเมฆ → WebGL ก้อนแรก (เฟส 0–2 รวม) · ตรวจจอคอมเป็นหลัก
+
+## 13 พ.ย. 20:40 — หยุดเพราะโควตาหมดทั้งสองฝั่ง
+- **Claude weekly 100%** (reset 18 พ.ย. 23:00) · Codex app ตั้ง claude-only 18:51 (Codex weekly ใกล้หมดตามกติกา ≤5%)
+- macOS ตัดสิทธิ์ Documents ช่วง ~18:20 → คิว Codex (queue-chain/queue-map-z34) ตาย · Z3-HD-1/2 (`20261113T091934Z-4a3ceadc`, `20261113T091954Z-91dcaf8c`) ค้างสถานะ running (ไม่มี process) → ทำใหม่
+- **เสร็จรอเสียบ:** STORY-ART-A `20261113T090258Z-860966a4`, STORY-ART-B `20261113T090318Z-28458981`, Z2 HD (ASSEMBLE `20261113T085021Z-39f7fa12`)
+- **Toby z1-events ทำค้าง (ยังไม่ commit):** สำรอง patch ที่ `Output/Toby/z1-events-wip-1113/z1-events-wip.patch` (worktree ยังมีไฟล์ค้าง src/data.js, src/game.js, src/z1-events.js)
+## ทำต่อเมื่อโควตากลับ
+1. Claude: Toby ทำ z1-events ต่อ (resume agent หรือใบงานเดิม + patch) → เสียบ STORY-ART A/B → เสียบพื้นโซน 2 + shader โซน 2
+2. Codex: รัน `queue-map-z34.py` ใหม่ (Z3/Z4) → `queue-extra-chain.py` → `queue-cyber5-chain.py`
