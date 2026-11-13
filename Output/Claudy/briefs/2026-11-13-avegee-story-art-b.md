@@ -1,0 +1,7 @@
+# STORY-ART-B (Codex) — นางสีดา · หนุมาน · ท่าพุ่งชนไฟของยามา · 13 พ.ย. 2569
+Repo: AVEGEE worktree ของ run นี้ (แตกจาก main) · ImageGen ในตัว · ห้าม commit/push/merge เอง · ส่งออก **.webp** (ภาพวาด q86, อัลฟา lossless) · ห้ามตัวอักษรในภาพ · สไตล์ cutscene เดิมของเกม (ดู `img/zone-boss-cutscene.webp`, `img/story-th-01..05.webp`, `img/Intro-Boss-Zone1.webp`, `img/boss-frontier-th*.webp`, `img/deva-intro/`) ตัวละครต้องหน้าเหมือนเดิม · สเปกเรื่อง: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Claudy/briefs/2026-11-13-avegee-z1-events-owner-spec.md` · check = ไฟล์ครบ/ขนาดถูก · retry ≤ 2
+**ข้อระวัง:** นางสีดา หนุมาน เป็นตัวละครรามเกียรติ์ที่คนไทยเคารพ — วาดอย่างสง่างาม ไม่ล้อเลียน · นางสีดาบริสุทธิ์ (สง่า เศร้าแต่สงบ แบบวิญญาณในเกม) · หนุมานลิงเผือกทรงเครื่องแบบไทย กล้าหาญ ภักดี (ไม่ใช่ตัวร้าย) · ไม่ลอกภาพจากสื่ออื่น
+1. วิญญาณนางสีดา: sprite ยืน (ขนาด/สัดส่วนเท่า sprite วิญญาณเดิม `img/Thai/spirit-*-th-v2.webp`) + portrait (เท่า portrait วิญญาณในห้องสอบสวน) — `soul-sita-th.webp`, `soul-sita-th-profile.webp`
+2. หนุมาน: sprite ศึก (เท่าบอสในฉากสู้ `img/boss-frontier-th.webp`) + portrait + cutscene ลงมาจากฟ้า 1375×768 — `boss-hanuman-th.webp`, `boss-hanuman-th-profile.webp`, `cut-hanuman-descends-th.webp`
+3. ท่าไม้ตายใหม่ยามา "พลังไฟรวบตัวพุ่งเข้าชน": cutscene 2 เฟรม 1375×768 (รวบไฟ / พุ่งชน) + ไอคอน 256×256 วงกลม — `skill-yama-fire-charge-cut-01/02.webp`, `skill-yama-fire-charge-icon.webp` (ยามาหน้าเดิม ชุดเดิม ถือดาบ)
+งบ ImageGen ≤ 16 · ส่งออก `docs/art-reviews/2026-11-13-story-art-b/` + contact sheet + README ไทย
