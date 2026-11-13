@@ -1,0 +1,545 @@
+{
+ "idle_fps": {
+  "frames": 364,
+  "secs": 6.08,
+  "fps_avg": 60,
+  "fps_min_1s": 60,
+  "ft_avg": 16.67,
+  "ft_p50": 16.7,
+  "ft_p95": 16.7,
+  "ft_p99": 16.8,
+  "ft_max": 16.8,
+  "frames_over_33": 0,
+  "long_tasks": 0,
+  "long_ms": 0,
+  "long_max": 0,
+  "canvases_created": 2,
+  "canvas_px_created_M": 0.03,
+  "calls": {
+   "drawImage": 77167,
+   "clip": 1095,
+   "fillRect": 16768,
+   "fill": 16012,
+   "stroke": 10220
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 303,
+  "decoded_img_MB": 750,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "idle": {
+  "frames": 6,
+  "rows": {
+   "cv|scene.js:prepareMapCanvas|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|terrain-detail.js:drawTerrainDetail|drawImage|source-over": {
+    "n": 48,
+    "px": 41257674.00000003
+   },
+   "cv|terrain-detail.js:drawTerrainDetail|drawImage|screen": {
+    "n": 48,
+    "px": 41257674.00000003
+   },
+   "cv|town-shade.js:paintTinted|drawImage|source-over": {
+    "n": 204,
+    "px": 17152143.129202425
+   },
+   "cv|town-shade.js:drawContactAO|drawImage|source-over": {
+    "n": 150,
+    "px": 3587514.969519728
+   },
+   "cv|map-ambient.js:drawBiomeWeather|clip|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|map-ambient.js:drawBiomeWeather|fillRect|source-over": {
+    "n": 144,
+    "px": 1689.776451488554
+   },
+   "cv|fluid-shader.js:drawFluidShader|drawImage(gl)|source-over": {
+    "n": 24,
+    "px": 374994
+   },
+   "off|town-fluid-fx.js:drawPiece|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "off|town-fluid-fx.js:anon|fillRect|lighter": {
+    "n": 12,
+    "px": 2830353.311531843
+   },
+   "off|town-fluid-fx.js:clipToMask|drawImage|destination-in": {
+    "n": 6,
+    "px": 1544046.340141788
+   },
+   "cv|town-fluid-fx.js:composite|drawImage|screen": {
+    "n": 6,
+    "px": 2965968
+   },
+   "cv|town-map.js:drawTownGround|fill|source-over": {
+    "n": 42,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownGround|stroke|source-over": {
+    "n": 54,
+    "px": 0
+   },
+   "cv|town-map.js:drawLockPlaque|drawImage|source-over": {
+    "n": 42,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownGround|fillRect|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownGround|fillText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene-style.js:drawLocalLight|drawImage|source-over": {
+    "n": 156,
+    "px": 1434380.9905629633
+   },
+   "cv|art.js:drawBoat|drawImage|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|art.js:drawSoul|fill|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|art.js:drawSoul|drawImage|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|town-shade.js:drawActorShadow|drawImage|source-over": {
+    "n": 24,
+    "px": 81053.79384691855
+   },
+   "cv|art.js:drawBuilding|drawImage|source-over": {
+    "n": 18,
+    "px": 2815671.2718749987
+   },
+   "cv|town-map.js:drawTownHouse|drawImage|source-over": {
+    "n": 54,
+    "px": 3780890.645654434
+   },
+   "cv|town-scenery.js:sprite|drawImage|source-over": {
+    "n": 72,
+    "px": 8832967.893184759
+   },
+   "cv|scene.js:anon|drawImage|source-over": {
+    "n": 6,
+    "px": 5279439.650634764
+   },
+   "cv|scene.js:anon|fill|source-over": {
+    "n": 36,
+    "px": 0
+   },
+   "cv|scene-style.js:drawContactShadow|fill|source-over": {
+    "n": 54,
+    "px": 0
+   },
+   "cv|art.js:drawCrewWalk|drawImage|source-over": {
+    "n": 6,
+    "px": 84485.67850445244
+   },
+   "cv|scene.js:label|strokeText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene.js:label|fillText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|art.js:drawStandee|drawImage|source-over": {
+    "n": 12,
+    "px": 203391.38021484372
+   },
+   "cv|scene.js:ring|stroke|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "off|town-shade.js:withTownShade|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "off|scene-style.js:drawContactShadow|fill|source-over": {
+    "n": 18,
+    "px": 0
+   },
+   "off|yama-animation.js:drawYamaBook|drawImage|source-over": {
+    "n": 6,
+    "px": 178984.50089326262
+   },
+   "off|town-shade.js:withTownShade|drawImage|source-atop": {
+    "n": 6,
+    "px": 274482
+   },
+   "cv|town-shade.js:withTownShade|drawImage|source-over": {
+    "n": 6,
+    "px": 273358.01500874973
+   },
+   "cv|town-scenery.js:drawTorchFlame|drawImage|lighter": {
+    "n": 48,
+    "px": 273166.0428214983
+   },
+   "cv|scene-style.js:drawLocalLight|drawImage|screen": {
+    "n": 84,
+    "px": 11211382.29836189
+   },
+   "cv|town-scenery.js:Object.fn|fillRect|screen": {
+    "n": 96,
+    "px": 7800.4704072232025
+   },
+   "cv|scene.js:Object.fn|fill|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene.js:Object.fn|drawImage|source-over": {
+    "n": 12,
+    "px": 706598.1773071289
+   },
+   "cv|town-night-effects.js:drawTownNightEffects|fill|source-over": {
+    "n": 108,
+    "px": 0
+   },
+   "cv|town-night-effects.js:drawTownNightEffects|stroke|source-over": {
+    "n": 108,
+    "px": 0
+   },
+   "cv|map-ambient.js:drawMapWeather|clip|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "off|map-ambient.js:composedClouds|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "off|map-ambient.js:drawPatchField|drawImage|source-over": {
+    "n": 48,
+    "px": 2504929.497412965
+   },
+   "cv|map-ambient.js:drawMapWeather|drawImage|source-over": {
+    "n": 168,
+    "px": 46540291.760458924
+   },
+   "off|ui.js:updateTownHud|clearRect|source-over": {
+    "n": 1,
+    "px": 0
+   },
+   "off|ui.js:updateTownHud|fillRect|source-over": {
+    "n": 12,
+    "px": 38576
+   },
+   "off|terrain-detail.js:drawTerrainDetail|drawImage|source-over": {
+    "n": 1,
+    "px": 38400
+   },
+   "off|terrain-detail.js:drawTerrainDetail|drawImage|screen": {
+    "n": 1,
+    "px": 38400
+   },
+   "off|ui.js:updateTownHud|fill|source-over": {
+    "n": 1,
+    "px": 0
+   }
+  },
+  "gl": {
+   "draws": 24,
+   "px": 82296
+  },
+  "cv": [
+   3584,
+   1916
+  ]
+ },
+ "walk": {
+  "frames": 6,
+  "rows": {
+   "cv|scene.js:prepareMapCanvas|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|terrain-detail.js:drawTerrainDetail|drawImage|source-over": {
+    "n": 48,
+    "px": 41257674.000000015
+   },
+   "cv|terrain-detail.js:drawTerrainDetail|drawImage|screen": {
+    "n": 48,
+    "px": 41257674.000000015
+   },
+   "cv|town-shade.js:paintTinted|drawImage|source-over": {
+    "n": 262,
+    "px": 16903971.071601253
+   },
+   "cv|town-shade.js:drawContactAO|drawImage|source-over": {
+    "n": 162,
+    "px": 4648129.087247084
+   },
+   "cv|map-ambient.js:drawBiomeWeather|clip|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|map-ambient.js:drawBiomeWeather|fillRect|source-over": {
+    "n": 144,
+    "px": 350.812420018851
+   },
+   "cv|fluid-shader.js:drawFluidShader|drawImage(gl)|source-over": {
+    "n": 41,
+    "px": 9828664
+   },
+   "off|town-fluid-fx.js:drawSpots|clearRect|source-over": {
+    "n": 18,
+    "px": 0
+   },
+   "off|town-fluid-fx.js:clipToMask|drawImage|destination-in": {
+    "n": 18,
+    "px": 10988161.018374864
+   },
+   "cv|town-fluid-fx.js:composite|drawImage|source-over": {
+    "n": 12,
+    "px": 15278184
+   },
+   "off|town-fluid-fx.js:drawSpots|drawImage|lighter": {
+    "n": 56,
+    "px": 205740.93329822476
+   },
+   "cv|town-fluid-fx.js:composite|drawImage|screen": {
+    "n": 6,
+    "px": 7639092
+   },
+   "cv|town-map.js:drawTownGround|fill|source-over": {
+    "n": 42,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownGround|stroke|source-over": {
+    "n": 54,
+    "px": 0
+   },
+   "cv|town-map.js:drawLockPlaque|drawImage|source-over": {
+    "n": 42,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownGround|fillRect|source-over": {
+    "n": 12,
+    "px": 30248.5693359375
+   },
+   "cv|town-map.js:drawTownGround|fillText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene-style.js:drawLocalLight|drawImage|source-over": {
+    "n": 156,
+    "px": 863809.0667167975
+   },
+   "cv|art.js:drawBoat|drawImage|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|art.js:drawSoul|fill|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|art.js:drawSoul|drawImage|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|scene.js:render|stroke|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|town-shade.js:drawActorShadow|drawImage|source-over": {
+    "n": 24,
+    "px": 52282.48649319451
+   },
+   "cv|town-ground-sprites.js:Object.fn|drawImage|source-over": {
+    "n": 12,
+    "px": 330720.4695462511
+   },
+   "cv|art.js:drawBuilding|drawImage|source-over": {
+    "n": 18,
+    "px": 0
+   },
+   "cv|town-map.js:drawTownHouse|drawImage|source-over": {
+    "n": 54,
+    "px": 2338950.3843797413
+   },
+   "cv|scene.js:anon|drawImage|source-over": {
+    "n": 6,
+    "px": 1354287.5945529938
+   },
+   "cv|scene.js:anon|fill|source-over": {
+    "n": 36,
+    "px": 0
+   },
+   "cv|combat-sprites.js:drawAnimatedSprite|drawImage|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|scene.js:label|strokeText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene.js:label|fillText|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|town-scenery.js:sprite|drawImage|source-over": {
+    "n": 84,
+    "px": 12664742.378805207
+   },
+   "cv|scene-style.js:drawContactShadow|fill|source-over": {
+    "n": 54,
+    "px": 0
+   },
+   "cv|art.js:drawStandee|drawImage|source-over": {
+    "n": 12,
+    "px": 202642.26418183534
+   },
+   "cv|town-scenery.js:drawTorchFlame|drawImage|lighter": {
+    "n": 72,
+    "px": 693645.4286604465
+   },
+   "cv|scene-style.js:drawLocalLight|drawImage|screen": {
+    "n": 108,
+    "px": 15004615.727397159
+   },
+   "cv|town-scenery.js:Object.fn|fillRect|screen": {
+    "n": 144,
+    "px": 13634.868802693669
+   },
+   "cv|scene.js:Object.fn|fill|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "cv|scene.js:Object.fn|drawImage|source-over": {
+    "n": 12,
+    "px": 706598.1773071289
+   },
+   "cv|scene.js:ring|stroke|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "cv|yama-animation.js:drawYamaBook|drawImage|source-over": {
+    "n": 6,
+    "px": 202789.0202507195
+   },
+   "cv|town-night-effects.js:drawTownNightEffects|fill|source-over": {
+    "n": 96,
+    "px": 0
+   },
+   "cv|town-night-effects.js:drawTownNightEffects|stroke|source-over": {
+    "n": 96,
+    "px": 0
+   },
+   "cv|map-ambient.js:drawMapWeather|clip|source-over": {
+    "n": 12,
+    "px": 0
+   },
+   "off|map-ambient.js:composedClouds|clearRect|source-over": {
+    "n": 6,
+    "px": 0
+   },
+   "off|map-ambient.js:drawPatchField|drawImage|source-over": {
+    "n": 48,
+    "px": 2461861.6665344597
+   },
+   "cv|map-ambient.js:drawMapWeather|drawImage|source-over": {
+    "n": 168,
+    "px": 43049396.37272275
+   },
+   "off|terrain-detail.js:drawTerrainDetail|drawImage|source-over": {
+    "n": 4,
+    "px": 2021464
+   },
+   "off|terrain-detail.js:drawTerrainDetail|drawImage|screen": {
+    "n": 2,
+    "px": 169472
+   },
+   "off|ui.js:updateTownHud|clearRect|source-over": {
+    "n": 1,
+    "px": 0
+   },
+   "off|ui.js:updateTownHud|fillRect|source-over": {
+    "n": 12,
+    "px": 38576
+   },
+   "off|ui.js:updateTownHud|fill|source-over": {
+    "n": 1,
+    "px": 0
+   }
+  },
+  "gl": {
+   "draws": 41,
+   "px": 2039158
+  },
+  "cv": [
+   3584,
+   1916
+  ]
+ },
+ "walk_fps": {
+  "frames": 457,
+  "secs": 10.02,
+  "fps_avg": 45.7,
+  "fps_min_1s": 33.6,
+  "ft_avg": 21.88,
+  "ft_p50": 16.7,
+  "ft_p95": 33.4,
+  "ft_p99": 83.4,
+  "ft_max": 133.3,
+  "frames_over_33": 50,
+  "long_tasks": 1,
+  "long_ms": 50,
+  "long_max": 50,
+  "canvases_created": 74,
+  "canvas_px_created_M": 45.13,
+  "calls": {
+   "drawImage": 92798,
+   "clip": 1374,
+   "fillRect": 19092,
+   "fill": 18973,
+   "stroke": 11789
+  },
+  "heap_MB": 22,
+  "decoded_imgs": 412,
+  "decoded_img_MB": 1082,
+  "canvases_live": 3,
+  "main_canvases": [
+   "2205x1179",
+   "240x160",
+   "3584x1916"
+  ]
+ },
+ "gl": {
+  "renderer": "ANGLE (Intel, ANGLE Metal Renderer: Intel(R) UHD Graphics 630, Unspecified Version)",
+  "webgl2": true,
+  "maxTex": 16384
+ },
+ "canvases": [
+  [
+   "cover-fx-h5b",
+   2205,
+   1179
+  ],
+  [
+   "town-minimap",
+   240,
+   160
+  ],
+  [
+   "cv",
+   3584,
+   1916
+  ]
+ ],
+ "errors": []
+}

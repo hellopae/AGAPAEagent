@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T04:23:41.153Z",
+  "updatedAt": "2026-11-13T04:40:29.232Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,12 +305,12 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "WebGL migration plan (Fable)",
       "report": {
-        "when": "20:22",
-        "title": "AVEGEE quest rewards and battles",
-        "body": "Another stale background wait-loop, so I'm taking no action. It was waiting on an output file from an earlier experiment run that I had already killed and re-run. It exited with code 144 when I killed those processes.\n\nNo new information here. The report to Claudy stands as delivered."
+        "when": "11:40",
+        "title": "WebGL migration plan (Fable)",
+        "body": "Benchmark matrix is still running in the background; waiting for its completion notice before writing the plan."
       }
     },
     {

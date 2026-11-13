@@ -1,0 +1,58 @@
+[
+ {
+  "mode": "2d",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 481,
+  "fps": 60,
+  "ms_avg": 16.67,
+  "ms_p95": 16.7,
+  "round": 0,
+  "uncap": false
+ },
+ {
+  "mode": "gl-naive",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 480,
+  "fps": 60,
+  "ms_avg": 16.67,
+  "ms_p95": 16.8,
+  "round": 0,
+  "uncap": false
+ },
+ {
+  "mode": "hybrid",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 480,
+  "fps": 60,
+  "ms_avg": 16.67,
+  "ms_p95": 16.8,
+  "round": 0,
+  "uncap": false
+ },
+ {
+  "mode": "gl-merged",
+  "dpr": 2,
+  "size": [
+   3584,
+   1916
+  ],
+  "frames": 480,
+  "fps": 60,
+  "ms_avg": 16.67,
+  "ms_p95": 16.7,
+  "round": 0,
+  "uncap": false
+ }
+]
