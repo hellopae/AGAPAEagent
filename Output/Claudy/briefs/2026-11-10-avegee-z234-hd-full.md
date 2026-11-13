@@ -10,10 +10,14 @@ Repo: AVEGEE worktree ของ run นี้ (แตกจาก branch `claude
 ต้นแบบผลจริงของโซน 1 (ดูสไตล์/สคริปต์/registration): `/Users/agapae/agapae-work/.codex-worktrees/20261105T025229Z-00c52f6e/docs/art-reviews/2026-11-05-z1-v5-plaza-detail/` และ `/Users/agapae/agapae-work/.codex-worktrees/20261110T105803Z-bc08e0c8/docs/art-reviews/2026-11-05-z1-v5-hd-full/`
 
 ## ต่างจากโซน 1
+- **ภาพในเกมเป็น .webp แล้ว** (ตั้งแต่ 12 พ.ย.): master 1× อ่านจาก `img/map-zone<N>/.../r*-c*.webp` · ส่งออก native/2× เป็น .webp lossless
 - ภาพตั้งต้น (master 1×, grid r1–r4 × c1–c5 เหมือนโซน 1): โซน 2 asia `img/map-zone2/v2/` · โซน 3 west `img/map-zone3/v1/` · โซน 4 cyberhell `img/map-zone4/v3/` (ดู `src/zone-skin.js` ว่าเกมโหลดชุดไหน + repairs ของโซนนั้นถ้ามี)
 - สไตล์ของแต่ละโซนต้องคงเดิม (asia = นรกจีน/ญี่ปุ่น, west = นรกตะวันตก น้ำแข็ง, cyberhell = เมืองไซเบอร์ แสงฟ้า/ม่วง) — เพิ่มแค่ความคม/รายละเอียด
 - วัตถุที่ยามาเดินทับ: ทำ `objects-inventory.json` ของโซนนั้นเอง (เทียบ walkmask/วัตถุใน `src/` ของโซน) แล้วลบตามหลักเดียวกัน
 - ส่งออก `docs/art-reviews/2026-11-10-z<N>-hd-full/<chunk>/` (N = 2,3,4) โครงไฟล์เหมือนโซน 1 · ≤ 80 MB ต่อ run
 - run ละ 4 chunk · ImageGen ≤ 16 ครั้ง · ไม่ทันส่งเท่าที่เสร็จ ระบุส่วนค้างใน run-summary
+
+## กันวนซ้ำ (13 พ.ย.)
+check อัตโนมัติ = ไฟล์ครบ/เปิดได้/ขนาดถูก เท่านั้น · เกณฑ์คุณภาพเขียนผลวัดลง README ให้ Claude ตัดสิน · ไม่ต้องรันซ้ำเองเพื่อให้ผ่านตัวเลข
 
 ## เกณฑ์รับงาน = โซน 1 (sharpness ≥ ×10, structure ≤ 4 px, ไม่เห็นรอยภายใน chunk, native+registration ครบให้ ASSEMBLE)
