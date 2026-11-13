@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T08:18:45.817Z",
+  "updatedAt": "2026-11-13T08:19:04.762Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Cloud mix + trash button frame",
+      "status": "working",
+      "task": "Zone 1 event chain (Fable)",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
