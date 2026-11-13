@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T04:03:13.536Z",
+  "updatedAt": "2026-11-13T04:13:47.034Z",
   "agents": [
     {
       "id": "claudy",
@@ -123,7 +123,7 @@
         "ส่งต่อให้ Vera"
       ],
       "status": "done",
-      "task": "Write AVEGEE quest battle scripts",
+      "task": "Polish temp strings + feudgran plea",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
