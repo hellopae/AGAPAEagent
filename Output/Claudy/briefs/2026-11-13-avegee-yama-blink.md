@@ -1,0 +1,5 @@
+# YAMA-BLINK (Codex) — วาดชุดกระพริบตายามา (ห้องสอบสวน) ใหม่ให้นิ่ง · 13 พ.ย. 2569
+คุณเป้: ยามากระพริบตาในหน้าสอบสวนกระตุก · Toby จัดหัวตรงด้วยโค้ดแล้ว (FB2-B) แต่ต้นเหตุคือ 4 ท่าเป็นภาพวาดคนละใบ
+Repo: AVEGEE worktree ของ run นี้ (แตกจาก main) · ImageGen ในตัว · ห้าม commit/push/merge เอง · ส่งออก **.webp** (อัลฟา lossless) · ห้ามตัวอักษรในภาพ · check = ไฟล์ครบ/ขนาดถูก เท่านั้น · retry ≤ 2
+สเปกเต็ม: `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Toby/2026-11-13-avegee-fb2-b-trial-battle.md` หัวข้อสเปกอาร์ต v1 — สรุป: `img/yama-animation-v1/<โซน>/book-idle.webp` 1280×1920 เลย์เอาต์เดิม · แถว 0 เฟรม 320×480 หันตรง · เฟรม 0 ท่าหลัก · 1 = เฟรม 0 แต่ตามองข้าง · 2 = เฟรม 0 แต่หลับตา · 3 = เฟรม 0 · **ทุกพิกเซลนอกดวงตาต้องเหมือนเฟรม 0** (copy เฟรม 0 แล้วแก้เฉพาะตา) · เท้าพิกเซลเดิม · ทำครบ 4 โซน (th, asia, west, cyberhell) แถวอื่นของ sheet คงเดิม
+งบ ImageGen ≤ 12 · ส่งออก `docs/art-reviews/2026-11-13-yama-blink/<โซน>/book-idle.webp` + GIF + diff-check.json (พิกเซลนอกตาต่างจากเฟรม 0 = 0) + README ไทย
