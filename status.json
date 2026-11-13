@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T08:02:46.498Z",
+  "updatedAt": "2026-11-13T08:14:46.537Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Polish temp strings + feudgran plea",
+      "status": "working",
+      "task": "Write Sita/Hanuman story script",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
