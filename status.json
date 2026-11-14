@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T18:45:45.078Z",
+  "updatedAt": "2026-11-14T18:51:56.389Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae revise zone 2 + Megumi A",
+      "status": "working",
+      "task": "Rae boss moves + merchant quest",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
