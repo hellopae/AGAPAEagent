@@ -58,3 +58,5 @@
 - ค้างถามคุณเป้: `frontier-th-intro-v19` ไม่มีไฟล์ในเครื่อง (มีแค่ v1) · Codex วาด: cut-sita-phantom-ledger-th, cut-hanuman-yields-th, cut-sita-return-th (1375×768)
 - 14 พ.ย. 15:25 MERGED main c7bc395e (พื้น HD โซน 2+3, เทสต์ 2162/2162, deploy ~779 MB) · รอคุณเป้ตรวจ: west เย็น/หิมะบาง/พุ่มหาย, asia บันได lava-bank ขั้นหาย (prompt Codex ใน AVEGEE docs/art-reviews/2026-11-14-z23-ground-integrate/README.md)
 - 14 พ.ย. MERGED main 7addeb62 (เก็บตก z1: ท่าพุ่งชนเพลิง, กล้อง, ปุ่ม, ถ้ำ · เทสต์ 2163/2163) · ค้าง: เซฟทันทีตอนชนะ (declareWin) Claudy อนุมัติ ทำในงานถัดไป
+- 14 พ.ย. 20:42 คิว Codex เดิมจบครบ (Z4-HD-5 `20261114T070300Z-30291ec5`, Z4-ASSEMBLE `20261114T071713Z-9434a667`, HUNGRY-ICON `…073603Z-6d13dc70`, YAMA-BLINK `…073543Z-73ddc388`, SPIRIT-CARD-SCARED `…074445Z-333d3984`, CYBER5 `…080932Z-99f18dda` — ทั้งหมด ready_for_review รอ Toby เสียบหลัง event โซน 2)
+- 14 พ.ย. 20:42 เริ่ม `queue-z2-art-1114.py`: Z2-ART-A (คดี 12 โซน 1 + หงอคง) ∥ Z2-ART-B (อากุระ/พ่อซาโตริ/ยักษ์ทดสอบ) → Z2-ART-C (คดีญาติ) · ใบงาน briefs/2026-11-14-avegee-z2-art-{a,b,c}.md · ภาพทับ placeholder ชื่อเดิมใน branch Toby
