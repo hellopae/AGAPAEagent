@@ -57,3 +57,4 @@
 - 14 พ.ย. 14:50 MERGED main 7b118c6a (event โซน 1, เทสต์ 2157/2157) · ต่อ: Toby พื้น z2+3 → Toby เก็บตก z1 (briefs/2026-11-14-avegee-z1-events-fixup.md) → event โซน 2
 - ค้างถามคุณเป้: `frontier-th-intro-v19` ไม่มีไฟล์ในเครื่อง (มีแค่ v1) · Codex วาด: cut-sita-phantom-ledger-th, cut-hanuman-yields-th, cut-sita-return-th (1375×768)
 - 14 พ.ย. 15:25 MERGED main c7bc395e (พื้น HD โซน 2+3, เทสต์ 2162/2162, deploy ~779 MB) · รอคุณเป้ตรวจ: west เย็น/หิมะบาง/พุ่มหาย, asia บันได lava-bank ขั้นหาย (prompt Codex ใน AVEGEE docs/art-reviews/2026-11-14-z23-ground-integrate/README.md)
+- 14 พ.ย. MERGED main 7addeb62 (เก็บตก z1: ท่าพุ่งชนเพลิง, กล้อง, ปุ่ม, ถ้ำ · เทสต์ 2163/2163) · ค้าง: เซฟทันทีตอนชนะ (declareWin) Claudy อนุมัติ ทำในงานถัดไป
