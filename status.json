@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T17:37:16.363Z",
+  "updatedAt": "2026-11-14T18:45:45.078Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby zone 2 fixup + zone 4 ground",
+      "task": "Toby breach arrow then Dam foreman",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
