@@ -4,6 +4,11 @@ Repo: AVEGEE worktree ของ run นี้ (แตกจาก main) · Image
 check อัตโนมัติ = ไฟล์ครบ + เปิดได้ + ขนาดและโหมดสีตามสเปก · retry ≤ 2 ต่อภาพ · ใกล้หมดงบให้ส่งเท่าที่เสร็จ และเขียนรายการที่ค้างใน README
 ส่งออก: ภาพจริงที่ path ในเกมตามรายการ + `docs/art-reviews/2026-11-14-z2-events-art-<ชุด>/` contact sheet (jpg) + README ภาษาไทย (ไฟล์ ขนาด ผล check ภาพที่ค้าง)
 
+## ภาพเก่าที่ Codex วาดไว้แล้ว (ชุด W4 1 พ.ย.) — คุณเป้: "มีภาพเก่าแล้ว ปรับใหม่ได้ตามความเหมาะสม"
+- **หงอคง** = `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-sun-wukong-v1.png` (512×512 RGBA) → `boss-wukong-asia.webp` **ไม่ต้องวาดใหม่** แปลงเป็น webp lossless ขนาดเดิม (Pillow) · โปรไฟล์ `boss-wukong-asia-profile.webp` วาดครึ่งตัวจากหน้าและชุดตัวนี้ · คัตซีนทุกภาพหงอคงต้องหน้า ชุดเกราะแดงทอง ห่วงทอง กระบองทอง ตามภาพนี้ (ใช้แทนคำว่า "หมวกขนหงส์" ในตาราง)
+- **ลิงเฒ่า** = ต่อยอดจาก `/Users/agapae/Documents/Work PAE/Claude/AGAPAE Agent/Output/Codex/2026-11-01-art-w4/assets/w4-huaguoshan-monkey-spirit-v2.png` / `w4-huaguoshan-monkey-v1.png` (หน้าและขนชุดเดียวกัน) แต่แก่ลง ขนหงอก หลังโกง กอดห่อผลท้อแห้ง ขยายเป็น 1254×1254 ตามสเปกวิญญาณ ต้องเข้าชุดกับวิญญาณโซนบูรพาในเกม
+- **หนุมาน/สีดา** (ชุด A1) ใช้หน้าตาตัวที่อยู่ในเกมแล้ว `img/z1-events/boss-hanuman-th*.webp`, `soul-sita-th*.webp` (วาด 13 พ.ย.) ไม่ใช้ W4 เพื่อให้ตรงกับฉากที่เล่นอยู่
+
 ## ชุด A1 — โซน 1 คดี 12 (`img/z1-events/`, 1375×768 RGB เท่าภาพในโฟลเดอร์เดิม, สไตล์และหน้าตัวละครตาม `img/z1-events/cut-hanuman-descends-th.webp`, `soul-sita-th*.webp`, `boss-hanuman-th*.webp`)
 1. `cut-sita-phantom-ledger-th.webp` (เขียนทับ placeholder) — นิรากางแฟ้มต้นฉบับกลางแท่นพิพากษา ไล่นิ้วตามบรรทัดที่หมึกใหม่กว่าส่วนอื่น ปลายบรรทัดมีตราลายเส้นสีแดงเรืองผิดปกติ (สัญลักษณ์ไม่มีตัวอักษร) ยามายืนข้างมองตาม หนุมานและนางสีดายืนพื้นหลัง ฝุ่นยังไม่ตกหลังศึก
 2. `cut-hanuman-yields-th.webp` — หนุมานลดมือ ถอยหนึ่งก้าว โค้งศีรษะให้ยามาอย่างสงบ นางสีดายืนข้าง ห้องพิพากษา
@@ -13,4 +18,4 @@ check อัตโนมัติ = ไฟล์ครบ + เปิดได�
 soul-ape-elder-asia (+profile), boss-wukong-asia (+profile), cut-wukong-arrives-asia, cut-ape-phantom-ledger-asia (องค์ประกอบคล้ายข้อ A1-1), cut-wukong-returns-asia, cut-wukong-yields-asia (P2 ทำท้ายสุด)
 - หงอคง: เกราะทอง หมวกขนหงส์ ไม้เท้ากายสิทธิ์ สง่า องอาจ **ไม่ตลก**
 
-งบ ImageGen ≤ 18 · ลำดับ: A1 ครบก่อน แล้ว A2 (P1 ก่อน P2)
+งบ ImageGen ≤ 16 · ลำดับ: A1 ครบก่อน แล้ว A2 (P1 ก่อน P2)
