@@ -91,3 +91,4 @@
 - ลำดับ Claude: Rae (กำลังทำ) → Toby หมอกโซน 3 → Toby boss skills ทุกโซน + เสียบหงอคง/ดำ + ภารกิจพ่อค้า + ข้อความ Rae → (พื้น v8 z2/z3 เมื่อ Codex เสร็จ)
 - 02:20 Rae เสร็จ 3 ไฟล์ (boss-skills 23 บอส, merchant-quest "ขนที่ไม่ไหม้", pointer-foreman-lines) · Toby เริ่มหมอกโซน 3 + เพิ่ม **ฝน/สายไฟโซน 4** (คุณเป้ 02:09: สายไฟหนาไม่สวย อยากมีไฟวิ่ง · ฝนเป็นระเบียบเกิน + ทับแค่พื้น)
 - Codex `queue-boss-art-1115.py`: BOSS-ART-1 (ระดับ A + ขนนก + ควันเถ้า) → -2 (Cerberus/Jörmungandr/AI Scammer/PHANTOM-404 สไปรท์+การ์ด) → -3 (ระดับ B) ขนานกับ queue-ground-fix
+- 02:25 คุณเป้: โซน 2–4 ใส่ effect ลาวา แม่น้ำ เมฆลอย เงาเมฆ เหมือนโซน 1 → ใบงาน briefs/2026-11-15-avegee-z234-fluids-clouds.md · Toby ทำต่อหลังฝน/หมอก/สายไฟ (ก่อน boss skills)
