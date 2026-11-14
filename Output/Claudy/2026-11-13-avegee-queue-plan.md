@@ -54,3 +54,5 @@
 4. event โซน 3 (Cerberus คดี 0, แวมไพร์ วาลดริก, วาคิวรี เอียร์ลิน, Jörmungandr → เซเวอริน, คดีญาติ 5)
 5. event โซน 4 (คุกเทวดา คดี 0, PHANTOM-404 คดี 4/8/9, ชายแดน 4 ระลอก, AI Scammer Robot คดี 10, บอสสุดท้าย)
 - พื้น HD โซน 4 (Codex กำลังวาด) เสียบหลังข้อ 2 · shader ของเหลว z2–4 หลังพื้นแต่ละโซนเข้าเกม
+- 14 พ.ย. 14:50 MERGED main 7b118c6a (event โซน 1, เทสต์ 2157/2157) · ต่อ: Toby พื้น z2+3 → Toby เก็บตก z1 (briefs/2026-11-14-avegee-z1-events-fixup.md) → event โซน 2
+- ค้างถามคุณเป้: `frontier-th-intro-v19` ไม่มีไฟล์ในเครื่อง (มีแค่ v1) · Codex วาด: cut-sita-phantom-ledger-th, cut-hanuman-yields-th, cut-sita-return-th (1375×768)
