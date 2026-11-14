@@ -93,3 +93,9 @@
 - Codex `queue-boss-art-1115.py`: BOSS-ART-1 (ระดับ A + ขนนก + ควันเถ้า) → -2 (Cerberus/Jörmungandr/AI Scammer/PHANTOM-404 สไปรท์+การ์ด) → -3 (ระดับ B) ขนานกับ queue-ground-fix
 - 02:25 คุณเป้: โซน 2–4 ใส่ effect ลาวา แม่น้ำ เมฆลอย เงาเมฆ เหมือนโซน 1 → ใบงาน briefs/2026-11-15-avegee-z234-fluids-clouds.md · Toby ทำต่อหลังฝน/หมอก/สายไฟ (ก่อน boss skills)
 - 02:35 คุณเป้ตัดสินท่าบอส/ขนนก/ดำ → briefs/2026-11-15-avegee-owner-decisions-boss-quest.md (PHANTOM-404 = AI Scammer ตัวเดียว · แก้ใบงาน BOSS-ART-2 แล้วก่อนเริ่ม)
+
+## 15 พ.ย. 03:45 — ตรวจรับหมอก/ฝน/สายไฟ + พื้น v8 โซน 2
+- Toby Z3-FOG/Z4-RAIN/Z4-WIRES `64fa864e` + Claudy bump importmap `dab9e87d` → merge main แล้ว เทสต์ 2236/2236
+  - หมอกยังสูงกว่าเกณฑ์ 6% ที่มุมริมน้ำ (+9.7%/+8.9% เป็นสัดส่วน, +3.4 จุดสเกล 0–100) Claudy ยอมรับไว้ก่อน เพราะใบงานขอให้หมอกหนาที่ริมน้ำ ปรับที่ `FOG_FX.peak` (.9) ได้ถ้าคุณเป้ว่ายังซีด
+- Z2-SHARPEN สองรอบจบ `TimeoutExpired` (worker ตัด 30 นาที) แต่รอบ 2 วาดครบ 17 จุด sharpness ≥0.86 structure ≤3 px → Claudy ตรวจภาพแล้วผ่าน ให้ Toby ติดตั้ง `v8-exact` ในรอบงานของเหลว/เมฆ
+- Toby งานถัดไป: ของเหลว/เมฆ/เงาเมฆโซน 2–4 + ติดตั้ง v8 โซน 2 (กำลังทำ)

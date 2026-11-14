@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T20:21:58.771Z",
+  "updatedAt": "2026-11-14T20:37:16.801Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby zone 3 fog FX",
+      "status": "working",
+      "task": "Toby zone 2-4 fluids clouds",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
