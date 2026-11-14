@@ -46,3 +46,11 @@
 ## ทำต่อเมื่อโควตากลับ
 1. Claude: Toby ทำ z1-events ต่อ (resume agent หรือใบงานเดิม + patch) → เสียบ STORY-ART A/B → เสียบพื้นโซน 2 + shader โซน 2
 2. Codex: รัน `queue-map-z34.py` ใหม่ (Z3/Z4) → `queue-extra-chain.py` → `queue-cyber5-chain.py`
+
+## 14 พ.ย. — คิว event เนื้อเรื่อง (คุณเป้: "จัดคิวเรียบร้อยแล้ว ทำงานตามคิวต่อได้เลย")
+1. (กำลังทำ) Toby ปิด event โซน 1 + แก้ flow บอสโซน 1 ใช้ boss-guide (ยมทัตไม่ถูกตัดสิน) → Claudy ตรวจสเปก → merge + deploy
+2. Toby เสียบพื้น HD โซน 2+3 (briefs/2026-11-14-avegee-z23-ground-integrate.md) → push ให้คุณเป้ตรวจ
+3. event โซน 2 ตาม briefs/2026-11-14-avegee-z234-events-owner-spec.md: Rae เขียนบท (หงอคง/ลิงฮั้งกัวซัน, พ่อซาโตริ, คดีญาติ 4 + ยักษ์ทวารบาลทดสอบ) → Toby ทำระบบ + เทสต์ลำดับ → Codex วาดภาพที่ขาด
+4. event โซน 3 (Cerberus คดี 0, แวมไพร์ วาลดริก, วาคิวรี เอียร์ลิน, Jörmungandr → เซเวอริน, คดีญาติ 5)
+5. event โซน 4 (คุกเทวดา คดี 0, PHANTOM-404 คดี 4/8/9, ชายแดน 4 ระลอก, AI Scammer Robot คดี 10, บอสสุดท้าย)
+- พื้น HD โซน 4 (Codex กำลังวาด) เสียบหลังข้อ 2 · shader ของเหลว z2–4 หลังพื้นแต่ละโซนเข้าเกม
