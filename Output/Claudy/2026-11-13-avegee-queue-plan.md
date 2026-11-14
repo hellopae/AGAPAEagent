@@ -62,3 +62,4 @@
 - 14 พ.ย. 20:42 เริ่ม `queue-z2-art-1114.py`: Z2-ART-A (คดี 12 โซน 1 + หงอคง) ∥ Z2-ART-B (อากุระ/พ่อซาโตริ/ยักษ์ทดสอบ) → Z2-ART-C (คดีญาติ) · ใบงาน briefs/2026-11-14-avegee-z2-art-{a,b,c}.md · ภาพทับ placeholder ชื่อเดิมใน branch Toby
 - 14 พ.ย. คุณเป้: หนุมานใช้ตัวใหม่ (13 พ.ย.) · "โซน4 เสร็จแล้วแปลง webp แล้ว push ได้เลย" → ใบงาน briefs/2026-11-14-avegee-z4-ground-integrate.md ให้ Toby ต่อทันทีหลัง event โซน 2 (Claude ทีละงาน) → Claudy merge + deploy
 - 14 พ.ย. 21:2x คุณเป้: อากุระไม่มีโซ่ วาดใหม่ → `queue-akura-1114.py` AKURA-NOCHAIN (ตัวยืน + การ์ด + frontier-asia-intro-v1) ขนานกับ Z2-ART-C
+- 14 พ.ย. ~21:50 MERGED main 97069fa5 (z2 fixup: บทถ้ำอากุระ, ซิม, ระลอก3 hp38, ภาพ A/B, พื้น HD โซน 4 v7 · เทสต์ 2184/2184) · ต่อ: Toby เสียบภาพ C + อากุระไม่มีโซ่ · ค้าง: Rae เขียน Z2_KIN_REPEAT_LINE · คุณเป้ตัดสินความยากหงอคง/ยักษ์ทดสอบ (ชนะ 100%)
