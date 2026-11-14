@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:10:35.375Z",
+  "updatedAt": "2026-11-14T19:10:44.759Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby breach arrow then Dam foreman",
+      "status": "working",
+      "task": "Toby zone 3 fog FX",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
