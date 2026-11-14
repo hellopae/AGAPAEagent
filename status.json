@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T07:41:05.324Z",
+  "updatedAt": "2026-11-14T08:19:43.530Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Finish z1-events verify + report",
+      "task": "Integrate zone 2+3 HD ground",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
