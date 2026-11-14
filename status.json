@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T13:54:37.908Z",
+  "updatedAt": "2026-11-14T14:33:30.943Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby builds zone 2 events",
+      "task": "Toby zone 2 fixup + zone 4 ground",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
