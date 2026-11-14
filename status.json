@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T18:51:56.389Z",
+  "updatedAt": "2026-11-14T19:10:35.375Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,7 +122,7 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae boss moves + merchant quest",
       "report": {
         "when": "08:10",
