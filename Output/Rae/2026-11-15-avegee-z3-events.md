@@ -401,4 +401,270 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 
 ### 2.10 ภาพคดีครบ 5 → ดูหัวข้อ 8
 
-<!--PART-B-->
+---
+
+## 3. คดีครบ 10 · เอียร์ลิน วาลคีรี มาช้าไปก้าวเดียว → ทดสอบด้วยหอก
+
+### 3.1 ลำดับฉาก
+1. คดีครบ 10 → **คัตซีนเดิม `deva-west` (ใช้ตรงตัว ไม่แตะ)** → 2. N10-1 (รออยู่) → 3. ผู้เล่นเดินไปคุย (พูดสุ่มหนึ่งบรรทัด 3.4) → 4. N10-2 (ยืนยัน) → 5. คัตซีน `z3-eirlin-open` → 6. สู้ → 7. ชนะ `z3-eirlin-win` ได้ท่าหอกวาลคีรี (ของเดิม `valkyrieSpear`) แล้วเอียร์ลินบินกลับฟ้า (ไม่ยืนค้างบนแผนที่ ตามบั๊ก e1 โซน 1) / แพ้ `z3-eirlin-lose`
+- จุดที่เธอยืนรอ ต้องเป็นจุดที่เดินถึง (ที่โซน 2 Toby พบว่าจุดเดิมเป็นหน้าผาบนพื้น 2×) · โซน 3 ให้ตรวจเหมือนกัน
+
+### 3.2 หน้าต่างแจ้งเตือน
+**N10-1 · เมื่อฉากเดิมจบ**
+- หัวข้อ: เทวดาผู้ตรวจรอท่านอยู่
+- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาคิวรี ลงมาช้าไปก้าวเดียว และรออยู่เพื่อทดสอบท่าน เตรียมทีมให้พร้อมแล้วเดินไปคุยกับเธอ
+- ปุ่ม: รับทราบ
+- EN หัวข้อ: The inspector awaits you
+- EN ข้อความ: Eirlin, spear-inspector of the Valkyries, arrived one step too late and now waits to test you. Ready your team and go speak with her.
+- EN ปุ่ม: Understood
+
+**N10-2 · เมื่อกดคุย (แทน alert เดิมของ `westDevaTest` ถ้าอยากได้ฉบับมีชื่อ · ของเดิม "เทวดามาปราบแวมไพร์ แต่ยมบาทน้อยปราบไปแล้ว จึงขอทดสอบฝีมือ" ใช้ต่อได้ ไม่ผิด)**
+- หัวข้อ: เทวดาทดสอบแห่งปัจฉิม
+- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาคิวรี มาปราบแวมไพร์ไม่ทัน จึงขอทดสอบท่านด้วยหอก เธอไม่ใช่ศัตรู แต่อยากเห็นว่าท่านยืนได้เมื่อหอกพุ่งเข้าหา
+- ปุ่ม: รับการทดสอบ / ยังก่อน
+- EN หัวข้อ: The West's deva tests you
+- EN ข้อความ: Eirlin, spear-inspector of the Valkyries, came too late for the vampire and asks to test you with her spear instead. She is no enemy. She wants to see you stand when the spear comes.
+- EN ปุ่ม: Take the test / Not yet
+
+**N10-3 · แบนเนอร์**
+- ไทย: ศึกทดสอบหอกวาลคีรี · เอียร์ลิน
+- EN: Valkyrie spear test · Eirlin
+
+**N10-4 · ชนะ**
+- หัวข้อ: ผ่านการทดสอบของเอียร์ลิน
+- ข้อความ: ท่านผ่านการทดสอบของเอียร์ลิน หอกถูกเก็บเข้าฝักแล้ว
+- ปุ่ม: ต่อ
+- EN หัวข้อ: You passed Eirlin's test
+- EN ข้อความ: You have passed Eirlin's test. The spear is sheathed.
+- EN ปุ่ม: Continue
+
+**N10-5 · แพ้ (ให้ลองใหม่)**
+- หัวข้อ: หอกหยุดชั่วคราว
+- ข้อความ: เอียร์ลินลดหอกลงก่อน ท่านตั้งหลักแล้วลองอีกครั้งได้
+- ปุ่ม: ทดสอบอีกครั้ง
+- EN หัวข้อ: The spear pauses
+- EN ข้อความ: Eirlin lowers her spear for now. Steady yourself and try again.
+- EN ปุ่ม: Test again
+
+**N10-6 · ของรางวัล** ดึงจาก `ABILITY_REWARDS.valkyrieSpear` ของเดิม (หอกวาลคีรี · "กวาดแทงศัตรูทุกคนด้วยหอก ความเสียหายต่อคนเท่าเดิม") ไม่เพิ่มรางวัลซ้ำ
+
+### 3.3 บทในฉากสู้ (เอียร์ลินพูดได้)
+- เริ่มสู้ เอียร์ลิน: "ให้ข้าเห็นว่าเจ้ายืนได้นะ"
+  EN Eirlin: "Show me you can stand."
+- เลือดเหลือครึ่ง เอียร์ลิน: "ดี! เจ้ายังไม่ถอยสักก้าว"
+  EN Eirlin: "Good! You have not given one step."
+
+### 3.4 คำพูดเมื่อคุยก่อนรับการทดสอบ (สุ่มหนึ่งบรรทัด ไม่ใบ้คำตอบคดี)
+1. "ไม่ต้องรีบหรอกเจ้าตัวเล็ก ข้ามาช้าเองแท้ ๆ รอเจ้าอีกหน่อยไม่ตาย" · EN: "No hurry, little one. I was the late one. I can wait for you a while longer."
+2. "จัดทีมให้เรียบร้อยก่อน ข้าไม่นับว่าการเตรียมตัวเป็นความขี้ขลาด" · EN: "Sort out your team first. I do not count preparation as cowardice."
+3. "ข้าเลือกคนที่ล้มในศึกมาตลอด วันนี้ไม่มีใครล้มให้เลือก ก็เลยอยากเลือกคนที่ยืนอยู่แทน" · EN: "All my life I have chosen those who fell in battle. Today no one fell to choose, so I would rather choose someone who is still standing."
+
+### 3.5 คัตซีนเปิดศึก `z3-eirlin-open` (2 หน้า)
+```js
+'z3-eirlin-open': { title:{ th:'หอกวาลคีรี', en:'The Valkyrie\'s Spear' }, pages:[
+  { title:{ th:'ข้าชื่อเอียร์ลิน', en:'My Name Is Eirlin' }, line:{ th:
+    'บรรยาย: เอียร์ลินยืนบนลานหินที่เพิ่งเลิกมีหมอก หอกสีฟ้าขาวปักปลายลงพื้น ปีกทั้งสองข้างพับแนบหลังเหมือนนกที่ยังไม่อยากหุบจริง ๆ\n'
+  + 'เอียร์ลิน: "ข้าชื่อเอียร์ลิน วาลคีรี ผู้ตรวจหอก ข้าตามเสียงศึกจากทะเลเหนือมาสามวัน มาถึงปุ๊บศึกจบปั๊บ ข้ายังไม่ทันเห็นหน้าแวมไพร์ด้วยซ้ำ"\n'
+  + 'ยมบาทน้อย: "เขาไปรับทัณฑ์ที่แท่นตัดสินแล้วครับ ผมไม่ได้ปลิดชีพเขา"',
+    en:
+    'Narration: Eirlin stands on the stone square, now clear of mist, her blue-white spear planted point-down. Her wings are folded against her back like a bird not quite willing to close them.\n'
+  + 'Eirlin: "I am Eirlin, Valkyrie, inspector of the spear. I followed the sound of battle from the northern sea for three days. I arrive and the battle is over, just like that. I have not even seen the vampire\'s face."\n'
+  + 'Yama: "He has served his sentence at the judgment dais. I did not take his life."' } },
+  { title:{ th:'ผู้ที่ยืนอยู่', en:'The One Still Standing' }, line:{ th:
+    'เอียร์ลิน: "รับทัณฑ์ ไม่ใช่ปลิดชีพหรือ น่าสนใจ วาลคีรีอย่างข้ามีหน้าที่เดียว คือเลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา ข้าไม่เคยต้องถามว่าใครควรอยู่ต่อ แต่วันนี้ไม่มีใครล้มให้ข้าเลือก ข้าเลยอยากเลือกคนที่ยืนอยู่แทน"\n'
+  + 'เอียร์ลิน: "หอกข้าไม่ได้วัดว่าเจ้าแรงแค่ไหน มันวัดว่าเจ้าถอยหรือไม่ เมื่อพร้อมก็ยกอาวุธขึ้นเถอะ เจ้าตัวเล็ก"\n'
+  + 'บรรยาย: เอียร์ลินยกหอกขึ้นเหนือไหล่ แสงฟ้าขาวไล่ตามด้ามหอกจนถึงปลาย',
+    en:
+    'Eirlin: "A penance, not a killing? Interesting. A Valkyrie has one task: to choose the warriors who fall in battle and carry them to Valhalla. I have never had to ask who ought to stay. Today no one fell for me to choose, so I would rather choose the one who is still standing."\n'
+  + 'Eirlin: "My spear does not measure how strong you are. It measures whether you give ground. When you are ready, lift your weapon, little one."\n'
+  + 'Narration: Eirlin raises the spear over her shoulder. Blue-white light runs along the shaft to the tip.' } },
+]},
+```
+
+### 3.6 คัตซีนชนะ/แพ้
+```js
+'z3-eirlin-win': { title:{ th:'ผ่านหอก', en:'Past the Spear' }, pages:[
+  { title:{ th:'ไม่ถอย', en:'No Retreat' }, line:{ th:
+    'เอียร์ลิน: "พอ! ข้าไม่ต้องเลือกเจ้าหรอก เจ้าเลือกที่จะยืนเองตั้งแต่ก้าวแรก ฝีมือไม่ธรรมดานิ ข้าพูดจริง"\n'
+  + 'บรรยาย: เอียร์ลินหมุนหอกเก็บไว้ข้างลำตัว แล้วยื่นปลายด้ามให้ยมบาทน้อยแตะเบา ๆ แสงฟ้าขาวไหลจากหอกเข้าสู่มือเขา',
+    en:
+    'Eirlin: "Enough! I have no need to choose you. You chose to stand yourself, from the very first step. Not bad at all, you know. I mean it."\n'
+  + 'Narration: Eirlin spins the spear back to her side and offers the butt end for Yama to touch lightly. Blue-white light flows from the spear into his hand.' } },
+  { title:{ th:'ท่าหอกกับคลื่นที่ถอย', en:'The Spear Technique, and a Tide That Drew Back' }, line:{ th:
+    'เอียร์ลิน: "ท่าหอกนี้ข้าใช้เวลาหลายร้อยปีฝึก ข้ายกให้เจ้า ใช้ให้ดี อย่าเอามาแทงคนที่ไม่ยืนขวาง"\n'
+  + 'เอียร์ลิน: "อีกเรื่อง ตอนข้าบินผ่านชายแดน คลื่นถอยออกไปไกลกว่าน้ำลงตามปกติ ถ้าเจ้าเห็นอะไรผิดจังหวะที่นั่น อย่าชะล่าใจ มีบางอย่างกำลังขยับตัวอยู่ใต้น้ำ"\n'
+  + 'นิรา: "ดิฉันจะบันทึกไว้ค่ะ"\n'
+  + 'บรรยาย: เอียร์ลินกางปีก ลมหิมะม้วนเป็นเกลียวพาร่างขึ้นฟ้า ลานเหลือเพียงขนนกขาวใบเดียวลอยตกลงช้า ๆ',
+    en:
+    'Eirlin: "It took me several hundred years to learn this spear technique. I give it to you. Use it well. Do not spend it on anyone who is not standing in your way."\n'
+  + 'Eirlin: "One more thing. When I flew over the frontier, the tide had drawn back farther than any ordinary ebb. If you see anything out of rhythm there, do not grow careless. Something is stirring under the water."\n'
+  + 'Nira: "I will note it down."\n'
+  + 'Narration: Eirlin spreads her wings. A spiral of snowy wind lifts her skyward, and a single white feather drifts slowly down onto the empty square.' } },
+]},
+'z3-eirlin-lose': { title:{ th:'หอกหยุดชั่วคราว', en:'The Spear Pauses' }, pages:[
+  { title:{ th:'ข้ารอได้', en:'I Can Wait' }, line:{ th:
+    'เอียร์ลิน: "ลุกเถอะเจ้าตัวเล็ก หอกข้าไม่ทิ้งคนที่ล้ม ตั้งหลักได้เมื่อไหร่ค่อยมาใหม่ ข้ารอได้ ข้ามาช้ามาเองด้วยซ้ำ"\n'
+  + 'บรรยาย: เอียร์ลินปักหอกลงพื้นแล้วยืนนิ่ง',
+    en:
+    'Eirlin: "Get up, little one. My spear does not strike a man who is down. Come again when you have your footing. I can wait. I was the late one, after all."\n'
+  + 'Narration: Eirlin plants her spear in the ground and stands still.' } },
+]},
+```
+- บรรทัด "คลื่นถอยออกไปไกลกว่าน้ำลง" เป็นเกร็ดปูทางไปยอร์มุนกันดร์ (คดีครบ 15) ตัดได้โดยไม่กระทบเนื้อเรื่อง
+
+### 3.7 ภาพคดีครบ 10
+ไม่ต้องวาดใหม่: ใช้ภาพฉากเดิม `img/deva-intro/deva-intro-west-v1.webp` (ที่ `deva-west` ใช้อยู่) กับทุกหน้าของ `z3-eirlin-*` และสไปรท์ `boss-tester-west` เดิม · การ์ดท่า `cut-eirlin-spearrain-west` อยู่ใน boss-skills แล้ว (ตรวจชื่อไฟล์จริง)
+
+---
+
+## 4. คดีครบ 15 · เซเวอรินมาพร้อมยอร์มุนกันดร์ (บอสโซน ไม่ถูกตัดสิน)
+
+### 4.1 ลำดับฉาก
+1. N15-1 → 2. เซเวอรินเดินเข้าประตูชายแดนล่างไปท่าเรือ (คุยได้) → 3. คัตซีน `z3-sev-open` → 4. **สู้ยอร์มุนกันดร์ก่อน** (N15-2) → 5. ชนะ `z3-jorm-yields` + N15-4 → 6. **สู้เซเวอริน** (N15-3) → 7. ชนะ: เล่นคัตซีน `z3-sev-win` → แผงเดิม `STORY.west` 2 แผง (ได้ผนึกน้ำแข็ง) → boss-guide เดิม (ชม → ยืนรอที่ประตูชายแดน → welcome → farewell + เงิน 1,200 + ชุด) · ไม่ผ่านแท่นตัดสิน
+- แพ้ยอร์มุนกันดร์: เล่น `z3-jorm-lose` ลองใหม่ · **แพ้เซเวอริน: เสนอให้ไม่ต้องสู้ยอร์มุนกันดร์ซ้ำ** (ข้อ 10 ข้อ 5)
+- ลำดับแผงเดิม: `z3-sev-win` ผมเขียนไม่ทับเนื้อหาแผงเดิม (แผงเป็นบรรยายยอมรับ + ผนึกน้ำแข็ง) ถ้า Toby เล่นแผงก่อน ให้สลับได้ ไม่ต้องแก้ข้อความ
+
+### 4.2 หน้าต่างแจ้งเตือน
+**N15-1 · แจ้งเตือน**
+- หัวข้อ: ผู้ตรวจบัญชีแห่งปัจฉิมมาถึงแล้ว
+- ข้อความ: เซเวอริน อัศวินบัญชีปัจฉิม เดินเข้าประตูชายแดนด้านล่างมุ่งหน้าสู่ท่าเรือ โดยมีบางสิ่งใหญ่โตเลื้อยตามหลังมาในแม่น้ำ ไปคุยกับเขาที่ท่าเรือ
+- ปุ่ม: ไปที่ท่าเรือ
+- EN หัวข้อ: The West's auditor has arrived
+- EN ข้อความ: Severin, the Knight of the Western Ledger, walks through the lower frontier gate toward the pier, with something vast sliding along behind him in the river. Go and speak with him at the pier.
+- EN ปุ่ม: To the pier
+
+**N15-2 · แบนเนอร์ศึกอสรพิษ** ไทย: ศึกอสรพิษโลก · ยอร์มุนกันดร์ · EN: The World-Serpent · Jörmungandr
+**N15-3 · แบนเนอร์ศึกบอส** ไทย: ศึกบอสปัจฉิม · เซเวอริน · EN: Western zone boss · Severin
+**N15-4 · หลังชนะยอร์มุนกันดร์**
+- หัวข้อ: อสรพิษโลกถอยแล้ว
+- ข้อความ: ยอร์มุนกันดร์คลายขดและจมลงสู่แม่น้ำวิญญาณ เซเวอรินก้าวขึ้นท่าเรือมาเอง
+- ปุ่ม: สู้ต่อ
+- EN หัวข้อ: The World-Serpent withdraws
+- EN ข้อความ: Jörmungandr loosens its coils and sinks into the river of souls. Severin steps up onto the pier himself.
+- EN ปุ่ม: Fight on
+
+**N15-5 · แพ้ยอร์มุนกันดร์** หัวข้อ: อสรพิษโลกรออยู่ · ข้อความ: ยอร์มุนกันดร์หยุดนิ่งไว้ก่อน ท่านตั้งหลักแล้วสู้อีกครั้งได้ · ปุ่ม: สู้อีกครั้ง
+EN: The World-Serpent waits / Jörmungandr holds still for now. Steady yourself and fight again. / Fight again
+**N15-6 · แพ้เซเวอริน** หัวข้อ: เซเวอรินรอท่านอยู่ · ข้อความ: เซเวอรินปิดสมุดบัญชีไว้ก่อน ท่านตั้งหลักแล้วสู้อีกครั้งได้ · ปุ่ม: สู้อีกครั้ง
+EN: Severin awaits you / Severin closes his ledger for now. Steady yourself and fight again. / Fight again
+
+### 4.3 คัตซีนเปิดศึก `z3-sev-open` (4 หน้า · แทน `bossArrive` 4 บรรทัดเดิมของ `ZONES.west`)
+บรรทัดที่ทำเครื่องหมาย **[เดิม]** คือ 4 บรรทัดเดิมใน `data.js` ~2114-2117 ใช้ตรงตัว · ที่เหลือเป็นของใหม่
+```js
+'z3-sev-open': { title:{ th:'ผู้ตรวจบัญชีปัจฉิม', en:'The Auditor of the West' }, pages:[
+  { title:{ th:'บัญชีที่ท่าเรือ', en:'Accounts at the Pier' }, line:{ th:
+    'บรรยาย: เรือสินค้าลำเดียวเทียบท่าเรือฝั่งขวา ไม่มีธงและไม่มีลูกเรือ ชายร่างสูงในเกราะเงินลายกะโหลกสีน้ำเงินก้าวลงมาพร้อมสมุดบัญชีเล่มหนาหนีบใต้แขน น้ำแม่น้ำวิญญาณด้านหลังเขากระเพื่อมเป็นวงใหญ่ แล้วค่อยกระเพื่อมเป็นวงที่ใหญ่กว่านั้น\n'
+  + 'เซเวอริน: "ข้าเป็นคู่แข่งของฮาลวาร์ หัวหน้าโซน 3 และบัลลังก์ปัจฉิมควรเป็นของข้า"   /* [เดิม] */',
+    en:
+    'Narration: A single merchant ship docks at the right-hand pier, without flag or crew. A tall man in silver armour patterned with blue skulls steps down, a thick ledger under his arm. Behind him the river of souls ripples in a wide ring, and then in a wider one.\n'
+  + 'Severin: "I am Halvar\'s rival, the head of Zone 3, and the throne of the West ought to be mine."' } },
+  { title:{ th:'สิ่งที่โผล่จากน้ำ', en:'What Rose From the Water' }, line:{ th:
+    'เซเวอริน: "เจ้าก็แค่เด็กน้อย จะมีฝีมือปกครองดินแดนนี้ได้อย่างไร ข้าไม่ยอมรับ!"   /* [เดิม] */\n'
+  + 'บรรยาย: ผืนน้ำหลังเขายกตัวขึ้นเป็นกำแพงเกล็ดสีเทาน้ำเงิน หางขนาดเท่าเสาประภาคารโผล่พ้นผิวน้ำแล้วฟาดลงจนเรือสินค้าโคลงเคลง\n'
+  + 'นิรา: "ท่านคะ นั่น ... นั่นคืออสรพิษที่ล้อมโลกทั้งใบ ดิฉันเคยเห็นแต่ในหนังสือค่ะ"',
+    en:
+    'Severin: "You are only a child. How could you have the skill to rule this land? I do not accept it!"\n'
+  + 'Narration: The water behind him heaves up into a wall of blue-grey scales. A tail the size of a lighthouse mast breaks the surface and crashes down, and the merchant ship rocks hard.\n'
+  + 'Nira: "Sir, that is ... that is the serpent that circles the whole world. I have only seen it in books."' } },
+  { title:{ th:'หลักประกัน', en:'Collateral' }, line:{ th:
+    'เซเวอริน: "ข้าไม่ได้นำทหารมา ข้านำหลักประกัน ยอร์มุนกันดร์ ผู้ล้อมโลกหนึ่งรอบแล้วกัดหางตัวเอง ยอดรวมของโลกอยู่ในขดของมันทั้งหมด ข้าขอยืมมาสอบทานเจ้า ตัวเลขที่ผ่านมันไม่ได้ ก็ไม่ควรถือบัญชีที่นี่"\n'
+  + 'บรรยาย: ดวงตาสีเหลืองซีดของอสรพิษเปิดขึ้นช้า ๆ ไม่มีความโกรธ มีแต่ความง่วงของผู้ที่ถูกปลุกมาโดยไม่ได้ต้องการ',
+    en:
+    'Severin: "I brought no soldiers. I brought collateral: Jörmungandr, who circles the world once and bites his own tail. The world\'s whole balance lies in his coils. I have borrowed him to audit you. Figures that cannot get past him have no business keeping the ledger here."\n'
+  + 'Narration: The serpent\'s pale yellow eye opens slowly. There is no anger in it, only the weariness of one woken without wanting to be.' } },
+  { title:{ th:'ถ้าอยากรู้ว่าข่าวจริงแค่ไหน', en:'If You Want to Know How True the Rumour Is' }, line:{ th:
+    'ยมบาทน้อย: "ถ้าอยากรู้ว่าข่าวจริงแค่ไหน ก็มาลองดูสิ"   /* [เดิม] */\n'
+  + 'เซเวอริน: "ตามนั้น เตรียมตัวให้ดี"   /* [เดิม] */\n'
+  + 'บรรยาย: เซเวอรินถอยไปหลังเสาท่าเรือ เปิดสมุดบัญชีทีละหน้า อสรพิษโลกเลื้อยขึ้นมาขวางระหว่างเขากับทีมของท่าน',
+    en:
+    'Yama: "If you want to know how true the rumour is, come and try me."\n'
+  + 'Severin: "As you wish. Prepare yourself well."\n'
+  + 'Narration: Severin retreats behind a pier post and turns his ledger page by page. The world-serpent slides up to bar the way between him and your team.' } },
+]},
+```
+
+### 4.4 บทในฉากสู้ (ยอร์มุนกันดร์บรรยายล้วน · เซเวอรินพูดได้)
+- ศึกอสรพิษ เริ่มสู้ (บรรยาย): "ยอร์มุนกันดร์เลื่อนขดช้า ๆ เหมือนยังไม่รู้ว่าใครอยู่ตรงหน้า"
+  EN: "Jörmungandr shifts his coils slowly, as if not yet aware who stands before him."
+- ศึกอสรพิษ เลือดเหลือครึ่ง (บรรยาย): "ลำตัวใหญ่สั่นสะท้านทั้งสาย เหมือนเพิ่งรู้ว่ามีผู้ยืนอยู่"
+  EN: "The vast body shudders along its whole length, as if only now aware that someone is standing there."
+- ศึกเซเวอริน เริ่มสู้: "ข้าตรวจตัวเลขของเจ้าสองรอบแล้ว ลงมือได้"
+  EN Severin: "I have checked your figures twice. You may begin."
+- ศึกเซเวอริน เลือดเหลือครึ่ง: "ยอดยังไม่ปิด! ข้ายังเหลืออีกหนึ่งหน้า"
+  EN Severin: "The account is not closed! I still have one more page."
+
+### 4.5 คัตซีนอสรพิษถอย `z3-jorm-yields` (2 หน้า)
+```js
+'z3-jorm-yields': { title:{ th:'คลายขด', en:'The Coil Loosens' }, pages:[
+  { title:{ th:'ไม่ล้ม แต่ถอย', en:'Not Fallen, Withdrawn' }, line:{ th:
+    'บรรยาย: ขดทั้งหมดของยอร์มุนกันดร์คลายออกช้า ๆ จนชั่วขณะหนึ่งปลายหางโผล่พ้นน้ำทั้งที่ควรอยู่ในปาก มันหันมามองยมบาทน้อยนิ่ง ๆ เหมือนผู้เฒ่าที่รู้ว่ายังไม่ใช่เวลาของตน แล้วจมลงสู่แม่น้ำวิญญาณโดยไม่มีคลื่น\n'
+  + 'นิรา: "ท่านคะ ดิฉันไม่เห็นเขาล้มค่ะ เห็นเพียงเขาตัดสินใจกลับไป"\n'
+  + 'ยมบาทน้อย: "ผมก็รู้สึกอย่างนั้นครับ ขอบคุณที่ไม่ฝืนถึงที่สุด"',
+    en:
+    'Narration: Jörmungandr\'s coils loosen slowly, until for a moment the tip of his tail lies free of the water when it should be in his mouth. He turns and looks at Yama without moving, like an old one who knows this is not yet his hour, then sinks into the river of souls without a ripple.\n'
+  + 'Nira: "Sir, I did not see him fall. I saw him decide to go back."\n'
+  + 'Yama: "I felt the same. Thank you for not forcing it to the end."' } },
+  { title:{ th:'ยอดนี้ ข้าขอปิดเดี๋ยวนี้', en:'I Close This Account Now' }, line:{ th:
+    'เซเวอริน: "ข้าไม่เคยเห็นยอร์มุนกันดร์ถอยให้ใครมาก่อน ในบัญชีของข้าไม่เคยมีบรรทัดนั้น ข้าจะบันทึกใหม่ แล้วค่อยคิดยอดของเจ้าอีกครั้ง"\n'
+  + 'บรรยาย: เซเวอรินเปิดสมุดเล่มหนา เปลวสีน้ำเงินลามจากฝ่ามือตามแขนทีละนิ้ว\n'
+  + 'เซเวอริน: "ยอดนี้ ข้าขอปิดเดี๋ยวนี้! ขึ้นมาเถอะ เด็กน้อย"',
+    en:
+    'Severin: "I have never seen Jörmungandr give ground to anyone. There is no such line in my books. I shall record it anew, and then work out your total once more."\n'
+  + 'Narration: Severin opens the thick ledger. Blue flame creeps from his palm up his arm, one finger at a time.\n'
+  + 'Severin: "I close this account now! Come up here, child."' } },
+]},
+'z3-jorm-lose': { title:{ th:'อสรพิษโลกรออยู่', en:'The World-Serpent Waits' }, pages:[
+  { title:{ th:'ไม่ซ้ำเติม', en:'No Second Blow' }, line:{ th:
+    'บรรยาย: ยอร์มุนกันดร์หยุดนิ่ง ไม่ซ้ำเติมผู้ที่ล้ม เสียงน้ำในแม่น้ำวิญญาณค่อย ๆ เรียบลงอีกครั้ง เหมือนทั้งแม่น้ำรอให้ใครสักคนตั้งหลักได้',
+    en:
+    'Narration: Jörmungandr stops. He does not strike a fallen foe. The sound of the river of souls settles slowly, as if the whole river waited for someone to find their feet.' } },
+]},
+'z3-sev-lose': { title:{ th:'เซเวอรินรอท่านอยู่', en:'Severin Awaits You' }, pages:[
+  { title:{ th:'ยอดยังไม่ปิด', en:'The Account Is Still Open' }, line:{ th:
+    'เซเวอริน: "ยอดนี้ยังไม่ปิด กลับไปตั้งหลักแล้วมาใหม่ ข้าไม่ลบบัญชีของเจ้า ข้าจดไว้ตามที่ข้าเห็น"\n'
+  + 'บรรยาย: เซเวอรินปิดสมุดแล้วยืนรอ',
+    en:
+    'Severin: "This account is not closed. Go and steady yourself, then come back. I will not strike your name from the books. I record what I see."\n'
+  + 'Narration: Severin shuts the ledger and stands waiting.' } },
+]},
+```
+
+### 4.6 คัตซีนชนะ `z3-sev-win` (2 หน้า + หน้า 3 เสริม)
+```js
+'z3-sev-win': { title:{ th:'ยอดตรวจสอบ', en:'The Audit Result' }, pages:[
+  { title:{ th:'ตัวเลขไม่เคยโกหก', en:'Numbers Never Lie' }, line:{ th:
+    'เซเวอริน: "ยอดตรวจสอบออกมาสมกับที่เขาลือกันจริง ๆ"   /* [เดิม bossWin 1] */\n'
+  + 'บรรยาย: เปลวน้ำเงินดับ เซเวอรินปิดสมุดแล้วกางฝ่ามือให้เห็นว่าว่างเปล่า\n'
+  + 'เซเวอริน: "ข้าตรวจทุกตัวเลขสองรอบ รอบแรกข้าเห็นเด็กน้อย รอบที่สองข้าเห็นผู้ถือบัญชี ตัวเลขไม่เคยโกหก ข้าต่างหากที่อ่านผิดรอบแรก"',
+    en:
+    'Severin: "The audit result is exactly what the rumours claimed."\n'
+  + 'Narration: The blue flame dies. Severin shuts the ledger and opens his empty palm.\n'
+  + 'Severin: "I check every figure twice. The first time I saw a child. The second time I saw a keeper of the ledger. Numbers never lie. It was I who misread them the first time."' } },
+  { title:{ th:'บัลลังก์ที่ไม่ได้ชนะด้วยการแย่ง', en:'A Throne Not Won by Seizing' }, line:{ th:
+    'เซเวอริน: "ข้าขอปิดบัญชีนี้ด้วยการยกปัจฉิมให้เจ้าปกครอง"   /* [เดิม bossWin 2] */\n'
+  + 'เซเวอริน: "ข้ากับฮาลวาร์วัดกันด้วยบัญชีมาทั้งชีวิต ข้าไม่เคยชนะเขา และข้าก็ไม่ได้ชนะเจ้า แต่ข้าไม่เสียใจที่แพ้ให้ตัวเลขที่ถูกต้อง"',
+    en:
+    'Severin: "I close this account by yielding the West to you to govern."\n'
+  + 'Severin: "Halvar and I have measured each other by ledgers all our lives. I never beat him, and I have not beaten you. But I do not regret losing to figures that are correct."' } },
+  /* หน้า 3 เสริม เปิดด้วยธง Z3_PHANTOM_CLUE (ค่าเริ่มต้นปิด) */
+  { title:{ th:'ตัวเลขที่ไม่ใช่ของโลกนี้', en:'A Figure Not of This World' }, line:{ th:
+    'เซเวอริน: "อีกเรื่องหนึ่ง ข้าตรวจสมุดปัจฉิมทั้งเล่มก่อนมา ยอดค้างสามรายการไม่ตรงกับยอดของสำนักคัดกรรม ข้าคิดสองรอบสามรอบก็ไม่ตรง ราวกับมีมือนอกบัญชีแก้ทีละบรรทัด"\n'
+  + 'เซเวอริน: "ถ้าเจ้าเจอมือนั้น จดชื่อมันไว้ให้ข้า ข้าอยากรู้ว่าตัวเลขตัวไหนไม่ได้เกิดในโลกนี้"\n'
+  + 'นิรา: "ดิฉันจะตรวจรหัสผู้แก้ให้ค่ะ"',
+    en:
+    'Severin: "One more thing. Before I came I audited the whole of the West\'s ledger. Three outstanding balances do not agree with the registry\'s. I worked them two times, three times, and they still would not agree, as though a hand from outside the books had altered them line by line."\n'
+  + 'Severin: "If you ever find that hand, write its name down for me. I want to know which figure was never born in this world."\n'
+  + 'Nira: "I will check the alterer\'s code, sir."' } },
+]},
+```
+
+### 4.7 บทเพิ่มให้แผงเดิม `STORY.west` (ใช้ได้เมื่อ Toby เปิดช่องบทพูดบนแผง · ไม่บังคับ)
+- แผง `west-01` ผู้ท้าชิงยอมรับ · เซเวอริน: "ธรรมเนียมผู้ตรวจบัญชีปัจฉิม ผู้แพ้ต้องมอบหลักประกันให้ผู้ชนะ" · EN Severin: "It is the custom of the West's auditors that the loser hands his collateral to the winner."
+- แผง `west-02` ผนึกน้ำแข็ง · ยมบาทน้อย: "เย็นจัง แต่ไม่ได้เย็นชา" · EN Yama: "It is cold, but it is not cold-hearted."
+
+### 4.8 boss-guide ของเซเวอริน: ใช้บทเดิม ไม่ต้องเขียนใหม่
+บทเดิม `bossGuideStory()` ใช้ได้กับโซนนี้ (ชื่อผู้พูดดึงจาก `ZONES[west].bossName` อัตโนมัติ) · ที่ผมไม่แนะนำให้ทำตอนนี้ แต่ถ้าคุณเป้อยากได้น้ำเสียงเฉพาะเซเวอริน ข้อความเสนอ: praise "เจ้ายืนอยู่ได้ตั้งแต่ขดแรกจนถึงยอดสุดท้าย ปัจฉิมนี้ฝากไว้กับเจ้าได้" · farewell "พามาถึงประตูแล้ว ข้าตรวจบัญชีของเจ้าแล้วไม่พบข้อผิดพลาด ขอให้ที่ข้างหน้า ไม่มีใครมาแก้ตัวเลขของเจ้า" (EN: praise "You stood from the first coil to the last figure. The West may be left in your hands." · farewell "I have brought you to the gate. I audited your ledger and found no error. May no one alter your figures where you go next.")
+
+### 4.9 ภาพคดีครบ 15 → ดูหัวข้อ 8
+
+<!--PART-C-->

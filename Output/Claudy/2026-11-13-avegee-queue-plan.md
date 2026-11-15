@@ -146,3 +146,8 @@
   - งาน Claude ถัดไป: Codex เก่า YAMA-BLINK / SPIRIT-CARD-SCARED / CYBER5 → event โซน 3
 - 15 พ.ย. MERGED main `cb8d268d` ภาพ Codex ค้าง (ยามากะพริบตาไม่สั่น 4 โซน, การ์ดวิญญาณตกใจ 24, ท่า cyber 5 · เทสต์ 2279/2279) · ขาดการ์ดตกใจ West 8 + Cyber 10 → Codex · ถัดไป: event โซน 3 (Rae เขียนบทก่อน)
 - 15 พ.ย. เย็น คุณเป้: ภาพนักธุรกิจ/ยายโซน 4 โอเค · comment ใหม่ให้ Claudy จัดลำดับเอง · งานวาดจริง → `Output/Claudy/2026-11-15-avegee-codex-waiting-queue.md`
+
+## 15 พ.ย. เย็น — comment คุณเป้ 23 ข้อ (F1–F23)
+- ต้นฉบับ + แตกงาน + ลำดับ: `briefs/2026-11-15-avegee-owner-feedback-evening.md` · ไฟล์ `~/agapae-work/feedback/2026-11-15-owner/`
+- ลำดับ Claude: Rae z3 (กำลังทำ) → T1 บั๊ก+ฉากสู้ (`briefs/2026-11-15-avegee-t1-bugs-battle-toby.md`) → T2 แผนที่/เดินทาง → R1 Rae (สีดา, b4) + Reese รวม z3 → T3 UI/โรงอาหาร/minigame → T4 สีดา → T5 บอสยืนประตู → Toby event โซน 3
+- Codex คิวรอ: `2026-11-15-avegee-codex-waiting-queue.md` (9 งาน)
