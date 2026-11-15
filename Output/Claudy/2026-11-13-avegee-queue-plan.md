@@ -151,3 +151,4 @@
 - ต้นฉบับ + แตกงาน + ลำดับ: `briefs/2026-11-15-avegee-owner-feedback-evening.md` · ไฟล์ `~/agapae-work/feedback/2026-11-15-owner/`
 - ลำดับ Claude: Rae z3 (กำลังทำ) → T1 บั๊ก+ฉากสู้ (`briefs/2026-11-15-avegee-t1-bugs-battle-toby.md`) → T2 แผนที่/เดินทาง → R1 Rae (สีดา, b4) + Reese รวม z3 → T3 UI/โรงอาหาร/minigame → T4 สีดา → T5 บอสยืนประตู → Toby event โซน 3
 - Codex คิวรอ: `2026-11-15-avegee-codex-waiting-queue.md` (9 งาน)
+- 15 พ.ย. Rae บทโซน 3 เสร็จ `Output/Rae/2026-11-15-avegee-z3-events.md` · Claudy เช็ค data.js: ชื่อลูกทีม west ที่ Rae อนุมาน **ถูกทั้งหมด** (โพเอน่า/อ็อกเนียน/ซิบิล/เกรซ/นัวร์) · รอคุณเป้ตัดสิน 12 ข้อ (หัวข้อ 10 ของไฟล์) · ส่ง Reese ตรวจ
