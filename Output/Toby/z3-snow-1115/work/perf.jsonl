@@ -1,0 +1,9 @@
+{"zone": "west", "mode": "v7", "gfx": "high", "scene": "walk", "load": "4.46 9.21 7.02", "fps": 30.7, "min1s": 15.3, "p95": 66.7, "long": 5, "fx_ms": 1.4, "err": []}
+{"zone": "west", "mode": "v8", "gfx": "high", "scene": "walk", "load": "7.85 9.53 7.24", "fps": 31.4, "min1s": 14, "p95": 50.1, "long": 6, "fx_ms": 1.04, "err": []}
+{"zone": "west", "mode": "v7", "gfx": "high", "scene": "river", "load": "6.11 8.82 7.09", "fps": 25.6, "min1s": 23.2, "p95": 50, "long": 0, "fx_ms": 0.34, "err": []}
+{"zone": "west", "mode": "v8", "gfx": "high", "scene": "river", "load": "5.61 8.41 7.01", "fps": 25.7, "min1s": 24.4, "p95": 50.1, "long": 0, "fx_ms": 0.34, "err": []}
+{"zone": "west", "mode": "v7", "gfx": "high", "scene": "overview", "load": "6.62 8.34 7.05", "fps": 26.7, "min1s": 22.8, "p95": 50.1, "long": 0, "fx_ms": 0.62, "err": []}
+{"zone": "west", "mode": "v8", "gfx": "high", "scene": "overview", "load": "6.71 8.18 7.05", "fps": 8.9, "min1s": 1.1, "p95": 649.9, "long": 0, "fx_ms": 1.28, "err": []}
+{"zone": "west", "mode": "v8", "gfx": "high", "scene": "overview", "load": "11.47 9.14 7.45", "fps": 24.3, "min1s": 17.3, "p95": 66.7, "long": 0, "fx_ms": 0.66, "err": []}
+{"zone": "west", "mode": "v7", "gfx": "high", "scene": "overview", "load": "10.00 9.16 7.54", "fps": 23.7, "min1s": 17, "p95": 66.7, "long": 0, "fx_ms": 0.79, "err": ["console.error: Failed to load resource: net::ERR_NETWORK_CHANGED"]}
+{"zone": "west", "mode": "v8", "gfx": "high", "scene": "overview", "load": "8.98 8.93 7.55", "fps": 24.3, "min1s": 18, "p95": 66.6, "long": 0, "fx_ms": 1.16, "err": []}

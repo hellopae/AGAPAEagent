@@ -1,0 +1,40 @@
+{
+ "meanLum": [
+  126.9,
+  124.16,
+  125.18
+ ],
+ "share>190": [
+  0.2048,
+  0.1728,
+  0.1825
+ ],
+ "share>210": [
+  0.1504,
+  0.113,
+  0.1227
+ ],
+ "share>225": [
+  0.1078,
+  0.0704,
+  0.0779
+ ],
+ "share>235": [
+  0.0737,
+  0.0409,
+  0.0451
+ ],
+ "changedShare2x": 0.0606,
+ "lapNew": 89.158,
+ "lapRing": 103.089,
+ "lapRatio": 0.865,
+ "lapRingSnow": 106.166,
+ "lapRatioVsRingSnow": 0.84,
+ "newSnowBrightMean": 236.27,
+ "v1SnowBrightMean": 230.61,
+ "newSnowMean(all core)": 227.97,
+ "v1SnowMean": 217.78,
+ "newSnowVsV1SnowPct": 4.68,
+ "straightEdges>=30px": 0,
+ "bridgeBoxExcluded": true
+}
