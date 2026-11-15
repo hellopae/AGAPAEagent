@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T12:00:30.474Z",
+  "updatedAt": "2026-11-15T16:32:34.065Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "T1 bugs + battle fixes",
       "report": {
         "when": "11:59",
