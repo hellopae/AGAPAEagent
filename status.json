@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T11:35:34.514Z",
+  "updatedAt": "2026-11-15T11:36:57.947Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae boss moves + merchant quest",
+      "status": "working",
+      "task": "Write zone 3 event script",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",

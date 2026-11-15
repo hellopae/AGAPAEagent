@@ -145,3 +145,4 @@
   - ค้าง: ภาพดำโซน 2–4 (ยังเป็นอีโมจิ) + ภาพบ่อเถ้า + ฉากนกควันทอง → Codex เมื่อ reset · Rae เกลาข้อความที่ Toby เขียนเอง
   - งาน Claude ถัดไป: Codex เก่า YAMA-BLINK / SPIRIT-CARD-SCARED / CYBER5 → event โซน 3
 - 15 พ.ย. MERGED main `cb8d268d` ภาพ Codex ค้าง (ยามากะพริบตาไม่สั่น 4 โซน, การ์ดวิญญาณตกใจ 24, ท่า cyber 5 · เทสต์ 2279/2279) · ขาดการ์ดตกใจ West 8 + Cyber 10 → Codex · ถัดไป: event โซน 3 (Rae เขียนบทก่อน)
+- 15 พ.ย. เย็น คุณเป้: ภาพนักธุรกิจ/ยายโซน 4 โอเค · comment ใหม่ให้ Claudy จัดลำดับเอง · งานวาดจริง → `Output/Claudy/2026-11-15-avegee-codex-waiting-queue.md`
