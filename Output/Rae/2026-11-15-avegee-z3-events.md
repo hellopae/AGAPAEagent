@@ -1,6 +1,7 @@
 # AVEGEE โซน 3 ปัจฉิม · บท event ครบชุด (คดี 0 / 5 / 10 / 15 + คดีญาติยมทูต 5 คดี + ข้อเสนอคดีนัวร์)
 ผู้เขียน: Rae · 15 พ.ย. 2569 · อิงสเปกคุณเป้ (`Output/Claudy/briefs/2026-11-14-avegee-z234-events-owner-spec.md` ส่วนโซน 3 + คำตอบ + คำตัดสิน 14 พ.ย.) · ใบงาน `Output/Claudy/briefs/2026-11-15-avegee-z3-events-rae.md` · รูปแบบตามบทโซน 2 `Output/Rae/2026-11-14-avegee-z2-events.md` (ไทย + EN คู่กันทุกบรรทัดที่ผู้เล่นเห็น)
 สถานะ: ร่างพร้อมเสียบ · ยังไม่ผ่าน Reese (หัวข้อ 11) · ไม่ได้แตะโค้ด (อ่านอย่างเดียวจาก `~/agapae-work/AVEGEE/src/`)
+ทางลัด: ต้องให้คุณเป้ตัดสิน = หัวข้อ 10 · ให้ Reese ตรวจ = หัวข้อ 11 · รายการภาพ = หัวข้อ 8 · ของเดิมในโค้ด vs ที่แก้ = ข้อ 0.4
 ข้อจำกัดตามจริงของรอบนี้: เครื่องมือที่ผมมีรอบนี้ค้นข้อความในโค้ดและเปิดดูรายการโฟลเดอร์ไม่ได้ ผมจึงอ้างโค้ดเฉพาะบรรทัดที่เปิดอ่านเห็นจริง (`data.js` ZONE_EVENTS.west / ZONES.west / ZONE_BOSS_AT, `story.js`, `i18n.js` deva.west, `e1-content.js` signal-west, `boss-skills-data.js`, `z2-events.js`) และเช็กไฟล์ภาพได้เฉพาะชื่อที่โค้ดอ้างถึง · ข้อที่ไม่ได้ยืนยันติดป้าย "ตรวจก่อน" ไว้ให้ Toby/Claudy
 
 ---
@@ -240,8 +241,6 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 **N5-3 · แบนเนอร์บอส**
 - ไทย: ศึกชายแดนปัจฉิม · วาลดริก
 - EN: Western frontier · Valdric
-
-**N5-4 · (ว่าง ใช้ไม่ต้อง · ข้ามเลขเพื่อให้ตรงตารางโซน 2)**
 
 **N5-5 · วาลดริกพ่าย → พาไปแท่น**
 - หัวข้อ: วาลดริกขอเดินไปแท่น
@@ -667,4 +666,472 @@ EN: Severin awaits you / Severin closes his ledger for now. Steady yourself and 
 
 ### 4.9 ภาพคดีครบ 15 → ดูหัวข้อ 8
 
-<!--PART-C-->
+---
+
+## 5. คดีญาติยมทูต (ปลดล็อกเมื่อจ้างคนนั้น) · 5 คดี
+
+กติกา (ใช้เหมือนโซน 2): คดีญาติทั่วไปต้องจ้างก่อนจึงขึ้น ไม่ใช่คดีเนื้อเรื่องหลัก · เสนอ ให้คดีญาติขึ้น**หลังผ่านการทดสอบเอียร์ลิน (คดีครบ 10)** และขึ้นต่อท้ายคิว ไม่แซงคดีเนื้อเรื่อง เพราะโพเอน่าถูกจ้างตั้งแต่วันแรกของสาขาเหมือนโกคุ (ข้อสังเกตเดียวกับที่ Toby ทำในโซน 2) · ลำดับคดีที่เขียนตรงตามสเปก: 1 ผู้พิพากษา · 2 น้องชายอ็อกเนียน · 3 ลูกค้าซิบิล · 4 ลูกสาวผู้ป่วยเกรซ · 5 ยามที่ถูกสะกด
+
+### 5.1 คดีญาติ 1 · ผู้พิพากษาที่ทำตามคำสั่งเท็จ / โพเอน่า
+
+**NK1 · แจ้งเตือน**
+- หัวข้อ: ผู้ยื่นหมายให้โพเอน่าคืนนั้น
+- ข้อความ: วิญญาณอดีตผู้พิพากษาศาลท่าเรือมาถึงคิว เขาคือผู้ยื่นหมายคำสั่งเท็จให้โพเอน่าเมื่อสามสิบปีก่อน โพเอน่าจำหมายนั้นได้และขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังโพเอน่า
+- EN หัวข้อ: The man who handed Poena the writ
+- EN ข้อความ: A former harbour-court judge has reached the queue. Thirty years ago he handed Poena the false writ. Poena recognises it and asks to see you before the hearing begins.
+- EN ปุ่ม: Hear Poena
+
+```js
+{
+  k:'falseorder', quest:'z3KinTaan', zone:'west', sex:'m', sp:'soul-false-judge-west', kind:'twist',
+  name:'ผู้พิพากษาศาลท่าเรือ', en_name:'The Harbour-Court Judge',
+  who:'อดีตผู้พิพากษาที่ทำตามคำสั่งเท็จทั้งที่รู้ว่าผิด', en_who:'A former judge who obeyed a writ he knew was false',
+  face:'ชุดคลุมผู้พิพากษาสีเทาถ่านรีดเรียบ หลังตรง สองมือกุมหมายม้วนหนึ่งไว้เหมือนไม่กล้าวางลง',
+  en_face:'A charcoal-grey judge\'s robe pressed flat, back straight, both hands clutching a rolled writ as if he dared not set it down.',
+  seen:[
+    { t:'ออกหมายลงทัณฑ์ลูกมือช่างจุดโคมท่าเรือโดยไม่ไต่สวน ตามหมายที่อ้างว่ามาจากเบื้องบน ผู้ถูกลงทัณฑ์เสียชีวิตในคืนนั้น', en:'Issued a penalty order against the harbour lamp-lighter\'s apprentice without a hearing, on a writ claiming to come from above. The boy died that night.', s:'kha', w:5 },
+  ],
+  hidden:[
+    { t:'เห็นหมึกตราประทับผิดสีและไม่มีเลขรับรองตั้งแต่ก่อนลงนาม แต่ไม่กล้าหยุดไว้ถามเพราะเพิ่งถูกตักเตือนว่าทำงานล่าช้า', en:'Saw before signing that the seal ink was the wrong colour and carried no certifying number, but dared not hold it back to ask because he had just been reprimanded for slowness.', s:'pak', w:3 },
+    { t:'รู้ในอีกสามวันว่าหมายเป็นเท็จ แล้วซ่อนหมายไว้ในหีบและเงียบมาสามสิบปี', en:'Learned three days later that the writ was false, hid it in a chest and stayed silent for thirty years.', s:'pak', w:3 },
+    { t:'ส่งเงินให้มารดาของลูกมือคนนั้นทุกเดือนโดยไม่ลงนามเป็นเวลาสามสิบปีจนนางสิ้น', en:'Sent money every month for thirty years, unsigned, to the apprentice\'s mother until she died.', s:'kha', w:-2 },
+  ],
+  merits:[
+    { t:'ส่งเงินให้มารดาของผู้ตายทุกเดือนไม่ขาดสามสิบปีโดยไม่ลงนาม', en:'Sent the dead boy\'s mother money every month for thirty years, never signing.', v:1, fake:false },
+    { t:'อ้างว่าตัดสินถูกต้องตามระเบียบมาตลอดชีวิต', en:'Claims he judged correctly by the rules all his life.', v:1, fake:true },
+  ],
+  line:'"ข้าทำตามหมาย ข้าไม่ใช่คนเขียนหมาย ท่านจะตัดสินข้าเรื่องนี้ได้อย่างไร"', en_line:'"I followed the writ. I was not the one who wrote it. How can you judge me for this?"',
+  claims:[
+    { kind:'deny', t:'ข้าไม่รู้ว่าหมายนั้นเท็จ ข้าเชื่อว่ามาจากเบื้องบนจริง', en:'I did not know the writ was false. I believed it came from above.',
+      reveal:'"...ตราสีมันผิด ข้าเห็นกับตา ข้าบอกตัวเองว่าอาจเป็นหมึกชุดใหม่ ข้ารู้ แต่ไม่อยากรู้"', en_reveal:'"...The seal colour was wrong. I saw it with my own eyes. I told myself it might be a new batch of ink. I knew, and did not want to know."' },
+    { kind:'boast', t:'ท่านดูบุญของข้าด้วย ข้าตัดสินถูกตามระเบียบมาตลอดชีวิต', en:'Count my merit too: I judged by the rules all my life.',
+      merit:'อ้างว่าตัดสินถูกต้องตามระเบียบมาตลอดชีวิต',
+      reveal:'ท่านถามว่าระเบียบข้อไหนบอกให้ลงทัณฑ์ก่อนไต่สวน เขานิ่งไป — ระเบียบข้อแรกของเล่ม คือหมายที่ไม่มีเลขรับรองต้องหยุดไว้ก่อน เขาท่องข้อนี้ได้ทุกตัวอักษร', en_reveal:'You ask which rule allows a penalty before a hearing. He falls silent. The first rule in the book says a writ without a certifying number must be held. He can recite it letter for letter.' },
+    { kind:'solid', t:'เรื่องสั่งลงทัณฑ์เด็กคนนั้น ข้ายอมรับ ข้าลงนามด้วยมือข้าเอง', en:'As for the order against that boy, I admit it. I signed it with my own hand.' },
+    { kind:'solid', truth:true, t:'ข้ารู้เมื่อสามวันหลังว่าหมายเท็จ ข้าไม่ได้เงียบเพราะกลัวถูกลงโทษ ข้าเงียบเพราะไม่รู้ว่าจะเอ่ยชื่อเด็กคนนั้นกับใครก่อน', en:'I learned three days later that the writ was false. I did not stay silent for fear of punishment. I stayed silent because I did not know whom to tell the boy\'s name to first.',
+      reveal:'ยมบาทน้อยเปิดสมุดบัญชีบ้านของผู้พิพากษา พบรายการโอนเงินเล็ก ๆ ไปที่เดิมทุกต้นเดือน ไม่เคยมีชื่อผู้ส่ง', en_reveal:'Yama opens the judge\'s household ledger and finds a small transfer to the same address at the start of every month, never with a sender\'s name.' },
+  ],
+}
+```
+**บทคดีญาติ (KIN)** · โพเอน่า "ข้า" ห้วน (EN เก็บประโยคสั้น)
+- ช่วงก่อนขึ้นแท่น:
+  - โพเอน่า: "ท่าน ข้ามีเรื่องเรื่องเดียว คนที่จะขึ้นแท่นคือคนที่ยื่นหมายให้ข้าเมื่อสามสิบปีก่อน หมายนั้นสั่งให้ข้าลงทัณฑ์เด็กคนหนึ่ง ข้าลงมือโดยไม่ถามชื่อ เพราะข้าถือว่าหมายจากศาลย่อมถูก"
+    EN Poena: "Sir, I have one matter. The man about to stand on the dais is the one who handed me a writ thirty years ago. It ordered me to punish a boy. I did it without asking his name, because I held that a writ from the court must be right."
+  - โพเอน่า: "ข้ารู้ทีหลังว่าหมายนั้นเท็จ ข้าไม่เคยบอกใคร แต่ข้าจำน้ำหนักของมันได้ทุกคืน ข้าไม่ขอให้ท่านหนักหรือเบา ข้าขอให้ท่านอ่านหมายนั้นด้วยตาท่านเอง"
+    EN Poena: "I learned later that it was false. I never told anyone, but I remember its weight every night. I do not ask you to be heavy or light. I ask you to read that writ with your own eyes."
+- ช่วงระหว่างไต่สวน:
+  - โพเอน่า: "ข้ามองหน้าเขาไม่ได้ เขาไม่ใช่คนโหดร้าย เขาเป็นคนที่กลัวถูกตำหนิ ข้ารู้เพราะข้าก็เป็นคนแบบนั้นเหมือนกัน"
+    EN Poena: "I cannot look at his face. He is not a cruel man. He is a man who fears reproach. I know, because I am the same kind."
+  - โพเอน่า: "ท่านอย่าลืมว่ามือที่ลงทัณฑ์คืนนั้นคือมือข้า ข้าไม่ขอให้ท่านเอาความผิดของเขามาหักเบาให้ข้า"
+    EN Poena: "Do not forget that the hand that carried out the penalty that night was mine. I do not ask you to subtract his fault from mine."
+- ช่วงหลังตัดสิน:
+  - โพเอน่า: "ท่านตัดสินแล้ว ข้าขอถามข้อเดียว ข้าควรทำอะไรกับหมายฉบับนั้นที่เขาเก็บไว้ในหีบสามสิบปี"
+    EN Poena: "You have judged. I ask one thing. What should I do with that writ he kept in a chest for thirty years?"
+- ทางเลือก: **[ให้โพเอน่าอ่านชื่อของเด็กบนหมายออกเสียงต่อหน้าเขา]** / **[ให้โพเอน่าประทับตราของตนทับตราปลอมบนหมายแล้วส่งเก็บที่หอทะเบียน]**
+  EN: **[Let Poena read the boy\'s name on the writ aloud before him]** / **[Let Poena stamp her own seal over the false seal and file the writ at the registry]**
+  - (อ่านชื่อ) บรรยาย: โพเอน่าคลี่หมายออกบนแท่น อ่านชื่อ "เทโอ" ช้า ๆ ทีละพยางค์ ผู้พิพากษาหลับตา · โพเอน่า: "ข้าเพิ่งรู้ว่าสามสิบปีที่ผ่านมา ข้าไม่เคยเอ่ยชื่อนี้ออกมาเลยแม้แต่ครั้งเดียว" · ผู้พิพากษา: "ข้าก็ไม่เคย"
+    EN Narration: Poena unrolls the writ on the dais and reads the name "Theo" slowly, syllable by syllable. The judge shuts his eyes. · Poena: "I have only just realised that in thirty years I never once said this name aloud." · Judge: "Nor I."
+  - (ประทับตราทับ) โพเอน่า: "ข้าจะประทับตราของข้าเองทับตราปลอม ให้ทุกคนที่เปิดอ่านเห็นว่ามือที่เคยทำตามหมายนี้ ตอนนี้บอกให้หยุด" · บรรยาย: ตราของโพเอน่ากดลงบนหมึกผิดสี ผู้พิพากษามองตราซ้อนตรานั้นโดยไม่พูดสักคำ
+    EN Poena: "I will stamp my own seal over the false one, so that everyone who opens it sees that the hand that once obeyed this writ now says stop." · Narration: Poena\'s seal presses down on the wrong-coloured ink. The judge watches the seal upon the seal and says nothing.
+
+### 5.2 คดีญาติ 2 · น้องชายที่เดินตามพี่ / อ็อกเนียน
+
+**NK2 · แจ้งเตือน**
+- หัวข้อ: น้องชายของอ็อกเนียน
+- ข้อความ: วิญญาณหนุ่มผู้วางเพลิงตามแบบที่เห็นพี่ชายทำมาถึงคิว เขาคือน้องชายของอ็อกเนียน อ็อกเนียนจำหน้าเขาได้และขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังอ็อกเนียน
+- EN หัวข้อ: Ognien\'s younger brother
+- EN ข้อความ: A young spirit who set a fire the way he once watched his brother do has reached the queue. He is Ognien\'s younger brother. Ognien recognises him and asks to see you before the hearing begins.
+- EN ปุ่ม: Hear Ognien
+
+```js
+{
+  k:'youngerbrother', quest:'z3KinPlerng', zone:'west', sex:'m', sp:'soul-younger-brother-west', kind:'tragic',
+  name:'น้องชายผู้เดินตามพี่', en_name:'The Younger Brother Who Followed',
+  who:'ชายหนุ่มผู้วางเพลิงโรงไม้ท้ายตลาดตามแบบที่เคยเห็นพี่ชายทำ', en_who:'A young man who set fire to the timber yard at the end of the market the way he once watched his brother do',
+  face:'ผอมสูง ปลายนิ้วดำคล้ำด้วยเขม่า ยืนเอียงไปทางซ้ายเสมอเหมือนยังมีใครเดินอยู่ข้างตัว',
+  en_face:'Tall and thin, fingertips blackened with soot, always leaning slightly left as if someone were still walking beside him.',
+  seen:[
+    { t:'จุดไฟเผาโรงไม้ท้ายตลาดจนลามไปอีกสามหลัง และมีผู้เฝ้าโรงไม้เสียชีวิตหนึ่งราย', en:'Set fire to the timber yard at the end of the market; it spread to three more buildings and one yard watchman died.', s:'kha', w:5 },
+  ],
+  hidden:[
+    { t:'ตั้งใจจุดแค่กองฟางว่างหลังโรงไม้เหมือนที่เคยเห็นพี่ทำตอนเด็ก ไม่รู้ว่ามีคนนอนอยู่ข้างใน', en:'Meant to light only the empty heap of straw behind the yard, as he had seen his brother do as a boy. He did not know anyone slept inside.', s:'bian', w:-1 },
+    { t:'เห็นไฟลามแล้ววิ่งกลับไปทุบประตูปลุกคนในโรงไม้จนรอดสามคน ก่อนตัวเองหนีไม่ทัน', en:'Saw the fire spread, ran back and pounded on doors to wake the people inside, saving three before he could not escape himself.', s:'kha', w:-3 },
+    { t:'พี่ชายเคยบอกให้เลิกจุดไฟ เขารับปากแล้วยังซื้อน้ำมันตะเกียงสองขวดในวันก่อนเกิดเหตุ', en:'His brother had told him to stop lighting fires. He promised, and still bought two bottles of lamp oil the day before.', s:'pak', w:1 },
+  ],
+  merits:[
+    { t:'ทุบประตูปลุกคนในโรงไม้จนรอดสามชีวิต', en:'Pounded on doors and saved three lives in the yard.', v:2, fake:false },
+    { t:'อ้างว่าไม่เคยก่อเรื่องมาก่อนเลยในชีวิต', en:'Claims he never made trouble before in his life.', v:1, fake:true },
+  ],
+  line:'"พี่จุดไฟแล้วไม่มีใครว่า ข้าก็นึกว่ามันไม่ใช่เรื่องใหญ่ ท่านลองถามพี่ดูเถอะ"', en_line:'"My brother lit fires and no one said a word, so I thought it was no great matter. Go on, ask him."',
+  claims:[
+    { kind:'deny', t:'ตะเกียงข้าหล่นเองตอนเดินผ่านหลังโรงไม้ ข้าไม่ได้ตั้งใจเผา', en:'My lamp simply fell as I walked past the back of the yard. I did not mean to burn it.',
+      reveal:'"...ข้าถือน้ำมันไปเองสองขวด ข้าตั้งใจเผากองฟาง ข้าแค่ไม่คิดว่าลมจะพัด"', en_reveal:'"...I carried the oil there myself, two bottles. I meant to burn the straw. I just never thought the wind would rise."' },
+    { kind:'boast', t:'ท่านดูบุญของข้าด้วย ข้าไม่เคยก่อเรื่องมาก่อนเลย', en:'Count my merit too: I never caused trouble before.',
+      merit:'อ้างว่าไม่เคยก่อเรื่องมาก่อนเลยในชีวิต',
+      reveal:'ท่านถามว่ากองฟางหลังโรงน้ำมันปีก่อนใครจุด เขานิ่งไป — เขาจุดเองสองครั้ง ทั้งสองครั้งไม่มีใครรู้', en_reveal:'You ask who lit the straw behind the oil shed last year. He falls silent. He lit it himself, twice, and no one ever knew.' },
+    { kind:'solid', t:'เรื่องจุดไฟ ข้าทำจริง และข้าไม่เคยบอกพี่ว่ากำลังจะทำ เพราะพี่จะห้าม', en:'As for the fire, I did it. And I never told my brother I was going to, because he would have forbidden it.' },
+    { kind:'solid', truth:true, t:'ข้าวิ่งกลับไปทุบประตูก่อนไฟลามถึงห้องหลัง ข้ากลัวมาก แต่ข้าไม่ได้คิดจะวิ่งหนี', en:'I ran back and pounded on the doors before the fire reached the back room. I was terrified, but I never thought of running away.',
+      reveal:'ยมบาทน้อยดูรอยมือบนบานประตูห้องหลังที่ยังไหม้ไม่หมด พบรอยฝ่ามือเขม่าหลายรอยที่ความสูงของเขา ทั้งที่ทางหนีอยู่ตรงข้าม', en_reveal:'Yama studies the half-burnt back door and finds several sooty handprints at his height, though the way out lay on the opposite side.' },
+  ],
+}
+```
+**บทคดีญาติ (KIN)** · อ็อกเนียน "ผม ... ครับ"
+- ช่วงก่อนขึ้นแท่น:
+  - อ็อกเนียน: "ท่านครับ ผมขอพูดสั้น ๆ คนที่กำลังจะขึ้นแท่นเดินตามผมมาตั้งแต่เขาเดินได้ ผมจุดไฟกองฟางเล่นสมัยเด็ก เขานั่งดูอยู่ข้าง ๆ ตาไม่กะพริบ ผมเพิ่งรู้ทีหลังว่านั่นคือบทเรียนครั้งแรกของเขา"
+    EN Ognien: "Sir, let me be brief. The one about to stand on the dais has followed me since he could walk. I lit heaps of straw for fun when I was a boy, and he sat beside me and watched without blinking. Only later did I realise that was his first lesson."
+  - อ็อกเนียน: "ผมเลิกจุดไฟมานานแล้วครับ เลิกเพราะกลัว ไม่ใช่เพราะสำนึก ผมไม่เคยบอกเขาว่าผมเลิก เขาเลยไม่รู้ว่ามันไม่ใช่เรื่องเล่น"
+    EN Ognien: "I stopped lighting fires long ago, sir. I stopped out of fear, not remorse. I never told him I had stopped, so he never learned it was no game."
+- ช่วงระหว่างไต่สวน:
+  - อ็อกเนียน: "เขาเป็นเด็กขี้กลัวครับ ถ้าท่านเจออะไรที่ไม่ตรงกับที่เขาพูด อย่าเพิ่งตัดสินจากปากเขา ดูมือเขาด้วย"
+    EN Ognien: "He is a timid boy, sir. If you find anything that does not match what he says, do not judge by his mouth alone. Look at his hands too."
+  - อ็อกเนียน: "ผมไม่ได้ล้อเล่นนะครับ ผมแค่ล้อเล่นไม่ออกตอนนี้ ปกติผมล้อเล่นเวลาเรื่องหนักเกินไป"
+    EN Ognien: "I am not joking, sir. I just cannot manage a joke right now. Normally I joke when things get too heavy."
+- ช่วงหลังตัดสิน:
+  - อ็อกเนียน: "ท่านตัดสินแล้ว ผมขอถามข้อเดียวครับ ผมควรพูดอะไรกับเขาก่อนเขาไป ผมไม่รู้ว่าคำไหนจะไม่กลายเป็นเชื้อไฟอีก"
+    EN Ognien: "You have judged, sir. I ask one thing. What should I say to him before he goes? I do not know which word would not turn into kindling again."
+- ทางเลือก: **[ให้อ็อกเนียนรับว่าตนเป็นต้นแบบ แล้วยืนข้างน้องจนถึงประตู]** / **[ให้อ็อกเนียนดับตะเกียงของตนต่อหน้าน้อง โดยไม่พูดอะไร]**
+  EN: **[Let Ognien admit he was the example, and stand beside his brother to the gate]** / **[Let Ognien snuff his own lamp before his brother without a word]**
+  - (รับว่าเป็นต้นแบบ) อ็อกเนียน: "รอยมือที่ทุบประตูห้องหลังคืนนั้น ผมภูมิใจในตัวเจ้า ส่วนเรื่องไฟ ผมสอนผิดเอง ผมขอรับส่วนนั้นไป" · น้องชาย: "พี่ไม่ต้องรับทั้งหมดหรอก ผมจุดเอง" · อ็อกเนียน: "เจ้าจุดเอง ข้าไม่เคยห้ามเจ้าจริงจัง ต่างฝ่ายต่างผิดคนละท่อน"
+    EN Ognien: "The handprints you left on that back door that night, I am proud of you for those. As for the fire, I taught it wrongly. I will take that part." · Brother: "You need not take all of it. I lit it myself." · Ognien: "You lit it yourself, and I never forbade you in earnest. We each own a different stretch of the fault."
+  - (ดับตะเกียง) บรรยาย: อ็อกเนียนหยิบตะเกียงเล็กที่ห้อยเข็มขัดเสมอ เป่าไฟดับต่อหน้าน้องชายแล้ววางลงบนแท่น น้องชายมองตะเกียงดับนานกว่าที่เคยมองไฟลุก · น้องชาย: "พี่ดับต่อหน้าผมครั้งแรกเลยนะ" · อ็อกเนียน: "ไม่ใช่ครั้งแรกหรอก แต่เป็นครั้งแรกที่ผมอยากให้เจ้าเห็น"
+    EN Narration: Ognien takes the small lamp that always hangs from his belt, blows it out before his brother and sets it on the dais. The brother looks at the dead lamp longer than he ever looked at a blaze. · Brother: "That is the first time you have put it out in front of me." · Ognien: "It is not the first time. It is the first time I wanted you to see."
+
+### 5.3 คดีญาติ 3 · ลูกค้าที่เชื่อคำทำนายของซิบิล
+
+**NK3 · แจ้งเตือน**
+- หัวข้อ: ลูกค้าผู้เชื่อคำทำนาย
+- ข้อความ: วิญญาณหัวหน้าตระกูลพ่อค้าท่าเรือมาถึงคิว เขาทำตามคำทำนายของซิบิลที่ผิดเพียงครั้งเดียวจนเสียทั้งตระกูล ซิบิลจำเขาได้และขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังซิบิล
+- EN หัวข้อ: The client who believed the prophecy
+- EN ข้อความ: The head of a harbour merchant family has reached the queue. He followed one wrong prophecy of Sibyl\'s and lost his whole house. Sibyl recognises him and asks to see you before the hearing begins.
+- EN ปุ่ม: Hear Sibyl
+
+```js
+{
+  k:'doomclient', quest:'z3KinKan', zone:'west', sex:'m', sp:'soul-prophecy-client-west', kind:'tragic',
+  name:'หัวหน้าตระกูลพ่อค้าท่าเรือ', en_name:'Head of a Harbour Merchant House',
+  who:'ผู้สั่งทั้งตระกูลออกเรือหนีตามคำทำนายที่ผิดหนึ่งครั้ง', en_who:'The man who ordered his whole house to sail in flight on a single wrong prophecy',
+  face:'เสื้อคลุมขนสัตว์เก่าแต่ตัดเย็บดี ตาแดงเหมือนไม่ได้หลับมานาน กำสมุดบัญชีเรือเล่มเล็กไว้แน่นจนข้อนิ้วขาว',
+  en_face:'A fur-trimmed coat, old but well cut, eyes red as though he has not slept in ages, one small ship\'s ledger gripped so hard his knuckles are white.',
+  seen:[
+    { t:'สั่งให้คนทั้งตระกูลทิ้งบ้านและออกเรือในคืนเดียวตามคำทำนาย โดยไม่ฟังเสียงคัดค้าน เรือถูกพายุกลางทะเล สมาชิกสูญหายเก้าคน', en:'Ordered the whole house to abandon their home and put to sea in a single night on a prophecy, brushing aside every objection. A storm took the ship at sea and nine of his kin were lost.', s:'bian', w:4 },
+  ],
+  hidden:[
+    { t:'ซิบิลบอกว่า "อาจเป็นคืนนั้น" เขาจดเพียงคำว่า "คืนนั้น" ลงสมุด และไม่ยอมรับว่ามีคำว่า "อาจ"', en:'Sibyl said "it may be that night". He wrote down only "that night" and would not admit the word "may" was there.', s:'pak', w:-1 },
+    { t:'ผู้เฒ่าในตระกูลขอให้รอถึงรุ่งเช้าเพื่อตรวจลม เขาตวาดให้เงียบต่อหน้าทุกคน', en:'The family\'s eldest begged to wait until morning to read the wind. He shouted him silent before them all.', s:'pak', w:3 },
+    { t:'ไม่ยอมทิ้งเด็กและคนชราไว้บนฝั่งแม้เรือจะแน่น เขาเลือกทิ้งสินค้าแทน', en:'Refused to leave children and the aged on the quay though the ship was crowded. He chose to cast off cargo instead.', s:'bian', w:-2 },
+  ],
+  merits:[
+    { t:'ไม่ทิ้งเด็กและคนชราไว้บนฝั่งแม้คนเดียวในคืนนั้น เลือกทิ้งสินค้าทั้งหมดแทน', en:'Left no child or elder on the quay that night, and chose to cast off all the cargo instead.', v:2, fake:false },
+    { t:'อ้างว่าที่ทำทั้งหมดเพื่อความปลอดภัยของตระกูล', en:'Claims everything he did was for his house\'s safety.', v:1, fake:true },
+  ],
+  line:'"ข้าเชื่อนาง เพราะนางไม่เคยพลาดมาก่อน ท่านจะโทษคนที่เชื่อใจหรือ"', en_line:'"I believed her because she had never been wrong before. Would you blame a man for trusting?"',
+  claims:[
+    { kind:'deny', t:'ซิบิลบอกชัดว่าต้องเป็นคืนนั้น ข้าแค่ทำตามที่ได้ยิน', en:'Sibyl said plainly it must be that night. I only did what I heard.',
+      reveal:'"...นางบอกว่า \'อาจ\' ข้าเงยหน้ามองนาง แล้วบอกว่าอย่าอาจ ข้าไม่มีเวลาอาจ นางก็พยักหน้า ข้าอยากได้ความแน่นอนมากกว่าความจริง"', en_reveal:'"...She said \'may\'. I looked up at her and told her not to say \'may\', I had no time for \'may\'. She nodded. I wanted certainty more than truth."' },
+    { kind:'boast', t:'ท่านดูบุญของข้าด้วย ทุกอย่างที่ข้าทำก็เพื่อความปลอดภัยของตระกูล', en:'Count my merit too: all I did was for my house\'s safety.',
+      merit:'อ้างว่าที่ทำทั้งหมดเพื่อความปลอดภัยของตระกูล',
+      reveal:'ท่านถามว่าใครในตระกูลขอให้รอถึงรุ่งเช้า เขาเงียบไปนาน — ผู้เฒ่า เจ้าของเรือลำเก่า ผู้ที่เขาไม่เคยกล้ามองหน้าตอบ', en_reveal:'You ask who in the house asked to wait until morning. He is silent a long while. It was the eldest, owner of the old ship, the one he never dared look in the face to answer.' },
+    { kind:'solid', t:'เรื่องสั่งออกเรือคืนนั้น ข้าสั่งเอง ข้าไม่เคยโยนให้ซิบิลคนเดียว', en:'I gave the order to sail that night. I never put it on Sibyl alone.' },
+    { kind:'solid', truth:true, t:'คืนนั้นข้ายอมทิ้งสินค้าทั้งลำเพื่อไม่ทิ้งเด็กกับคนชราไว้บนฝั่ง ข้าไม่เสียดายสักชิ้น', en:'That night I let the whole cargo go so as not to leave the children and elders on the quay. I do not grieve a single piece.',
+      reveal:'ยมบาทน้อยเปิดสมุดบัญชีเรือหน้าสุดท้าย พบรายการสินค้าถูกขีดฆ่าทั้งหน้าด้วยลายมือเดียวกัน และชื่อเด็กสามคนเขียนเพิ่มไว้ท้ายหน้าแทน', en_reveal:'Yama opens the last page of the ship\'s ledger and finds the cargo list struck out in a single hand, with the names of three children written in its place at the foot of the page.' },
+  ],
+}
+```
+หมายเหตุ Toby: ข้อ `hidden` ข้อ 3 กับบุญจริง (ไม่ทิ้งเด็กและคนชรา) เป็นเรื่องเดียวกันตั้งใจ ให้ผู้เล่นเห็นด้านดีของเขาสองทาง (ผ่านแฟ้มซ่อนและผ่านบุญ) · น้ำหนักตั้งใจให้สรุปได้ว่าความผิดหลักคือการไม่ฟังเสียงคัดค้านและตวาดผู้เฒ่า ไม่ใช่การเชื่อคำทำนายเอง · ข้ออ้าง "เพื่อความปลอดภัยของตระกูล" เป็นบุญปลอม (`fake:true`)
+
+**บทคดีญาติ (KIN)** · ซิบิล "ดิฉัน ... ค่ะ"
+- ช่วงก่อนขึ้นแท่น:
+  - ซิบิล: "ท่านคะ ดิฉันขอพูดตรง ๆ คนที่จะขึ้นแท่นคือลูกค้าที่ดิฉันเคยทำนายผิด ดิฉันผิดครั้งเดียวในสามสิบปี ครั้งเดียวนี้เองค่ะที่ทำให้ตระกูลของเขาสิ้น"
+    EN Sibyl: "Sir, let me speak plainly. The one about to stand on the dais is a client whose fortune I once read wrongly. I have been wrong once in thirty years, and that single time ended his house."
+  - ซิบิล: "ดิฉันไม่ขอให้ท่านเบาเพราะดิฉันเป็นลูกทีม และไม่ขอให้ท่านหนักเพื่อให้ดิฉันรู้สึกดีขึ้น ดิฉันขอแค่ให้ท่านแยก 'สิ่งที่ดิฉันพูด' ออกจาก 'สิ่งที่เขาได้ยิน' ค่ะ"
+    EN Sibyl: "I do not ask you to go easy because I am on your team, nor to go hard so that I may feel better. I only ask you to separate what I said from what he heard."
+- ช่วงระหว่างไต่สวน:
+  - ซิบิล: "ดิฉันบอกเขาว่า 'อาจเป็นคืนนั้น' ค่ะ คำว่าอาจมาก่อนคืนนั้นเสมอ ดิฉันเห็นเขาไม่ได้ยินมัน แล้วดิฉันก็ไม่ย้ำ นั่นเป็นความผิดของดิฉัน"
+    EN Sibyl: "I told him \'it may be that night\'. The word \'may\' always comes before the night. I saw that he did not hear it, and I did not repeat it. That is my fault."
+  - ซิบิล: "ดิฉันทำนายด้วยความน่าจะเป็นค่ะ แต่คนที่มาหาดิฉันอยากได้ความแน่นอน ดิฉันเลยพูดให้ฟังแน่นอนกว่าที่ควร ดิฉันเพิ่งกล้ายอมรับตอนนี้"
+    EN Sibyl: "I read in probabilities, but those who come to me want certainty, so I spoke more surely than I should. I have only now found the courage to admit it."
+- ช่วงหลังตัดสิน:
+  - ซิบิล: "ท่านตัดสินแล้ว ดิฉันขอถามข้อเดียวค่ะ ดิฉันควรรับส่วนของตัวเองอย่างไร ดิฉันไม่อยากหลบหลังคำว่า 'อาจ' อีก"
+    EN Sibyl: "You have judged. I ask one thing. How should I carry my own share? I do not want to hide behind the word \'may\' any longer."
+- ทางเลือก (ตามสเปก): **[ให้ซิบิลรับผิดส่วนของตนต่อหน้าเขา]** / **[ให้ซิบิลขอไปรับทัณฑ์เคียงข้างเขา]**
+  EN: **[Let Sibyl own her share of the fault before him]** / **[Let Sibyl ask to serve a penalty beside him]**
+  - (รับผิดบางส่วน) บรรยาย: ซิบิลวางลูกแก้วลงบนแท่นแล้วก้มศีรษะต่อหน้าหัวหน้าตระกูล · ซิบิล: "ดิฉันพูดคำว่า 'อาจ' เบากว่าที่ควร ดิฉันขอรับส่วนนั้น คนที่ออกเรือคือท่าน แต่คนที่ทำให้ท่านกล้าออกคือดิฉัน" · หัวหน้าตระกูล: "นางไม่ต้องก้ม ข้าสั่งเอง" · ซิบิล: "ท่านสั่งเอง ดิฉันทำนายเอง สองอย่างนี้ไม่หักล้างกัน ขออย่าลบส่วนของดิฉันออกไปเลยค่ะ"
+    EN Narration: Sibyl sets her crystal on the dais and bows her head before the head of the house. · Sibyl: "I said \'may\' more softly than I should have. I take that share. You were the one who sailed, but I was the one who made you bold enough." · Head of house: "You need not bow. I gave the order." · Sibyl: "You gave the order and I gave the reading. The two do not cancel. Please do not strike my part out."
+  - (ขอรับทัณฑ์ด้วย) บรรยาย: ซิบิลก้าวลงจากข้างแท่นมายืนข้างหัวหน้าตระกูลก่อนที่ใครจะเรียก · ซิบิล: "ดิฉันขอไปรับทัณฑ์เคียงข้างเขาค่ะ ไม่ใช่เพื่อแบ่งโทษให้เขาเบาลง แต่เพื่อไม่ให้เขาเดินไปคนเดียว" · หัวหน้าตระกูล: "เจ้าเป็นหมอดู ไม่ใช่นักโทษ" · ซิบิล: "คำทำนายที่ดิฉันพูดเป็นของดิฉัน ดิฉันก็ต้องแบกด้วยตัวเองบ้างค่ะ"
+    EN Narration: Sibyl steps down from beside the dais and stands next to the head of the house before anyone calls her. · Sibyl: "I ask to go and serve a penalty beside him. Not to lighten his, but so that he does not walk it alone." · Head of house: "You are a seer, not a prisoner." · Sibyl: "The reading I spoke is mine. I must carry some of it myself."
+  - ผลของทางเลือก B: ผมเสนอให้เป็นข้อความอย่างเดียว (ซิบิลหายไปทำงานไม่ได้ 3 วาระ ถ้า Toby ทำง่าย) · ให้คุณเป้ตัดสิน ข้อ 10 ข้อ 10
+
+### 5.4 คดีญาติ 4 · ลูกสาวของผู้ป่วยที่เกรซดูแล
+
+**NK4 · แจ้งเตือน**
+- หัวข้อ: ลูกสาวของคุณป้าที่เกรซดูแล
+- ข้อความ: วิญญาณหญิงผู้ทิ้งมารดาไว้ที่สถานพักจนถึงวาระสุดท้ายมาถึงคิว มารดาของเธอคือผู้ป่วยที่เกรซดูแลจนวันสุดท้าย เกรซขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังเกรซ
+- EN หัวข้อ: The daughter of the woman Grace nursed
+- EN ข้อความ: A woman who left her mother in a care home until her final hours has reached the queue. Her mother was the patient Grace tended to the very end. Grace asks to see you before the hearing begins.
+- EN ปุ่ม: Hear Grace
+
+```js
+{
+  k:'carerdaughter', quest:'z3KinBoon', zone:'west', sex:'f', sp:'soul-carer-daughter-west', kind:'tragic',
+  name:'ลูกสาวผู้ไม่ได้มาเยี่ยม', en_name:'The Daughter Who Did Not Visit',
+  who:'หญิงผู้ทิ้งมารดาไว้ที่สถานพักจนถึงวาระสุดท้าย', en_who:'A woman who left her mother in a care home until her last hour',
+  face:'ผมรวบเรียบร้อย แต่เสื้อโค้ตกลัดผิดกระดุมหนึ่งเม็ด ถือช่อดอกไม้เล็กที่เหี่ยวแล้วไว้ในมือสองข้างเหมือนลืมว่าถืออยู่',
+  en_face:'Hair neatly tied, but one coat button done up wrong, a small bunch of withered flowers held in both hands as if she had forgotten she carried them.',
+  seen:[
+    { t:'ทิ้งมารดาไว้ที่สถานพักโดยไม่ไปเยี่ยมเลยตลอดเก้าปี มารดาสิ้นใจโดยไม่มีญาติอยู่ข้างกาย', en:'Left her mother in a care home for nine years without a single visit. Her mother died with no kin at her side.', s:'akata', w:4 },
+  ],
+  hidden:[
+    { t:'สามีไม่อนุญาตให้ออกจากบ้านลำพังเกือบตลอดเก้าปี และเก็บจดหมายที่เธอเขียนถึงแม่ทุกสัปดาห์ไว้ในลิ้นชักโดยไม่ส่ง', en:'Her husband let her leave the house alone almost never in nine years, and kept the letters she wrote to her mother every week in a drawer, unsent.', s:'akata', w:-2 },
+    { t:'วันสุดท้าย สถานพักโทรบอกให้รีบมา เธอเลือกไปงานเลี้ยงของสามีก่อน และมาถึงหลังมารดาสิ้นใจสองชั่วโมง', en:'On the last day the home called and told her to come at once. She chose to attend her husband\'s banquet first and arrived two hours after her mother died.', s:'akata', w:3 },
+    { t:'ส่งค่าสถานพักครบทุกเดือนผ่านพี่ชายด้วยเงินที่แอบเก็บไว้ ไม่เคยขาด', en:'Paid the home\'s fees in full every month through her brother, from money she had quietly set aside. Never once missed.', s:'akata', w:-1 },
+  ],
+  merits:[
+    { t:'ส่งค่าสถานพักของมารดาครบทุกเดือนไม่ขาดเก้าปี', en:'Paid her mother\'s care-home fees in full every month for nine years.', v:1, fake:false },
+    { t:'อ้างว่าเป็นคนเดียวในครอบครัวที่ดูแลแม่จนวาระสุดท้าย', en:'Claims she was the only one in the family who cared for her mother to the end.', v:1, fake:true },
+  ],
+  line:'"ดิฉันไม่ได้ลืมแม่เลยสักวัน ท่านจะเชื่อหรือไม่ก็แล้วแต่"', en_line:'"I did not forget my mother for a single day. Believe it or not, as you please."',
+  claims:[
+    { kind:'deny', t:'ดิฉันเขียนจดหมายส่งหาแม่ทุกสัปดาห์ แม่ต้องรู้ว่าดิฉันยังรัก', en:'I sent my mother a letter every week. She must have known I still loved her.',
+      reveal:'"...ดิฉันไม่เคยได้ใบตอบรับสักใบ ลึก ๆ ดิฉันรู้ว่ามันอาจไปไม่ถึง แต่ไม่เคยกล้าเอาไปส่งเอง"', en_reveal:'"...I never received a reply. Deep down I knew they might never arrive, but I never dared carry them to be sent myself."' },
+    { kind:'boast', t:'ท่านดูบุญของดิฉันด้วย ดิฉันเป็นคนเดียวที่ดูแลแม่จนวาระสุดท้าย', en:'Count my merit too: I alone cared for my mother to the end.',
+      merit:'อ้างว่าเป็นคนเดียวในครอบครัวที่ดูแลแม่จนวาระสุดท้าย',
+      reveal:'ท่านถามว่าใครเป็นคนกุมมือแม่ในคืนสุดท้าย เธอเงียบไปนาน — ไม่ใช่เธอ', en_reveal:'You ask who held her mother\'s hand on the last night. She is silent a long while. It was not she.' },
+    { kind:'solid', t:'วันสุดท้ายดิฉันเลือกไปงานเลี้ยง ดิฉันเลือกเอง ไม่มีใครบังคับ', en:'On the last day I chose the banquet. I chose it myself. No one forced me.' },
+    { kind:'solid', truth:true, t:'ดิฉันเขียนจดหมายทุกสัปดาห์ แม้ไม่เคยรู้ว่าไปถึงหรือไม่', en:'I wrote every week, though I never knew whether they arrived.',
+      reveal:'ยมบาทน้อยเปิดลิ้นชักห้องหนังสือของสามี พบจดหมายถึงมารดาเก้าปีเรียงตามวันที่ ทุกฉบับยังปิดผนึกอยู่', en_reveal:'Yama opens the drawer in her husband\'s study and finds nine years of letters to her mother, in date order, every one still sealed.' },
+  ],
+}
+```
+**บทคดีญาติ (KIN)** · เกรซ "ดิฉัน ... ค่ะ"
+- ช่วงก่อนขึ้นแท่น:
+  - เกรซ: "ท่านคะ คนที่ขึ้นแท่นคือลูกสาวของคุณป้าที่ดิฉันดูแลจนวันสุดท้าย คุณป้าถามหาลูกวันละสามครั้ง ดิฉันตอบทุกครั้งว่า 'วันนี้ยังไม่ถึงค่ะ' ดิฉันไม่เคยโกหกว่าเธอจะมา และไม่เคยบอกว่าเธอจะไม่มา"
+    EN Grace: "Sir, the one on the dais is the daughter of the old lady I tended to the end. She asked for her daughter three times a day. Each time I answered, \'Not today, ma\'am.\' I never lied that she would come, and I never said she would not."
+  - เกรซ: "ดิฉันขอท่านเรื่องเดียวค่ะ อย่าให้ดิฉันเป็นคนให้อภัยแทนคุณป้า ดิฉันไม่มีสิทธิ์ ท่านตัดสินตามบัญชี ส่วนดิฉันขอเพียงบอกสิ่งที่ดิฉันเห็น"
+    EN Grace: "I ask one thing, sir. Do not make me forgive on the old lady\'s behalf. I have no right. Judge by the ledger. I will only tell you what I saw."
+- ช่วงระหว่างไต่สวน:
+  - เกรซ: "ดิฉันจะไม่บอกว่าเธอเป็นคนดีหรือไม่ดีค่ะ ดิฉันบอกได้แค่ว่าคืนสุดท้าย คุณป้าถามว่า 'วันนี้ถึงหรือยัง' ดิฉันนิ่งไปนานกว่าทุกครั้ง แล้วคุณป้าก็พยักหน้าเหมือนเข้าใจ"
+    EN Grace: "I will not say whether she is good or not. I can only say that on the last night the old lady asked, \'Is it today?\' I was silent longer than ever before, and she nodded as if she understood."
+  - เกรซ: "ค่าสถานพักมาครบทุกเดือนค่ะ ไม่เคยขาดสักเดือน ดิฉันเห็นตัวเลขทุกเดือน ดิฉันไม่รู้ว่าเงินนั้นหมายถึงความรักหรือความรู้สึกผิด แต่มันมาครบ"
+    EN Grace: "The care-home fees arrived in full every month, never missing one. I saw the figure every month. I do not know whether that money meant love or guilt, but it came in full."
+- ช่วงหลังตัดสิน:
+  - เกรซ: "ท่านตัดสินแล้ว ดิฉันขอถามข้อเดียวค่ะ ดิฉันควรบอกอะไรเธอจากคุณป้า คำสุดท้ายของคุณป้าไม่ได้บ่นถึงเธอเลย"
+    EN Grace: "You have judged. I ask one thing. What should I tell her from the old lady? Her last words did not complain of her at all."
+- ทางเลือก: **[ให้เกรซอ่านคำสุดท้ายของคุณป้าที่จดไว้ให้เธอฟัง]** / **[ให้เกรซวางถ้วยชาของคุณป้าตรงหน้าเธอโดยไม่พูดอะไร]**
+  EN: **[Let Grace read the old lady\'s last words, as she wrote them down]** / **[Let Grace set the old lady\'s teacup before her without a word]**
+  - (อ่านคำสุดท้าย) เกรซ: "คำสุดท้ายที่คุณป้าพูดกับดิฉันคือ 'ให้ลูกกินข้าวก่อนนะ เขามักลืมกินเวลาเหนื่อย' ดิฉันจดไว้เพราะกลัวจำผิดค่ะ" · ลูกสาว: "แม่ ... ยังห่วงเรื่องข้าวอยู่หรือ" · เกรซ: "ตลอดเก้าปีค่ะ ท่านไม่เคยถามว่าเธออยู่ที่ไหน ถามแค่ว่าเธอกินข้าวหรือยัง"
+    EN Grace: "The last thing the old lady said to me was, \'Let my daughter eat first. She forgets to eat when she is tired.\' I wrote it down for fear of getting it wrong." · Daughter: "Mother ... still worried about my meals?" · Grace: "All nine years, ma\'am. She never asked where you were. She only asked whether you had eaten."
+  - (ถ้วยชา) บรรยาย: เกรซวางถ้วยชาลายดอกไม้ใบเก่าที่คุณป้าใช้ทุกเช้าลงตรงหน้าลูกสาว ไอจากชาที่ยังอุ่นลอยขึ้นแตะปลายดอกไม้เหี่ยวในมือเธอ · ลูกสาว: "ชายังอุ่นอยู่" · เกรซ: "ดิฉันชงใหม่ทุกเช้าให้คุณป้าค่ะ แม้ตอนหลังคุณป้าจะไม่ได้ดื่มแล้ว"
+    EN Narration: Grace sets the old flowered teacup the old lady used each morning before the daughter. Steam from the still-warm tea drifts up to touch the withered flowers in her hands. · Daughter: "The tea is still warm." · Grace: "I brewed it fresh every morning for her, ma\'am, even after she could no longer drink."
+
+### 5.5 คดีญาติ 5 · ยามที่ถูกสะกดเปิดประตู / ยักษ์ทวารบาลโซน 3
+
+**NK5 · แจ้งเตือน**
+- หัวข้อ: ยามผู้ถูกสะกดเปิดประตู
+- ข้อความ: วิญญาณอดีตยามประตูเมืองมาถึงคิว คืนที่เมืองแตก เขาถูกสะกดให้เปิดประตูต้อนรับผู้บุก ยักษ์ทวารบาลรู้เรื่องนี้ดีกว่าใครและขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังยักษ์ทวารบาล
+- EN หัวข้อ: The sentry who opened the gate under a spell
+- EN ข้อความ: A former city gate sentry has reached the queue. On the night the city fell, he was bound by a spell to open the gate to the invaders. The Gate Guardian knows this story better than anyone and asks to see you before the hearing begins.
+- EN ปุ่ม: Hear the Gate Guardian
+
+```js
+{
+  k:'gatesentry', quest:'z3KinGuard', zone:'west', sex:'m', sp:'soul-gate-sentry-west', kind:'tragic',
+  name:'ยามประตูเมืองที่ถูกสะกด', en_name:'The Gate Sentry Under a Spell',
+  who:'อดีตยามประตูเมืองผู้เปิดประตูให้กองบุกในคืนที่ถูกสะกด', en_who:'A former city gate sentry who opened the gate to an invading host on the night he was bound',
+  face:'เกราะหนังเก่ารัดแน่น มือขวายังกำกุญแจเหล็กดอกใหญ่เหมือนไม่เคยปล่อยตั้งแต่คืนนั้น สายตาไม่มองหน้าใคร มองแต่ประตูห้อง',
+  en_face:'Worn leather armour laced tight, his right hand still gripping a great iron key as though he never let go since that night. He looks at no one\'s face, only at the door of the room.',
+  seen:[
+    { t:'เปิดประตูใหญ่ของเมืองให้กองบุกเข้ามาในคืนเดียว ผู้คนจำนวนมากเสียชีวิตและเมืองถูกเผา', en:'Opened the city\'s great gate to an invading host in a single night. Many people died and the city burned.', s:'kha', w:5 },
+  ],
+  hidden:[
+    { t:'ถูกสะกดด้วยเสียงสวดกล่อมจากกำแพงฝั่งตรงข้าม จำอะไรไม่ได้จนตื่นกลางเมืองที่กำลังลุกไหม้', en:'Bound by a lulling chant from the wall opposite, remembering nothing until he woke in the middle of the burning city.', s:'kha', w:-3 },
+    { t:'ตื่นแล้วปิดประตูได้ครึ่งบาน ยื้อให้ผู้หญิงและเด็กสามสิบคนวิ่งออกทางหลังทัน', en:'On waking he managed to shut the gate half-way, buying time for thirty women and children to run out the back way.', s:'kha', w:-2 },
+    { t:'ก่อนคืนนั้นมีผู้เตือนว่ากองบุกมีนักสะกดเสียง ให้ยัดขี้ผึ้งปิดหู เขาตอบว่าข้าไม่ใช่คนอ่อนแอพอจะถูกสะกด และไม่ยอมยัด', en:'Before that night someone warned him the invaders had voice-binders and told him to plug his ears with wax. He answered that he was no man weak enough to be bound, and refused.', s:'mao', w:2 },
+  ],
+  merits:[
+    { t:'ปิดประตูครึ่งบานยื้อให้เด็กและผู้หญิงสามสิบคนหนีทัน', en:'Shut the gate half-way and bought time for thirty children and women to escape.', v:2, fake:false },
+    { t:'อ้างว่าไม่ใช่ความผิดของข้าแม้แต่น้อยเพราะป้องกันไม่ได้เลย', en:'Claims it was not his fault in the slightest, since it could not be prevented at all.', v:1, fake:true },
+  ],
+  line:'"ข้าจำได้แค่เสียงกุญแจหมุนเสียงเดียว ข้าฟังมันซ้ำทุกคืนตั้งแต่นั้น"', en_line:'"All I remember is one sound, the key turning. I have heard it again every night since."',
+  claims:[
+    { kind:'deny', t:'ข้าไม่เคยได้ยินคำเตือนเรื่องนักสะกดเสียง ไม่มีใครบอกข้า', en:'I never heard any warning about voice-binders. No one told me.',
+      reveal:'"...มีคนบอก ข้าได้ยินชัดเจน ข้าหัวเราะแล้วบอกว่าข้าไม่ใช่คนอ่อนแอ ข้าอยากให้ท่านลงโทษข้าเรื่องนั้นมากกว่าเรื่องประตู"', en_reveal:'"...Someone did tell me. I heard it clearly. I laughed and said I was no weakling. I would rather you punished me for that than for the gate."' },
+    { kind:'boast', t:'ท่านดูบุญของข้าด้วย ที่เกิดขึ้นไม่ใช่ความผิดของข้าแม้แต่น้อย', en:'Count my merit too: none of what happened was my fault in the least.',
+      merit:'อ้างว่าไม่ใช่ความผิดของข้าแม้แต่น้อยเพราะป้องกันไม่ได้เลย',
+      reveal:'ท่านถามว่าก่อนคืนนั้นเขาปิดหูแล้วหรือยัง เขานิ่งไป — ขี้ผึ้งสามก้อนที่มีคนยื่นให้ ยังอยู่ในกระเป๋าเสื้อ ไม่เคยแกะห่อ', en_reveal:'You ask whether he had plugged his ears before that night. He falls silent. The three lumps of wax he was handed are still in his coat pocket, never unwrapped.' },
+    { kind:'solid', t:'ข้าเปิดประตูนั้นด้วยมือข้า ต่อให้ข้าไม่รู้ตัว มือข้าก็คือมือข้า', en:'I opened that gate with my own hand. Even if I did not know it, my hand is my hand.' },
+    { kind:'solid', truth:true, t:'ตอนตื่นข้ารีบวิ่งไปปิดประตู ข้าไม่ได้ตื่นแล้วหนี', en:'When I woke I ran to shut the gate. I did not wake and flee.',
+      reveal:'ยมบาทน้อยดูรอยกุญแจบนบานประตูครึ่งปิด พบรอยสะบัดแรงของมือที่ฝืนปิดทั้งที่ประตูถูกดันจากอีกด้าน', en_reveal:'Yama examines the key marks on the half-shut door and finds the scrape of a hand forcing it closed while the door was shoved from the other side.' },
+  ],
+}
+```
+**บทคดีญาติ (KIN)** · ยักษ์ทวารบาล "ข้า" + "(กระแอม)" · คดีนี้คือเรื่องส่วนตัวที่สุดของเขา
+- ช่วงก่อนขึ้นแท่น:
+  - ยักษ์ทวารบาล: "ท่าน ... (กระแอม) อย่าเพิ่งมองข้า ข้าขอเล่าก่อนที่เขาจะขึ้นแท่น เมื่อชาติก่อนข้าก็เป็นยามประตูเหมือนเขา เสียงกล่อมที่เขาได้ยิน ข้าก็เคยได้ยิน ข้าตื่นขึ้นมากลางเมืองที่ไหม้ มือข้ายังกำกุญแจอยู่"
+    EN Gate Guardian: "Sir ... (ahem) please do not look at me yet. Let me tell you before he is brought up. In my past life I was a gate sentry just like him. The lulling voice he heard, I heard too. I woke in the middle of a burning city with the key still in my hand."
+  - ยักษ์ทวารบาล: "ข้าไม่เคยเล่าเรื่องนี้ให้ใครฟัง ท่านเป็นคนแรก คนที่จะขึ้นแท่นไม่ใช่ข้า แต่ข้ามองเขาเหมือนมองกระจก ข้าไม่ไว้ใจความเมตตาของข้าเองตอนนี้ ท่านตัดสินเอง"
+    EN Gate Guardian: "I have never told this to anyone. You are the first. The man on the dais is not me, but I look at him as at a mirror. I do not trust my own mercy at the moment. You judge him."
+- ช่วงระหว่างไต่สวน:
+  - ยักษ์ทวารบาล: "คนถูกสะกดไม่ใช่คนไม่มีความผิดนะท่าน ข้าไม่เคยพูดอย่างนั้น ข้าแค่รู้ว่าความผิดของคนถูกสะกดเริ่มก่อนเสียงกล่อม มันเริ่มตอนที่เขาเชื่อว่าตัวเองแข็งแกร่งเกินกว่าจะโดน"
+    EN Gate Guardian: "A man under a spell is not a man without fault, sir. I have never said so. I only know the fault of the bound begins before the lulling voice, at the moment he believes himself too strong to be taken."
+  - ยักษ์ทวารบาล: "ข้ายังกลัวเสียงกล่อมอยู่ทุกวัน ท่านสะกดจิตได้ ข้ารู้ ข้าไม่ได้รังเกียจ ข้าแค่ขอ อย่าใช้มันกับข้า"
+    EN Gate Guardian: "I still fear that lulling voice every day. You can bind minds, I know. I do not hold it against you. I only ask, do not use it on me."
+- ช่วงหลังตัดสิน:
+  - ยักษ์ทวารบาล: "ท่านตัดสินแล้ว ข้าขอเข้าไปยืนข้างเขาตรงปากประตูได้ไหม หรือท่านอยากให้ข้าเล่าก่อน ข้าไม่รู้ว่าทางไหนที่เขาจะยอมให้ข้าเข้าใกล้"
+    EN Gate Guardian: "You have judged. May I go and stand beside him at the mouth of the gate? Or would you rather I told him my story first? I do not know which way he will let me near."
+- ทางเลือก: **[ให้ยักษ์ยืนข้างเขาที่ปากประตูโดยไม่พูดอะไร]** / **[ให้ยักษ์เล่าเรื่องคืนที่ตนเองก็ถูกสะกดให้เขาฟัง]**
+  EN: **[Let the Guardian stand beside him at the gate without a word]** / **[Let the Guardian tell him of the night he too was bound]**
+  - (ยืนข้าง ๆ) บรรยาย: ยักษ์ทวารบาลก้าวไปยืนข้างทหารยามที่ปากประตู ไหล่ชนไหล่ ไม่เอ่ยสักคำ กุญแจเหล็กดอกใหญ่ในมือยามสั่นช้า ๆ แล้วนิ่ง · ยามที่ถูกสะกด: "ข้างข้ามีคนยืนอยู่ ... คืนนั้นไม่มีใครยืนข้างข้าเลย" · ยักษ์ทวารบาล: "ข้ามาช้าเหลือเกิน ขอโทษที่ช้า"
+    EN Narration: The Gate Guardian steps up beside the sentry at the gate, shoulder to shoulder, saying nothing. The great iron key in the sentry\'s hand trembles slowly, then stills. · Sentry: "There is someone standing beside me ... that night no one stood beside me." · Gate Guardian: "I came far too late. Forgive me for being late."
+  - (เล่าเรื่อง) ยักษ์ทวารบาล: "คืนนั้นข้าได้ยินคนร้องเพลงกล่อมจากกำแพงฝั่งโน้น ไพเราะมาก ข้าบอกตัวเองว่าฟังนิดเดียว แล้วข้าก็ไม่รู้เรื่องอะไรอีกเลยจนตื่นกลางไฟ" · ยามที่ถูกสะกด: "ท่านก็ ... ท่านยังเป็นยักษ์ได้อีกหรือ" · ยักษ์ทวารบาล: "ข้าเป็นได้เพราะมีคนยอมให้ข้าเป็นใหม่ ข้าหวังว่าจะมีคนยอมให้เจ้าเป็นเช่นกัน"
+    EN Gate Guardian: "That night I heard someone singing a lullaby from the opposite wall, so sweet. I told myself I would listen for just a moment, and then I knew nothing until I woke in the fire." · Sentry: "You ... you can still be a guardian after that?" · Gate Guardian: "I can, because someone let me begin again. I hope someone will let you do the same."
+
+---
+
+## 6. ข้อเสนอเสริม
+
+### 6.0 ศึกทดสอบยักษ์ทวารบาลโซน 3 (**ไม่อยู่ในสเปกคุณเป้** · โค้ดไม่มี `westGuardTest` · เขียนเป็นชุดเสริมค่าเริ่มต้นปิด · ถ้าไม่เอา ตัดทั้งหัวข้อนี้ได้ ไม่กระทบเรื่องอื่น)
+เหตุที่เสนอ: โซน 2 มีทดสอบยักษ์ทวารบาล โซน 3 ไม่มี ทำให้ผู้เล่นอาจรู้สึกไม่เท่ากัน และยักษ์ทวารบาลโซน 3 มีเรื่องกลัวถูกสะกดจากคดีญาติ 5 ที่ต่อกับพลังสะกดจิตของผู้เล่นได้พอดี · ลำดับ: กดจ้าง → N6-1 → คัตซีน `z3-guard-test-open` → สู้ → ชนะจึงเข้าทีม (แพ้ = ยังไม่เข้า ลองใหม่ได้)
+
+**N6-1** หัวข้อ: ยักษ์ทวารบาลขอทดสอบ · ข้อความ: ก่อนรับท่านเป็นนาย ยักษ์ทวารบาลแห่งปัจฉิมขอทดสอบว่าท่านเหมาะกับตำแหน่งนี้หรือไม่ เขาไม่ใช่ศัตรู แต่จะไม่ออมแรง · ปุ่ม: รับมือ
+EN: The Gate Guardian asks to test you / Before taking you as his master, the Gate Guardian of the West wants to see whether you suit the post. He is no enemy, but he will not hold back. / Face him
+**N6-2 แบนเนอร์** ไทย: ศึกพิสูจน์นาย · ยักษ์ทวารบาล · EN: Proving the master · Gate Guardian
+**N6-3 ชนะ** หัวข้อ: ยักษ์ทวารบาลยอมรับ · ข้อความ: ท่านผ่านการทดสอบ ยักษ์ทวารบาลพร้อมเข้าร่วมทีม · ปุ่ม: ต่อ · EN: The Gate Guardian accepts / You passed the test. The Gate Guardian is ready to join your team. / Continue
+**N6-4 แพ้** หัวข้อ: ยักษ์ทวารบาลรอท่านอยู่ · ข้อความ: ยักษ์ทวารบาลหยุดมือไว้ก่อน ท่านตั้งหลักแล้วลองอีกครั้งได้ · ปุ่ม: ทดสอบอีกครั้ง · EN: The Gate Guardian waits for you / The Gate Guardian lowers his club for now. Steady yourself and try again. / Test again
+```js
+'z3-guard-test-open': { title:{ th:'ยักษ์ทวารบาลขอทดสอบ', en:'The Gate Guardian Asks to Test You' }, pages:[
+  { title:{ th:'ข้ายังไม่ได้พยักหน้านะ', en:'I Have Not Nodded Yet' }, line:{ th:
+    'ยักษ์ทวารบาล: "เดี๋ยวก่อนท่าน ข้ายังไม่ได้พยักหน้าเลยนะ (กระแอม) ข้าเฝ้าประตูปัจฉิมมาก่อนท่านจะมาเป็นผู้ถือบัญชี ใครจะเป็นนายข้าต้องผ่านกระบองข้าก่อน"\n'
+  + 'ยมบาทน้อย: "ผมเข้าใจครับ ขออนุญาตแสดงฝีมือให้ท่านเห็น"',
+    en:
+    'Gate Guardian: "Hold on, sir, I have not nodded yet. (Ahem.) I kept the gate of the West before you ever became keeper of the ledger. Whoever would be my master must get past my club first."\n'
+  + 'Yama: "I understand. Allow me to show you what I can do."' } },
+  { title:{ th:'ไม่ใช่เพราะอยากสู้', en:'Not Because I Want to Fight' }, line:{ th:
+    'ยักษ์ทวารบาล: "ข้าไม่ได้อยากทำร้ายท่านหรอกนะ ข้าแค่รู้ว่านายที่ฝีมือไม่ถึงนั้นอันตราย ข้าเคยยืนประตูที่เปิดผิดคืน ข้าไม่อยากยืนอีกที่หนึ่งกับนายที่ไม่พร้อม"\n'
+  + 'บรรยาย: ยักษ์ทวารบาลกำกระบองด้วยสองมือ ยืนกางขาบังประตูเหมือนที่ยืนมาตลอดชีวิต มือข้างหนึ่งสั่นเล็กน้อยก่อนจะนิ่ง',
+    en:
+    'Gate Guardian: "I do not want to hurt you, you know. I only know that a master who falls short is dangerous. I once stood at a gate that opened on the wrong night. I do not want to stand at another with a master who is not ready."\n'
+  + 'Narration: The Gate Guardian grips his club in both hands and plants his feet to block the doorway the way he has all his life. One hand trembles slightly, then steadies.' } },
+]},
+'z3-guard-test-win': { title:{ th:'ยักษ์ทวารบาลยอมรับ', en:'The Gate Guardian Accepts' }, pages:[
+  { title:{ th:'ข้ายอม', en:'I Yield' }, line:{ th:
+    'ยักษ์ทวารบาล: "ได้ ข้ายอม! ท่านไม่ใช่คนแรงที่สุดที่ข้าเคยเจอ แต่ท่านไม่ถอยสักก้าว ข้านับถือคนแบบนี้ (กระแอม) จะเรียกท่านว่านายก็ได้ แต่อย่าเพิ่งให้ข้าเรียกบ่อยนะ"',
+    en:
+    'Gate Guardian: "All right, I yield! You are not the strongest I have faced, but you did not give a single step. I respect that. (Ahem.) You may be called master, but do not make me say it too often yet."' } },
+]},
+'z3-guard-test-lose': { title:{ th:'ยักษ์ทวารบาลรอท่านอยู่', en:'The Gate Guardian Waits' }, pages:[
+  { title:{ th:'ข้ายืนรออยู่', en:'I Stand Waiting' }, line:{ th:
+    'ยักษ์ทวารบาล: "ลุกเถอะท่าน ข้ายังไม่เรียกว่าแพ้ ท่านตั้งหลักแล้วมาใหม่ ข้ายืนรออยู่หน้าประตู"',
+    en:
+    'Gate Guardian: "Get up, sir. I do not call that a loss. Steady yourself and come again. I will be standing at the gate."' } },
+]},
+```
+- ภาพ: `cut-guard-test-west` (P2 ข้อ 8) · ถ้าไม่เอาศึกนี้ ไม่ต้องวาด
+
+---
+
+## 7. ข้อเสนอแยก (ไม่ใช่ของคุณเป้): คดีญาติของนัวร์ 1 คดี · 2 แบบให้เลือก
+ช่องว่างที่พบ: นัวร์ (ดำ ประจำปัจฉิม) ยังไม่มีคดีญาติ (สเปกโซน 3 ระบุ 5 คดี ไม่มีนัวร์) · นัวร์เป็นหัวหน้าคนงานที่ผู้เล่นเห็นทุกวัน (ปุ่ม "สั่งงานครัว") คดีของเขาจึงควรเข้ากับธีมครัวและการทำตามคำสั่ง · ถ้าเลือกแล้ว ผมเขียนสำนวนเต็มและบท KIN ต่อ (ให้ระดับเดียวกับ 5.1-5.5) · ขึ้นเมื่อจ้างนัวร์ตามกติกาคดีญาติทั่วไป
+
+### แบบ A · เจ้านายเก่าผู้ให้ทำบัญชีสองเล่ม
+- วิญญาณ: เจ้าของโรงทานท่าเรือผู้มอบหมายให้นัวร์ลอกตัวเลขสองเล่ม (เล่มจริง/เล่มโชว์) โดยไม่อธิบาย นัวร์ลอกตามคำสั่งทุกบรรทัดและไม่เคยถามว่าทำไม จนโรงทานถูกยึดและคนจนอดข้าวในฤดูหนาว
+- บาปหลัก: `kong` ฉ้อโกงกองบุญ (w 4) · ส่วนเบาลง: เขาซ่อนข้าวสำรองเล็กน้อยไว้ในเล่มโชว์เผื่อฤดูแล้ง (w -2) · บุญจริง: ไม่เคยเอาเงินกองบุญเข้ากระเป๋าตนแม้เหรียญเดียว · บุญปลอม: อ้างว่าเล่มโชว์คือความโปร่งใส
+- ทางเลือกท้ายคดี: [ให้นัวร์อ่านตัวเลขทั้งสองเล่มออกเสียงต่อหน้าเขา] / [ให้นัวร์เผาเล่มโชว์แล้วเก็บเล่มจริงไว้เป็นหลักฐาน]
+- ตัวอย่างบท นัวร์: "ท่านครับ ผมลอกตามสั่งมาตลอด ผมนึกว่ายิ่งไม่ถามยิ่งเป็นลูกจ้างที่ดี" · EN Noir: "Sir, I copied exactly as told. I thought the less I asked, the better a servant I was."
+- จุดเด่น: ต่อกับโพเอน่า (ทำตามหมาย) แต่เป็นฝั่งงานบัญชี · ข้อควรระวัง: ธีม "ทำตามคำสั่งโดยไม่ถาม" ซ้ำกับคดีญาติ 1 ค่อนข้างมาก
+
+### แบบ B · แม่ครัวโรงทานที่เอาของค้างคืนมาปรุงใหม่
+- วิญญาณ: แม่ครัวโรงทานที่นัวร์เคยสอนว่า "ไม่ทิ้งอาหาร" เธอเอาสตูว์ค้างคืนมาอุ่นให้เด็กข้างถนนกิน เด็กป่วยหนักสองคน หนึ่งในนั้นไม่ฟื้น เธออดมื้อนั้นเพื่อให้เด็กพอ
+- บาปหลัก: `kha` ประมาทจนเป็นอันตราย (w 2) · ส่วนเบาลง: ไม่มีใครบอกเรื่องของบูด/ไม่มีตู้เย็น (w -2) · บุญจริง: เลี้ยงเด็กข้างถนนฟรีสิบปี · บุญปลอม: อ้างว่าไม่เคยมีใครป่วยเพราะอาหารของเธอ
+- ทางเลือกท้ายคดี: [ให้นัวร์เขียนป้ายวันหมดอายุติดทุกหม้อในโรงอาหารของท่าน] / [ให้นัวร์ต้มโจ๊กใหม่ให้เธอกินก่อนไป]
+- ตัวอย่างบท นัวร์: "ท่านครับ ผมเป็นคนบอกเธอเองว่าอย่าทิ้งอาหาร ผมไม่เคยบอกต่อว่าอาหารเก่าก็ทำให้คนป่วยได้" · EN Noir: "Sir, I was the one who told her never to throw food away. I never told her that old food can make people ill too."
+- จุดเด่น: ต่อกับแผงโรงอาหารและปุ่ม "สั่งงานครัว" ที่ผู้เล่นใช้อยู่ · ผลดีต่อเกม: ตัวเลือก A ของท้ายคดีสามารถเป็นข้อความบันทึกเฉย ๆ ไม่ต้องมีผลในระบบ
+- **ผมแนะนำแบบ B** (ธีมต่างจากคดีอื่นมากกว่า และผูกกับระบบที่ผู้เล่นเห็นจริง)
+
+---
+
+## 8. ภาพที่ต้องวาด (ส่ง Codex) · ไม่ซ้ำกับที่มีแล้ว
+ชื่อไฟล์ `img/z3-events/*.webp` · คัตซีน 1672×941 · ภาพรอง/พร็อป 1375×768 · สไปรท์/โปรไฟล์วิญญาณขนาดตาม `soul-sita-th*.webp` ที่มีอยู่แล้ว · ไม่มีตัวอักษรในภาพ · ไม่มีภาพกัดคอ/เลือดชัด
+
+**ใช้ของเดิมได้ ไม่ต้องวาด (ผมเห็นชื่อในโค้ดจริง):** `img/deva-intro/deva-intro-west-v1.webp` (เอียร์ลิน) · `img/frontier-west-hypnosis-v1.webp` (ระลอก 3) · `img/West/Boss Zone3-cutscene.webp` (เซเวอริน) · `img/story-west-01.webp`, `img/story-west-02.webp` · สไปรท์ `boss-tester-west` `boss-frontier-west` · การ์ดท่าบอสโซน 3 สี่ใบใน `boss-skills-data.js` (`cut-eirlin-spearrain-west` `cut-valdric-batstorm-west` `cut-cerberus-howl-west` `cut-jormungandr-tide-west`) และสไปรท์เซอร์เบอรัส/ยอร์มุนกันดร์ (ตามใบงาน BOSS-ART-2 ที่ใบงานนี้บอกว่ามีแล้ว · **ผมไม่ได้เปิดดูไฟล์จริง**)
+
+**ตรวจก่อนวาด (ผมยืนยันชื่อไฟล์ไม่ได้):** ภาพเปิดชายแดนปัจฉิม (โซน 2 ใช้ `img/frontier-asia-intro-v1.webp` ในฉากเดียวกัน · โซน 3 น่าจะมีชื่อคล้าย ๆ `frontier-west-intro-v1`) · ภาพเปิดท่าเรือของเซเวอริน (โซน 2 ใช้ `img/Asia/Intro-Boss-Zone2-asia.webp` · โซน 3 น่าจะมี `img/West/Intro-Boss-Zone3-west.webp`) · พื้นหลังคฤหาสน์/ถ้ำที่วาลดริกกลับไปยืน · ถ้ามีชิ้นไหนอยู่แล้ว ตัดออกจากตารางด้านล่าง
+
+### P1 · ต้องมี (11 รายการ)
+| # | ไฟล์ที่เสนอ | ขนาด | คำบรรยาย | ใช้กับ |
+|---|---|---|---|---|
+| 1 | `cut-arrive-west.webp` | 1672×941 | ลานหินปัจฉิมปกคลุมหิมะบาง โคมเหล็กเรียงสองข้าง โพเอน่ากับพ่อค้านรกยืนใต้โคมแรก วิญญาณสองสามดวงเดินวนตาเรืองเขียวจาง ไกลสุดมีเงาสุนัขสามเศียรหน้าประตูชายแดน | `z3-arrive` |
+| 2 | `cut-cerberus-wakes-west.webp` | 1375×768 | เซอร์เบอรัสทรุดนั่ง สามเศียรกะพริบตา แสงเขียวหลุดเป็นฝอย โพเอน่าวางมือบนเศียรกลาง หิมะปลิว | `z3-cerberus-win` |
+| 3 | `cut-frontier-boss-to-dais-west.webp` | 1672×941 | วาลดริกเดินนำหน้าบนลานหินที่หิมะกำลังละลายตามรอยโคม ยามากับนิราเดินตาม ผู้เช่าที่ตื่นแล้วยืนสองข้างทางถือผ้าห่ม | `frontier-west-boss-to-dais` |
+| 4 | `cut-frontier-boss-punished-west.webp` | 1672×941 | วาลดริกนั่งบนขอบกระทะทองแดง ไม่ถอดโค้ต ไอร้อนลอยขึ้น น้ำแข็งที่หนวดละลายเป็นหยด มองขอบฟ้าตะวันออกที่ยังมืด (ไม่มีภาพเลือด) | `frontier-west-boss-punished` |
+| 5 | `cut-frontier-boss-released-west.webp` | 1672×941 | วาลดริกยืนหน้าประตูคฤหาสน์ ดึงม่านหน้าต่างเปิดครึ่งบาน แสงโคมจากลานสาดเข้าห้องมืด ยามายืนอยู่ปลายเนินมองขึ้นมา | `frontier-west-boss-released` |
+| 6 | `cut-sev-jorm-arrive-west.webp` | 1672×941 | เซเวอรินในเกราะเงินลายกะโหลกน้ำเงินยืนบนท่าเรือฝั่งขวา ถือสมุดบัญชีเล่มหนา ด้านหลังเขาอสรพิษโลกเกล็ดเทาน้ำเงินโผล่หางสูงเหนือน้ำ ยามากับนิราตัวเล็กมากทางซ้ายล่าง | `z3-sev-open` |
+| 7 | `soul-false-judge-west.webp` + `-profile.webp` | ตามขนาด soul-sita-th | อดีตผู้พิพากษาชุดคลุมเทาถ่าน หลังตรง กุมหมายม้วนไว้ไม่กล้าวาง | `falseorder` |
+| 8 | `soul-younger-brother-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | ชายหนุ่มผอมสูง ปลายนิ้วเขม่า ยืนเอียงซ้ายเหมือนมีคนเดินข้าง ๆ | `youngerbrother` |
+| 9 | `soul-prophecy-client-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | หัวหน้าตระกูลพ่อค้าเสื้อคลุมขนสัตว์เก่า ตาแดง กำสมุดบัญชีเรือเล่มเล็กแน่น | `doomclient` |
+| 10 | `soul-carer-daughter-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | หญิงผมรวบเรียบร้อย โค้ตกลัดผิดกระดุม ถือช่อดอกไม้เหี่ยว | `carerdaughter` |
+| 11 | `soul-gate-sentry-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | ยามเกราะหนังเก่า มือขวากำกุญแจเหล็กดอกใหญ่ มองแต่ประตู | `gatesentry` |
+("รายการ" = ภาพหลัก + profile นับเป็น 1 · ภาพคัตซีนจริง 6 ใบ + สไปรท์วิญญาณ 5 ตัว)
+
+### P2 · ใช้ภาพอื่นแทนก่อนได้ (9 รายการ)
+| # | ไฟล์ที่เสนอ | ขนาด | คำบรรยาย | แทนด้วยอะไรก่อน |
+|---|---|---|---|---|
+| 12 | `cut-freeze-west.webp` | 1672×941 | ลานปัจฉิมกลางวิญญาณหยุดกลางก้าว หิมะลอยค้างกลางอากาศ โพเอน่ากับนิราเดินท่ามกลางรูปปั้นสีซีด | `frontier-west-hypnosis-v1` |
+| 13 | `cut-valdric-down-west.webp` | 1375×768 | วาลดริกคุกเข่าข้างเดียวบนหิมะ ไม้เท้าหัวค้างคาวกลิ้งอยู่ข้างตัว ค้างคาวบินกลับเข้าชายเสื้อ | `frontier-west-hypnosis-v1` |
+| 14 | `cut-jorm-yields-west.webp` | 1672×941 | ยอร์มุนกันดร์คลายขดจมลงน้ำ ปลายหางโผล่พ้นผิวน้ำ เซเวอรินเปิดสมุดมองด้วยสีหน้าประหลาดใจ ยามากับนิราริมท่า | การ์ด `cut-jormungandr-tide-west` |
+| 15 | `frontier-west-intro-v1.webp` (ตรวจก่อนว่ามีอยู่) | 1672×941 | ชายแดนปัจฉิม หมอกขาวไหลลงเนิน ประตูเปิดครึ่งบาน ปีศาจยืนนิ่งในหมอก คฤหาสน์เก่าหน้าต่างสว่างวาบบนเนิน | ภาพชายแดนที่มีอยู่ |
+| 16 | `prop-false-writ-west.webp` | 1375×768 | โคลสอัปหมายคำสั่งเท็จ ตราประทับหมึกผิดสี ไม่มีเลขรับรอง ใช้ตอนเฉลยในสำนวน | โปรไฟล์วิญญาณ |
+| 17 | `prop-prophecy-slate-west.webp` | 1375×768 | แผ่นหินทำนายมีคำว่า "อาจ" ถูกรอยหมึกทับเหลือแต่คำว่า "คืนนั้น" | โปรไฟล์วิญญาณ |
+| 18 | `soul-hypnotized-west-a/b.webp` | ตามสไปรท์วิญญาณทั่วไป | วิญญาณตาเรืองเขียวจางเดินวน 2 แบบ (ชายชรา/หญิงสาว) สำหรับคดี 0 | ภาพวิญญาณทั่วไป (kind 10 ของเดิม) |
+| 19 | `cut-guard-test-west.webp` | 1672×941 | ยักษ์ทวารบาลโซน 3 ยืนกางขาบังประตู มือหนึ่งสั่นเล็กน้อย ยามาเผชิญหน้า (**เฉพาะถ้าเอาข้อ 6.0**) | ไม่ต้องวาดถ้าไม่เอา |
+| 20 | `soul-noir-kin-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | วิญญาณคดีนัวร์ (**เฉพาะหลังคุณเป้เลือกแบบ A/B ข้อ 7**) | — |
+
+---
+
+## 9. สรุปจำนวน
+- **event ตามสเปก:** คดี 0 · 5 · 10 · 15 (4 event) + คดีญาติ 5 คดี = 9 ข้อตามสเปก · บวกสำนวนไต่สวนวาลดริก 1 สำนวน = **6 สำนวนไต่สวนใหม่** (วาลดริก + ญาติ 5)
+- **คัตซีนใหม่ที่เขียน 18 ชุด + ศึกทดสอบยักษ์เสนอเสริม 3 ชุด (รวม 21):** คดี 0 = 4 (`z3-arrive`, `z3-cerberus-open/win/lose`) · คดี 5 = 6 (`z3-freeze`, `z3-breach-intro`, `z3-valdric-down`, `frontier-west-boss-to-dais/punished/released`) · คดี 10 = 3 (`z3-eirlin-open/win/lose`) · คดี 15 = 5 (`z3-sev-open`, `z3-jorm-yields`, `z3-jorm-lose`, `z3-sev-win`, `z3-sev-lose`) · ศึกทดสอบยักษ์ (ข้อเสนอ) = 3 (`z3-guard-test-open/win/lose`)
+- **คัตซีนเดิมที่ใช้ตรงตัว:** `west-hypnosis` · `deva-west` (+ i18n `deva.west.arrival`) · `STORY.west` 2 แผง · boss-guide โซน west
+- **ภาพ:** P1 11 รายการ (คัตซีน 6 + สไปรท์วิญญาณ 5 ตัว) · P2 9 รายการ (รวมของเสริมที่ขึ้นกับคำตัดสิน 2)
+- **บรรทัดเดิมจาก `data.js` ที่ใช้ตรงตัว:** `bossArrive` 4 บรรทัด + `bossWin` 2 บรรทัด ของ `ZONES.west`
+
+---
+
+## 10. ต้องให้คุณเป้ตัดสิน (เลือกแบบปลอดภัยไว้แล้ว ไม่หยุดงาน)
+1. **ระลอก 3 ของคดีครบ 5:** สเปกเขียน "ปีศาจ 3 ระลอก" แต่โค้ดเดิมเป็นปีศาจ 2 ระลอก + ระลอก 3 เป็นลูกทีม (ทัณฑ์/ดำ) ที่ถูกสะกด (เนื้อเรื่องเก่า `west-hypnosis`) · ผมใช้โครงเดิมและนับเป็น 3 ระลอก · ถ้าอยากให้ระลอก 3 เป็นปีศาจล้วน ต้องตัดฉาก `west-hypnosis` ออก (ไม่แนะนำ เพราะรางวัล "สะกดจิต" ผูกกับฉากนั้น)
+2. **ตัดสินวาลดริก (แท่น) ล็อกคำตอบ:** ผมเสนอ กระทะทองแดง · มัวเมา · ปานกลาง (3/5) เหมือนที่โซน 2 ล็อกลานตรากตรำให้อากุระ · คุณเป้เปลี่ยนสถานี/ระดับได้ แก้แค่หน้า `frontier-west-boss-punished` หน้าเดียวกับข้อความตัดสิน 3 บรรทัด
+3. **เบื้องหลังวาลดริก (เขียนเพิ่มเอง):** ไม่ดื่มเลือดมาสองร้อยปีตามคำปฏิญาณ ใช้ไวน์แทน · ผู้เช่าหลับในหมอกเพราะกลัวการตัดสินพรากความทรงจำ · ไม่มีบทไหนอ้างตำนานจริง ใช้ได้ถาวรเหมือนเบื้องหลังอากุระหรือไม่
+4. **เซอร์เบอรัสหลังตื่น:** ผมเขียนให้ไปนอนขดข้างเสาประตูล่าง (เป็นของประดับ/ผู้พิทักษ์ที่ยืนอยู่ต่อ) · ให้เข้าทีมหรือคุยได้หรือไม่ ให้คุณเป้ตัดสิน (ผมไม่ได้เขียนบทคุยกับเขา เพราะไม่พูด)
+5. **แพ้เซเวอริน แล้วต้องสู้ยอร์มุนกันดร์ซ้ำไหม:** ผมเสนอ **ไม่ซ้ำ** (อสรพิษถอยแล้วถือว่าผ่าน สู้แต่เซเวอรินใหม่) · ถ้าให้ซ้ำ ฉาก `z3-jorm-yields` ต้องเล่นอีกรอบ
+6. **เบาะแส PHANTOM-404 ในโซน 3:** สเปกไม่กำหนด ผมเตรียมไว้ 2 จุด ค่าเริ่มต้น**ปิด** ทั้งคู่ (ธง `Z3_PHANTOM_CLUE`): หน้า 3 ของ `z3-cerberus-win` (ใบเวรเซอร์เบอรัสถูกแก้) และหน้า 3 ของ `z3-sev-win` (เซเวอรินพบยอดค้างสามรายการไม่ตรง) · เปิดแล้วเบาะแสไล่ต่อเนื่อง สีดา → ฝูงลิง → เซอร์เบอรัส → เซเวอริน → โซน 4 · ปิดแล้วเรื่องหลักไม่เสียหาย
+7. **ศึกทดสอบยักษ์ทวารบาลโซน 3 (ข้อ 6.0):** สเปกไม่ได้ขอ ผมเสนอเป็นชุดเสริม ค่าเริ่มต้น**ปิด** · เอาหรือไม่เอา
+8. **ชื่อโพเอน่า:** ผมอนุมานว่าทัณฑ์ประจำปัจฉิมชื่อโพเอน่า (ข้อ 0.5) · ถ้า `CREW` ชื่ออื่น แทนทั้งไฟล์ได้ · ให้คุณเป้หรือ Toby ยืนยันชื่อห้าคน (โพเอน่า นัวร์ อ็อกเนียน ซิบิล เกรซ) กับ CREW
+9. **เพศ/สรรพนามของโพเอน่า อ็อกเนียน ซิบิล เกรซ พ่อค้านรก:** อนุมานจากชื่อและบทบาท (ข้อ 0.1 / 0.5) ถ้าสไปรท์ขัด ผมแก้ให้ตามที่คุณเป้บอก
+10. **คดีญาติ 3 ทางเลือก B "ซิบิลขอไปรับทัณฑ์ด้วย":** ให้เป็นข้อความอย่างเดียว หรือให้ซิบิลหายไปทำงานไม่ได้ 3 วาระ (ผมแนะนำข้อความอย่างเดียว เพราะผู้เล่นที่เลือกทางนี้ไม่ควรถูกลงโทษซ้ำ)
+11. **คดีญาตินัวร์ (ข้อ 7):** เลือกแบบ A หรือ B (ผมแนะนำ B) หรือไม่เอาเลย
+12. **เลขคดีที่เปลี่ยนจากโค้ดเดิม (ตามสเปก ไม่ต้องตัดสิน แต่ต้องรู้):** ปีศาจฝ่าชายแดน 3 → 5 · เทวดา 7 → 10 · บอสโซน 10 → 15 (`ZONE_BOSS_AT.west = 15`) · เซฟเก่าของผู้เล่นที่เลยคดี 3/7 ไปแล้วต้องจัดการเหมือนที่ Toby ทำใน migration โซน 2
+
+---
+
+## 11. ให้ Reese ตรวจ (สั้น ๆ)
+1. **วาลคีรี** (3.5): "เลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา" ตรงกับที่ Reese แก้ไว้ในรอบก่อน (R3) · หอก/ปีกของเอียร์ลินเป็นการออกแบบเกม · ชื่อท่า "หอกเลือกผู้ควร" เป็นการสื่อแนวคิด ไม่ใช่ท่าในตำนาน
+2. **เซอร์เบอรัส** (1.3-1.6): สุนัขสามเศียรผู้เฝ้าประตูโลกใต้ดินตำนานกรีก (R5 ผ่านแล้ว) · "ถูกสะกด" เป็นการดัดแปลงเกม · "เคยกินอาหารจากมือโพเอน่า" เป็นเรื่องแต่งของเกม · ตำนานเดิมมีการกล่อมเขาด้วยขนมน้ำผึ้ง (ผมไม่ได้ใช้ ถ้าต้องการเกร็ดนี้ให้ Reese ยืนยันตัวบทก่อน)
+3. **ยอร์มุนกันดร์** (4.3, 4.5): อสรพิษโลกล้อมโลกและกัดหางตัวเอง (R6 ผ่านแล้ว) · บทนี้ "ตัวมันถอยและจมน้ำ ไม่ตาย" และ "ปลายหางโผล่พ้นน้ำทั้งที่ควรอยู่ในปาก" สื่อลางรากนาโรก (Reese เคยยืนยันว่าสอดคล้อง) · ไม่ใช้พิษ ไม่ใช้ธอร์ · เซเวอรินพูดว่า "ขอยืมมา" เป็นเรื่องแต่งเกม ไม่ล้อเลียนต้นเรื่อง · คำที่เอียร์ลินพูดเรื่อง "ลางคลื่นถอย" (3.6) ตรวจน้ำเสียงเคารพตำนาน
+4. **โพเอน่า / ซิบิล / อ็อกเนียน / เกรซ / นัวร์** (ข้อ 0.5): ชื่อ Poena = บุคลาธิษฐานของการลงโทษในตำนานโรมัน/กรีก · Sibyl = หมอดูหญิงในตำนานกรีก-โรมัน (ชื่อทั่วไป) · Ognien = "ไฟ" ในภาษาสลาฟ · ขอให้ Reese ยืนยันว่าการใช้เป็นชื่อตัวละครไม่ชนชื่อแบรนด์หรือเกมใหญ่
+5. **แวมไพร์** (2.x): ไวน์แทนเลือด ค้างคาว โค้ต ไม่มีภาพกัด (R4 ผ่านแล้ว) · "คำปฏิญาณไม่ดื่มเลือดสองร้อยปี" และ "ผู้เช่าหลับในหมอก" เป็นเรื่องแต่งเกม · ไม่ทำให้แวมไพร์ตายด้วยแสงอาทิตย์ (ใช้ "แสงโคม/ม่าน" เชิงสัญลักษณ์)
+6. **ศัพท์ไทย:** "วัลฮัลลา" (ตรงที่ Reese ใช้) · "เซอร์เบอรัส" · "ยอร์มุนกันดร์" · "กระทะทองแดง" ตามชื่อสถานีในโค้ด · "ลานหิน/ท่าเรือ/แม่น้ำวิญญาณ" ตรงของเดิมในเกม
+7. **คดีครบ 5 (วาลดริก)**: ไม่เทียบกับคดีจริงในปัจจุบัน · คดีญาติ 1 (หมายเท็จ) / 3 (คำทำนาย) / 4 (ทิ้งแม่ที่สถานพัก) / 5 (ยามถูกสะกด) เป็นเรื่องแต่ง ไม่เทียบกับเหตุการณ์หรือบุคคลจริง · คดีญาติ 4 ผูกกับสถานการณ์ผู้สูงอายุที่ละเอียดอ่อน ขอให้ chris-culture ดูน้ำเสียงเมื่อถึงโหมด ship
+8. **ข้อความตรงกับโค้ด (ให้ Toby/Reese เทียบ):** บรรทัดเดิม 6 บรรทัดที่ใช้ตรงตัว (ข้อ 4.3, 4.6) กับ `data.js` ~2113-2120 · ข้อความ `deva.west.arrival` ที่ผมไม่แตะ
+
+---
+
+## 12. หมายเหตุ
+- ผมไม่ได้แตะโค้ดหรือไฟล์ในโปรเจกต์เกม (อ่านอย่างเดียว) · ชื่อคีย์ทุกตัวเป็นข้อเสนอ ให้ Toby ปรับให้เข้ากับระบบ · ฟิลด์ `en_*` ในสำนวนไต่สวนเป็นข้อเสนอรูปแบบ (ถ้าระบบสำนวนมีที่เก็บ EN แบบอื่น ให้ย้ายตาม)
+- ผมไม่ได้เขียนบทเฉลยตัวผู้อยู่เบื้องหลัง [PHANTOM-404] (เหมือนโซน 2) · เบาะแสโซน 3 เป็นของเสริมที่ปิดอยู่
+- ป้ายผู้พูดในบทเดิม `deva.west.arrival` เป็น "yama:" ตัวพิมพ์เล็กปน "วาลคีรี:" ต่างจากป้ายอื่นที่ใช้ "ยมบาทน้อย:" (ไม่ใช่ความผิดของบทนี้ แจ้งไว้ ถ้าจะเก็บให้เนียนเปลี่ยนเป็น "ยมบาทน้อย:" ได้โดยไม่กระทบความหมาย)
+- ไม่มี emoji · ไม่มีคำหยาบ · ไม่มีภาพกัดคอหรือเลือดชัด · ไม่มีฉากลงโทษที่ใช้เลือด
+
