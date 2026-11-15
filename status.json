@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T08:42:34.326Z",
+  "updatedAt": "2026-11-15T08:44:41.175Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,8 +69,8 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "done",
-      "task": "Research SAD Super Sprite tool",
+      "status": "working",
+      "task": "Fact-check Rae boss skills + quest",
       "report": {
         "when": "22:02",
         "title": "Reese fact-check frontier weapons",
