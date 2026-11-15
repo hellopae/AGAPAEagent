@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T08:48:49.388Z",
+  "updatedAt": "2026-11-15T10:08:12.426Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Boss skills all zones (set A)",
       "report": {
         "when": "11:59",
