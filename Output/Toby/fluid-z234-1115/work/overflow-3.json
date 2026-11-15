@@ -1,0 +1,401 @@
+[
+ {
+  "id": "z3-water-0-0",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 3809,
+  "bytes": 13128
+ },
+ {
+  "id": "z3-water-1-0",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 121039,
+  "bytes": 90034
+ },
+ {
+  "id": "z3-water-2-0",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 76106,
+  "bytes": 66389
+ },
+ {
+  "id": "z3-water-11-0",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 46966,
+  "bytes": 37803
+ },
+ {
+  "id": "z3-water-0-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 47336,
+  "bytes": 43381
+ },
+ {
+  "id": "z3-water-1-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 2238,
+  "bytes": 14398
+ },
+ {
+  "id": "z3-water-2-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 68423,
+  "bytes": 64021
+ },
+ {
+  "id": "z3-water-3-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 205261,
+  "bytes": 105985
+ },
+ {
+  "id": "z3-water-9-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 41933,
+  "bytes": 35826
+ },
+ {
+  "id": "z3-water-10-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 55803,
+  "bytes": 44452
+ },
+ {
+  "id": "z3-water-11-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 32216,
+  "bytes": 32126
+ },
+ {
+  "id": "z3-water-12-1",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 13927,
+  "bytes": 13047
+ },
+ {
+  "id": "z3-water-0-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 65994,
+  "bytes": 52134
+ },
+ {
+  "id": "z3-water-1-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 66958,
+  "bytes": 48642
+ },
+ {
+  "id": "z3-water-2-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 34367,
+  "bytes": 31627
+ },
+ {
+  "id": "z3-water-3-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 214048,
+  "bytes": 123787
+ },
+ {
+  "id": "z3-water-4-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 9551,
+  "bytes": 13931
+ },
+ {
+  "id": "z3-water-8-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 56477,
+  "bytes": 39081
+ },
+ {
+  "id": "z3-water-9-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 42001,
+  "bytes": 43214
+ },
+ {
+  "id": "z3-water-10-2",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 45937,
+  "bytes": 42738
+ },
+ {
+  "id": "z3-water-2-3",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 43433,
+  "bytes": 28301
+ },
+ {
+  "id": "z3-water-3-3",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 221163,
+  "bytes": 114909
+ },
+ {
+  "id": "z3-water-4-3",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 4589,
+  "bytes": 9034
+ },
+ {
+  "id": "z3-water-7-3",
+  "liquid": "water",
+  "overflowPct": 0.05,
+  "maskPx": 13385,
+  "bytes": 14568
+ },
+ {
+  "id": "z3-water-8-3",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 112483,
+  "bytes": 75654
+ },
+ {
+  "id": "z3-water-1-4",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 5811,
+  "bytes": 13392
+ },
+ {
+  "id": "z3-water-3-4",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 204906,
+  "bytes": 123715
+ },
+ {
+  "id": "z3-water-4-4",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 10573,
+  "bytes": 29617
+ },
+ {
+  "id": "z3-water-8-4",
+  "liquid": "water",
+  "overflowPct": 0.15,
+  "maskPx": 69079,
+  "bytes": 47789
+ },
+ {
+  "id": "z3-water-9-4",
+  "liquid": "water",
+  "overflowPct": 0.02,
+  "maskPx": 110560,
+  "bytes": 69998
+ },
+ {
+  "id": "z3-water-10-4",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 78783,
+  "bytes": 57655
+ },
+ {
+  "id": "z3-water-0-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 10830,
+  "bytes": 12751
+ },
+ {
+  "id": "z3-water-1-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 83894,
+  "bytes": 35967
+ },
+ {
+  "id": "z3-water-2-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 77390,
+  "bytes": 27958
+ },
+ {
+  "id": "z3-water-3-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 310920,
+  "bytes": 103964
+ },
+ {
+  "id": "z3-water-4-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 238691,
+  "bytes": 66644
+ },
+ {
+  "id": "z3-water-5-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 66628,
+  "bytes": 13031
+ },
+ {
+  "id": "z3-water-6-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 43799,
+  "bytes": 10233
+ },
+ {
+  "id": "z3-water-7-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 58401,
+  "bytes": 11571
+ },
+ {
+  "id": "z3-water-8-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 159209,
+  "bytes": 13276
+ },
+ {
+  "id": "z3-water-9-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 96593,
+  "bytes": 17361
+ },
+ {
+  "id": "z3-water-10-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 139675,
+  "bytes": 59453
+ },
+ {
+  "id": "z3-water-11-5",
+  "liquid": "water",
+  "overflowPct": 0.06,
+  "maskPx": 132047,
+  "bytes": 25638
+ },
+ {
+  "id": "z3-water-12-5",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 38262,
+  "bytes": 13631
+ },
+ {
+  "id": "z3-water-0-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 120086,
+  "bytes": 33638
+ },
+ {
+  "id": "z3-water-1-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 187832,
+  "bytes": 36313
+ },
+ {
+  "id": "z3-water-2-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 282499,
+  "bytes": 17824
+ },
+ {
+  "id": "z3-water-3-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 278413,
+  "bytes": 12358
+ },
+ {
+  "id": "z3-water-4-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 301343,
+  "bytes": 13415
+ },
+ {
+  "id": "z3-water-5-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 264462,
+  "bytes": 12331
+ },
+ {
+  "id": "z3-water-6-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 89987,
+  "bytes": 11051
+ },
+ {
+  "id": "z3-water-7-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 248762,
+  "bytes": 17432
+ },
+ {
+  "id": "z3-water-8-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 224705,
+  "bytes": 21498
+ },
+ {
+  "id": "z3-water-9-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 319265,
+  "bytes": 17116
+ },
+ {
+  "id": "z3-water-10-6",
+  "liquid": "water",
+  "overflowPct": 0.02,
+  "maskPx": 265316,
+  "bytes": 35268
+ },
+ {
+  "id": "z3-water-11-6",
+  "liquid": "water",
+  "overflowPct": 0.03,
+  "maskPx": 249689,
+  "bytes": 39910
+ },
+ {
+  "id": "z3-water-12-6",
+  "liquid": "water",
+  "overflowPct": 0.0,
+  "maskPx": 163761,
+  "bytes": 23170
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "view": [
+   500.0,
+   450.0,
+   0.0
+  ],
+  "layerPx": 68948,
+  "overflowPct": 0.35,
+  "stuckPct": 2.26,
+  "coveragePct": 100.0,
+  "pieces": 14
+ },
+ {
+  "view": [
+   1000.0,
+   1000.0,
+   0.0
+  ],
+  "layerPx": 270817,
+  "overflowPct": 0.0,
+  "stuckPct": 4.53,
+  "coveragePct": 99.2,
+  "pieces": 17
+ },
+ {
+  "view": [
+   1500.0,
+   1800.0,
+   0.0
+  ],
+  "layerPx": 119435,
+  "overflowPct": 0.0,
+  "stuckPct": 11.88,
+  "coveragePct": 0.0,
+  "pieces": 9
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "view": [
+   800.0,
+   900.0,
+   0.0
+  ],
+  "layerPx": 152084,
+  "overflowPct": 0.0,
+  "stuckPct": 7.66,
+  "coveragePct": 97.2,
+  "pieces": 20
+ },
+ {
+  "view": [
+   1100.0,
+   2050.0,
+   0.0
+  ],
+  "layerPx": 214945,
+  "overflowPct": 0.0,
+  "stuckPct": 9.54,
+  "coveragePct": 99.0,
+  "pieces": 18
+ }
+]
