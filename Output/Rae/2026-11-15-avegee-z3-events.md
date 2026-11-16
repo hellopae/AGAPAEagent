@@ -1,6 +1,7 @@
 # AVEGEE โซน 3 ปัจฉิม · บท event ครบชุด (คดี 0 / 5 / 10 / 15 + คดีญาติยมทูต 5 คดี + ข้อเสนอคดีนัวร์)
 ผู้เขียน: Rae · 15 พ.ย. 2569 · อิงสเปกคุณเป้ (`Output/Claudy/briefs/2026-11-14-avegee-z234-events-owner-spec.md` ส่วนโซน 3 + คำตอบ + คำตัดสิน 14 พ.ย.) · ใบงาน `Output/Claudy/briefs/2026-11-15-avegee-z3-events-rae.md` · รูปแบบตามบทโซน 2 `Output/Rae/2026-11-14-avegee-z2-events.md` (ไทย + EN คู่กันทุกบรรทัดที่ผู้เล่นเห็น)
-สถานะ: ร่างพร้อมเสียบ · ยังไม่ผ่าน Reese (หัวข้อ 11) · ไม่ได้แตะโค้ด (อ่านอย่างเดียวจาก `~/agapae-work/AVEGEE/src/`)
+**แก้ 16 พ.ย. 2569 (R1)** ตามคำตัดสินคุณเป้ `briefs/2026-11-15-avegee-z3-owner-decisions.md` ครบ 8 ข้อ · หัวข้อที่แก้ทำเครื่องหมาย "แก้ 16 พ.ย." · สรุปรายการแก้อยู่หัวข้อ 13 ท้ายไฟล์ · ที่ใดขัดกับหัวข้อ 10 ให้ใช้ฉบับแก้
+สถานะ: ร่างพร้อมเสียบ · ยังไม่ผ่าน Reese (หัวข้อ 11 + ส่วนแก้ 16 พ.ย. ดูหัวข้อ 13) · ไม่ได้แตะโค้ด (อ่านอย่างเดียวจาก `~/agapae-work/AVEGEE/src/`)
 ทางลัด: ต้องให้คุณเป้ตัดสิน = หัวข้อ 10 · ให้ Reese ตรวจ = หัวข้อ 11 · รายการภาพ = หัวข้อ 8 · ของเดิมในโค้ด vs ที่แก้ = ข้อ 0.4
 ข้อจำกัดตามจริงของรอบนี้: เครื่องมือที่ผมมีรอบนี้ค้นข้อความในโค้ดและเปิดดูรายการโฟลเดอร์ไม่ได้ ผมจึงอ้างโค้ดเฉพาะบรรทัดที่เปิดอ่านเห็นจริง (`data.js` ZONE_EVENTS.west / ZONES.west / ZONE_BOSS_AT, `story.js`, `i18n.js` deva.west, `e1-content.js` signal-west, `boss-skills-data.js`, `z2-events.js`) และเช็กไฟล์ภาพได้เฉพาะชื่อที่โค้ดอ้างถึง · ข้อที่ไม่ได้ยืนยันติดป้าย "ตรวจก่อน" ไว้ให้ Toby/Claudy
 
@@ -54,7 +55,7 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 | `i18n.js` `west.rescue.approach` (~1108) | "เดินเข้าไปช่วยทัณฑ์และพ่อค้านรก" / EN "Approach Taan and the hell merchant to help" | **แทนที่**: โพเอน่าและพ่อค้านรกไม่ได้ถูกรุมแล้ว ใช้ข้อความใหม่ 1.2 N0-2 |
 | `ZONE_EVENTS.west` `westVampireBreach` (~1989) | `atCases:3` · ระลอก 1-2 ปีศาจ · **ระลอก 3 = ทัณฑ์กับดำที่ถูกสะกด** · ระลอก 4 วาลดริก · รางวัล `hypno` | **ใช้โครงเดิม** แก้ `atCases` 3 → **5** · alert เดิมพูดถึง "ลูกน้องสองระลอก" แทนข้อความใหม่ 2.2 (นับเป็น 3 ระลอกตามสเปก โดยระลอก 3 คือลูกทีมถูกสะกด) |
 | `story.js` `west-hypnosis` (41-44) | บทวาลดริก: "ลูกน้องสองระลอกล้มลงแล้วหรือ? ..." + "ช่วยทุกคนกลับมา" | **ใช้เดิมตรงตัว ไม่แตะ** |
-| `story.js` `deva-west` + `i18n.js` `deva.west.arrival` (~1103) | วาลคีรี: "ไม่ต้องห่วงเจ้าตัวเล็ก ข้ามาช่วยเจ้าแล้ว" · yama: ....... · "อ้าว! ปีศาจแวมไพร์ หายไปไหนแล้ว.." · "..... เจ้าตัวเล็ก ฝีมือไม่ธรรมดานิ" (+ EN) | **ใช้เดิมตรงตัว** — ตรงกับสเปก "จะมาปราบแวมไพร์ แต่เราปราบไปแล้ว" พอดี |
+| `story.js` `deva-west` + `i18n.js` `deva.west.arrival` (~1103) | วาลคิรี: "ไม่ต้องห่วงเจ้าตัวเล็ก ข้ามาช่วยเจ้าแล้ว" · yama: ....... · "อ้าว! ปีศาจแวมไพร์ หายไปไหนแล้ว.." · "..... เจ้าตัวเล็ก ฝีมือไม่ธรรมดานิ" (+ EN) | **ใช้เดิมตรงตัว** — ตรงกับสเปก "จะมาปราบแวมไพร์ แต่เราปราบไปแล้ว" พอดี |
 | `ZONE_EVENTS.west` `westDevaTest` (~1996) | `atCases:7` · alert "เทวดามาปราบแวมไพร์ แต่ยมบาทน้อยปราบไปแล้ว จึงขอทดสอบฝีมือ" · รางวัล `valkyrieSpear` · ไม่มี openStory/win/lose | แก้ `atCases` 7 → **10** · alert เดิมใช้ได้ (เสนอฉบับมีชื่อ 3.2) · **เพิ่ม** open/win/lose |
 | `data.js` `ZONE_BOSS_AT` (~1908) | `{ asia:15 }` (โซน 3 ใช้ค่าเริ่มต้น 10) | เพิ่ม `west:15` |
 | `ZONES.west` `bossArrive` 4 บรรทัด + `bossWin` 2 บรรทัด (~2113-2120) | ดู 4.3 | **ใช้ทั้ง 4+2 บรรทัดเดิม** วางใน `z3-sev-open` / `z3-sev-win` (ระบุ [เดิม] ในบท) |
@@ -185,23 +186,20 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
     en:
     'Narration: The left head blinks first, then the middle, then the right. The green light drifts out of the eyes in thin threads and vanishes into the snow. Cerberus sinks onto his haunches and gives three low whines, stacked together, like a question.\n'
   + 'Poena: "Wake up at last, big one. I know you did not mean it."' } },
+  /* หน้า 2 และ 3 แก้ 16 พ.ย.: หน้า 2 เซอร์เบอรัสไปยืนเฝ้าประตู (ข้อ 3) · หน้า 3 ใบ้ PHANTOM-404 สั้น ๆ เปิดใช้ (ข้อ 4) */
   { title:{ th:'หมอกจากทางเหนือ', en:'Mist From the North' }, line:{ th:
     'นิรา: "ท่านคะ ดิฉันขออ่านรอยสะกดที่เหลือบนปลอกคอของเขา ต้นทางไม่ใช่มนต์เก่าของที่นี่ค่ะ เป็นหมอกชุดเดียวกับที่เกาะบ่าวิญญาณ มาจากชายแดนด้านเหนือ"\n'
   + 'ยมบาทน้อย: "ถ้าหมอกมาจากชายแดน ผมคงต้องไปดูด้วยตาตัวเองสักวัน แต่วันนี้ผมต้องสร้างที่ทำงานให้เสร็จก่อนครับ"\n'
-  + 'บรรยาย: เซอร์เบอรัสเดินไปนอนขดข้างเสาประตู เศียรทั้งสามวางพิงกันแล้วหลับตา',
+  + 'บรรยาย: เซอร์เบอรัสลุกขึ้นยืนกลางประตูชายแดนล่าง สามเศียรหันออกไปทางหมอกพร้อมกัน เหมือนยามที่กลับเข้าเวรของตัวเอง   /* แก้ 16 พ.ย. ข้อ 3 (เดิม: ไปนอนขดข้างเสาประตู) */',
     en:
     'Nira: "Sir, I have read the binding marks left on his collar. The source is not an old spell of this place. It is the same mist that clung to the spirits, and it came from the northern frontier."\n'
   + 'Yama: "If the mist comes from the frontier, I will have to see it with my own eyes one day. Today I have to get the workplace built."\n'
-  + 'Narration: Cerberus pads over and curls up beside the gatepost, the three heads leaning on one another, eyes closed.' } },
-  /* หน้า 3 เป็นของเสริม เปิดด้วยธง Z3_PHANTOM_CLUE (ค่าเริ่มต้นปิด ดูข้อ 10 ข้อ 6) */
-  { title:{ th:'ใบเวรที่ถูกแก้', en:'A Duty Roster Altered' }, line:{ th:
-    'นิรา: "แต่มีอีกบรรทัดหนึ่งค่ะ ใบเวรของเซอร์เบอรัสที่หอทะเบียนถูกแก้ ช่องหน้าที่จาก \'ผู้พิทักษ์ประตู\' กลายเป็น \'ผู้ขวางประตู\' ด้วยหมึกที่ไม่มีเลขรับรอง รหัสผู้แก้คือ [PHANTOM-404] ค่ะ"\n'
-  + 'ยมบาทน้อย: "หมึกชุดเดียวกับที่แก้บัญชีพระนางสีดากับฝูงลิงหรือครับ"\n'
-  + 'นิรา: "ใช่ค่ะ ดิฉันยังไม่รู้ว่าเขาต้องการอะไร แต่ดิฉันจะจดไว้ทุกครั้ง"',
+  + 'Narration: Cerberus rises and stands in the middle of the lower frontier gate, all three heads turned out toward the mist together, like a sentry returning to his watch.' } },
+  /* แก้ 16 พ.ย. ข้อ 4: หน้า 3 เปิดใช้ ใบ้สั้นระดับเดียวกับคดีก่อน (บัญชีผิดปกติ ถูกแก้จากภายนอก) ตัดการเชื่อมโยงเรื่องหมึก/ฝูงลิงออก · ไม่ต้องใช้ธง Z3_PHANTOM_CLUE แล้ว */
+  { title:{ th:'ใบเวรผิดปกติ', en:'A Duty Roster Out of Order' }, line:{ th:
+    'นิรา: "ท่านคะ ใบเวรของเซอร์เบอรัสที่หอทะเบียนผิดปกติค่ะ ถูกแก้จากข้างนอก รหัสผู้แก้คือ [PHANTOM-404] ดิฉันขอจดไว้ค่ะ"',
     en:
-    'Nira: "There is one more line, sir. Cerberus\'s duty roster at the registry has been altered. Under duties, \'Guardian of the gate\' now reads \'Barrier of the gate\', in ink with no certifying number. The alterer\'s code is [PHANTOM-404]."\n'
-  + 'Yama: "The same ink that rewrote Lady Sita\'s file and the monkeys\' file?"\n'
-  + 'Nira: "Yes, sir. I do not yet know what they want, but I will note it every time."' } },
+    'Nira: "Sir, Cerberus\'s duty roster at the registry is out of order. It was altered from outside. The alterer\'s code is [PHANTOM-404]. I will note it down."' } },
 ]},
 'z3-cerberus-lose': { title:{ th:'ผู้พิทักษ์ยังไม่ตื่น', en:'The Guardian Is Still Asleep' }, pages:[
   { title:{ th:'ไม่ซ้ำเติม', en:'No Blow Upon a Fallen One' }, line:{ th:
@@ -212,7 +210,17 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
   + 'Poena: "Get up. He will not strike a man who is down. I know him well."' } },
 ]},
 ```
-- บันทึกสมุด (journal) เฉพาะตอนเปิดหน้า 3: **PHANTOM-404 (ครั้งที่ 3):** ใบเวรของเซอร์เบอรัสที่ประตูชายแดนล่างถูกแก้ด้วยรหัสเดียวกับแฟ้มนางสีดาและฝูงลิง · EN **PHANTOM-404 (third sighting):** Cerberus's duty roster at the lower frontier gate was altered with the same code as Lady Sita's file and the monkeys' file.
+- บันทึกสมุด (journal) ตอนจบหน้า 3 (แก้ 16 พ.ย. ให้สั้นระดับเดียวกับคดีก่อน): **PHANTOM-404:** ใบเวรเซอร์เบอรัสผิดปกติ ถูกแก้จากภายนอก · EN **PHANTOM-404:** Cerberus's duty roster out of order, altered from outside.
+
+### 1.8 เซอร์เบอรัสเฝ้าประตูชายแดนล่างหลังชนะ (เพิ่ม 16 พ.ย. ตามคำตัดสินข้อ 3)
+คำตัดสินคุณเป้: เซอร์เบอรัสยืนเฝ้าประตู เหมือนยามโซน 3 คอยปราบศัตรูที่เดินมาใกล้ประตู · Toby ทำระบบ (ปราบศัตรูที่เดินมาใกล้) · เซอร์เบอรัส **ไม่พูด** ทุกบรรทัดเป็นบรรยาย ไม่ใช้เครื่องหมายคำพูด · ไม่มีภาพเลือด
+- **ตอนเริ่มเฝ้า** (ขึ้นเป็นบรรทัดบรรยายสั้น หรือใช้เป็นบรรทัดท้ายของ `z3-cerberus-win` หน้า 2 ที่เขียนไว้แล้ว): "เซอร์เบอรัสลุกขึ้นยืนกลางประตูชายแดนล่าง สามเศียรหันออกไปทางหมอกพร้อมกัน"
+  EN: "Cerberus rises and stands in the middle of the lower frontier gate, all three heads turned out toward the mist together."
+- **ตอนปราบศัตรู** (สุ่ม 1 ใน 3 ทุกครั้ง):
+  1. "สามเศียรขย้ำพร้อมกัน ศัตรูที่เดินมาใกล้ประตูถูกเหวี่ยงกลับเข้าไปในหมอก" · EN: "All three heads snap at once, and the foe that came near the gate is flung back into the mist."
+  2. "เซอร์เบอรัสคำรามต่ำสามเสียงซ้อน ศัตรูที่ก้าวเข้าใกล้ประตูหยุดชะงักแล้วล้มลง" · EN: "Cerberus gives three low growls, stacked together. The foe that stepped near the gate falters and falls."
+  3. "กรงเล็บกระแทกลงบนหิมะ ศัตรูตัวนั้นไม่ได้ลุกขึ้นอีก แล้วเซอร์เบอรัสก็กลับไปยืนที่เดิม" · EN: "A claw comes down on the snow. The foe does not rise again, and Cerberus goes back to where he stood."
+- ไม่เขียนบทคุยกับเซอร์เบอรัส (ไม่พูด · ยังไม่เป็นลูกทีม) ถ้าคุณเป้ต้องการให้ผู้เล่นเดินเข้าไปลูบหัว ผมเขียนบรรทัดบรรยายให้ได้ภายหลัง
 
 ### 1.7 รายการภาพคดี 0 → ดูหัวข้อ 8
 
@@ -301,16 +309,16 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 - หลังระลอก 3 (ตื่นจากสะกด · ใหม่):
   - โพเอน่า: "ข้า ... ข้าทำอะไรลงไป ข้าหวดท่านไปกี่ครั้ง ข้าไม่รู้ตัวเลย หมอกเข้าตาข้าก่อนข้าจะทันเตือนใคร"
     EN Poena: "I ... what did I do? How many times did I strike you? I never knew it. The mist got into my eyes before I could warn anyone."
-  - นัวร์: "ผมขอโทษครับ ผมได้ยินเสียงสวดอยู่ในหัว เสียงเดียวบอกว่า 'พักก่อน พักก่อน' ผมก็เลยพัก ... เป็นการพักที่เหนื่อยที่สุดในชีวิตผมเลยครับ"
-    EN Noir: "I am sorry, sir. A chant was running in my head, one voice saying 'rest a while, rest a while', so I rested. ... It was the most tiring rest of my life."
+  - นัวร์: "ผมขอโทษครับ ผมได้ยินเสียงสวดอยู่ในหัว เสียงเดียวบอกว่า 'ทำต่อ ทำต่อ' ผมก็ทำต่อ ... แต่ไม่รู้เลยว่ามือที่ทำอยู่กำลังยกใส่ใครครับ"   **(แก้ 16 พ.ย.: เดิม "พักก่อน" · เปลี่ยนให้ตรงกับเหตุผลสะกดของวาลดริกข้อ 2.11 คือหมอกเร่งคำสั่งสุดท้ายที่ผู้ถูกสะกดแบกอยู่ ไม่ใช่สั่งใหม่)**
+    EN Noir: "I am sorry, sir. A chant was running in my head, one voice saying 'keep going, keep going', so I kept going. ... I never knew whom my hands were raised against."
   - ยมบาทน้อย: "ไม่เป็นไรครับ ผมไม่เป็นอะไรมาก ขอบคุณที่กลับมา"
     EN Yama: "It is all right. I am not badly hurt. Thank you for coming back."
 
 ### 2.6 บทในฉากสู้วาลดริก (วาลดริกพูดได้ · ปีศาจลูกน้องไม่มีช่องพูด)
 - เริ่มสู้ วาลดริก: "ขออภัยล่วงหน้า ท่านผู้มาเยือน ข้าไม่ถนัดการเป็นฝ่ายแพ้"
   EN Valdric: "My apologies in advance, honoured guest. I am not practised at losing."
-- เลือดเหลือครึ่ง วาลดริก: "ท่านยืนได้ดีกว่าที่ข้าคาด ราตรีของข้าเริ่มสั้นลงแล้ว"
-  EN Valdric: "You stand better than I expected. My night is beginning to grow short."
+- เลือดเหลือครึ่ง วาลดริก: "ท่านยืนได้ดีกว่าที่ข้าคาด ราตรีของข้าเริ่มสั้นลงแล้ว ข้าไม่มีเขี้ยวเหลือให้ใช้ ท่านผู้มาเยือน ข้ามีแต่หมอก และหมอกไม่เคยชนะใคร ได้แต่ทำให้ทุกคนหยุด"   **(แก้ 16 พ.ย. เพิ่มประโยคหลัง ผูกกับคำปฏิญาณข้อ 2.11)**
+  EN Valdric: "You stand better than I expected. My night is beginning to grow short. I have no fangs left to use, honoured guest. I have only the mist, and mist has never won anything. It can only make everyone stop."
 - (ท่า `batStorm` / `sipOfNight` มี `useText` ของตัวเองแล้ว ไม่เขียนซ้ำ)
 
 ### 2.7 วาลดริกพ่าย `z3-valdric-down` (1 หน้า)
@@ -324,6 +332,13 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
     'Narration: The bat-headed cane slips from his hand and rolls across the snow. Valdric goes down on one knee and brushes the snow from his coat with care. The bats that wheeled about him fly back into the lining of his coat, one by one, until all is still.\n'
   + 'Valdric: "I am beaten, honoured guest. I ask no mercy. I ask only that you judge me by the ledger you read yourself, not by the mist you saw. I shall walk there myself."\n'
   + 'Yama: "I will read your ledger to the end first, and then I will judge."' } },
+  /* หน้า 2 เพิ่ม 16 พ.ย. ข้อ 2: เหตุผลที่วาลดริกต้องสะกดคนอื่น (สั้น · เล่าเต็มที่แท่นไต่สวน) */
+  { title:{ th:'หมอกไม่เคยสั่งใหม่', en:'The Mist Never Gives New Orders' }, line:{ th:
+    'วาลดริก: "ข้าขอบอกไว้ข้อเดียวก่อนเดิน หมอกของข้าไม่เคยสั่งใครให้ฟันกัน มันเร่งคำสั่งสุดท้ายที่ผู้ถูกสะกดแบกอยู่ในใจ ยมทูตของท่านแบกคำว่า \'ปราบ\' มาเต็มสองมือ เมื่อไม่มีศัตรูตรงหน้า พวกเขาจึงปราบกันเอง ข้าควรรู้ ข้าไม่ได้เอ่ยขอโทษเรื่องนี้เลย"\n'
+  + 'ยมบาทน้อย: "เก็บไว้เล่าที่แท่นครับ ผมจะฟังให้จบ"',
+    en:
+    'Valdric: "One thing before I walk. My mist never ordered anyone to strike another. It hurries the last order a bound man carries in his heart. Your reapers carried the word \'subdue\' in both hands. With no enemy before them, they subdued one another. I should have known. I have not yet said I am sorry for it."\n'
+  + 'Yama: "Keep it for the dais. I will hear it to the end."' } },
 ]},
 ```
 
@@ -337,11 +352,12 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 ]},
 'frontier-west-boss-punished': { title:{ th:'ลงโทษเรียบร้อย', en:'Sentence Served' }, pages:[
   { title:{ th:'ไอร้อนจากกระทะ', en:'Steam From the Pan' }, line:{ th:
-    'บรรยาย: วาลดริกนั่งบนขอบกระทะทองแดงที่ตั้งกลางลานโดยไม่ถอดโค้ต ไอร้อนลอยขึ้นปะทะใบหน้าจนน้ำแข็งที่หนวดค่อย ๆ ละลายเป็นหยดตามคาง เขาไม่ร้อง ไม่ขยับ เพียงจ้องไปที่ขอบฟ้าทางตะวันออกที่ยังมืด\n'
-  + 'วาลดริก: "ร้อน ... ข้าลืมไปแล้วว่าความร้อนเป็นเช่นนี้ สองร้อยปีที่ข้าไม่ยอมให้ใครในบ้านหลังนั้นรู้สึกอะไรเลย แม้แต่ข้า"',
+    /* แก้ 16 พ.ย. ข้อ 1: ระดับหนัก (4 จาก 5) แรงกว่าฉบับปานกลางเดิม · ไม่มีภาพเลือด/กัด */
+    'บรรยาย: วาลดริกนั่งบนขอบกระทะทองแดงที่ตั้งกลางลานโดยไม่ถอดโค้ต ไอร้อนพุ่งขึ้นปะทะใบหน้าแรงจนน้ำแข็งที่หนวดละลายหมดในพริบตา ชายเสื้อโค้ตเริ่มเป็นรอยไหม้ ฝูงค้างคาวในซับโค้ตดิ้นหนีออกมาบินวนอยู่เหนือกระทะ เขากัดฟัน เสียงต่ำหลุดจากลำคอครั้งหนึ่ง แล้วนั่งต่อไปไม่ขยับ จนไอร้อนจางลงเมื่อฟ้าตะวันออกเริ่มสว่างเป็นคืนแรกในรอบสองร้อยปี\n'
+  + 'วาลดริก: "ร้อน ... ร้อนกว่าที่ข้าเคยกลัวมาก ข้ารับไว้ได้ เท่าที่ข้ารับตอนยื่นมือไปหาคนที่ยื่นผ้าห่มให้ข้าในคืนนั้น สองร้อยปีที่ข้าไม่ยอมให้ใครในบ้านหลังนั้นรู้สึกอะไรเลย แม้แต่ข้า"',
     en:
-    'Narration: Valdric sits on the rim of the copper pan set in the middle of the yard, still wearing his coat. Hot steam rises against his face until the frost in his moustache melts and runs down his chin in drops. He does not cry out or stir. He only gazes at the eastern horizon, still dark.\n'
-  + 'Valdric: "Hot. ... I had forgotten what heat is like. Two hundred years I allowed no one in that house to feel anything at all. Not even myself."' } },
+    'Narration: Valdric sits on the rim of the copper pan set in the middle of the yard, still wearing his coat. Steam surges against his face so hard that the frost in his moustache is gone in a breath. The hem of his coat begins to scorch. The bats in its lining struggle free and circle above the pan. He grits his teeth, a low sound escapes his throat once, and then he sits on without moving, until the steam thins as the eastern sky begins to pale for the first dawn in two hundred years.\n'
+  + 'Valdric: "Hot. ... Far hotter than I ever dreaded. I can bear it. I bear it as I bore the night I reached out toward the one who had handed me a blanket. Two hundred years I allowed no one in that house to feel anything at all. Not even myself."' } },
 ]},
 'frontier-west-boss-released': { title:{ th:'ปล่อยกลับชายแดน', en:'Returned to the Frontier' }, pages:[
   { title:{ th:'ราตรีสั้นลงหนึ่งคืน', en:'One Night Shorter' }, line:{ th:
@@ -369,6 +385,8 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
     { t:'ไม่เคยดื่มเลือดผู้ใดมากว่าสองร้อยปี ปฏิญาณไว้ว่าจะใช้ไวน์แทน ผู้เช่าไม่มีรอยกัดแม้แต่ดวงเดียว', en:'Has drunk no one\'s blood in over two hundred years. He swore to take wine instead. Not one tenant bears a bite mark.', s:'kha', w:-2 },
     { t:'ผู้เช่าส่วนใหญ่หนีมาเอง เพราะกลัวว่าการตัดสินจะพรากความทรงจำของคนที่รักไป เขาจึงให้หลับแทนที่จะให้ตื่นไปเผชิญ', en:'Most tenants fled to him of their own accord, afraid that judgment would take the memory of those they loved. He let them sleep rather than wake and face it.', s:'bian', w:-1 },
     { t:'ไม่ได้สั่งให้เซอร์เบอรัสขวางประตู แต่รู้ว่าหมอกลอยไปถึงประตูล่างแล้วเพิกเฉยมานานหลายวัน', en:'He never ordered Cerberus to bar the gate, but he knew the mist had reached the lower gate and ignored it for days.', s:'mao', w:2 },
+    /* เพิ่ม 16 พ.ย. ข้อ 2: เหตุผลที่ต้องสะกดคนอื่น (ดู 2.11) */
+    { t:'เลิกดื่มเลือดแล้วพลังอ่อนลงมาก เหลือเพียงหมอกที่ไม่ต้องทำร้ายใคร จึงใช้หมอกหยุดทุกคนที่เข้าใกล้ผู้เช่าแทนการต่อสู้ และหมอกไม่ได้สั่งใหม่ แต่เร่งคำสั่งสุดท้ายที่ผู้ถูกสะกดแบกอยู่ ยมทูตที่แบกคำว่า "ปราบ" จึงฟาดกันเอง', en:'Since giving up blood his strength has waned and only the mist remains, a thing that harms no one. He used it to stop anyone who came near his tenants instead of fighting. The mist gives no new orders. It hurries the last order a bound man carries, so reapers carrying "subdue" struck one another.', s:'bian', w:-2 },
   ],
   merits:[
     { t:'ดูแลผู้เช่าที่ไม่มีใครรับสองร้อยปี ไม่ให้ใครอด หนาว หรือถูกทำร้าย', en:'For two hundred years kept unclaimed tenants fed, warm and unharmed.', v:2, fake:false },
@@ -382,36 +400,59 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
     { kind:'boast', t:'ท่านดูบุญของข้าด้วย ผู้เช่าทุกดวงอยู่กับข้าโดยสมัครใจ', en:'Count my merit too: every tenant stayed with me willingly.',
       merit:'อ้างว่าผู้เช่าทุกดวงอยู่กับเขาโดยสมัครใจ',
       reveal:'ท่านถามว่ามีผู้เช่าดวงไหนขอตื่นแล้วได้ตื่นบ้าง เขานิ่งไป — ไม่มีใครขอ เพราะเขาไม่เคยให้โอกาสผู้ใดถามว่าอยากตื่นหรือไม่', en_reveal:'You ask whether any tenant who asked to wake was allowed to. He falls silent. None asked, because he never gave anyone the chance to ask.' },
-    { kind:'solid', t:'เรื่องสะกดยมทูตของท่านให้หันอาวุธใส่กัน ข้ายอมรับ ข้าทำ ข้าคิดว่าท่านจะมาปิดราตรีของข้า', en:'As for binding your reapers against one another, I admit it. I did it. I thought you had come to end my night.' },
+    /* แก้ 16 พ.ย. ข้อ 2: ข้อนี้ตอนนี้เป็น truth พร้อม reveal เหตุผลที่ต้องสะกดคนอื่น */
+    { kind:'solid', truth:true, t:'เรื่องสะกดยมทูตของท่านให้หันอาวุธใส่กัน ข้ายอมรับ ข้าทำเพราะคิดว่าท่านจะมาปิดราตรีของข้า แต่ข้าไม่ได้สั่งให้พวกเขาฟันกัน', en:'As for binding your reapers against one another, I admit it. I did it because I thought you had come to end my night. But I never ordered them to strike each other.',
+      reveal:'ยมบาทน้อยเทียบบันทึกหมอกกับแฟ้มของยมทูต หมอกไม่มีคำสั่งใหม่แม้แต่บรรทัดเดียว มีแต่คำสั่งสุดท้ายในแฟ้มของพวกเขาถูกขยายซ้ำ คือคำว่า "ปราบ" ที่ท่านเองสั่งไว้ก่อนออกมา', en_reveal:'Yama sets the mist record beside the reapers\' files. The mist holds not one new order. It only repeats the last order already in their files, "subdue", the one Yama himself had given before they set out.' },
     { kind:'solid', truth:true, t:'ข้าไม่เคยดื่มเลือดผู้ใด ตั้งแต่ข้าปฏิญาณไว้เมื่อสองร้อยปีก่อน บัญชีไวน์ของข้าครบทุกวัน', en:'I have drunk no one\'s blood since I swore my vow two hundred years ago. My wine ledger is complete for every day.',
-      reveal:'ยมบาทน้อยเปิดสมุดห้องเก็บไวน์ พบบันทึกขวดทุกวันตลอดสองร้อยปี ไม่มีบรรทัดใดขาด และไม่มีรอยกัดบนผู้เช่าสักดวง', en_reveal:'Yama opens the cellar book and finds a bottle logged for every day of two hundred years, no line missing, and not a single bite on any tenant.' },
+      reveal:'ยมบาทน้อยเปิดสมุดห้องเก็บไวน์ พบบันทึกขวดทุกวันตลอดสองร้อยปี ไม่มีบรรทัดใดขาด และไม่มีรอยกัดบนผู้เช่าสักดวง บรรทัดแรกเขียนด้วยลายมือหญิงสาวคนละลายกับบรรทัดอื่น ลงวันที่คืนที่เขาปฏิญาณ เป็นลายมือของสาวใช้ผู้ยื่นผ้าห่มให้เขาในคืนนั้น', en_reveal:'Yama opens the cellar book and finds a bottle logged for every day of two hundred years, no line missing, and not a single bite on any tenant. The first line is in a young woman\'s hand, unlike all the rest, dated the night of his vow. It is the hand of the maid who handed him a blanket that night.' },
   ],
   secret:'ส่องกระจกแล้วพบแก้วไวน์ที่ไม่เคยพร่อง และสมุดผู้เช่าที่ทุกชื่อมีรอยนิ้วหัวแม่มือเขียนคำขอว่า "ขอพักก่อน" แต่ไม่มีช่อง "ขอตื่น"', en_secret:'The mirror shows a wine glass never emptied, and a tenant book where every name carries a thumbprint beside the words "let me rest a while", with no box for "let me wake".',
 }
 ```
-**สำนวนตัดสิน (ล็อกคำตอบ เหมือนบอสชายแดนโซน 1-2 · เป็นข้อเสนอ ให้คุณเป้ยืนยัน ข้อ 10 ข้อ 2)**
-- นิราอ่าน: "ความผิดของวาลดริก คือใช้หมอกราตรีสะกดวิญญาณหลายสิบดวงให้หลับเกินวาระ ปล่อยหมอกลอยไปถึงประตูล่างจนผู้พิทักษ์ถูกสะกด และสะกดยมทูตของผู้ถือบัญชีให้หันอาวุธใส่กัน แม้ไม่มีผู้ใดถึงชีวิต ความดีที่นำมาหักได้ คือไม่ดื่มเลือดผู้ใดมาสองร้อยปี ไม่ปล่อยให้ผู้เช่าหนาวหรืออดค่ะ"
-  EN Nira: "Valdric's offences are these: using the night mist to keep dozens of spirits asleep past their term, letting it drift to the lower gate until its guardian was bound, and binding the ledger-keeper's reapers against one another. No one was killed. The good that may be set against it is that he drank no blood for two hundred years and let no tenant go cold or hungry."
-- ยมบาทน้อย: "ผมสั่งทัณฑ์ระดับปานกลางที่กระทะทองแดงครับ ให้ท่านได้รู้สึกร้อนจริง ๆ สักครั้ง แล้วเปิดหน้าต่างของท่านเอง"
-  EN Yama: "I sentence you to a middling penance at the copper pan. Feel heat in earnest, just once, and then open your own windows."
-- วาลดริก: "ความร้อนที่ทำให้ข้ารู้สึกอีกครั้ง ข้ารับ โทษนี้ข้ามองหน้าตัวเองได้"
-  EN Valdric: "A heat that lets me feel again, I accept. This is a sentence I can face myself in."
-- สถานีที่ล็อก (เสนอ): `krata` กระทะทองแดง · ชนิดบาป `mao` (มัวเมา) · ระดับปานกลาง (3 จาก 5) · เหตุผล: ความผิดหลักคือมัวเมาในราตรียาวของตัวเอง (กระทะ = "ทอดจนกว่าจะรู้สึกตัว" ตามคำอธิบายสถานีในโค้ด) · ไม่มีภาพเลือดหรือการกัด · ข้อความร้อน/น้ำแข็งละลายใน `frontier-west-boss-punished` ตรงกับสถานีนี้ ถ้าคุณเป้เลือกสถานีอื่น ต้องแก้หน้านั้นหน้าเดียว
+**สำนวนตัดสิน (ล็อกคำตอบ เหมือนบอสชายแดนโซน 1-2) · แก้ 16 พ.ย. ข้อ 1: ระดับแรงกว่าปานกลาง (4 จาก 5) ตามคำตัดสินคุณเป้ "ได้ครับ แต่ขอระดับแรงกว่านั้นครับ"**
+- นิราอ่าน: "ความผิดของวาลดริก คือใช้หมอกราตรีสะกดวิญญาณหลายสิบดวงให้หลับเกินวาระ ปล่อยหมอกลอยไปถึงประตูล่างจนผู้พิทักษ์ถูกสะกด และสะกดยมทูตของผู้ถือบัญชีให้หันอาวุธใส่กัน แม้ไม่มีผู้ใดถึงชีวิต ข้อที่ทำให้หนักคือเขารู้ว่าหมอกลอยไปถึงประตูล่างแล้วเพิกเฉยมานานหลายวัน ความดีที่นำมาหักได้ คือไม่ดื่มเลือดผู้ใดมาสองร้อยปี ไม่ปล่อยให้ผู้เช่าหนาวหรืออด และหมอกของเขาไม่เคยสั่งใครให้ทำร้ายกันค่ะ"
+  EN Nira: "Valdric's offences are these: using the night mist to keep dozens of spirits asleep past their term, letting it drift to the lower gate until its guardian was bound, and binding the ledger-keeper's reapers against one another. No one was killed. What weighs heaviest is that he knew the mist had reached the lower gate and ignored it for days. The good that may be set against it is that he drank no blood for two hundred years, let no tenant go cold or hungry, and that his mist never ordered anyone to harm another."
+- ยมบาทน้อย: "ผมสั่งทัณฑ์ระดับหนักที่กระทะทองแดงครับ ท่านรู้ว่าหมอกไปถึงประตูล่างแล้วไม่ทำอะไรหลายวัน ผมไม่ลดให้ในข้อนี้ ให้ท่านได้รู้สึกร้อนจริง ๆ จนสุด แล้วเปิดหน้าต่างของท่านเอง"
+  EN Yama: "I sentence you to a heavy penance at the copper pan. You knew the mist had reached the lower gate and did nothing for days. I will not lighten that. Feel the heat in full, to the end, and then open your own windows."
+- วาลดริก: "ความร้อนที่ทำให้ข้ารู้สึกอีกครั้ง และหนักเท่าที่ข้าควรรับ ข้ารับ โทษนี้ข้ามองหน้าตัวเองได้"
+  EN Valdric: "A heat that lets me feel again, and as heavy as I ought to bear. I accept. This is a sentence I can face myself in."
+- สถานีที่ล็อก: `krata` กระทะทองแดง · ชนิดบาป `mao` (มัวเมา) · **ระดับหนัก (4 จาก 5 · ป้ายระดับให้ตรงกับที่เกมใช้ ผมไม่เห็นชื่อป้ายระดับที่อยู่เหนือ "ปานกลาง" ในโค้ด)** · เหตุผล: ความผิดหลักคือมัวเมาในราตรียาวของตัวเอง และเพิกเฉยต่อหมอกที่ลอยไปทำร้ายคนอื่นหลายวัน (กระทะ = "ทอดจนกว่าจะรู้สึกตัว" ตามคำอธิบายสถานีในโค้ด) · ไม่มีภาพเลือดหรือการกัด · ข้อความในหน้า `frontier-west-boss-punished` (2.8) แก้ให้หนักตามระดับนี้แล้ว
+
+### 2.11 เบื้องหลังวาลดริก (แก้ 16 พ.ย. ข้อ 2 · คุณเป้ยืนยันใช้ถาวร และขอเหตุผลสนับสนุน + เหตุผลที่ต้องสะกดจิตคนอื่นให้สมเหตุสมผล)
+เรื่องแต่งของเกมทั้งหมด ไม่อ้างตำนานแวมไพร์จริง · ไม่มีภาพ/บทกัดคอ
+
+**ก. เหตุผลสนับสนุนคำปฏิญาณไม่ดื่มเลือด 200 ปี**
+- ที่มา: สองร้อยปีก่อน คืนฤดูหนาวที่เขาหิวจนมืดตา มือเขายื่นไปหาสาวใช้ผู้ยื่นผ้าห่มให้เขา เขาหยุดได้เพราะนาฬิกาในคฤหาสน์ตีหนึ่งครั้ง (ตรงกับนาฬิกาที่ตีหนึ่งครั้งใน `z3-breach-intro`) เขาปฏิญาณต่อหน้านาฬิกาเรือนนั้นว่าจะไม่ดื่มเลือดผู้ใดอีก จะใช้ไวน์แทน (ไม่เล่าตัวฉากเกิดเหตุ เล่าเป็นคำพูดของเขาเท่านั้น)
+- **หลักฐานรองรับ 3 ชั้น** (ผู้เล่นเจอเอง ไม่ใช่ฟังเขาอ้าง): (1) สมุดห้องไวน์ลงทุกวันสองร้อยปี ไม่ขาดบรรทัด (2) บรรทัดแรกของสมุดเขียนด้วยลายมือสาวใช้คนนั้น ลงวันที่คืนปฏิญาณ เธอเป็นพยานคนแรก (3) ผู้เช่าทุกดวงไม่มีรอยกัด
+- **ราคาของคำปฏิญาณ**: ไวน์ให้พลังไม่เท่าเลือด เขาอ่อนแรงลงตั้งแต่คืนนั้น เหลือเพียงหมอกราตรีที่ไม่ต้องทำร้ายใคร (บอกในบทสู้ตอนเลือดเหลือครึ่ง 2.6)
+
+**ข. เหตุผลที่วาลดริกต้องสะกดจิตคนอื่น (ห่วงโซ่เหตุผลที่ผูกกับบทสู้ ไต่สวน สำนวน)**
+| ขั้น | เหตุผล | ปรากฏอยู่ที่ |
+|---|---|---|
+| 1 | ผู้เช่าหลับในหมอกเพราะกลัวว่าการตัดสินจะพรากความทรงจำของคนที่รัก (เดิม) | `hidden` ข้อ 2 · `secret` |
+| 2 | คำปฏิญาณทำให้เขาอ่อนแรง จึงไม่มีกำลังขับไล่ผู้ที่มา ไม่ต้องการทำร้ายใครด้วย จึงใช้หมอก **หยุด** ทุกคนที่เข้าใกล้ผู้เช่าแทนการต่อสู้ | บทสู้ 2.6 · `hidden` ข้อใหม่ |
+| 3 | พอผู้ถือบัญชีมาถึงและเริ่มรับคดี (คดี 0 → 5) เขาเข้าใจว่าจะมีคนมา "ปิดราตรี" ของเขา จึงเติมหมอกหนาขึ้นทีละขั้น: คดี 0 หมอกบางลอยลงมาเอง (ประตูล่าง/วิญญาณเดินวน) · คดี 5 หมอกหนาทำให้วิญญาณทั้งปัจฉิมหยุดนิ่ง ปีศาจชายแดนหลับตาเดินเข้ามาเป็นกำแพง และทีมของผู้ถือบัญชีถูกสะกด | `z3-arrive` `z3-freeze` `z3-breach-intro` |
+| 4 | ทำไมยมทูตฟาดกันเอง: หมอก **ไม่สั่งใหม่** มัน **เร่งคำสั่งสุดท้ายที่ผู้ถูกสะกดแบกอยู่** ยมทูตแบกคำว่า "ปราบ" เมื่อไม่มีศัตรูตรงหน้าก็ปราบกันเอง (โพเอน่าแบกหมายลงทัณฑ์ นัวร์แบกคำว่า "ทำต่อ") เขาไม่ได้เจตนาให้เกิด | บท `z3-valdric-down` หน้า 2 · `claims` ข้อ 3 · 2.5 นัวร์ |
+| 5 | ทำไมถึงไม่หยุดเมื่อรู้ว่าหมอกไปถึงประตูล่าง (ความผิดที่ทำให้ได้ระดับหนัก): กลัวว่าถ้ากลับไปดึงหมอกคืน ผู้เช่าจะตื่นกลางคืนที่ยังไม่พร้อม จึงเพิกเฉยมาหลายวัน | `hidden` ข้อ 3 · คำตัดสิน 2.9 |
+
+**ค. ที่ที่เบื้องหลังนี้ถูกเล่า (แก้/เพิ่มแล้วในไฟล์นี้)**
+- บทสู้ เลือดเหลือครึ่ง (2.6) · `z3-valdric-down` หน้า 2 (2.7) · `frontier-west-boss-punished` (2.8) · สำนวนไต่สวน `hidden` ข้อ 4 + `claims` ข้อ 3-4 พร้อม `reveal` (2.9) · คำตัดสินนิรา/ยมบาทน้อย (2.9) · นัวร์ตื่นจากสะกด (2.5)
+- ไม่แตะ `west-hypnosis` เดิมใน `story.js` (บทเดิมไม่ขัดกับห่วงโซ่นี้)
 
 ### 2.10 ภาพคดีครบ 5 → ดูหัวข้อ 8
 
 ---
 
-## 3. คดีครบ 10 · เอียร์ลิน วาลคีรี มาช้าไปก้าวเดียว → ทดสอบด้วยหอก
+## 3. คดีครบ 10 · เอียร์ลิน วาลคิรี มาช้าไปก้าวเดียว → ทดสอบด้วยหอก
 
 ### 3.1 ลำดับฉาก
-1. คดีครบ 10 → **คัตซีนเดิม `deva-west` (ใช้ตรงตัว ไม่แตะ)** → 2. N10-1 (รออยู่) → 3. ผู้เล่นเดินไปคุย (พูดสุ่มหนึ่งบรรทัด 3.4) → 4. N10-2 (ยืนยัน) → 5. คัตซีน `z3-eirlin-open` → 6. สู้ → 7. ชนะ `z3-eirlin-win` ได้ท่าหอกวาลคีรี (ของเดิม `valkyrieSpear`) แล้วเอียร์ลินบินกลับฟ้า (ไม่ยืนค้างบนแผนที่ ตามบั๊ก e1 โซน 1) / แพ้ `z3-eirlin-lose`
+1. คดีครบ 10 → **คัตซีนเดิม `deva-west` (ใช้ตรงตัว ไม่แตะ)** → 2. N10-1 (รออยู่) → 3. ผู้เล่นเดินไปคุย (พูดสุ่มหนึ่งบรรทัด 3.4) → 4. N10-2 (ยืนยัน) → 5. คัตซีน `z3-eirlin-open` → 6. สู้ → 7. ชนะ `z3-eirlin-win` ได้ท่าหอกวาลคิรี (ของเดิม `valkyrieSpear`) แล้วเอียร์ลินบินกลับฟ้า (ไม่ยืนค้างบนแผนที่ ตามบั๊ก e1 โซน 1) / แพ้ `z3-eirlin-lose`
 - จุดที่เธอยืนรอ ต้องเป็นจุดที่เดินถึง (ที่โซน 2 Toby พบว่าจุดเดิมเป็นหน้าผาบนพื้น 2×) · โซน 3 ให้ตรวจเหมือนกัน
 
 ### 3.2 หน้าต่างแจ้งเตือน
 **N10-1 · เมื่อฉากเดิมจบ**
 - หัวข้อ: เทวดาผู้ตรวจรอท่านอยู่
-- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาคิวรี ลงมาช้าไปก้าวเดียว และรออยู่เพื่อทดสอบท่าน เตรียมทีมให้พร้อมแล้วเดินไปคุยกับเธอ
+- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาลคิรี ลงมาช้าไปก้าวเดียว และรออยู่เพื่อทดสอบท่าน เตรียมทีมให้พร้อมแล้วเดินไปคุยกับเธอ
 - ปุ่ม: รับทราบ
 - EN หัวข้อ: The inspector awaits you
 - EN ข้อความ: Eirlin, spear-inspector of the Valkyries, arrived one step too late and now waits to test you. Ready your team and go speak with her.
@@ -419,14 +460,14 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 
 **N10-2 · เมื่อกดคุย (แทน alert เดิมของ `westDevaTest` ถ้าอยากได้ฉบับมีชื่อ · ของเดิม "เทวดามาปราบแวมไพร์ แต่ยมบาทน้อยปราบไปแล้ว จึงขอทดสอบฝีมือ" ใช้ต่อได้ ไม่ผิด)**
 - หัวข้อ: เทวดาทดสอบแห่งปัจฉิม
-- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาคิวรี มาปราบแวมไพร์ไม่ทัน จึงขอทดสอบท่านด้วยหอก เธอไม่ใช่ศัตรู แต่อยากเห็นว่าท่านยืนได้เมื่อหอกพุ่งเข้าหา
+- ข้อความ: เอียร์ลิน ผู้ตรวจหอกวาลคิรี มาปราบแวมไพร์ไม่ทัน จึงขอทดสอบท่านด้วยหอก เธอไม่ใช่ศัตรู แต่อยากเห็นว่าท่านยืนได้เมื่อหอกพุ่งเข้าหา
 - ปุ่ม: รับการทดสอบ / ยังก่อน
 - EN หัวข้อ: The West's deva tests you
 - EN ข้อความ: Eirlin, spear-inspector of the Valkyries, came too late for the vampire and asks to test you with her spear instead. She is no enemy. She wants to see you stand when the spear comes.
 - EN ปุ่ม: Take the test / Not yet
 
 **N10-3 · แบนเนอร์**
-- ไทย: ศึกทดสอบหอกวาลคีรี · เอียร์ลิน
+- ไทย: ศึกทดสอบหอกวาลคิรี · เอียร์ลิน
 - EN: Valkyrie spear test · Eirlin
 
 **N10-4 · ชนะ**
@@ -445,7 +486,7 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 - EN ข้อความ: Eirlin lowers her spear for now. Steady yourself and try again.
 - EN ปุ่ม: Test again
 
-**N10-6 · ของรางวัล** ดึงจาก `ABILITY_REWARDS.valkyrieSpear` ของเดิม (หอกวาลคีรี · "กวาดแทงศัตรูทุกคนด้วยหอก ความเสียหายต่อคนเท่าเดิม") ไม่เพิ่มรางวัลซ้ำ
+**N10-6 · ของรางวัล** ดึงจาก `ABILITY_REWARDS.valkyrieSpear` ของเดิม (หอกวาลคิรี · "กวาดแทงศัตรูทุกคนด้วยหอก ความเสียหายต่อคนเท่าเดิม") ไม่เพิ่มรางวัลซ้ำ
 
 ### 3.3 บทในฉากสู้ (เอียร์ลินพูดได้)
 - เริ่มสู้ เอียร์ลิน: "ให้ข้าเห็นว่าเจ้ายืนได้นะ"
@@ -460,17 +501,17 @@ EN ใช้ชื่อ: Yama · Nira · Poena · Noir · Ognien · Sibyl · Gr
 
 ### 3.5 คัตซีนเปิดศึก `z3-eirlin-open` (2 หน้า)
 ```js
-'z3-eirlin-open': { title:{ th:'หอกวาลคีรี', en:'The Valkyrie\'s Spear' }, pages:[
+'z3-eirlin-open': { title:{ th:'หอกวาลคิรี', en:'The Valkyrie\'s Spear' }, pages:[
   { title:{ th:'ข้าชื่อเอียร์ลิน', en:'My Name Is Eirlin' }, line:{ th:
     'บรรยาย: เอียร์ลินยืนบนลานหินที่เพิ่งเลิกมีหมอก หอกสีฟ้าขาวปักปลายลงพื้น ปีกทั้งสองข้างพับแนบหลังเหมือนนกที่ยังไม่อยากหุบจริง ๆ\n'
-  + 'เอียร์ลิน: "ข้าชื่อเอียร์ลิน วาลคีรี ผู้ตรวจหอก ข้าตามเสียงศึกจากทะเลเหนือมาสามวัน มาถึงปุ๊บศึกจบปั๊บ ข้ายังไม่ทันเห็นหน้าแวมไพร์ด้วยซ้ำ"\n'
+  + 'เอียร์ลิน: "ข้าชื่อเอียร์ลิน วาลคิรี ผู้ตรวจหอก ข้าตามเสียงศึกจากทะเลเหนือมาสามวัน มาถึงปุ๊บศึกจบปั๊บ ข้ายังไม่ทันเห็นหน้าแวมไพร์ด้วยซ้ำ"\n'
   + 'ยมบาทน้อย: "เขาไปรับทัณฑ์ที่แท่นตัดสินแล้วครับ ผมไม่ได้ปลิดชีพเขา"',
     en:
     'Narration: Eirlin stands on the stone square, now clear of mist, her blue-white spear planted point-down. Her wings are folded against her back like a bird not quite willing to close them.\n'
   + 'Eirlin: "I am Eirlin, Valkyrie, inspector of the spear. I followed the sound of battle from the northern sea for three days. I arrive and the battle is over, just like that. I have not even seen the vampire\'s face."\n'
   + 'Yama: "He has served his sentence at the judgment dais. I did not take his life."' } },
   { title:{ th:'ผู้ที่ยืนอยู่', en:'The One Still Standing' }, line:{ th:
-    'เอียร์ลิน: "รับทัณฑ์ ไม่ใช่ปลิดชีพหรือ น่าสนใจ วาลคีรีอย่างข้ามีหน้าที่เดียว คือเลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา ข้าไม่เคยต้องถามว่าใครควรอยู่ต่อ แต่วันนี้ไม่มีใครล้มให้ข้าเลือก ข้าเลยอยากเลือกคนที่ยืนอยู่แทน"\n'
+    'เอียร์ลิน: "รับทัณฑ์ ไม่ใช่ปลิดชีพหรือ น่าสนใจ วาลคิรีอย่างข้ามีหน้าที่เดียว คือเลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา ข้าไม่เคยต้องถามว่าใครควรอยู่ต่อ แต่วันนี้ไม่มีใครล้มให้ข้าเลือก ข้าเลยอยากเลือกคนที่ยืนอยู่แทน"\n'
   + 'เอียร์ลิน: "หอกข้าไม่ได้วัดว่าเจ้าแรงแค่ไหน มันวัดว่าเจ้าถอยหรือไม่ เมื่อพร้อมก็ยกอาวุธขึ้นเถอะ เจ้าตัวเล็ก"\n'
   + 'บรรยาย: เอียร์ลินยกหอกขึ้นเหนือไหล่ แสงฟ้าขาวไล่ตามด้ามหอกจนถึงปลาย',
     en:
@@ -645,14 +686,12 @@ EN: Severin awaits you / Severin closes his ledger for now. Steady yourself and 
     en:
     'Severin: "I close this account by yielding the West to you to govern."\n'
   + 'Severin: "Halvar and I have measured each other by ledgers all our lives. I never beat him, and I have not beaten you. But I do not regret losing to figures that are correct."' } },
-  /* หน้า 3 เสริม เปิดด้วยธง Z3_PHANTOM_CLUE (ค่าเริ่มต้นปิด) */
-  { title:{ th:'ตัวเลขที่ไม่ใช่ของโลกนี้', en:'A Figure Not of This World' }, line:{ th:
-    'เซเวอริน: "อีกเรื่องหนึ่ง ข้าตรวจสมุดปัจฉิมทั้งเล่มก่อนมา ยอดค้างสามรายการไม่ตรงกับยอดของสำนักคัดกรรม ข้าคิดสองรอบสามรอบก็ไม่ตรง ราวกับมีมือนอกบัญชีแก้ทีละบรรทัด"\n'
-  + 'เซเวอริน: "ถ้าเจ้าเจอมือนั้น จดชื่อมันไว้ให้ข้า ข้าอยากรู้ว่าตัวเลขตัวไหนไม่ได้เกิดในโลกนี้"\n'
+  /* แก้ 16 พ.ย. ข้อ 4: หน้า 3 เปิดใช้ ใบ้สั้นระดับเดียวกับคดีก่อน (บัญชีผิดปกติ ถูกแก้จากภายนอก) ไม่ใช้ธง Z3_PHANTOM_CLUE แล้ว */
+  { title:{ th:'ยอดผิดปกติ', en:'Figures Out of Order' }, line:{ th:
+    'เซเวอริน: "อีกเรื่อง ข้าตรวจสมุดปัจฉิมทั้งเล่มก่อนมา ยอดค้างสามรายการผิดปกติ เหมือนมีมือจากข้างนอกแก้ไว้ ไม่ตรงกับยอดของสำนักคัดกรรม"\n'
   + 'นิรา: "ดิฉันจะตรวจรหัสผู้แก้ให้ค่ะ"',
     en:
-    'Severin: "One more thing. Before I came I audited the whole of the West\'s ledger. Three outstanding balances do not agree with the registry\'s. I worked them two times, three times, and they still would not agree, as though a hand from outside the books had altered them line by line."\n'
-  + 'Severin: "If you ever find that hand, write its name down for me. I want to know which figure was never born in this world."\n'
+    'Severin: "One more thing. Before I came I audited the West\'s whole ledger. Three outstanding balances are out of order, as though a hand from outside had altered them. They do not agree with the registry\'s."\n'
   + 'Nira: "I will check the alterer\'s code, sir."' } },
 ]},
 ```
@@ -1118,7 +1157,7 @@ EN: The Gate Guardian asks to test you / Before taking you as his master, the Ga
 ---
 
 ## 11. ให้ Reese ตรวจ (สั้น ๆ)
-1. **วาลคีรี** (3.5): "เลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา" ตรงกับที่ Reese แก้ไว้ในรอบก่อน (R3) · หอก/ปีกของเอียร์ลินเป็นการออกแบบเกม · ชื่อท่า "หอกเลือกผู้ควร" เป็นการสื่อแนวคิด ไม่ใช่ท่าในตำนาน
+1. **วาลคิรี** (3.5): "เลือกนักรบที่ล้มในศึกไปยังวัลฮัลลา" ตรงกับที่ Reese แก้ไว้ในรอบก่อน (R3) · หอก/ปีกของเอียร์ลินเป็นการออกแบบเกม · ชื่อท่า "หอกเลือกผู้ควร" เป็นการสื่อแนวคิด ไม่ใช่ท่าในตำนาน
 2. **เซอร์เบอรัส** (1.3-1.6): สุนัขสามเศียรผู้เฝ้าประตูโลกใต้ดินตำนานกรีก (R5 ผ่านแล้ว) · "ถูกสะกด" เป็นการดัดแปลงเกม · "เคยกินอาหารจากมือโพเอน่า" เป็นเรื่องแต่งของเกม · ตำนานเดิมมีการกล่อมเขาด้วยขนมน้ำผึ้ง (ผมไม่ได้ใช้ ถ้าต้องการเกร็ดนี้ให้ Reese ยืนยันตัวบทก่อน)
 3. **ยอร์มุนกันดร์** (4.3, 4.5): อสรพิษโลกล้อมโลกและกัดหางตัวเอง (R6 ผ่านแล้ว) · บทนี้ "ตัวมันถอยและจมน้ำ ไม่ตาย" และ "ปลายหางโผล่พ้นน้ำทั้งที่ควรอยู่ในปาก" สื่อลางรากนาโรก (Reese เคยยืนยันว่าสอดคล้อง) · ไม่ใช้พิษ ไม่ใช้ธอร์ · เซเวอรินพูดว่า "ขอยืมมา" เป็นเรื่องแต่งเกม ไม่ล้อเลียนต้นเรื่อง · คำที่เอียร์ลินพูดเรื่อง "ลางคลื่นถอย" (3.6) ตรวจน้ำเสียงเคารพตำนาน
 4. **โพเอน่า / ซิบิล / อ็อกเนียน / เกรซ / นัวร์** (ข้อ 0.5): ชื่อ Poena = บุคลาธิษฐานของการลงโทษในตำนานโรมัน/กรีก · Sibyl = หมอดูหญิงในตำนานกรีก-โรมัน (ชื่อทั่วไป) · Ognien = สะกดใกล้ Ognjen ชื่อบุรุษเซอร์เบีย/โครเอเชีย จากคำว่า oganj แปลว่าไฟ และใกล้ ogień ของโปแลนด์ (ไม่พบ "Ognien" เป็นชื่อบุคคลที่ยืนยันได้ Rae ปรับเอง) · ขอให้ Reese ยืนยันว่าการใช้เป็นชื่อตัวละครไม่ชนชื่อแบรนด์หรือเกมใหญ่
@@ -1132,10 +1171,10 @@ EN: The Gate Guardian asks to test you / Before taking you as his master, the Ga
 ## 12. หมายเหตุ
 - ผมไม่ได้แตะโค้ดหรือไฟล์ในโปรเจกต์เกม (อ่านอย่างเดียว) · ชื่อคีย์ทุกตัวเป็นข้อเสนอ ให้ Toby ปรับให้เข้ากับระบบ · ฟิลด์ `en_*` ในสำนวนไต่สวนเป็นข้อเสนอรูปแบบ (ถ้าระบบสำนวนมีที่เก็บ EN แบบอื่น ให้ย้ายตาม)
 - ผมไม่ได้เขียนบทเฉลยตัวผู้อยู่เบื้องหลัง [PHANTOM-404] (เหมือนโซน 2) · เบาะแสโซน 3 เป็นของเสริมที่ปิดอยู่
-- ป้ายผู้พูดในบทเดิม `deva.west.arrival` เป็น "yama:" ตัวพิมพ์เล็กปน "วาลคีรี:" ต่างจากป้ายอื่นที่ใช้ "ยมบาทน้อย:" (ไม่ใช่ความผิดของบทนี้ แจ้งไว้ ถ้าจะเก็บให้เนียนเปลี่ยนเป็น "ยมบาทน้อย:" ได้โดยไม่กระทบความหมาย)
+- ป้ายผู้พูดในบทเดิม `deva.west.arrival` เป็น "yama:" ตัวพิมพ์เล็กปน "วาลคิรี:" ต่างจากป้ายอื่นที่ใช้ "ยมบาทน้อย:" (ไม่ใช่ความผิดของบทนี้ แจ้งไว้ ถ้าจะเก็บให้เนียนเปลี่ยนเป็น "ยมบาทน้อย:" ได้โดยไม่กระทบความหมาย)
 - ไม่มี emoji · ไม่มีคำหยาบ · ไม่มีภาพกัดคอหรือเลือดชัด · ไม่มีฉากลงโทษที่ใช้เลือด
 
 
 
 ---
-**Claudy 15 พ.ย. (หลัง Reese `Output/Reese/2026-11-15-avegee-z3-events-factcheck.md`):** ลางในตำนานคือทะเลปั่นป่วน/ท่วมเมื่อหางหลุดจากปาก — "คลื่นถอย" ในบทเอียร์ลินเป็นเกร็ดที่เกมแต่งเอง ไม่ต้องแก้บท · "ผู้ตรวจหอกวาคิวรี" เป็นการสะกดในตารางคุณเป้ (คำที่ถูกตามพจนานุกรมคือ "วาลคีรี") คงไว้ก่อน รอคุณเป้ยืนยัน
+**Claudy 15 พ.ย. (หลัง Reese `Output/Reese/2026-11-15-avegee-z3-events-factcheck.md`):** ลางในตำนานคือทะเลปั่นป่วน/ท่วมเมื่อหางหลุดจากปาก — "คลื่นถอย" ในบทเอียร์ลินเป็นเกร็ดที่เกมแต่งเอง ไม่ต้องแก้บท · "ผู้ตรวจหอกวาลคิรี" เป็นการสะกดในตารางคุณเป้ (คำที่ถูกตามพจนานุกรมคือ "วาลคิรี") คงไว้ก่อน รอคุณเป้ยืนยัน
