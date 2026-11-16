@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T02:31:00.195Z",
+  "updatedAt": "2026-11-16T04:06:46.448Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "T2 map + travel fixes",
+      "task": "T1b harder battles + GPU",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
