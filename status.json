@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T22:35:01.670Z",
+  "updatedAt": "2026-11-18T22:35:47.976Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,8 +122,8 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "done",
-      "task": "Rae R2 part A story v2",
+      "status": "working",
+      "task": "Rae fix part A, write part B",
       "report": {
         "when": "08:10",
         "title": "Rae names AVEGEE crew west/cyberhell",
