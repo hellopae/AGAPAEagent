@@ -175,3 +175,10 @@
 4. T4 event สีดา/หนุมาน (R1 ส่วน A) · 5. T5 บอสใหญ่ยืนประตู+cutscene แจ้งเตือน (F5) · 6. Toby event โซน 3 (บท Rae + `briefs/2026-11-15-avegee-z3-owner-decisions.md` + สะกดวาลคิรีทั้ง repo)
 **Codex คิวรอ:** `Output/Claudy/2026-11-15-avegee-codex-waiting-queue.md` (9 งาน · ใบงานท่าสลบ `briefs/2026-11-15-avegee-ko-pose-art.md` พร้อมแล้ว) · work-mode = claude-only
 **worktree:** `~/agapae-work/.toby-worktrees/z1-v5` branch `claude/2026-11-05-zone1-v5-fx` = main `ecc75fd3`
+
+## 18 พ.ย. คืน — Claude กลับมา · Codex weekly ถึง 20 พ.ย. (คุณเป้: reset คืนวันที่ 20)
+- R1 Rae ครบ (ส่วน C ข้อ 5–7 + หัวข้อ 13) → Reese ตรวจอยู่ `Output/Reese/2026-11-18-avegee-r1-factcheck.md`
+- Codex ลองปล่อยท่านอนสลบ 23:07 → rate_limited ("try again Nov 20 10:36 AM") · ใบงานแตก 4 ชุดพร้อม `Output/Codex/runs/ko-pose-1118-{A..D}.md` + `queue-ko-pose-1118.py`
+- comment คุณเป้ 30 ข้อ (G1–G30): `briefs/2026-11-18-avegee-owner-feedback-night.md` · ภาพ `~/agapae-work/feedback/2026-11-18-owner/`
+  - **ลำดับใหม่**: R1 ปิด → T1c → T3(+G6 ยมทูตซ้ำ, G2/G3 ชายแดน) → G1 อาคาร/ต้นไม้โซน 1 → R2 Rae บทหลัก v2 → T4 สีดา+ตะเกียง+ระบบอัญเชิญ → T5′ โซน 1→2 → T6 → T7 → T8 → T9
+  - T5 เดิม (บอสยืนประตู) ยกเลิก · ศึกทดสอบยักษ์โซน 3 (R1 ข้อ 5) ถูกแทนด้วยแวน เฮลซิง · event โซน 3 รอบท v2
