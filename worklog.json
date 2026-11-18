@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-18T22:51:28.140Z",
+  "updatedAt": "2026-11-18T22:59:24.789Z",
   "entries": [
+    {
+      "id": "wl-261118-reese-45px",
+      "datetime": "2026-11-18T22:59:24Z",
+      "displayDate": "19 พ.ย. 2569",
+      "displayTime": "05:59",
+      "agent": "reese",
+      "agentName": "Reese",
+      "agentImg": "avatars/Reese.png",
+      "pipeline": "content",
+      "status": "done",
+      "title": "Reese fact-check R2 part B",
+      "summary": "Fact-check: FIX LIST (VERIFIED/UNVERIFIED ตามรายงาน Output/Reese/2026-10-09-avegee-frontier-weapons-factcheck.md)\n\nผมยังไม่ได้เปิดหัวข้อ 9 ของการ์ด Minnie จึงยืนยันไม่ได้ว่า Claudy ใส่ข้อแก้ครบและถูกต้องหรือไม่ ส่วนท้ายของข้อความที่ขอ (\"Claudy ใส่ข้อแก้ลงหัวข้อ 9 ของการ์ด Minnie แล้ว\") เป็นคำบอกของ "
+    },
     {
       "id": "wl-261118-rae-txxp",
       "datetime": "2026-11-18T22:51:28Z",
