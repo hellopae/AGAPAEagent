@@ -199,3 +199,8 @@
 - ค้าง Codex: `img/theme-v4/town-tree-gold-th-v1.webp` 1199×1312 (ต้นทอง 6 ต้นประตูสวรรค์ ตอนนี้ใช้ต้นเขียวแทน) · วิหารน้ำแข็ง lokan อบในพื้น ขยายต้องวาดพื้นใหม่
 - รอคุณเป้: ต้นที่ขยับหลบประตู 4 จุด · แถวต้นหน้าปราสาทตาแรง
 - ถัดไป: R2 Rae ส่วน A → Reese
+
+### 19 พ.ย. — R2 ส่วน A (Rae) ส่งแล้ว → Reese ตรวจอยู่
+- ไฟล์ `Output/Rae/2026-11-19-avegee-r2a-zone1-2.md` (1079 บรรทัด) · ตัวอัญเชิญ: หนุมาน "เหาะเหนือเมฆ", กุมารทอง "แสงทองคุ้มกาย", ยมทัต "ดาบเพลิงคุ้มน้อง" · ภาพใหม่ 32 ไฟล์
+- Claudy ตรวจภาพแทนที่ Rae เสนอ มีจริงครบ: B1 `img/z1-events/boss-hanuman-th-profile.webp` · B2 `img/z1-events/boss-hanuman-th.webp` · B3 `img/z1-events/cut-hanuman-sweep-th.webp` · D3 `img/zone-boss.webp` + `img/boss-combat-v1/th/zone-boss.webp` · A3 ทำด้วยโค้ด (Toby)
+- 11 ข้อให้คุณเป้ตัดสิน อยู่ท้ายไฟล์ Rae (ชื่อ Guard "กุมภัณฑ์", การนับอัญเชิญ 3 ครั้ง, เติมหอกระจกฟรี ฯลฯ)
