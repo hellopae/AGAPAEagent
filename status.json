@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T19:51:59.498Z",
+  "updatedAt": "2026-11-18T19:59:53.921Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby T3 crew/frontier/UI",
+      "status": "working",
+      "task": "Toby G1 zone 1 scale",
       "report": {
         "when": "11:59",
         "title": "Integrate Codex batch 13 Nov",
