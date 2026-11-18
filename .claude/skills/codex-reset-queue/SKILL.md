@@ -14,6 +14,8 @@ description: ตั้งคิวงาน Codex (openai-worker.py --write) ใ
 - `--write` แตก branch จาก **HEAD ของ `--project`** → ใช้ clone ที่ HEAD ตรงกับฐานในใบงาน (AVEGEE: `~/agapae-work/AVEGEE` บน main) ห้ามใช้โฟลเดอร์หลัก `Documents/Work PAE/Claude/AVEGEE` (ค้าง branch Codex app)
 - ใบงานที่ต้องรู้ผลรอบก่อน (เช่น ASSEMBLE ต้องรู้ worktree ของทุก chunk) → สคริปต์อ่าน `worktree` จาก JSON ที่ worker พิมพ์ตอนจบ แล้วเขียนใบงานสำเนาใหม่ ไม่แก้ต้นฉบับ
 - **`openai-worker.py --write` ตัดที่ 1800 วิ (30 นาที) ตายตัว** (บรรทัด `timeout=1800`) → งบในใบงานต้อง ≤ 25 นาที ไม่ใช่ 60 · ถ้าจบ `failed` + `TimeoutExpired` ให้เปิด worktree ดูก่อน งานมักเสร็จเกือบหมด (15 พ.ย. Z2-SHARPEN #2 วาดครบ 17 จุด มี v8 แล้ว ขาดแค่ README) → ตรวจรับจากของที่มี ไม่ต้องรันใหม่
+- **Bash ที่นี่คือ zsh: `set -- $s` ไม่แยกคำ** (18 พ.ย. ได้ไฟล์ `ko-pose-1118-A th.md` คิวหาไฟล์ไม่เจอ exit 2 สองรอบ) → ใช้ `${=s}` หรือลูปแยกตัวแปร แล้ว `command ls` ดูชื่อไฟล์จริงก่อนปล่อยคิว
+- **คุณเป้บอก "น่าจะ reset แล้ว" อาจหมายถึง Claude ไม่ใช่ Codex** → เช็คโควตา Codex ก่อนแตกใบงาน (ข้อ 7 ด้านล่าง) ถ้าไม่สะดวก ปล่อย run แรกเป็นตัวลอง: `rate_limited` กลับมาใน ~15 วิ ไม่เสียโควตา แล้วอ่าน "try again at …" จาก `Output/Codex/runs/<run_id>/`
 - ใบงานเก่าหลายวันก่อน: เช็คว่าฐาน (`git rev-parse origin/main`) ยังตรงกับที่ใบงานอ้าง ถ้า main ขยับ ต้องแก้ใบงานก่อนตั้งคิว
 
 ## กันวนซ้ำเผาโควตา (บทเรียน 11–12 พ.ย. 2569: V7-FLUIDS 17 รอบค้าง 14/37, WORKER-COOK 4 รอบไม่ผ่าน check — โซน 1 ที่ต้องใช้ merge ไม่ได้เริ่ม)
