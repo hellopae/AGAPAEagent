@@ -901,7 +901,21 @@ EN: Severin awaits you / Severin closes his ledger for now. Steady yourself and 
     EN Narration: Sibyl sets her crystal on the dais and bows her head before the head of the house. · Sibyl: "I said \'may\' more softly than I should have. I take that share. You were the one who sailed, but I was the one who made you bold enough." · Head of house: "You need not bow. I gave the order." · Sibyl: "You gave the order and I gave the reading. The two do not cancel. Please do not strike my part out."
   - (ขอรับทัณฑ์ด้วย) บรรยาย: ซิบิลก้าวลงจากข้างแท่นมายืนข้างหัวหน้าตระกูลก่อนที่ใครจะเรียก · ซิบิล: "ดิฉันขอไปรับทัณฑ์เคียงข้างเขาค่ะ ไม่ใช่เพื่อแบ่งโทษให้เขาเบาลง แต่เพื่อไม่ให้เขาเดินไปคนเดียว" · หัวหน้าตระกูล: "เจ้าเป็นหมอดู ไม่ใช่นักโทษ" · ซิบิล: "คำทำนายที่ดิฉันพูดเป็นของดิฉัน ดิฉันก็ต้องแบกด้วยตัวเองบ้างค่ะ"
     EN Narration: Sibyl steps down from beside the dais and stands next to the head of the house before anyone calls her. · Sibyl: "I ask to go and serve a penalty beside him. Not to lighten his, but so that he does not walk it alone." · Head of house: "You are a seer, not a prisoner." · Sibyl: "The reading I spoke is mine. I must carry some of it myself."
-  - ผลของทางเลือก B: ผมเสนอให้เป็นข้อความอย่างเดียว (ซิบิลหายไปทำงานไม่ได้ 3 วาระ ถ้า Toby ทำง่าย) · ให้คุณเป้ตัดสิน ข้อ 10 ข้อ 10
+  - **ผลของทางเลือก B (แก้ 16 พ.ย. ข้อ 6 · คำตัดสินคุณเป้ "ให้หายไป และเดินไปรับโทษเหมือนวิญญาณก็ดีครับ เหมือนรับโทษเสร็จก็กลับมาทำงานต่อ")** ใช้เฉพาะเมื่อผู้เล่นเลือก "ขอรับทัณฑ์ด้วย" · ซิบิลหายจากแผนที่ เดินไปรับโทษที่สถานีเหมือนวิญญาณ ทำงานไม่ได้ระหว่างนั้น (Toby ทำระบบ · ระยะเวลาให้ Toby ตั้งเท่ากับโทษวิญญาณสั้น ๆ ไม่ต้องตายตัวสามวาระ) · รับโทษเสร็จแล้วกลับมาทำงานต่อตามปกติ · ทางเลือก A ไม่มีการหายตัว
+    - **ตอนไป · บรรทัดบรรยาย (ขึ้นต่อจากบรรทัด "คำทำนายที่ดิฉันพูดเป็นของดิฉัน ...")** บรรยาย: ซิบิลวางลูกแก้วไว้บนแท่น หยิบเพียงผ้าคลุมไหล่ แล้วเดินไปที่สถานีลงทัณฑ์ต่อท้ายแถววิญญาณ ไม่มีใครต้องพาไป หัวหน้าตระกูลมองตามอยู่นาน
+      EN Narration: Sibyl leaves her crystal on the dais, takes only her shawl, and walks to the penalty station at the tail of the line of spirits. No one has to lead her. The head of the house watches her go for a long while.
+    - **ตอนไป · คำพูดซิบิล:** "ดิฉันไปก่อนนะคะ ท่านไม่ต้องรอ ลูกแก้วฝากไว้ที่โต๊ะ ดิฉันจะกลับมาเมื่อรับส่วนของดิฉันครบค่ะ"
+      EN Sibyl: "I will go ahead, sir. Please do not wait. I leave my crystal at the desk. I will come back once I have borne my share."
+    - **ตอนไป · หน้าต่างแจ้งเตือน (แจ้งผู้เล่นว่าทำไมทำงานไม่ได้)** หัวข้อ: ซิบิลไปรับทัณฑ์ · ข้อความ: ซิบิลเดินไปรับทัณฑ์ที่สถานีเคียงข้างวิญญาณ เธอจะทำงานไม่ได้จนกว่าจะกลับมา · ปุ่ม: รับทราบ
+      EN title: Sibyl goes to serve her penalty · text: Sibyl has walked to the station to serve a penalty beside the spirit. She cannot work until she returns. · button: Understood
+    - **ระหว่างหายไป · ป้ายบนโต๊ะซิบิล (บรรทัดเดียว ขึ้นเมื่อกดดูโต๊ะ ถ้ามีช่อง):** "โต๊ะว่างอยู่ ลูกแก้วถูกวางทิ้งไว้ใต้ผ้า" · EN: "The desk is empty. The crystal lies under a cloth."
+    - **ตอนกลับ · บรรทัดบรรยาย:** บรรยาย: ซิบิลเดินกลับมาที่โต๊ะ ชายผ้าคลุมไหล่ยังมีไอร้อนจางจากสถานี เธอเลิกผ้าที่คลุมลูกแก้วออกช้า ๆ แล้ววางมือบนลูกแก้วอย่างไม่รีบ
+      EN Narration: Sibyl walks back to her desk. The hem of her shawl still carries a faint warmth from the station. She lifts the cloth from the crystal slowly and lays a hand on it without hurry.
+    - **ตอนกลับ · คำพูดซิบิล:** "ดิฉันกลับมาแล้วค่ะ ที่นั่นไม่มีใครถามให้ดิฉันทำนาย ดิฉันเลยได้ฟังตัวเองเงียบ ๆ ต่อไปนี้ดิฉันจะพูดคำว่า 'อาจ' ให้ดังกว่าเดิมค่ะ และจะย้ำจนกว่าผู้ฟังจะได้ยิน"
+      EN Sibyl: "I am back, sir. No one there asked me to foretell anything, so I could hear myself in the quiet. From now on I will say 'may' more loudly, and I will repeat it until the listener hears."
+    - **ตอนกลับ · หน้าต่างแจ้งเตือน** หัวข้อ: ซิบิลกลับมาทำงานแล้ว · ข้อความ: ซิบิลรับทัณฑ์เสร็จและกลับมาที่โต๊ะ พร้อมทำงานต่อ · ปุ่ม: รับทราบ
+      EN title: Sibyl is back at work · text: Sibyl has served her penalty and returned to her desk, ready to work again. · button: Understood
+    - ไม่มีภาพเพิ่ม (ใช้สไปรท์ซิบิลเดิม เดินเหมือนวิญญาณที่ Toby มีอยู่แล้ว)
 
 ### 5.4 คดีญาติ 4 · ลูกสาวของผู้ป่วยที่เกรซดูแล
 
@@ -1033,34 +1047,53 @@ EN: Severin awaits you / Severin closes his ledger for now. Steady yourself and 
 
 ## 6. ข้อเสนอเสริม
 
-### 6.0 ศึกทดสอบยักษ์ทวารบาลโซน 3 (**ไม่อยู่ในสเปกคุณเป้** · โค้ดไม่มี `westGuardTest` · เขียนเป็นชุดเสริมค่าเริ่มต้นปิด · ถ้าไม่เอา ตัดทั้งหัวข้อนี้ได้ ไม่กระทบเรื่องอื่น)
-เหตุที่เสนอ: โซน 2 มีทดสอบยักษ์ทวารบาล โซน 3 ไม่มี ทำให้ผู้เล่นอาจรู้สึกไม่เท่ากัน และยักษ์ทวารบาลโซน 3 มีเรื่องกลัวถูกสะกดจากคดีญาติ 5 ที่ต่อกับพลังสะกดจิตของผู้เล่นได้พอดี · ลำดับ: กดจ้าง → N6-1 → คัตซีน `z3-guard-test-open` → สู้ → ชนะจึงเข้าทีม (แพ้ = ยังไม่เข้า ลองใหม่ได้)
+### 6.0 ศึกทดสอบยักษ์ทวารบาลโซน 3 (**แก้ 16 พ.ย. ข้อ 5 · คุณเป้อนุมัติให้ใช้แล้ว** ตามคำตัดสินข้อ 7 "ให้ rae เขียนรายละเอียด เนื้อเรื่องให้ด้วย" · เนื้อเรื่องเต็ม · โค้ดยังไม่มี `westGuardTest` มีแต่ `asiaGuardTest` ของโซน 2 Toby ทำตามแบบเดียวกัน)
 
-**N6-1** หัวข้อ: ยักษ์ทวารบาลขอทดสอบ · ข้อความ: ก่อนรับท่านเป็นนาย ยักษ์ทวารบาลแห่งปัจฉิมขอทดสอบว่าท่านเหมาะกับตำแหน่งนี้หรือไม่ เขาไม่ใช่ศัตรู แต่จะไม่ออมแรง · ปุ่ม: รับมือ
-EN: The Gate Guardian asks to test you / Before taking you as his master, the Gate Guardian of the West wants to see whether you suit the post. He is no enemy, but he will not hold back. / Face him
+**ก. ทำไมยักษ์ทวารบาลต้องทดสอบ (เหตุผลในเรื่อง · ผู้เล่นได้เห็นผ่านบท ไม่ใช่ข้อความอธิบาย)**
+1. **เขาเฝ้าประตูปัจฉิมมาก่อนผู้ถือบัญชี** และเพิ่งเห็นกับตาว่าหมอกหยุดทุกอย่างได้ (วิญญาณเดินวน เซอร์เบอรัสถูกสะกดจนไม่รู้จักโพเอน่า ตามคดี 0) นายที่เขาจะยอมเรียกว่า "นาย" จึงต้องเป็นคนที่ยืนอยู่ได้เมื่อรอบตัวหยุดนิ่งไปหมด
+2. **สิ่งที่เขาทดสอบไม่ใช่ความแรง แต่คือความประมาท** ระหว่างสู้เมื่อผู้เล่นได้เปรียบ เขาจะตะโกนเตือนให้ระวัง เพื่อดูว่านายยังฟังเสียงเตือนตอนกำลังชนะหรือไม่ นี่คือบาดแผลของเขาเอง: คืนที่เมืองแตก เขาบอกตัวเองว่า "ฟังนิดเดียว" แล้วไม่รู้เรื่องอะไรอีกจนตื่นกลางไฟ (ตรงกับบท KIN ช่วงเล่าเรื่องของเขาในหัวข้อ 5.5 และบรรทัด "ความผิดของคนถูกสะกดเริ่มก่อนเสียงกล่อม ตอนที่เขาเชื่อว่าตัวเองแข็งแกร่งเกินกว่าจะโดน") · ความประมาทแบบเดียวกันนี้คือสิ่งที่ยามในคดีญาติ 5 ทำ (ปฏิเสธขี้ผึ้ง) เขาจึงมองยามคนนั้นเหมือนมองกระจก
+3. **เขาไม่เล่าเรื่องนี้ในศึกทดสอบ** บทคดีญาติ 5 เขียนไว้ว่า "ข้าไม่เคยเล่าเรื่องนี้ให้ใครฟัง ท่านเป็นคนแรก" ดังนั้นในศึกนี้เขาปล่อยได้แค่เศษเดียว ("ข้าเคยยืนประตูที่เปิดผิดคืน") และพกก้อนขี้ผึ้งไว้ที่เข็มขัดโดยไม่บอกเหตุ ให้ผู้เล่นสงสัยไปจนถึงคดีญาติ 5 แล้วจึงได้คำตอบ
+4. **ทำไมไม่ใช่ศึกเอาจริง:** เขาไม่ใช่ศัตรู ไม่อยากให้ผู้เล่นเจ็บ แต่ถ้าออมแรงก็ไม่ได้ทดสอบอะไร จึงสู้เต็มแรงแล้วเตือนเป็นระยะ (เหมือนเทวดาในโซน 1-2 ที่ "ทดสอบ" ไม่ใช่ "สู้")
+
+**ข. ลำดับฉาก:** กดจ้างยักษ์ทวารบาล → N6-1 → คัตซีนก่อนสู้ `z3-guard-test-open` (2 หน้า) → สู้ (แบนเนอร์ N6-2 + บทในฉากสู้ 6.0-ค) → ชนะ `z3-guard-test-win` (2 หน้า) + N6-3 → เข้าทีม · แพ้ `z3-guard-test-lose` + N6-4 ยังไม่เข้า ลองใหม่ได้ · คดีญาติ 5 (หัวข้อ 5.5) ขึ้นตามกติกาคดีญาติเดิม (หลังคดีครบ 10 และจ้างแล้ว) จุดสะท้อนระหว่างสองที่อยู่ 6.0-จ
+
+
+**ค. หน้าต่างแจ้งเตือนและแบนเนอร์ (แก้ 16 พ.ย.)**
+**N6-1** หัวข้อ: ยักษ์ทวารบาลขอทดสอบ · ข้อความ: ก่อนรับท่านเป็นนาย ยักษ์ทวารบาลแห่งปัจฉิมขอดูว่าท่านยืนอยู่ได้ แม้ในวันที่ได้เปรียบ เขาไม่ใช่ศัตรู แต่จะไม่ออมแรง · ปุ่ม: รับมือ
+EN: The Gate Guardian asks to test you / Before taking you as his master, the Gate Guardian of the West wants to see whether you can hold your ground even when you have the upper hand. He is no enemy, but he will not hold back. / Face him
 **N6-2 แบนเนอร์** ไทย: ศึกพิสูจน์นาย · ยักษ์ทวารบาล · EN: Proving the master · Gate Guardian
-**N6-3 ชนะ** หัวข้อ: ยักษ์ทวารบาลยอมรับ · ข้อความ: ท่านผ่านการทดสอบ ยักษ์ทวารบาลพร้อมเข้าร่วมทีม · ปุ่ม: ต่อ · EN: The Gate Guardian accepts / You passed the test. The Gate Guardian is ready to join your team. / Continue
+**N6-3 ชนะ** หัวข้อ: ยักษ์ทวารบาลยอมรับ · ข้อความ: ท่านผ่านการทดสอบ ยักษ์ทวารบาลพร้อมเข้าร่วมทีม และฝากก้อนขี้ผึ้งไว้ให้ท่านหนึ่งก้อน · ปุ่ม: ต่อ · EN: The Gate Guardian accepts / You passed the test. The Gate Guardian is ready to join your team, and leaves a lump of beeswax with you. / Continue
 **N6-4 แพ้** หัวข้อ: ยักษ์ทวารบาลรอท่านอยู่ · ข้อความ: ยักษ์ทวารบาลหยุดมือไว้ก่อน ท่านตั้งหลักแล้วลองอีกครั้งได้ · ปุ่ม: ทดสอบอีกครั้ง · EN: The Gate Guardian waits for you / The Gate Guardian lowers his club for now. Steady yourself and try again. / Test again
+
+**ง. คัตซีน (แก้ 16 พ.ย. · หน้าก่อนสู้เขียนใหม่ให้ตรงเหตุผล 6.0-ก · หน้าชนะ/แพ้เขียนเพิ่ม)**
 ```js
 'z3-guard-test-open': { title:{ th:'ยักษ์ทวารบาลขอทดสอบ', en:'The Gate Guardian Asks to Test You' }, pages:[
   { title:{ th:'ข้ายังไม่ได้พยักหน้านะ', en:'I Have Not Nodded Yet' }, line:{ th:
-    'ยักษ์ทวารบาล: "เดี๋ยวก่อนท่าน ข้ายังไม่ได้พยักหน้าเลยนะ (กระแอม) ข้าเฝ้าประตูปัจฉิมมาก่อนท่านจะมาเป็นผู้ถือบัญชี ใครจะเป็นนายข้าต้องผ่านกระบองข้าก่อน"\n'
+    'ยักษ์ทวารบาล: "เดี๋ยวก่อนท่าน ข้ายังไม่ได้พยักหน้าเลยนะ (กระแอม) ข้าเฝ้าประตูปัจฉิมมาก่อนท่านจะมาเป็นผู้ถือบัญชี เมื่อวันท่านมาถึง ข้าเห็นวิญญาณเดินวนอยู่กลางลาน เห็นสุนัขสามเศียรมองคนที่เคยป้อนอาหารมันเหมือนไม่รู้จัก หมอกทำให้ทุกอย่างหยุดได้ แล้วข้าจะเรียกใครเป็นนาย ก็ต้องรู้ก่อนว่าเขายืนอยู่ได้ตอนที่ทุกอย่างหยุด"\n'
   + 'ยมบาทน้อย: "ผมเข้าใจครับ ขออนุญาตแสดงฝีมือให้ท่านเห็น"',
     en:
-    'Gate Guardian: "Hold on, sir, I have not nodded yet. (Ahem.) I kept the gate of the West before you ever became keeper of the ledger. Whoever would be my master must get past my club first."\n'
+    'Gate Guardian: "Hold on, sir, I have not nodded yet. (Ahem.) I kept the gate of the West before you ever became keeper of the ledger. The day you arrived I saw spirits pacing the square and a three-headed hound that looked at the one who once fed it as if it had never known them. The mist can stop everything. Before I call anyone master, I must know he can stand when everything has stopped."\n'
   + 'Yama: "I understand. Allow me to show you what I can do."' } },
   { title:{ th:'ไม่ใช่เพราะอยากสู้', en:'Not Because I Want to Fight' }, line:{ th:
-    'ยักษ์ทวารบาล: "ข้าไม่ได้อยากทำร้ายท่านหรอกนะ ข้าแค่รู้ว่านายที่ฝีมือไม่ถึงนั้นอันตราย ข้าเคยยืนประตูที่เปิดผิดคืน ข้าไม่อยากยืนอีกที่หนึ่งกับนายที่ไม่พร้อม"\n'
-  + 'บรรยาย: ยักษ์ทวารบาลกำกระบองด้วยสองมือ ยืนกางขาบังประตูเหมือนที่ยืนมาตลอดชีวิต มือข้างหนึ่งสั่นเล็กน้อยก่อนจะนิ่ง',
+    'ยักษ์ทวารบาล: "ข้าไม่ได้อยากทำร้ายท่านหรอกนะ และข้าไม่ได้วัดว่าท่านแรงแค่ไหน ข้าจะดูอย่างเดียวว่าตอนท่านได้เปรียบ ท่านยังฟังคำเตือนอยู่หรือเปล่า ข้าเคยยืนประตูที่เปิดผิดคืน ข้าไม่อยากยืนอีกที่หนึ่งกับนายที่ไม่พร้อม"\n'
+  + 'บรรยาย: ยักษ์ทวารบาลกำกระบองด้วยสองมือ ยืนกางขาบังประตูเหมือนที่ยืนมาตลอดชีวิต ที่เข็มขัดมีก้อนขี้ผึ้งหนึ่งก้อนห่อผ้าเก่าห้อยอยู่ มือข้างหนึ่งสั่นเล็กน้อยก่อนจะนิ่ง',
     en:
-    'Gate Guardian: "I do not want to hurt you, you know. I only know that a master who falls short is dangerous. I once stood at a gate that opened on the wrong night. I do not want to stand at another with a master who is not ready."\n'
-  + 'Narration: The Gate Guardian grips his club in both hands and plants his feet to block the doorway the way he has all his life. One hand trembles slightly, then steadies.' } },
+    'Gate Guardian: "I do not want to hurt you, you know, and I am not measuring how strong you are. I will watch for one thing only: when you have the upper hand, do you still listen to a warning? I once stood at a gate that opened on the wrong night. I do not want to stand at another with a master who is not ready."\n'
+  + 'Narration: The Gate Guardian grips his club in both hands and plants his feet to block the doorway the way he has all his life. At his belt hangs a lump of beeswax wrapped in old cloth. One hand trembles slightly, then steadies.' } },
 ]},
 'z3-guard-test-win': { title:{ th:'ยักษ์ทวารบาลยอมรับ', en:'The Gate Guardian Accepts' }, pages:[
   { title:{ th:'ข้ายอม', en:'I Yield' }, line:{ th:
-    'ยักษ์ทวารบาล: "ได้ ข้ายอม! ท่านไม่ใช่คนแรงที่สุดที่ข้าเคยเจอ แต่ท่านไม่ถอยสักก้าว ข้านับถือคนแบบนี้ (กระแอม) จะเรียกท่านว่านายก็ได้ แต่อย่าเพิ่งให้ข้าเรียกบ่อยนะ"',
+    'ยักษ์ทวารบาล: "ได้ ข้ายอม! ท่านไม่ใช่คนแรงที่สุดที่ข้าเคยเจอ แต่ท่านไม่ถอยสักก้าว และตอนข้าตะโกนเตือนท่านก็ฟัง ทั้งที่ท่านกำลังได้เปรียบ ข้านับถือคนแบบนี้ (กระแอม) จะเรียกท่านว่านายก็ได้ แต่อย่าเพิ่งให้ข้าเรียกบ่อยนะ"',
     en:
-    'Gate Guardian: "All right, I yield! You are not the strongest I have faced, but you did not give a single step. I respect that. (Ahem.) You may be called master, but do not make me say it too often yet."' } },
+    'Gate Guardian: "All right, I yield! You are not the strongest I have faced, but you did not give a single step, and when I shouted a warning you listened, though you had the upper hand. I respect that. (Ahem.) You may be called master, but do not make me say it too often yet."' } },
+  { title:{ th:'ก้อนขี้ผึ้ง', en:'A Lump of Beeswax' }, line:{ th:
+    'บรรยาย: ยักษ์ทวารบาลปลดก้อนขี้ผึ้งห่อผ้าเก่าจากเข็มขัด ส่งให้ยมบาทน้อยด้วยมือที่ยังสั่นอยู่นิดหนึ่ง\n'
+  + 'ยักษ์ทวารบาล: "เก็บไว้ ข้าทำก้อนนี้ไว้เผื่อแจก ถ้าวันหนึ่งมีเสียงอะไรที่ท่านไม่ควรฟัง ท่านยังมีทางปิดหู ไม่ต้องถามว่าข้ารู้ได้ยังไงว่ามีเสียงแบบนั้น ข้ายังไม่พร้อมเล่า"\n'
+  + 'ยมบาทน้อย: "ผมจะเก็บไว้ครับ และผมจะไม่ถามจนกว่าท่านพร้อม"',
+    en:
+    'Narration: The Gate Guardian unhooks the lump of beeswax in its old cloth from his belt and holds it out to Yama in a hand that still trembles a little.\n'
+  + 'Gate Guardian: "Keep it. I made this one to give away. If ever there is a sound you should not hear, you will still have a way to close your ears. Do not ask how I know there are such sounds. I am not ready to tell."\n'
+  + 'Yama: "I will keep it, and I will not ask until you are ready."' } },
 ]},
 'z3-guard-test-lose': { title:{ th:'ยักษ์ทวารบาลรอท่านอยู่', en:'The Gate Guardian Waits' }, pages:[
   { title:{ th:'ข้ายืนรออยู่', en:'I Stand Waiting' }, line:{ th:
@@ -1069,27 +1102,114 @@ EN: The Gate Guardian asks to test you / Before taking you as his master, the Ga
     'Gate Guardian: "Get up, sir. I do not call that a loss. Steady yourself and come again. I will be standing at the gate."' } },
 ]},
 ```
-- ภาพ: `cut-guard-test-west` (P2 ข้อ 8) · ถ้าไม่เอาศึกนี้ ไม่ต้องวาด
+- ข้อความแพ้สุ่ม 1 ใน 3 เพิ่มจากหน้าเดิม (ให้แพ้หลายครั้งแล้วไม่ซ้ำคำ · ใช้เป็นบรรทัดแทนบรรทัด "ยักษ์ทวารบาล:" ของ `z3-guard-test-lose` ได้):
+  1. "ข้าเตือนแล้วนะ แต่ท่านไม่ได้ประมาท ท่านแค่ยังไม่พร้อม พักก่อนแล้วมาใหม่" · EN: "I warned you, yet you were not careless. You are simply not ready. Rest, then come again."
+  2. "(กระแอม) ข้าไม่ได้ตั้งใจให้หนักมือ แต่ข้าก็ไม่ออมแรง ไม่ต้องรีบ ประตูไม่หนีไปไหน" · EN: "(Ahem.) I did not mean to be heavy-handed, but I did not hold back either. No hurry. The gate is not going anywhere."
+  3. "นายที่ล้มแล้วลุกได้ ข้านับถือกว่านายที่ไม่เคยล้ม ลุกเถอะ" · EN: "A master who falls and rises earns more of my respect than one who has never fallen. Get up."
+
+**จ. บทในฉากสู้ (ยักษ์ทวารบาลพูดได้) และจุดสะท้อนกับคดีญาติ 5**
+- เริ่มสู้ ยักษ์ทวารบาล: "ยืนให้มั่น ข้าไม่ถนัดออมแรง" · EN: "Stand firm. I am no hand at holding back."
+- **ตอนผู้เล่นได้เปรียบ (เลือดยักษ์ทวารบาลเหลือต่ำกว่าครึ่ง)** ยักษ์ทวารบาล: "ระวัง! ข้ายังไม่ล้ม อย่าเพิ่งวางใจ คนที่คิดว่าชนะแล้วคือคนที่โดนก่อน" · EN: "Careful! I have not fallen. Do not relax. The one who thinks he has already won is the first to be struck." (นี่คือบรรทัดที่ทดสอบ "ฟังคำเตือนตอนได้เปรียบ" · บรรยายตามด้วย: "มือข้างหนึ่งของยักษ์ทวารบาลสั่นอยู่ครู่หนึ่งก่อนตวัดกระบองลงมาอีกครั้ง" · EN: "One of the Gate Guardian's hands trembles for a moment before the club swings down again.")
+- **จุดสะท้อนกับคดีญาติ 5 (หัวข้อ 5.5)** · ทุกจุดเป็นข้อความ ไม่กระทบระบบ:
+
+| จุดในศึกทดสอบ | สะท้อนกลับไปที่ใน 5.5 | ผลต่อผู้เล่น |
+|---|---|---|
+| "ข้าเคยยืนประตูที่เปิดผิดคืน" (open หน้า 2) | บท KIN ก่อนขึ้นแท่น: "เมื่อชาติก่อนข้าก็เป็นยามประตูเหมือนเขา" | ผู้เล่นได้คำตอบของเศษที่ค้างไว้ |
+| ก้อนขี้ผึ้งที่เข็มขัด + ของฝากตอนชนะ | `hidden` ข้อ 3 และ `reveal` ข้อ "ขี้ผึ้งสามก้อนยังไม่แกะห่อ" ของยาม | เห็นว่าสิ่งเดียวกันที่ยักษ์ให้ตน คือสิ่งที่ยามเคยปฏิเสธ |
+| ทดสอบ "ฟังคำเตือนตอนได้เปรียบ" | บรรทัดยักษ์ "ความผิดของคนถูกสะกดเริ่มก่อนเสียงกล่อม ... ตอนที่เขาเชื่อว่าตัวเองแข็งแกร่งเกินกว่าจะโดน" | เข้าใจว่าทำไมเขาไม่วัดความแรง |
+| "ข้ายังไม่พร้อมเล่า" (win หน้า 2) | บท KIN: "ข้าไม่เคยเล่าเรื่องนี้ให้ใครฟัง ท่านเป็นคนแรก" | ผู้เล่นเป็นคนแรกที่ได้ฟังจริงตามที่เขียนไว้ |
+| มือสั่นแล้วนิ่ง | `face` ยาม (มือกำกุญแจ) และบท "ไหล่ชนไหล่" | ภาพมือสองแบบเรียงคู่กัน |
+- **บรรทัดสะท้อนเสริม (ไม่บังคับ · เพิ่มในทางเลือก "ยืนข้าง ๆ" ของ 5.5 ต่อท้ายบรรทัด "ข้ามาช้าเหลือเกิน ขอโทษที่ช้า")** บรรยาย: ยักษ์ทวารบาลล้วงก้อนขี้ผึ้งจากเข็มขัดวางลงบนฝ่ามือของยามข้างกุญแจเหล็ก ยามมองมันนานแล้วกำไว้ ไม่ได้แกะ แต่ก็ไม่ได้ทิ้ง · EN Narration: The Gate Guardian takes the beeswax from his belt and sets it in the sentry's palm beside the iron key. The sentry looks at it a long while, then closes his hand on it. He does not unwrap it, but he does not drop it either. (ถ้าผู้เล่นยังไม่ได้ผ่านศึกทดสอบ ให้ข้ามบรรทัดนี้)
+
+**ฉ. รางวัลและบันทึก**
+- **รางวัลหลัก:** ยักษ์ทวารบาลเข้าทีม (เหมือนเดิม) · **ของฝากเชิงเรื่อง:** ก้อนขี้ผึ้งหนึ่งก้อน เป็นข้อความอย่างเดียว ไม่เป็นไอเทมในระบบ Toby ไม่ต้องทำช่องเก็บของ · ไม่เพิ่มรางวัลเป็นตัวเลข/ท่า เว้นแต่คุณเป้สั่ง
+- **บันทึกสมุด (journal) หลังชนะ:** **ยักษ์ทวารบาลปัจฉิม:** เข้าทีมแล้ว พกก้อนขี้ผึ้งไว้ที่เข็มขัดและให้ข้าหนึ่งก้อน ยังไม่บอกเหตุผล · EN **Western Gate Guardian:** has joined the team. Carries beeswax at his belt and gave me one. Has not said why.
+- ภาพ: `cut-guard-test-west` (P2 ข้อ 19 ในหัวข้อ 8 · **ต้องวาด** ตามที่คุณเป้อนุมัติ 16 พ.ย. ไม่ต้องรอ)
 
 ---
 
-## 7. ข้อเสนอแยก (ไม่ใช่ของคุณเป้): คดีญาติของนัวร์ 1 คดี · 2 แบบให้เลือก
-ช่องว่างที่พบ: นัวร์ (ดำ ประจำปัจฉิม) ยังไม่มีคดีญาติ (สเปกโซน 3 ระบุ 5 คดี ไม่มีนัวร์) · นัวร์เป็นหัวหน้าคนงานที่ผู้เล่นเห็นทุกวัน (ปุ่ม "สั่งงานครัว") คดีของเขาจึงควรเข้ากับธีมครัวและการทำตามคำสั่ง · ถ้าเลือกแล้ว ผมเขียนสำนวนเต็มและบท KIN ต่อ (ให้ระดับเดียวกับ 5.1-5.5) · ขึ้นเมื่อจ้างนัวร์ตามกติกาคดีญาติทั่วไป
+## 7. คดีญาติของนัวร์ · **ใช้แบบ B** (แก้ 16 พ.ย. ข้อ 7 · คุณเป้ตัดสิน "เอาแบบ B ก็ดีครับ" · แบบ A ไม่ใช้)
+ที่มา: นัวร์ (ดำ ประจำปัจฉิม) ยังไม่มีคดีญาติ (สเปกโซน 3 ระบุ 5 คดี ไม่มีนัวร์) · นัวร์เป็นหัวหน้าคนงานที่ผู้เล่นเห็นทุกวัน (ปุ่ม "สั่งงานครัว") คดีของเขาจึงเข้ากับธีมครัว · ขึ้นเมื่อจ้างนัวร์ตามกติกาคดีญาติทั่วไป (เสนอเพิ่ม: และเคยกด "สั่งงานครัว" อย่างน้อย 1 ครั้ง ถ้า Toby ทำไม่สะดวก ใช้กติกาทั่วไปอย่างเดียว) · ลำดับ: เป็นคดีญาติที่ 6 ของโซนนี้ ขึ้นต่อท้ายคดีญาติ 5 คดีตามสเปก ไม่แซง
+- **7.1 สำนวนเต็มและบท KIN ของแบบ B อยู่ท้ายหัวข้อนี้** · **7.2 แบบ A ด้านล่างเก็บไว้เพื่อบันทึกเท่านั้น ไม่ใช้ ไม่ต้องทำ**
 
-### แบบ A · เจ้านายเก่าผู้ให้ทำบัญชีสองเล่ม
+### 7.2 (ไม่ใช้) แบบ A · เจ้านายเก่าผู้ให้ทำบัญชีสองเล่ม
 - วิญญาณ: เจ้าของโรงทานท่าเรือผู้มอบหมายให้นัวร์ลอกตัวเลขสองเล่ม (เล่มจริง/เล่มโชว์) โดยไม่อธิบาย นัวร์ลอกตามคำสั่งทุกบรรทัดและไม่เคยถามว่าทำไม จนโรงทานถูกยึดและคนจนอดข้าวในฤดูหนาว
 - บาปหลัก: `kong` ฉ้อโกงกองบุญ (w 4) · ส่วนเบาลง: เขาซ่อนข้าวสำรองเล็กน้อยไว้ในเล่มโชว์เผื่อฤดูแล้ง (w -2) · บุญจริง: ไม่เคยเอาเงินกองบุญเข้ากระเป๋าตนแม้เหรียญเดียว · บุญปลอม: อ้างว่าเล่มโชว์คือความโปร่งใส
 - ทางเลือกท้ายคดี: [ให้นัวร์อ่านตัวเลขทั้งสองเล่มออกเสียงต่อหน้าเขา] / [ให้นัวร์เผาเล่มโชว์แล้วเก็บเล่มจริงไว้เป็นหลักฐาน]
 - ตัวอย่างบท นัวร์: "ท่านครับ ผมลอกตามสั่งมาตลอด ผมนึกว่ายิ่งไม่ถามยิ่งเป็นลูกจ้างที่ดี" · EN Noir: "Sir, I copied exactly as told. I thought the less I asked, the better a servant I was."
 - จุดเด่น: ต่อกับโพเอน่า (ทำตามหมาย) แต่เป็นฝั่งงานบัญชี · ข้อควรระวัง: ธีม "ทำตามคำสั่งโดยไม่ถาม" ซ้ำกับคดีญาติ 1 ค่อนข้างมาก
 
-### แบบ B · แม่ครัวโรงทานที่เอาของค้างคืนมาปรุงใหม่
-- วิญญาณ: แม่ครัวโรงทานที่นัวร์เคยสอนว่า "ไม่ทิ้งอาหาร" เธอเอาสตูว์ค้างคืนมาอุ่นให้เด็กข้างถนนกิน เด็กป่วยหนักสองคน หนึ่งในนั้นไม่ฟื้น เธออดมื้อนั้นเพื่อให้เด็กพอ
-- บาปหลัก: `kha` ประมาทจนเป็นอันตราย (w 2) · ส่วนเบาลง: ไม่มีใครบอกเรื่องของบูด/ไม่มีตู้เย็น (w -2) · บุญจริง: เลี้ยงเด็กข้างถนนฟรีสิบปี · บุญปลอม: อ้างว่าไม่เคยมีใครป่วยเพราะอาหารของเธอ
-- ทางเลือกท้ายคดี: [ให้นัวร์เขียนป้ายวันหมดอายุติดทุกหม้อในโรงอาหารของท่าน] / [ให้นัวร์ต้มโจ๊กใหม่ให้เธอกินก่อนไป]
-- ตัวอย่างบท นัวร์: "ท่านครับ ผมเป็นคนบอกเธอเองว่าอย่าทิ้งอาหาร ผมไม่เคยบอกต่อว่าอาหารเก่าก็ทำให้คนป่วยได้" · EN Noir: "Sir, I was the one who told her never to throw food away. I never told her that old food can make people ill too."
-- จุดเด่น: ต่อกับแผงโรงอาหารและปุ่ม "สั่งงานครัว" ที่ผู้เล่นใช้อยู่ · ผลดีต่อเกม: ตัวเลือก A ของท้ายคดีสามารถเป็นข้อความบันทึกเฉย ๆ ไม่ต้องมีผลในระบบ
-- **ผมแนะนำแบบ B** (ธีมต่างจากคดีอื่นมากกว่า และผูกกับระบบที่ผู้เล่นเห็นจริง)
+### 7.1 แบบ B (**ใช้**) · แม่ครัวโรงทานที่เอาของค้างคืนมาปรุงใหม่ · สำนวนเต็ม + บท KIN (เขียน 16 พ.ย. ระดับเดียวกับ 5.1-5.5)
+
+**NK6 · แจ้งเตือน**
+- หัวข้อ: แม่ครัวของนัวร์
+- ข้อความ: วิญญาณแม่ครัวโรงทานผู้อุ่นสตูว์ค้างคืนให้เด็กข้างถนนกินจนเด็กป่วยมาถึงคิว นัวร์คือคนที่สอนเธอว่าอย่าทิ้งอาหาร เขาขอพบท่านก่อนเริ่มคดี
+- ปุ่ม: ฟังนัวร์
+- EN หัวข้อ: Noir's cook
+- EN ข้อความ: The spirit of a soup-house cook who warmed over a leftover stew for street children, and made them ill, has reached the queue. Noir is the one who taught her never to throw food away. He asks to see you before the hearing begins.
+- EN ปุ่ม: Hear Noir
+
+```js
+{
+  k:'soupcook', quest:'z3KinDam', zone:'west', sex:'f', sp:'soul-soup-cook-west', kind:'tragic',
+  name:'แม่ครัวโรงทาน', en_name:'The Soup-House Cook',
+  who:'แม่ครัวผู้ไม่ยอมทิ้งอาหาร แม้ของที่ค้างข้ามคืนมาแล้ว', en_who:'A cook who would not throw food away, not even what had stood overnight',
+  face:'ผ้ากันเปื้อนซีดเป็นรอยเปื้อนซ้ำซ้อน ถือทัพพีไม้ด้ามสึกด้วยสองมือเหมือนประคองของที่แตกง่าย ตาแดงจากควันเตามานาน',
+  en_face:'A faded apron stained over and over, a worn wooden ladle held in both hands as if it might break, eyes red from years of stove smoke.',
+  seen:[
+    { t:'อุ่นสตูว์ที่ต้มไว้สองวันก่อนให้เด็กข้างถนนสิบสองคนกิน เด็กป่วยหนักสองคน หนึ่งคนไม่ฟื้น', en:'Warmed over a stew made two days earlier and served it to twelve street children. Two fell gravely ill, and one did not recover.', s:'kha', w:4 },
+  ],
+  hidden:[
+    { t:'ถามแม่ครัวรุ่นพี่ว่าสตูว์ค้างแบบนี้ใช้ได้ไหม ได้รับคำตอบว่า "ถ้ายังไม่เหม็นก็ใช้ได้" ซึ่งไม่ใช่ความจริง แต่เธอเชื่อ', en:'Asked an older cook whether a stew kept this long was still fit. Was told, "If it does not smell, it is fine." That was not true, and she believed it.', s:'kha', w:-2 },
+    { t:'ปกติชิมอาหารก่อนเสิร์ฟทุกหม้อ แต่มื้อนั้นยกชามให้เด็กก่อนจนไม่ได้ชิมเอง', en:'Always tasted every pot before serving. That meal she handed the bowls to the children first and never tasted it herself.', s:'kha', w:1 },
+    { t:'ผิวหน้าสตูว์มีฟิล์มมันบาง ๆ ที่ผิดปกติ เธอเห็นแล้วช้อนออกทิ้ง แต่ไม่ได้ทิ้งทั้งหม้อ', en:'A thin odd film lay on the surface of the stew. She saw it, skimmed it off, and did not throw the pot out.', s:'kha', w:2 },
+    { t:'เลี้ยงเด็กข้างถนนฟรีเกือบสิบปี ตื่นก่อนเตาทุกเช้ามืด และมักเก็บชามสุดท้ายให้ตัวเองแล้วยกให้เด็กเสมอ', en:'Fed street children free for nearly ten years, rose before the stove every dawn, and always gave away the last bowl she had set aside for herself.', s:'kha', w:-2 },
+  ],
+  merits:[
+    { t:'เลี้ยงเด็กข้างถนนฟรีเกือบสิบปีโดยไม่เคยขอเงินใคร', en:'Fed street children free for nearly ten years, never asking anyone for money.', v:2, fake:false },
+    { t:'อ้างว่าไม่เคยมีใครป่วยเพราะอาหารของเธอมาก่อนเลย', en:'Claims no one had ever fallen ill from her food before.', v:1, fake:true },
+  ],
+  line:'"ข้าไม่เคยทิ้งอาหารเลยสักมื้อ ท่านจะให้ข้าปล่อยเด็กหิวหรือ"', en_line:'"I never once threw food away. Would you have me leave a child hungry?"',
+  claims:[
+    { kind:'deny', t:'สตูว์หม้อนั้นต้มเมื่อเช้า ไม่ใช่ของค้าง', en:'That pot of stew was made this morning. It was not left over.',
+      reveal:'"...ข้าต้มไว้เมื่อสองวันก่อน อุ่นซ้ำมาสองรอบ ข้าบอกตัวเองว่าอุ่นแล้วก็เหมือนใหม่ ข้ารู้ว่ามันไม่เหมือน"', en_reveal:'"...I made it two days before and warmed it over twice. I told myself that warmed meant as good as new. I knew it was not."' },
+    { kind:'boast', t:'ท่านดูบุญของข้าด้วย ไม่เคยมีใครป่วยเพราะอาหารของข้ามาก่อนเลย', en:'Count my merit too: no one ever fell ill from my food before.',
+      merit:'อ้างว่าไม่เคยมีใครป่วยเพราะอาหารของเธอมาก่อนเลย',
+      reveal:'ท่านถามว่าเด็กห้าคนที่ท้องเสียสามวันหน้าโรงทานเมื่อสองปีก่อนเป็นใคร เธอนิ่งไป — เธอบอกทุกคนว่าเป็นเพราะอากาศเปลี่ยน', en_reveal:'You ask who the five children were who had stomach trouble for three days outside the soup house two years ago. She falls silent. She told everyone it was only the change in weather.' },
+    { kind:'solid', t:'เรื่องที่เด็กสองคนป่วยหนักหลังกินหม้อนั้น ข้ายอมรับ ข้าอุ่นเอง ข้าตักเอง ไม่ต้องโทษใคร', en:'That two children fell gravely ill after that pot, I admit. I warmed it myself and I ladled it myself. Blame no one else.' },
+    { kind:'solid', truth:true, t:'ข้ายกสตูว์ให้เด็กจนหมด ข้าไม่ได้กินสักคำ ข้านึกว่ามันพอดี', en:'I gave the stew to the children until none was left. I did not eat a spoonful. I thought it was just enough.',
+      reveal:'ยมบาทน้อยดูโต๊ะหลังครัว พบชามของเธอวางคว่ำ ช้อนสะอาดไม่มีรอยใช้ และข้างชามมีกระดาษจดชื่อเด็กสิบสองคนเรียงตามคิว ไม่มีชื่อเธออยู่ในนั้น', en_reveal:'Yama looks at the table behind the kitchen and finds her bowl turned upside down, the spoon clean and unused, and beside it a paper listing twelve children\'s names in queue order. Hers is not among them.' },
+  ],
+}
+```
+หมายเหตุ Toby: ปรับจากร่างเดิมในหัวข้อนี้ 3 จุด (1) `seen` ถ่วง w:4 (เดิมร่างไว้ w 2) เพราะเรื่องจริงมีเด็กไม่ฟื้นหนึ่งคน ให้ระดับใกล้เคียงคดีที่มีผู้เสียชีวิตของ 5.1-5.5 (w 4-5) · เบาลงได้ถึง -4 รวม (ไม่มีใครบอก -2 และเลี้ยงเด็กฟรี -2) ผลรวมสุดท้ายให้ Toby ตรวจกับตารางระดับโทษที่โซน 1-2 ใช้ ผมไม่เห็นตารางจริง (2) ข้อ `hidden` ข้อ 2 ตั้งใจให้ความเมตตาและความประมาทมาจากการกระทำเดียวกัน (ยกชามให้เด็กก่อนจนไม่ได้ชิม) · (3) ข้อ `hidden` ข้อ 4 กับบุญจริงคือเรื่องเดียวกันตั้งใจ ให้ผู้เล่นเห็นด้านดีสองทางเหมือนคดีญาติ 3 · ข้ออ้าง "ไม่เคยมีใครป่วยเพราะอาหารของเธอ" เป็นบุญปลอม (`fake:true`) · ไม่มีภาพ/คำบรรยายเด็กป่วยหนัก ผู้เล่นรู้จากข้อความเท่านั้น
+
+**บทคดีญาติ (KIN)** · นัวร์ "ผม ... ครับ" ผู้ช่วยขยัน เงียบ ๆ ไม่ขอร้องให้เบาหรือหนัก
+- ช่วงก่อนขึ้นแท่น:
+  - นัวร์: "ท่านครับ ผมขอพูดเรื่องเดียว คนที่จะขึ้นแท่นคือแม่ครัวโรงทานที่ผมเคยทำงานข้าง ๆ ปีนั้นข้าวขาดทั้งฤดูหนาว ผมเป็นคนบอกเธอเองว่าอย่าทิ้งอาหาร แม้แต่ก้นหม้อ ผมคิดว่ากฎข้อนั้นช่วยคนได้"
+    EN Noir: "Sir, I have one matter. The woman about to stand on the dais is the soup-house cook I once worked beside. The winter that year, rice ran short. I was the one who told her never to throw food away, not even from the bottom of the pot. I thought that rule would help people."
+  - นัวร์: "แต่ผมไม่เคยบอกต่อว่าอาหารค้างที่อุ่นซ้ำก็ทำให้คนป่วยได้ ผมนึกว่าเธอรู้เอง ผมไม่เคยถามเธอสักครั้งว่ารู้หรือเปล่า"
+    EN Noir: "But I never told her that leftovers warmed over and over can make people ill. I assumed she knew. I never once asked whether she did."
+- ช่วงระหว่างไต่สวน:
+  - นัวร์: "เธอชิมอาหารก่อนเสิร์ฟทุกหม้อครับ ทุกหม้อ วันนั้นผมไม่ได้อยู่ แต่ผมรู้ว่าถ้าเธอชิม เธอจะไม่เสิร์ฟ ผมไม่รู้ว่าทำไมวันนั้นเธอถึงไม่ชิม"
+    EN Noir: "She tasted every pot before serving, sir. Every pot. I was not there that day, but I know that had she tasted it, she would not have served it. I do not know why she did not taste it that day."
+  - นัวร์: "ผมไม่ได้ขอให้ท่านเบานะครับ ผมแค่อยากให้ท่านเห็นว่าผมกับเธอทำตามคำสั่งข้อเดียวกันมา คือ 'อย่าทิ้ง' โดยไม่มีใครถามต่อว่า 'ถ้ามันไม่ควรกินล่ะ'"
+    EN Noir: "I am not asking you to go easy, sir. I only want you to see that she and I have followed the same order all along, 'never throw away', and no one asked the next question, 'what if it should not be eaten?'"
+- ช่วงหลังตัดสิน:
+  - นัวร์: "ท่านตัดสินแล้ว ผมขอถามข้อเดียวครับ ผมควรทำอย่างไรกับกฎ 'อย่าทิ้งอาหาร' ที่ผมสอนเธอ ผมไม่อยากลบมันทิ้ง แต่ก็ไม่อยากให้ใครป่วยเพราะมันอีก"
+    EN Noir: "You have judged, sir. I ask one thing. What should I do with the rule 'never throw food away' that I taught her? I do not want to throw the rule out. But I do not want anyone made ill by it again."
+- ทางเลือก: **[ให้นัวร์เขียนป้ายวันหมดอายุติดทุกหม้อในโรงอาหารของท่าน]** / **[ให้นัวร์ต้มโจ๊กใหม่ให้เธอกินก่อนไป]**
+  EN: **[Let Noir write expiry labels for every pot in your canteen]** / **[Let Noir cook a fresh pot of congee for her before she goes]**
+  - (ป้ายวันหมดอายุ) บรรยาย: นัวร์หยิบถ่านเขียนกับกระดาษแผ่นเล็กวางลงบนแท่น เขียนว่า "ต้มเมื่อ ... กินก่อน ..." ทีละตัวอักษรจนจบ แล้วส่งแผ่นแรกให้เธอดู · แม่ครัว: "ป้ายเล็กนิดเดียวเอง" · นัวร์: "เล็กพอจะติดได้ทุกหม้อ ใหญ่พอที่ไม่มีใครลืมครับ"
+    EN Narration: Noir takes a stub of charcoal and a small slip of paper, sets it on the dais, and writes "Made on ... eat before ..." letter by letter to the end, then hands the first slip to her to see. · Cook: "It is such a small label." · Noir: "Small enough to stick on every pot, sir. Large enough that no one forgets."
+    **ผลในเกม (ข้อความอย่างเดียว):** บันทึก (journal) ว่า "นัวร์เริ่มติดป้ายวันต้มบนหม้อในโรงอาหาร" · ถ้า Toby อยากเชื่อมกับปุ่ม "สั่งงานครัว" เพิ่มบรรทัดเล็กตอนกดสั่ง (ดู 7.1-ข ด้านล่าง) · ไม่มีผลตัวเลข
+  - (โจ๊กใหม่) บรรยาย: นัวร์ก่อไฟเตาเล็กข้างแท่น ต้มโจ๊กหม้อเล็กจากข้าวที่เพิ่งซาวเสร็จ ชิมก่อนวางชามตรงหน้าเธอ ไอร้อนลอยขึ้นแตะทัพพีไม้ในมือเธอ · แม่ครัว: "ข้ากินไม่ลงหรอก" · นัวร์: "ผมต้มสดเมื่อครู่ ผมชิมให้ดูแล้วครับ ผมเรียนมาจากคุณ ผมเห็นคุณชิมทุกหม้อ"
+    EN Narration: Noir lights a small stove beside the dais and boils a small pot of congee from rice just rinsed. He tastes it before setting the bowl in front of her. Steam rises and touches the wooden ladle in her hands. · Cook: "I could not eat it." · Noir: "I made it fresh just now, sir. I tasted it so you could see. I learned that from you. I watched you taste every pot."
+
+**7.1-ข บรรทัดเสริมตอนกด "สั่งงานครัว" (ไม่บังคับ · แสดงเฉพาะถ้าผู้เล่นเลือกทางเลือก "ป้ายวันหมดอายุ")** สุ่ม 1 ใน 2 ต่อท้ายข้อความสั่งงานปกติ:
+  1. นัวร์: "ผมติดป้ายวันต้มทุกหม้อแล้วครับ ท่านสั่งได้เลย" · EN Noir: "Every pot is labelled with its day, sir. Order away."
+  2. นัวร์: "หม้อนี้ต้มเมื่อเช้าครับ ปลอดภัย ผมชิมให้แล้ว" · EN Noir: "This pot was made this morning, sir. It is safe. I have tasted it."
+**7.1-ค ภาพ:** แถว 20 ในหัวข้อ 8 (`soul-noir-kin-west`) เปลี่ยนเป็น `soul-soup-cook-west.webp` + `-profile.webp` · หญิงวัยกลางคน ผ้ากันเปื้อนซีดเป็นรอยเปื้อน ถือทัพพีไม้ด้ามสึกสองมือ ตาแดงจากควันเตา · ไม่มีภาพเด็ก/ภาพป่วย · **ต้องวาด** (คุณเป้เลือกแบบ B แล้ว)
 
 ---
 
@@ -1126,8 +1246,8 @@ EN: The Gate Guardian asks to test you / Before taking you as his master, the Ga
 | 16 | `prop-false-writ-west.webp` | 1375×768 | โคลสอัปหมายคำสั่งเท็จ ตราประทับหมึกผิดสี ไม่มีเลขรับรอง ใช้ตอนเฉลยในสำนวน | โปรไฟล์วิญญาณ |
 | 17 | `prop-prophecy-slate-west.webp` | 1375×768 | แผ่นหินทำนายมีคำว่า "อาจ" ถูกรอยหมึกทับเหลือแต่คำว่า "คืนนั้น" | โปรไฟล์วิญญาณ |
 | 18 | `soul-hypnotized-west-a/b.webp` | ตามสไปรท์วิญญาณทั่วไป | วิญญาณตาเรืองเขียวจางเดินวน 2 แบบ (ชายชรา/หญิงสาว) สำหรับคดี 0 | ภาพวิญญาณทั่วไป (kind 10 ของเดิม) |
-| 19 | `cut-guard-test-west.webp` | 1672×941 | ยักษ์ทวารบาลโซน 3 ยืนกางขาบังประตู มือหนึ่งสั่นเล็กน้อย ยามาเผชิญหน้า (**เฉพาะถ้าเอาข้อ 6.0**) | ไม่ต้องวาดถ้าไม่เอา |
-| 20 | `soul-noir-kin-west.webp` + `-profile.webp` | ตามขนาดเดียวกัน | วิญญาณคดีนัวร์ (**เฉพาะหลังคุณเป้เลือกแบบ A/B ข้อ 7**) | — |
+| 19 | `cut-guard-test-west.webp` | 1672×941 | ยักษ์ทวารบาลโซน 3 ยืนกางขาบังประตู มือหนึ่งสั่นเล็กน้อย ยามาเผชิญหน้า ที่เข็มขัดห้อยก้อนขี้ผึ้งห่อผ้าเก่า (**แก้ 16 พ.ย.: ข้อ 6.0 คุณเป้อนุมัติแล้ว ต้องวาด**) | ภาพยักษ์ทวารบาลที่มีอยู่ |
+| 20 | `soul-soup-cook-west.webp` + `-profile.webp` (**แก้ 16 พ.ย.** เดิมชื่อ `soul-noir-kin-west`) | ตามขนาดเดียวกัน | หญิงวัยกลางคน ผ้ากันเปื้อนซีดเป็นรอยเปื้อน ถือทัพพีไม้ด้ามสึกสองมือ ตาแดงจากควันเตา (**คุณเป้เลือกแบบ B แล้ว ต้องวาด** · ดู 7.1-ค) | ภาพวิญญาณหญิงทั่วไป |
 
 ---
 
@@ -1177,4 +1297,31 @@ EN: The Gate Guardian asks to test you / Before taking you as his master, the Ga
 
 
 ---
-**Claudy 15 พ.ย. (หลัง Reese `Output/Reese/2026-11-15-avegee-z3-events-factcheck.md`):** ลางในตำนานคือทะเลปั่นป่วน/ท่วมเมื่อหางหลุดจากปาก — "คลื่นถอย" ในบทเอียร์ลินเป็นเกร็ดที่เกมแต่งเอง ไม่ต้องแก้บท · "ผู้ตรวจหอกวาลคิรี" เป็นการสะกดในตารางคุณเป้ (คำที่ถูกตามพจนานุกรมคือ "วาลคิรี") คงไว้ก่อน รอคุณเป้ยืนยัน
+**Claudy 15 พ.ย. (หลัง Reese `Output/Reese/2026-11-15-avegee-z3-events-factcheck.md`):** ลางในตำนานคือทะเลปั่นป่วน/ท่วมเมื่อหางหลุดจากปาก — "คลื่นถอย" ในบทเอียร์ลินเป็นเกร็ดที่เกมแต่งเอง ไม่ต้องแก้บท · "ผู้ตรวจหอกวาลคิรี" เป็นการสะกดในตารางคุณเป้ (คำที่ถูกตามพจนานุกรมคือ "วาลคิรี") คงไว้ก่อน รอคุณเป้ยืนยัน  *(คุณเป้ยืนยันแล้ว 15 พ.ย. ใช้ "วาลคิรี" ทุกที่ ดูหัวข้อ 13 ข้อ 8)*
+
+---
+
+## 13. สรุปรายการแก้ 16 พ.ย. 2569 (R1 · ตามคำตัดสินคุณเป้ `briefs/2026-11-15-avegee-z3-owner-decisions.md` ครบ 8 ข้อ)
+ที่ใดในไฟล์นี้ขัดกับหัวข้อ 10 หรือ 0.4 ให้ใช้ฉบับแก้ตามตารางนี้ · ไม่ได้แตะโค้ด
+
+| ข้อ | เรื่อง | แก้ที่หัวข้อ | สิ่งที่เปลี่ยน |
+|---|---|---|---|
+| 1 | ตัดสินวาลดริก แรงกว่าปานกลาง | 2.8 `frontier-west-boss-punished` · 2.9 สำนวนตัดสิน | กระทะทองแดง · มัวเมา · **หนัก (4 จาก 5)** · เขียนหน้า punished ใหม่ให้หนักตามระดับ ไม่มีภาพเลือดหรือกัด · ข้อความตัดสินนิรา/ยมบาทน้อย/วาลดริกเขียนใหม่ · ป้ายระดับที่เหนือ "ปานกลาง" ในโค้ด Toby ตรวจให้ตรงของจริง |
+| 2 | เหตุผลคำปฏิญาณ 200 ปี + เหตุผลที่ต้องสะกดจิตคนอื่น | 2.11 (ใหม่) · 2.5 นัวร์ตื่นจากสะกด · 2.6 เลือดเหลือครึ่ง · 2.7 `z3-valdric-down` หน้า 2 · 2.9 `hidden` ข้อ 4 + `claims` ข้อ 3-4 | คำปฏิญาณมีที่มา (ฉากนาฬิกาตีหนึ่งครั้ง สาวใช้ยื่นผ้าห่ม) + หลักฐาน 3 ชั้น + ราคาที่ต้องจ่าย · หมอก "ไม่สั่งใหม่ แต่เร่งคำสั่งสุดท้ายที่ผู้ถูกสะกดแบกอยู่" อธิบายทั้งเหตุที่สะกดและเหตุที่ยมทูตฟาดกันเอง |
+| 3 | เซอร์เบอรัสยืนเฝ้าประตู | 1.6 `z3-cerberus-win` หน้า 2 · 1.8 (ใหม่) | เปลี่ยนจาก "นอนขดข้างเสา" เป็นยืนเฝ้าเหมือนยามโซน 3 · บรรทัดบรรยายตอนเริ่มเฝ้า + ตอนปราบ 3 แบบสุ่ม (ไม่พูด ไม่มีเลือด) |
+| 4 | ใบ้ PHANTOM-404 | 1.6 หน้า 3 · 4.6 `z3-sev-win` หน้า 3 · ข้อความสมุดท้าย 1.6 | เปิดใช้ ตัดธง `Z3_PHANTOM_CLUE` · สั้นระดับคดีก่อน: "บัญชีผิดปกติ ถูกแก้จากภายนอก" ตัดเรื่องหมึก/ฝูงลิงออก |
+| 5 | ศึกทดสอบยักษ์ทวารบาลโซน 3 | 6.0 · แถว 19 ใน 8 | อนุมัติแล้ว · เนื้อเรื่องเต็ม: เหตุผลทดสอบ (ทดสอบความประมาท ไม่ใช่ความแรง) · บทก่อน/ระหว่าง/หลัง ชนะ/แพ้ · ของฝากเป็นก้อนขี้ผึ้ง (ข้อความอย่างเดียว) · จุดสะท้อนกับคดีญาติ 5 (5 จุด + บรรทัดเสริม 1 บรรทัดในทางเลือก "ยืนข้าง ๆ" ของ 5.5 ไม่บังคับ) · ต้องวาดภาพแถว 19 |
+| 6 | ซิบิลหายไปรับโทษแล้วกลับมาทำงาน | 5.3 ทางเลือก B | บรรทัดตอนไป (บรรยาย + คำพูด + หน้าต่างแจ้งเตือน) · ป้ายโต๊ะระหว่างหาย · บรรทัดตอนกลับ (บรรยาย + คำพูด + หน้าต่างแจ้งเตือน) TH/EN · ทางเลือก A ไม่หาย · ระยะเวลาให้ Toby ตั้ง |
+| 7 | คดีนัวร์ใช้แบบ B | 7 (7.1 ใหม่ · 7.2 แบบ A ไม่ใช้) · แถว 20 ใน 8 | สำนวนไต่สวนเต็ม (แม่ครัวโรงทาน) + บท KIN 3 ช่วง + ทางเลือกและคำตอบ + บรรทัดเสริมตอนกด "สั่งงานครัว" · `seen` ถ่วงเป็น w:4 (ร่างเดิม w 2) · ต้องวาดภาพแถว 20 (เปลี่ยนชื่อไฟล์เป็น `soul-soup-cook-west`) |
+| 8 | สะกด "วาลคิรี" | ทั้งไฟล์ | ไม่เหลือการสะกดเดิมที่ผิดสองแบบ ใช้ "วาลคิรี" แบบเดียว · ข้อความในโค้ดทั้ง repo (i18n, data.js, boss-skills-data.js ฯลฯ) ยังต้อง grep แก้ตอน Toby ทำ event โซน 3 · ผมแก้ได้เฉพาะไฟล์บท |
+
+### 13.1 จุดใหม่ที่ให้ Reese ตรวจ (เฉพาะตำนาน/ข้อเท็จจริงที่เพิ่มรอบนี้)
+1. **ขี้ผึ้งอุดหูกันเสียงกล่อม** (6.0 · 5.5): ใช้เป็นภาพทั่วไปว่า "ขี้ผึ้งปิดหูกันเสียงสะกด" ซึ่งเป็นภาพที่คุ้นจากเรื่องโอดิสเซียสกับไซเรนในตำนานกรีก · เกมไม่อ้างตัวบท ไม่ระบุชื่อ · ขอให้ Reese ยืนยันว่าไม่ขัดตำนานเดิม (ในตำนานอุดหูลูกเรือ ไม่ใช่ผู้นำ)
+2. **แวมไพร์กับแสงรุ่งเช้า** (2.8 `frontier-west-boss-punished`): วาลดริกนั่งบนกระทะจนไอร้อนจางเมื่อฟ้าตะวันออกเริ่มสว่าง "เป็นคืนแรกในรอบสองร้อยปี" แสงเป็นสัญลักษณ์ ไม่ทำให้เขาเป็นอันตราย ชายเสื้อโค้ตไหม้ ผิวไม่ไหม้ · ตรงกับกติกาเดิมในหัวข้อ 11 ข้อ 5 ที่ห้ามให้แวมไพร์ตายด้วยแสงอาทิตย์ · ขอให้ตรวจว่าภาพ "ฟ้าสว่าง" ไม่ตีความเป็นแวมไพร์ถูกแดดเผา
+3. **ความเชื่อเรื่องอาหารค้าง** (7.1): คำพูดรุ่นพี่ "ถ้ายังไม่เหม็นก็ใช้ได้" ว่าไม่จริง และสตูว์ที่ต้มไว้สองวันอุ่นซ้ำสองรอบอาจทำให้ป่วยได้ แม้ไม่มีกลิ่นผิดปกติ · เป็นข้อเท็จจริงสุขอนามัยอาหาร (กลิ่นไม่ใช่ตัวชี้ความปลอดภัยเสมอไป) ขอให้ Reese ยืนยันว่าพูดกว้างพอไม่ผิด และ chris-culture ดูน้ำเสียงเมื่อถึงโหมด ship เพราะมีเด็กเสียชีวิตหนึ่งคนในข้อความ (ไม่มีภาพ)
+4. **ไม่ต้องตรวจซ้ำ:** ซิบิลรับทัณฑ์เหมือนวิญญาณ (ระบบเกม ไม่อ้างตำนาน) · เซอร์เบอรัสยืนเฝ้าและปราบศัตรู (ตำนานผู้เฝ้าประตูเดิม ไม่เพิ่มข้อเท็จจริงใหม่) · ยักษ์ทวารบาลโซน 3 (ตัวละครเกม) · เบื้องหลังคำปฏิญาณ/หมอกสะกด (เรื่องแต่งเกม ไม่อ้างตำนานจริง)
+
+### 13.2 ต้องให้คุณเป้ตัดสินเพิ่ม (มีค่าเริ่มต้นไว้แล้ว ไม่หยุดงาน)
+1. **ของฝากก้อนขี้ผึ้งจากยักษ์ทวารบาล (6.0):** ค่าเริ่มต้น = ข้อความอย่างเดียว ไม่มีผลในระบบ · ถ้าอยากให้มีผลจริง (เช่น ต้านสะกดจิตระดับเบา) ต้องบอก Toby
+2. **คดีญาตินัวร์เป็นคดีญาติที่ 6 (7.1):** ค่าเริ่มต้น = ขึ้นหลังคดีญาติ 5 คดีตามสเปก เมื่อจ้างนัวร์ · เงื่อนไขเสริม "เคยกดสั่งงานครัว" เป็นทางเลือก
+3. **ระยะเวลาซิบิลไปรับทัณฑ์ (5.3):** ค่าเริ่มต้น = เท่าโทษวิญญาณสั้น ๆ Toby ตั้ง ไม่ตายตัวสามวาระ
