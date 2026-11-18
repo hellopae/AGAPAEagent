@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T22:26:36.574Z",
+  "updatedAt": "2026-11-18T22:35:01.670Z",
   "agents": [
     {
       "id": "claudy",
@@ -69,7 +69,7 @@
         "Fact-check ทุก output จากทุก Agent ก่อน Chris QA",
         "ตรวจ ✅ VERIFIED / ⚠️ UNVERIFIED / ❌ INCORRECT ทุก claim"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Reese fact-check R2 part A",
       "report": {
         "when": "22:02",
