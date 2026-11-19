@@ -217,3 +217,10 @@
 - ส่วน C: `Output/Rae/2026-11-19-avegee-r2c-zone3.md` (921 บรรทัด) · อัญเชิญ เอียร์ลิน/ยอร์มุนกันดร์ (รวม 9) · พลัง hypno/valkyrieSpear/ice · ภาพใหม่ 20–24 · Reese ตรวจอยู่
 - Claudy พบเบี่ยงต้นฉบับ: Rae ให้นิราต้านสะกดจิตได้ แต่คุณเป้ "ทุกคน ยกเว้น แวน เฮลซิง" → ใส่ FIX LIST ให้แก้ตามต้นฉบับ
 - ภาพเดิมที่มีสำหรับ C: `img/frontier-west-hypnosis-v1.webp` · `img/z3-events/` (cerberus, jormungandr, eirlin-spearrain, valdric-batstorm)
+
+### 19 พ.ย. 09:10 — ตั้งคิว Codex รอ reset
+- คุณเป้: "codex reset พรุ่งนี้ 10.36 am" = **20 พ.ย. 10:36** (ตรงกับ "try again at Nov 20th 10:36 AM")
+- `Output/Codex/runs/queue-ko-pose-1118.py` เพิ่มรอถึง 20 พ.ย. 10:38 → set_mode both → KO-A+B → KO-C+D · ปล่อยแล้วด้วย nohup+caffeinate (pid 18889) · log `queue-ko-pose-1118.log`
+- ฐาน: AVEGEE main `448cbc12` (G1) — ใบงาน KO วาดล้วน ไม่ขึ้นกับ G1
+- คิว Codex ถัดไปยังไม่มีใบงาน (Claudy เขียนระหว่างรอ): ต้นทองประตูสวรรค์, สีดา e2/e3, ไอคอน H3, ท่ารับ/กินข้าวปั้น, ชุดยามาโซน 4, ภาพ R2 ส่วน A–D
+- R2: Rae กำลังแก้ C + เขียน D (เริ่มใหม่หลังลิมิต 9:00)
