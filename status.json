@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T02:37:50.801Z",
+  "updatedAt": "2026-11-19T03:37:36.717Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby T4 lamp summon system",
       "report": {
         "when": "11:59",
