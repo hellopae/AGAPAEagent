@@ -1,6 +1,6 @@
 # AVEGEE R2 ส่วน D · ชายแดน 3-4 → โซน 4 → ฉากจบ (บทหลัก v2)
 ผู้เขียน: Rae · 19–20 พ.ย. 2569 · ใบงาน `Output/Claudy/briefs/2026-11-19-avegee-r2-story-v2-rae.md` (ส่วน D) · ต้นฉบับคุณเป้ `Output/Claudy/briefs/2026-11-18-avegee-owner-feedback-night.md` (G13 G27 G28 G29 G30 + D1–D7 + ต้นฉบับตรงตัวส่วน "โซน3 ;" ท้าย "โซน4 ;" และฉากจบ)
-สถานะ: **ร่างพร้อมเสียบ · ยังไม่ผ่าน Reese** · ไม่ได้แตะโค้ด ไม่ได้แก้ไฟล์บทเดิม · ต่อเนื่องจากส่วน A (`2026-11-19-avegee-r2a-zone1-2.md`) ส่วน B (`…-r2b-zone2-3.md`) และส่วน C (`…-r2c-zone3.md` ฉบับแก้ตาม Reese 19 พ.ย. + คำตอบคุณเป้ 20 พ.ย.)
+สถานะ: **ร่างพร้อมเสียบ · Reese ตรวจ 19 พ.ย. ได้ FIX LIST 9 ข้อ → Rae แก้ 1 รอบแล้ว (ดูท้ายไฟล์ "แก้ตาม Reese 19 พ.ย.") · รอ Claudy ตัดสินต่อ** · ไม่ได้แตะโค้ด ไม่ได้แก้ไฟล์บทเดิม · ต่อเนื่องจากส่วน A (`2026-11-19-avegee-r2a-zone1-2.md`) ส่วน B (`…-r2b-zone2-3.md`) และส่วน C (`…-r2c-zone3.md` ฉบับแก้ตาม Reese 19 พ.ย. + คำตอบคุณเป้ 20 พ.ย.)
 อ่านโค้ดแล้ว (อ่านอย่างเดียว): `src/final-event.js` · `src/story.js` · `src/signal-arc.js` · `src/e1-content.js` (SIGNAL_STORIES) · `src/narrative-cutscenes.js` · `src/data.js` (BOSS_NAMES · FINAL_EVENT) · lore bible 28 ต.ค.
 ข้อจำกัดเครื่องมือรอบนี้: ไม่มี grep ไม่มี shell เปิดรายชื่อไฟล์ใน `img/` ไม่ได้ · ช่อง "มีภาพเดิมใช้แทนได้ไหม" ตอบจากชื่อภาพที่ปรากฏในคำสั่งคุณเป้และในโค้ดที่อ่านเท่านั้น ที่ยังไม่ได้เปิดดูภาพจริงเขียนว่า **"Claudy ตรวจ"** · ยังไม่ได้อ่านบท `deva.cyberhell.*` และ `final.reinforcement.*` (หาไม่เจอในส่วนที่อ่าน)
 คีย์ทั้งหมดเป็นข้อเสนอ Toby ปรับได้ · ตัวเลขศึก/คะแนนเป็นค่าตั้งต้น ไม่ได้รันซิม · คัตซีน หน้าต่างแจ้งเตือน บทสู้ ชื่อท่า และสำนวนไต่สวนมี TH/EN ครบ
@@ -70,9 +70,9 @@
 ต้นฉบับ: "ชายแดนโซน 3-4 ในถ้ำเจอ คอลโลเซียม ที่ ลูซิเฟอร์ เป็นผู้ก่อตั้ง · จับปีศาจ วิญญาณต่างๆมาสู้กันเพื่อความสนุก (ต่อสู้เป็นขั้นบันไดไป เจอศัตรู ดังๆในนี้) · วาดตัวละครใหม่ และ cutscene โจมตี · 1 ซามูไร · 2 นินจา (D3: นินจาธรรมดา สู้ปกติ ไม่ถอนตัว) · 3 นักมวยไทย นายขนมต้ม · 4 มิโนทอร์ · 5 เมดูซา · 6 โจรสลัด · 7 มนุษย์ต่างดาว · 8 หุ่นยนต์ตัวใหญ่ · 9 ธอร์ (ชนะแล้ว อัญเชิญได้) · 10 ลูซิเฟอร์ (ชนะแล้ว อัญเชิญได้) · และเมื่อเดินไปถึงประตูโซน 4 เงียบมาก ไม่มียามอะไรเฝ้าอยู่ สามารถเดินเข้าประตูได้เลย"
 
 **ข้อควรระวังเนื้อหา [R]:**
-- **ลูซิเฟอร์:** เป็น **เจ้าของโคลอสเซียมในโลกของเกม** เท่านั้น · ไม่เรียกว่าซาตาน ปีศาจร้าย หรือเจ้าแห่งนรก · ไม่มีเขา ไม่มีสัญลักษณ์ศาสนา ไม่มีบทล้อเลียนหรือเสียดสีศาสนาใด ไม่มีบทที่ยามาหรือใครสวดหรือขับไล่ · เขาเป็นโปรโมเตอร์สังเวียนที่ถือกติกา **ให้ Reese + chris-culture ตรวจ**
-- **ธอร์:** เทพในปกรณัมนอร์ส (ผู้นับถือ Ásatrú ยังมี · ตามที่ Reese ยืนยันในส่วน C) · เขียนเป็นแชมป์สังเวียนผู้ซื่อ ไม่ล้อ ไม่ใช้ประโยคหรือชุดเด่นของฉบับภาพยนตร์/การ์ตูนใด (ไม่เอ่ย "อัสการ์ด" ไม่ใช้ผ้าคลุมแดน) ค้อน = "ค้อนสายฟ้า"
-- **นายขนมต้ม:** บุคคลในประวัติศาสตร์/ตำนานของไทย (ตามเรื่องเล่าว่าชนะนักมวยพม่าติดต่อกัน 10 คนต่อหน้าพระมหากษัตริย์พม่า) · เขียนด้วยความเคารพ เป็นนักสู้ที่เดินเข้าสังเวียนด้วยตัวเอง ไม่ใช่ตัวตลก · **[R] Reese ยืนยัน** ว่าตัวละครนี้ใช้ได้ และถ้อยคำ "ชนะสิบคนติด" เล่าแบบตำนานได้
+- **ลูซิเฟอร์:** เป็น **เจ้าของโคลอสเซียมในโลกของเกม** เท่านั้น · ไม่เรียกว่าซาตาน ปีศาจร้าย หรือเจ้าแห่งนรก · ไม่มีเขา ไม่มีสัญลักษณ์ศาสนา ไม่มีบทล้อเลียนหรือเสียดสีศาสนาใด ไม่มีบทที่ยามาหรือใครสวดหรือขับไล่ · เขาเป็นโปรโมเตอร์สังเวียนที่ถือกติกา · **Reese ตรวจ 19 พ.ย.: ผ่าน ไม่ล้อศาสนา (ไม่มีเขา/ปีก/สัญลักษณ์) · ห้ามเพิ่ม เปียโน ไนต์คลับ สูท (กลิ่นลูซิเฟอร์ฉบับทีวี) · รอบ ship ส่ง chris-culture**
+- **ธอร์:** เทพในปกรณัมนอร์ส (ผู้นับถือ Ásatrú ยังมี · **Reese ตรวจ 19 พ.ย.: ธอร์ไม่มีข้อแก้**) · เขียนเป็นแชมป์สังเวียนผู้ซื่อ ไม่ล้อ ไม่ใช้ประโยคหรือชุดเด่นของฉบับภาพยนตร์/การ์ตูนใด (ไม่เอ่ย "อัสการ์ด" ไม่ใช้ผ้าคลุมแดน) ค้อน = "ค้อนสายฟ้า"
+- **นายขนมต้ม:** บุคคลในประวัติศาสตร์/ตำนานของไทย (ตามเรื่องเล่าว่าชนะนักมวยพม่าติดต่อกัน 10 คนต่อหน้าพระมหากษัตริย์พม่า) · เขียนด้วยความเคารพ เป็นนักสู้ที่เดินเข้าสังเวียนด้วยตัวเอง ไม่ใช่ตัวตลก · **[R] Reese ตรวจ 19 พ.ย.: ผ่านด้านความเคารพ** (เกมให้ลงสังเวียนเองต่างจากตำนานเชลย) · แก้ธรรมเนียมมวยไทยตามข้อ 1.4 (มงคล/ประเจียด · ดูหัวข้อ 1.5) · รอบ ship ส่ง chris-culture
 - **มิโนทอร์ · เมดูซา:** ตำนานกรีก (ไม่ใช่ศาสนาที่ยังมีผู้นับถือเป็นหลัก) · เมดูซาเขียนแบบโศกเศร้า ไม่ชั่ว · ไม่มีภาพเลือด ไม่มีภาพกินคน
 - **ซามูไร · นินจา · โจรสลัด · มนุษย์ต่างดาว · หุ่นยนต์ยักษ์:** ตัวละครแบบทั่วไป (archetype) **ไม่ใช้ตัวเฉพาะจากการ์ตูน/ภาพยนตร์/เกมใด** (ไม่ใช่ซีโนมอร์ฟ ไม่ใช่หุ่นรบในอนิเมะใด) · ซามูไรไม่ใช่มูซาชิ (มูซาชิเป็นเพื่อนของยามา)
 - **จริยธรรมของสังเวียน:** ผู้สู้ทุกตัว "ลงชื่อเอง" ไม่ถูกจับมาทรมาน · ไม่มีเลือดชัด ไม่มีภาพตาย ผู้แพ้ถอยออกจากสังเวียนไปพักเหมือนกีฬา
@@ -162,8 +162,9 @@
 | 5 | เมดูซา / Medusa | "อย่าสบตาข้านานเกินไป ข้าไม่อยากให้ท่านแข็ง ข้าอยากให้ท่านสู้" / "Do not hold my eyes for too long. I do not want you to freeze. I want you to fight." | "นานแล้วที่ไม่มีใครมองข้าแล้วยังยืนอยู่ ขอบใจ" / "It has been long since anyone looked at me and still stood. Thank you." | สายตาหินแข็ง / Gaze of Stone (ลดความเร็วทีม 1 รอบ) |
 | 6 | กัปตันโจรสลัดคลื่นเงิน / Captain Silverwave, Pirate | "ข้าชนะมาแปดครั้ง ท่านจะเป็นครั้งที่เก้าที่ล้มข้าได้หรือเปล่า" / "I have won eight times. Will you be the ninth to bring me down?" | "ธงข้าตกแล้ว ท่านเอาไปไม่ได้ แต่ท่านสมควรได้ชื่อไปเล่าต่อ" / "My flag is down. You cannot have it, but you deserve a name to tell of." | ปืนใหญ่ไล่คลื่น / Broadside |
 | 7 | ผู้มาเยือนจากดาวเก่า / The Visitor From an Old Star | "ข้าไม่เข้าใจกติกาของท่าน แต่ข้าเข้าใจการชนะ" / "I do not understand your rules, but I understand winning." | "ท่านสู้เหมือนผู้ที่รู้ว่าข้าเป็นใคร ข้าพอใจ" / "You fight like one who knows what I am. I am content." | ลำแสงสแกนร่าง / Scanning Beam |
-| 8 | ยักษ์เหล็กซี-8 / The Iron Giant C-8 | "[กำลังประมวลผล: ผู้ท้าชิง 3 คน ความน่าจะเป็นชนะ 4%] ข้าจะสู้ตามคำสั่ง" / "[Processing: 3 challengers, win probability 4%] I will fight as ordered." | "[ผลคำนวณผิดพลาด] ข้าบันทึกว่าท่านสูงกว่าตัวเลข" / "[Calculation error] I record that you exceeded the numbers." | หมัดเหล็กจากฟ้า / Iron Fist From Above |
-- บรรทัดของยักษ์เหล็กซี-8 ใช้รูปแบบข้อความระบบ ไม่ใช่เสียงตลก · ไม่ใช้ชื่อหรือคำพูดของหุ่นรบในอนิเมะ/ภาพยนตร์ใด
+| 8 | ยักษ์เหล็กซี-8 / C-8, the Steel Colossus | "[กำลังประมวลผล: ผู้ท้าชิง 3 คน ความน่าจะเป็นชนะ 4%] ข้าจะสู้ตามคำสั่ง" / "[Processing: 3 challengers, win probability 4%] I will fight as ordered." | "[ผลคำนวณผิดพลาด] ข้าบันทึกว่าท่านสูงกว่าตัวเลข" / "[Calculation error] I record that you exceeded the numbers." | หมัดเหล็กจากฟ้า / Iron Fist From Above |
+- บรรทัดของยักษ์เหล็กซี-8 ใช้รูปแบบข้อความระบบ ไม่ใช่เสียงตลก · ไม่ใช้ชื่อหรือคำพูดของหุ่นรบในอนิเมะ/ภาพยนตร์ใด · **ชื่อ EN ทุกจุดใช้ `C-8, the Steel Colossus`** (ไม่ใช้ "The Iron Giant" เพราะชนชื่อภาพยนตร์ปี 1999 · Reese 19 พ.ย. ข้อ 1.1) · TH คง "ยักษ์เหล็กซี-8"
+- **นายขนมต้ม (ด่าน 3 · ธรรมเนียมมวยไทย · Reese 19 พ.ย. ข้อ 1.4):** TH นายขนมต้ม: ผ้าประเจียดที่แขน ไม่สวมมงคลระหว่างชก (ภาพไหว้ครูถือหรือวางมงคลไว้มุมเวที) · มงคลและประเจียดเป็นของเคารพตามธรรมเนียม ห้ามทำตก ห้ามล้อ / EN Nai Khanom Tom: prajioud armbands on his arms, no mongkol worn during the bout (shown only during the wai khru, held or set at the corner). Both are blessed objects: never dropped, never mocked.
 - นิราบรรทัดสั้นหลังด่าน 3: "ท่านคะ ดิฉันขอบันทึกว่านายขนมต้มไหว้ผู้ชนะก่อนลงจากเวทีค่ะ" · EN Nira: "I note for the record that Nai Khanom Tom paid his respects to the victor before leaving the stage, sir."
 - HOME-67 บรรทัดสั้นหลังด่าน 7: "ผมเดาว่าเขาไม่ใช่เหยื่อและไม่ใช่ผู้ร้ายครับ เขาเป็นแขกที่ผ่านมาแล้วไม่มีใครส่งกลับบ้าน" · EN HOME-67: "I guess he is neither victim nor villain. He is a guest who passed through and was never sent home."
 
@@ -278,8 +279,9 @@
 **NZ-1 · แบนเนอร์ศึก** ไทย: ลานเทวดาโซน 4 · ลูเมน-01 · EN: Zone 4 · The Deva Court · Lumen-01
 **NW-1 · ได้นาฬิกาวิเศษ**
 - หัวข้อ: นาฬิกาย้อนเวลา · EN: The Clock That Turns Back Time
-- ข้อความ: ท่านได้นาฬิกาวิเศษ ใช้คืนคูลดาวน์ให้ทีมกลางศึก ใช้ได้ครั้งเดียวต่อการต่อสู้ แล้วไปเติมพลังได้ที่หอกระจก (รายละเอียดตามรางวัล `cooldownClock` เดิม)
-- EN: You have received the Magic Clock. It returns the team's cooldowns mid-battle, once per battle, and can be recharged at the Mirror Tower (details as in the existing `cooldownClock` reward).
+- ข้อความ: ท่านได้นาฬิกาวิเศษ ใช้คืนคูลดาวน์ให้ทีมกลางศึก เมื่อพลังหมดให้ไปเติมที่หอกระจก (รายละเอียดตามรางวัล `cooldownClock` เดิม)
+- EN: You have received the Magic Clock. It returns the team's cooldowns mid-battle. When its power is spent, recharge it at the Mirror Tower (details as in the existing `cooldownClock` reward).
+- (Reese 19 พ.ย. ข้อ 3.7 + Claudy grep `src/`: ไม่พบกติกา "ครั้งเดียวต่อศึก" ในโค้ด จึงตัดออก)
 - ปุ่ม: ต่อ · EN: Continue
 **NZ-2 · ปล่อยซิสอ็อปกับพ่อค้า**
 - หัวข้อ: ปล่อยผู้ถูกกัก · EN: The Held Are Released
@@ -340,17 +342,17 @@
   { title:{ th:'อ่านออกก่อนข้า', en:'You Read It Before I Did' }, line:{ th:
     'ลูเมน-01: "ท่านอ่านรอยแก้ที่ข้าเฉลียวไม่ทัน ป้ายของทั้งสองไม่ได้ถูกเขียนด้วยมือยมทูต ข้าขออภัย ข้ากักผู้บริสุทธิ์ไว้หลายชั่วโมง"\n'
   + 'บรรยาย: เทวดายื่นนาฬิกาพกทรงกลมที่หน้าปัดเป็นวงแสงฟ้าขาวให้ยามา เข็มสีทองบางหมุนย้อนหนึ่งรอบแล้วหยุด คุกแสงสองใบสลายเป็นเกล็ดแสงบาง ๆ\n'
-  + 'ลูเมน-01: "นาฬิกานี้ย้อนเวลาของพลังที่ถูกใช้ไปแล้ว ใช้ได้ครั้งเดียวต่อศึก และต้องไปเติมที่หอกระจก ข้าไม่ให้ใครง่าย ๆ"\n'
+  + 'ลูเมน-01: "นาฬิกานี้ย้อนเวลาของพลังที่ถูกใช้ไปแล้ว เมื่อพลังหมดต้องไปเติมที่หอกระจก ข้าไม่ให้ใครง่าย ๆ"\n'
   + 'ยมบาทน้อย: "ผมขอบคุณครับ และผมจะไม่ใช้อย่างสิ้นเปลือง"',
     en:
     'Lumen-01: "You read the alteration I did not think to question. The tags on those two were not written by a reaper\'s hand. I apologise. I held the innocent for hours."\n'
   + 'Narration: The deva holds out a round pocket clock whose dial is a ring of blue-white light. A thin golden hand turns once backward and stops. The two cages of light dissolve into thin flakes.\n'
-  + 'Lumen-01: "This clock turns back the time of power already spent. It works once per battle and must be recharged at the Mirror Tower. I do not give it easily."\n'
+  + 'Lumen-01: "This clock turns back the time of power already spent. When it runs dry it must be recharged at the Mirror Tower. I do not give it easily."\n'
   + 'Yama: "I thank you, and I will not use it wastefully."' } },
   { title:{ th:'ที่ท่าเรือ', en:'At the Harbour' }, line:{ th:
     'ซิสอ็อป: "ท่านผู้ถือบัญชี ขอบคุณครับ ผมจะกลับไปทำงานที่ผมเคยทำ ผมจะเริ่มตรวจทุกแฟ้มที่ผมแตะอีกรอบ"\n'
   + 'พ่อค้านรก: "ข้ามีของจะขาย แต่ตอนนี้ข้าให้ท่านเลือกก่อนเลย ท่านเห็นอะไรก็ถามราคาได้"\n'
-  + 'HOME-67: "ผมขอถอนตัวจากทีมตรงนี้ครับ ท่านยมบาทน้อย ผมจะไปยืนที่ท่าเรือ สิ่งที่ผมตามมาทุกโซนมันต้องส่งอะไรผ่านท่าเรือแน่ ๆ ผมจะดู ที่เหลือผมมีของฝากให้ท่านที่นั่น"',
+  + 'HOME-67: "ผมขอถอนตัวจากทีมตรงนี้ครับ คุณยมบาทน้อย ผมจะไปยืนที่ท่าเรือ สิ่งที่ผมตามมาทุกโซนมันต้องส่งอะไรผ่านท่าเรือแน่ ๆ ผมจะดู ที่เหลือผมมีของฝากให้ท่านที่นั่น"',
     en:
     'Sysop: "Keeper of the ledger, thank you. I will go back to the work I did. I will recheck every file I ever touched."\n'
   + 'Hell Merchant: "I have goods to sell, but this once you may look first and ask a price for anything you see."\n'
@@ -458,10 +460,12 @@ N7-1 → เดินลงชายแดนล่าง → HOME-67 วิ่�
 - ปุ่ม: รับทราบ · EN: Understood
 - ป้ายรองใต้ชื่อ: **ผู้เฝ้าด่านนรกเครือข่าย** · EN `Gate Guard of the Network Hell` (**ยืนยันชื่อโซนกับ `ZONES` ก่อนวาง** · รูปแบบเดียวกับ NG-4 ส่วน A · ตัวเลข 1 นาทีตาม H1)
 ### 4.3 บทระหว่างระลอก
-- เริ่มระลอก 1 HOME-67: "ผมมาช่วยครับ ผมเห็นเสียงเตือนบนกระจกจากท่าเรือ" · EN HOME-67: "I came to help. I saw the alert on my pane from the harbour."
+- **`z4-troj-pre` เล่น "ก่อนระลอก 1"** (ตามต้นฉบับคุณเป้ + หัวข้อ 4.1 · Reese 19 พ.ย. ข้อ 3.5) · ตามด้วยบรรทัดเริ่มด้านล่าง แล้วเข้าระลอก 1
+- ตอน HOME-67 วิ่งมาสมทบ (ก่อน `z4-troj-pre`) HOME-67: "ผมมาช่วยครับ ผมเห็นเสียงเตือนบนกระจกจากท่าเรือ" · EN HOME-67: "I came to help. I saw the alert on my pane from the harbour."
 - หลังระลอก 1 นิรา: "ท่านคะ ปีศาจพวกนี้ไม่ได้บุกจากด้านหน้า ดิฉันเห็นประตูหลังของชายแดนเปิดค้างอยู่ค่ะ" · EN Nira: "Sir, these demons are not attacking from the front. I can see the back door of the frontier standing open."
-- หลังระลอก 2 HOME-67: "ผมจะเรียกผู้เฝ้าด่านของโซนนี้ออกมาช่วยอีกคน เขายังไม่เคยต้องออกมาครับ" · EN HOME-67: "I will call this zone's gate guard to help. He has never had to come out before."
-- หลังระลอก 3 → เล่น `z4-troj-pre` (ข้างล่าง) แล้วเข้าระลอก 4
+- หลังระลอก 2 WATSON-03: "กระผมบันทึกว่าระลอกนี้แรงกว่าระลอกก่อนครับ ท่านยมบาทน้อย ขอให้เตรียมตัวสำหรับระลอกที่สาม" · EN WATSON-03: "I record that this wave was stronger than the last, sir. Please prepare for the third."
+- หลังระลอก 3 นิรา: "ท่านคะ ปีศาจแถวสุดท้ายยังไม่ขยับค่ะ ดิฉันเห็นว่าโทรจัน-9 กำลังรออยู่" · EN Nira: "Sir, the last row of demons has not moved. I see Trojan-9 is waiting."
+- (ลบบรรทัดเดิม "หลังระลอก 2 HOME-67 เรียกผู้เฝ้าด่าน" และ "หลังระลอก 3 → `z4-troj-pre`" ออกแล้ว เพราะ HOME-67 เรียก WATSON-03 ใน `z4-troj-pre` ก่อนระลอก 1 อยู่แล้ว)
 - หลังระลอก 4 นิรา: "โทรจัน-9 กำลังยืนนิ่งอยู่ค่ะ ท่านคะ ฝาท้องม้าไม้เปิดอยู่ มีแสงเขียวมิ้นต์กะพริบข้างใน" · EN Nira: "Trojan-9 is standing quite still, sir. The hatch in the wooden horse's belly is open, with mint-green light blinking inside."
 ```js
 'z4-troj-pre': { title:{ th:'เรียกผู้เฝ้าด่าน', en:'Calling the Gate Guard' }, pages:[
@@ -488,7 +492,7 @@ N7-1 → เดินลงชายแดนล่าง → HOME-67 วิ่�
   + 'Trojan-9: "I ... yield. I am only a door. Someone reached into my belly. I am sorry I was the way the demons came through."\n'
   + 'WATSON-03: "I record that the hatch of Trojan-9 was opened from outside with an authority code whose owner I cannot trace. I propose, sir, that no heavy sentence be passed. The one who was opened is not the one who opened."' } },
   { title:{ th:'ยังไม่ใช่ตัวการ', en:'Not Yet the Cause' }, line:{ th:
-    'HOME-67: "ผมต้องบอกท่านสองคนตรงนี้ ศัตรูตัวนี้ยังไม่ใช่ตัวทำให้เกิดความผิดปกติทั้งหมด มันเป็นเพียงปลายสายหนึ่ง ผมยังไม่เห็นหน้าผู้ถือปลายอีกด้าน"\n'
+    'HOME-67: "ผมต้องบอกคุณสองคนตรงนี้ ศัตรูตัวนี้ยังไม่ใช่ตัวทำให้เกิดความผิดปกติทั้งหมด มันเป็นเพียงปลายสายหนึ่ง ผมยังไม่เห็นหน้าผู้ถือปลายอีกด้าน"\n'
   + 'WATSON-03: "กระผมเสริมว่า ผู้เฝ้าด่านนรกเครือข่ายตั้งแต่บัดนี้จะอยู่ในนามของท่านยมบาทน้อย กระผมไม่ขอให้ท่านเชื่อกระผมก่อนหลักฐานครับ กระผมขอเพียงให้ท่านเรียกกระผมเมื่อท่านต้องการพยานที่ไม่ลืม"\n'
   + 'ยมบาทน้อย: "ผมรับไว้ครับ"\n'
   + 'นิรา: "ดิฉันขอบันทึกว่า WATSON-03 บันทึกครบกว่าดิฉันค่ะ ดิฉันขอลองแข่งดู"',
@@ -557,7 +561,7 @@ N7-1 → เดินลงชายแดนล่าง → HOME-67 วิ่�
   line:'"ฉันร้องเพลงให้เด็กหลับ ไม่ได้ขายเสียง"', en_line:'"I sang to make children sleep. I did not sell my voice."',
   claims:[ { kind:'deny', t:'ฉันไม่เคยเซ็นสัญญาขายเสียง', en:'I never signed a voice-sale contract.', reveal:'"...ฉันเซ็นแค่ใบรับเงินค่าอัดเพลงฟรี ฉันเซ็นไม่ได้เพราะนิ้วฉันงอผิดรูป"', en_reveal:'"...I signed only the receipt for the free recording. I could not sign more. My fingers curl wrongly."' },
            { kind:'boast', t:'ท่านดูบุญของฉันด้วย เสียงของฉันไม่เคยถูกใช้ผิดจุดประสงค์', en:'Count my merit too: my voice was never used for any wrong purpose.', merit:'อ้างว่าเสียงของเธอไม่เคยถูกใช้ผิดจุดประสงค์', reveal:'ท่านถามว่าเสียงเธอถูกใช้ในสายโทรศัพท์หลอกลวงคนแก่หลายสาย เธอสะอื้น — เธอไม่รู้', en_reveal:'You ask whether her voice has been used on phone lines to deceive the elderly. She sobs. She did not know.' },
-           { kind:'solid', truth:true, t:'บรรทัดที่ว่าฉันขายเสียงลงวันที่หลังฉันตายสามปี', en:'The line that says I sold my voice is dated three years after I died.', reveal:'ยมบาทน้อยเทียบวันที่ในหอทะเบียนกับใบมรณะ ห่างกันสามปี พอดีกับคดีผู้เสียหายของครูเกษียณ รหัส [PHANTOM-404] เดียวกัน', en_reveal:'Yama compares the registry date with the death certificate. Three years apart, matching the retired teacher\'s case. The same [PHANTOM-404] code.' } ],
+           { kind:'solid', truth:true, t:'บรรทัดที่ว่าฉันขายเสียงลงวันที่หลังฉันตายสามปี', en:'The line that says I sold my voice is dated three years after I died.', reveal:'ยมบาทน้อยเทียบวันที่ในหอทะเบียนกับใบมรณะ ห่างกันสามปี และรหัส [PHANTOM-404] ที่ท้ายหน้าตรงกับรหัสบนป้ายของซิสอ็อปและบรรทัดปลอมของครูเกษียณ', en_reveal:'Yama compares the registry date with the death certificate. Three years apart, and the [PHANTOM-404] code at the foot of the page matches the tags on Sysop and the forged line in the retired teacher\'s ledger.' } ],
   secret:'ส่องกระจกแล้ว พบไมโครโฟนเก่าที่ยังอุ่นอยู่ทั้งที่ไม่มีใครถือ และเสียงกล่อมเด็กในห้องว่าง', en_secret:'The mirror shows an old microphone still warm though no one holds it, and a lullaby sung in an empty room.',
   reward:'หญิงนักร้องหายใจเข้าลึก ๆ แล้วร้องกล่อมเบา ๆ หนึ่งท่อน ก่อนเดินไปสถานี เสียงนั้นไม่เหมือนเสียงที่ถูกลอก', en_reward:'The singer draws a deep breath and hums one soft line before walking to the station. That voice is nothing like the copied one.',
   fail:'หญิงนักร้องกอดไมโครโฟนเก่าไว้แน่นแล้วรับคำตัดสิน', en_fail:'The singer hugs the old microphone tight and accepts the verdict.' }
@@ -608,12 +612,12 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
   + 'Yama: "I will transfer nothing to you."\n'
   + 'HOME-67: "I travelled through every zone to see this face."' } },
   { title:{ th:'ลายนิ้วมือกับใบหน้า', en:'Fingerprint and Face' }, line:{ th:
-    'HOME-67: "ในส่วนที่ผ่านมา ผมบอกคุณว่า [PHANTOM-404] เป็นแค่ลายนิ้วมือ ไม่ใช่ใบหน้า วันนี้ผมเห็นใบหน้า ผมเอ่ยชื่อมันได้แล้ว เพราะศาลาแห่งนี้ถูกตัดจากภายนอกด้วยกำแพงของสำนักงานผมที่ผมวางไว้ตอนเดินเข้ามา ระยะสิบนาที หลังจากนั้นศัตรูเอื้อมมาแก้ได้อีก"\n'
+    'HOME-67: "ที่ท่าเรือโซน 3 ผมบอกคุณว่า [PHANTOM-404] เป็นแค่ลายนิ้วมือ ไม่ใช่ใบหน้า วันนี้ผมเห็นใบหน้าแล้ว ผมเอ่ยชื่อมันได้แล้ว เพราะศาลาแห่งนี้ถูกตัดจากภายนอกด้วยกำแพงของสำนักงานผมที่ผมวางไว้ตอนเดินเข้ามา ระยะสิบนาที หลังจากนั้นศัตรูเอื้อมมาแก้ได้อีก"\n'
   + 'ยมบาทน้อย: "ผมรอคำที่คุณสัญญาไว้ครับ"\n'
   + 'HOME-67: "ผมจะพูดชื่อ ตามที่ตกลงกัน คุณยืนอยู่ข้างหน้าผมนะครับ"\n'
   + 'บรรยาย: ยมบาทน้อยก้าวขึ้นหนึ่งก้าวยืนบังหน้า HOME-67 นิรายกแฟ้มขึ้นเหมือนโล่ WATSON-03 ยกแผ่นบันทึกขึ้นพร้อมกัน',
     en:
-    'HOME-67: "In the earlier part I told you [PHANTOM-404] was only a fingerprint, not a face. Today I see the face. I can speak its name now, because this hall has been cut off from outside by my office\'s wall, which I laid down as we walked in. Ten minutes. After that the enemy can reach in and edit again."\n'
+    'HOME-67: "At the Zone 3 harbour I told you [PHANTOM-404] was only a fingerprint, not a face. Today I see the face. I can speak its name now, because this hall has been cut off from outside by my office\'s wall, which I laid down as we walked in. Ten minutes. After that the enemy can reach in and edit again."\n'
   + 'Yama: "I am waiting for the thing you promised."\n'
   + 'HOME-67: "I will say the name, as agreed. Please stand in front of me."\n'
   + 'Narration: Yama steps forward one step to stand before HOME-67. Nira lifts her file like a shield. WATSON-03 raises his log-plate at the same moment.' } },
@@ -692,7 +696,37 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
   + 'Van Helsing: "Keeper of the ledger, I do not hear that voice, but I see it in their eyes. I know how to look for it. Those who are forced are not at fault. Go. I keep this gate myself."' } },
 ]},
 ```
-- `z2-fire` · `z1-fire` โครงเดียวกัน (1 หน้า ใช้ได้ทุกบรรทัดเป็นของใหม่ · ข้อความ TH/EN ในรูปแบบเดียวกับ `z3-fire` · **ผมเขียนตัวอย่าง z3 ฉบับเต็ม ส่วน z2/z1 ให้ Toby ใช้เทมเพลตนี้โดยเปลี่ยน**: z2 = ท่าเรือบูรพาไหม้ โคมแดงดับ · ยมทูตโกคุ โฮมุระ ซาโตริ เมกุมิ คุโร ถูกควบคุม · กวนอูยืนที่ประตู: "ข้าไม่ได้ยินเสียงนั้น ข้าถือคำสัตย์ว่าท่านไม่ผิด ไปเถิด" · EN Guan Yu: "I do not hear that voice. I hold my oath that you are not at fault. Go." · z1 = สุวรรณภูมิไหม้ ทัณฑ์ เพลิง กานต์ บุญ ดำ ถูกควบคุม · กุมภัณฑ์ยืนที่ประตู: "ข้า ... ข้ายังกำกระบองอยู่นะ แต่ข้ารู้ว่าผมไม่ควรฟาดใคร ไปเถิดท่าน" · EN Kumphan: "I ... I am still gripping my club, but I know I should not swing it at anyone. Go on, sir.")
+- `z2-fire` · `z1-fire` เขียนเต็ม TH/EN ด้านล่าง (โครงเดียวกับ `z3-fire` · Reese 19 พ.ย. ข้อ 4.1 + 3.4) · **ชื่อ EN ของยมทูตโซน 2 (Goku · Homura · Satori · Megumi · Kuro) และโซน 1 (Taan · Pleng · Kan · Boon · Dam) เป็นการทับศัพท์ของ Rae → Toby/Claudy ตรวจกับชื่อใน `data.js` ก่อนเสียบ**
+```js
+'z2-fire': { title:{ th:'บูรพาที่ไหม้', en:'The East on Fire' }, pages:[
+  { title:{ th:'โคมแดงที่ดับ', en:'The Red Lanterns Out' }, line:{ th:
+    'บรรยาย: ยามาและนิราผ่านประตูบูรพา กวนอูยืนอยู่ที่ประตู มือกุมด้ามง้าวยาว ก้มศีรษะรับอย่างสงบ ท่าเรือบูรพาไหม้เป็นแนวยาว เสาไม้แดงเหลือแต่โครงดำ โคมกระดาษแดงที่เคยแขวนเรียงตลอดท่าเรือดับสนิท เศษกระดาษไหม้ห้อยลงมาตามขอบ โกคุ โฮมุระ ซาโตริ เมกุมิ และคุโรยืนนิ่งอยู่ที่ประจำ ตามีเส้นแสงเขียวพาด\n'
+  + 'โกคุ: "ขวาง ... ไว้ ... ทุก ... ทาง"\n'
+  + 'นิรา: "ท่านคะ ดิฉันเห็นเส้นแสงเขียวที่ตาพวกเขาเหมือนที่ปัจฉิมค่ะ แต่ที่นี่ทุกคนยังยืนตามที่ประจำของตัวเอง ดิฉันเห็นว่าพวกเขายังพยายามทำหน้าที่ แม้ไม่รู้ว่าทำเพื่อใคร"\n'
+  + 'ยมบาทน้อย: "ผมจะไม่ให้ใครถูกกล่าวหาเพราะเสียงที่ไม่ใช่ของเขาครับ"\n'
+  + 'กวนอู: "ข้าไม่ได้ยินเสียงนั้น ข้าถือคำสัตย์ว่าท่านไม่ผิด ไปเถิด"',
+    en:
+    'Narration: Yama and Nira pass the Eastern Gate, where Guan Yu stands, one hand on the haft of his long blade, and bows his head to them calmly. The Eastern harbour burns in a long line. The red timber posts are black frames. The red paper lanterns that once hung along the whole harbour are dark, scraps of burnt paper dangling from their rims. Goku, Homura, Satori, Megumi and Kuro stand motionless at their posts, a line of green light across their eyes.\n'
+  + 'Goku: "Block ... every ... road."\n'
+  + 'Nira: "Sir, I see the green line in their eyes, as in the West. But here every one of them still stands at his own post. I think they are still trying to do their duty, though they do not know for whom."\n'
+  + 'Yama: "I will not let anyone be blamed for a voice that is not his own."\n'
+  + 'Guan Yu: "I do not hear that voice. I hold my oath that you are not at fault. Go."' } },
+]},
+'z1-fire': { title:{ th:'สุวรรณภูมิที่ไหม้', en:'Suvarnabhumi on Fire' }, pages:[
+  { title:{ th:'บ้านที่เริ่มงาน', en:'Where the Work Began' }, line:{ th:
+    'บรรยาย: ยามาและนิราผ่านประตูสุวรรณภูมิ กุมภัณฑ์ยืนอยู่ที่ประตู ในมือยังกำกระบองไว้แต่ปลายกระบองชี้ลงพื้น หอทะเบียนยมทูตหลังแรกที่ยามาเคยทำงานไหม้เหลือแต่โครงดำ ป้ายชื่อหอไหม้เกรียมอ่านได้ไม่ครบ ควันบางลอยเหนือแนวเสา ทัณฑ์ เพลิง กานต์ บุญ และดำยืนนิ่งอยู่ที่ประจำ ตามีเส้นแสงเขียวพาด\n'
+  + 'ทัณฑ์: "ขวาง ... ไว้ ... ทุก ... ทาง"\n'
+  + 'นิรา: "ท่านคะ ที่นี่คือที่ที่ท่านเริ่มงานใช่ไหมคะ ดิฉันขอโทษที่ต้องให้ท่านเห็นแบบนี้ค่ะ"\n'
+  + 'ยมบาทน้อย: "ผมรู้ครับ ผมจะกลับมาให้ทุกคนที่นี่ได้ยินเสียงผมอีกครั้ง"\n'
+  + 'กุมภัณฑ์: "ข้า ... ข้ายังกำกระบองอยู่นะ แต่ข้ารู้ว่าข้าไม่ควรฟาดใคร ไปเถิดท่าน"',
+    en:
+    'Narration: Yama and Nira pass the Suvarnabhumi Gate, where Kumphan stands, his club still in his grip but its tip pointed at the ground. The first reaper registry hall where Yama ever worked is a black frame, its name-board scorched past reading, thin smoke drifting above the row of posts. Taan, Pleng, Kan, Boon and Dam stand motionless at their posts, a line of green light across their eyes.\n'
+  + 'Taan: "Block ... every ... road."\n'
+  + 'Nira: "Sir, this is where you began your work, is it not? I am sorry you have to see it like this."\n'
+  + 'Yama: "I know. I will come back so that everyone here hears my voice again."\n'
+  + 'Kumphan: "I ... I am still gripping my club, but I know I should not swing it at anyone. Go on, sir."' } },
+]},
+```
 - ยมทูตที่ถูกควบคุมไม่สู้ (ยืนนิ่ง แตะแล้วขึ้นบรรทัดสั้น "ขวาง ... ไว้ ... ทุก ... ทาง" TH/EN `Block ... every ... road.`)
 ### 7.3 ปลดปล่อยโซน 3 → 2 → 1 (SIG เดิม + บทปลดปล่อย)
 ลำดับต่อโซน: เข้าโซน → `zN-fire` → เดินไปชายแดนของโซน → `signal-<zone>-open` (เดิม 2 หน้า ใช้ตรงตัว) → สู้ (SIG เดิม) → `signal-<zone>-win` (เดิม ใช้ตรงตัว) → **`zN-restored` (ใหม่ 1 หน้า)** + NR-1
@@ -711,7 +745,39 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
   + 'Yama: "It is all right. Everyone is back."' } },
 ]},
 ```
-- `z2-restored` · `z1-restored` ใช้เทมเพลตเดียวกัน (1 หน้า): ไฟดับ · ยมทูตของโซนนั้นตื่น (ตัวเลขนับ "สอง" ของอากุระ / "หนึ่ง" ของทัณฑสูร ตามที่ SIG เดิมเขียน) · Guard ของโซนพูด 1 บรรทัด · ท่าเรือเปิดเสียงคลิก
+- `z2-restored` · `z1-restored` เขียนเต็ม TH/EN ด้านล่าง (โครงเดียวกับ `z3-restored` · ไฟดับ · ยมทูตของโซนนั้นตื่น · ตัวเลขนับ "สอง" ของอากุระ / "หนึ่ง" ของทัณฑสูร ตามที่ SIG เดิมเขียน · Guard ของโซนพูด 1 บรรทัด · ท่าเรือเปิดเสียงคลิก · Reese 19 พ.ย. ข้อ 4.1)
+```js
+'z2-restored': { title:{ th:'บูรพาตื่นอีกครั้ง', en:'The East Wakes Again' }, pages:[
+  { title:{ th:'โคมดวงแรก', en:'The First Lantern' }, line:{ th:
+    'บรรยาย: เมื่ออากุระพ่าย แสงเขียวหลุดจากตาของโกคุ โฮมุระ ซาโตริ เมกุมิ และคุโรพร้อมกัน เปลวไฟตามเสาแดงสะดุดแล้วดับ โคมกระดาษดวงแรกที่ปลายท่าเรือกลับสว่างเป็นสีแดงอุ่น แล้วดวงถัดไปติดตามกันมาเป็นแถว ท่าเรือบูรพาที่ถูกแสงเขียวล็อกส่งเสียงคลิกเป็นเสียงกลอนเปิด\n'
+  + 'โกคุ: "ข้า ... ข้าได้ยินเสียงนับในหัวนับ \'สอง\' ซ้ำ ๆ มาตลอด ตอนนี้มันเงียบแล้ว ข้าไม่รู้ว่าข้าทำอะไรไปบ้าง"\n'
+  + 'ซาโตริ: "ท่านผู้ถือบัญชี ดิฉันเห็นท่านยืนอยู่ตลอด ดิฉันขอบคุณที่ท่านไม่ถอย"\n'
+  + 'กวนอู: "ข้าบอกท่านแล้วว่าท่านไม่ผิด ข้าไม่ได้บอกว่าข้าเป็นห่วงท่านด้วย"\n'
+  + 'ยมบาทน้อย: "ผมขอบคุณครับ ทุกคนกลับมาแล้ว"',
+    en:
+    'Narration: When Akura falls, the green light leaves the eyes of Goku, Homura, Satori, Megumi and Kuro together. The flames along the red posts falter and go out. The first paper lantern at the end of the harbour glows a warm red again, and the next lights after it, one by one in a row. The Eastern harbour, locked by green light, gives a click like a bolt drawn back.\n'
+  + 'Goku: "I ... I heard the counting in my head say \'two\' again and again, all along. Now it has gone quiet. I do not know what I did."\n'
+  + 'Satori: "Keeper of the ledger, I saw you standing there all the time. Thank you for not stepping back."\n'
+  + 'Guan Yu: "I told you that you were not at fault. I did not tell you that I was also worried for you."\n'
+  + 'Yama: "I thank you. Everyone is back."' } },
+]},
+'z1-restored': { title:{ th:'สุวรรณภูมิตื่นอีกครั้ง', en:'Suvarnabhumi Wakes Again' }, pages:[
+  { title:{ th:'เสียงนับที่หยุด', en:'The Counting Stops' }, line:{ th:
+    'บรรยาย: เมื่อทัณฑสูรพ่าย แสงเขียวหลุดจากตาของทัณฑ์ เพลิง กานต์ บุญ และดำพร้อมกัน เปลวไฟตามโครงหอทะเบียนสะดุดแล้วดับ ควันบางจางลงจนมองเห็นแนวเสาทั้งแถว ท่าเรือสุวรรณภูมิที่ถูกแสงเขียวล็อกส่งเสียงคลิกเป็นเสียงกลอนเปิด และท่าเรือทุกโซนสว่างไฟเขียวอ่อนพร้อมกันบนแผ่นกระจกของนิรา\n'
+  + 'เพลิง: "ท่านยมบาทน้อย ข้า ... ข้าได้ยินเสียงนับ \'หนึ่ง\' ในหัวตลอดเวลา ข้านับตามไม่ทัน แต่ข้าไม่เคยลืมว่าท่านเป็นใคร"\n'
+  + 'ดำ: "ถ้าท่านต้องไปต่อ ให้พวกข้าตามไปด้วย ข้าไม่อยากเห็นท่านยืนคนเดียว"\n'
+  + 'กุมภัณฑ์: "ข้าวางกระบองลงแล้ว ข้าดีใจที่ไม่ต้องฟาดใคร"\n'
+  + 'ยมบาทน้อย: "ผมไม่อยากให้พวกท่านเหนื่อยครับ แต่ผมจะเรียกถ้าจำเป็น"\n'
+  + 'นิรา: "ท่านคะ ท่าเรือทุกโซนเปิดแล้วค่ะ เหลือแต่กลับโซน 4"',
+    en:
+    'Narration: When Tanthasura falls, the green light leaves the eyes of Taan, Pleng, Kan, Boon and Dam together. The flames along the frames of the registry hall falter and go out. The thin smoke clears until the whole row of posts can be seen. The Suvarnabhumi harbour, locked by green light, gives a click like a bolt drawn back, and every zone\'s harbour lights a soft green at once on Nira\'s pane.\n'
+  + 'Pleng: "Yama, sir, I ... I heard the counting say \'one\' in my head the whole time. I could not keep count. But I never forgot who you are."\n'
+  + 'Dam: "If you must go on, let us follow. I do not want to see you stand alone."\n'
+  + 'Kumphan: "I have put my club down. I am glad I did not have to swing it at anyone."\n'
+  + 'Yama: "I do not want you to be worn out. But I will call you if it is needed."\n'
+  + 'Nira: "Sir, every harbour is open. Only the way back to Zone 4 remains."' } },
+]},
+```
 - **NR-1 · ท่าเรือเปิดแล้ว (ต่อโซน)** หัวข้อ: ท่าเรือ<ชื่อโซน>เปิดอีกครั้ง · EN: The <Zone> Harbour Is Open Again · ข้อความ: ท่าเรือของโซนนี้กลับมาใช้ได้ ท่านล่องเรือกลับโซนนี้ได้อีกครั้ง · EN: This zone's harbour works again. You may sail back to this zone. · ปุ่ม: รับทราบ · EN: Understood
 ### 7.4 ครบสามโซน → กลับโซน 4
 เมื่อ `signalTh` `signalAsia` `signalWest` ครบ → ท่าเรือทุกแห่งเปิด → เรือพากลับโซน 4 ได้ → ถึงโซน 4 เล่น `cyber-signal-close` (เดิม 3 หน้า ใช้ตรงตัว) + รางวัล `signalClose` เดิม
@@ -743,19 +809,21 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 - หัวข้อ: เนื้อเรื่องสุดท้ายของเกม · EN: The Final Chapter
 - ข้อความ: ท่านกำลังเข้าสู่เนื้อเรื่องสุดท้ายของเกม ก่อนเริ่มโปรดจัดทีม พักและซื้อของให้พร้อม · EN: You are about to enter the final chapter. Before you begin, ready your team, rest and buy what you need.
 - ปุ่ม: เริ่ม / ยังก่อน · EN: Begin / Not yet
+- **คำเตือนเพิ่ม (แสดงเฉพาะเมื่อ quest ลูแปงยังไม่จบ · Reese 19 พ.ย. ข้อ 4.2 · Claudy ตัดสิน):** TH ยังมีงานเสริมของ HOME-67 ค้างอยู่ (จอมโจรที่ยืนเฉย) ถ้าจะเก็บให้ครบ ควรทำก่อนเริ่มเนื้อเรื่องสุดท้าย · EN HOME-67 has a side job still pending (the thief who stands still). If you want to complete everything, finish it before starting the final chapter.
+- (quest ไม่ปิดเมื่อเข้าฉากจบ · ยังทำต่อได้หลังฉากจบ ตามหัวข้อ 9.1)
 **NF-3 · แบนเนอร์** ไทย: ศึกสุดท้าย · ลูกน้องระลอกที่ 1 / 2 / 3 · ผู้ถูกควบคุมทั้งสี่ · อาร์คอน-ศูนย์ · EN: The Final Battle · Wave 1 / 2 / 3 · The Four Under Control · Archon-Zero
 ```js
 'z4-final-open': { title:{ th:'ผู้ตรวจการที่ถือปลายสาย', en:'The Inspector Who Holds the Line' }, pages:[
   { title:{ th:'อาร์คอน-ศูนย์', en:'Archon-Zero' }, line:{ th:
     'บรรยาย: อาร์คอน-ศูนย์ยืนกลางลานข้อมูลของโซน 4 เป็นร่างสูงในเสื้อคลุมสีเทาดำที่แสงเขียวมิ้นต์ไหลเป็นแถวตลอดตัว ใบหน้าเป็นหน้ากากเรียบไม่มีตา HOME-67 ถูกมัดด้วยเส้นแสงเขียวคุกเข่าอยู่ข้างเขา หมวกมีแถบแสงของเขาสว่างเป็นจังหวะช้า ๆ\n'
   + 'อาร์คอน-ศูนย์: "ผู้ถือบัญชี เจ้าเดินผ่านทุกโซนมาถึงที่นี่ ข้าบันทึกทุกก้าว ข้าคือผู้ตรวจการที่ถือปลายสาย ทุกบรรทัดที่ผิดตั้งแต่ต้น ข้าเป็นผู้สั่งให้ผิด เจ้าเรียกข้าว่าอะไรก็ได้ ข้าเรียกเจ้าว่า รายการที่ยังไม่ปิด"\n'
-  + 'HOME-67: "ผมขอโทษที่ถูกจับ ผมไม่ได้ยืนข้างหน้าคุณตามที่สัญญา ... ผมจะพยายามเป็นคนที่ยืนข้างคุณแทน"\n'
-  + 'ยมบาทน้อย: "คุณไม่ได้ผิดสัญญาครับ คุณยืนอยู่ตรงนี้มาตลอด"',
+  + 'HOME-67: "ผมขอโทษที่ถูกจับครับ คุณยืนบังหน้าผมที่ศาลาตามที่ตกลงไว้ แต่ผมกลับให้คุณต้องมาช่วยผมอีกครั้ง ผมจะพยายามเป็นคนที่ยืนข้างคุณแทน"\n'
+  + 'ยมบาทน้อย: "คุณไม่ได้ผิดอะไรครับ คำสัญญานั้นผมเป็นคนรับไว้ และผมยังยืนอยู่ตรงนี้"',
     en:
     'Narration: Archon-Zero stands in the middle of the Zone 4 data square, a tall figure in a grey-black cloak across which mint-green light flows in rows. His face is a smooth mask with no eyes. HOME-67, bound by lines of green light, kneels beside him. The band of light on his cap pulses slowly.\n'
   + 'Archon-Zero: "Keeper of the ledger, you have walked through every zone to reach this place. I recorded every step. I am the inspector who holds the line. Every wrong entry from the beginning, I ordered it wrong. Call me what you will. I call you an Item Not Yet Closed."\n'
-  + 'HOME-67: "I am sorry to have been caught. I did not stand in front of you as I promised ... I will try to be the one who stands beside you instead."\n'
-  + 'Yama: "You did not break your promise. You have been standing here all along."' } },
+  + 'HOME-67: "I am sorry I was caught. You stood in front of me at the hall as we agreed, and yet I have made you come for me again. I will try to be the one who stands beside you instead."\n'
+  + 'Yama: "You have done nothing wrong. I accepted that promise, and I am still standing here."' } },
   { title:{ th:'ผมจะไม่ยอม', en:'I Will Not Yield' }, line:{ th:
     'อาร์คอน-ศูนย์: "ข้าปล่อยเจ้าเข้ามาเพราะข้าต้องการให้ทุกบรรทัดของเจ้าอยู่ในลานนี้ ที่ที่ข้าลบได้ในครั้งเดียว ลูกน้องของข้ายังมีอีกนับพัน"\n'
   + 'นิรา: "ท่านคะ ดิฉันได้ยินเสียงนับค่ะ หนึ่ง สอง สาม สี่ ... เขากำลังนับเรา"\n'
@@ -778,8 +846,9 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 | โซน 1 | `crew-plerng` | เพลิงและกุมภัณฑ์ · Pleng and Kumphan |
 | โซน 2 | `crew-dam` | ดำ (คุโร) และกวนอู · Dam (Kuro) and Guan Yu |
 | โซน 3 | `crew-boon` | บุญ (เกรซ) และแวน เฮลซิง · Boon (Grace) and Van Helsing |
-| โซน 4 | `crew-guard` | ซิสอ็อปและ WATSON-03 · Sysop and WATSON-03 |
+| โซน 4 | `crew-guard` (โค้ด `final-event.js:78` ใช้ `img/crew-guard-v2.webp` = ภาพ Guard · Claudy ตรวจ 19 พ.ย.) | ผู้เฝ้าด่านโซน 4 · Zone 4 Gate Guard (**แก้ป้ายให้ตรงภาพ** · Reese 19 พ.ย. · ไม่ใช้ "ซิสอ็อปและ WATSON-03" แล้ว) |
 - **ข้อควรทราบ:** ภาพกองหนุนในโค้ดเดิมเป็นยมทูตตัวเดียวต่อโซน (plerng dam boon guard) ไม่ใช่คู่ยมทูต+Guard · ผมเสนอป้ายแบบ "ยมทูต + Guard" ตามต้นฉบับคุณเป้ ("ยมฑูตและ guard จากทุกโซน") **ถ้าภาพเดิมไม่มี Guard ในภาพ ต้องวาดเพิ่มหรือเปลี่ยนป้าย → Claudy ตรวจ**
+- **กองหนุนโซน 4 (แก้ตาม Reese 19 พ.ย. + Claudy ตรวจโค้ด):** ภาพ `crew-guard-v2.webp` เป็นภาพ Guard จึงแก้ป้ายแถวโซน 4 เป็น "ผู้เฝ้าด่านโซน 4" ให้ตรงภาพ · **ขั้นตอนของคุณเป้ไม่หาย:** (1) Guard โซน 4 ยังเป็นหนึ่งในกองหนุนทุกโซน (2) WATSON-03 ยังพูดบรรทัดของเขาในคัตซีน `cyber-reinforcements` เพราะเขาคือ Guard โซน 4 ตาม G13 (3) ไม่เพิ่มไฟล์ภาพที่ต้องวาดใหม่ · ซิสอ็อปไม่อยู่ในภาพกองหนุนแล้ว (ภาพเดิมเป็นตัวเดียวต่อโซนอยู่แล้ว) · ถ้าคุณเป้ต้องการให้ภาพกองหนุนโซน 4 หน้าตาเป็น WATSON-03 จริง ให้ตัดสไปรท์จาก W1 (ตารางภาพ กลุ่ม W) มาแทน `crew-guard-v2` ไม่นับเป็นไฟล์วาดใหม่ (ดู "ต้องให้คุณเป้ตัดสิน" ข้อ 12)
 ```js
 'cyber-reinforcements': { title:{ th:'กองหนุนจากทั้งสี่โซน', en:'Reinforcements From All Four Zones' }, pages:[
   { title:{ th:'พวกเราไม่ได้มาคนเดียว', en:'We Did Not Come Alone' }, line:{ th:
@@ -860,11 +929,12 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 
 ## 9. quest เสริม HOME-67 · จับลูแปง (G29) → อัญเชิญลูแปงได้
 ต้นฉบับ: "QUEST เสริมของ HOME-67 เมื่อรับ QUEST จะขึ้นว่าให้ช่วยตามจับจอมโจร lupin (คือจอมโจรในตำนาน mode อนาคต ไฮเทค) ซึ่งจะปลอมตัว เป็นคนงานใน โซน4 ของเรา เพิ่มมาคนนึง ยืนเฉยๆ ไม่ทำงาน เมื่อเข้าไปคุย และบอกว่า นายไม่ใช่คนงานที่นี้ จับได้ จะต้องสู้กับ Lupin โดยมี HOME-67 ช่วย เมื่อชนะจะสามารถ อัญเชิญ LUPIN ได้" · G18 "11 lupin (อัญเชิญได้ หลังจากได้" ขาด → ใช้เงื่อนไขจาก quest นี้ (ตามคุณเป้ D4)
-**ข้อควรระวังเนื้อหา [R]:** "ลูแปง" = **จอมโจรสุภาพแห่งอนาคต ที่ผมแต่งขึ้นเป็นตัวละครของเกม** · แนวคิดโจรสุภาพที่ปลอมตัวเก่ง (อาร์แซน ลูแปง ของมอริซ เลอบลัง เป็นวรรณกรรมที่พ้นลิขสิทธิ์แล้วในประเทศส่วนใหญ่) · **ห้ามลอกลักษณะเฉพาะของลูแปงที่ 3 หรือการ์ตูน/ภาพยนตร์/ซีรีส์ฉบับใด** (ไม่ใช้ชุดสูทสีเดียวกัน ไม่มีตัวละครเสริมที่ตรงกัน ไม่มีบทพูดหรือท่าเด่นของฉบับใด) · Reese ตรวจ
+**ข้อควรระวังเนื้อหา [R]:** "ลูแปง" = **จอมโจรสุภาพแห่งอนาคต ที่ผมแต่งขึ้นเป็นตัวละครของเกม** · แนวคิดโจรสุภาพที่ปลอมตัวเก่ง · **สถานะลิขสิทธิ์ (Reese 19 พ.ย. ข้อ 1.3):** TH ลูแปงฉบับเลอบลังที่ตีพิมพ์ก่อนปี ค.ศ. 1931 เป็นสาธารณสมบัติในสหรัฐ และหมดอายุลิขสิทธิ์ในไทยตามหลักชีวิตผู้แต่ง+50 ปี (เลอบลังเสียชีวิต ค.ศ. 1941) บทนี้ใช้เฉพาะแนวคิด "จอมโจรสุภาพ" ไม่ใช้โครงเรื่องจากเล่มปลายยุค / EN Leblanc's Lupin works published before 1931 are public domain in the US and expired in Thailand under life+50 (Leblanc died 1941). This script uses only the general "gentleman thief" concept, not plots from his later books. · **ห้ามลอกลักษณะเฉพาะของลูแปงที่ 3 หรือการ์ตูน/ภาพยนตร์/ซีรีส์ฉบับใด** (ไม่ใช้ชุดสูทสีเดียวกัน ไม่มีตัวละครเสริมที่ตรงกัน ไม่มีบทพูดหรือท่าเด่นของฉบับใด) · Reese ตรวจ
 ### 9.1 ลำดับ
-เงื่อนไขเริ่ม: HOME-67 ยืนที่ท่าเรือ (หลังหัวข้อ 2.5 จนถึงก่อนเริ่มฉากจบ) → คุย → **NQ-1** รับ quest → คนงานแปลกหน้าโผล่ในโซน 4 (ยืนเฉยใกล้โรงอาหาร) → คุย (ตัวเลือก) → เลือก "นายไม่ใช่คนงานที่นี่" → `z4-lupin-catch` (2 หน้า) → สู้ (ทีม ยามา + นิรา + HOME-67) → ชนะ `z4-lupin-win` (2 หน้า) → NU-1 (ปลดล็อกลูแปง) → NQ-2 (จบ quest)
+เงื่อนไขเริ่ม: HOME-67 ยืนที่ท่าเรือ (หลังหัวข้อ 2.5 · พักช่วงเนื้อเรื่องสุดท้าย · กลับมาเล่นได้หลังฉากจบ ตามข้อ 4.2) → คุย → **NQ-1** รับ quest → คนงานแปลกหน้าโผล่ในโซน 4 (ยืนเฉยใกล้โรงอาหาร) → คุย (ตัวเลือก) → เลือก "นายไม่ใช่คนงานที่นี่" → `z4-lupin-catch` (2 หน้า) → สู้ (ทีม ยามา + นิรา + HOME-67) → ชนะ `z4-lupin-win` (2 หน้า) → NU-1 (ปลดล็อกลูแปง) → NQ-2 (จบ quest)
 - ถ้าผู้เล่นเลือก "ปล่อยไป": ลูแปงหัวเราะแล้วไม่ทำอะไร ข้อความ "เขายังยืนอยู่ที่เดิม" ให้ลองคุยใหม่ได้ (ไม่ปิด quest)
-- ถ้าเริ่มฉากจบก่อนทำ quest: ปุ่ม "ยังก่อน" ใน NF-2 เตือน "ยังมีงานเสริมของ HOME-67 ค้างอยู่" · เมื่อเข้าฉากจบแล้ว quest ปิด ลูแปงไม่ปลดล็อก (ข้อเสนอ ต้องให้คุณเป้ตัดสิน ข้อ 6)
+- ถ้าเริ่มฉากจบก่อนทำ quest: **Claudy ตัดสินแล้ว (19 พ.ย.) quest ไม่ปิดเมื่อเข้าฉากจบ** ยังเล่นต่อได้หลังฉากจบ ลูแปงปลดล็อกได้ตามปกติ · NF-2 เพิ่มคำเตือน (หัวข้อ 8.2) ให้ผู้เล่นรู้ว่ามีงานค้าง
+- งานโค้ด Toby: ระหว่างเนื้อเรื่องสุดท้าย (กด "เริ่ม" ใน NF-2 จนจบฉากจบ) quest พักไว้ ไม่หาย · หลังฉากจบ HOME-67 กลับไปยืนที่ท่าเรือโซน 4 (ตรงกับ `ending-coda`) และปุ่มคุยเริ่ม/เล่นต่อ quest ได้ · ต้องเก็บสถานะ quest ข้ามฉากจบ
 ### 9.2 หน้าต่างแจ้งเตือน
 **NQ-1 · รับ quest** หัวข้อ: จอมโจรที่ยืนเฉย · EN: The Thief Who Stands Still · ข้อความ: HOME-67 ขอให้ท่านช่วยตามจับจอมโจรแห่งอนาคตที่ปลอมเป็นคนงานในโซน 4 เขายืนเฉยไม่ทำงาน ไปคุยกับคนงานแปลกหน้าแล้วจับให้ได้ · EN: HOME-67 asks you to help catch a thief of the future who has disguised himself as a worker in Zone 4. He stands idle and does no work. Speak to the strange worker and catch him. · ปุ่ม: รับงาน · EN: Take the job
 **NQ-2 · จบ quest** หัวข้อ: จอมโจรยอมจำนน · EN: The Thief Yields · ข้อความ: ลูแปงยอมแพ้และรับคำท้าให้ท่านเรียกใช้ในศึก · EN: Lupin yields and accepts the challenge to be called by you in battle. · ปุ่ม: ต่อ · EN: Continue
@@ -877,7 +947,7 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 ```js
 'z4-lupin-catch': { title:{ th:'คนงานที่เดินเงียบเกินไป', en:'A Worker Who Walks Too Quietly' }, pages:[
   { title:{ th:'รองเท้าไม่มีฝุ่น', en:'Shoes Without Dust' }, line:{ th:
-    'HOME-67: "ท่านยมบาทน้อย ผมขอตรวจสามจุด รองเท้าของเขาไม่มีฝุ่นโลหะของโซนนี้เลย ถุงมือของเขาสะอาดเกินไป และเขายืนในจุดที่เห็นประตูหลังโรงอาหารพอดี คนงานไม่ยืนมองประตูหลังครับ"\n'
+    'HOME-67: "คุณยมบาทน้อย ผมขอตรวจสามจุด รองเท้าของเขาไม่มีฝุ่นโลหะของโซนนี้เลย ถุงมือของเขาสะอาดเกินไป และเขายืนในจุดที่เห็นประตูหลังโรงอาหารพอดี คนงานไม่ยืนมองประตูหลังครับ"\n'
   + 'คนงาน: "(ยิ้ม) ท่านสังเกตได้ทั้งสามจุด ข้าเสียใจ ข้าหวังให้ท่านสังเกตได้แค่สองจุดก่อน"\n'
   + 'บรรยาย: คนงานปลดหมวกคลุมออก ใบหน้าเปลี่ยนไปเป็นชายหนุ่มผมดำเรียบ ตาแจ่มใส รอยยิ้มบางเหมือนทักทาย แผ่นหน้ากากโปร่งแสงบางที่ซ้อนอยู่บนใบหน้าลื่นหลุดลงมาในฝ่ามือ',
     en:
@@ -955,8 +1025,8 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 |---|---|---|---|---|
 | C1 | `img/z4-events/cut-z34-arrive.webp` | `z34-arrive` | ปากถ้ำเหล็กชายแดน 3-4 พ่อค้านรกตั้งแผงเล็ก ผนังแขวนป้ายชื่อนักสู้เรียงแถว ยามา นิรา HOME-67 ก้าวเข้ามาใต้เพดานสูง | ไม่มี |
 | C2 | `img/z4-events/cut-col-gate.webp` | `col-gate` | สังเวียนหินวงกลมอัฒจันทร์เป็นชั้น เงาผู้ชมเงียบ ลูซิเฟอร์ผมเงินยาว เสื้อคลุมดำปักขอบทอง ไม่มีเขา ไม่มีปีก ถือไม้เท้าตรงยืนระเบียงสูง **ไม่มีสัญลักษณ์ศาสนา** | ไม่มี |
-| C3–C12 | `img/z4-events/cut-col-s1..s10.webp` (10 ภาพ) | ท่าโจมตีของคู่ต่อสู้ด่าน 1–10 | ด่าน 1 ซามูไรชักดาบเป็นประกายเดียว · 2 นินจากระโดดหลังฉากเงา · 3 นายขนมต้มศอกกลับ (ไหว้ก่อนในมุมภาพ) · 4 มิโนทอร์พุ่งขวิด · 5 เมดูซาสายตาแสงเงินน้ำเงิน (ไม่แสดงใครกลายเป็นหิน) · 6 โจรสลัดปืนใหญ่ควันขาว · 7 ผู้มาเยือนจากดาวเก่าลำแสงสแกน · 8 ยักษ์เหล็กหมัดจากฟ้า · 9 ธอร์ค้อนสายฟ้า · 10 ลูซิเฟอร์ปลายไม้เท้าชี้ ม่านแสงปิดลง · **ไม่มีเลือด ไม่มีภาพมิโนทอร์/เมดูซาทำร้ายคน** | ไม่มี |
-| C13–C32 | `img/z4-events/col-s1..s10.webp` + `-profile.webp` (20 ไฟล์) | สไปรท์ศึก + การ์ดโปรไฟล์ ผู้สู้ด่าน 1–10 | ซามูไรไร้นาย (ชุดเก่าเรียบไม่ใช่มูซาชิ) · นินจาธรรมดา (ชุดดำเรียบ ไม่ใช่ตัวเฉพาะการ์ตูน) · นายขนมต้ม (กางเกงมวยเก่า มงคลที่ศีรษะ ผ้าประเจียดที่แขน ไม่มีสัญลักษณ์ศาสนา) · มิโนทอร์ (ครึ่งคนครึ่งวัว เกราะหนัง) · เมดูซา (ผมเป็นเส้นงูเล็ก ดวงตาปิดครึ่ง) · กัปตันโจรสลัดคลื่นเงิน · ผู้มาเยือนจากดาวเก่า (รูปคนโปร่งแสง ไม่ใช่ซีโนมอร์ฟ) · ยักษ์เหล็กซี-8 · ธอร์ (ชุดเรียบ ไม่ใช่ผ้าคลุมแดน) · ลูซิเฟอร์ (ผมเงิน ไม่มีเขา) | ไม่มี |
+| C3–C12 | `img/z4-events/cut-col-s1..s10.webp` (10 ภาพ) | ท่าโจมตีของคู่ต่อสู้ด่าน 1–10 | ด่าน 1 ซามูไรชักดาบเป็นประกายเดียว · 2 นินจากระโดดหลังฉากเงา · 3 นายขนมต้มศอกกลับ (ไหว้ก่อนในมุมภาพ) · 4 มิโนทอร์พุ่งขวิด · 5 เมดูซาสายตาแสงเงินน้ำเงิน (ไม่แสดงใครกลายเป็นหิน) · 6 โจรสลัดปืนใหญ่ควันขาว · 7 ผู้มาเยือนจากดาวเก่าลำแสงสแกน · 8 C-8, the Steel Colossus (ยักษ์เหล็กซี-8) หมัดจากฟ้า · 9 ธอร์ค้อนสายฟ้า · 10 ลูซิเฟอร์ปลายไม้เท้าชี้ ม่านแสงปิดลง · **ไม่มีเลือด ไม่มีภาพมิโนทอร์/เมดูซาทำร้ายคน** | ไม่มี |
+| C13–C32 | `img/z4-events/col-s1..s10.webp` + `-profile.webp` (20 ไฟล์) | สไปรท์ศึก + การ์ดโปรไฟล์ ผู้สู้ด่าน 1–10 | ซามูไรไร้นาย (ชุดเก่าเรียบไม่ใช่มูซาชิ) · นินจาธรรมดา (ชุดดำเรียบ ไม่ใช่ตัวเฉพาะการ์ตูน) · นายขนมต้ม (กางเกงมวยเก่า ผ้าประเจียดที่แขน **ไม่สวมมงคลที่ศีรษะระหว่างชก** · ภาพไหว้ครูถือหรือวางมงคลไว้มุมเวที · มงคลกับประเจียดเป็นของเคารพ ห้ามทำตก ห้ามล้อ · ไม่มีสัญลักษณ์ศาสนา) · มิโนทอร์ (ครึ่งคนครึ่งวัว เกราะหนัง) · เมดูซา (ผมเป็นเส้นงูเล็ก ดวงตาปิดครึ่ง) · กัปตันโจรสลัดคลื่นเงิน · ผู้มาเยือนจากดาวเก่า (รูปคนโปร่งแสง ไม่ใช่ซีโนมอร์ฟ) · ยักษ์เหล็กซี-8 (EN: C-8, the Steel Colossus) · ธอร์ (ชุดเรียบ ไม่ใช่ผ้าคลุมแดน) · ลูซิเฟอร์ (ผมเงิน ไม่มีเขา) | ไม่มี |
 ### กลุ่ม SUM · ตัวอัญเชิญ (3 ตัว × 3 ภาพ = 9 ไฟล์ + ไอคอน)
 | # | ไฟล์ที่เสนอ | ใคร/ฉาก | คำบรรยายภาพ | ภาพเดิมใช้แทนได้ไหม |
 |---|---|---|---|---|
@@ -1035,7 +1105,7 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 5. **ซามูไร นินจา โจรสลัด (ด่าน 1 2 6):** ตัวละครทั่วไป ไม่ชนตัวเฉพาะของสื่อใด
 6. **ลูเมน-01 (หัวข้อ 2.4):** การเขียนเทวดาผู้คุมเป็น "ผู้ทดสอบที่ขอโทษเมื่อผิด" ไม่ล้อเทวดา/พุทธศาสนา · ไม่มีสัญลักษณ์ศาสนาในฉาก
 7. **WATSON-03 (หัวข้อ 4):** "หุ่นผู้ช่วยบันทึกและตอบตามตัวอักษร" และชื่อ "03" ไม่ชนลักษณะเฉพาะ/ประโยคเด่นของนักสืบ/ผู้ช่วยฉบับภาพยนตร์ ซีรีส์ หรือการ์ตูนที่ยังมีลิขสิทธิ์ · ไม่ใช้ "แพทย์ทหาร" "บาดแผลเก่า" หรือการเล่าเรื่องจากมุมผู้ช่วย
-8. **ลูแปง (หัวข้อ 9):** จอมโจรสุภาพปลอมตัวเก่ง "แห่งอนาคต" ตรงแนวอาร์แซน ลูแปง (เลอบลัง ค.ศ. 1905 · พ้นลิขสิทธิ์ตามที่ตรวจใน R1) และ **ไม่ชนลูแปงที่ 3** (ชุดสีเดียวกัน ตัวละครเสริม ท่าเด่น) · ยืนยันสถานะลิขสิทธิ์ของงานเลอบลังในไทยและสหรัฐ
+8. **ลูแปง (หัวข้อ 9):** จอมโจรสุภาพปลอมตัวเก่ง "แห่งอนาคต" ตรงแนวอาร์แซน ลูแปง (เลอบลัง ค.ศ. 1905) และ **ไม่ชนลูแปงที่ 3** (ชุดสีเดียวกัน ตัวละครเสริม ท่าเด่น) · **ผลตรวจ Reese 19 พ.ย.:** ผ่าน · ลูแปงฉบับเลอบลังที่ตีพิมพ์ก่อนปี ค.ศ. 1931 เป็นสาธารณสมบัติในสหรัฐ และหมดอายุลิขสิทธิ์ในไทยตามหลักชีวิตผู้แต่ง+50 ปี (เลอบลังเสียชีวิต ค.ศ. 1941) · บทนี้ใช้เฉพาะแนวคิด "จอมโจรสุภาพ" ไม่ใช้โครงเรื่องจากเล่มปลายยุค / EN Leblanc's Lupin works published before 1931 are public domain in the US and expired in Thailand under life+50 (Leblanc died 1941). This script uses only the general "gentleman thief" concept, not plots from his later books.
 9. **HOME-67 (หัวข้อ 2.5 · 6 · 8):** บท "ตัวเลข ลายนิ้วมือ-ใบหน้า การยืนข้างหน้า" เป็นเรื่องแต่งของผม ไม่ชนฉากเด่นของนักสืบฉบับใด (ผ่านใน R1 ส่วน C แล้ว ตรวจเฉพาะบทใหม่)
 10. **การบรรยายการหลอกลวง AI (หัวข้อ 3 · 5 · 6):** ไม่บรรยายเทคนิคเกินจำเป็น ไม่เป็นคู่มือ · ผู้เสียหายไม่เป็นตัวตลก
 11. **ฉากจบ (หัวข้อ 8):** การใช้หัวหน้าโซน (พญายมบาท จ้าวเหวิน ฮาลวาร์ เน็กซาร) เป็นผู้ถูกควบคุม ไม่ล้อศาสนา/สถาบัน · "พญายมบาท" ใช้ตามโค้ด (Chris เคยเตือนเรื่องคำ "ยมบาท/ยมบาล" ตั้งแต่ 17 ก.ย. ยังรอคุณเป้ ผมไม่แตะ)
@@ -1049,12 +1119,16 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 3. **ลูซิเฟอร์ปล่อยผู้สู้เป็นอิสระหลังแพ้:** ผมเพิ่มข้อสิบของสัญญา (ชนะสิบด่านติดแล้วเป็นอิสระ) และให้ยามาขอให้เปิดทางออกให้ผู้สู้ทุกคน เพื่อให้สังเวียนไม่เป็นความผิดตามหลักผู้พิพากษา · ต้นฉบับ "จับปีศาจ วิญญาณต่างๆมาสู้กันเพื่อความสนุก" ผมตีความว่าลงชื่อเอง · ถ้าต้องการให้ผู้สู้ถูกจับจริงและยามาปลดปล่อย แจ้งผมแก้
 4. **Guard + เซอร์เบอรัสถูกควบคุมหรือไม่ (D6):** ผมให้ **ไม่ถูกควบคุม** (แวน เฮลซิงต้านเสียงกล่อมได้ · กวนอูยึดคำสัตย์ · กุมภัณฑ์ยังกำกระบองแต่ไม่ฟาด · เซอร์เบอรัสไม่พูด) ยืนที่ประตูและมาเป็นกองหนุนในฉากจบ · ต้นฉบับพูดว่าเฉพาะ "ยมฑูตทุกตัว" ถูกควบคุม
 5. **ญาติคดี 8 และ 9:** ต้นฉบับเขียน "ญาติยมฑูต" ไม่ระบุคน · ผมเลือก **ญาติของไซเฟอร์ (พี่สาว นักร้องเพลงกล่อมเด็ก)** และ **ญาติของบัฟเฟอร์ (ลุง ผู้ดูแลหอจดหมายเหตุ)** · ถ้าต้องการยมทูตคนอื่น แจ้งผม
-6. **quest ลูแปงกับฉากจบ:** ถ้าผู้เล่นเริ่มฉากจบก่อนทำ quest ผมให้ quest ปิดและลูแปงไม่ปลดล็อก (ข้อเสนอ) · ทางเลือก: ให้ quest ยังเล่นได้หลังจบเกม (NG+) หรือบังคับทำก่อนเริ่มฉากจบ
+6. **quest ลูแปงกับฉากจบ (Claudy ตัดสินแล้ว 19 พ.ย. · รายงานให้คุณเป้ทราบ):** quest **ไม่ปิด**เมื่อเข้าฉากจบ ยังเล่นต่อได้หลังฉากจบ ลูแปงปลดล็อกได้ตามปกติ และ NF-2 มีคำเตือนว่ายังมีงานเสริมค้าง · ถ้าคุณเป้ต้องการแบบอื่น (บังคับทำก่อนฉากจบ) แจ้งผม
 7. **HOME-67 ยืนท่าเรือจนถึงฉากจบ:** ระหว่างหัวข้อ 6–8 ผมให้ HOME-67 อยู่ที่ท่าเรือโซน 4 (ไม่ไปกับยามาตอนเดินกลับ) เพื่อให้ตรงต้นฉบับ "เหลือแค่ ยามา นิรา" · และโผล่อีกทีในฉากจบถูกมัดไว้ข้างอาร์คอน-ศูนย์
-8. **การเฉลย:** ผมให้ HOME-67 เฉลยว่า **AI Scammer Robot** คือต้นเหตุของบรรทัดผิดตั้งแต่โซน 1 (ตามต้นฉบับ "เกิดจากบอสตัวนี้") และให้ **อาร์คอน-ศูนย์** เป็นผู้ถือปลายสายอีกด้านเฉลยในฉากสุดท้าย · ถ้าต้องการให้เฉลยอาร์คอน-ศูนย์ตั้งแต่คดี 10 แจ้งผม
+8. **การเฉลย:** ผมให้ HOME-67 เฉลยว่า **AI Scammer Robot** คือต้นเหตุของบรรทัดผิดตั้งแต่โซน 1 (ตามต้นฉบับ "เกิดจากบอสตัวนี้") และให้ **อาร์คอน-ศูนย์** เป็นผู้ถือปลายสายอีกด้านเฉลยในฉากสุดท้าย · ถ้าต้องการให้เฉลยอาร์คอน-ศูนย์ตั้งแต่คดี 10 แจ้งผม · **Reese 19 พ.ย. เพิ่ม:** เฉลย "เสียงที่ไม่มีใครรับผิดชอบ" (หัวข้อ 8.5 ก่อน `ending-capture`) ตึงกับต้นฉบับเล็กน้อย ไม่บังคับแก้ · ต้องการให้ต้นเหตุเป็นตัวตนชัดกว่านี้หรือไม่
 9. **ลูกน้องฉากจบ 3 ระลอก** ตามต้นฉบับ (โค้ดเดิม 4 ระลอก Toby ต้องแก้ · ใช้หลักเดียวกับคดี 5 ของส่วน C ที่คุณเป้ตอบแล้ว) · ตำแหน่งเล่น `cyber-approach` หลังระลอก 3 ผมยังไม่ยืนยันกับโค้ดเดิม
 10. **ต้นฉบับคลุมเครือที่ผมเลือกแบบปลอดภัย:** (ก) "ชานแดน 3-4" = ชายแดน 3-4 · (ข) "นินจา ถอนตัว" = นินจาธรรมดาสู้ปกติ (D3 ที่คุณเป้ตอบแล้ว) · (ค) "นามาแบพ นิรา" = ยามา + นิรา (D5) · (ง) "หัวหน้า โซน3 (ฮาลวาร์)" ตามโค้ด `authorityOf` · (จ) "ได้พลังนาฬิกาวิเศษ" = รางวัล `cooldownClock` เดิม (ชื่อในเกม "นาฬิกาย้อนเวลา") · (ฉ) "11 lupin (อัญเชิญได้ หลังจากได้" ขาด → ใช้เงื่อนไขจาก quest HOME-67 (G29) ตามที่ใบงานเดิมสรุปไว้
 11. **ช่วงที่ยังพักไว้ (ตามคุณเป้ 18 พ.ย.):** ภาพตัวอย่างสถานที่ใหม่ในชายแดน (`Screenshot 2569-11-18 at 16.45.16.png`) ยังไม่ทำ ไม่เสนอซ้ำ
+12. **ภาพกองหนุนโซน 4 (Reese 19 พ.ย. · Claudy ตรวจโค้ดแล้ว):** `final-event.js:78` ใช้ `img/crew-guard-v2.webp` ซึ่งเป็นภาพ Guard · ผมแก้ป้ายให้ตรงภาพ ("ผู้เฝ้าด่านโซน 4") ไม่ให้ขั้นตอนหาย · ถ้าต้องการให้ภาพเป็น WATSON-03 จริง ให้ตัดจากสไปรท์ W1 · ไม่ต้องวาดเพิ่ม
+13. **ชื่อ WATSON-03 ใกล้แบรนด์ IBM Watson (Reese 19 พ.ย. · แจ้งไว้ตอน ship):** ไม่บังคับแก้ตอนนี้ · ถ้าจะขายจริงและกังวล ให้พิจารณาเปลี่ยนชื่อ
+14. **ผู้สู้โคลอสเซียม "จับมา" หรือ "ลงชื่อเอง" · Guard/เซอร์เบอรัสถูกควบคุมหรือไม่:** อยู่ในข้อ 3 และ 4 ด้านบนแล้ว (Reese 19 พ.ย. ให้คุณเป้ตัดสิน ไม่บังคับแก้)
+15. **ส่งรอบ ship (ไม่ใช่เรื่องที่ต้องตัดสิน):** ลูซิเฟอร์ และ นายขนมต้ม ส่ง chris-culture ตามที่ Reese แนะนำ
 
 ---
 
@@ -1065,4 +1139,28 @@ N10-1 → เดินไป `st-sala` (ศาลาเก็บเอกสา�
 4. ตารางภาพที่ต้องวาด · ครบ (หัวข้อ 11) · ภาพเดิมที่ไม่ได้เปิดดูเขียนว่า "Claudy ตรวจ"
 5. หัว "ให้ Reese ตรวจ" + "ต้องให้คุณเป้ตัดสิน" · ครบ
 6. ต่อเนื่องกับส่วน A/B/C: ชื่อ (ยามา/ยมบาทน้อย · นิรา · HOME-67 · WATSON-03 · แวน เฮลซิง · กวนอู · กุมภัณฑ์ · เซอร์เบอรัส) · กติกาอัญเชิญ 3 ครั้งและหน้าต่าง NA-2 · เวลาพัก Guard 1 นาที (H1) · "ผลกระทบต่อส่วน D" ของส่วน C ครบทุกข้อ (หัวข้อ 0.4) · ไม่แก้ไฟล์บทเดิม ไม่แตะโค้ด
+
+---
+
+## แก้ตาม Reese 19 พ.ย.
+(รายงาน: `Output/Reese/2026-11-19-avegee-r2d-factcheck.md` · FIX LIST 9 ข้อ · Rae แก้ 1 รอบ ด้วย Edit ทีละจุด ไม่แตะโค้ด ไม่แตะไฟล์บทเดิม)
+
+| ข้อ | แก้ที่ไหน | สิ่งที่แก้ |
+|---|---|---|
+| 1.1 | หัวข้อ 1.5 ตารางด่าน 8 · หมายเหตุใต้ตาราง · หัวข้อ 11 กลุ่ม COL (C3–C12 · C13–C32) | EN `The Iron Giant C-8` → `C-8, the Steel Colossus` ทุกจุดที่มี EN · TH คง "ยักษ์เหล็กซี-8" |
+| 1.2 | หัวข้อ 1 "ข้อควรระวังเนื้อหา [R]" (ลูซิเฟอร์ · ธอร์ · นายขนมต้ม) · บรรทัด "สถานะ" ต้นไฟล์ | ลบ "Reese ยืนยันแล้ว" ที่เขียนล่วงหน้า ใส่ผลจริง: ลูซิเฟอร์ผ่าน ไม่ล้อศาสนา · ธอร์ไม่มีข้อแก้ · นายขนมต้มผ่านด้านความเคารพ + แก้ตาม 1.4 · รอบ ship ส่ง chris-culture (ลูซิเฟอร์ นายขนมต้ม) |
+| 1.3 | หัวข้อ 9 "ข้อควรระวังเนื้อหา [R]" · หัว "ให้ Reese ตรวจ" ข้อ 8 | ใส่ข้อความลิขสิทธิ์ลูแปง TH/EN ตามที่ Reese เสนอ (public domain US ก่อน 1931 · ไทย ชีวิต+50 · เลอบลังเสียชีวิต 1941 · ใช้แนวคิดเท่านั้น) |
+| 1.4 | หัวข้อ 1.5 (บรรทัดใหม่ใต้ตาราง) · หัวข้อ 11 C3–C12 และ C13–C32 | นายขนมต้มสวมประเจียดที่แขน ไม่สวมมงคลระหว่างชก (ไหว้ครูถือ/วางมงคลมุมเวที) · ห้ามทำตก ห้ามล้อ · ข้อความ TH/EN ตาม Reese |
+| 3.1 | หัวข้อ 8.2 `z4-final-open` หน้า 1 (HOME-67 + ยมบาทน้อย) | ไม่กลับคำสัญญาจากส่วน C 5.5: HOME-67 ขอโทษที่ถูกจับ ยามาเคยยืนบังหน้าที่ศาลา · ยมบาทน้อย "คำสัญญานั้นผมเป็นคนรับไว้ และผมยังยืนอยู่ตรงนี้" · TH/EN |
+| 3.2 | หัวข้อ 6.3 `z4-reveal` หน้า 2 | "ในส่วนที่ผ่านมา" → "ที่ท่าเรือโซน 3 ผมบอกคุณว่า…" · TH/EN |
+| 3.3 | หัวข้อ 2.4 `z4-lumen-win` หน้า 2 · หัวข้อ 9.3 `z4-lupin-catch` หน้า 1 (+ หัวข้อ 4.3 `z4-wat-join` หน้า 2 "ท่านสองคน" → "คุณสองคน" เพื่อให้ HOME-67 ไม่ใช้ "ท่าน" ทั้งไฟล์) | HOME-67 เรียก "คุณยมบาทน้อย" แทน "ท่านยมบาทน้อย" |
+| 3.4 | หัวข้อ 7.2 `z1-fire` (กุมภัณฑ์) | "ผม" → "ข้า": "ข้า ... ข้ายังกำกระบองอยู่นะ แต่ข้ารู้ว่าข้าไม่ควรฟาดใคร ไปเถิดท่าน" |
+| 3.5 | หัวข้อ 4.3 บทระหว่างระลอก | `z4-troj-pre` เล่นก่อนระลอก 1 · ลบ "หลังระลอก 2 HOME-67 เรียกผู้เฝ้าด่าน" กับ "หลังระลอก 3 → z4-troj-pre" · ใส่หลังระลอก 2 WATSON-03 และหลังระลอก 3 นิรา ตามข้อความ Reese · TH/EN |
+| 3.6 | หัวข้อ 5 คดี 8 (`kin8`) claim `solid` `reveal` / `en_reveal` | ตัด "สามปีพอดีกับคดีครูเกษียณ" ที่คดีนั้นไม่มี → เทียบวันที่หอทะเบียนกับใบมรณะห่างสามปี + รหัส [PHANTOM-404] ตรงกับป้ายซิสอ็อปและบรรทัดปลอมของครูเกษียณ · TH/EN |
+| 3.7 | หัวข้อ 2.2 NW-1 · หัวข้อ 2.4 `z4-lumen-win` หน้า 1 | ตัด "ครั้งเดียวต่อศึก/once per battle" (Claudy grep `src/` ไม่พบกติกานี้) ใช้ข้อความ Reese: เมื่อพลังหมดให้เติมที่หอกระจก · TH/EN |
+| 4.1 | หัวข้อ 7.2 (`z2-fire` · `z1-fire`) · หัวข้อ 7.3 (`z2-restored` · `z1-restored`) | เขียนเต็ม TH/EN ฉากละ 1 หน้า โครงเดียวกับ `z3-fire`/`z3-restored` ตามเนื้อหาที่ Reese ระบุ (กวนอู/กุมภัณฑ์ที่ประตู · ยมทูตตาเขียว "ขวาง ... ไว้ ... ทุก ... ทาง" · ตัวนับ "สอง"/"หนึ่ง" · Guard 1 บรรทัด · ท่าเรือเสียงคลิก) |
+| 4.2 | หัวข้อ 8.2 NF-2 · หัวข้อ 9.1 · "ต้องให้คุณเป้ตัดสิน" ข้อ 6 | Claudy ตัดสิน: quest ลูแปงไม่ปิดเมื่อเข้าฉากจบ เล่นต่อได้หลังฉากจบ · เพิ่มคำเตือนใน NF-2 TH/EN · ข้อ 6 แก้ให้ตรงกัน |
+| กองหนุนโซน 4 | หัวข้อ 8.3 ตารางแถวโซน 4 + หมายเหตุใต้ตาราง | แก้ป้ายให้ตรงภาพ `crew-guard-v2.webp` = "ผู้เฝ้าด่านโซน 4" · ไม่เพิ่มไฟล์วาดใหม่ · WATSON-03 ยังพูดในคัตซีนเพราะเป็น Guard โซน 4 · ตัวเลือกใช้สไปรท์ W1 เป็นข้อ 12 ในรายการตัดสิน |
+
+**หมายเหตุให้ Toby/Claudy ตรวจก่อนเสียบ:** (1) ชื่อ EN ของยมทูตโซน 1–2 ใน `z1-fire` `z2-fire` `z1-restored` `z2-restored` เป็นทับศัพท์ของ Rae ตรวจกับ `data.js` (2) สรรพนามของซาโตริ ("ดิฉัน") ใน `z2-restored` ปรับตามเพศที่กำหนดในโค้ด (3) ชื่อท่า `Iron Fist From Above` ของ C-8 ใกล้ชื่อตัวละครการ์ตูน Reese ไม่ได้ระบุ ไม่ได้แก้ · ถ้าต้องการเปลี่ยนเป็น "Steel Fist From Above" แจ้ง Rae
 
