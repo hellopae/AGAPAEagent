@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T18:04:20.602Z",
+  "updatedAt": "2026-11-19T18:19:34.537Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby T7 zone 3 story",
+      "status": "working",
+      "task": "Toby T8b zone 4 cases",
       "report": {
         "when": "20:58",
         "title": "Toby T7 zone 3 story",
