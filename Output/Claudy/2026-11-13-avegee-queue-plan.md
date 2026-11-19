@@ -282,3 +282,4 @@
 - Claudy รันเต็มรอบ: 2503/2505 · `t8-colosseum` flaky (ล้ม 4/8 รอบเดี่ยว — สุ่มสตั้น 60%) → ส่ง Toby แก้ก่อน merge · `p6-cauldron-fireball` ล้มเฉพาะตอนเครื่องโหลดหนัก (load avg 25–46) รันเดี่ยวผ่าน 3/3
 - 01:20 T8a merge main `36f6b9d2` · deploy success · เต็มรอบ 2504/2505 (ล้ม atlas 64 ช่อง timeout 30 วิ = load-dependent เดิม) · เทสต์ใหม่ T4–T8 รันไฟล์ละ 10 รอบผ่านหมด
 - ถัดไป: T8b (Toby รอบใหม่ บริบทเต็ม)
+- 02:30 T8b merge main `8094b6db` · deploy success · Claudy เต็มรอบ 2522/2522 · คดี 4/7/8/9/10 · WATSON-03 Guard โซน 4 + quest · ลูแปงอัญเชิญ 12 (ครบ 12) · ถัดไป T8c (+ แก้ N10-1 หลังศาลโทรจัน-9 · ย้าย cyberSignal)
