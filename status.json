@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T03:32:35.770Z",
+  "updatedAt": "2026-11-20T04:06:07.464Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby T9 apply Rae strings",
       "report": {
         "when": "20:58",
