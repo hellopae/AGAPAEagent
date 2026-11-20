@@ -305,3 +305,7 @@
 - ถึง ≥98% → handoff `AVEGEE/docs/claude-handoff-2026-11-20.md` + work-mode codex-only
 - 20 พ.ย. ~11:45 **ท่านอนสลบเข้าเกม** main `572d9d5f` (Claudy ใส่เองด้วย Bash · เทสต์ 2561/2561) · 29 ภาพ · ไม่ใส่ guard asia/west/cyberhell (คุณเป้: Guard เปลี่ยนตัวแล้ว → รอวาด sprite กวนอู/แวน เฮลซิง/WATSON-03 ก่อน แล้วค่อย KO)
 - คุณเป้: บุญ + กุมภัณฑ์โซน 1 "รูปขาด" ในท่าต่อสู้ (ภาพต้นฉบับถูกตัดตรงที่ขอบมือ/กระบอง) → ใบงาน `Output/Codex/runs/art-1120-E3-fix-clip-th.md` · คิว `queue-1120b.py` รอ queue-1120 (E1+E2 กำลังรัน)
+- 20 พ.ย. ~13:00 คุณเป้อนุมัติแบบชุดยามาโซน 4 + AI Scammer Robot ("เอาตามนี้เลยครับ") → ลงต้นแบบใน AVEGEE `docs/art-reviews/2026-11-20-design-approval/` (main `50bffa13`) · คุณเป้: "อย่าลืม update ชุดและตัวละคร Guard โซน 2 3 4 ใหม่ในรูปรวมพลด้วย" (`story-cyberhell-01/02/03`, `-reinforcements-01/02`)
+- E2 + E3 เข้าเกม main `1a8a366f` (Claudy Bash · เทสต์ 2560/2561 ล้ม atlas timeout เดิม รันเดี่ยวผ่าน) · สีดา e2/e3, sita-lamp, ไอคอนตะเกียง, ต้นทอง (`biome heaven`), บุญ/กุมภัณฑ์ไม่ขาด · `cmd-summon.webp` ยังไม่ต่อสาย (ปุ่มอัญเชิญ)
+- คิว `queue-1120c.py`: E4 แบบ Guard 3 ตัว (เสร็จ → `Output/Review/2026-11-20-guard-designs/` รอคุณเป้) · E5 AI Scammer sprites · Y1a/Y1b → Y1c/Y2 ชุดยามาโซน 4
+- หลังคุณเป้อนุมัติ Guard: ใบงาน sprite ต่อสู้ Guard 3 ตัว + KO + ภาพรวมพล/คัตซีนโซน 4 5 ภาพ (ยามาชุดใหม่ + Guard ใหม่)
