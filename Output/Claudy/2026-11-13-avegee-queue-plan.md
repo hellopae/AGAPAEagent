@@ -297,3 +297,9 @@
 - 20 พ.ย. 10:54 **Codex reset** (คุณเป้แจ้ง) · คิว KO ค้างเพราะ `time.sleep` ไม่นับช่วงเครื่องหลับ → Claudy รีสตาร์ท → work-mode both · KO-A + KO-B เริ่ม 10:54 · บันทึกกับดักลง skill `codex-reset-queue`
 - คิวต่อ `Output/Codex/runs/queue-1120.py` (log `queue-1120.log`) รอ KO จบ → E1-DESIGN (ชุดยามาโซน 4 + AI Scammer Robot แบบเท่ · ให้คุณเป้อนุมัติ) + E2-ZONE1 (สีดา e2/e3, cut-sita-lamp, ไอคอนตะเกียง/อัญเชิญ, ต้นทอง)
 - คิวถัดไปยังไม่มีใบงาน: เซอร์เบอรัสตาแดง · ตัวละคร R2 ทีละโซน (ขุนแผน/กวนอู/ลุงแจว → เหลียนกัง/มูซาชิ/ริวจิน → แวน เฮลซิง/โลกิ/HOME-67 → โคลอสเซียม/WATSON-03/ลูแปง) · ตัวอัญเชิญ · ท่ารับ/กินข้าวปั้น · ห้องศาลาน้ำชา/ท่านั่งพัก · ทางเข้าชายแดน G4/G5 · เรือ G7/G8 · KO ของ Guard ใหม่
+
+### 20 พ.ย. ~11:00 — Claude weekly เหลือ 10% (7d 90% · reset 25 พ.ย. 23:00)
+- นโยบาย: ไม่เปิด agent Claude งานใหม่ · T9 (Toby) ใกล้จบ (commit ถึง T9/6 `847eb6fb`) ให้จบแล้ว Claudy merge ด้วย Bash
+- งานวาด/โค้ดใหม่ → Codex `--write` (คิว KO → queue-1120) · ใบงานต้องให้ Codex วางทับ placeholder + รัน script เสียบเอง (เช่น `scripts/add-ko-poses.py`) เพื่อไม่ต้องใช้ Toby
+- พักไว้จนหลัง reset: minigame (Fable), ซิมสมดุลศึกใหม่, H4 หุ่นซ้อม, เดินแผนที่ย้อนจริง, งานที่ต้องเล่นตรวจในเบราว์เซอร์
+- ถึง ≥98% → handoff `AVEGEE/docs/claude-handoff-2026-11-20.md` + work-mode codex-only
