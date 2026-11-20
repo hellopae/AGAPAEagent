@@ -1,0 +1,51 @@
+src/z4f-lupin.js:20:/** Rae's boss move (9.3): the name / warning are hers, the use line is made from the move name (she gave none) - TODO(Rae). A light-medium single blow: the engine has no "an ally skips a turn" status. */
+src/z4f-lupin.js-21-export const Z4L_MOVE = Object.freeze({ id:'stealBeat', kind:'heavyHit', warn:1, power:1.2, name:L2(S.move.th, S.move.en), warnText:L2(S.warn.th, S.warn.en), useText:L2(`ลูแปง: "${S.move.th}"`, `Lupin: "${S.move.en}"`), when:{ firstAct:3, e
+src/z4f-lupin.js-22-export const Z4L_STORIES = Object.freeze({
+src/z4f-lupin.js-23-  [Z4L.catchStory]:fromRae(RAW_Z4C_SCENES['z4-lupin-catch'], Z4L_ART.cut),
+src/z4b-colosseum.js:4:// Numbers (hp / atk) are Toby's first ones, no spec. The warn / use lines of the bouts' moves are generated from Rae's move names (she gave names only) - TODO(Rae) to polish.
+src/z4b-colosseum.js-5-import { RAW_BOUTS, RAW_HELPERS } from './z4a-raw.js';
+src/z4b-colosseum.js-6-const A = n => `img/z4-events/${n}.webp`;
+src/z4b-colosseum.js-7-const L2 = (th, en) => ({ th, en });
+src/z4h-final.js:63:/** the page after the fall of Archon-Zero (Rae 8.5 "the line after the win, before ending-capture"; the page title is a label of the game - TODO(Rae)) */
+src/z4h-final.js-64-const ARCHON_DOWN = { title:'อาร์คอน-ศูนย์', en:{ title:'Archon-Zero' }, pages:[{ image:Z4H_ART.duel, title:'ปลายสายที่ปิดไม่ได้', line:RAW_Z4H_AFTER_WIN.map(w => `${w.speaker.th}: "${w.th}"`).join('\n'), fallback:'📜',
+src/z4h-final.js-65-  en:{ title:'The Line That Would Not Close', line:RAW_Z4H_AFTER_WIN.map(w => `${w.speaker.en}: "${w.en}"`).join('\n') } }] };
+src/z4h-final.js-66-/** new keys (story.js reads them through Z1_STORIES) */
+src/tea-recovery.js:31:/** TODO(Rae): placeholder wording for the line (owner 19 Nov asked for ONE line from Nira) - Rae to write the final TH/EN. */
+src/tea-recovery.js-32-export const NIRA_WAKE_LINE = Object.freeze({
+src/tea-recovery.js-33-  th: 'นิรา: ยมบาทน้อย ตื่นเถอะค่ะ ทุกคนลุกได้แล้ว!',
+src/tea-recovery.js-34-  en: 'Nira: Little Yama, wake up! Everyone, on your feet!',
+src/quest-fights.js:143:  loseNoteTea:'แพ้ไม่เป็นไร ความคืบหน้าไม่หาย · ไปพักที่ศาลาน้ำชาก่อน แล้วกลับมาคุยเพื่อสู้ใหม่ได้',   // T5'/0 TODO(Rae): temporary system line for the lost quest fight that now ends at the tea house
+src/quest-fights.js-144-  enter:'เข้าสู้', back:'ไปต่อ', retry:'สู้อีกครั้ง', rest:'พักไว้ก่อน',
+src/quest-fights.js-145-});
+src/quest-fights.js-146-
+src/ui.js:1545:    d.querySelector('[data-lupin-choice="1"]').onclick = () => { dlg.close(); setTimeout(() => modal(`<div class="pier-talk"><p>${esc(en ? 'Lupin laughs softly and does nothing. He is still standing where he was.' : 'ลูแปงหัวเราะเบา ๆ แล้วไม่ทำอ
+src/ui.js-1546-  });
+src/ui.js-1547-}
+src/ui.js-1548-function lupinCatch() {
+--
+src/ui.js:4114:  // T8c (owner D6): while the world is seized the way out of a frontier leads only BACK (walkBackTarget) - and only once this zone's controlled lord is freed; until then the gate is shut with green light (labels: TODO(Rae))
+src/ui.js-4115-  const routeOpen = () => openDungeonRoutes(g).length > 0 || !!walkBackTarget(g);
+src/ui.js-4116-  const exitLabel = walkBackTarget(g) ? 'เดินกลับผ่านชายแดน · โซนก่อนหน้า' : seizedActive(g) ? 'ประตูถูกปิดด้วยแสงเขียว · ปลดปล่อยผู้ครอบงำของโซนนี้ก่อน' : !routeOpen() ? 'ทางนอกชายแดน · ยังไม่เปิด' : g.zone !== 'th' ? 'ออกนอกชายแดน · ดินแดนถัดไ
+src/ui.js-4117-  const cv2 = dlg.querySelector('#frw-cv');
+src/z4e-sala.js:23:/** Rae's half-way move (6.4): the name / warning are hers, the use line is made from the move name (she gave none) - TODO(Rae). Power 1.3 = a light-medium single blow. */
+src/z4e-sala.js-24-export const Z4S_VOICE_MOVE = Object.freeze({ id:'voiceLikeLove', kind:'heavyHit', warn:1, power:1.3, name:L2(S.move.th, S.move.en), warnText:L2(S.warn.th, S.warn.en),
+src/z4e-sala.js-25-  useText:L2(`AI Scammer Robot: "${S.move.th}"`, `AI Scammer Robot: "${S.move.en}"`), when:{ hpBelow:.5, firstAct:2, everyActs:4 } });
+src/z4e-sala.js-26-export const Z4S_STORIES = Object.freeze({
+src/z3c-frontier.js:2:// Valdric falls, Yama gets Hypnosis, Van Helsing becomes the Gate Guard of the West, Valdric is tried and sent home. Text is Rae's, copied verbatim (TH + EN); the Cerberus lines are Toby's short narration (owner decision 19 Nov, TODO(Rae
+src/z3c-frontier.js-3-// Keys: `westVampireBreach` (data.js) · `z3-freeze` · `z3-vh-frontier` · `z3-hypnosis-v2` · `z3-valdric-down` · `z3-vh-guard` · `frontier-west-boss-to-dais/punished/released` · notices N5-1 NV-1 NV-2 N5-5 N5-6. Imports nothing.
+src/z3c-frontier.js-4-const A = n => `img/z3-events/${n}.webp`;
+src/z3c-frontier.js-5-export const Z3_FRONTIER = Object.freeze({ eventKey:'westVampireBreach', freezeStory:'z3-freeze', frontierStory:'z3-vh-frontier', hypnosisStory:'z3-hypnosis-v2', downStory:'z3-valdric-down', guardStory:'z3-vh-guard',
+--
+src/z3c-frontier.js:30:            // TODO(Rae): Cerberus wakes - narration only (he does not speak). Toby's short draft, owner decision 19 Nov
+src/z3c-frontier.js-31-            'บรรยาย: เซอร์เบอรัสสะบัดสามเศียรพร้อมกัน แสงเขียวในดวงตาหลุดเป็นฝอยแล้วกลับเป็นสีแดงเข้ม มันก้มศีรษะให้ยามาหนึ่งครั้งแล้วถอยกลับไปยืนที่เดิม'],
+src/z3c-frontier.js-32-        en:['Poena: "I ... what did I do? How many times did I strike you? I never knew it. The mist got into my eyes before I could warn anyone."', 'Noir: "I am sorry, sir. A chant was running in my head, one voice saying \'keep going, 
+src/z3c-frontier.js-33-            'Nira: "Forgive me, sir. I counted three footsteps before that voice swallowed the rest. I note for the record that counting alone is not enough to resist this spell."',
+--
+src/z3c-frontier.js:112:      // TODO(Rae): Cerberus under the spell (owner decision 19 Nov) - Toby's short draft, narration only
+src/z3c-frontier.js-113-      + 'บรรยาย: ที่ปากทางชายแดน เซอร์เบอรัสผู้พิทักษ์ประตูปัจฉิมสะบัดสามเศียร ดวงตาสีแดงเข้มของมันกลายเป็นสีเขียวทีละคู่ แล้วมันก็หันตัวมาหาผู้ที่ยืนอยู่ข้างหลังวาลดริก',
+src/z3c-frontier.js-114-      { title:'Three Waves of Servants', line:
+src/z3c-frontier.js-115-        'Valdric: "Three waves of servants fallen already, honoured guest? I am not practised at losing. I apologise in advance. I have one thing left that needs no fangs."\n'
+src/z4g-return.js:20:/** the page title of the side gate scene is a label of the game (Rae gave the line only) - TODO(Rae) */
+src/z4g-return.js-21-const PASS = { title:'สังเวียนที่ถูกตัดสาย', en:{ title:'The Arena With Its Lines Cut' }, pages:[{ image:Z4G_ART.pass, title:'ประตูข้างของสังเวียน', line:RAW_Z4G_LUCIFER_PASS.th, fallback:'📜', en:{ title:'The Arena\'s Side Gate', line:RAW_
+src/z4g-return.js-22-export const Z4G_STORIES = Object.freeze({
+src/z4g-return.js-23-  'cyber-signal-win':SIGNAL_WIN,
