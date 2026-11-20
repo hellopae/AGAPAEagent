@@ -317,3 +317,4 @@
 - ระหว่างนี้ในเกม: ยามาโซน 4 เดินชุดใหม่ แต่ศึกยังชุดเก่า จนกว่า Y1b-v2 เสร็จ
 - 20 พ.ย. 17:15 **ยามาโซน 4 ชุดใหม่ครบทุกภาพ** main `4b9e506e` (Y1c + Y1b-v2 P1–P5 วาดทีละเฟรม · เทสต์ 2561/2561)
 - คุณเป้อนุมัติแวน เฮลซิง v2 → Guard ใหม่ครบ 3 แบบ (AVEGEE docs `4efc2419`) · คิว `queue-1120g.py` เริ่ม 17:07: G asia/west/cyberhell ชุด a (ภาพเดี่ยว+KO+placeholder event) และ b (sheet ทีละเฟรม) → R-RALLY (story-cyberhell-01/02/03 + reinforcements-01/02 ยามาชุดใหม่ + Guard ใหม่)
+- 20 พ.ย. ~18:10 Guard ใหม่เข้าเกม (Claudy Bash · เทสต์ 2561/2561): กวนอูครบ · แวน เฮลซิง/WATSON-03 ภาพเดี่ยว+KO (sheet รอ) · KO 32 ภาพ · Codex rate_limited 17:53 (try 20:56) → `queue-1120h.py` 20:58: G-west-b + G-cyber-b → R-RALLY
