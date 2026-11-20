@@ -309,3 +309,9 @@
 - E2 + E3 เข้าเกม main `1a8a366f` (Claudy Bash · เทสต์ 2560/2561 ล้ม atlas timeout เดิม รันเดี่ยวผ่าน) · สีดา e2/e3, sita-lamp, ไอคอนตะเกียง, ต้นทอง (`biome heaven`), บุญ/กุมภัณฑ์ไม่ขาด · `cmd-summon.webp` ยังไม่ต่อสาย (ปุ่มอัญเชิญ)
 - คิว `queue-1120c.py`: E4 แบบ Guard 3 ตัว (เสร็จ → `Output/Review/2026-11-20-guard-designs/` รอคุณเป้) · E5 AI Scammer sprites · Y1a/Y1b → Y1c/Y2 ชุดยามาโซน 4
 - หลังคุณเป้อนุมัติ Guard: ใบงาน sprite ต่อสู้ Guard 3 ตัว + KO + ภาพรวมพล/คัตซีนโซน 4 5 ภาพ (ยามาชุดใหม่ + Guard ใหม่)
+- 20 พ.ย. 13:13 **Codex rate_limited** (Y1c) · try again 15:53 · work-mode claude-only (คิวสลับเอง)
+- เข้าเกม main `d0d57c3c`: ยามาโซน 4 ชุดใหม่ (Y1a ตัว/โปรไฟล์/เดิน/สมุด · Y2 คัตซีนท่า 11) + AI Scammer Robot ใหม่ (E5) · เทสต์ 2560/2561 (atlas timeout เดิม)
+- Y1b (sheet ท่าต่อสู้) ไม่ผ่าน: ImageGen ไม่รักษากริด → ใบงานใหม่ `art-1120-Y1b-v2.md` วาดทีละเฟรมแล้วประกอบด้วย Pillow · ชุด P1–P5
+- คุณเป้: แวน เฮลซิงขอใส่หมวก + ถือหน้าไม้ (ภาพอ้างอิงโปสเตอร์หนัง 2004 → สั่งเอาแค่แนว ไม่ลอก) → `art-1120-E4b-vanhelsing-v2.md` · แบบ v1 ทั้ง 3 ลง AVEGEE `docs/art-reviews/2026-11-20-guard-designs/`
+- คิว: `queue-1120e` (15:55 → both · Y1c + E4b) → `queue-1120f` (Y1b P1+P2 → P3+P4 → P5)
+- ระหว่างนี้ในเกม: ยามาโซน 4 เดินชุดใหม่ แต่ศึกยังชุดเก่า จนกว่า Y1b-v2 เสร็จ
