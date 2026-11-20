@@ -303,3 +303,5 @@
 - งานวาด/โค้ดใหม่ → Codex `--write` (คิว KO → queue-1120) · ใบงานต้องให้ Codex วางทับ placeholder + รัน script เสียบเอง (เช่น `scripts/add-ko-poses.py`) เพื่อไม่ต้องใช้ Toby
 - พักไว้จนหลัง reset: minigame (Fable), ซิมสมดุลศึกใหม่, H4 หุ่นซ้อม, เดินแผนที่ย้อนจริง, งานที่ต้องเล่นตรวจในเบราว์เซอร์
 - ถึง ≥98% → handoff `AVEGEE/docs/claude-handoff-2026-11-20.md` + work-mode codex-only
+- 20 พ.ย. ~11:45 **ท่านอนสลบเข้าเกม** main `572d9d5f` (Claudy ใส่เองด้วย Bash · เทสต์ 2561/2561) · 29 ภาพ · ไม่ใส่ guard asia/west/cyberhell (คุณเป้: Guard เปลี่ยนตัวแล้ว → รอวาด sprite กวนอู/แวน เฮลซิง/WATSON-03 ก่อน แล้วค่อย KO)
+- คุณเป้: บุญ + กุมภัณฑ์โซน 1 "รูปขาด" ในท่าต่อสู้ (ภาพต้นฉบับถูกตัดตรงที่ขอบมือ/กระบอง) → ใบงาน `Output/Codex/runs/art-1120-E3-fix-clip-th.md` · คิว `queue-1120b.py` รอ queue-1120 (E1+E2 กำลังรัน)
