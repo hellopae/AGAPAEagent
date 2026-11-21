@@ -183,3 +183,13 @@ Commit `5afed273` บน branch ส่งต่อ ปรับบทสาม�
 - ยังไม่ได้ทดสอบ Chromium รอบ merge, merge, push main หรือเปิด Actions ใหม่ [Deploy Pages](https://github.com/hellopae/AVEGEE/actions/workflows/pages.yml) เว็บไซต์ยังรายงาน build `e90af8f3` [version.json](https://hellopae.github.io/AVEGEE/version.json)
 - ภาพลุงแจวและโปรไฟล์ปัจฉิมที่คุณเป้เห็นเป็น placeholder บนเว็บมีไฟล์จริงอยู่บนสาขารีวิวแล้ว ตรวจพบไฟล์ใหม่สำหรับลุงแจว ยามประตู แม่ครัว ลูกสาว ลูกค้าคำทำนาย น้องชาย ผู้พิพากษา และหญิงชราหนูน้อย การตรวจภาพบนเว็บรอ build ใหม่
 - ยังไม่ได้ลบสาขา พบ remote refs ที่ตรง `codex/20261120T*` 29 รายการหลัง fetch ส่วนตัวเลข 14 จากใบงานยังไม่ได้ระบุชุดย่อยและยังไม่ได้เทียบ hash ณ จุดที่หยุด งานที่คุณเป้กันไว้ยังไม่มีการแก้จากรอบนี้
+
+## ผลปิดงาน merge และ deploy วันที่ 22 พ.ย. 2569
+
+- Fast-forward `main` จาก `e90af8f3` ไป `b36a6df2` แล้ว push ขึ้น GitHub โดยรับสองชุดแก้เทสต์ของ Claude จาก `30e726af` มาด้วย [commit ที่ deploy](https://github.com/hellopae/AVEGEE/commit/b36a6df2)
+- รัน `node --test --test-timeout=180000 tests/balance28b.test.mjs` ที่ `origin/main` เดิมและที่ `30e726af` ผลผ่าน 14/14 ทั้งสองชุด ราว 2.5 วินาทีต่อชุด เทสต์จำลองการเดินมาจุดก่อสร้างใช้เวลาหลายนาทีทั้งสองฝั่ง
+- รัน `node --test tests/*.test.mjs` ที่ไฟล์ตรงกับ commit ที่ deploy ผ่าน 2,565/2,565, fail 0, cancelled 0, skipped 0 ใช้ 521 วินาที การตรวจ worker atlas ครบ 64 เฟรมผ่านใน 14.8 วินาที รอบนี้ใช้การถอดรหัสแต่ละ atlas ครั้งเดียว นับพิกเซลผ่าน histogram และกำหนด timeout ให้ subprocess 120 วินาที ตัวเลขต่อสู้คงเดิม
+- Chromium 1280×800 และ 390×844 ผ่านการตรวจปุ่มและหน้าต่างเรียกพวก, NF-1 → NF-2 ถึง wave 1, ฉากหน้าของห้องทั้งห้า และลมโรงอาหารพร้อม reduced motion
+- [GitHub Pages deploy สำเร็จ](https://github.com/hellopae/AVEGEE/actions/runs/44933406601) ขนาดจริง 996,439,062 ไบต์ หลังบีบอัด WebP ทึบแสง 87 ภาพ ประหยัด 12,253,582 ไบต์ วิดีโอ `story-cyberhell-02-v3.mp4` และ `story-cyberhell-03-v4.mp4` อยู่ครบ ใช้ GitHub Free ต่อ
+- ตรวจเว็บจริงใน Chromium ด้วย build stamp และ `version.json` ที่ตรงกัน เปิดโปรไฟล์ลุงแจวกับตัวละครปัจฉิมครบ 8 ภาพ และยืนยันว่าเกมวาดสไปรท์ปัจฉิมทั้ง 7 ตัวในคิวบนแผนที่ ไฟล์โปรไฟล์และสไปรท์ที่ GitHub Pages เสิร์ฟตรง SHA-256 กับไฟล์ที่ตรวจในเครื่อง [เปิดเกม](https://hellopae.github.io/AVEGEE/)
+- ลบ worktree `/private/tmp/avegee-summon-20261121` และ `/Users/agapae/agapae-work/.toby-worktrees/summon-fix` พร้อมสาขา `codex/summon-command-icon-20261121` และ `claude/summon-merge-fix` ทั้ง local และ origin หลังตรวจว่า commit อยู่ใน `main` แล้ว
