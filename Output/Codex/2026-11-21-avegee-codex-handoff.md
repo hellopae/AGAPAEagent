@@ -227,3 +227,7 @@ Commit `5afed273` บน branch ส่งต่อ ปรับบทสาม�
 
 - เพิ่มคิวตามคำขอ 22 พ.ย. ให้เลือกสีต้นไม้ฉากหน้าอาคารสุวรรณภูมิตามตำแหน่งบนแผนที่ ซ้ายแดง กลางเขียว ขวาขาว และให้ต้นไม้ฉากหน้าทุกสีที่แยกเป็นสไปรท์บนแผนที่ไหวตามลม เกณฑ์อยู่ท้าย `Output/Claudy/2026-11-13-avegee-queue-plan.md` สถานะรอทำหลัง reset
 - AVEGEE `97d8dead` ใช้ 998,919,424 ไบต์บน GitHub Pages และมีไฟล์เผยแพร่ประมาณ 3,150 ไฟล์ ข้อกำหนดมาตรฐาน itch.io สำหรับ HTML5 ในเบราว์เซอร์คือ 500 MB หลังแตก ZIP และ 1,000 ไฟล์ ขอเพิ่มได้เป็นกรณี จึงเหมาะใช้ itch.io เป็นหน้ารวมเกมหรือลงรุ่นดาวน์โหลด โดยเก็บตัวเล่นเว็บไว้บน Pages ตามเดิมก่อน [ข้อกำหนด HTML5](https://itch.io/docs/creators/html5#zip-file-requirements) [คู่มือ Butler](https://itch.io/docs/itch/integrating/quickstart) [ข้อจำกัด Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
+
+### เพิ่มพื้นที่ Pages หลัง reset
+
+- คุณเป้อนุญาตให้ทดลองและให้เข้าคิวหาก weekly limit ใกล้หมด ตรวจแล้วมี MP4 เทวดา 4 ไฟล์รวม 17.94 MB ที่ฉากเทวดาปัจจุบันชี้ไปที่ WebP และ MP4 ที่โค้ดอ้างโดยตรงอีก 4 ไฟล์รวม 15.98 MB บันทึกลำดับทดลอง ข้อกำหนด R2 และรายการวิดีโอ CyberHell ที่ต้องรักษาไว้ในท้าย `Output/Claudy/2026-11-13-avegee-queue-plan.md` ยังไม่มีการเปลี่ยน workflow หรือ deploy เกม
