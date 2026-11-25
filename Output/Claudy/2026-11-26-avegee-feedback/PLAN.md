@@ -108,6 +108,8 @@
 - **ยังไม่ใส่คิว (pixel แต่ผูกกับวิดีโอ/ชุดเพิ่งอนุมัติ):** story-cyberhell-01..03 + reinforcements-01..02 (คุณเป้ 26 พ.ย.: "ชุด CyberHell ที่วาดใหม่แล้ว ไม่ต้องวาดใหม่" — ปิด) · story-ending-* (มีวิดีโอฉากจบคู่กัน วาดภาพนิ่งใหม่จะไม่ตรงวิดีโอ) · การ์ดท่าพิเศษ hero-yama-* / crew-* (เป็น pixel ทั้งชุดตั้งใจ และชุดยามาโซน 4 คุณเป้อนุมัติ 20 พ.ย.) → ถามคุณเป้ถ้าต้องการ
 
 ## บันทึกสถานะ (ต่อท้าย บนลงล่าง)
+- 26 พ.ย.: **T1 merge main `b95ece93`** (Dale PASS · เทสต์ 2581/2581 · deploy 45680973783 success หลัง rerun) · ปิด BT1 BT4a BT4b BT5 BT8a BT8b EV14 EV21 · รอคุณเป้ฟังเสียง restore / ลองแรงประสานพิพากษา / ปุ่ม ✕ ออกโหมดซ้อมเก็บไหม · ส่งต่อ T11: ซิมชนะ 100% และ quest-rewards รอบสั้นลง · โค้ดตาย `.flee-layer/.flee-card` ใน index.html → CLEAN
+- 26 พ.ย.: เริ่ม CLEAN (Dale)
 - 26 พ.ย. 00:58: Codex rate_limited (try again 27 พ.ย. 10:53) → work-mode claude-only · ตั้ง `queue-1126b.py` (nohup) เริ่ม 27 พ.ย. 10:55 สลับ both เอง: C1a+C1b → C1c · log `Output/Codex/runs/queue-1126b.log`
 - 26 พ.ย.: เริ่ม Toby T1 (worktree `.toby-worktrees/fb3` branch `toby/fb3`) + Codex คิว `Output/Codex/runs/queue-1126a.py` (C1a+C1b → C1c, log `queue-1126a.log`)
 - 26 พ.ย.: worktree `z1-v5` มีการลบ `img/story-cyberhell-02-v3.mp4` `-03-v4.mp4` ค้าง stage (ไม่ใช่งานของคิวนี้) — โค้ดไม่เรียกสองไฟล์นี้แล้ว · คุณเป้: "ไฟล์เกมที่ไม่ได้ใช้แล้ว ลบออกได้" → ทำใน CLEAN ไม่ commit จาก z1-v5
