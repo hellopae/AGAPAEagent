@@ -24,7 +24,7 @@ commit message ที่มีคำว่า "note for Claude" = มีโน�
 
 **อ่านโน้ตใน clone ของ Codex ไม่ได้** (28 ต.ค.: `output/coordination/*-HANDOFF.md` ไม่อยู่ใน git และ macOS บล็อกแม้ปิด sandbox)
 → แหล่งสรุปที่อ่านได้คือ `AGAPAE Agent/Output/Codex/AVEGEE-WORK-QUEUE.md` (Codex ต่อท้ายทุกชุดงาน: commit, เทสต์, งานค้าง) — `git diff` ไฟล์นี้ใน repo AGAPAE
-ไฟล์ภาพที่คุณเป้แนบจาก `~/Desktop` ก็อ่านไม่ได้เช่นกัน → ขอให้ลากใส่ `AGAPAE Agent/Output/Claudy/<slug>/input/` ด้วย Finder
+ไฟล์ภาพที่คุณเป้แนบจาก `~/Desktop` (26 พ.ย. อ่านได้แล้ว — ลอง `ls` ก่อน · ชุดใหญ่ใช้ skill `owner-feedback-intake`) ถ้าอ่านไม่ได้ → ขอให้ลากใส่ `AGAPAE Agent/Output/Claudy/<slug>/input/` ด้วย Finder
 
 ## 2. ดึงเข้า clone ของเรา — เฉพาะตอน tree สะอาด
 `git status --porcelain` ว่าง → `git pull --ff-only` · ไม่ว่าง → หยุด ถามคุณเป้
