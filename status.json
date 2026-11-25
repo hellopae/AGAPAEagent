@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T18:53:07.482Z",
+  "updatedAt": "2026-11-25T18:53:40.322Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Shrink AVEGEE Pages deploy",
+      "status": "working",
+      "task": "Dale review+merge FB3-T1",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
