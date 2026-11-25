@@ -237,6 +237,12 @@
 - [ ] P3: รายงานยอดขาย Etsy/Gumroad เดือนแรกหลังเปิดขาย
 
 ## 🔧 Dale (DevOps) — agent ใหม่ เพิ่งเปิดใช้
+- [ ] P3 (พักไว้ 26 พ.ย. 2569 — คุณเป้: "จดบันทึกงานไว้ก่อน" ไปทำ AVEGEE ต่อ · Codex น่าจะติดลิมิต):
+  **App Agent AGAPAE บนเครื่อง** — Artifact ที่กด Share → **Install as app** (Beta) ใน Claude Desktop ได้
+  อ่าน status.json/worklog.json สดจากเครื่อง + แจ้งเตือน + ตัวเลขบน Dock + ไอคอนแถบเมนู (อ่านอย่างเดียว)
+  ใบงาน `Output/Claudy/briefs/2026-11-26-agent-desktop-app.md` → `apps/agent-desktop/index.html`
+  ลำดับ: Codex `--write` (โหมด both) → Dale รีวิวตามเกณฑ์ 10 ข้อ → Claudy เผยแพร่ด้วย Artifact tool
+  พร้อม `capabilities: {desktop: {}}` → คุณเป้กด Install as app · ทำเมื่อคุณเป้สั่ง "ทำแอป Agent ต่อ"
 - [ ] P3 (รอเกม AVEGEE เสร็จ — คุณเป้สั่ง 11 ต.ค. 2569 "รอเกมเสร็จจริงก่อนค่อย up จะได้ไม่ต้องอัปหลายรอบ ใช้ git ไปก่อน"): อัป AVEGEE ขึ้น itch.io (บัญชี avegee มีแล้ว) — ชุดเกมฉบับย่อใต้เพดาน HTML5, Visibility Restricted ก่อน, ตั้ง butler, ติ๊กเนื้อหา 18+ · คุณเป้ล็อกอิน/กดเผยแพร่เอง
 
 - [x] P1 (งานทดสอบ agent): **Repo health check** ✅ 6 ก.ค. 2569 — ผ่าน 5/5 (.nojekyll, hook
