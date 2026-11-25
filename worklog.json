@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-25T19:43:20.045Z",
+  "updatedAt": "2026-11-25T21:47:46.072Z",
   "entries": [
+    {
+      "id": "wl-261125-toby-mzh5",
+      "datetime": "2026-11-25T21:47:46Z",
+      "displayDate": "26 พ.ย. 2569",
+      "displayTime": "04:47",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby FB3-T2 battle look",
+      "summary": "ผลที่รายงานไปแล้วไม่เปลี่ยน งานเบื้องหลังตัวนี้คือรอบเต็มสุดท้ายที่รายงานไว้แล้ว ผล 2494/2494 ผ่าน และไม่มี process ค้างอยู่\n\nข้อ 5 อยู่ที่ commit `ce4ece36` บน branch `claude/2026-11-05-zone1-v5-fx` (push แล้ว ไม่ merge main) รายงานสะสมอยู่ที่ `Output/Toby/2026-11-19-avegee-t7.md` ส่วนที่ยังรออยู่ต"
+    },
     {
       "id": "wl-261125-dale-6yni",
       "datetime": "2026-11-25T19:43:20Z",
