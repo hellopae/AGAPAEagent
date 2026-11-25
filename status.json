@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T19:05:54.494Z",
+  "updatedAt": "2026-11-25T19:43:20.045Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,7 +278,7 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Dale FB3-CLEAN unused files",
       "report": {
         "when": "20:27",
