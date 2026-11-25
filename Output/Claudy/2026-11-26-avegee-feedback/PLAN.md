@@ -78,6 +78,7 @@
 **A1 (Claudy ทำแผ่นรวมภาพเอง ไม่ต้องใช้ agent):** แผ่นรวม cutscene ทั้งเกมใน `Output/Review/2026-11-26-cutscene-tone/` ให้คุณเป้วงภาพโทนเก่า
 
 ## บันทึกสถานะ (ต่อท้าย บนลงล่าง)
+- 26 พ.ย. 00:58: Codex rate_limited (try again 27 พ.ย. 10:53) → work-mode claude-only · ตั้ง `queue-1126b.py` (nohup) เริ่ม 27 พ.ย. 10:55 สลับ both เอง: C1a+C1b → C1c · log `Output/Codex/runs/queue-1126b.log`
 - 26 พ.ย.: เริ่ม Toby T1 (worktree `.toby-worktrees/fb3` branch `toby/fb3`) + Codex คิว `Output/Codex/runs/queue-1126a.py` (C1a+C1b → C1c, log `queue-1126a.log`)
 - 26 พ.ย.: worktree `z1-v5` มีการลบ `img/story-cyberhell-02-v3.mp4` `-03-v4.mp4` ค้าง stage (ไม่ใช่งานของคิวนี้) — โค้ดไม่เรียกสองไฟล์นี้แล้ว · คุณเป้: "ไฟล์เกมที่ไม่ได้ใช้แล้ว ลบออกได้" → ทำใน CLEAN ไม่ commit จาก z1-v5
 - 26 พ.ย.: เทสต์เต็มรอบ main `3c8476bc` = 2565/2565 ผ่าน

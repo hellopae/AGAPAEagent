@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T04:06:07.464Z",
+  "updatedAt": "2026-11-25T17:57:46.973Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,8 +305,8 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "done",
-      "task": "Toby T9 apply Rae strings",
+      "status": "working",
+      "task": "Toby FB3-T1 battle flow",
       "report": {
         "when": "20:58",
         "title": "Toby T7 zone 3 story",
