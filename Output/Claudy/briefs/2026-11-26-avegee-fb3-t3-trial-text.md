@@ -25,6 +25,8 @@ worktree `~/agapae-work/.toby-worktrees/fb3` branch `toby/fb3` · ก่อน�
 11. **EV23** e16 ภาพยมทัตรอที่ท่าเรือ: ข้อความแก้ตามที่คุณเป้เขียนในภาพ e16 (`src/z1-yomathat.js`) · ภาพยมทัตยืนคุยปกติมาจาก Codex C2 ชื่อไฟล์เดิม ไม่ต้องรอ
 12. ข้อความยมทัตมาถึงแท่นตัดสิน (จากตาราง Rae) ใส่ในรอบนี้ได้ แต่ **การเดินของยมทัตไปแท่นตัดสิน (EV20) และขุนแผนยืนบนแท่น (EV11) เป็นของ T5** — อย่าทำการเคลื่อนที่ในรอบนี้
 
+13. **ส่งต่อจาก T2 (EV13 หน้าสอบสวน):** วิญญาณในหน้าสอบสวนยืนฝั่งขวา ต้องหันซ้าย — T2 พบว่ายังหันขวา: `soul-wanthong-th` `char-musashi-asia` `soul-false-judge-west` `soul-loki-priest-west` `soul-redhood-west` `soul-soup-cook-west` `soul-witch-bread-west` `soul-younger-brother-west` `soul-aiscam-cyber` `char-worker-lupin` `guard-vanhelsing-west` → แก้ทิศตอนแสดง (ไม่ทับภาพ) แล้วไล่ทุกวิญญาณในหน้าสอบสวนซ้ำอีกรอบ (แผ่นรวมก่อน/หลัง)
+
 ## ส่งงาน
 commit แยกตามรหัส push `toby/fb3` · เทสต์เต็มรอบ (ลงไฟล์แล้ว grep `ℹ (tests|pass|fail)`) + เทสต์ใหม่สำหรับระบบ (ไม่นับ) · ตรวจ Chromium 1792×1120 + 390×844 · ภาพก่อน/หลัง `Output/Review/2026-11-26-fb3-t3/` · รายงาน `Output/Toby/2026-11-26-avegee-fb3-t3.md` (ตาราง ข้อความเดิม → ใหม่ ทุกจุด)
 
