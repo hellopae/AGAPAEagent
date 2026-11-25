@@ -27,6 +27,10 @@ worktree `~/agapae-work/.toby-worktrees/fb3` branch `toby/fb3` · ก่อน�
 
 13. **ส่งต่อจาก T2 (EV13 หน้าสอบสวน):** วิญญาณในหน้าสอบสวนยืนฝั่งขวา ต้องหันซ้าย — T2 พบว่ายังหันขวา: `soul-wanthong-th` `char-musashi-asia` `soul-false-judge-west` `soul-loki-priest-west` `soul-redhood-west` `soul-soup-cook-west` `soul-witch-bread-west` `soul-younger-brother-west` `soul-aiscam-cyber` `char-worker-lupin` `guard-vanhelsing-west` → แก้ทิศตอนแสดง (ไม่ทับภาพ) แล้วไล่ทุกวิญญาณในหน้าสอบสวนซ้ำอีกรอบ (แผ่นรวมก่อน/หลัง)
 
+14. **คำตัดสิน Claudy ต่อข้อถามของ Rae (R1):** D1 ใช้บทขุนแผนตัวเดียวทั้งทางลงโทษและทางปล่อย ตามตาราง · D2 "พระนาง" (L72 L94 `z1-wanthong.js`) → "นางวันทอง" (ถ้า Reese FIX LIST บอกต่าง ให้ยึด Reese) · D3 ข้อความฉากสีดา/หนุมานที่พูดถึงห้อง/โถง **ไม่แก้รอบนี้** (รอคุณเป้) · D4 `WANTHONG_CASE.face` (L22) ท่าทางแบบคนเป็น → แก้พร้อม EV7 ให้เป็นวิญญาณ · B1 EV15 L109 "ก้มศีรษะให้ยามา" ทำในรอบนี้
+    ผล fact-check ของ Reese: `Output/Reese/2026-11-26-avegee-fb3-r1-factcheck.md` — ถ้ามี FIX LIST ให้แก้ตามนั้นตอนใส่ข้อความ
+15. EV20 (ทางเดินยมทัต → แท่นตัดสิน: `SPOTS.bossPier` ใน `ui.js` ~2182, `z1-events.js` ~354, `npc-stand.js` waitingEvents) ยังเป็นของ **T5** ไม่ใช่รอบนี้
+
 ## ส่งงาน
 commit แยกตามรหัส push `toby/fb3` · เทสต์เต็มรอบ (ลงไฟล์แล้ว grep `ℹ (tests|pass|fail)`) + เทสต์ใหม่สำหรับระบบ (ไม่นับ) · ตรวจ Chromium 1792×1120 + 390×844 · ภาพก่อน/หลัง `Output/Review/2026-11-26-fb3-t3/` · รายงาน `Output/Toby/2026-11-26-avegee-fb3-t3.md` (ตาราง ข้อความเดิม → ใหม่ ทุกจุด)
 
