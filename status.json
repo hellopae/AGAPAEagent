@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T17:57:46.973Z",
+  "updatedAt": "2026-11-25T18:53:07.482Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby FB3-T1 battle flow",
       "report": {
         "when": "20:58",
