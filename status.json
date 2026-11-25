@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T21:47:46.072Z",
+  "updatedAt": "2026-11-25T21:48:13.297Z",
   "agents": [
     {
       "id": "claudy",
@@ -278,8 +278,8 @@
         "Deploy ขึ้น GitHub Pages แบบไม่หน้าขาว",
         "ดูแล repo, build, API integrations"
       ],
-      "status": "done",
-      "task": "Dale FB3-CLEAN unused files",
+      "status": "working",
+      "task": "Dale review+merge FB3-T2",
       "report": {
         "when": "20:27",
         "title": "Review+merge AVEGEE batch 26A",
