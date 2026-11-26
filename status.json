@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:44:33.940Z",
+  "updatedAt": "2026-11-26T17:28:38.832Z",
   "agents": [
     {
       "id": "claudy",
@@ -122,7 +122,7 @@
         "copy เว็บแอปภาษาไทย",
         "ส่งต่อให้ Vera"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Rae FB3-R2 game copy",
       "report": {
         "when": "08:10",
