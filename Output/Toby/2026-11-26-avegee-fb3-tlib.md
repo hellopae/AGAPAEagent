@@ -34,11 +34,11 @@
 ใหม่: `src/city-fire.js` `src/liberation-text.js` `tests/fb3-tlib-liberation.test.mjs` `tests/fixtures/fb3-tlib-runtime-changes.json` `scripts/build-fb3-tlib-hash-fixture.py`
 แก้: `src/data.js` (L1 บรรทัดเดียว) `src/game.js` `src/signal-arc.js` `src/seized-keys.js` `src/z4g-return.js` `src/ui.js` `src/scene.js` `src/breach-approach.js` `src/frontier.js` `src/unlocks.js` `index.html` (cache tag `-fb3tlib`) `tests/balance2.test.mjs`
 ไม่แตะ: ภาพทุกไฟล์ · สูตร/ตัวเลขศึก (hp/atk/คูลดาวน์) · ระบบอัญเชิญ · z1-v5
-commit (`toby/fb3`): `a4c8247c` L1 · `80a561f5` L2 L3 · `79da23db` L4 L5 · `e4f9bb09` L6 · `fe6b889c` เทสต์/แท็ก · (+ commit ปรับลุคสายตา — ดู git log)
+commit (`toby/fb3`): `a4c8247c` L1 · `80a561f5` L2 L3 · `79da23db` L4 L5 · `e4f9bb09` L6 · `fe6b889c` เทสต์/แท็ก · · `HEAD` ปรับลุคสายตา/T1c/เทสต์ศึกสุดท้าย 15 คดี
 
 ## ผลเทสต์
 เทสต์ใหม่ 7 (`fb3-tlib-liberation`): 15 คดี+เซฟเก่า · ทีมบังคับ (3 โซน) · Guard เข้าทีมหลังชนะ + ปฏิเสธบอสก่อนปลด + ไม่มี Guard ไม่พัง · เซฟเก่า (cleared / active→pending) · สภาพถูกสะกด · ไฟไหม้เปิด/ปิด/งบ · แนะนำสิ่งปลูกสร้าง → **7/7 ผ่าน** · `balance2` ผ่าน (fixture ใหม่)
-เต็มรอบ `--test-concurrency=6`: ดูบรรทัดสรุปที่ท้ายข้อความตอบกลับ (รันตอนเขียนรายงาน)
+เต็มรอบ `--test-concurrency=6` → **`ℹ tests 2634 · pass 2634 · fail 0`** (ปรับเทสต์ที่สร้างศึกสุดท้ายที่ 10 คดีให้เป็น 15: `final-event-helpers` `balance28b` `e1-signal-quests` · `city-fire.js` ผูก GPU-loss epoch ตาม T1c audit)
 
 ## ภาพ/เฟรม (`Output/Review/2026-11-26-fb3-tlib/`)
 เล่นจริง Chromium 1792×1120 โซน 1 ครบ: `th-1-guard-intro` → `th-2-duel-window` (ทีมบังคับ) → `th-3-duel-battle` (ยามา+นิรา vs Guard เส้นเขียว) → `th-4b-battle-won` → `th-5-story-1` (นิราปลดปล่อย) → `th-6a-gate-alert` → `th-7-lord-walk` → `th-8-lord-near` (ยมทูต/บอสมีเส้นเขียว) → `th-9-lord-team-page` (ทีมบังคับ ยามา·นิรา·กุมภัณฑ์)
