@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T23:31:55.904Z",
+  "updatedAt": "2026-11-26T00:38:05.105Z",
   "agents": [
     {
       "id": "claudy",
@@ -305,7 +305,7 @@
         "เขียนสเปกอาร์ตที่ต้องใช้ ส่งให้ Kittanate ก่อนลงมือวาด",
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
-      "status": "working",
+      "status": "done",
       "task": "Toby FB3-T4 summon v2",
       "report": {
         "when": "20:58",
