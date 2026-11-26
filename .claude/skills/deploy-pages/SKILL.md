@@ -32,3 +32,8 @@ description: Deploy โปรเจกต์ขึ้น GitHub Pages พร้�
 - ทดสอบบนมือถือ (จอแคบ) + เช็คฟอนต์ไทย render
 - บันทึกผลใน `Output/Dale/` หรือ `Output/Nick/` + worklog ต้องมี entry (skill `worklog-sync` ถ้า hook พลาด)
 - รายงาน URL จริงให้ Kittanate พร้อมสิ่งที่ deploy
+
+## Deploy Actions ล้ม (AVEGEE ~1 GB · บ่อยช่วง 26–27 พ.ย. 2569)
+- `deploy-pages` ล้มด้วย "No artifacts" / "Fetching artifact metadata failed" / "try again later" → `gh run rerun <id> --failed` ครั้งเดียวมักผ่าน
+- rerun ครั้งที่สองล้ม "Multiple artifacts named github-pages" (artifact จากครั้งแรกค้าง) → **อย่า rerun ซ้ำ** ใช้ `gh workflow run "Deploy Pages"` (workflow_dispatch = run ใหม่ artifact ใหม่)
+- ยืนยันทุกครั้ง: `curl -s https://<site>/version.json` ต้องตรง commit ของ main
