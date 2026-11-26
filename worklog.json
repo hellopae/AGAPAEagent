@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-26T13:16:05.609Z",
+  "updatedAt": "2026-11-26T13:34:12.775Z",
   "entries": [
+    {
+      "id": "wl-261126-toby-g4dk",
+      "datetime": "2026-11-26T13:34:12Z",
+      "displayDate": "26 พ.ย. 2569",
+      "displayTime": "20:34",
+      "agent": "toby",
+      "agentName": "Toby",
+      "agentImg": "avatars/Toby.png",
+      "pipeline": "standalone",
+      "status": "done",
+      "title": "Toby FB3-T5 stage moves",
+      "summary": "ผลที่รายงานไปแล้วไม่เปลี่ยน งานเบื้องหลังตัวนี้คือรอบเต็มสุดท้ายที่รายงานไว้แล้ว ผล 2494/2494 ผ่าน และไม่มี process ค้างอยู่\n\nข้อ 5 อยู่ที่ commit `ce4ece36` บน branch `claude/2026-11-05-zone1-v5-fx` (push แล้ว ไม่ merge main) รายงานสะสมอยู่ที่ `Output/Toby/2026-11-19-avegee-t7.md` ส่วนที่ยังรออยู่ต"
+    },
     {
       "id": "wl-261126-dale-stih",
       "datetime": "2026-11-26T13:16:05Z",
