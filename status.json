@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:30:29.509Z",
+  "updatedAt": "2026-11-26T04:26:53.736Z",
   "agents": [
     {
       "id": "claudy",
@@ -306,7 +306,7 @@
         "ทุก build ต้อง portrait-first (390×844 รองรับแคบสุด 360px)"
       ],
       "status": "done",
-      "task": "Toby FB3-T4 summon v2",
+      "task": "Toby FB3-T5 stage moves",
       "report": {
         "when": "20:58",
         "title": "Toby T7 zone 3 story",
