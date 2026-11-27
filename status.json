@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T03:49:39.202Z",
+  "updatedAt": "2026-11-27T03:54:20.303Z",
   "agents": [
     {
       "id": "claudy",
@@ -308,9 +308,9 @@
       "status": "done",
       "task": "Toby FB3-T5 stage moves",
       "report": {
-        "when": "10:49",
+        "when": "10:54",
         "title": "Toby FB3-T5 stage moves",
-        "body": "Nothing further to do: T9 is finished and my report went to you through the handback. This notification is only a wait-loop of mine finishing, and it carries no new request.\n\nFor the record, the last full test run (2672/2672 passing) was after the final code change, and `toby/fb3` is pushed."
+        "body": "That notification is another of my own wait-loops finishing, not a new request, so there is nothing more to do. T9 is done, and the report was already handed back."
       }
     },
     {
