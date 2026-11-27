@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T03:47:32.258Z",
+  "updatedAt": "2026-11-27T03:49:39.202Z",
   "agents": [
     {
       "id": "claudy",
@@ -308,9 +308,9 @@
       "status": "done",
       "task": "Toby FB3-T5 stage moves",
       "report": {
-        "when": "20:58",
-        "title": "Toby T7 zone 3 story",
-        "body": "ผลที่รายงานไปแล้วไม่เปลี่ยน งานเบื้องหลังตัวนี้คือรอบเต็มสุดท้ายที่รายงานไว้แล้ว ผล 2494/2494 ผ่าน และไม่มี process ค้างอยู่\n\nข้อ 5 อยู่ที่ commit `ce4ece36` บน branch `claude/2026-11-05-zone1-v5-fx` (push แล้ว ไม่ merge main) รายงานสะสมอยู่ที่ `Output/Toby/2026-11-19-avegee-t7.md` ส่วนที่ยังรออยู่ตามที่รายงานไป:\n- ยังไม่ได้เล่นในเบราว์เซอร์ (ไม่มีภาพหลักฐาน)\n- คดีญาติโซน 3 (T7c)\n- การเดินชายแดน 3-4 กับ HOME-67 (T8)"
+        "when": "10:49",
+        "title": "Toby FB3-T5 stage moves",
+        "body": "Nothing further to do: T9 is finished and my report went to you through the handback. This notification is only a wait-loop of mine finishing, and it carries no new request.\n\nFor the record, the last full test run (2672/2672 passing) was after the final code change, and `toby/fb3` is pushed."
       }
     },
     {
