@@ -26,7 +26,7 @@
 
 ## กำลังทำ / คิวค้าง (ทำตามลำดับ)
 1. ~~T9~~ merge แล้ว
-2. **คิววาด Codex `queue-1126c`** เริ่ม 27 พ.ย. 10:55 (log `Output/Codex/runs/queue-1126c.log`) ทีละ 2: [C1a,C1b] → [C1c,C2] → [C5a,C4] → [C3,C5b] → [C6,C5c] → [C7,C8] · ใบงาน `Output/Codex/runs/art-1126-*.md`
+2. **คิววาด Codex `queue-1126c`** (C1a C1b merge แล้ว `1f2b1497`) เริ่ม 27 พ.ย. 10:55 (log `Output/Codex/runs/queue-1126c.log`) ทีละ 2: [C1a,C1b] → [C1c,C2] → [C5a,C4] → [C3,C5b] → [C6,C5c] → [C7,C8] · ใบงาน `Output/Codex/runs/art-1126-*.md`
    - หลังแต่ละ run: ตรวจภาพ (compare.jpg) → merge branch `codex/<run_id>` · **story-* ที่วาดใหม่ต้องลบ crop ใน `src/cutscene-presentation.js` CONTENT_ROWS** · นับขนาด build
    - C2: ถ้าวันทองใหม่หันซ้าย ลบ `soul-wanthong-th` ออกจาก `TRIAL_SOUL_DRAWN_FACING_RIGHT` (`src/battle-facing.js`)
    - C3 = แบบลูซิเฟอร์ **รอคุณเป้อนุมัติ** ก่อนใช้
