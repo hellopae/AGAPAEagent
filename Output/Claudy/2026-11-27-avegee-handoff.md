@@ -1,42 +1,31 @@
-# AVEGEE handoff Claude → Codex · 27 พ.ย. 2569
-(คุณเป้: "เมื่อใกล้ชน limited ให้เขียน สรุปงาน ที่ทำแล้ว และคิวงานที่ค้างอยู่ ส่งให้ Codex ด้วยนะครับ" — Claude weekly เหลือ ~15% ตอนเขียน · อัปเดตไฟล์นี้ทุกครั้งที่งานขยับ)
+# Claude → Codex handoff · 27 พ.ย. 2569 (Claude weekly เหลือ ~6%)
 
-## repo / วิธีทำงาน
-- clone ของ Claude: `/Users/agapae/agapae-work/AVEGEE` · main ล่าสุดดู `git log origin/main -1` · worktree Toby `~/agapae-work/.toby-worktrees/fb3` branch `toby/fb3`
-- เทสต์เต็มรอบ: `node --test --test-concurrency=6 tests/*.test.mjs > "$TMPDIR/t.log" 2>&1; grep -E 'ℹ (tests|pass|fail|cancelled)' "$TMPDIR/t.log"` (อย่า pipe เข้า tail · concurrency สูง `balance28b` อาจค้าง)
-- cache: แก้โมดูลแล้ว bump id (`scripts/bump-cache-id.py`) · importmap ครบ 318 entry แล้ว (มีเทสต์กันหลุด)
-- deploy Pages ล้ม: `gh run rerun <id> --failed` ครั้งเดียว · ถ้า "Multiple artifacts" ใช้ `gh workflow run "Deploy Pages"` · ยืนยัน `https://hellopae.github.io/AVEGEE/version.json` = main
-- ภาพ .webp เท่านั้น · ห้ามย้อมสีภาพศิลป์ด้วยโค้ด (กลับซ้ายขวาได้) · ภาพใหม่เขียนทับชื่อเดิม = ไม่ต้องแก้โค้ด
-- แผนรวม/ต้นฉบับคุณเป้: `Output/Claudy/2026-11-26-avegee-feedback/PLAN.md` + `owner-comments.md` (ทุกรหัส EV/BT/MN/MP/O)
+**คุณเป้อนุญาต (ตรงตัว):** "แบ่งงานให้ claude ทำเฉพาะงานเล็กๆก็พอ ที่เหลือส่งไปให้ codex ได้ครับ ส่งคิวงานและ ให้ codex push ได้เอง ตอน claude ชน limited ด้วยนะครับ"
+→ **Codex app ทำต่อ + merge main + push เองได้** (Claude ไม่มีโควตารีวิว) · ทุกงานต้องเทสต์เต็มรอบผ่านก่อน push
 
-## ทำเสร็จแล้ว (merge main + deploy ทุกงาน)
-| งาน | commit main | สรุป |
-|---|---|---|
-| T1 จังหวะศึก | `b95ece93` | ตัดหนี · ขยายวูบ · เมนูตอนพุ่ง · เสียง restore · combo แรงขึ้น · จัดทีมจากนิรา |
-| CLEAN / CLEAN2 | `5ca0ab78` / `e3ca71e8` | ลบไฟล์ไม่ใช้ 65 + 330 ไฟล์ (−104 MB) · Pages ~836 MB |
-| T2 ขนาด/ทิศ/ชั้นภาพ | `a9d02d4f` | ชั้นความสูงศัตรู `battle-foe-size.js` · ทิศ `battle-facing.js` |
-| R1+T3 สอบสวน/ข้อความ | `41b68754` | สีดาหน้าปกติ · "(ไม่นับ)" `merit-count.js` · วันทอง/ขุนแผน/กุมภัณฑ์/ยมทัต · พยาบาล |
-| T4 ระบบอัญเชิญ v2 | `6e752785` | ตัวอัญเชิญยืนในทีม 3 ตา · cutscene ตะเกียง (fallback) · หันขวา |
-| T5 ตำแหน่ง/ศึกชายแดน | `1e4f8ba2` | ขุนแผน/ยมทัต/หนุมานบนแท่น · กองทัพขยับ · หอส่องกรรมเปิดเมื่อได้ตะเกียง |
-| T-LIB ศึกปลดปล่อย | `0055de1c` | ยามา+นิรา vs Guard → นิราปลด → Guard เข้าทีม → ระลอก 1–2 · ไฟไหม้โซน 1–3 · 15 คดี |
-| T6 UI เมือง | `1ee24f4a` | ย่อแถบ/กล่อง/ก่อสร้าง · bubble ตามวิญญาณ · แจ้งสร้างได้ · มินิเกมลูกไฟ · บอสสะกด idle |
-| T7 / T7b | `c65fdc22` / `f0007d8c` | ครัวทำเอง `KITCHEN` · ดำในโรงอาหาร · หิน · ศาลาน้ำชากระโดด · ชั้นหน้าห้องตัดลิ่ม |
-| T9 ต้นไม้ | `17768867` | สีต้นไม้ห้องโซน 1 ตามตำแหน่ง · ต้นไม้แผนที่ไหว · ลบ tree-asia-v1 · การ์ดคู่มือ 28→26 |
-| R2+T8 ข้อความ/คู่มือ | `b6ad1183` | ข้อความ Rae ก–ฏ · คู่มือ 5 หน้า · ตะเกียงตนละ 1 ครั้ง (ช่องสูงสุด 4) · "หอส่องกรรม" |
+## วิธีทำงาน
+- เทสต์เต็มรอบ: `node --test --test-concurrency=6 tests/*.test.mjs > "$TMPDIR/t.log" 2>&1; grep -E 'ℹ (tests|pass|fail|cancelled)' "$TMPDIR/t.log"` (concurrency สูง `balance28b` อาจค้าง)
+- แก้โมดูล → bump cache id ใน importmap `index.html` (`scripts/bump-cache-id.py`) · มีเทสต์กัน importmap หลุด
+- deploy Pages ล้ม: `gh run rerun <id> --failed` ครั้งเดียว · "Multiple artifacts" → `gh workflow run "Deploy Pages"` · ยืนยัน `https://hellopae.github.io/AVEGEE/version.json` = main · Pages เพดาน ~1 GB (ตอนนี้ ~830 MB)
+- ภาพ .webp เท่านั้น · ห้ามย้อมสีภาพศิลป์ด้วยโค้ด (กลับซ้ายขวาได้) · ภาพเขียนทับชื่อเดิม
+- ใบงานทั้งหมด (อ่านได้ใน repo AGAPAE Agent): `Output/Claudy/briefs/2026-11-2{6,7}-avegee-fb3-*.md` · แผน+ต้นฉบับคุณเป้: `Output/Claudy/2026-11-26-avegee-feedback/PLAN.md` `owner-comments.md` · ใบงานวาด: `Output/Codex/runs/art-1126-*.md`
 
-## กำลังทำ / คิวค้าง (ทำตามลำดับ)
-1. ~~T9~~ merge แล้ว
-2. **คิววาด Codex `queue-1126c`** (C1a C1b merge แล้ว `1f2b1497`) เริ่ม 27 พ.ย. 10:55 (log `Output/Codex/runs/queue-1126c.log`) ทีละ 2: [C1a,C1b] → [C1c,C2] → [C5a,C4] → [C3,C5b] → [C6,C5c] → [C7,C8] · ใบงาน `Output/Codex/runs/art-1126-*.md`
-   - หลังแต่ละ run: ตรวจภาพ (compare.jpg) → merge branch `codex/<run_id>` · **story-* ที่วาดใหม่ต้องลบ crop ใน `src/cutscene-presentation.js` CONTENT_ROWS** · นับขนาด build
-   - C2: ถ้าวันทองใหม่หันซ้าย ลบ `soul-wanthong-th` ออกจาก `TRIAL_SOUL_DRAWN_FACING_RIGHT` (`src/battle-facing.js`)
-   - C3 = แบบลูซิเฟอร์ **รอคุณเป้อนุมัติ** ก่อนใช้
-   - C4 `img/summon/cut-lamp-summon-*` · C6 หัวหน้าคนงาน · C8 `cut-z{1,2,3}-guard-freed` — โค้ดผูกชื่อ+fallback ไว้แล้ว วางไฟล์ใช้ได้ทันที
-3. **T10 เอฟเฟกต์ในอาคาร** (Toby เริ่ม 27 พ.ย. บน `toby/fb3` — ถ้าค้าง ดู `git log origin/main..origin/toby/fb3`) `briefs/2026-11-26-avegee-fb3-t10-room-fx.md` (โซน 1 เงาเมฆ/ใบร่วง/ลาวา · 2 แสงเงา · 3 หิมะ · 4 ฝน)
-4. **T-WALK** หลัง C7 มา `briefs/2026-11-27-avegee-fb3-twalk.md`
-5. **T11 ซิมสมดุล** `briefs/2026-11-27-avegee-fb3-t11-balance.md`
-6. ทีหลัง (O5): หุ่นซ้อม H4 · มินิเกม 4 อาคาร · เดินแผนที่ย้อนจริง
+## เสร็จแล้วบน main (FB3)
+T1 จังหวะศึก · CLEAN/CLEAN2 · T2 ขนาด/ทิศ · R1+T3 สอบสวน/ข้อความ · T4 อัญเชิญ v2 · T5 แท่นตัดสิน/กองทัพ/หอส่องกรรม · T-LIB ศึกปลดปล่อย · T6 UI เมือง · T7/T7b ครัว/ห้อง · R2+T8 ข้อความ/คู่มือ/ตะเกียงตนละ 1 ครั้ง · T9 ต้นไม้ · ภาพ C1a C1b C1c C2 (merge 27 พ.ย. โดย Claudy · วันทองหันซ้ายแล้ว ลบจาก `TRIAL_SOUL_DRAWN_FACING_RIGHT`)
+
+## คิวที่ Codex รับต่อ (เรียงลำดับ)
+1. **ภาพ Codex ที่วาดเสร็จแล้ว รอ merge** (branch local `codex/<run_id>` ใน `/Users/agapae/agapae-work/AVEGEE`):
+   - `codex/20261127T043652Z-249731f8` C4 `img/summon/cut-lamp-summon-{th,asia,west,cyberhell}.webp` — โค้ดผูกชื่อ+fallback แล้ว merge ได้เลย
+   - `codex/20261127T043633Z-d6fbb09d` C5a ภาพเรื่องโซน 1 story-th-01..05 + `Intro-Boss-Zone1.webp` — **ต้องลบ entry crop ของภาพที่วาดใหม่ใน `src/cutscene-presentation.js` CONTENT_ROWS** (ภาพ pixel เก่าถูกครอปขอบดำ ภาพใหม่เต็มเฟรม) แล้วเปิดดูในเกมว่าไม่ถูกตัด
+   - กำลังวาด/ยังไม่เริ่ม (คิว `queue-1126c.py` ใน AGAPAE `Output/Codex/runs/`): C3 แบบลูซิเฟอร์ (**ห้ามใช้ในเกม รอคุณเป้อนุมัติ**) · C5b story-asia/west (ลบ crop เหมือน C5a) · C6 หัวหน้าคนงานโซน 2–4 (โค้ดผูกชื่อแล้ว) · C5c Intro-Boss โซน 2–4 (ลบ crop ถ้ามี) · C7 ท่าเดิน 6 ตัว · C8 `cut-z{1,2,3}-guard-freed` (ผูกชื่อแล้ว)
+   - ทุก run: เปิด `docs/art-reviews/.../compare.jpg` ดูด้วยตา · แตะเฉพาะ img/docs · ขนาด px เดิม · ไฟล์ไม่โตเกิน 15% · merge `--no-ff` · เทสต์ · push · deploy
+2. **T10 เอฟเฟกต์บรรยากาศในอาคาร** — branch `toby/fb3` (push แล้ว): โซน 1 `aa1f0a05` โซน 2 `569b9c4f` เสร็จ (ยังไม่มีใครรีวิว) · โซน 3 WIP `706c63db` (Toby หยุดกลางทาง เทสต์ยังไม่ได้รัน) · โซน 4 ฝน ยังไม่เริ่ม · ใบงาน `Output/Claudy/briefs/2026-11-26-avegee-fb3-t10-room-fx.md` · ไฟล์หลัก `src/room-fx.js` `src/room-open-areas.js` `tests/fb3-t10-room-fx.test.mjs` · ทำต่อจาก branch นี้ แล้ว merge main
+3. **T-WALK** (หลัง C7) `Output/Claudy/briefs/2026-11-27-avegee-fb3-twalk.md` — ท่าเดิน 6 ตัว + ฉากเดินเข้า เซเวอริน/อาร์คอน-ศูนย์
+4. **T11 ซิมสมดุล** `Output/Claudy/briefs/2026-11-27-avegee-fb3-t11-balance.md`
+5. ทีหลัง: หุ่นซ้อม H4 · มินิเกม 4 อาคาร · เดินแผนที่ย้อนจริง
 
 ## รอคุณเป้
-- ลองเล่น: เสียง restore · แรงท่าประสาน · ศึกปลดปล่อยระลอก 2 ถึง `z1-restored` (ยังไม่มีใครเล่นจนจบผ่านหน้าจอ) · มินิเกมลูกไฟบนมือถือจริง
-- อนุมัติแบบลูซิเฟอร์ (C3) · หัวนาค/ยอดเสาในห้องโซน 1 ไม่บังตัวละครแล้ว (ถ้าต้องการให้บัง ต้องวาดชั้นหน้าใหม่)
-- ข้อตัดสินท้ายบท R2 A–D (ค้างจาก handoff 20 พ.ย.)
+- ลองเล่น: เสียง restore · แรงท่าประสาน · ศึกปลดปล่อยระลอก 2 ถึง `z1-restored` · มินิเกมลูกไฟบนมือถือ
+- อนุมัติแบบลูซิเฟอร์ (C3) · หัวนาค/ยอดเสาในห้องโซน 1 ไม่บังตัวละครแล้ว (ถ้าต้องการให้บังต้องวาดชั้นหน้าใหม่) · ข้อตัดสินท้ายบท R2 A–D (ค้างจาก 20 พ.ย.)
+
+เมื่อ Claude กลับมา: ต่อท้ายไฟล์นี้ (บนสุด) ว่าทำอะไรไป commit อะไร ค้างอะไร

@@ -166,3 +166,4 @@
 - **คุณเป้ 27 พ.ย.:** "ต้นไม้ เอาต้นไทรสีเขียวและสีขาว ไปก่อนครับ" (ปิดคำถาม T9) · "weekly limited เหลือแค่ 15% ... ถ้าเหลือซัก 5% ก็ให้ทำเฉพาะงานเล็กๆ ... เมื่อใกล้ชน limited ให้เขียน สรุปงาน ที่ทำแล้ว และคิวงานที่ค้างอยู่ ส่งให้ Codex" → handoff `Output/Claudy/2026-11-27-avegee-handoff.md`
 - 27 พ.ย.: **T9 merge main `17768867`** (Dale PASS · 2672/2672 · 404 = 0) · ปิด O2 + ส่งต่อ CLEAN2 + การ์ดคู่มือซ้ำ · เริ่ม T10
 - 27 พ.ย.: **Codex C1a+C1b merge main `1f2b1497`** (Claudy ตรวจภาพ PASS · Dale 2672/2672 · build 829.9 MB) · ชุดยามา/นิรา cutscene โซน 1–3 14 ภาพ
+- 27 พ.ย. 13:30: **คุณเป้: Claude weekly เหลือ 6%** "แบ่งงานให้ claude ทำเฉพาะงานเล็กๆก็พอ ที่เหลือส่งไปให้ codex ได้ครับ ส่งคิวงานและ ให้ codex push ได้เอง ตอน claude ชน limited ด้วยนะครับ" · Claudy merge C1c+C2 เอง (Bash) + วันทองหันซ้าย · บันทึก T10 WIP `706c63db` · handoff `AVEGEE/docs/handoffs/claude-handoff-2026-11-27.md` (Codex app merge/push เองได้)
